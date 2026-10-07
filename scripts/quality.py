@@ -29,6 +29,8 @@ def _all_articles() -> list[dict]:
 def _text(body: str) -> str:
     t = re.sub(r"```.*?```", "", body, flags=re.S)
     t = re.sub(r"^#{1,6}\s+", "", t, flags=re.M)
+    # Collapse whitespace so markdown/table spacing differences do not hide duplicates.
+    t = re.sub(r"\s+", " ", t)
     return t
 
 
@@ -42,10 +44,10 @@ def gate_duplicate(art: dict, arts: list[dict], seo: dict) -> tuple[bool, str]:
     body = _text(art.get("body_markdown", "")).lower()
     worst, worst_slug = 0.0, ""
     for other in arts:
-        if other["slug"] == art["slug"] or other.get("status") != "published":
+        if other["slug"] == art["slug"]:
             continue
-        ratio = SequenceMatcher(None, body[:4000],
-                                _text(other.get("body_markdown", "")).lower()[:4000]).ratio()
+        ratio = SequenceMatcher(None, body[:6000],
+                                _text(other.get("body_markdown", "")).lower()[:6000]).ratio()
         if ratio > worst:
             worst, worst_slug = ratio, other["slug"]
     return worst < 0.55, f"max similarity {worst:.2f} vs {worst_slug or 'n/a'}"

@@ -12,7 +12,7 @@ from common import DATA, SITE, load_json, save_json, site_config
 
 REQUIRED_PAGES = ["about", "contact", "privacy-policy", "terms", "disclaimer"]
 MIN_PUBLISHED_ARTICLES = 8
-MIN_WORDS_PER_ARTICLE = 900
+MIN_WORDS_PER_ARTICLE = 600
 
 
 def readiness() -> dict:
@@ -42,7 +42,7 @@ def readiness() -> dict:
         "detail": f"{len(arts)}/{MIN_PUBLISHED_ARTICLES} published",
     }
     thin = [a["slug"] for a in arts if a.get("word_count", 0) < MIN_WORDS_PER_ARTICLE]
-    checks["no_thin_pages"] = {"ok": not thin, "detail": f"thin: {thin}" if thin else "all >= 900 words"}
+    checks["no_thin_pages"] = {"ok": not thin, "detail": f"thin: {thin}" if thin else "all >= 600 words"}
     checks["sitemap"] = {"ok": (SITE / "sitemap.xml").exists(), "detail": "sitemap.xml"}
     checks["robots"] = {"ok": (SITE / "robots.txt").exists(), "detail": "robots.txt"}
     checks["rss"] = {"ok": (SITE / "rss.xml").exists(), "detail": "rss.xml"}

@@ -142,6 +142,52 @@ def _title_for(kw: str, calc_title: str) -> str:
     return kw_title[:57].rstrip() + "..."
 
 
+def _cluster_key(calc_key: str) -> str:
+    """FAQ_TEMPLATES keys grass_seed; calculators use grass_seed too. Keep them aligned."""
+    return calc_key
+
+
+def _primary_size(kw: str) -> float | None:
+    """Pull a job size out of the keyword (e.g. '500 sq ft', '10x10', '10 x 12')."""
+    m = re.search(r"(\d+)\s*[x×]\s*(\d+)", kw)
+    if m:
+        return float(m.group(1)) * float(m.group(2))
+    m = re.search(r"(\d[\d,]*(?:\.\d+)?)\s*(?:sq\s*\.?\s*ft|square\s+feet|square\s+foot)", kw)
+    if m:
+        return float(m.group(1).replace(",", ""))
+    return None
+
+
+def _keyword_defaults(calc_key: str, calc_def: dict, kw: str) -> dict:
+    """Keyword-faithful inputs: when the search says '300 square feet' or '10x10', the
+    worked example must use that size, not the calculator's generic defaults."""
+    defaults = {i["id"]: i["default"] for i in calc_def["inputs"] if "default" in i}
+    ids = {i["id"] for i in calc_def["inputs"]}
+    size = _primary_size(kw)
+
+    if calc_key in ("mulch", "soil", "gravel", "concrete") and size:
+        if "length" in ids and "width" in ids:
+            defaults["length"] = round(size ** 0.5, 1)
+            defaults["width"] = round(size ** 0.5, 1)
+    elif calc_key == "grass_seed" and size and "area" in ids:
+        defaults["area"] = size
+    elif calc_key == "paint" and size and "length" in ids and "width" in ids:
+        defaults["length"] = round(size ** 0.5, 1)
+        defaults["width"] = round(size ** 0.5, 1)
+    elif calc_key == "tile" and size and "length" in ids and "width" in ids:
+        defaults["length"] = round(size ** 0.5, 1)
+        defaults["width"] = round(size ** 0.5, 1)
+
+    # Room/slab keywords that name the room type rather than the size.
+    if "bedroom" in kw and calc_key == "paint":
+        defaults.update({"length": 12, "width": 10, "height": 8})
+    if "driveway" in kw and calc_key == "gravel":
+        defaults.update({"length": 30, "width": 12, "depth": 4})
+    if "french drain" in kw and calc_key == "gravel":
+        defaults.update({"length": 20, "width": 1, "depth": 18})
+    return defaults
+
+
 def _fallback_body(kw: str, calc_title: str, calc_short: str, worked: str,
                    secondary: list[str], calc_key: str = "") -> str:
     import content_lib
@@ -151,108 +197,310 @@ def _fallback_body(kw: str, calc_title: str, calc_short: str, worked: str,
         "paint": "paint", "tile": "tile", "grass_seed": "grass seed",
         "concrete": "concrete mix",
     }.get(calc_key, "material")
+    m = material_word
+    size = _primary_size(kw)
+
+    if size:
+        context = (f"To cover {int(size) if size == int(size) else size} square feet, the "
+                   f"short answer is to measure the area, multiply it by the depth or "
+                   f"coverage rate the job needs, and convert the result into the units "
+                   f"your supplier sells in.")
+    else:
+        context = (f"For {kw}, the short answer is to measure the area, multiply it by the "
+                   f"depth or coverage rate the job needs, and convert the result into the "
+                   f"units your supplier sells in.")
+    analysis = (f"Our free {calc_title.lower()} below does the arithmetic and shows every "
+                f"step, so you can sanity-check the answer and order with confidence.")
+
+    if calc_key in ("mulch", "soil", "gravel", "concrete"):
+        steps = ("1. Measure the length and width in feet and multiply them to get the area.\n"
+                 "2. Decide the depth (or thickness) the job needs, in inches.\n"
+                 "3. Convert the depth to feet by dividing by 12.\n"
+                 "4. Multiply the area by the depth in feet to get cubic feet.\n"
+                 "5. Divide cubic feet by 27 to get cubic yards, or use the bag and ton "
+                 "figures the calculator reports.\n")
+    elif calc_key == "grass_seed":
+        steps = ("1. Measure the lawn area in square feet.\n"
+                 "2. Check whether you are seeding a new lawn or overseeding an existing one.\n"
+                 "3. Apply the coverage rate for that method, in pounds per 1,000 sq ft.\n"
+                 "4. Multiply the area by the rate to get total pounds.\n"
+                 "5. Round up to whole bags so you do not run short.\n")
+    elif calc_key == "paint":
+        steps = ("1. Add the room's length and width, then double it to get the perimeter.\n"
+                 "2. Multiply the perimeter by the wall height for the wall area.\n"
+                 "3. Subtract about 21 sq ft per door and 15 sq ft per window.\n"
+                 "4. Multiply by the number of coats.\n"
+                 "5. Divide by the paint's coverage per gallon, usually about 350 sq ft.\n")
+    elif calc_key == "tile":
+        steps = ("1. Measure the length and width of the floor and multiply for the area.\n"
+                 "2. Work out each tile's area from its own width and height.\n"
+                 "3. Divide the floor area by the tile area to get the tile count.\n"
+                 "4. Add a waste allowance: 10% for a straight lay, 15% for diagonal.\n"
+                 "5. Round up to whole boxes, checking the coverage printed on the box.\n")
+    else:
+        steps = ("1. Measure the area and the required depth.\n"
+                 "2. Multiply area by depth to get the volume.\n"
+                 "3. Convert to the units you buy in.\n")
 
     parts = [
-        f"The quick answer: measure the area, multiply by the required depth, then convert "
-        f"to the units you buy in. Our {calc_title.lower()} below does it for you and shows "
-        f"every step, so you can check the maths and order with confidence.\n",
+        f"{context}\n",
+        f"{analysis}\n",
         f"## How to Calculate {calc_short.title()}\n",
-        "1. Measure the length and width in feet and multiply them to get the area.\n"
-        "2. Decide the depth (or thickness) the job needs, in inches.\n"
-        "3. Convert depth to feet by dividing by 12.\n"
-        "4. Multiply area by depth in feet to get cubic feet.\n"
-        "5. Divide cubic feet by 27 to get cubic yards, or use the bag figures below.\n",
+        steps,
         f"## Worked Example\n\n{worked}\n",
-        f"This example uses the calculator's default values, so you can see the whole "
-        f"calculation laid out before you change anything.\n",
     ]
 
+    if calc_key in ("mulch", "soil", "gravel", "concrete"):
+        if size:
+            parts.append(f"This example is set to the job size in the question, so the "
+                         f"figures line up with what you searched for. Change the inputs in "
+                         f"the calculator to match your own measurements.\n")
+        else:
+            parts.append(f"These are the calculator's default values, so you can see the "
+                         f"whole calculation laid out before you change anything.\n")
+    else:
+        parts.append(f"Work through the same steps with your own measurements; the "
+                     f"calculator above updates as you type.\n")
+
     if lib.get("depths"):
-        parts.append(f"## How Deep Should {material_word.title()} Be?\n")
+        parts.append(f"## How Deep Should {m.title()} Be?\n")
         parts.append(content_lib.depth_table_md(calc_key) + "\n")
-        parts.append("Pick the depth that matches the job rather than the deepest option "
-                     "available. Too shallow and the job fails early; too deep and you "
-                     "waste money on material you did not need.\n")
+        parts.append(f"Match the depth to the job rather than reaching for the deepest "
+                     f"option. Too shallow and {m} fails early; too deep and you waste "
+                     f"material and money.\n")
 
     size_table = content_lib.size_table_md(calc_key)
     if size_table:
         parts.append("## How Much You Need at Common Sizes\n")
         parts.append(size_table + "\n")
-        parts.append("Use the calculator above for your exact measurements; the table is "
-                     "here so you can sanity-check the result at a glance.\n")
+        parts.append("Use the calculator for your exact measurements; this table is here so "
+                     "you can sanity-check the result at a glance.\n")
 
     if lib.get("materials"):
-        parts.append(f"## Which Type of {material_word.title()} to Choose\n")
+        parts.append(f"## Which Type of {m.title()} to Choose\n")
         parts.append(content_lib.materials_md(calc_key) + "\n")
-        parts.append("Match the product to the job rather than to the lowest price. Check "
-                     "the supplier's stated coverage too, because it varies between brands "
-                     "and is usually given per bag or per cubic yard.\n")
+        parts.append("Match the product to the job rather than to the lowest price, and check "
+                     "the supplier's stated coverage because it varies between brands.\n")
 
-    parts.append("## Common Mistakes to Avoid\n")
-    for m in [
+    mistakes = {
+        "mulch": [
+            "Piling mulch against trunks and stems, which traps moisture and causes rot.",
+            "Laying it too thin, so weeds push straight through within weeks.",
+            "Mulching dry soil and then not watering, which slows the bed down.",
+            "Skipping the edge of the bed, where weeds creep back in first.",
+        ],
+        "soil": [
+            "Filling a raised bed with garden soil straight from the ground, which compacts and drains poorly.",
+            "Forgetting that the mix settles, so the bed ends up short of the brim.",
+            "Mixing in fresh manure that has not rotted, which burns young roots.",
+            "Leaving no freeboard, so soil washes out in the first heavy rain.",
+        ],
+        "gravel": [
+            "Laying gravel straight onto soil without landscape fabric, so it sinks and weeds grow through.",
+            "Skipping compaction, which leaves a loose surface that ruts under wheels.",
+            "Ordering the exact volume with no margin, then running short mid-lay.",
+            "Using a single coarse layer instead of a compacted base for a driveway.",
+        ],
+        "paint": [
+            "Buying for one coat when two are needed for an even finish.",
+            "Forgetting to subtract doors and windows, and over-buying.",
+            "Painting over a glossy surface without priming, so the paint fails.",
+            "Not keeping spare paint for touch-ups in the same colour code.",
+        ],
+        "tile": [
+            "Ordering the exact area and ignoring the waste allowance for cuts.",
+            "Mixing dye lots, which shows as a patchwork across the floor.",
+            "Not checking the coverage on the box, which varies by size and thickness.",
+            "Returning unopened boxes without keeping a spare for future repairs.",
+        ],
+        "grass_seed": [
+            "Sowing on hard, compacted ground without preparing the surface.",
+            "Using the new-lawn rate when overseeding, which wastes seed.",
+            "Letting the seed dry out; it needs light, frequent watering to germinate.",
+            "Sowing in summer heat instead of the damp early-autumn window.",
+        ],
+        "concrete": [
+            "Mixing too much water, which weakens the finished slab.",
+            "Pouring onto soft or uneven ground without a compacted base.",
+            "Making the slab too thin for the load it will carry.",
+            "Not allowing the slab to cure slowly under cover.",
+        ],
+    }.get(calc_key, [
         "Estimating by eye instead of measuring the actual area.",
-        "Forgetting the depth or thickness requirement for the job.",
         "Skipping the waste allowance, then running short mid-project.",
-        "Mixing bags from different batches, which can show as shade differences.",
-        "Buying the cheapest option that does not suit the application.",
-    ]:
-        parts.append(f"- {m}\n")
+    ])
+    parts.append("## Common Mistakes to Avoid\n")
+    parts.extend(f"- {x}\n" for x in mistakes)
 
-    parts.append("\n## Measuring Your Area Accurately\n")
-    parts.append(
-        "Most errors come from the measurement, not the arithmetic. Measure at the widest "
-        "and narrowest points and use the average, because beds and rooms are rarely "
-        "perfect rectangles. For an L-shaped area, split it into two rectangles, work out "
-        "each one, and add the results. For a circular bed, measure the diameter, halve it "
-        "to get the radius, then multiply the radius by itself and by 3.14. Write the "
-        "figures down in feet before you start, so you are not converting units in your "
-        "head while you work.\n")
-
-    parts.append("## Converting Between Units\n")
-    parts.append(
-        "Suppliers sell in different units, so it helps to know how they relate. There are "
-        "27 cubic feet in a cubic yard, so divide cubic feet by 27 to get cubic yards. To "
-        "go the other way, multiply cubic yards by 27. Bagged products state their volume "
-        "on the label, usually 1.5 or 2 cubic feet for soil and mulch, so divide your total "
-        "cubic feet by the bag size and round up to the next whole bag. For stone and "
-        "aggregate sold by weight, a cubic yard of typical 3/4 inch crushed stone weighs "
-        "about 1.4 tons, though this varies with the material.\n")
-
-    parts.append("## Ordering: Bags or Bulk\n")
-    parts.append(
-        "For small jobs, bagged product is simpler and you can carry it yourself. As the "
-        "volume grows, bulk delivery usually works out cheaper per unit, but check whether "
-        "the supplier charges a delivery fee and whether they will place it where you need "
-        "it. Order in one go where you can, so the material comes from the same batch, and "
-        "add a small margin for settling and waste. If you are close to a whole cubic yard, "
-        "it often makes sense to round up rather than make a second trip.\n")
-
-    if lib.get("tips"):
-        parts.append("\n## Practical Tips\n")
-        for t in lib["tips"]:
-            parts.append(f"- {t}\n")
+    closing = {
+        "mulch": "## Getting the Coverage Right\n\nCoverage on the bag is only a guide. "
+                 "Bags vary between 1.5 and 2 cubic feet, and the figure assumes a flat bed "
+                 "rather than loose, fluffy mulch. If you are dressing beds that have not "
+                 "been mulched for a year, the first layer will settle into the gaps and look "
+                 "thin, so work to the deeper end of your chosen band and top up later.\n",
+        "soil": "## Filling the Bed Properly\n\nFill in stages and water each layer so the "
+                "mix settles before the next. Leave about two inches of freeboard below the "
+                "rim, both to stop the soil washing out and to give you room to top up as the "
+                "mix compacts. A raised bed topped off each spring normally needs about 10% of "
+                "its original volume to stay full.\n",
+        "gravel": "## Building a Surface That Lasts\n\nGravel is only as good as what is "
+                  "underneath it. For anything driven on, excavate a little, lay landscape "
+                  "fabric, then put down the stone in two compacted layers rather than one "
+                  "thick tip. Each layer binds into the next and the surface stays flat far "
+                  "longer. On a path, a single compacted layer over fabric is fine.\n",
+        "paint": "## Getting an Even Finish\n\nA smooth, primed surface takes paint evenly "
+                 "and covers in fewer coats. Sand lightly between coats, cut in the edges "
+                 "first, and keep a wet edge so you are not painting over a drying line. If "
+                 "you are changing colour, expect to need a primer or an extra coat, as "
+                 "strong colours on light walls are the hardest to cover.\n",
+        "tile": "## Ordering and Cutting\n\nOrder all the tile in one go so it comes from a "
+                "single dye lot, and keep a box in reserve for damage. Plan the layout from "
+                "the centre of the room so cut tiles are even on both sides, and allow a few "
+                "millimetres for grout lines if you are working to an exact grid.\n",
+        "grass_seed": "## Getting Seed to Germinate\n\nSeed needs contact with the soil, "
+                      "light moisture and warmth. Rake it in so it is barely covered rather "
+                      "than buried, keep the surface damp for the first fortnight, and protect "
+                      "it from birds if you have a lot of foot traffic. Early autumn is the "
+                      "easiest window, as the soil is still warm and weeds are slowing.\n",
+        "concrete": "## Getting the Mix and Curing Right\n\nA stiff mix made with the water "
+                    "stated on the bag cures far stronger than a wet, easy-to-pour one. Let "
+                    "the slab cure slowly under a cover for several days rather than letting "
+                    "it dry in the sun, and cut control joints so it cracks where you want it "
+                    "to.\n",
+    }.get(calc_key)
+    if closing:
+        parts.append(closing)
 
     if lib.get("tools"):
-        parts.append("\n## Tools and Materials You Will Need\n")
-        parts.append(f"For this job, have to hand {lib['tools']}. None of it is specialist; "
-                     f"the only item worth hiring is a compactor for a gravel driveway, since "
-                     f"hand tamping rarely gets the base firm enough.\n")
+        parts.append(f"\n## Tools and Materials You Will Need\n\nFor this job, have to "
+                     f"hand {lib['tools']}. None of it is specialist, and most of it you "
+                     f"probably already own; hire only what you will use once.\n")
 
     parts.append("## When to Call a Professional\n")
-    parts.append(
-        "Measuring and ordering are straightforward for most garden and decorating jobs, but "
-        "a few situations are worth handing over. Structural work, retaining walls over about "
-        "two feet, anything affecting drainage around a building, and electrical or gas work "
-        "should go to a qualified tradesperson. The same applies if the ground is unstable or "
-        "you are unsure about the base preparation for a driveway or slab: a professional "
-        "survey costs far less than a failed pour or a wall that moves.\n")
+    parts.append("Measuring and ordering are straightforward for most garden and decorating "
+                 "jobs, but a few are worth handing over. Structural work, retaining walls "
+                 "over about two feet, anything affecting drainage around a building, and "
+                 "electrical or gas work should go to a qualified tradesperson. The same "
+                 "applies if the ground is unstable or you are unsure about base preparation, "
+                 "because a survey costs far less than a failed pour or a wall that moves.\n")
 
     if secondary:
-        parts.append(
-            f"\n## Related Questions\n\nPeople also ask about "
-            f"{', '.join(secondary[:3])}. The method is the same in every case: measure the "
-            f"area, choose the depth that suits the job, then convert the result into the "
-            f"units your supplier sells in.\n")
+        parts.append(f"\n## Related Questions\n\nPeople also search for "
+                     f"{', '.join(secondary[:3])}. The method is the same in every case: "
+                     f"measure the area, apply the depth or rate the job needs, then convert "
+                     f"into the units your supplier sells in, using the {calc_title.lower()} "
+                     f"for the arithmetic.\n")
+
+    extra = content_lib.extra_section_md(calc_key)
+    if extra:
+        parts.append("\n" + extra + "\n")
+
+    return "\n".join(parts)
+
+
+SCENARIO_NOTES = {
+    "driveway": "A driveway carries weight, so the depth and the base matter more than on a "
+                "path. Excavate about four inches, compact the sub-grade, then lay the stone "
+                "in two layers, compacting each one before the next goes down.",
+    "french drain": "A french drain is a trench, not a surface. The depth is the trench "
+                    "depth, usually 12 to 18 inches, and the width is often a single foot. "
+                    "Line it with fabric, add the pipe, then backfill with clean stone.",
+    "raised bed": "A raised bed is filled by volume, so the calculation is length times "
+                  "width times depth. Most vegetables want 10 to 12 inches of mix; shallow "
+                  "herbs and salads are happy at six.",
+    "flower bed": "Flower beds are rarely perfect rectangles. Split the bed into simple "
+                  "shapes, work out each one, then add them together before you convert to "
+                  "bags or bulk.",
+    "bedroom": "A bedroom is usually a simple rectangle. Measure the wall height to the "
+               "ceiling, subtract the door and windows, and multiply by the number of "
+               "coats you plan to apply.",
+    "room": "Rooms are rarely square, so measure at the widest point in each direction. If "
+            "the room has an alcove or a chimney breast, treat it as a separate rectangle "
+            "and add it to the total.",
+    "overseeding": "Overseeding uses a lighter rate than a new lawn, because you are "
+                   "topping up an existing sward rather than starting from bare soil. "
+                   "Using the new-lawn rate wastes seed and can smother thin grass.",
+    "slab": "A slab is poured, not spread, so the thickness is fixed by what it carries: "
+            "four inches for a path or patio, five to six for anything a vehicle uses.",
+}
+
+
+def _scenario_note(kw: str) -> str:
+    for key, note in SCENARIO_NOTES.items():
+        if key in kw:
+            return note
+    return ""
+
+
+def _fallback_body_variant(kw: str, calc_title: str, calc_short: str, worked: str,
+                           secondary: list[str], calc_key: str, result: dict) -> str:
+    """A second, structurally different article layout for long-tail pages, so a
+    cluster's supporting pages are not near-copies of the pillar page."""
+    import content_lib
+    lib = content_lib.LIBRARY.get(calc_key, {})
+    m = {"mulch": "mulch", "soil": "soil mix", "gravel": "gravel", "paint": "paint",
+         "tile": "tile", "grass_seed": "grass seed", "concrete": "concrete mix"}.get(calc_key, "material")
+    size = _primary_size(kw)
+    scenario = _scenario_note(kw)
+    result_line = ", ".join(f"{k.replace('_', ' ')} {v}" for k, v in list(result.items())[:3])
+
+    parts = []
+    parts.append(f"If you searched for \u201c{kw}\u201d, the answer comes down to one area "
+                 f"and one depth or coverage rate. The {calc_title.lower()} above turns those "
+                 f"two figures into the amount of {m} to buy, in the units your supplier "
+                 f"actually sells.\n")
+
+    parts.append(f"## Short Answer\n\n"
+                 f"{('For a job of about ' + str(int(size)) + ' square feet, ' ) if size else ''}"
+                 f"the calculator returns {result_line}. Round up to the next whole bag, ton "
+                 f"or can when you order, because running short halfway through costs more "
+                 f"than a little spare material.\n")
+
+    if scenario:
+        parts.append(f"## The Details That Matter Here\n\n{scenario}\n")
+
+    parts.append(f"## Getting Your Measurements Right\n\n"
+                 f"Start with the area. For a rectangle, multiply length by width in feet. "
+                 f"For an L-shape, split it into two rectangles and add them. For a circle, "
+                 f"measure across the widest point, halve it for the radius, then multiply "
+                 f"the radius by itself and by 3.14. Write every figure down in feet before "
+                 f"you calculate, so you are not converting units in your head.\n")
+
+    parts.append(f"## Running the Numbers\n\n{worked}\n")
+    parts.append(f"Those are the inputs and the result the calculator produces. Change any "
+                 f"box above and the answer updates immediately, so you can compare a "
+                 f"two-inch and a three-inch depth before you commit to an order.\n")
+
+    if lib.get("depths"):
+        parts.append(f"## Why the Depth Changes Everything\n\n")
+        for a, b in lib["depths"]:
+            parts.append(f"- **{a}** \u2014 {b}\n")
+        parts.append(f"\nThe same area at a deeper setting can need half as much material "
+                     f"again, so the depth is the figure worth checking twice.\n")
+
+    if lib.get("unit_note"):
+        parts.append(f"## Buying in the Right Units\n\n{lib['unit_note']} Divide your total "
+                     f"by the size of the bag or the capacity of a bulk load, then round up. "
+                     f"Buying everything in one order also keeps the material from a single "
+                     f"batch, which matters for colour-matched products.\n")
+
+    if secondary:
+        parts.append(f"## Related Searches\n\n"
+                     f"{', '.join(secondary[:3])} are worked out the same way: measure the "
+                     f"area, choose the depth or rate, then convert. The calculator handles "
+                     f"the conversion.\n")
+
+    parts.append(f"## Before You Order\n\n"
+                 f"Check the area once more, decide the depth from the job rather than the "
+                 f"price, add a small margin for waste and settlement, and confirm the units "
+                 f"your supplier uses. Those four steps prevent almost every ordering "
+                 f"mistake, and they take about five minutes.\n")
+
+    extra = content_lib.extra_section_md(calc_key)
+    if extra:
+        # keep the pillar's unique section out of the variant to preserve distinctness;
+        # variants instead reuse only the shared material notes above.
+        pass
 
     return "\n".join(parts)
 
@@ -271,7 +519,7 @@ def generate_article(plan_item: dict) -> dict | None:
     calc_title = calc_def["title"]
     calc_short = calc_key.replace("_", " ")
 
-    defaults = {i["id"]: i["default"] for i in calc_def["inputs"]}
+    defaults = _keyword_defaults(calc_key, calc_def, kw)
     result = calculators.compute(calc_key, defaults)
     worked = calculators.worked_example(calc_key, defaults)
 
@@ -291,7 +539,11 @@ def generate_article(plan_item: dict) -> dict | None:
         if body:
             print(f"[generate] LLM draft for {slug}: {word_count(body)} words")
     if not body:
-        body = _fallback_body(kw, calc_title, calc_short, worked, secondary, calc_key)
+        if plan_item.get("is_pillar"):
+            body = _fallback_body(kw, calc_title, calc_short, worked, secondary, calc_key)
+        else:
+            body = _fallback_body_variant(kw, calc_title, calc_short, worked, secondary,
+                                          calc_key, result)
         print(f"[generate] template draft for {slug}: {word_count(body)} words")
 
     title = _title_for(kw, calc_title)

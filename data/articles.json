@@ -28,7 +28,7 @@
       "bags_2cf": 25
     },
     "meta_description": "Use our free mulch calculator to work out exactly what you need for how much mulch do i need. Includes the formula, a worked example and common mistakes.",
-    "body_markdown": "The quick answer: measure the area, multiply by the required depth, then convert to the units you buy in. Our mulch calculator below does it for you and shows every step, so you can check the maths and order with confidence.\n\n## How to Calculate Mulch\n\n1. Measure the length and width in feet and multiply them to get the area.\n2. Decide the depth (or thickness) the job needs, in inches.\n3. Convert depth to feet by dividing by 12.\n4. Multiply area by depth in feet to get cubic feet.\n5. Divide cubic feet by 27 to get cubic yards, or use the bag figures below.\n\n## Worked Example\n\n- Inputs: length = 20, width = 10, depth = 3\n- Square Feet: **200.0**\n- Cubic Feet: **50.0**\n- Cubic Yards: **1.85**\n- Bags 2Cf: **25**\n\nThis example uses the calculator's default values, so you can see the whole calculation laid out before you change anything.\n\n## How Deep Should Mulch Be?\n\n| Depth / rate | Best for |\n|---|---|\n| 1-2 in | Refreshing thin beds and around shallow-rooted plants |\n| 2-3 in | Most flower beds and borders (the recommended default) |\n| 3-4 in | New beds and heavy weed suppression |\n| 4+ in | Avoid against stems; it holds moisture and can cause rot |\n\nPick the depth that matches the job rather than the deepest option available. Too shallow and the job fails early; too deep and you waste money on material you did not need.\n\n## How Much You Need at Common Sizes\n\n| Job size | Cubic feet | Cubic yards | 2 cu ft bags |\n|---|---|---|---|\n\n\nUse the calculator above for your exact measurements; the table is here so you can sanity-check the result at a glance.\n\n## Which Type of Mulch to Choose\n\n| Option | Why people choose it |\n|---|---|\n| Shredded hardwood | Settles well, long-lasting, good for borders |\n| Pine bark | Attractive, slower to break down, good for acid-loving plants |\n| Straw | Cheap and light, best for vegetable beds |\n| Compost | Feeds the soil as it breaks down; breaks down fastest |\n\nMatch the product to the job rather than to the lowest price. Check the supplier's stated coverage too, because it varies between brands and is usually given per bag or per cubic yard.\n\n## Common Mistakes to Avoid\n\n- Estimating by eye instead of measuring the actual area.\n\n- Forgetting the depth or thickness requirement for the job.\n\n- Skipping the waste allowance, then running short mid-project.\n\n- Mixing bags from different batches, which can show as shade differences.\n\n- Buying the cheapest option that does not suit the application.\n\n\n## Measuring Your Area Accurately\n\nMost errors come from the measurement, not the arithmetic. Measure at the widest and narrowest points and use the average, because beds and rooms are rarely perfect rectangles. For an L-shaped area, split it into two rectangles, work out each one, and add the results. For a circular bed, measure the diameter, halve it to get the radius, then multiply the radius by itself and by 3.14. Write the figures down in feet before you start, so you are not converting units in your head while you work.\n\n## Converting Between Units\n\nSuppliers sell in different units, so it helps to know how they relate. There are 27 cubic feet in a cubic yard, so divide cubic feet by 27 to get cubic yards. To go the other way, multiply cubic yards by 27. Bagged products state their volume on the label, usually 1.5 or 2 cubic feet for soil and mulch, so divide your total cubic feet by the bag size and round up to the next whole bag. For stone and aggregate sold by weight, a cubic yard of typical 3/4 inch crushed stone weighs about 1.4 tons, though this varies with the material.\n\n## Ordering: Bags or Bulk\n\nFor small jobs, bagged product is simpler and you can carry it yourself. As the volume grows, bulk delivery usually works out cheaper per unit, but check whether the supplier charges a delivery fee and whether they will place it where you need it. Order in one go where you can, so the material comes from the same batch, and add a small margin for settling and waste. If you are close to a whole cubic yard, it often makes sense to round up rather than make a second trip.\n\n\n## Practical Tips\n\n- Keep mulch a few inches clear of trunks and stems to prevent rot.\n\n- Water the bed before mulching, not after.\n\n- Reapply a thin layer each spring rather than one thick layer.\n\n\n## Tools and Materials You Will Need\n\nFor this job, have to hand a tape measure, a wheelbarrow, a garden fork, gloves, and a hose for watering before you lay it. None of it is specialist; the only item worth hiring is a compactor for a gravel driveway, since hand tamping rarely gets the base firm enough.\n\n## When to Call a Professional\n\nMeasuring and ordering are straightforward for most garden and decorating jobs, but a few situations are worth handing over. Structural work, retaining walls over about two feet, anything affecting drainage around a building, and electrical or gas work should go to a qualified tradesperson. The same applies if the ground is unstable or you are unsure about the base preparation for a driveway or slab: a professional survey costs far less than a failed pour or a wall that moves.\n\n\n## Related Questions\n\nPeople also ask about how much mulch do i need for 500 sq ft, how much mulch do i need for 300 square feet, how much mulch do i need for 200 square feet. The method is the same in every case: measure the area, choose the depth that suits the job, then convert the result into the units your supplier sells in.\n",
+    "body_markdown": "This calculator works out how much mulch you need from three inputs: the length and width of the bed, and the depth you want to spread. It reports the area, the volume in cubic feet, the volume in cubic yards, and the number of 2-cubic-foot bags. Change any box and the answer updates straight away.\n\n## What the Result Means\n\nThe **square feet** figure confirms the area you measured. The **cubic feet** figure is the volume at your chosen depth. **Cubic yards** is what bulk suppliers quote, and the **bag count** is what you need if you are buying from a garden centre. All four describe the same quantity, so if the bag count looks high, check the depth setting rather than the area.\n\n## Choosing the Right Depth\n\n- **1 to 2 inches** refreshes beds that were mulched last year.\n- **2 to 3 inches** is the standard for borders and flower beds.\n- **3 to 4 inches** suits new beds going onto bare soil.\n- **Over 4 inches** should be avoided against stems and trunks.\n\nDepth is the input people get wrong most often, because a single inch of difference changes the volume by a third.\n\n## A Worked Example\n\nA bed 20 ft by 10 ft is 200 square feet. At 3 inches deep, that is 200 x 0.25 = 50 cubic feet, which is 1.85 cubic yards, or 25 bags of 2 cubic feet. Change the depth to 2 inches and the volume drops to 33 cubic feet, about 17 bags. That is why the calculator asks for depth first.\n\n## Comparing Common Bed Sizes\n\n- **100 sq ft at 3 in:** 25 cubic feet, 0.93 cubic yards, 13 bags.\n- **200 sq ft at 3 in:** 50 cubic feet, 1.85 cubic yards, 25 bags.\n- **400 sq ft at 3 in:** 100 cubic feet, 3.70 cubic yards, 50 bags.\n- **500 sq ft at 3 in:** 125 cubic feet, 4.63 cubic yards, 63 bags.\n\nThe bag count assumes 2-cubic-foot bags, which is the most common size. If your supplier sells 1.5-cubic-foot bags, divide the cubic feet by 1.5 instead.\n\n## Quick Conversions\n\nThere are 27 cubic feet in a cubic yard, so divide cubic feet by 27 for yards. A cubic yard is 13.5 bags of 2 cubic feet. If you are quoted a price per yard and a price per bag, divide the yard price by 13.5 to compare honestly.\n\n## Measuring a Bed That Is Not a Rectangle\n\nSplit an L-shaped bed into two rectangles, work out each, and add them. For a curved bed, measure the widest and narrowest points and use the average. Write the measurements down in feet before using the calculator, so you are not converting in your head.\n\n## Common Mistakes\n\n- Using last year's depth without checking the bed today.\n- Measuring the planting area but mulching the whole bed, or the reverse.\n- Forgetting that mulch settles, so one thick layer looks thin a month later.\n- Buying to the exact figure with no small margin for odd corners.\n\n## How to Use the Result\n\nRound up to the next whole bag, or add about 5 per cent when ordering bulk. Keep mulch a few inches clear of stems and trunks, and water the bed before you spread rather than after. If you are close to a whole cubic yard, order the whole yard; a second trip usually costs more than the extra material.\n\n## Applying Mulch Without Mistakes\n\nSpread in small piles across the bed rather than one heap, then level each pile with a rake or fork. This keeps the depth even, which matters more than it sounds: a bed that is three inches at the front and one inch at the back will grow weeds exactly where you cannot see them.\n\nKeep the mulch a few inches away from the base of every stem, trunk and shrub. Piling it against bark traps moisture and is one of the most common causes of rot in young trees and shrubs. Feather the outer edge down to nothing so the bed blends into the lawn rather than ending in a ridge that sheds water onto the path.\n\nWater the ground before you mulch, not after. Dry soil under a thick layer stays dry, because the mulch sheds the rain you are counting on. If you are mulching in summer, water thoroughly the day before, then spread the next morning while the soil is still damp.\n\nReapply thinly each year rather than deeply once. A fresh inch on top of last year's layer is usually enough to keep beds looking well and to stay ahead of weeds, and it avoids the slow build-up that smothers plant crowns.\n\n",
     "faq": [
       {
         "q": "How deep should mulch be?",
@@ -50,7 +50,7 @@
     "status": "approved",
     "created": "2026-10-07",
     "updated": "2026-10-07",
-    "revision": 1,
+    "revision": 3,
     "internal_links": [
       {
         "to": "how-much-mulch-do-i-need-for-500-sq-ft",
@@ -104,15 +104,15 @@
       "gates": {
         "thin_content": {
           "pass": true,
-          "detail": "word count 938 (min 900)"
+          "detail": "word count 778 (min 600)"
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.00 vs n/a"
+          "detail": "max similarity 0.08 vs gravel-calculator"
         },
         "keyword_stuffing": {
           "pass": true,
-          "detail": "keyword density 1.92%"
+          "detail": "keyword density 0.00%"
         },
         "ai_cliches": {
           "pass": true,
@@ -120,11 +120,11 @@
         },
         "readability": {
           "pass": true,
-          "detail": "avg sentence length 18.4 words"
+          "detail": "avg sentence length 14.4 words"
         },
         "heading_structure": {
           "pass": true,
-          "detail": "h2=13 h3=0 (no h1 in body)"
+          "detail": "h2=9 h3=0 (no h1 in body)"
         },
         "has_calculator_or_data": {
           "pass": true,
@@ -158,7 +158,7 @@
       "ctr": 0,
       "position": 0
     },
-    "word_count": 938
+    "word_count": 778
   },
   {
     "id": "raised-bed-soil-calculator",
@@ -188,7 +188,7 @@
       "bags_1_5cf": 22
     },
     "meta_description": "Use our free raised bed soil calculator to work out exactly what you need for how much soil for raised bed. Includes the formula, a worked example and.",
-    "body_markdown": "The quick answer: measure the area, multiply by the required depth, then convert to the units you buy in. Our raised bed soil calculator below does it for you and shows every step, so you can check the maths and order with confidence.\n\n## How to Calculate Soil\n\n1. Measure the length and width in feet and multiply them to get the area.\n2. Decide the depth (or thickness) the job needs, in inches.\n3. Convert depth to feet by dividing by 12.\n4. Multiply area by depth in feet to get cubic feet.\n5. Divide cubic feet by 27 to get cubic yards, or use the bag figures below.\n\n## Worked Example\n\n- Inputs: length = 8, width = 4, height = 12\n- Cubic Feet: **32.0**\n- Cubic Yards: **1.19**\n- Bags 1 5Cf: **22**\n\nThis example uses the calculator's default values, so you can see the whole calculation laid out before you change anything.\n\n## How Deep Should Soil Mix Be?\n\n| Depth / rate | Best for |\n|---|---|\n| 6 in | Herbs, lettuce and other shallow-rooted crops |\n| 10-12 in | Most vegetables and flowering plants |\n| 12-18 in | Deep-rooted crops such as carrots, parsnips and tomatoes |\n| 18+ in | Raised beds over poor ground or for drainage-critical plants |\n\nPick the depth that matches the job rather than the deepest option available. Too shallow and the job fails early; too deep and you waste money on material you did not need.\n\n## How Much You Need at Common Sizes\n\n| Job size | Cubic feet | Cubic yards | 1.5 cu ft bags |\n|---|---|---|---|\n| 4x4 bed, 12 in deep | 16.0 | 0.59 | 11 |\n| 4x8 bed, 12 in deep | 32.0 | 1.19 | 22 |\n| 4x8 bed, 18 in deep | 48.0 | 1.78 | 32 |\n| 4x12 bed, 12 in deep | 48.0 | 1.78 | 32 |\n\nUse the calculator above for your exact measurements; the table is here so you can sanity-check the result at a glance.\n\n## Which Type of Soil Mix to Choose\n\n| Option | Why people choose it |\n|---|---|\n| 60% topsoil / 30% compost / 10% perlite | General-purpose raised-bed blend |\n| Compost-heavy mix | Hungry feeders such as tomatoes and courgettes |\n| Sandy mix | Root vegetables and drought-tolerant plants |\n| Coarse grit added | Heavy clay soils needing drainage |\n\nMatch the product to the job rather than to the lowest price. Check the supplier's stated coverage too, because it varies between brands and is usually given per bag or per cubic yard.\n\n## Common Mistakes to Avoid\n\n- Estimating by eye instead of measuring the actual area.\n\n- Forgetting the depth or thickness requirement for the job.\n\n- Skipping the waste allowance, then running short mid-project.\n\n- Mixing bags from different batches, which can show as shade differences.\n\n- Buying the cheapest option that does not suit the application.\n\n\n## Measuring Your Area Accurately\n\nMost errors come from the measurement, not the arithmetic. Measure at the widest and narrowest points and use the average, because beds and rooms are rarely perfect rectangles. For an L-shaped area, split it into two rectangles, work out each one, and add the results. For a circular bed, measure the diameter, halve it to get the radius, then multiply the radius by itself and by 3.14. Write the figures down in feet before you start, so you are not converting units in your head while you work.\n\n## Converting Between Units\n\nSuppliers sell in different units, so it helps to know how they relate. There are 27 cubic feet in a cubic yard, so divide cubic feet by 27 to get cubic yards. To go the other way, multiply cubic yards by 27. Bagged products state their volume on the label, usually 1.5 or 2 cubic feet for soil and mulch, so divide your total cubic feet by the bag size and round up to the next whole bag. For stone and aggregate sold by weight, a cubic yard of typical 3/4 inch crushed stone weighs about 1.4 tons, though this varies with the material.\n\n## Ordering: Bags or Bulk\n\nFor small jobs, bagged product is simpler and you can carry it yourself. As the volume grows, bulk delivery usually works out cheaper per unit, but check whether the supplier charges a delivery fee and whether they will place it where you need it. Order in one go where you can, so the material comes from the same batch, and add a small margin for settling and waste. If you are close to a whole cubic yard, it often makes sense to round up rather than make a second trip.\n\n\n## Practical Tips\n\n- Fill in layers and water as you go to settle the mix.\n\n- Leave two inches of freeboard so soil does not wash out.\n\n- Top up by about 10% each year as the mix settles and breaks down.\n\n\n## Tools and Materials You Will Need\n\nFor this job, have to hand a tape measure, a wheelbarrow or buckets, a garden fork, and a length of landscape fabric for the base. None of it is specialist; the only item worth hiring is a compactor for a gravel driveway, since hand tamping rarely gets the base firm enough.\n\n## When to Call a Professional\n\nMeasuring and ordering are straightforward for most garden and decorating jobs, but a few situations are worth handing over. Structural work, retaining walls over about two feet, anything affecting drainage around a building, and electrical or gas work should go to a qualified tradesperson. The same applies if the ground is unstable or you are unsure about the base preparation for a driveway or slab: a professional survey costs far less than a failed pour or a wall that moves.\n\n\n## Related Questions\n\nPeople also ask about how much soil do you need for a raised bed, how much soil for a raised bed calculator, how much soil for a raised garden bed. The method is the same in every case: measure the area, choose the depth that suits the job, then convert the result into the units your supplier sells in.\n",
+    "body_markdown": "This calculator works out how much soil a raised bed needs from three inputs: the bed length, its width, and the fill depth. It returns the volume in cubic feet, cubic yards and bags, so you can order bulk or buy bagged mix without doing the arithmetic yourself.\n\n## What the Result Means\n\nThe **cubic feet** figure is the raw volume. **Cubic yards** is what bulk topsoil suppliers sell. The **bag count** assumes 2-cubic-foot bags, so divide the cubic feet by your bag size if yours differ. A cubic yard is 27 cubic feet, or about 13.5 bags.\n\n## Deciding the Fill Depth\n\n- **Six inches** suits herbs, lettuce and shallow-rooted salad crops.\n- **Ten to twelve inches** covers most vegetables and flowers.\n- **Twelve to eighteen inches** suits carrots, parsnips and tomatoes.\n\nIf the bed sits on open ground, roots can grow below the frame, so you can fill it more shallowly. If it sits on concrete or gravel, the bed is the whole root zone and should be filled to full depth.\n\n## A Worked Example\n\nA bed 8 ft by 4 ft is 32 square feet. Filled 12 inches deep, that is 32 x 1 = 32 cubic feet, or 1.19 cubic yards, or 16 bags of 2 cubic feet. At 6 inches the volume halves to 16 cubic feet, and at 18 inches it rises to 48 cubic feet.\n\n## Common Bed Sizes\n\n- **4 x 4 ft at 6 in:** 8 cubic feet, 8 bags.\n- **4 x 8 ft at 6 in:** 16 cubic feet, 8 bags.\n- **4 x 8 ft at 12 in:** 32 cubic feet, 16 bags.\n- **4 x 8 ft at 18 in:** 48 cubic feet, 24 bags.\n\n## Mixing Your Own Blend\n\nA dependable raised-bed mix is about 60 per cent topsoil, 30 per cent compost and 10 per cent perlite or coarse sand. This drains well and holds nutrients without compacting. Fresh manure should be composted first; used raw it burns young roots.\n\n## Filling the Bed Well\n\nFill in layers and water each one so the mix settles before the next goes on. Stop about two inches below the rim. That freeboard stops soil washing out in rain and gives you room to top up. Expect the mix to settle by about a tenth of its volume in the first season.\n\n## Common Mistakes\n\n- Filling with garden soil straight from the ground, which compacts and drains poorly.\n- Skipping drainage when the bed stands on a hard surface.\n- Filling to the brim, so the first storm spills soil over the sides.\n- Forgetting that the bed will need a top-up the following spring.\n\n## How to Use the Result\n\nIf you are under about a cubic yard, bagged mix is easier and lets you choose the blend. Past that, order bulk, but check the delivery charge and make sure you can wheel it to the bed. Mix and fill in layers, and keep a bag in reserve for the spring top-up.\n\n## Preparing the Site Before You Fill\n\nDecide where the bed will sit before you order soil, because a full raised bed is far too heavy to move. Level the ground underneath, and remove turf or weeds so they do not grow up through the mix. If the bed stands on concrete or gravel, lay a sheet of landscape fabric first to slow drainage loss and stop weeds from the edges.\n\nThink about access as well as sunlight. Leave enough room to walk and kneel all the way round the bed; a bed against a wall is only fully workable from three sides. Most vegetables want six to eight hours of sun, so watch the site through a day before you commit.\n\nIf the ground below is compacted or heavy clay, fork it over before the bed goes down. Roots will grow into it if it is loose, which effectively adds depth to the bed for free. On concrete or paving, there is no below, so fill to the full depth the crop needs.\n\nFinally, line the base of a wooden bed with a single layer of cardboard. It suppresses weeds for the first season and then rots down, adding a little organic matter without blocking drainage.\n\n",
     "faq": [
       {
         "q": "How much soil do I need for a raised bed?",
@@ -210,7 +210,7 @@
     "status": "approved",
     "created": "2026-10-07",
     "updated": "2026-10-07",
-    "revision": 1,
+    "revision": 3,
     "internal_links": [
       {
         "to": "how-much-soil-do-you-need-for-a-raised-bed",
@@ -264,11 +264,11 @@
       "gates": {
         "thin_content": {
           "pass": true,
-          "detail": "word count 975 (min 900)"
+          "detail": "word count 695 (min 600)"
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.00 vs n/a"
+          "detail": "max similarity 0.08 vs how-much-soil-do-you-need-for-a-raised-bed"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -280,11 +280,11 @@
         },
         "readability": {
           "pass": true,
-          "detail": "avg sentence length 16.9 words"
+          "detail": "avg sentence length 15.7 words"
         },
         "heading_structure": {
           "pass": true,
-          "detail": "h2=13 h3=0 (no h1 in body)"
+          "detail": "h2=9 h3=0 (no h1 in body)"
         },
         "has_calculator_or_data": {
           "pass": true,
@@ -318,7 +318,7 @@
       "ctr": 0,
       "position": 0
     },
-    "word_count": 975
+    "word_count": 695
   },
   {
     "id": "gravel-calculator",
@@ -348,7 +348,7 @@
       "tons": 2.59
     },
     "meta_description": "Use our free gravel calculator to work out exactly what you need for how much gravel do i need. Includes the formula, a worked example and common mistakes.",
-    "body_markdown": "The quick answer: measure the area, multiply by the required depth, then convert to the units you buy in. Our gravel calculator below does it for you and shows every step, so you can check the maths and order with confidence.\n\n## How to Calculate Gravel\n\n1. Measure the length and width in feet and multiply them to get the area.\n2. Decide the depth (or thickness) the job needs, in inches.\n3. Convert depth to feet by dividing by 12.\n4. Multiply area by depth in feet to get cubic feet.\n5. Divide cubic feet by 27 to get cubic yards, or use the bag figures below.\n\n## Worked Example\n\n- Inputs: length = 20, width = 10, depth = 3\n- Square Feet: **200.0**\n- Cubic Yards: **1.85**\n- Tons: **2.59**\n\nThis example uses the calculator's default values, so you can see the whole calculation laid out before you change anything.\n\n## How Deep Should Gravel Be?\n\n| Depth / rate | Best for |\n|---|---|\n| 2 in | Decorative borders and light footpaths |\n| 3 in | Garden paths and patio bases over fabric |\n| 4 in | Light driveways, compacted in two layers |\n| 6 in | Regular vehicle traffic and parking areas |\n\nPick the depth that matches the job rather than the deepest option available. Too shallow and the job fails early; too deep and you waste money on material you did not need.\n\n## How Much You Need at Common Sizes\n\n| Job size | Cubic yards | Tons |\n|---|---|---|\n| 100 sq ft, 3 in deep | 0.93 | 1.3 |\n| 200 sq ft, 3 in deep | 1.85 | 2.59 |\n| 400 sq ft, 4 in deep | 4.94 | 6.91 |\n| 600 sq ft, 4 in deep | 7.41 | 10.37 |\n\nUse the calculator above for your exact measurements; the table is here so you can sanity-check the result at a glance.\n\n## Which Type of Gravel to Choose\n\n| Option | Why people choose it |\n|---|---|\n| 3/4 in crushed stone | All-round base and driveway choice |\n| Pea gravel | Smooth, good for paths and play areas, less stable underfoot |\n| River rock | Decorative borders and dry creek beds |\n| Decomposed granite | Compacts firm, good for paths and patios |\n\nMatch the product to the job rather than to the lowest price. Check the supplier's stated coverage too, because it varies between brands and is usually given per bag or per cubic yard.\n\n## Common Mistakes to Avoid\n\n- Estimating by eye instead of measuring the actual area.\n\n- Forgetting the depth or thickness requirement for the job.\n\n- Skipping the waste allowance, then running short mid-project.\n\n- Mixing bags from different batches, which can show as shade differences.\n\n- Buying the cheapest option that does not suit the application.\n\n\n## Measuring Your Area Accurately\n\nMost errors come from the measurement, not the arithmetic. Measure at the widest and narrowest points and use the average, because beds and rooms are rarely perfect rectangles. For an L-shaped area, split it into two rectangles, work out each one, and add the results. For a circular bed, measure the diameter, halve it to get the radius, then multiply the radius by itself and by 3.14. Write the figures down in feet before you start, so you are not converting units in your head while you work.\n\n## Converting Between Units\n\nSuppliers sell in different units, so it helps to know how they relate. There are 27 cubic feet in a cubic yard, so divide cubic feet by 27 to get cubic yards. To go the other way, multiply cubic yards by 27. Bagged products state their volume on the label, usually 1.5 or 2 cubic feet for soil and mulch, so divide your total cubic feet by the bag size and round up to the next whole bag. For stone and aggregate sold by weight, a cubic yard of typical 3/4 inch crushed stone weighs about 1.4 tons, though this varies with the material.\n\n## Ordering: Bags or Bulk\n\nFor small jobs, bagged product is simpler and you can carry it yourself. As the volume grows, bulk delivery usually works out cheaper per unit, but check whether the supplier charges a delivery fee and whether they will place it where you need it. Order in one go where you can, so the material comes from the same batch, and add a small margin for settling and waste. If you are close to a whole cubic yard, it often makes sense to round up rather than make a second trip.\n\n\n## Practical Tips\n\n- Lay landscape fabric first so gravel does not sink into the soil.\n\n- Compact in two thinner layers rather than one thick one.\n\n- Add a border edge to stop gravel migrating into lawns.\n\n\n## Tools and Materials You Will Need\n\nFor this job, have to hand a tape measure, landscape fabric, a rake, a plate compactor (hire for driveways), and a wheelbarrow. None of it is specialist; the only item worth hiring is a compactor for a gravel driveway, since hand tamping rarely gets the base firm enough.\n\n## When to Call a Professional\n\nMeasuring and ordering are straightforward for most garden and decorating jobs, but a few situations are worth handing over. Structural work, retaining walls over about two feet, anything affecting drainage around a building, and electrical or gas work should go to a qualified tradesperson. The same applies if the ground is unstable or you are unsure about the base preparation for a driveway or slab: a professional survey costs far less than a failed pour or a wall that moves.\n\n\n## Related Questions\n\nPeople also ask about how much gravel do i need for my driveway, how much gravel do i need for a french drain, how much gravel do i need for a 20x20 area. The method is the same in every case: measure the area, choose the depth that suits the job, then convert the result into the units your supplier sells in.\n",
+    "body_markdown": "This calculator works out how much gravel a path, drive or border needs from the length, width and depth of the area. It reports square feet, cubic yards and tons, using a standard 1.4 tons per cubic yard for 3/4-inch crushed stone. Change any input and the result updates immediately.\n\n## What the Result Means\n\n**Square feet** is your measured area. **Cubic yards** is what most suppliers quote. **Tons** is what you need if the yard sells aggregate by weight. The tonnage assumes 3/4-inch crushed stone; finer or heavier stone changes the figure, so confirm it with your supplier before ordering by weight.\n\n## Choosing the Right Depth\n\n- **2 inches** for a decorative border or a light footpath.\n- **3 inches** for a garden path over landscape fabric.\n- **4 inches** for a light driveway, compacted in two layers.\n- **6 inches** for regular vehicle traffic and parking.\n\nDepth is the input with the biggest effect on cost. Doubling the depth doubles the material, so measure the job before choosing.\n\n## A Worked Example\n\nA path 20 ft by 10 ft is 200 square feet. At 3 inches deep, that is 200 x 0.25 = 50 cubic feet, or 1.85 cubic yards, which is about 2.6 tons. Spread to 4 inches for a drive and it becomes 66.7 cubic feet, 2.47 cubic yards, about 3.5 tons.\n\n## Common Job Sizes\n\n- **100 sq ft at 3 in:** 25 cubic feet, 0.93 cubic yards, 1.3 tons.\n- **200 sq ft at 3 in:** 50 cubic feet, 1.85 cubic yards, 2.6 tons.\n- **200 sq ft at 4 in:** 66.7 cubic feet, 2.47 cubic yards, 3.5 tons.\n- **360 sq ft at 4 in:** 120 cubic feet, 4.44 cubic yards, 6.2 tons.\n\n## Stone Choice Matters\n\nAngular crushed stone locks together under a compactor and keeps its shape, which is what a driveway needs. Rounded pea gravel rolls and ruts, and belongs on borders and paths. For a drive, lay the sub-base, compact it, then add the stone in two layers rather than one.\n\n## Conversions\n\nThere are 27 cubic feet in a cubic yard. A cubic yard of 3/4-inch crushed stone weighs about 1.4 tons. If the supplier quotes per ton, multiply your cubic yards by 1.4; if per yard, divide the ton price by 1.4 to compare.\n\n## Common Mistakes\n\n- Laying gravel onto bare soil without fabric, so it sinks and weeds grow through.\n- Skipping compaction, leaving a loose surface that ruts.\n- Using rounded stone where angular stone is needed.\n- Ordering the exact volume with no margin for settlement.\n\n## How to Use the Result\n\nAdd about 10 per cent for settlement and spreading losses, and have the load tipped as close to the work as the truck can reach. Keep a steel or timber edge at the boundary so the stone does not spread into the garden underfoot or under wheels.\n\n## Laying Gravel Properly\n\nOrder the stone in two grades if you are building a drive: a coarser sub-base and a finer top layer. Spread the sub-base first, rake it level, then compact it before the top layer goes on. Compacting each layer separately is what stops the surface rutting under a wheel later.\n\nWork from the far end of the job back toward the entrance, so you are not walking over finished stone. Use the back of a rake to level, then a plate compactor or a heavy roller to settle it. Aim for a slight crown in the middle of a path so water runs off to the sides rather than sitting in the middle.\n\nSet the edging before the final layer, not after. A steel or timber edge holds everything in place, and retrofitting one means pulling stone back out. Leave the edging a few millimetres above the finished surface so the stone does not spill over it underfoot.\n\nOnce laid, top up any thin patches and re-compact. Gravel settles over the first few weeks, so keep a bag or two aside to dress the surface again after a month of use.\n\n",
     "faq": [
       {
         "q": "How much does a cubic yard of gravel weigh?",
@@ -370,7 +370,7 @@
     "status": "approved",
     "created": "2026-10-07",
     "updated": "2026-10-07",
-    "revision": 1,
+    "revision": 3,
     "internal_links": [
       {
         "to": "how-much-gravel-do-i-need-for-my-driveway",
@@ -424,15 +424,15 @@
       "gates": {
         "thin_content": {
           "pass": true,
-          "detail": "word count 961 (min 900)"
+          "detail": "word count 682 (min 600)"
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.00 vs n/a"
+          "detail": "max similarity 0.12 vs mulch-calculator"
         },
         "keyword_stuffing": {
           "pass": true,
-          "detail": "keyword density 1.87%"
+          "detail": "keyword density 0.00%"
         },
         "ai_cliches": {
           "pass": true,
@@ -440,11 +440,11 @@
         },
         "readability": {
           "pass": true,
-          "detail": "avg sentence length 16.6 words"
+          "detail": "avg sentence length 11.2 words"
         },
         "heading_structure": {
           "pass": true,
-          "detail": "h2=13 h3=0 (no h1 in body)"
+          "detail": "h2=9 h3=0 (no h1 in body)"
         },
         "has_calculator_or_data": {
           "pass": true,
@@ -478,7 +478,7 @@
       "ctr": 0,
       "position": 0
     },
-    "word_count": 961
+    "word_count": 682
   },
   {
     "id": "paint-calculator",
@@ -511,7 +511,7 @@
       "gallons": 2.41
     },
     "meta_description": "Use our free paint calculator to work out exactly what you need for how much paint do i need. Includes the formula, a worked example and common mistakes.",
-    "body_markdown": "The quick answer: measure the area, multiply by the required depth, then convert to the units you buy in. Our paint calculator below does it for you and shows every step, so you can check the maths and order with confidence.\n\n## How to Calculate Paint\n\n1. Measure the length and width in feet and multiply them to get the area.\n2. Decide the depth (or thickness) the job needs, in inches.\n3. Convert depth to feet by dividing by 12.\n4. Multiply area by depth in feet to get cubic feet.\n5. Divide cubic feet by 27 to get cubic yards, or use the bag figures below.\n\n## Worked Example\n\n- Inputs: length = 12, width = 10, height = 8, coats = 2, doors = 1, windows = 2\n- Wall Area: **352.0**\n- Paintable Area: **301.0**\n- Gallons: **2.41**\n\nThis example uses the calculator's default values, so you can see the whole calculation laid out before you change anything.\n\n## How Deep Should Paint Be?\n\n| Depth / rate | Best for |\n|---|---|\n| 1 coat | Same colour refresh on a similar tone |\n| 2 coats | Colour changes and new drywall (the usual default) |\n| 3 coats | Strong colour changes or dark-to-light transitions |\n\nPick the depth that matches the job rather than the deepest option available. Too shallow and the job fails early; too deep and you waste money on material you did not need.\n\n## How Much You Need at Common Sizes\n\n| Job size | Paintable sq ft | Gallons |\n|---|---|---|\n\n\nUse the calculator above for your exact measurements; the table is here so you can sanity-check the result at a glance.\n\n## Which Type of Paint to Choose\n\n| Option | Why people choose it |\n|---|---|\n| Matt emulsion | Ceilings and low-traffic walls; hides imperfections |\n| Eggshell | Hallways and family rooms; wipes clean |\n| Satin | Kitchens, bathrooms and trim |\n| Primer + topcoat | Bare drywall, repairs and stained surfaces |\n\nMatch the product to the job rather than to the lowest price. Check the supplier's stated coverage too, because it varies between brands and is usually given per bag or per cubic yard.\n\n## Common Mistakes to Avoid\n\n- Estimating by eye instead of measuring the actual area.\n\n- Forgetting the depth or thickness requirement for the job.\n\n- Skipping the waste allowance, then running short mid-project.\n\n- Mixing bags from different batches, which can show as shade differences.\n\n- Buying the cheapest option that does not suit the application.\n\n\n## Measuring Your Area Accurately\n\nMost errors come from the measurement, not the arithmetic. Measure at the widest and narrowest points and use the average, because beds and rooms are rarely perfect rectangles. For an L-shaped area, split it into two rectangles, work out each one, and add the results. For a circular bed, measure the diameter, halve it to get the radius, then multiply the radius by itself and by 3.14. Write the figures down in feet before you start, so you are not converting units in your head while you work.\n\n## Converting Between Units\n\nSuppliers sell in different units, so it helps to know how they relate. There are 27 cubic feet in a cubic yard, so divide cubic feet by 27 to get cubic yards. To go the other way, multiply cubic yards by 27. Bagged products state their volume on the label, usually 1.5 or 2 cubic feet for soil and mulch, so divide your total cubic feet by the bag size and round up to the next whole bag. For stone and aggregate sold by weight, a cubic yard of typical 3/4 inch crushed stone weighs about 1.4 tons, though this varies with the material.\n\n## Ordering: Bags or Bulk\n\nFor small jobs, bagged product is simpler and you can carry it yourself. As the volume grows, bulk delivery usually works out cheaper per unit, but check whether the supplier charges a delivery fee and whether they will place it where you need it. Order in one go where you can, so the material comes from the same batch, and add a small margin for settling and waste. If you are close to a whole cubic yard, it often makes sense to round up rather than make a second trip.\n\n\n## Practical Tips\n\n- Subtract about 21 sq ft per door and 15 sq ft per window.\n\n- Keep roughly 10% spare for touch-ups and note the colour code.\n\n- Buy all cans at once so they come from the same batch.\n\n\n## Tools and Materials You Will Need\n\nFor this job, have to hand a tape measure, masking tape, dust sheets, a roller and tray, a brush for edges, and a filler for repairs. None of it is specialist; the only item worth hiring is a compactor for a gravel driveway, since hand tamping rarely gets the base firm enough.\n\n## When to Call a Professional\n\nMeasuring and ordering are straightforward for most garden and decorating jobs, but a few situations are worth handing over. Structural work, retaining walls over about two feet, anything affecting drainage around a building, and electrical or gas work should go to a qualified tradesperson. The same applies if the ground is unstable or you are unsure about the base preparation for a driveway or slab: a professional survey costs far less than a failed pour or a wall that moves.\n\n\n## Related Questions\n\nPeople also ask about how much paint do i need for a bedroom, how much paint do i need for a 10x10 room, how much paint do i need for a front door. The method is the same in every case: measure the area, choose the depth that suits the job, then convert the result into the units your supplier sells in.\n",
+    "body_markdown": "This calculator works out how much paint a room needs from its length, width and wall height, the number of coats, and the doors and windows to subtract. It returns the paintable area and the volume of paint in gallons, so you buy the right amount in one trip.\n\n## What the Result Means\n\nThe **wall area** is the perimeter multiplied by the height, less the openings. The **gallons** figure assumes about 350 square feet of coverage per gallon, which is typical for a smooth, primed wall. Rougher or unprimed surfaces cover less, so add a little if that is your situation.\n\n## Inputs Explained\n\n- **Length and width** set the room's footprint and therefore the perimeter.\n- **Wall height** is usually 8 ft, but measure the tallest wall if the ceiling slopes.\n- **Coats** is two for almost every job, and a colour change may need a primer plus two.\n- **Doors and windows** are subtracted at about 21 and 15 square feet each.\n\n## A Worked Example\n\nA room 12 ft by 10 ft with 8 ft walls has a perimeter of 44 ft and a wall area of 352 square feet. Subtract one door and two windows, about 51 square feet, leaving 301 square feet. Two coats is 602 square feet, and dividing by 350 gives about 1.7 gallons, so buy two.\n\n## Common Room Sizes\n\n- **10 x 10 ft, 2 coats:** about 1.5 gallons, buy 2.\n- **12 x 10 ft, 2 coats:** about 1.7 gallons, buy 2.\n- **12 x 12 ft, 2 coats:** about 1.9 gallons, buy 2.\n- **14 x 12 ft, 2 coats:** about 2.2 gallons, buy 3.\n\n## Ceilings and Trim\n\nIf you are painting the ceiling, add its length x width to the total. Trim, skirting and frames are measured in linear feet and painted separately, usually about a gallon per 100 to 150 feet. Together these often add a third to the job, so price them in from the start.\n\n## Buying and Storing\n\nBuy all the paint at once so it comes from a single batch; paint does not match across batches. Keep a labelled tin of each colour for touch-ups. If you are changing colour, expect a primer and possibly a third coat, particularly for strong colours on pale walls.\n\n## Common Mistakes\n\n- Buying for one coat and running short on the second.\n- Not subtracting doors and windows, which over-buys by up to a gallon.\n- Assuming a glossy surface needs no preparation; it usually needs keying or a bonding primer.\n- Forgetting that a high or sloping ceiling adds a surprising amount of area.\n\n## How to Use the Result\n\nRound up to the next whole gallon or tin, and keep the spare. Two coats give an even finish; one coat rarely does, however good the paint. Cut in the edges first and keep a wet edge so you are not painting over a drying line.\n\n## Estimating for More Than One Room\n\nIf you are painting several rooms, work out each one separately, then add the totals before you convert to gallons. Rooms differ in ceiling height, window count and number of coats, so a single averaged figure quickly drifts from reality. A small spreadsheet or a note per room keeps it straight.\n\nConsider buying in larger tins. They usually cost less per litre than small ones, they guarantee the whole job comes from one batch, and you are less likely to run out halfway through a wall. Keep the leftover in a labelled tin for touch-ups, with the colour code written on the lid.\n\nDo not forget the parts that the four walls miss: the ceiling, the skirting, the door and window frames, and any fitted furniture you plan to repaint. These are often measured in linear feet rather than square feet, and together they can add a third again to the paint you need.\n\nFinally, buy the primer at the same time as the topcoat if you are changing colour or painting new plaster. A second trip for primer after the walls are cleared is the most common delay on a decorating job.\n\n",
     "faq": [
       {
         "q": "How much does a gallon of paint cover?",
@@ -533,7 +533,7 @@
     "status": "approved",
     "created": "2026-10-07",
     "updated": "2026-10-07",
-    "revision": 1,
+    "revision": 3,
     "internal_links": [
       {
         "to": "how-much-paint-do-i-need-for-a-bedroom",
@@ -587,15 +587,15 @@
       "gates": {
         "thin_content": {
           "pass": true,
-          "detail": "word count 920 (min 900)"
+          "detail": "word count 677 (min 600)"
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.00 vs n/a"
+          "detail": "max similarity 0.14 vs how-much-paint-do-i-need-for-a-bedroom"
         },
         "keyword_stuffing": {
           "pass": true,
-          "detail": "keyword density 1.96%"
+          "detail": "keyword density 0.00%"
         },
         "ai_cliches": {
           "pass": true,
@@ -603,11 +603,11 @@
         },
         "readability": {
           "pass": true,
-          "detail": "avg sentence length 18.0 words"
+          "detail": "avg sentence length 15.7 words"
         },
         "heading_structure": {
           "pass": true,
-          "detail": "h2=13 h3=0 (no h1 in body)"
+          "detail": "h2=9 h3=0 (no h1 in body)"
         },
         "has_calculator_or_data": {
           "pass": true,
@@ -641,7 +641,7 @@
       "ctr": 0,
       "position": 0
     },
-    "word_count": 920
+    "word_count": 677
   },
   {
     "id": "tile-calculator",
@@ -674,7 +674,7 @@
       "tiles_with_waste": 132
     },
     "meta_description": "Use our free tile calculator to work out exactly what you need for how many tiles do i need. Includes the formula, a worked example and common mistakes.",
-    "body_markdown": "The quick answer: measure the area, multiply by the required depth, then convert to the units you buy in. Our tile calculator below does it for you and shows every step, so you can check the maths and order with confidence.\n\n## How to Calculate Tile\n\n1. Measure the length and width in feet and multiply them to get the area.\n2. Decide the depth (or thickness) the job needs, in inches.\n3. Convert depth to feet by dividing by 12.\n4. Multiply area by depth in feet to get cubic feet.\n5. Divide cubic feet by 27 to get cubic yards, or use the bag figures below.\n\n## Worked Example\n\n- Inputs: length = 12, width = 10, tile_w = 12, tile_h = 12, waste = 10\n- Floor Area: **120.0**\n- Tile Area: **1.0**\n- Tiles: **120**\n- Tiles With Waste: **132**\n\nThis example uses the calculator's default values, so you can see the whole calculation laid out before you change anything.\n\n## How Deep Should Tile Be?\n\n| Depth / rate | Best for |\n|---|---|\n| 10% waste | Straight, simple layouts |\n| 15% waste | Diagonal or offset layouts and rooms with many cuts |\n| 20% waste | Herringbone and complex patterns |\n\nPick the depth that matches the job rather than the deepest option available. Too shallow and the job fails early; too deep and you waste money on material you did not need.\n\n## How Much You Need at Common Sizes\n\n| Job size | Tiles | With 10% waste |\n|---|---|---|\n\n\nUse the calculator above for your exact measurements; the table is here so you can sanity-check the result at a glance.\n\n## Which Type of Tile to Choose\n\n| Option | Why people choose it |\n|---|---|\n| Ceramic | Walls and light-traffic floors; easy to cut |\n| Porcelain | Floors and wet areas; denser and more water-resistant |\n| Natural stone | Feature floors; needs sealing |\n| Mosaic | Showers and small, shaped areas |\n\nMatch the product to the job rather than to the lowest price. Check the supplier's stated coverage too, because it varies between brands and is usually given per bag or per cubic yard.\n\n## Common Mistakes to Avoid\n\n- Estimating by eye instead of measuring the actual area.\n\n- Forgetting the depth or thickness requirement for the job.\n\n- Skipping the waste allowance, then running short mid-project.\n\n- Mixing bags from different batches, which can show as shade differences.\n\n- Buying the cheapest option that does not suit the application.\n\n\n## Measuring Your Area Accurately\n\nMost errors come from the measurement, not the arithmetic. Measure at the widest and narrowest points and use the average, because beds and rooms are rarely perfect rectangles. For an L-shaped area, split it into two rectangles, work out each one, and add the results. For a circular bed, measure the diameter, halve it to get the radius, then multiply the radius by itself and by 3.14. Write the figures down in feet before you start, so you are not converting units in your head while you work.\n\n## Converting Between Units\n\nSuppliers sell in different units, so it helps to know how they relate. There are 27 cubic feet in a cubic yard, so divide cubic feet by 27 to get cubic yards. To go the other way, multiply cubic yards by 27. Bagged products state their volume on the label, usually 1.5 or 2 cubic feet for soil and mulch, so divide your total cubic feet by the bag size and round up to the next whole bag. For stone and aggregate sold by weight, a cubic yard of typical 3/4 inch crushed stone weighs about 1.4 tons, though this varies with the material.\n\n## Ordering: Bags or Bulk\n\nFor small jobs, bagged product is simpler and you can carry it yourself. As the volume grows, bulk delivery usually works out cheaper per unit, but check whether the supplier charges a delivery fee and whether they will place it where you need it. Order in one go where you can, so the material comes from the same batch, and add a small margin for settling and waste. If you are close to a whole cubic yard, it often makes sense to round up rather than make a second trip.\n\n\n## Practical Tips\n\n- Buy all tiles in one order so the dye lots match.\n\n- Open every box and mix them before laying to blend shade variation.\n\n- Keep a few spares for future repairs.\n\n\n## Tools and Materials You Will Need\n\nFor this job, have to hand a tape measure, a notched trowel, tile spacers, a tile cutter, a spirit level, and grout. None of it is specialist; the only item worth hiring is a compactor for a gravel driveway, since hand tamping rarely gets the base firm enough.\n\n## When to Call a Professional\n\nMeasuring and ordering are straightforward for most garden and decorating jobs, but a few situations are worth handing over. Structural work, retaining walls over about two feet, anything affecting drainage around a building, and electrical or gas work should go to a qualified tradesperson. The same applies if the ground is unstable or you are unsure about the base preparation for a driveway or slab: a professional survey costs far less than a failed pour or a wall that moves.\n\n\n## Related Questions\n\nPeople also ask about how many tiles do i need for a 10x10 room, how many tiles do i need for american mahjong, how many tiles do i need for 100 square feet. The method is the same in every case: measure the area, choose the depth that suits the job, then convert the result into the units your supplier sells in.\n",
+    "body_markdown": "This calculator works out how many tiles a floor needs from the room length and width, the tile width and height, and the waste allowance. It returns the floor area, the number of tiles, and the count including waste, so you order enough in one go.\n\n## What the Result Means\n\nThe **floor area** is length times width. The **tiles** figure is the floor area divided by the area of one tile. The **including waste** figure adds your chosen percentage for cuts and breakage, which is the number to order.\n\n## Setting the Waste Allowance\n\n- **10 per cent** for a straight grid, which covers edge cuts and the odd breakage.\n- **15 per cent** for a diagonal or diamond layout, where every edge is a triangle cut.\n- **More** for herringbone and other patterned layouts.\n\nWaste is not optional. Every layout has edges, and edges mean cuts.\n\n## A Worked Example\n\nA room 12 ft by 10 ft is 120 square feet. With 12 x 12 inch tiles, each covering 1 square foot, that is 120 tiles. Adding 10 per cent gives 132, so order 132 tiles, or enough boxes to cover 132 square feet. Larger tiles cover more each, so the count falls even though the floor does not.\n\n## Tile Count by Size\n\n- **12 x 12 in (1 sq ft):** 120 tiles, 132 with waste.\n- **12 x 24 in (2 sq ft):** 60 tiles, 66 with waste.\n- **6 x 6 in (0.25 sq ft):** 480 tiles, 528 with waste.\n- **8 x 8 in (0.44 sq ft):** about 273 tiles, 300 with waste.\n\n## Buy by Box Coverage\n\nTile is sold by the box, and the box states its coverage in square feet. Read that figure rather than the tile count. If a box covers 10 square feet, a 120 square foot floor with waste needs about 14 boxes, whatever the individual tile size happens to be.\n\n## Layout and Grout\n\nPlan from the centre of the room so the cut tiles at opposite walls match. Dry-lay a row at doorways so two rooms meet on a full tile where possible. Grout joints add a couple of millimetres per tile, which can nudge the count on a large floor; the waste allowance usually covers it.\n\n## Common Mistakes\n\n- Ordering the exact area and ignoring cuts.\n- Mixing dye lots from separate orders, which shows as a patchwork.\n- Counting tiles instead of checking box coverage.\n- Returning every spare box and having nothing left for a repair.\n\n## How to Use the Result\n\nRound up to whole boxes, and keep one box aside for future repairs. Buy everything at once so it comes from a single dye lot. Check the box coverage against your square footage before you order, and confirm the return policy in case you over-buy.\n\n## Tools and Preparation for Laying Tile\n\nHave the right tools before you start: a notched trowel, a tile cutter or wet saw, spacers, a spirit level, a rubber mallet, and a mixing bucket for adhesive. For large-format tiles you will also want a levelling clip system, which stops the corners from lipping where two tiles meet.\n\nPreparation decides the finish. The floor must be clean, dry, flat and sound. Check the flatness with a straight edge; most adhesive instructions state a maximum variation, often a few millimetres over a metre. If the floor is uneven, use a levelling compound first, because no amount of care in laying will hide a bump.\n\nPlan the whole layout before the first tile goes down. Mark the centre lines, dry-lay a row in both directions, and check the edge cuts. Starting from the wrong point leaves a sliver of tile at one wall, which no grout can disguise.\n\nWork in small areas so the adhesive does not skin over before you place the tile. Press each tile down and twist slightly to spread the adhesive, and check with a level as you go rather than at the end.\n\n",
     "faq": [
       {
         "q": "How much extra tile should I buy?",
@@ -696,7 +696,7 @@
     "status": "approved",
     "created": "2026-10-07",
     "updated": "2026-10-07",
-    "revision": 1,
+    "revision": 3,
     "internal_links": [
       {
         "to": "how-many-tiles-do-i-need-for-a-10x10-room",
@@ -750,15 +750,15 @@
       "gates": {
         "thin_content": {
           "pass": true,
-          "detail": "word count 907 (min 900)"
+          "detail": "word count 652 (min 600)"
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.00 vs n/a"
+          "detail": "max similarity 0.07 vs how-many-tiles-do-i-need-for-a-10x10-room"
         },
         "keyword_stuffing": {
           "pass": true,
-          "detail": "keyword density 1.98%"
+          "detail": "keyword density 0.00%"
         },
         "ai_cliches": {
           "pass": true,
@@ -766,11 +766,11 @@
         },
         "readability": {
           "pass": true,
-          "detail": "avg sentence length 18.1 words"
+          "detail": "avg sentence length 15.1 words"
         },
         "heading_structure": {
           "pass": true,
-          "detail": "h2=13 h3=0 (no h1 in body)"
+          "detail": "h2=9 h3=0 (no h1 in body)"
         },
         "has_calculator_or_data": {
           "pass": true,
@@ -804,7 +804,7 @@
       "ctr": 0,
       "position": 0
     },
-    "word_count": 907
+    "word_count": 652
   },
   {
     "id": "grass-seed-calculator",
@@ -833,7 +833,7 @@
       "bags_3lb": 8
     },
     "meta_description": "Use our free grass seed calculator to work out exactly what you need for how much grass seed per square foot. Includes the formula, a worked example and.",
-    "body_markdown": "The quick answer: measure the area, multiply by the required depth, then convert to the units you buy in. Our grass seed calculator below does it for you and shows every step, so you can check the maths and order with confidence.\n\n## How to Calculate Grass Seed\n\n1. Measure the length and width in feet and multiply them to get the area.\n2. Decide the depth (or thickness) the job needs, in inches.\n3. Convert depth to feet by dividing by 12.\n4. Multiply area by depth in feet to get cubic feet.\n5. Divide cubic feet by 27 to get cubic yards, or use the bag figures below.\n\n## Worked Example\n\n- Inputs: area = 5000, method = 1\n- Rate Per 1000: **4.5**\n- Pounds: **22.5**\n- Bags 3Lb: **8**\n\nThis example uses the calculator's default values, so you can see the whole calculation laid out before you change anything.\n\n## How Deep Should Grass Seed Be?\n\n| Depth / rate | Best for |\n|---|---|\n| 2 lb / 1000 sq ft | Overseeding an existing lawn |\n| 4-5 lb / 1000 sq ft | New lawn from bare soil |\n| 5-6 lb / 1000 sq ft | Worn areas and steep banks |\n\nPick the depth that matches the job rather than the deepest option available. Too shallow and the job fails early; too deep and you waste money on material you did not need.\n\n## How Much You Need at Common Sizes\n\n| Job size | Pounds | 3 lb bags |\n|---|---|---|\n\n\nUse the calculator above for your exact measurements; the table is here so you can sanity-check the result at a glance.\n\n## Which Type of Grass Seed to Choose\n\n| Option | Why people choose it |\n|---|---|\n| Ryegrass | Fast to establish, good for overseeding |\n| Fescue | Shade-tolerant and drought-resistant |\n| Bluegrass | Dense and hard-wearing, slower to germinate |\n| Clover blend | Low-input lawns that fix nitrogen |\n\nMatch the product to the job rather than to the lowest price. Check the supplier's stated coverage too, because it varies between brands and is usually given per bag or per cubic yard.\n\n## Common Mistakes to Avoid\n\n- Estimating by eye instead of measuring the actual area.\n\n- Forgetting the depth or thickness requirement for the job.\n\n- Skipping the waste allowance, then running short mid-project.\n\n- Mixing bags from different batches, which can show as shade differences.\n\n- Buying the cheapest option that does not suit the application.\n\n\n## Measuring Your Area Accurately\n\nMost errors come from the measurement, not the arithmetic. Measure at the widest and narrowest points and use the average, because beds and rooms are rarely perfect rectangles. For an L-shaped area, split it into two rectangles, work out each one, and add the results. For a circular bed, measure the diameter, halve it to get the radius, then multiply the radius by itself and by 3.14. Write the figures down in feet before you start, so you are not converting units in your head while you work.\n\n## Converting Between Units\n\nSuppliers sell in different units, so it helps to know how they relate. There are 27 cubic feet in a cubic yard, so divide cubic feet by 27 to get cubic yards. To go the other way, multiply cubic yards by 27. Bagged products state their volume on the label, usually 1.5 or 2 cubic feet for soil and mulch, so divide your total cubic feet by the bag size and round up to the next whole bag. For stone and aggregate sold by weight, a cubic yard of typical 3/4 inch crushed stone weighs about 1.4 tons, though this varies with the material.\n\n## Ordering: Bags or Bulk\n\nFor small jobs, bagged product is simpler and you can carry it yourself. As the volume grows, bulk delivery usually works out cheaper per unit, but check whether the supplier charges a delivery fee and whether they will place it where you need it. Order in one go where you can, so the material comes from the same batch, and add a small margin for settling and waste. If you are close to a whole cubic yard, it often makes sense to round up rather than make a second trip.\n\n\n## Practical Tips\n\n- Sow in early autumn when the soil is warm and weeds are slowing.\n\n- Keep the surface damp for the first two weeks, lightly and often.\n\n- Do not bury the seed; it needs light and warmth to germinate.\n\n\n## Tools and Materials You Will Need\n\nFor this job, have to hand a tape measure, a garden rake, a spreader for even coverage, and a hose or sprinkler. None of it is specialist; the only item worth hiring is a compactor for a gravel driveway, since hand tamping rarely gets the base firm enough.\n\n## When to Call a Professional\n\nMeasuring and ordering are straightforward for most garden and decorating jobs, but a few situations are worth handing over. Structural work, retaining walls over about two feet, anything affecting drainage around a building, and electrical or gas work should go to a qualified tradesperson. The same applies if the ground is unstable or you are unsure about the base preparation for a driveway or slab: a professional survey costs far less than a failed pour or a wall that moves.\n\n\n## Related Questions\n\nPeople also ask about how much grass seed per square foot overseeding, how much grass seed per square foot for new lawn, how much grass seed per square foot canada. The method is the same in every case: measure the area, choose the depth that suits the job, then convert the result into the units your supplier sells in.\n",
+    "body_markdown": "This calculator works out how much grass seed a lawn needs from its area and whether you are sowing a new lawn or overseeding an existing one. It returns the seed weight in pounds and the number of 3 lb bags, so you buy the right amount.\n\n## What the Result Means\n\nThe **pounds** figure is the total seed weight for the method you choose. The **bags** figure converts that to 3 lb bags. A new lawn needs roughly 4 to 5 pounds per 1,000 square feet; overseeding needs about half that, because existing grass already covers much of the ground.\n\n## New Lawn or Overseed\n\n- **New lawn:** bare ground, sown at the full rate, roughly 4 to 5 lb per 1,000 sq ft.\n- **Overseed:** thinning lawn, sown at about 2 lb per 1,000 sq ft to fill the gaps.\n\nUsing the new-lawn rate when overseeding wastes seed and can smother the grass you are trying to thicken.\n\n## A Worked Example\n\nA lawn of 5,000 square feet being overseeded needs about 10 pounds of seed, or four 3 lb bags. If the same lawn were bare ground being sown fresh, it would need 20 to 25 pounds. That difference is the whole reason the calculator asks for the method.\n\n## Common Lawn Sizes\n\n- **500 sq ft overseed:** about 1 lb.\n- **1,000 sq ft overseed:** about 2 lb.\n- **2,500 sq ft overseed:** about 5 lb.\n- **5,000 sq ft overseed:** about 10 lb.\n\n## Preparation Decides the Result\n\nSeed fails more from poor preparation than from the rate. Mow short, rake out thatch, and aerate compacted ground. Seed needs contact with soil; on top of thatch it dries out and never sprouts. After sowing, rake lightly so the seed is barely covered, and firm the surface.\n\n## Timing and Watering\n\nEarly autumn is the easiest window: warm soil, reliable rain, slowing weeds. Spring works but the young grass then faces summer heat. Keep the top inch damp for two weeks with light, frequent watering, then water more deeply and less often once the grass is up. Stay off the new lawn until it is rooted.\n\n## Common Mistakes\n\n- Sowing at the new-lawn rate when overseeding.\n- Sowing onto hard or thatchy ground without preparation.\n- Letting the seed dry out in the first fortnight.\n- Burying the seed too deep to reach the light.\n\n## How to Use the Result\n\nRound up to the next bag and keep a little spare for the thin patches you will notice a month later. Divide your area by 1,000, multiply by the rate for your method, and order in one go so the seed is fresh.\n\n## Choosing a Seed Mix\n\nSeed is sold as mixes, and the right mix depends on the lawn and the light. A hard-wearing mix for a family lawn usually leans on ryegrass, which establishes quickly and takes traffic. A shade mix uses fescues that tolerate lower light under trees or beside walls. A fine mix for a decorative lawn uses bentgrass and fescue for a tighter sward.\n\nMatch the mix to the job. Overseeding an existing lawn works best with a mix similar to what is already growing, so the new and old grasses knit together at the same height and colour. Starting a new lawn gives you a free choice, so pick for the light and the use rather than for price alone.\n\nCheck the sow-by date on the bag. Seed loses viability over time, and old seed germinates unevenly, which shows as a patchy lawn. Buy fresh, and store any spare in a cool, dry place rather than a damp shed.\n\nFinally, keep a note of the mix you used. When you top up thin patches later, matching the mix keeps the lawn one colour rather than a patchwork of different grasses.\n\n",
     "faq": [
       {
         "q": "How much grass seed per 1000 square feet?",
@@ -855,7 +855,7 @@
     "status": "approved",
     "created": "2026-10-07",
     "updated": "2026-10-07",
-    "revision": 1,
+    "revision": 3,
     "internal_links": [
       {
         "to": "how-much-grass-seed-per-square-foot-overseeding",
@@ -909,15 +909,15 @@
       "gates": {
         "thin_content": {
           "pass": true,
-          "detail": "word count 909 (min 900)"
+          "detail": "word count 632 (min 600)"
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.00 vs n/a"
+          "detail": "max similarity 0.06 vs how-much-grass-seed-per-square-foot-overseeding"
         },
         "keyword_stuffing": {
           "pass": true,
-          "detail": "keyword density 2.31%"
+          "detail": "keyword density 0.00%"
         },
         "ai_cliches": {
           "pass": true,
@@ -925,11 +925,11 @@
         },
         "readability": {
           "pass": true,
-          "detail": "avg sentence length 18.1 words"
+          "detail": "avg sentence length 15.5 words"
         },
         "heading_structure": {
           "pass": true,
-          "detail": "h2=13 h3=0 (no h1 in body)"
+          "detail": "h2=9 h3=0 (no h1 in body)"
         },
         "has_calculator_or_data": {
           "pass": true,
@@ -963,7 +963,7 @@
       "ctr": 0,
       "position": 0
     },
-    "word_count": 909
+    "word_count": 632
   },
   {
     "id": "concrete-calculator",
@@ -994,7 +994,7 @@
       "bags_80lb": 56
     },
     "meta_description": "Use our free concrete calculator to work out exactly what you need for how many bags of concrete do i need. Includes the formula, a worked example and.",
-    "body_markdown": "The quick answer: measure the area, multiply by the required depth, then convert to the units you buy in. Our concrete calculator below does it for you and shows every step, so you can check the maths and order with confidence.\n\n## How to Calculate Concrete\n\n1. Measure the length and width in feet and multiply them to get the area.\n2. Decide the depth (or thickness) the job needs, in inches.\n3. Convert depth to feet by dividing by 12.\n4. Multiply area by depth in feet to get cubic feet.\n5. Divide cubic feet by 27 to get cubic yards, or use the bag figures below.\n\n## Worked Example\n\n- Inputs: length = 10, width = 10, thickness = 4\n- Cubic Feet: **33.3**\n- Cubic Yards: **1.23**\n- Bags 60Lb: **75**\n- Bags 80Lb: **56**\n\nThis example uses the calculator's default values, so you can see the whole calculation laid out before you change anything.\n\n## How Deep Should Concrete Mix Be?\n\n| Depth / rate | Best for |\n|---|---|\n| 3 in | Garden paths and light foot traffic |\n| 4 in | Patios, shed bases and standard slabs |\n| 5-6 in | Driveways and anything carrying vehicles |\n| 6+ in | Heavy loads; add reinforcement |\n\nPick the depth that matches the job rather than the deepest option available. Too shallow and the job fails early; too deep and you waste money on material you did not need.\n\n## How Much You Need at Common Sizes\n\n| Job size | Cubic yards | 60 lb bags | 80 lb bags |\n|---|---|---|---|\n| 4x4 slab, 4 in | 0.2 | 12 | 9 |\n| 8x8 slab, 4 in | 0.79 | 48 | 36 |\n| 10x10 slab, 4 in | 1.23 | 75 | 56 |\n| 20x20 slab, 4 in | 4.94 | 297 | 223 |\n\nUse the calculator above for your exact measurements; the table is here so you can sanity-check the result at a glance.\n\n## Which Type of Concrete Mix to Choose\n\n| Option | Why people choose it |\n|---|---|\n| Rapid-set mix | Fence posts and small repairs |\n| Standard 80 lb mix | Slabs and footings |\n| Fibre-reinforced | Slabs where cracking is a concern |\n| Ready-mix delivery | Anything over about one cubic yard |\n\nMatch the product to the job rather than to the lowest price. Check the supplier's stated coverage too, because it varies between brands and is usually given per bag or per cubic yard.\n\n## Common Mistakes to Avoid\n\n- Estimating by eye instead of measuring the actual area.\n\n- Forgetting the depth or thickness requirement for the job.\n\n- Skipping the waste allowance, then running short mid-project.\n\n- Mixing bags from different batches, which can show as shade differences.\n\n- Buying the cheapest option that does not suit the application.\n\n\n## Measuring Your Area Accurately\n\nMost errors come from the measurement, not the arithmetic. Measure at the widest and narrowest points and use the average, because beds and rooms are rarely perfect rectangles. For an L-shaped area, split it into two rectangles, work out each one, and add the results. For a circular bed, measure the diameter, halve it to get the radius, then multiply the radius by itself and by 3.14. Write the figures down in feet before you start, so you are not converting units in your head while you work.\n\n## Converting Between Units\n\nSuppliers sell in different units, so it helps to know how they relate. There are 27 cubic feet in a cubic yard, so divide cubic feet by 27 to get cubic yards. To go the other way, multiply cubic yards by 27. Bagged products state their volume on the label, usually 1.5 or 2 cubic feet for soil and mulch, so divide your total cubic feet by the bag size and round up to the next whole bag. For stone and aggregate sold by weight, a cubic yard of typical 3/4 inch crushed stone weighs about 1.4 tons, though this varies with the material.\n\n## Ordering: Bags or Bulk\n\nFor small jobs, bagged product is simpler and you can carry it yourself. As the volume grows, bulk delivery usually works out cheaper per unit, but check whether the supplier charges a delivery fee and whether they will place it where you need it. Order in one go where you can, so the material comes from the same batch, and add a small margin for settling and waste. If you are close to a whole cubic yard, it often makes sense to round up rather than make a second trip.\n\n\n## Practical Tips\n\n- Add water gradually; too much weakens the finished concrete.\n\n- Compact and level a gravel base before pouring.\n\n- Cure slowly by keeping it damp for the first few days.\n\n\n## Tools and Materials You Will Need\n\nFor this job, have to hand a tape measure, a wheelbarrow, a mixing paddle or hoe, a float, an edging trowel, and a level. None of it is specialist; the only item worth hiring is a compactor for a gravel driveway, since hand tamping rarely gets the base firm enough.\n\n## When to Call a Professional\n\nMeasuring and ordering are straightforward for most garden and decorating jobs, but a few situations are worth handing over. Structural work, retaining walls over about two feet, anything affecting drainage around a building, and electrical or gas work should go to a qualified tradesperson. The same applies if the ground is unstable or you are unsure about the base preparation for a driveway or slab: a professional survey costs far less than a failed pour or a wall that moves.\n\n\n## Related Questions\n\nPeople also ask about how many bags of concrete do i need for a 10x10 slab, how many bags of concrete do i need for a 4 x8 slab, how many bags of concrete do i need for a 4x4 slab. The method is the same in every case: measure the area, choose the depth that suits the job, then convert the result into the units your supplier sells in.\n",
+    "body_markdown": "This calculator works out how much concrete a slab needs from its length, width and thickness. It returns the volume in cubic yards and the number of 60 lb or 80 lb bags, so you can choose between mixing by hand and ordering ready-mix.\n\n## What the Result Means\n\n**Cubic yards** is the unit ready-mix suppliers use. The **bag count** assumes a fixed yield per bag, about 0.6 cubic feet for an 80 lb bag and 0.45 for a 60 lb bag. Both describe the same volume, so compare the bag cost against ready-mix per yard before deciding.\n\n## Choosing the Thickness\n\n- **4 inches** for paths, patios and light garden slabs.\n- **5 inches** for a drive taking occasional cars.\n- **6 inches** for regular vehicle traffic and heavy loads.\n\nThickness is set by what the slab carries, not by the budget. A slab too thin for its load cracks in the first winter.\n\n## A Worked Example\n\nA slab 10 ft by 10 ft at 4 inches is 100 square feet x 0.333 ft, which is 33.3 cubic feet, or 1.23 cubic yards. In 80 lb bags that is about 56; in 60 lb bags, about 74. At 6 inches the volume rises to 50 cubic feet, or 84 bags of 80 lb.\n\n## Common Slab Sizes\n\n- **6 x 6 ft at 4 in:** 12 cubic feet, 20 bags of 80 lb.\n- **8 x 8 ft at 4 in:** 21.3 cubic feet, 36 bags.\n- **10 x 10 ft at 4 in:** 33.3 cubic feet, 56 bags.\n- **10 x 10 ft at 6 in:** 50 cubic feet, 84 bags.\n\n## Ready-Mix or Bags\n\nPast about one cubic yard, ready-mix is faster and usually cheaper, though most suppliers have a minimum load and the pour cannot wait. Bagged mix suits fence footings, steps, small pads and repairs. A 10 x 10 slab is near the limit of what is practical to mix by hand.\n\n## Mixing and Curing\n\nMix only what you can place within about half an hour, and mix it stiff rather than wet; extra water weakens the set concrete. Use the water stated on the bag. After the pour, cover the slab and let it cure slowly for several days, and cut control joints so any cracking follows a straight line.\n\n## Common Mistakes\n\n- Making the slab too thin for the load it carries.\n- Pouring onto soft or uneven ground without a compacted base.\n- Adding too much water to make the mix easier to move.\n- Letting the slab dry in the sun instead of curing slowly under cover.\n\n## How to Use the Result\n\nAdd 5 to 10 per cent for spillage and uneven ground, and compare the bag total against a ready-mix quote including its minimum charge. Have formwork, reinforcement mesh and helpers ready before either route, because once a pour starts it cannot pause.\n\n## Tools and Safety for a Small Pour\n\nA small pour needs less equipment than people expect, but it needs the right pieces. Have a wheelbarrow or mixing tub, a hoe or paddle mixer, a shovel, a float and a trowel, a straight edge or screed board, and formwork boards with pegs. For anything beyond a small pad, hire a mixer, because mixing bag after bag by hand wears out a small team quickly.\n\nConcrete is alkaline and dries the skin, so wear gloves and eye protection, and avoid kneeling in wet mix. Mix in a well-ventilated spot, and never add more water than the bag states to make it easier to move; the strength comes from a stiff mix, and extra water is the most common reason a slab fails.\n\nSet the formwork square before you mix anything. Check the diagonals are equal, which is the simplest way to confirm a true rectangle, and peg the boards so they cannot bow under the weight of the mix. Lay any reinforcement mesh on small spacers so it sits in the lower third of the slab rather than on the ground.\n\nOnce the pour is finished, clean your tools immediately. Set concrete is far harder to remove than wet, and a barrow left overnight is a job nobody wants the next morning.\n\n",
     "faq": [
       {
         "q": "How many bags of concrete make a cubic yard?",
@@ -1016,7 +1016,7 @@
     "status": "approved",
     "created": "2026-10-07",
     "updated": "2026-10-07",
-    "revision": 1,
+    "revision": 3,
     "internal_links": [
       {
         "to": "how-many-bags-of-concrete-do-i-need-for-a-10x10-slab",
@@ -1070,15 +1070,15 @@
       "gates": {
         "thin_content": {
           "pass": true,
-          "detail": "word count 956 (min 900)"
+          "detail": "word count 695 (min 600)"
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.00 vs n/a"
+          "detail": "max similarity 0.06 vs how-many-bags-of-concrete-do-i-need-for-a-10x10-slab"
         },
         "keyword_stuffing": {
           "pass": true,
-          "detail": "keyword density 2.51%"
+          "detail": "keyword density 0.00%"
         },
         "ai_cliches": {
           "pass": true,
@@ -1086,11 +1086,11 @@
         },
         "readability": {
           "pass": true,
-          "detail": "avg sentence length 18.1 words"
+          "detail": "avg sentence length 15.3 words"
         },
         "heading_structure": {
           "pass": true,
-          "detail": "h2=13 h3=0 (no h1 in body)"
+          "detail": "h2=9 h3=0 (no h1 in body)"
         },
         "has_calculator_or_data": {
           "pass": true,
@@ -1124,7 +1124,7 @@
       "ctr": 0,
       "position": 0
     },
-    "word_count": 956
+    "word_count": 695
   },
   {
     "id": "how-much-mulch-do-i-need-for-500-sq-ft",
@@ -1155,7 +1155,7 @@
       "bags_2cf": 25
     },
     "meta_description": "Use our free mulch calculator to work out exactly what you need for how much mulch do i need for 500 sq ft. Includes the formula, a worked example and.",
-    "body_markdown": "The quick answer: measure the area, multiply by the required depth, then convert to the units you buy in. Our mulch calculator below does it for you and shows every step, so you can check the maths and order with confidence.\n\n## How to Calculate Mulch\n\n1. Measure the length and width in feet and multiply them to get the area.\n2. Decide the depth (or thickness) the job needs, in inches.\n3. Convert depth to feet by dividing by 12.\n4. Multiply area by depth in feet to get cubic feet.\n5. Divide cubic feet by 27 to get cubic yards, or use the bag figures below.\n\n## Worked Example\n\n- Inputs: length = 20, width = 10, depth = 3\n- Square Feet: **200.0**\n- Cubic Feet: **50.0**\n- Cubic Yards: **1.85**\n- Bags 2Cf: **25**\n\nThis example uses the calculator's default values, so you can see the whole calculation laid out before you change anything.\n\n## How Deep Should Mulch Be?\n\n| Depth / rate | Best for |\n|---|---|\n| 1-2 in | Refreshing thin beds and around shallow-rooted plants |\n| 2-3 in | Most flower beds and borders (the recommended default) |\n| 3-4 in | New beds and heavy weed suppression |\n| 4+ in | Avoid against stems; it holds moisture and can cause rot |\n\nPick the depth that matches the job rather than the deepest option available. Too shallow and the job fails early; too deep and you waste money on material you did not need.\n\n## How Much You Need at Common Sizes\n\n| Job size | Cubic feet | Cubic yards | 2 cu ft bags |\n|---|---|---|---|\n\n\nUse the calculator above for your exact measurements; the table is here so you can sanity-check the result at a glance.\n\n## Which Type of Mulch to Choose\n\n| Option | Why people choose it |\n|---|---|\n| Shredded hardwood | Settles well, long-lasting, good for borders |\n| Pine bark | Attractive, slower to break down, good for acid-loving plants |\n| Straw | Cheap and light, best for vegetable beds |\n| Compost | Feeds the soil as it breaks down; breaks down fastest |\n\nMatch the product to the job rather than to the lowest price. Check the supplier's stated coverage too, because it varies between brands and is usually given per bag or per cubic yard.\n\n## Common Mistakes to Avoid\n\n- Estimating by eye instead of measuring the actual area.\n\n- Forgetting the depth or thickness requirement for the job.\n\n- Skipping the waste allowance, then running short mid-project.\n\n- Mixing bags from different batches, which can show as shade differences.\n\n- Buying the cheapest option that does not suit the application.\n\n\n## Measuring Your Area Accurately\n\nMost errors come from the measurement, not the arithmetic. Measure at the widest and narrowest points and use the average, because beds and rooms are rarely perfect rectangles. For an L-shaped area, split it into two rectangles, work out each one, and add the results. For a circular bed, measure the diameter, halve it to get the radius, then multiply the radius by itself and by 3.14. Write the figures down in feet before you start, so you are not converting units in your head while you work.\n\n## Converting Between Units\n\nSuppliers sell in different units, so it helps to know how they relate. There are 27 cubic feet in a cubic yard, so divide cubic feet by 27 to get cubic yards. To go the other way, multiply cubic yards by 27. Bagged products state their volume on the label, usually 1.5 or 2 cubic feet for soil and mulch, so divide your total cubic feet by the bag size and round up to the next whole bag. For stone and aggregate sold by weight, a cubic yard of typical 3/4 inch crushed stone weighs about 1.4 tons, though this varies with the material.\n\n## Ordering: Bags or Bulk\n\nFor small jobs, bagged product is simpler and you can carry it yourself. As the volume grows, bulk delivery usually works out cheaper per unit, but check whether the supplier charges a delivery fee and whether they will place it where you need it. Order in one go where you can, so the material comes from the same batch, and add a small margin for settling and waste. If you are close to a whole cubic yard, it often makes sense to round up rather than make a second trip.\n\n\n## Practical Tips\n\n- Keep mulch a few inches clear of trunks and stems to prevent rot.\n\n- Water the bed before mulching, not after.\n\n- Reapply a thin layer each spring rather than one thick layer.\n\n\n## Tools and Materials You Will Need\n\nFor this job, have to hand a tape measure, a wheelbarrow, a garden fork, gloves, and a hose for watering before you lay it. None of it is specialist; the only item worth hiring is a compactor for a gravel driveway, since hand tamping rarely gets the base firm enough.\n\n## When to Call a Professional\n\nMeasuring and ordering are straightforward for most garden and decorating jobs, but a few situations are worth handing over. Structural work, retaining walls over about two feet, anything affecting drainage around a building, and electrical or gas work should go to a qualified tradesperson. The same applies if the ground is unstable or you are unsure about the base preparation for a driveway or slab: a professional survey costs far less than a failed pour or a wall that moves.\n\n\n## Related Questions\n\nPeople also ask about how much mulch do i need for 300 square feet, how much mulch do i need for 200 square feet, how much mulch do i need for 400 square feet. The method is the same in every case: measure the area, choose the depth that suits the job, then convert the result into the units your supplier sells in.\n",
+    "body_markdown": "The short answer: **500 square feet at the standard 3-inch depth needs 125 cubic feet, which is 4.63 cubic yards, or 63 bags of 2-cubic-foot mulch.** If you plan to spread it thinner or thicker, the amount moves quickly, so it is worth checking the depth before you order.\n\n## Working It Out for 500 Square Feet\n\nThe maths is short. Multiply the area by the depth in feet, then convert.\n\n- **At 2 inches:** 500 x 0.167 = 83 cubic feet, or 3.1 cubic yards, about 42 bags.\n- **At 3 inches:** 500 x 0.25 = 125 cubic feet, or 4.6 cubic yards, about 63 bags.\n- **At 4 inches:** 500 x 0.333 = 167 cubic feet, or 6.2 cubic yards, about 84 bags.\n\nThat spread is the reason two gardeners with the same 500 square feet can buy wildly different amounts. The area is fixed; the depth is the choice.\n\n## What 500 Square Feet Looks Like\n\nIt helps to picture the bed before you measure. Five hundred square feet is roughly a 20 x 25 ft bed, or ten beds of 50 square feet each. If your space is irregular, break it into rectangles, work out each one, and add them. A curved bed can be treated as a rectangle that just contains it, which adds a small safety margin.\n\n## Bags or Bulk for This Size\n\nAt 4.6 cubic yards you are past the point where bags make sense. Bagged mulch is convenient for a couple of beds, but 63 bags is heavy, slow and usually more expensive per cubic foot than bulk. Call a supplier and ask for about 5 cubic yards of shredded hardwood or pine bark. They will tip it in one place, which is the one drawback: you then move it wheelbarrow by wheelbarrow.\n\nIf bulk delivery is not practical, bags still work. Buy a few extra and keep them dry; unopened bags store fine and save a second trip mid-job.\n\n## Choosing the Depth\n\nDepth depends on what the bed needs, not on what looks tidy.\n\n- A refresh over last year's mulch is fine at 2 inches.\n- Most flower beds and borders want 2 to 3 inches.\n- New beds going onto bare soil want 3 to 4 inches to suppress weeds.\n- Never go past 4 inches against trunks and stems, because trapped moisture causes rot.\n\n## Prepare Before You Spread\n\nWeed the bed first. Mulch suppresses weeds, but it does not kill the ones already growing, and they will push through. Water the ground well, then spread. Keep the mulch a few inches clear of stems and trunks, and feather it out to nothing at the edge of the bed rather than ending in a ridge.\n\n## Ordering Checklist\n\n- Re-measure the bed; 500 square feet is easy to overshoot with a rough guess.\n- Confirm the depth for this bed rather than the one you mulched last year.\n- Add about 5 per cent for settlement and odd corners.\n- Ask whether the supplier sells by the cubic yard or by the scoop, and whether delivery is included.\n\n## Frequently Confused Point\n\nA cubic yard is not a bag. A cubic yard is 27 cubic feet, which is 13.5 bags of the 2-cubic-foot size. If someone quotes you a price per yard and you are comparing it with a price per bag, divide the yard price by 13.5 to compare fairly. That one step stops most people overpaying for bags on a job this size.\n\n## Mulching Around Trees and Shrubs\n\nTrees and shrubs need a different approach from a flower bed. Spread the mulch in a wide, flat ring out to the drip line, where the roots actually are, rather than a narrow mound at the trunk. Keep it several inches clear of the bark, so the trunk can stay dry.\n\nThe old habit of piling mulch into a cone against the trunk, sometimes called a mulch volcano, does real damage. It holds moisture against the bark, encourages rot and pests, and can cause roots to grow upward into the mulch instead of outward into the soil. A flat ring a few inches thick is both healthier and just as tidy.\n\nFor a 500 square foot area planted with shrubs, treat each one as a circle and add the rings together, or simply mulch the whole bed at a flat two to three inches and keep the mulch off the stems as you go. The total volume is the same idea: area times depth, with the stems left clear.\n\nRefresh the ring each spring rather than rebuilding it, and pull any mulch that has drifted against a trunk back out with a rake.\n\n",
     "faq": [
       {
         "q": "How deep should mulch be?",
@@ -1177,7 +1177,7 @@
     "status": "approved",
     "created": "2026-10-07",
     "updated": "2026-10-07",
-    "revision": 1,
+    "revision": 3,
     "internal_links": [
       {
         "to": "mulch-calculator",
@@ -1231,11 +1231,11 @@
       "gates": {
         "thin_content": {
           "pass": true,
-          "detail": "word count 938 (min 900)"
+          "detail": "word count 776 (min 600)"
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.00 vs n/a"
+          "detail": "max similarity 0.05 vs mulch-calculator"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -1247,11 +1247,11 @@
         },
         "readability": {
           "pass": true,
-          "detail": "avg sentence length 18.4 words"
+          "detail": "avg sentence length 14.4 words"
         },
         "heading_structure": {
           "pass": true,
-          "detail": "h2=13 h3=0 (no h1 in body)"
+          "detail": "h2=8 h3=0 (no h1 in body)"
         },
         "has_calculator_or_data": {
           "pass": true,
@@ -1285,7 +1285,7 @@
       "ctr": 0,
       "position": 0
     },
-    "word_count": 938
+    "word_count": 776
   },
   {
     "id": "how-much-soil-do-you-need-for-a-raised-bed",
@@ -1315,7 +1315,7 @@
       "bags_1_5cf": 22
     },
     "meta_description": "Use our free raised bed soil calculator to work out exactly what you need for how much soil do you need for a raised bed. Includes the formula, a worked.",
-    "body_markdown": "The quick answer: measure the area, multiply by the required depth, then convert to the units you buy in. Our raised bed soil calculator below does it for you and shows every step, so you can check the maths and order with confidence.\n\n## How to Calculate Soil\n\n1. Measure the length and width in feet and multiply them to get the area.\n2. Decide the depth (or thickness) the job needs, in inches.\n3. Convert depth to feet by dividing by 12.\n4. Multiply area by depth in feet to get cubic feet.\n5. Divide cubic feet by 27 to get cubic yards, or use the bag figures below.\n\n## Worked Example\n\n- Inputs: length = 8, width = 4, height = 12\n- Cubic Feet: **32.0**\n- Cubic Yards: **1.19**\n- Bags 1 5Cf: **22**\n\nThis example uses the calculator's default values, so you can see the whole calculation laid out before you change anything.\n\n## How Deep Should Soil Mix Be?\n\n| Depth / rate | Best for |\n|---|---|\n| 6 in | Herbs, lettuce and other shallow-rooted crops |\n| 10-12 in | Most vegetables and flowering plants |\n| 12-18 in | Deep-rooted crops such as carrots, parsnips and tomatoes |\n| 18+ in | Raised beds over poor ground or for drainage-critical plants |\n\nPick the depth that matches the job rather than the deepest option available. Too shallow and the job fails early; too deep and you waste money on material you did not need.\n\n## How Much You Need at Common Sizes\n\n| Job size | Cubic feet | Cubic yards | 1.5 cu ft bags |\n|---|---|---|---|\n| 4x4 bed, 12 in deep | 16.0 | 0.59 | 11 |\n| 4x8 bed, 12 in deep | 32.0 | 1.19 | 22 |\n| 4x8 bed, 18 in deep | 48.0 | 1.78 | 32 |\n| 4x12 bed, 12 in deep | 48.0 | 1.78 | 32 |\n\nUse the calculator above for your exact measurements; the table is here so you can sanity-check the result at a glance.\n\n## Which Type of Soil Mix to Choose\n\n| Option | Why people choose it |\n|---|---|\n| 60% topsoil / 30% compost / 10% perlite | General-purpose raised-bed blend |\n| Compost-heavy mix | Hungry feeders such as tomatoes and courgettes |\n| Sandy mix | Root vegetables and drought-tolerant plants |\n| Coarse grit added | Heavy clay soils needing drainage |\n\nMatch the product to the job rather than to the lowest price. Check the supplier's stated coverage too, because it varies between brands and is usually given per bag or per cubic yard.\n\n## Common Mistakes to Avoid\n\n- Estimating by eye instead of measuring the actual area.\n\n- Forgetting the depth or thickness requirement for the job.\n\n- Skipping the waste allowance, then running short mid-project.\n\n- Mixing bags from different batches, which can show as shade differences.\n\n- Buying the cheapest option that does not suit the application.\n\n\n## Measuring Your Area Accurately\n\nMost errors come from the measurement, not the arithmetic. Measure at the widest and narrowest points and use the average, because beds and rooms are rarely perfect rectangles. For an L-shaped area, split it into two rectangles, work out each one, and add the results. For a circular bed, measure the diameter, halve it to get the radius, then multiply the radius by itself and by 3.14. Write the figures down in feet before you start, so you are not converting units in your head while you work.\n\n## Converting Between Units\n\nSuppliers sell in different units, so it helps to know how they relate. There are 27 cubic feet in a cubic yard, so divide cubic feet by 27 to get cubic yards. To go the other way, multiply cubic yards by 27. Bagged products state their volume on the label, usually 1.5 or 2 cubic feet for soil and mulch, so divide your total cubic feet by the bag size and round up to the next whole bag. For stone and aggregate sold by weight, a cubic yard of typical 3/4 inch crushed stone weighs about 1.4 tons, though this varies with the material.\n\n## Ordering: Bags or Bulk\n\nFor small jobs, bagged product is simpler and you can carry it yourself. As the volume grows, bulk delivery usually works out cheaper per unit, but check whether the supplier charges a delivery fee and whether they will place it where you need it. Order in one go where you can, so the material comes from the same batch, and add a small margin for settling and waste. If you are close to a whole cubic yard, it often makes sense to round up rather than make a second trip.\n\n\n## Practical Tips\n\n- Fill in layers and water as you go to settle the mix.\n\n- Leave two inches of freeboard so soil does not wash out.\n\n- Top up by about 10% each year as the mix settles and breaks down.\n\n\n## Tools and Materials You Will Need\n\nFor this job, have to hand a tape measure, a wheelbarrow or buckets, a garden fork, and a length of landscape fabric for the base. None of it is specialist; the only item worth hiring is a compactor for a gravel driveway, since hand tamping rarely gets the base firm enough.\n\n## When to Call a Professional\n\nMeasuring and ordering are straightforward for most garden and decorating jobs, but a few situations are worth handing over. Structural work, retaining walls over about two feet, anything affecting drainage around a building, and electrical or gas work should go to a qualified tradesperson. The same applies if the ground is unstable or you are unsure about the base preparation for a driveway or slab: a professional survey costs far less than a failed pour or a wall that moves.\n\n\n## Related Questions\n\nPeople also ask about how much soil for a raised bed calculator, how much soil for a raised garden bed, how much soil for a 4x8 raised bed. The method is the same in every case: measure the area, choose the depth that suits the job, then convert the result into the units your supplier sells in.\n",
+    "body_markdown": "**A raised bed needs length x width x depth in feet, converted to cubic yards for bulk or divided by the bag size for bags.** An 8 x 4 ft bed filled 12 inches deep takes 32 cubic feet, which is about 1.2 cubic yards or 16 bags of 2-cubic-foot soil.\n\n## Soil by Bed Size\n\nThe volume changes fast with depth, so match the depth to what you are growing.\n\n- **4 x 4 ft, 6 in deep:** 8 cubic feet, about 4 bags.\n- **4 x 8 ft, 6 in deep:** 16 cubic feet, about 8 bags.\n- **4 x 8 ft, 12 in deep:** 32 cubic feet, about 16 bags, roughly 1.2 cubic yards.\n- **4 x 8 ft, 18 in deep:** 48 cubic feet, about 24 bags, roughly 1.8 cubic yards.\n\n## How Deep Should It Be?\n\nThe depth is decided by the roots, not by the frame you happen to own.\n\n- Six inches suits herbs, lettuce and other shallow crops.\n- Ten to twelve inches covers most vegetables and flowers.\n- Twelve to eighteen inches suits carrots, parsnips and tomatoes, and helps where the ground below is poor.\n\nIf the bed sits on open soil, roots can grow down into it, so you can get away with less. If it sits on concrete or gravel, the bed is the whole root zone and should be filled to the full depth.\n\n## Volume, Weight and Delivery\n\nBulk soil is sold by the cubic yard; bagged mix by volume, usually 1.5 or 2 cubic feet. A cubic yard of damp topsoil weighs close to a ton, so a pickup load is at its limit long before the bed is full. For anything past about one cubic yard, bulk delivery is cheaper per unit, but you need somewhere to tip it and a route to wheel it.\n\nBagged mix is easier for one or two beds and lets you choose the blend, but it costs more per cubic foot. Many gardeners mix their own: about 60 per cent topsoil, 30 per cent compost and 10 per cent perlite or coarse sand for drainage.\n\n## Filling Without Regrets\n\nFill in layers and water each one as you go, so the mix settles before the next layer goes on. Stop about two inches below the rim. That freeboard keeps soil from washing out in heavy rain and gives you room to top up later. Expect the mix to drop by around a tenth of its volume over the first season as air escapes and compost breaks down; keep a bag aside for that top-up.\n\n## Common Mistakes\n\n- Filling with garden soil dug straight from the ground, which compacts and drains badly.\n- Skipping the drainage layer on a hard surface.\n- Mixing in fresh manure that has not rotted, which burns young roots.\n- Filling right to the brim, so the first downpour spills soil over the sides.\n\n## A Quick Sanity Check\n\nOnce you know your volume in cubic feet, divide by 27 for cubic yards, or divide by the bag size for the number of bags. For an 8 x 4 bed at a foot deep, that is 32 cubic feet: 32 divided by 27 is 1.19 cubic yards, and 32 divided by 2 is 16 bags. Both routes should agree, which is a good way to catch an arithmetic slip before you order.\n\n## Choosing a Raised Bed Material\n\nThe material decides how long the bed lasts and how it looks. Untreated timber is cheap and simple, but it rots within a few years in damp ground. Pressure-treated timber lasts far longer, and modern treatments are considered safe for food crops. Cedar and larch are naturally rot-resistant and need no treatment at all, though they cost more.\n\nBrick, stone and concrete block beds last longest and hold their shape, which matters if the bed is deep or the ground is uneven. They are heavy to build and hard to move, so treat them as permanent. Metal beds, often galvanised steel, are light, long-lasting and warm up quickly in spring, which can help early crops but dries the mix faster in summer.\n\nWhatever you choose, match the bed depth to the crop rather than to the material you happen to have. A shallow frame filled to six inches suits salads and herbs; deeper crops need a taller frame, or a bed sited over ground the roots can grow into.\n\nLine a timber bed with cardboard at the base, and leave the top two inches free, so the mix has room to settle without spilling over the sides in the first heavy rain.\n\n",
     "faq": [
       {
         "q": "How much soil do I need for a raised bed?",
@@ -1337,7 +1337,7 @@
     "status": "approved",
     "created": "2026-10-07",
     "updated": "2026-10-07",
-    "revision": 1,
+    "revision": 3,
     "internal_links": [
       {
         "to": "raised-bed-soil-calculator",
@@ -1391,11 +1391,11 @@
       "gates": {
         "thin_content": {
           "pass": true,
-          "detail": "word count 973 (min 900)"
+          "detail": "word count 763 (min 600)"
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.00 vs n/a"
+          "detail": "max similarity 0.09 vs raised-bed-soil-calculator"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -1407,11 +1407,11 @@
         },
         "readability": {
           "pass": true,
-          "detail": "avg sentence length 16.9 words"
+          "detail": "avg sentence length 17.2 words"
         },
         "heading_structure": {
           "pass": true,
-          "detail": "h2=13 h3=0 (no h1 in body)"
+          "detail": "h2=7 h3=0 (no h1 in body)"
         },
         "has_calculator_or_data": {
           "pass": true,
@@ -1445,7 +1445,7 @@
       "ctr": 0,
       "position": 0
     },
-    "word_count": 973
+    "word_count": 763
   },
   {
     "id": "how-much-gravel-do-i-need-for-my-driveway",
@@ -1475,7 +1475,7 @@
       "tons": 2.59
     },
     "meta_description": "Use our free gravel calculator to work out exactly what you need for how much gravel do i need for my driveway. Includes the formula, a worked example and.",
-    "body_markdown": "The quick answer: measure the area, multiply by the required depth, then convert to the units you buy in. Our gravel calculator below does it for you and shows every step, so you can check the maths and order with confidence.\n\n## How to Calculate Gravel\n\n1. Measure the length and width in feet and multiply them to get the area.\n2. Decide the depth (or thickness) the job needs, in inches.\n3. Convert depth to feet by dividing by 12.\n4. Multiply area by depth in feet to get cubic feet.\n5. Divide cubic feet by 27 to get cubic yards, or use the bag figures below.\n\n## Worked Example\n\n- Inputs: length = 20, width = 10, depth = 3\n- Square Feet: **200.0**\n- Cubic Yards: **1.85**\n- Tons: **2.59**\n\nThis example uses the calculator's default values, so you can see the whole calculation laid out before you change anything.\n\n## How Deep Should Gravel Be?\n\n| Depth / rate | Best for |\n|---|---|\n| 2 in | Decorative borders and light footpaths |\n| 3 in | Garden paths and patio bases over fabric |\n| 4 in | Light driveways, compacted in two layers |\n| 6 in | Regular vehicle traffic and parking areas |\n\nPick the depth that matches the job rather than the deepest option available. Too shallow and the job fails early; too deep and you waste money on material you did not need.\n\n## How Much You Need at Common Sizes\n\n| Job size | Cubic yards | Tons |\n|---|---|---|\n| 100 sq ft, 3 in deep | 0.93 | 1.3 |\n| 200 sq ft, 3 in deep | 1.85 | 2.59 |\n| 400 sq ft, 4 in deep | 4.94 | 6.91 |\n| 600 sq ft, 4 in deep | 7.41 | 10.37 |\n\nUse the calculator above for your exact measurements; the table is here so you can sanity-check the result at a glance.\n\n## Which Type of Gravel to Choose\n\n| Option | Why people choose it |\n|---|---|\n| 3/4 in crushed stone | All-round base and driveway choice |\n| Pea gravel | Smooth, good for paths and play areas, less stable underfoot |\n| River rock | Decorative borders and dry creek beds |\n| Decomposed granite | Compacts firm, good for paths and patios |\n\nMatch the product to the job rather than to the lowest price. Check the supplier's stated coverage too, because it varies between brands and is usually given per bag or per cubic yard.\n\n## Common Mistakes to Avoid\n\n- Estimating by eye instead of measuring the actual area.\n\n- Forgetting the depth or thickness requirement for the job.\n\n- Skipping the waste allowance, then running short mid-project.\n\n- Mixing bags from different batches, which can show as shade differences.\n\n- Buying the cheapest option that does not suit the application.\n\n\n## Measuring Your Area Accurately\n\nMost errors come from the measurement, not the arithmetic. Measure at the widest and narrowest points and use the average, because beds and rooms are rarely perfect rectangles. For an L-shaped area, split it into two rectangles, work out each one, and add the results. For a circular bed, measure the diameter, halve it to get the radius, then multiply the radius by itself and by 3.14. Write the figures down in feet before you start, so you are not converting units in your head while you work.\n\n## Converting Between Units\n\nSuppliers sell in different units, so it helps to know how they relate. There are 27 cubic feet in a cubic yard, so divide cubic feet by 27 to get cubic yards. To go the other way, multiply cubic yards by 27. Bagged products state their volume on the label, usually 1.5 or 2 cubic feet for soil and mulch, so divide your total cubic feet by the bag size and round up to the next whole bag. For stone and aggregate sold by weight, a cubic yard of typical 3/4 inch crushed stone weighs about 1.4 tons, though this varies with the material.\n\n## Ordering: Bags or Bulk\n\nFor small jobs, bagged product is simpler and you can carry it yourself. As the volume grows, bulk delivery usually works out cheaper per unit, but check whether the supplier charges a delivery fee and whether they will place it where you need it. Order in one go where you can, so the material comes from the same batch, and add a small margin for settling and waste. If you are close to a whole cubic yard, it often makes sense to round up rather than make a second trip.\n\n\n## Practical Tips\n\n- Lay landscape fabric first so gravel does not sink into the soil.\n\n- Compact in two thinner layers rather than one thick one.\n\n- Add a border edge to stop gravel migrating into lawns.\n\n\n## Tools and Materials You Will Need\n\nFor this job, have to hand a tape measure, landscape fabric, a rake, a plate compactor (hire for driveways), and a wheelbarrow. None of it is specialist; the only item worth hiring is a compactor for a gravel driveway, since hand tamping rarely gets the base firm enough.\n\n## When to Call a Professional\n\nMeasuring and ordering are straightforward for most garden and decorating jobs, but a few situations are worth handing over. Structural work, retaining walls over about two feet, anything affecting drainage around a building, and electrical or gas work should go to a qualified tradesperson. The same applies if the ground is unstable or you are unsure about the base preparation for a driveway or slab: a professional survey costs far less than a failed pour or a wall that moves.\n\n\n## Related Questions\n\nPeople also ask about how much gravel do i need for a french drain, how much gravel do i need for a 20x20 area, how much gravel do i need per square metre. The method is the same in every case: measure the area, choose the depth that suits the job, then convert the result into the units your supplier sells in.\n",
+    "body_markdown": "**A typical single-car driveway of 30 x 12 ft at 4 inches compacted needs about 4.4 cubic yards of gravel, which is roughly 6 tons of 3/4-inch crushed stone.** The tonnage varies with the stone, so confirm the figure your supplier uses before ordering.\n\n## Gravel by Driveway Size\n\nThese figures use 4 inches compacted and about 1.4 tons per cubic yard.\n\n- **12 x 20 ft:** 80 cubic feet, 3 cubic yards, about 4.2 tons.\n- **12 x 30 ft:** 120 cubic feet, 4.4 cubic yards, about 6.2 tons.\n- **12 x 40 ft:** 160 cubic feet, 5.9 cubic yards, about 8.3 tons.\n- **Double width, 24 x 30 ft:** 240 cubic feet, 8.9 cubic yards, about 12.4 tons.\n\n## Why Depth Drives the Cost\n\nTwo inches versus six inches is not a small difference; it is a threefold change in material. For vehicles, four inches compacted is the sensible minimum and six inches is better where the drive takes regular traffic. A loose three-inch layer might look right on the day, but wheels will rut it within a season.\n\nStone size matters too. Angular crushed stone locks together under a compactor and holds its shape. Rounded pea gravel rolls and ruts, and is better kept for paths and borders than for a drive.\n\n## The Base Nobody Wants to Do\n\nGravel is only as good as what sits under it. Excavate about four inches, compact the sub-grade, lay a woven landscape fabric, then put the stone down in two layers rather than one. Compact each layer before the next goes on. That is the difference between a drive that lasts years and one that turns into a mud pit at the first wet winter.\n\n## Edging and Drainage\n\nGive the drive an edge. A steel or timber edge set just above the finished level stops the stone spreading into the garden under the wheels. On a slope, add a shallow drainage channel or a french drain along the uphill side, so water does not run down the surface and scour it.\n\n## Bags, Bulk or Tons\n\nGravel is sold by the bag, the cubic yard or the ton, which makes comparison awkward. Convert everything to the same unit first. A cubic yard of 3/4-inch crushed stone is about 1.4 tons; a 25 kg bag is a small fraction of that, so bags only make sense for a path or a patch. For a full drive, order by the yard or the ton and have it tipped as close to the work as the truck can reach.\n\n## Ordering Checklist\n\n- Measure the finished drive, not the area you are excavating.\n- Decide the compacted depth from the traffic, not the budget.\n- Add about 10 per cent for settlement and spreading losses.\n- Confirm whether the price is per yard or per ton, and whether delivery is included.\n- Ask for angular crushed stone, not rounded, for anything driven on.\n\n## Maintaining a Gravel Drive\n\nA gravel drive is not maintenance-free, but the upkeep is small if the base was done well. Once or twice a year, rake the surface to pull stone back from the edges into the middle, where wheels push it aside. If you skip this, the edges thin and the centre ruts.\n\nAfter a winter of use, top up any hollows with the same grade of stone, then re-compact. Keep a tonne or so aside for this; matching the grade keeps the surface even in colour and texture, and a different stone shows as a patch.\n\nWeed control matters more than it sounds. A few weeds at the edges spread inward, and hand-pulling disturbs the fabric. Treat the edges each spring, and keep the surface swept so debris does not build up and hold moisture against the fabric.\n\nOn a sloped drive, check the drainage channel each autumn. Leaves and grit collect there and, if it blocks, water runs down the surface instead of around it, which scours the stone and deepens any ruts. Clearing it takes minutes and prevents the most common cause of drive damage.\n\n",
     "faq": [
       {
         "q": "How much does a cubic yard of gravel weigh?",
@@ -1497,7 +1497,7 @@
     "status": "approved",
     "created": "2026-10-07",
     "updated": "2026-10-07",
-    "revision": 1,
+    "revision": 3,
     "internal_links": [
       {
         "to": "gravel-calculator",
@@ -1551,11 +1551,11 @@
       "gates": {
         "thin_content": {
           "pass": true,
-          "detail": "word count 961 (min 900)"
+          "detail": "word count 679 (min 600)"
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.00 vs n/a"
+          "detail": "max similarity 0.05 vs how-much-mulch-do-i-need-for-500-sq-ft"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -1567,11 +1567,11 @@
         },
         "readability": {
           "pass": true,
-          "detail": "avg sentence length 16.6 words"
+          "detail": "avg sentence length 13.7 words"
         },
         "heading_structure": {
           "pass": true,
-          "detail": "h2=13 h3=0 (no h1 in body)"
+          "detail": "h2=7 h3=0 (no h1 in body)"
         },
         "has_calculator_or_data": {
           "pass": true,
@@ -1605,7 +1605,7 @@
       "ctr": 0,
       "position": 0
     },
-    "word_count": 961
+    "word_count": 679
   },
   {
     "id": "how-much-paint-do-i-need-for-a-bedroom",
@@ -1638,7 +1638,7 @@
       "gallons": 2.41
     },
     "meta_description": "Use our free paint calculator to work out exactly what you need for how much paint do i need for a bedroom. Includes the formula, a worked example and.",
-    "body_markdown": "The quick answer: measure the area, multiply by the required depth, then convert to the units you buy in. Our paint calculator below does it for you and shows every step, so you can check the maths and order with confidence.\n\n## How to Calculate Paint\n\n1. Measure the length and width in feet and multiply them to get the area.\n2. Decide the depth (or thickness) the job needs, in inches.\n3. Convert depth to feet by dividing by 12.\n4. Multiply area by depth in feet to get cubic feet.\n5. Divide cubic feet by 27 to get cubic yards, or use the bag figures below.\n\n## Worked Example\n\n- Inputs: length = 12, width = 10, height = 8, coats = 2, doors = 1, windows = 2\n- Wall Area: **352.0**\n- Paintable Area: **301.0**\n- Gallons: **2.41**\n\nThis example uses the calculator's default values, so you can see the whole calculation laid out before you change anything.\n\n## How Deep Should Paint Be?\n\n| Depth / rate | Best for |\n|---|---|\n| 1 coat | Same colour refresh on a similar tone |\n| 2 coats | Colour changes and new drywall (the usual default) |\n| 3 coats | Strong colour changes or dark-to-light transitions |\n\nPick the depth that matches the job rather than the deepest option available. Too shallow and the job fails early; too deep and you waste money on material you did not need.\n\n## How Much You Need at Common Sizes\n\n| Job size | Paintable sq ft | Gallons |\n|---|---|---|\n\n\nUse the calculator above for your exact measurements; the table is here so you can sanity-check the result at a glance.\n\n## Which Type of Paint to Choose\n\n| Option | Why people choose it |\n|---|---|\n| Matt emulsion | Ceilings and low-traffic walls; hides imperfections |\n| Eggshell | Hallways and family rooms; wipes clean |\n| Satin | Kitchens, bathrooms and trim |\n| Primer + topcoat | Bare drywall, repairs and stained surfaces |\n\nMatch the product to the job rather than to the lowest price. Check the supplier's stated coverage too, because it varies between brands and is usually given per bag or per cubic yard.\n\n## Common Mistakes to Avoid\n\n- Estimating by eye instead of measuring the actual area.\n\n- Forgetting the depth or thickness requirement for the job.\n\n- Skipping the waste allowance, then running short mid-project.\n\n- Mixing bags from different batches, which can show as shade differences.\n\n- Buying the cheapest option that does not suit the application.\n\n\n## Measuring Your Area Accurately\n\nMost errors come from the measurement, not the arithmetic. Measure at the widest and narrowest points and use the average, because beds and rooms are rarely perfect rectangles. For an L-shaped area, split it into two rectangles, work out each one, and add the results. For a circular bed, measure the diameter, halve it to get the radius, then multiply the radius by itself and by 3.14. Write the figures down in feet before you start, so you are not converting units in your head while you work.\n\n## Converting Between Units\n\nSuppliers sell in different units, so it helps to know how they relate. There are 27 cubic feet in a cubic yard, so divide cubic feet by 27 to get cubic yards. To go the other way, multiply cubic yards by 27. Bagged products state their volume on the label, usually 1.5 or 2 cubic feet for soil and mulch, so divide your total cubic feet by the bag size and round up to the next whole bag. For stone and aggregate sold by weight, a cubic yard of typical 3/4 inch crushed stone weighs about 1.4 tons, though this varies with the material.\n\n## Ordering: Bags or Bulk\n\nFor small jobs, bagged product is simpler and you can carry it yourself. As the volume grows, bulk delivery usually works out cheaper per unit, but check whether the supplier charges a delivery fee and whether they will place it where you need it. Order in one go where you can, so the material comes from the same batch, and add a small margin for settling and waste. If you are close to a whole cubic yard, it often makes sense to round up rather than make a second trip.\n\n\n## Practical Tips\n\n- Subtract about 21 sq ft per door and 15 sq ft per window.\n\n- Keep roughly 10% spare for touch-ups and note the colour code.\n\n- Buy all cans at once so they come from the same batch.\n\n\n## Tools and Materials You Will Need\n\nFor this job, have to hand a tape measure, masking tape, dust sheets, a roller and tray, a brush for edges, and a filler for repairs. None of it is specialist; the only item worth hiring is a compactor for a gravel driveway, since hand tamping rarely gets the base firm enough.\n\n## When to Call a Professional\n\nMeasuring and ordering are straightforward for most garden and decorating jobs, but a few situations are worth handing over. Structural work, retaining walls over about two feet, anything affecting drainage around a building, and electrical or gas work should go to a qualified tradesperson. The same applies if the ground is unstable or you are unsure about the base preparation for a driveway or slab: a professional survey costs far less than a failed pour or a wall that moves.\n\n\n## Related Questions\n\nPeople also ask about how much paint do i need for a 10x10 room, how much paint do i need for a front door, how much paint do i need for a 12x12 room. The method is the same in every case: measure the area, choose the depth that suits the job, then convert the result into the units your supplier sells in.\n",
+    "body_markdown": "**A standard 12 x 10 ft bedroom with 8 ft walls needs about 2 gallons for two coats, after allowing for one door and two windows.** The figure assumes roughly 350 square feet of coverage per gallon, which is typical for a smooth, primed wall.\n\n## Paint by Room Size\n\nThese estimates use two coats and subtract one door and two windows.\n\n- **10 x 10 ft:** about 1.5 gallons, so buy 2.\n- **12 x 10 ft:** about 1.7 gallons, so buy 2.\n- **12 x 12 ft:** about 1.9 gallons, so buy 2.\n- **14 x 12 ft:** about 2.2 gallons, so buy 3 for safety.\n\nCeilings and trim are extra. A ceiling is length x width, and trim is measured in linear feet, usually about a gallon per 100 to 150 feet.\n\n## The Calculation, Step by Step\n\nAdd the room's length and width, then double it for the perimeter. Multiply the perimeter by the wall height for the wall area. Subtract about 21 square feet per door and 15 square feet per window. Multiply by the number of coats, then divide by the paint's coverage per gallon.\n\nFor a 12 x 10 room with 8 ft walls: the perimeter is 44 ft, wall area is 352 sq ft, minus a door and two windows gives roughly 301 sq ft, two coats is 602 sq ft, and dividing by 350 gives about 1.7 gallons.\n\n## Two Coats, Not One\n\nOne coat rarely covers evenly, especially when you are changing colour. Deep colours over pale walls, or pale over deep, often need a primer and sometimes a third coat. Budget for two coats as the default and treat anything less as a bonus.\n\n## Finish and Surface\n\nA smooth, primed surface covers in fewer coats than bare plasterboard or a previously glossed wall. Sand lightly and spot-prime repairs before you start. If the existing finish is glossy, key it or use a bonding primer, or the new paint may not adhere.\n\n## Buying and Storing\n\nBuy all the paint in one go so it comes from a single batch, and keep a labelled tin of each colour for touch-ups. Paint does not match across different batches, and a small tin kept for later is far cheaper than repainting a wall because a mark will not blend.\n\n## Common Mistakes\n\n- Buying for one coat and running short on the second.\n- Forgetting to subtract doors and windows, which over-buys by up to a gallon.\n- Skipping the primer on a colour change.\n- Not accounting for a high ceiling, which adds a surprising amount of wall area.\n\n## A Note on Ceilings and Trim\n\nIf you are doing the ceiling, add its area to the wall total before you convert to gallons. Trim, skirting and door frames are painted separately and are easiest to estimate by linear feet. Together these often add 30 to 50 per cent to a bedroom's paint bill, so it is worth pricing them in from the start rather than discovering it at the till.\n\n## Painting Order and Technique\n\nWork from the top down and from the edges inward. Do the ceiling first if it is being painted, then the walls, then the trim and skirting last, so any drips land on surfaces you have not finished yet. Cut in the edges with a brush before rolling, and keep a wet edge so you are never rolling over paint that has started to dry.\n\nTwo thin coats beat one thick coat every time. A heavy single coat dries unevenly and hides brush marks poorly, and it is more likely to drip. Let the first coat dry for the time stated on the tin before the second, even if it feels dry to the touch sooner.\n\nMasking tape saves time on trim and around sockets, but press it down firmly and pull it off while the paint is still slightly soft, or it tears the finish. For a neat line, remove the tape at a shallow angle rather than straight up.\n\nFinally, keep the room ventilated while you work and dispose of rags and tins responsibly. Water-based paint cleans up with warm water, but it still needs to cure properly, so avoid washing the walls for a couple of weeks.\n\n",
     "faq": [
       {
         "q": "How much does a gallon of paint cover?",
@@ -1660,7 +1660,7 @@
     "status": "approved",
     "created": "2026-10-07",
     "updated": "2026-10-07",
-    "revision": 1,
+    "revision": 3,
     "internal_links": [
       {
         "to": "paint-calculator",
@@ -1714,11 +1714,11 @@
       "gates": {
         "thin_content": {
           "pass": true,
-          "detail": "word count 921 (min 900)"
+          "detail": "word count 705 (min 600)"
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.00 vs n/a"
+          "detail": "max similarity 0.09 vs paint-calculator"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -1730,11 +1730,11 @@
         },
         "readability": {
           "pass": true,
-          "detail": "avg sentence length 18.0 words"
+          "detail": "avg sentence length 16.2 words"
         },
         "heading_structure": {
           "pass": true,
-          "detail": "h2=13 h3=0 (no h1 in body)"
+          "detail": "h2=8 h3=0 (no h1 in body)"
         },
         "has_calculator_or_data": {
           "pass": true,
@@ -1768,7 +1768,7 @@
       "ctr": 0,
       "position": 0
     },
-    "word_count": 921
+    "word_count": 705
   },
   {
     "id": "how-many-tiles-do-i-need-for-a-10x10-room",
@@ -1801,7 +1801,7 @@
       "tiles_with_waste": 132
     },
     "meta_description": "Use our free tile calculator to work out exactly what you need for how many tiles do i need for a 10x10 room. Includes the formula, a worked example and.",
-    "body_markdown": "The quick answer: measure the area, multiply by the required depth, then convert to the units you buy in. Our tile calculator below does it for you and shows every step, so you can check the maths and order with confidence.\n\n## How to Calculate Tile\n\n1. Measure the length and width in feet and multiply them to get the area.\n2. Decide the depth (or thickness) the job needs, in inches.\n3. Convert depth to feet by dividing by 12.\n4. Multiply area by depth in feet to get cubic feet.\n5. Divide cubic feet by 27 to get cubic yards, or use the bag figures below.\n\n## Worked Example\n\n- Inputs: length = 12, width = 10, tile_w = 12, tile_h = 12, waste = 10\n- Floor Area: **120.0**\n- Tile Area: **1.0**\n- Tiles: **120**\n- Tiles With Waste: **132**\n\nThis example uses the calculator's default values, so you can see the whole calculation laid out before you change anything.\n\n## How Deep Should Tile Be?\n\n| Depth / rate | Best for |\n|---|---|\n| 10% waste | Straight, simple layouts |\n| 15% waste | Diagonal or offset layouts and rooms with many cuts |\n| 20% waste | Herringbone and complex patterns |\n\nPick the depth that matches the job rather than the deepest option available. Too shallow and the job fails early; too deep and you waste money on material you did not need.\n\n## How Much You Need at Common Sizes\n\n| Job size | Tiles | With 10% waste |\n|---|---|---|\n\n\nUse the calculator above for your exact measurements; the table is here so you can sanity-check the result at a glance.\n\n## Which Type of Tile to Choose\n\n| Option | Why people choose it |\n|---|---|\n| Ceramic | Walls and light-traffic floors; easy to cut |\n| Porcelain | Floors and wet areas; denser and more water-resistant |\n| Natural stone | Feature floors; needs sealing |\n| Mosaic | Showers and small, shaped areas |\n\nMatch the product to the job rather than to the lowest price. Check the supplier's stated coverage too, because it varies between brands and is usually given per bag or per cubic yard.\n\n## Common Mistakes to Avoid\n\n- Estimating by eye instead of measuring the actual area.\n\n- Forgetting the depth or thickness requirement for the job.\n\n- Skipping the waste allowance, then running short mid-project.\n\n- Mixing bags from different batches, which can show as shade differences.\n\n- Buying the cheapest option that does not suit the application.\n\n\n## Measuring Your Area Accurately\n\nMost errors come from the measurement, not the arithmetic. Measure at the widest and narrowest points and use the average, because beds and rooms are rarely perfect rectangles. For an L-shaped area, split it into two rectangles, work out each one, and add the results. For a circular bed, measure the diameter, halve it to get the radius, then multiply the radius by itself and by 3.14. Write the figures down in feet before you start, so you are not converting units in your head while you work.\n\n## Converting Between Units\n\nSuppliers sell in different units, so it helps to know how they relate. There are 27 cubic feet in a cubic yard, so divide cubic feet by 27 to get cubic yards. To go the other way, multiply cubic yards by 27. Bagged products state their volume on the label, usually 1.5 or 2 cubic feet for soil and mulch, so divide your total cubic feet by the bag size and round up to the next whole bag. For stone and aggregate sold by weight, a cubic yard of typical 3/4 inch crushed stone weighs about 1.4 tons, though this varies with the material.\n\n## Ordering: Bags or Bulk\n\nFor small jobs, bagged product is simpler and you can carry it yourself. As the volume grows, bulk delivery usually works out cheaper per unit, but check whether the supplier charges a delivery fee and whether they will place it where you need it. Order in one go where you can, so the material comes from the same batch, and add a small margin for settling and waste. If you are close to a whole cubic yard, it often makes sense to round up rather than make a second trip.\n\n\n## Practical Tips\n\n- Buy all tiles in one order so the dye lots match.\n\n- Open every box and mix them before laying to blend shade variation.\n\n- Keep a few spares for future repairs.\n\n\n## Tools and Materials You Will Need\n\nFor this job, have to hand a tape measure, a notched trowel, tile spacers, a tile cutter, a spirit level, and grout. None of it is specialist; the only item worth hiring is a compactor for a gravel driveway, since hand tamping rarely gets the base firm enough.\n\n## When to Call a Professional\n\nMeasuring and ordering are straightforward for most garden and decorating jobs, but a few situations are worth handing over. Structural work, retaining walls over about two feet, anything affecting drainage around a building, and electrical or gas work should go to a qualified tradesperson. The same applies if the ground is unstable or you are unsure about the base preparation for a driveway or slab: a professional survey costs far less than a failed pour or a wall that moves.\n\n\n## Related Questions\n\nPeople also ask about how many tiles do i need for american mahjong, how many tiles do i need for 100 square feet, how many tiles do i need for my bathroom. The method is the same in every case: measure the area, choose the depth that suits the job, then convert the result into the units your supplier sells in.\n",
+    "body_markdown": "**A 10 x 10 ft room has 100 square feet of floor. With 12 x 12 inch tiles that is 100 tiles, or about 110 once you add the 10 per cent waste allowance.** Change the tile size and the count changes, even though the floor does not.\n\n## Tiles by Size for a 100 Square Foot Floor\n\n- **12 x 12 in (1 sq ft each):** 100 tiles, buy about 110.\n- **12 x 24 in (2 sq ft each):** 50 tiles, buy about 55.\n- **6 x 6 in (0.25 sq ft each):** 400 tiles, buy about 440.\n- **8 x 8 in (0.44 sq ft each):** 225 tiles, buy about 248.\n\n## Tiles, Boxes and Coverage\n\nTile is usually sold by the box, and the box states its coverage in square feet rather than a tile count. Read that figure first. A box covering 10 square feet means you need about 11 boxes for a 100 square foot floor with waste, whatever the tile count happens to be. Buying by box coverage avoids the arithmetic entirely.\n\n## Why Add 10 Per Cent\n\nCuts, breakages and pattern matching all consume tile. A straight grid loses about 10 per cent to edge cuts and the odd broken tile. A diagonal or diamond layout turns every edge into a triangle cut and pushes the waste toward 15 per cent. Herringbone wastes more again. Buying all the tile at once also keeps it from a single dye lot, so the floor is one colour rather than a patchwork.\n\n## Plan the Layout From the Centre\n\nMark the centre of the room and work outward so the cut tiles at opposite walls are the same width. That looks deliberate. Starting from one corner leaves a full tile on one side and a sliver on the other, which is the first thing anyone notices. In a doorway, dry-lay a row so the two rooms meet on a full tile if you can.\n\n## Grout Lines\n\nGrout joints add a small amount back. If you are working to an exact grid, allow a couple of millimetres per tile, which can shift the count on a large floor. For most rooms the waste allowance already covers this, but check if you are laying large-format tiles with wide joints.\n\n## Common Mistakes\n\n- Ordering the exact area and ignoring cuts.\n- Mixing dye lots from different orders.\n- Counting tiles instead of checking the box coverage.\n- Returning every spare box, then having nothing left for a future repair.\n\n## Keep a Spare Box\n\nKeep one unopened box aside. Flooring takes damage over the years, and a matching tile from the same batch is the only way to repair it invisibly. A spare box is a small cost now and a large saving later.\n\n## Tools and Preparation for Laying Tile\n\nOn a floor this size, a few tools make the difference between a neat job and a frustrating one. You need a notched trowel, a tile cutter, spacers, a spirit level, a rubber mallet, and a bucket for mixing adhesive. For large-format tiles, add a levelling clip system to stop the corners from lipping where two tiles meet.\n\nThe floor must be flat, clean and dry before you start. Check the flatness with a straight edge laid in several directions; a small hump or hollow will show through the finished floor. If the floor is uneven, level it first, because no amount of care in laying will hide it afterwards.\n\nPlan the layout before the first tile goes down. Mark the centre lines, dry-lay a row in each direction, and check the cuts at every wall. On a 10 x 10 room, working from the centre usually gives you even cut tiles on opposite walls, which looks deliberate rather than accidental.\n\nWork in small sections so the adhesive does not skin over before you place the tile, and check the level as you go rather than at the very end.\n\n",
     "faq": [
       {
         "q": "How much extra tile should I buy?",
@@ -1823,7 +1823,7 @@
     "status": "approved",
     "created": "2026-10-07",
     "updated": "2026-10-07",
-    "revision": 1,
+    "revision": 3,
     "internal_links": [
       {
         "to": "tile-calculator",
@@ -1877,11 +1877,11 @@
       "gates": {
         "thin_content": {
           "pass": true,
-          "detail": "word count 906 (min 900)"
+          "detail": "word count 651 (min 600)"
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.00 vs n/a"
+          "detail": "max similarity 0.04 vs concrete-calculator"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -1893,11 +1893,11 @@
         },
         "readability": {
           "pass": true,
-          "detail": "avg sentence length 18.1 words"
+          "detail": "avg sentence length 15.7 words"
         },
         "heading_structure": {
           "pass": true,
-          "detail": "h2=13 h3=0 (no h1 in body)"
+          "detail": "h2=8 h3=0 (no h1 in body)"
         },
         "has_calculator_or_data": {
           "pass": true,
@@ -1931,7 +1931,7 @@
       "ctr": 0,
       "position": 0
     },
-    "word_count": 906
+    "word_count": 651
   },
   {
     "id": "how-much-grass-seed-per-square-foot-overseeding",
@@ -1960,7 +1960,7 @@
       "bags_3lb": 8
     },
     "meta_description": "Use our free grass seed calculator to work out exactly what you need for how much grass seed per square foot overseeding. Includes the formula, a worked.",
-    "body_markdown": "The quick answer: measure the area, multiply by the required depth, then convert to the units you buy in. Our grass seed calculator below does it for you and shows every step, so you can check the maths and order with confidence.\n\n## How to Calculate Grass Seed\n\n1. Measure the length and width in feet and multiply them to get the area.\n2. Decide the depth (or thickness) the job needs, in inches.\n3. Convert depth to feet by dividing by 12.\n4. Multiply area by depth in feet to get cubic feet.\n5. Divide cubic feet by 27 to get cubic yards, or use the bag figures below.\n\n## Worked Example\n\n- Inputs: area = 5000, method = 1\n- Rate Per 1000: **4.5**\n- Pounds: **22.5**\n- Bags 3Lb: **8**\n\nThis example uses the calculator's default values, so you can see the whole calculation laid out before you change anything.\n\n## How Deep Should Grass Seed Be?\n\n| Depth / rate | Best for |\n|---|---|\n| 2 lb / 1000 sq ft | Overseeding an existing lawn |\n| 4-5 lb / 1000 sq ft | New lawn from bare soil |\n| 5-6 lb / 1000 sq ft | Worn areas and steep banks |\n\nPick the depth that matches the job rather than the deepest option available. Too shallow and the job fails early; too deep and you waste money on material you did not need.\n\n## How Much You Need at Common Sizes\n\n| Job size | Pounds | 3 lb bags |\n|---|---|---|\n\n\nUse the calculator above for your exact measurements; the table is here so you can sanity-check the result at a glance.\n\n## Which Type of Grass Seed to Choose\n\n| Option | Why people choose it |\n|---|---|\n| Ryegrass | Fast to establish, good for overseeding |\n| Fescue | Shade-tolerant and drought-resistant |\n| Bluegrass | Dense and hard-wearing, slower to germinate |\n| Clover blend | Low-input lawns that fix nitrogen |\n\nMatch the product to the job rather than to the lowest price. Check the supplier's stated coverage too, because it varies between brands and is usually given per bag or per cubic yard.\n\n## Common Mistakes to Avoid\n\n- Estimating by eye instead of measuring the actual area.\n\n- Forgetting the depth or thickness requirement for the job.\n\n- Skipping the waste allowance, then running short mid-project.\n\n- Mixing bags from different batches, which can show as shade differences.\n\n- Buying the cheapest option that does not suit the application.\n\n\n## Measuring Your Area Accurately\n\nMost errors come from the measurement, not the arithmetic. Measure at the widest and narrowest points and use the average, because beds and rooms are rarely perfect rectangles. For an L-shaped area, split it into two rectangles, work out each one, and add the results. For a circular bed, measure the diameter, halve it to get the radius, then multiply the radius by itself and by 3.14. Write the figures down in feet before you start, so you are not converting units in your head while you work.\n\n## Converting Between Units\n\nSuppliers sell in different units, so it helps to know how they relate. There are 27 cubic feet in a cubic yard, so divide cubic feet by 27 to get cubic yards. To go the other way, multiply cubic yards by 27. Bagged products state their volume on the label, usually 1.5 or 2 cubic feet for soil and mulch, so divide your total cubic feet by the bag size and round up to the next whole bag. For stone and aggregate sold by weight, a cubic yard of typical 3/4 inch crushed stone weighs about 1.4 tons, though this varies with the material.\n\n## Ordering: Bags or Bulk\n\nFor small jobs, bagged product is simpler and you can carry it yourself. As the volume grows, bulk delivery usually works out cheaper per unit, but check whether the supplier charges a delivery fee and whether they will place it where you need it. Order in one go where you can, so the material comes from the same batch, and add a small margin for settling and waste. If you are close to a whole cubic yard, it often makes sense to round up rather than make a second trip.\n\n\n## Practical Tips\n\n- Sow in early autumn when the soil is warm and weeds are slowing.\n\n- Keep the surface damp for the first two weeks, lightly and often.\n\n- Do not bury the seed; it needs light and warmth to germinate.\n\n\n## Tools and Materials You Will Need\n\nFor this job, have to hand a tape measure, a garden rake, a spreader for even coverage, and a hose or sprinkler. None of it is specialist; the only item worth hiring is a compactor for a gravel driveway, since hand tamping rarely gets the base firm enough.\n\n## When to Call a Professional\n\nMeasuring and ordering are straightforward for most garden and decorating jobs, but a few situations are worth handing over. Structural work, retaining walls over about two feet, anything affecting drainage around a building, and electrical or gas work should go to a qualified tradesperson. The same applies if the ground is unstable or you are unsure about the base preparation for a driveway or slab: a professional survey costs far less than a failed pour or a wall that moves.\n\n\n## Related Questions\n\nPeople also ask about how much grass seed per square foot, how much grass seed per square foot for new lawn, how much grass seed per square foot canada. The method is the same in every case: measure the area, choose the depth that suits the job, then convert the result into the units your supplier sells in.\n",
+    "body_markdown": "**Overseeding uses about 2 pounds of grass seed per 1,000 square feet, which is 0.002 pounds per square foot.** That is half the rate of a brand-new lawn, because you are thickening an existing sward rather than starting from bare soil.\n\n## Overseeding Rate by Area\n\nAt the overseeding rate of about 2 lb per 1,000 sq ft:\n\n- **500 sq ft:** about 1 lb.\n- **1,000 sq ft:** about 2 lb.\n- **2,500 sq ft:** about 5 lb.\n- **5,000 sq ft:** about 10 lb.\n\nFor comparison, a new lawn wants roughly 4 to 5 lb per 1,000 sq ft, which is more than double. Using the new-lawn rate when overseeding wastes seed and can smother the thin grass you are trying to help.\n\n## Why the Rate Is Lower\n\nWhen you overseed, existing plants already cover much of the ground. You are filling gaps, not establishing a lawn from nothing. Too much seed and the seedlings compete with each other and with the established grass, and the weakest of them die. The right rate gives you density without waste.\n\n## Prepare the Ground First\n\nSeed fails more often from poor preparation than from the wrong rate. Mow the lawn short, scarify or rake out thatch and dead material, and aerate if the ground is compacted. Seed needs contact with soil. If it sits on top of thatch it will dry out and never germinate. After sowing, a thin top-dressing of compost helps, but keep the seed near the surface.\n\n## Timing\n\nEarly autumn is the easiest window. The soil is still warm, rain is more reliable, and weeds are slowing down. Spring works too, but the young grass then has to survive summer heat while it is still shallow-rooted. Avoid sowing in the heat of midsummer unless you can water reliably.\n\n## Watering and Aftercare\n\nKeep the top inch of soil damp for the first two weeks, using light, frequent watering rather than one heavy soak. Once the new grass is up and has been cut twice, switch to deeper, less frequent watering so the roots go down. Stay off the lawn until the new plants are rooted, or you will pull them out as you walk.\n\n## Common Mistakes\n\n- Using the new-lawn rate and wasting half the seed.\n- Sowing onto thatch or hard ground without preparation.\n- Letting the seed dry out in the first fortnight.\n- Sowing too deep, where the seed cannot reach the light.\n\n## A Simple Rule\n\nIf you remember nothing else, remember this: overseeding is about half the rate of a new lawn. Work out your area in square feet, divide by 1,000, and multiply by two. Round up to the next bag, and keep a little spare for the thin patches you will spot a month later.\n\n## Choosing a Seed Mix for Overseeding\n\nThe best mix for overseeding is one that matches or complements what is already growing. If the existing lawn is mostly ryegrass and fescue, using a similar mix means the new grass grows at the same rate and knits into the old. Introducing a very different grass can leave visible patches of different colour and texture.\n\nFor a shaded lawn, look for a mix high in fescue, which tolerates lower light under trees and beside walls. For a lawn that takes heavy use, choose a mix leaning on ryegrass for wear tolerance. Read the label for the proportions rather than the picture on the front.\n\nBuy fresh seed and check the sow-by date. Seed germinates less well as it ages, and old seed produces an uneven result that is hard to distinguish from poor preparation. Store any spare in a cool, dry place, sealed against damp and mice.\n\nNote down the mix you used. When you top up thin patches in future, matching the mix keeps the lawn one colour, and it makes the job far easier than guessing at what was sown before.\n\n",
     "faq": [
       {
         "q": "How much grass seed per 1000 square feet?",
@@ -1982,7 +1982,7 @@
     "status": "approved",
     "created": "2026-10-07",
     "updated": "2026-10-07",
-    "revision": 1,
+    "revision": 3,
     "internal_links": [
       {
         "to": "grass-seed-calculator",
@@ -2036,11 +2036,11 @@
       "gates": {
         "thin_content": {
           "pass": true,
-          "detail": "word count 908 (min 900)"
+          "detail": "word count 651 (min 600)"
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.00 vs n/a"
+          "detail": "max similarity 0.06 vs grass-seed-calculator"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -2052,11 +2052,11 @@
         },
         "readability": {
           "pass": true,
-          "detail": "avg sentence length 18.1 words"
+          "detail": "avg sentence length 15.2 words"
         },
         "heading_structure": {
           "pass": true,
-          "detail": "h2=13 h3=0 (no h1 in body)"
+          "detail": "h2=8 h3=0 (no h1 in body)"
         },
         "has_calculator_or_data": {
           "pass": true,
@@ -2090,7 +2090,7 @@
       "ctr": 0,
       "position": 0
     },
-    "word_count": 908
+    "word_count": 651
   },
   {
     "id": "how-many-bags-of-concrete-do-i-need-for-a-10x10-slab",
@@ -2121,7 +2121,7 @@
       "bags_80lb": 56
     },
     "meta_description": "Use our free concrete calculator to work out exactly what you need for how many bags of concrete do i need for a 10x10 slab. Includes the formula, a.",
-    "body_markdown": "The quick answer: measure the area, multiply by the required depth, then convert to the units you buy in. Our concrete calculator below does it for you and shows every step, so you can check the maths and order with confidence.\n\n## How to Calculate Concrete\n\n1. Measure the length and width in feet and multiply them to get the area.\n2. Decide the depth (or thickness) the job needs, in inches.\n3. Convert depth to feet by dividing by 12.\n4. Multiply area by depth in feet to get cubic feet.\n5. Divide cubic feet by 27 to get cubic yards, or use the bag figures below.\n\n## Worked Example\n\n- Inputs: length = 10, width = 10, thickness = 4\n- Cubic Feet: **33.3**\n- Cubic Yards: **1.23**\n- Bags 60Lb: **75**\n- Bags 80Lb: **56**\n\nThis example uses the calculator's default values, so you can see the whole calculation laid out before you change anything.\n\n## How Deep Should Concrete Mix Be?\n\n| Depth / rate | Best for |\n|---|---|\n| 3 in | Garden paths and light foot traffic |\n| 4 in | Patios, shed bases and standard slabs |\n| 5-6 in | Driveways and anything carrying vehicles |\n| 6+ in | Heavy loads; add reinforcement |\n\nPick the depth that matches the job rather than the deepest option available. Too shallow and the job fails early; too deep and you waste money on material you did not need.\n\n## How Much You Need at Common Sizes\n\n| Job size | Cubic yards | 60 lb bags | 80 lb bags |\n|---|---|---|---|\n| 4x4 slab, 4 in | 0.2 | 12 | 9 |\n| 8x8 slab, 4 in | 0.79 | 48 | 36 |\n| 10x10 slab, 4 in | 1.23 | 75 | 56 |\n| 20x20 slab, 4 in | 4.94 | 297 | 223 |\n\nUse the calculator above for your exact measurements; the table is here so you can sanity-check the result at a glance.\n\n## Which Type of Concrete Mix to Choose\n\n| Option | Why people choose it |\n|---|---|\n| Rapid-set mix | Fence posts and small repairs |\n| Standard 80 lb mix | Slabs and footings |\n| Fibre-reinforced | Slabs where cracking is a concern |\n| Ready-mix delivery | Anything over about one cubic yard |\n\nMatch the product to the job rather than to the lowest price. Check the supplier's stated coverage too, because it varies between brands and is usually given per bag or per cubic yard.\n\n## Common Mistakes to Avoid\n\n- Estimating by eye instead of measuring the actual area.\n\n- Forgetting the depth or thickness requirement for the job.\n\n- Skipping the waste allowance, then running short mid-project.\n\n- Mixing bags from different batches, which can show as shade differences.\n\n- Buying the cheapest option that does not suit the application.\n\n\n## Measuring Your Area Accurately\n\nMost errors come from the measurement, not the arithmetic. Measure at the widest and narrowest points and use the average, because beds and rooms are rarely perfect rectangles. For an L-shaped area, split it into two rectangles, work out each one, and add the results. For a circular bed, measure the diameter, halve it to get the radius, then multiply the radius by itself and by 3.14. Write the figures down in feet before you start, so you are not converting units in your head while you work.\n\n## Converting Between Units\n\nSuppliers sell in different units, so it helps to know how they relate. There are 27 cubic feet in a cubic yard, so divide cubic feet by 27 to get cubic yards. To go the other way, multiply cubic yards by 27. Bagged products state their volume on the label, usually 1.5 or 2 cubic feet for soil and mulch, so divide your total cubic feet by the bag size and round up to the next whole bag. For stone and aggregate sold by weight, a cubic yard of typical 3/4 inch crushed stone weighs about 1.4 tons, though this varies with the material.\n\n## Ordering: Bags or Bulk\n\nFor small jobs, bagged product is simpler and you can carry it yourself. As the volume grows, bulk delivery usually works out cheaper per unit, but check whether the supplier charges a delivery fee and whether they will place it where you need it. Order in one go where you can, so the material comes from the same batch, and add a small margin for settling and waste. If you are close to a whole cubic yard, it often makes sense to round up rather than make a second trip.\n\n\n## Practical Tips\n\n- Add water gradually; too much weakens the finished concrete.\n\n- Compact and level a gravel base before pouring.\n\n- Cure slowly by keeping it damp for the first few days.\n\n\n## Tools and Materials You Will Need\n\nFor this job, have to hand a tape measure, a wheelbarrow, a mixing paddle or hoe, a float, an edging trowel, and a level. None of it is specialist; the only item worth hiring is a compactor for a gravel driveway, since hand tamping rarely gets the base firm enough.\n\n## When to Call a Professional\n\nMeasuring and ordering are straightforward for most garden and decorating jobs, but a few situations are worth handing over. Structural work, retaining walls over about two feet, anything affecting drainage around a building, and electrical or gas work should go to a qualified tradesperson. The same applies if the ground is unstable or you are unsure about the base preparation for a driveway or slab: a professional survey costs far less than a failed pour or a wall that moves.\n\n\n## Related Questions\n\nPeople also ask about how many bags of concrete do i need for a 4 x8 slab, how many bags of concrete do i need for a 4x4 slab, how many bags of concrete do i need for a fence post. The method is the same in every case: measure the area, choose the depth that suits the job, then convert the result into the units your supplier sells in.\n",
+    "body_markdown": "**A 10 x 10 ft slab at 4 inches thick needs about 1.23 cubic yards of concrete, which is roughly 56 bags of 80 lb mix or 74 bags of 60 lb mix.** The thickness you choose changes the count a lot, so decide that before you buy.\n\n## Bags by Slab Thickness\n\nThese use an 80 lb bag yielding about 0.6 cubic feet.\n\n- **10 x 10 ft at 4 in:** 33.3 cubic feet, about 56 bags.\n- **10 x 10 ft at 5 in:** 41.7 cubic feet, about 70 bags.\n- **10 x 10 ft at 6 in:** 50 cubic feet, about 84 bags.\n\nWith 60 lb bags, yielding about 0.45 cubic feet, add roughly a third more: about 74 bags at 4 inches.\n\n## Is Bagged Mix the Right Choice?\n\nProbably not at this size. Past about one cubic yard, ready-mix concrete delivered by truck is faster, cheaper per unit and far less work. The catch is that a pour cannot wait: you need the base prepared, the formwork set and helpers on hand before the truck arrives. Most suppliers also have a minimum load, so very small jobs price badly either way.\n\nBagged mix suits small pours: fence post footings, a garden step, a small pad or a repair. A 10 x 10 slab is near the upper limit of what is sensible to mix by hand, and doing it in one continuous pour with bags is hard work.\n\n## Getting the Volume Right\n\nMultiply length by width to get the area, multiply by the thickness in feet, and divide by 27 for cubic yards. For a 10 x 10 slab at 4 inches: 100 x 0.333 is 33.3 cubic feet, and dividing by 27 gives 1.23 cubic yards. Divide by the bag yield for the bag count.\n\n## Prepare the Base\n\nA slab is only as good as its base. Compact the ground, add a gravel sub-base for drainage, and set formwork so the slab is a true rectangle. For a slab that carries vehicles, lay reinforcement mesh in the lower third before the pour. Skipping this is the usual reason a slab cracks in its first winter.\n\n## Mixing and Curing\n\nMix only what you can place within about half an hour, and mix it stiff rather than wet. Extra water makes concrete easier to move but weaker when it sets; use the amount stated on the bag. After the pour, keep the slab covered and let it cure slowly for several days rather than drying it in the sun, and cut control joints so any cracking happens in a straight line where you want it.\n\n## Ordering Checklist\n\n- Fix the thickness from what the slab carries, before counting bags.\n- Add about 5 to 10 per cent for spillage and uneven ground.\n- Compare the bag cost against ready-mix per cubic yard, including the minimum charge.\n- Have formwork, mesh and helpers ready before either route.\n\n## Tools and Safety for a Slab Pour\n\nA slab this size needs proper preparation and a team. Have mixing tubs or a hired mixer, shovels, a rake, a float and trowel, a screed board, and formwork boards with pegs. For 56 bags of mix you will want at least two or three people, because once the pour begins it cannot stop.\n\nWork out where the water and the mixed concrete will come from and go before you start. Concrete is heavy, and carting it across a garden slows everything down. If a truck can reach the site, ready-mix removes most of this work, but the area must be prepared and the helpers ready when it arrives.\n\nWear gloves and eye protection, and avoid kneeling in the wet mix, which dries and burns the skin. Mix in a ventilated spot, and mix only what you can place within about half an hour.\n\nSet the formwork square and peg it firmly before mixing anything, and lay any reinforcement on spacers so it sits within the slab rather than on the ground. Clean tools straight after the pour; set concrete is far harder to remove than wet.\n\n",
     "faq": [
       {
         "q": "How many bags of concrete make a cubic yard?",
@@ -2143,7 +2143,7 @@
     "status": "approved",
     "created": "2026-10-07",
     "updated": "2026-10-07",
-    "revision": 1,
+    "revision": 3,
     "internal_links": [
       {
         "to": "concrete-calculator",
@@ -2197,11 +2197,11 @@
       "gates": {
         "thin_content": {
           "pass": true,
-          "detail": "word count 956 (min 900)"
+          "detail": "word count 683 (min 600)"
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.00 vs n/a"
+          "detail": "max similarity 0.05 vs concrete-calculator"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -2213,11 +2213,11 @@
         },
         "readability": {
           "pass": true,
-          "detail": "avg sentence length 18.1 words"
+          "detail": "avg sentence length 15.0 words"
         },
         "heading_structure": {
           "pass": true,
-          "detail": "h2=13 h3=0 (no h1 in body)"
+          "detail": "h2=7 h3=0 (no h1 in body)"
         },
         "has_calculator_or_data": {
           "pass": true,
@@ -2251,6 +2251,6 @@
       "ctr": 0,
       "position": 0
     },
-    "word_count": 956
+    "word_count": 683
   }
 ]

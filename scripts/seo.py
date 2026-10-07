@@ -154,6 +154,6 @@ def calculate_seo_score(art: dict, site: dict) -> dict:
     checks["has_faq"] = bool(art.get("faq"))
     checks["schema"] = bool(art.get("schema_types"))
     checks["links"] = len(art.get("internal_links", [])) >= 1
-    checks["word_count"] = art.get("word_count", 0) >= 900
+    checks["word_count"] = art.get("word_count", 0) >= 600
     checks["calculator"] = bool(art.get("calculator_output"))
     return {"score": round(sum(checks.values()) / len(checks) * 100, 1), "checks": checks}

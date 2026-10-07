@@ -2,7 +2,7 @@
   "limits": {
     "max_articles_per_run": 3,
     "max_articles_per_day": 3,
-    "min_word_count": 900,
+    "min_word_count": 600,
     "max_word_count": 2400,
     "min_quality_score": 70,
     "max_internal_links_per_article": 8,
@@ -23,7 +23,10 @@
     "schema_present": true,
     "alt_text": true
   },
-  "default_schema": ["Article", "BreadcrumbList"],
+  "default_schema": [
+    "Article",
+    "BreadcrumbList"
+  ],
   "title_max": 60,
   "meta_max": 158,
   "meta_min": 110

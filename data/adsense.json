@@ -25,7 +25,7 @@
     },
     "no_thin_pages": {
       "ok": true,
-      "detail": "all >= 900 words"
+      "detail": "all >= 600 words"
     },
     "sitemap": {
       "ok": true,

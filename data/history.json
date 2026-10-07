@@ -3,7 +3,7 @@
     "date": "2026-10-07",
     "articles": 14,
     "avg_seo_score": 100.0,
-    "total_words": 13129,
+    "total_words": 9719,
     "per_article": [
       {
         "slug": "mulch-calculator",
@@ -19,7 +19,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 938
+        "word_count": 778
       },
       {
         "slug": "raised-bed-soil-calculator",
@@ -35,7 +35,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 975
+        "word_count": 695
       },
       {
         "slug": "gravel-calculator",
@@ -51,7 +51,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 961
+        "word_count": 682
       },
       {
         "slug": "paint-calculator",
@@ -67,7 +67,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 920
+        "word_count": 677
       },
       {
         "slug": "tile-calculator",
@@ -83,7 +83,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 907
+        "word_count": 652
       },
       {
         "slug": "grass-seed-calculator",
@@ -99,7 +99,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 909
+        "word_count": 632
       },
       {
         "slug": "concrete-calculator",
@@ -115,7 +115,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 956
+        "word_count": 695
       },
       {
         "slug": "how-much-mulch-do-i-need-for-500-sq-ft",
@@ -131,7 +131,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 938
+        "word_count": 776
       },
       {
         "slug": "how-much-soil-do-you-need-for-a-raised-bed",
@@ -147,7 +147,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 973
+        "word_count": 763
       },
       {
         "slug": "how-much-gravel-do-i-need-for-my-driveway",
@@ -163,7 +163,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 961
+        "word_count": 679
       },
       {
         "slug": "how-much-paint-do-i-need-for-a-bedroom",
@@ -179,7 +179,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 921
+        "word_count": 705
       },
       {
         "slug": "how-many-tiles-do-i-need-for-a-10x10-room",
@@ -195,7 +195,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 906
+        "word_count": 651
       },
       {
         "slug": "how-much-grass-seed-per-square-foot-overseeding",
@@ -211,7 +211,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 908
+        "word_count": 651
       },
       {
         "slug": "how-many-bags-of-concrete-do-i-need-for-a-10x10-slab",
@@ -227,7 +227,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 956
+        "word_count": 683
       }
     ]
   }

@@ -274,3 +274,131 @@ def materials_md(calc_key: str) -> str:
 
 def tips(calc_key: str) -> list[str]:
     return LIBRARY.get(calc_key, {}).get("tips", [])
+
+
+EXTRAS: dict[str, str] = {
+    "mulch": """## Mulch and Soil Health
+
+Mulch does more than tidy a bed. It moderates soil temperature, slows evaporation, and
+breaks down into organic matter that feeds worms and soil life. That is why the depth
+matters: a thin scatter looks neat but dries out and lets weeds through, while a layer
+over four inches can hold so much moisture against stems that they rot.
+
+Different materials behave differently. Shredded hardwood and pine bark last a season or
+more and suit borders and trees. Straw is cheap, light and easy to spread, which makes it
+the choice for vegetable beds where you will replant often. Compost is the odd one out: it
+breaks down quickly and is better thought of as feeding the soil than as a long-term
+surface cover, so use it thinly and top it up.
+
+A simple schedule keeps beds looking good all year. In spring, top up to the two-to-three
+inch band once the soil has warmed. Through summer, check after heavy rain, because
+splash can expose bare soil. In autumn, a thin extra layer protects roots over winter.
+Keep every layer a few inches clear of trunks and stems, and water the ground before you
+spread rather than after.
+""",
+    "soil": """## Soil Volume, Weight and Delivery
+
+Soil is sold two ways, and they are not interchangeable. Bagged mixes are measured by
+volume, usually 1.5 or 2 cubic feet. Bulk topsoil and compost are sold by the cubic yard
+or, sometimes, by weight. A cubic yard of damp topsoil weighs roughly a ton, so a pickup
+load is often at its limit before the bed is full.
+
+That gap between volume and weight is where most ordering mistakes happen. If you need
+two cubic yards, that is about 54 cubic feet, or roughly 27 bags of the two-cubic-foot
+size. Buying bulk is cheaper per unit once you pass about one cubic yard, but you need
+somewhere to tip it and a way to move it to the bed.
+
+Leave the mix to settle. A freshly filled bed drops by around a tenth of its volume over
+the first season as air escapes and organic matter breaks down. Fill to within two inches
+of the rim, water in stages as you go, and plan to top up each spring. Mixing your own
+blend rather than buying a single bagged product usually works out cheaper and lets you
+match the mix to what you are growing.
+""",
+    "gravel": """## Choosing the Right Stone
+
+Not all gravel is the same, and the wrong choice shows up within a season. For a
+decorative border or a light path, a rounded pea gravel or a small 10 mm stone looks well
+and drains freely. For a driveway, you want an angular crushed stone that locks together
+under a compactor; rounded stones roll and rut.
+
+Depth and stone size go together. A 20 mm crushed stone at four inches compacted makes a
+firm light driveway. For regular vehicle traffic, go to six inches in two layers, with the
+coarser stone at the bottom and a finer layer on top. The sub-base is the part people
+skip, and it is the part that decides whether the surface stays flat.
+
+Edging matters too. Without a solid edge, angular stone spreads outward under wheels and
+the depth thins at the edges first. A steel or timber edge set just above the finished
+level holds the stone in place. Lay landscape fabric before the first layer on any path or
+drive, so the stone does not sink into the soil and weeds do not push through.
+""",
+    "paint": """## Ceilings, Trim and Extra Rooms
+
+Walls are only part of the job. If you are painting the ceiling, add its area to the total;
+multiply the room's length by its width just as you did for the floor. A ceiling usually
+takes one or two coats and, being flat and bright, hides less than walls do.
+
+Trim, skirting, doors and window frames are measured in linear feet rather than square
+feet, and they are painted separately. Budget roughly a gallon for every 100 to 150 linear
+feet of trim, and remember that gloss and satin finishes cover differently from wall paint.
+Doors are best taken off and painted flat to avoid runs.
+
+When a project spans several rooms, work out each room's wall area, subtract its doors and
+windows, then add the totals before you convert to gallons. Buying in one large tin is
+cheaper per litre than several small ones, and it guarantees the same batch, so any
+touch-up later matches exactly. Keep a labelled tin of each colour for repairs.
+""",
+    "tile": """## Layout Patterns and Offcuts
+
+How you lay the tile changes how much you waste. A straight grid is the most economical,
+so a 10 per cent allowance usually covers the cuts. A diagonal or diamond pattern turns
+every edge into a triangle cut, and that pushes waste toward 15 per cent. Herringbone and
+other patterned layouts waste more again.
+
+Plan the layout from the centre of the room so the cut tiles at opposite walls are the
+same width. That looks deliberate; starting from one corner leaves a full tile on one side
+and a sliver on the other. Dry-lay a row before you fix anything, especially in a doorway
+where the two rooms should meet on a full tile.
+
+Grout lines add a small amount back. If you are working to an exact grid, add a couple of
+millimetres per tile for the joint, which can change the tile count on a large floor. Buy
+all the tile in one go so it comes from a single dye lot, keep a box in reserve for
+breakages, and check the coverage printed on the box rather than counting tiles.
+""",
+    "grass_seed": """## Preparing the Ground and Aftercare
+
+Seed fails more often from poor preparation than from the wrong rate. Rake the surface to
+loosen the top inch, remove stones and old roots, and firm it so you leave a shallow
+footprint when you walk across. Seed needs contact with soil, not a resting place on top
+of it.
+
+Sow at the rate for your method, then rake lightly so the seed is barely covered, and firm
+again with the back of a rake. On a slope, scatter a thin layer of compost to hold it in
+place, but keep the seed near the surface; buried seed will not sprout.
+
+Watering is what decides the result. Keep the top inch damp for the first two weeks with
+light, frequent watering rather than a single soak, which can wash seed into hollows. Once
+the grass is up and has been cut twice, ease off and water more deeply and less often. Stay
+off the new lawn until it is rooted, or the young plants pull straight out of the soil.
+""",
+    "concrete": """## Ready-Mix or Bags
+
+For anything larger than about one cubic yard, ready-mix concrete delivered by truck is
+easier and often cheaper than mixing bags by hand. The trade-off is that you must have the
+area prepared and helpers ready before the truck arrives, because a pour cannot wait. Most
+suppliers have a minimum load, so small jobs price badly.
+
+Bagged mix suits small pours: fence post footings, steps, a small pad or a repair. Work
+out the volume first, then divide by the yield printed on the bag, usually about 0.6 cubic
+feet for an 80 lb bag. Mix only what you can place within about half an hour, and mix it
+stiff rather than wet, because extra water is the main cause of weak concrete.
+
+Whichever route you take, prepare the base properly. Compact the ground, add a gravel
+sub-base for drainage, and form the edges so the slab is a true rectangle. Laying a sheet
+of reinforcement mesh in the lower third of a slab that carries vehicles makes a real
+difference to how long it lasts.
+""",
+}
+
+
+def extra_section_md(calc_key: str) -> str:
+    return EXTRAS.get(calc_key, "")
