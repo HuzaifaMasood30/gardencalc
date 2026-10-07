@@ -2,33 +2,33 @@
   "graph": {
     "mulch-calculator": [
       "how-much-mulch-do-i-need-for-500-sq-ft",
+      "how-much-mulch-do-i-need-for-300-square-feet",
       "raised-bed-soil-calculator",
       "gravel-calculator",
       "paint-calculator",
       "tile-calculator",
       "grass-seed-calculator",
-      "concrete-calculator",
-      "how-much-soil-do-you-need-for-a-raised-bed"
+      "concrete-calculator"
     ],
     "raised-bed-soil-calculator": [
       "how-much-soil-do-you-need-for-a-raised-bed",
+      "how-much-soil-for-a-raised-bed-calculator",
       "mulch-calculator",
       "gravel-calculator",
       "paint-calculator",
       "tile-calculator",
       "grass-seed-calculator",
-      "concrete-calculator",
-      "how-much-mulch-do-i-need-for-500-sq-ft"
+      "concrete-calculator"
     ],
     "gravel-calculator": [
       "how-much-gravel-do-i-need-for-my-driveway",
+      "how-much-gravel-do-i-need-for-a-french-drain",
       "mulch-calculator",
       "raised-bed-soil-calculator",
       "paint-calculator",
       "tile-calculator",
       "grass-seed-calculator",
-      "concrete-calculator",
-      "how-much-mulch-do-i-need-for-500-sq-ft"
+      "concrete-calculator"
     ],
     "paint-calculator": [
       "how-much-paint-do-i-need-for-a-bedroom",
@@ -72,33 +72,33 @@
     ],
     "how-much-mulch-do-i-need-for-500-sq-ft": [
       "mulch-calculator",
+      "how-much-mulch-do-i-need-for-300-square-feet",
       "raised-bed-soil-calculator",
       "gravel-calculator",
       "paint-calculator",
       "tile-calculator",
       "grass-seed-calculator",
-      "concrete-calculator",
-      "how-much-soil-do-you-need-for-a-raised-bed"
+      "concrete-calculator"
     ],
     "how-much-soil-do-you-need-for-a-raised-bed": [
       "raised-bed-soil-calculator",
+      "how-much-soil-for-a-raised-bed-calculator",
       "mulch-calculator",
       "gravel-calculator",
       "paint-calculator",
       "tile-calculator",
       "grass-seed-calculator",
-      "concrete-calculator",
-      "how-much-mulch-do-i-need-for-500-sq-ft"
+      "concrete-calculator"
     ],
     "how-much-gravel-do-i-need-for-my-driveway": [
       "gravel-calculator",
+      "how-much-gravel-do-i-need-for-a-french-drain",
       "mulch-calculator",
       "raised-bed-soil-calculator",
       "paint-calculator",
       "tile-calculator",
       "grass-seed-calculator",
-      "concrete-calculator",
-      "how-much-mulch-do-i-need-for-500-sq-ft"
+      "concrete-calculator"
     ],
     "how-much-paint-do-i-need-for-a-bedroom": [
       "paint-calculator",
@@ -139,6 +139,36 @@
       "tile-calculator",
       "grass-seed-calculator",
       "how-much-mulch-do-i-need-for-500-sq-ft"
+    ],
+    "how-much-mulch-do-i-need-for-300-square-feet": [
+      "mulch-calculator",
+      "how-much-mulch-do-i-need-for-500-sq-ft",
+      "raised-bed-soil-calculator",
+      "gravel-calculator",
+      "paint-calculator",
+      "tile-calculator",
+      "grass-seed-calculator",
+      "concrete-calculator"
+    ],
+    "how-much-soil-for-a-raised-bed-calculator": [
+      "raised-bed-soil-calculator",
+      "how-much-soil-do-you-need-for-a-raised-bed",
+      "mulch-calculator",
+      "gravel-calculator",
+      "paint-calculator",
+      "tile-calculator",
+      "grass-seed-calculator",
+      "concrete-calculator"
+    ],
+    "how-much-gravel-do-i-need-for-a-french-drain": [
+      "gravel-calculator",
+      "how-much-gravel-do-i-need-for-my-driveway",
+      "mulch-calculator",
+      "raised-bed-soil-calculator",
+      "paint-calculator",
+      "tile-calculator",
+      "grass-seed-calculator",
+      "concrete-calculator"
     ]
   }
 }

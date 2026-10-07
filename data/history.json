@@ -1,9 +1,9 @@
 [
   {
     "date": "2026-10-07",
-    "articles": 14,
+    "articles": 17,
     "avg_seo_score": 100.0,
-    "total_words": 9719,
+    "total_words": 12494,
     "per_article": [
       {
         "slug": "mulch-calculator",
@@ -228,6 +228,54 @@
           "calculator": true
         },
         "word_count": 683
+      },
+      {
+        "slug": "how-much-mulch-do-i-need-for-300-square-feet",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 854
+      },
+      {
+        "slug": "how-much-soil-for-a-raised-bed-calculator",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 918
+      },
+      {
+        "slug": "how-much-gravel-do-i-need-for-a-french-drain",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 1003
       }
     ]
   }

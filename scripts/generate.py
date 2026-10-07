@@ -108,10 +108,25 @@ FAQ_TEMPLATES = {
 }
 
 
-def _meta_description(title: str, kw: str, calc_title: str) -> str:
-    base = (f"Use our free {calc_title.lower()} to work out exactly what you need for "
-            f"{kw}. Includes the formula, a worked example and common mistakes.")
-    return base[:155].rsplit(" ", 1)[0] + "." if len(base) > 155 else base
+def _meta_description(title: str, kw: str, calc_title: str, body: str = "") -> str:
+    """Lead with the article's own answer rather than echoing the query, which reads
+    as filler in search results and suppresses clicks."""
+    import re as _re
+    plain = _re.sub(r"[#*`_>\[\]]", "", body or "")
+    plain = _re.sub(r"\s+", " ", plain).strip()
+    sentences = _re.split(r"(?<=[.!?])\s+", plain)
+    answer = ""
+    for sent in sentences:
+        if len(sent) >= 60:
+            answer = sent
+            break
+    if not answer:
+        answer = (f"How much {kw} you need, with the formula, a worked example and "
+                  f"common mistakes.")
+    answer = answer.strip().replace("**", "")
+    if len(answer) > 158:
+        answer = answer[:155].rsplit(" ", 1)[0].rstrip(",;:") + "."
+    return answer
 
 
 SMALL_WORDS = {"a", "an", "and", "as", "at", "but", "by", "for", "in", "of",
@@ -459,7 +474,7 @@ def generate_article(plan_item: dict) -> dict | None:
         "calculator_title": calc_title,
         "calculator_defaults": defaults,
         "calculator_output": result,
-        "meta_description": _meta_description(title, kw, calc_title),
+        "meta_description": _meta_description(title, kw, calc_title, body),
         "body_markdown": body,
         "faq": [{"q": q, "a": a} for q, a in faqs],
         "status": "draft",
