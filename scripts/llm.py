@@ -14,7 +14,10 @@ import urllib.request
 
 from common import strip_fences
 
-MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.6-flash")
+# Tried in order; the first that answers is used. Model names are retired and
+# rate-limited over time, so a single hard-coded name breaks the pipeline.
+MODEL_CHAIN = [MODEL, "gemini-3.6-flash", "gemini-3.1-flash-lite", "gemini-flash-latest"]
 ENDPOINT = ("https://generativelanguage.googleapis.com/v1beta/models/"
             "{model}:generateContent?key={key}")
 
@@ -38,7 +41,21 @@ def generate(prompt: str, system: str = "", max_tokens: int = 4096,
     }
     if system:
         body["systemInstruction"] = {"parts": [{"text": system}]}
-    url = ENDPOINT.format(model=MODEL, key=key)
+    seen: set[str] = set()
+    for model in MODEL_CHAIN:
+        if model in seen:
+            continue
+        seen.add(model)
+        text = _call(model, key, body, retries)
+        if text:
+            if model != MODEL:
+                print(f"[llm] used fallback model {model}")
+            return text
+    return None
+
+
+def _call(model: str, key: str, body: dict, retries: int) -> str | None:
+    url = ENDPOINT.format(model=model, key=key)
     data = json.dumps(body).encode()
     for attempt in range(retries):
         try:
@@ -49,14 +66,14 @@ def generate(prompt: str, system: str = "", max_tokens: int = 4096,
             parts = payload["candidates"][0]["content"]["parts"]
             return strip_fences("".join(p.get("text", "") for p in parts))
         except urllib.error.HTTPError as e:
-            if e.code in (429, 500, 503):
+            if e.code in (429, 500, 502, 503, 504):
                 wait = 2 ** attempt * 5
-                print(f"[llm] HTTP {e.code}, retrying in {wait}s")
+                print(f"[llm] {model} HTTP {e.code}, retrying in {wait}s")
                 time.sleep(wait)
                 continue
-            print(f"[llm] HTTP {e.code}: {e.read()[:200]!r}")
+            print(f"[llm] {model} HTTP {e.code}: {e.read()[:200]!r}")
             return None
         except Exception as e:  # network, parse
-            print(f"[llm] error: {e}")
+            print(f"[llm] {model} error: {e}")
             time.sleep(2 ** attempt)
     return None
