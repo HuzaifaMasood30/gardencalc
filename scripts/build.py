@@ -175,6 +175,12 @@ def build() -> dict:
     shutil.copytree(STATIC, SITE / "static")
     _generate_og_images(published, site)
 
+    # IndexNow key at the site root (not /static/) so the key file's location matches
+    # its key, which the protocol requires.
+    indexnow_key = str(site.get("indexnow_key", "")).strip()
+    if indexnow_key:
+        _write(SITE / f"{indexnow_key}.txt", indexnow_key)
+
     stats = {
         "built": dt.datetime.now(dt.timezone.utc).isoformat(),
         "articles": len(published),

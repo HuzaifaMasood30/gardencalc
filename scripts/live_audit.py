@@ -177,6 +177,16 @@ def audit(base: str) -> dict:
     st404, body404, _ = fetch(base + "this-page-should-not-exist-9f3a/")
     record("missing page returns 404", st404 == 404, f"HTTP {st404}")
 
+    # IndexNow key file (optional; only when configured)
+    cfg_path = ROOT / "config" / "site.json"
+    key = ""
+    if cfg_path.exists():
+        key = str(json.loads(cfg_path.read_text(encoding="utf-8")).get("indexnow_key", "")).strip()
+    if key:
+        st_key, body_key, _ = fetch(base + key + ".txt")
+        record("IndexNow key file served", st_key == 200 and body_key.strip() == key,
+               f"HTTP {st_key}")
+
     # build the page list
     prefix = urllib.parse.urlparse(base).path.rstrip("/")
 
