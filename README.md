@@ -1,5 +1,7 @@
 # GardenCalc — automated SEO calculator site
 
+**Live site: <https://huzaifamasood30.github.io/gardencalc/>**
+
 A fully automated static site of home and garden calculators. A scheduled pipeline
 discovers keywords, generates and gates articles, builds the site, and deploys it to
 GitHub Pages. The only manual steps are account-level actions (search console, ads),
