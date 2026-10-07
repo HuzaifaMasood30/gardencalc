@@ -398,113 +398,6 @@ def _fallback_body(kw: str, calc_title: str, calc_short: str, worked: str,
     return "\n".join(parts)
 
 
-SCENARIO_NOTES = {
-    "driveway": "A driveway carries weight, so the depth and the base matter more than on a "
-                "path. Excavate about four inches, compact the sub-grade, then lay the stone "
-                "in two layers, compacting each one before the next goes down.",
-    "french drain": "A french drain is a trench, not a surface. The depth is the trench "
-                    "depth, usually 12 to 18 inches, and the width is often a single foot. "
-                    "Line it with fabric, add the pipe, then backfill with clean stone.",
-    "raised bed": "A raised bed is filled by volume, so the calculation is length times "
-                  "width times depth. Most vegetables want 10 to 12 inches of mix; shallow "
-                  "herbs and salads are happy at six.",
-    "flower bed": "Flower beds are rarely perfect rectangles. Split the bed into simple "
-                  "shapes, work out each one, then add them together before you convert to "
-                  "bags or bulk.",
-    "bedroom": "A bedroom is usually a simple rectangle. Measure the wall height to the "
-               "ceiling, subtract the door and windows, and multiply by the number of "
-               "coats you plan to apply.",
-    "room": "Rooms are rarely square, so measure at the widest point in each direction. If "
-            "the room has an alcove or a chimney breast, treat it as a separate rectangle "
-            "and add it to the total.",
-    "overseeding": "Overseeding uses a lighter rate than a new lawn, because you are "
-                   "topping up an existing sward rather than starting from bare soil. "
-                   "Using the new-lawn rate wastes seed and can smother thin grass.",
-    "slab": "A slab is poured, not spread, so the thickness is fixed by what it carries: "
-            "four inches for a path or patio, five to six for anything a vehicle uses.",
-}
-
-
-def _scenario_note(kw: str) -> str:
-    for key, note in SCENARIO_NOTES.items():
-        if key in kw:
-            return note
-    return ""
-
-
-def _fallback_body_variant(kw: str, calc_title: str, calc_short: str, worked: str,
-                           secondary: list[str], calc_key: str, result: dict) -> str:
-    """A second, structurally different article layout for long-tail pages, so a
-    cluster's supporting pages are not near-copies of the pillar page."""
-    import content_lib
-    lib = content_lib.LIBRARY.get(calc_key, {})
-    m = {"mulch": "mulch", "soil": "soil mix", "gravel": "gravel", "paint": "paint",
-         "tile": "tile", "grass_seed": "grass seed", "concrete": "concrete mix"}.get(calc_key, "material")
-    size = _primary_size(kw)
-    scenario = _scenario_note(kw)
-    result_line = ", ".join(f"{k.replace('_', ' ')} {v}" for k, v in list(result.items())[:3])
-
-    parts = []
-    parts.append(f"If you searched for \u201c{kw}\u201d, the answer comes down to one area "
-                 f"and one depth or coverage rate. The {calc_title.lower()} above turns those "
-                 f"two figures into the amount of {m} to buy, in the units your supplier "
-                 f"actually sells.\n")
-
-    parts.append(f"## Short Answer\n\n"
-                 f"{('For a job of about ' + str(int(size)) + ' square feet, ' ) if size else ''}"
-                 f"the calculator returns {result_line}. Round up to the next whole bag, ton "
-                 f"or can when you order, because running short halfway through costs more "
-                 f"than a little spare material.\n")
-
-    if scenario:
-        parts.append(f"## The Details That Matter Here\n\n{scenario}\n")
-
-    parts.append(f"## Getting Your Measurements Right\n\n"
-                 f"Start with the area. For a rectangle, multiply length by width in feet. "
-                 f"For an L-shape, split it into two rectangles and add them. For a circle, "
-                 f"measure across the widest point, halve it for the radius, then multiply "
-                 f"the radius by itself and by 3.14. Write every figure down in feet before "
-                 f"you calculate, so you are not converting units in your head.\n")
-
-    parts.append(f"## Running the Numbers\n\n{worked}\n")
-    parts.append(f"Those are the inputs and the result the calculator produces. Change any "
-                 f"box above and the answer updates immediately, so you can compare a "
-                 f"two-inch and a three-inch depth before you commit to an order.\n")
-
-    if lib.get("depths"):
-        parts.append(f"## Why the Depth Changes Everything\n\n")
-        for a, b in lib["depths"]:
-            parts.append(f"- **{a}** \u2014 {b}\n")
-        parts.append(f"\nThe same area at a deeper setting can need half as much material "
-                     f"again, so the depth is the figure worth checking twice.\n")
-
-    if lib.get("unit_note"):
-        parts.append(f"## Buying in the Right Units\n\n{lib['unit_note']} Divide your total "
-                     f"by the size of the bag or the capacity of a bulk load, then round up. "
-                     f"Buying everything in one order also keeps the material from a single "
-                     f"batch, which matters for colour-matched products.\n")
-
-    if secondary:
-        parts.append(f"## Related Searches\n\n"
-                     f"{', '.join(secondary[:3])} are worked out the same way: measure the "
-                     f"area, choose the depth or rate, then convert. The calculator handles "
-                     f"the conversion.\n")
-
-    parts.append(f"## Before You Order\n\n"
-                 f"Check the area once more, decide the depth from the job rather than the "
-                 f"price, add a small margin for waste and settlement, and confirm the units "
-                 f"your supplier uses. Those four steps prevent almost every ordering "
-                 f"mistake, and they take about five minutes.\n")
-
-    extra = content_lib.extra_section_md(calc_key)
-    if extra:
-        # keep the pillar's unique section out of the variant to preserve distinctness;
-        # variants instead reuse only the shared material notes above.
-        pass
-
-    return "\n".join(parts)
-
-
 def generate_article(plan_item: dict) -> dict | None:
     cfg = topics_config()
     seo = seo_config()
@@ -539,11 +432,15 @@ def generate_article(plan_item: dict) -> dict | None:
         if body:
             print(f"[generate] LLM draft for {slug}: {word_count(body)} words")
     if not body:
-        if plan_item.get("is_pillar"):
-            body = _fallback_body(kw, calc_title, calc_short, worked, secondary, calc_key)
-        else:
-            body = _fallback_body_variant(kw, calc_title, calc_short, worked, secondary,
-                                          calc_key, result)
+        # Without an LLM key the fallbacks produce templated drafts that are short and
+        # alike across a cluster. Publishing those at scale is what creates duplicate/thin
+        # pages, so a reject here is safer than a low-quality page. The curated pillar and
+        # long-tail articles are hand-written and are never regenerated by this path.
+        if not plan_item.get("is_pillar"):
+            print(f"[generate] skip {slug}: no LLM key, long-tail fallback would be "
+                  f"templated/thin (set GEMINI_API_KEY to generate quality articles)")
+            return None
+        body = _fallback_body(kw, calc_title, calc_short, worked, secondary, calc_key)
         print(f"[generate] template draft for {slug}: {word_count(body)} words")
 
     title = _title_for(kw, calc_title)
