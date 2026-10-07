@@ -1,0 +1,363 @@
+{
+  "base": "https://huzaifamasood30.github.io/gardencalc/",
+  "pages": [
+    {
+      "path": "/",
+      "status": 200,
+      "title": "GardenCalc \u2014 Free home & garden calculators and how-to guides",
+      "h1": 1,
+      "h2": 2
+    },
+    {
+      "path": "/about/",
+      "status": 200,
+      "title": "About | GardenCalc",
+      "h1": 1,
+      "h2": 4
+    },
+    {
+      "path": "/category/concrete/",
+      "status": 200,
+      "title": "Concrete Calculators & Guides | GardenCalc",
+      "h1": 1,
+      "h2": 0
+    },
+    {
+      "path": "/category/grass-seed/",
+      "status": 200,
+      "title": "Grass Seed & Lawn Calculators & Guides | GardenCalc",
+      "h1": 1,
+      "h2": 0
+    },
+    {
+      "path": "/category/gravel/",
+      "status": 200,
+      "title": "Gravel & Stone Calculators & Guides | GardenCalc",
+      "h1": 1,
+      "h2": 0
+    },
+    {
+      "path": "/category/mulch/",
+      "status": 200,
+      "title": "Mulch Calculators & Guides | GardenCalc",
+      "h1": 1,
+      "h2": 0
+    },
+    {
+      "path": "/category/paint/",
+      "status": 200,
+      "title": "Paint Calculators & Guides | GardenCalc",
+      "h1": 1,
+      "h2": 0
+    },
+    {
+      "path": "/category/soil/",
+      "status": 200,
+      "title": "Soil & Raised Beds Calculators & Guides | GardenCalc",
+      "h1": 1,
+      "h2": 0
+    },
+    {
+      "path": "/category/tile/",
+      "status": 200,
+      "title": "Tile Calculators & Guides | GardenCalc",
+      "h1": 1,
+      "h2": 0
+    },
+    {
+      "path": "/concrete-calculator/",
+      "status": 200,
+      "title": "How Many Bags of Concrete Do I Need: Free Calculator & Guide",
+      "h1": 1,
+      "h2": 16
+    },
+    {
+      "path": "/contact/",
+      "status": 200,
+      "title": "Contact | GardenCalc",
+      "h1": 1,
+      "h2": 3
+    },
+    {
+      "path": "/disclaimer/",
+      "status": 200,
+      "title": "Disclaimer | GardenCalc",
+      "h1": 1,
+      "h2": 4
+    },
+    {
+      "path": "/grass-seed-calculator/",
+      "status": 200,
+      "title": "How Much Grass Seed Per Square Foot: Free Calculator & Guide",
+      "h1": 1,
+      "h2": 16
+    },
+    {
+      "path": "/gravel-calculator/",
+      "status": 200,
+      "title": "How Much Gravel Do I Need: Free Calculator & Guide",
+      "h1": 1,
+      "h2": 16
+    },
+    {
+      "path": "/how-many-bags-of-concrete-do-i-need-for-a-10x10-slab/",
+      "status": 200,
+      "title": "How Many Bags of Concrete Do I Need for a 10x10 Slab",
+      "h1": 1,
+      "h2": 16
+    },
+    {
+      "path": "/how-many-tiles-do-i-need-for-a-10x10-room/",
+      "status": 200,
+      "title": "How Many Tiles Do I Need for a 10x10 Room",
+      "h1": 1,
+      "h2": 16
+    },
+    {
+      "path": "/how-much-grass-seed-per-square-foot-overseeding/",
+      "status": 200,
+      "title": "How Much Grass Seed Per Square Foot Overseeding",
+      "h1": 1,
+      "h2": 16
+    },
+    {
+      "path": "/how-much-gravel-do-i-need-for-my-driveway/",
+      "status": 200,
+      "title": "How Much Gravel Do I Need for My Driveway",
+      "h1": 1,
+      "h2": 16
+    },
+    {
+      "path": "/how-much-mulch-do-i-need-for-500-sq-ft/",
+      "status": 200,
+      "title": "How Much Mulch Do I Need for 500 SQ FT",
+      "h1": 1,
+      "h2": 16
+    },
+    {
+      "path": "/how-much-paint-do-i-need-for-a-bedroom/",
+      "status": 200,
+      "title": "How Much Paint Do I Need for a Bedroom",
+      "h1": 1,
+      "h2": 16
+    },
+    {
+      "path": "/how-much-soil-do-you-need-for-a-raised-bed/",
+      "status": 200,
+      "title": "How Much Soil Do You Need for a Raised Bed",
+      "h1": 1,
+      "h2": 16
+    },
+    {
+      "path": "/mulch-calculator/",
+      "status": 200,
+      "title": "How Much Mulch Do I Need: Free Calculator & Guide",
+      "h1": 1,
+      "h2": 16
+    },
+    {
+      "path": "/paint-calculator/",
+      "status": 200,
+      "title": "How Much Paint Do I Need: Free Calculator & Guide",
+      "h1": 1,
+      "h2": 16
+    },
+    {
+      "path": "/privacy-policy/",
+      "status": 200,
+      "title": "Privacy Policy | GardenCalc",
+      "h1": 1,
+      "h2": 6
+    },
+    {
+      "path": "/raised-bed-soil-calculator/",
+      "status": 200,
+      "title": "How Much Soil for Raised Bed: Free Calculator & Guide",
+      "h1": 1,
+      "h2": 16
+    },
+    {
+      "path": "/terms/",
+      "status": 200,
+      "title": "Terms of Use | GardenCalc",
+      "h1": 1,
+      "h2": 6
+    },
+    {
+      "path": "/tile-calculator/",
+      "status": 200,
+      "title": "How Many Tiles Do I Need: Free Calculator & Guide",
+      "h1": 1,
+      "h2": 16
+    }
+  ],
+  "problems": {
+    "/": [
+      "canonical=https://HuzaifaMasood30.github.io/gardencalc/"
+    ],
+    "/about/": [
+      "canonical=https://HuzaifaMasood30.github.io/gardencalc/about/"
+    ],
+    "/category/concrete/": [
+      "canonical=https://HuzaifaMasood30.github.io/gardencalc/category/concrete/"
+    ],
+    "/category/grass-seed/": [
+      "canonical=https://HuzaifaMasood30.github.io/gardencalc/category/grass-seed/"
+    ],
+    "/category/gravel/": [
+      "canonical=https://HuzaifaMasood30.github.io/gardencalc/category/gravel/"
+    ],
+    "/category/mulch/": [
+      "canonical=https://HuzaifaMasood30.github.io/gardencalc/category/mulch/"
+    ],
+    "/category/paint/": [
+      "canonical=https://HuzaifaMasood30.github.io/gardencalc/category/paint/"
+    ],
+    "/category/soil/": [
+      "canonical=https://HuzaifaMasood30.github.io/gardencalc/category/soil/"
+    ],
+    "/category/tile/": [
+      "canonical=https://HuzaifaMasood30.github.io/gardencalc/category/tile/"
+    ],
+    "/concrete-calculator/": [
+      "canonical=https://HuzaifaMasood30.github.io/gardencalc/concrete-calculator/"
+    ],
+    "/contact/": [
+      "canonical=https://HuzaifaMasood30.github.io/gardencalc/contact/"
+    ],
+    "/disclaimer/": [
+      "canonical=https://HuzaifaMasood30.github.io/gardencalc/disclaimer/"
+    ],
+    "/grass-seed-calculator/": [
+      "canonical=https://HuzaifaMasood30.github.io/gardencalc/grass-seed-calculator/"
+    ],
+    "/gravel-calculator/": [
+      "canonical=https://HuzaifaMasood30.github.io/gardencalc/gravel-calculator/"
+    ],
+    "/how-many-bags-of-concrete-do-i-need-for-a-10x10-slab/": [
+      "canonical=https://HuzaifaMasood30.github.io/gardencalc/how-many-bags-of-concrete-do-i-need-for-a-10x10-slab/"
+    ],
+    "/how-many-tiles-do-i-need-for-a-10x10-room/": [
+      "canonical=https://HuzaifaMasood30.github.io/gardencalc/how-many-tiles-do-i-need-for-a-10x10-room/"
+    ],
+    "/how-much-grass-seed-per-square-foot-overseeding/": [
+      "canonical=https://HuzaifaMasood30.github.io/gardencalc/how-much-grass-seed-per-square-foot-overseeding/"
+    ],
+    "/how-much-gravel-do-i-need-for-my-driveway/": [
+      "canonical=https://HuzaifaMasood30.github.io/gardencalc/how-much-gravel-do-i-need-for-my-driveway/"
+    ],
+    "/how-much-mulch-do-i-need-for-500-sq-ft/": [
+      "canonical=https://HuzaifaMasood30.github.io/gardencalc/how-much-mulch-do-i-need-for-500-sq-ft/"
+    ],
+    "/how-much-paint-do-i-need-for-a-bedroom/": [
+      "canonical=https://HuzaifaMasood30.github.io/gardencalc/how-much-paint-do-i-need-for-a-bedroom/"
+    ],
+    "/how-much-soil-do-you-need-for-a-raised-bed/": [
+      "canonical=https://HuzaifaMasood30.github.io/gardencalc/how-much-soil-do-you-need-for-a-raised-bed/"
+    ],
+    "/mulch-calculator/": [
+      "canonical=https://HuzaifaMasood30.github.io/gardencalc/mulch-calculator/"
+    ],
+    "/paint-calculator/": [
+      "canonical=https://HuzaifaMasood30.github.io/gardencalc/paint-calculator/"
+    ],
+    "/privacy-policy/": [
+      "canonical=https://HuzaifaMasood30.github.io/gardencalc/privacy-policy/"
+    ],
+    "/raised-bed-soil-calculator/": [
+      "canonical=https://HuzaifaMasood30.github.io/gardencalc/raised-bed-soil-calculator/"
+    ],
+    "/terms/": [
+      "canonical=https://HuzaifaMasood30.github.io/gardencalc/terms/"
+    ],
+    "/tile-calculator/": [
+      "canonical=https://HuzaifaMasood30.github.io/gardencalc/tile-calculator/"
+    ]
+  },
+  "checks": [
+    {
+      "check": "homepage HTTP 200",
+      "ok": true,
+      "detail": "HTTP 200",
+      "hard": true
+    },
+    {
+      "check": "sitemap is valid XML",
+      "ok": true,
+      "detail": "27 URLs",
+      "hard": true
+    },
+    {
+      "check": "robots.txt valid and points at sitemap",
+      "ok": true,
+      "detail": "HTTP 200; https://HuzaifaMasood30.github.io/gardencalc/sitemap.xml",
+      "hard": true
+    },
+    {
+      "check": "RSS valid",
+      "ok": true,
+      "detail": "14 items",
+      "hard": true
+    },
+    {
+      "check": "missing page returns 404",
+      "ok": true,
+      "detail": "HTTP 404",
+      "hard": true
+    },
+    {
+      "check": "calculator form and script present",
+      "ok": true,
+      "detail": "mulch-calculator",
+      "hard": true
+    },
+    {
+      "check": "JS/Python calculator parity",
+      "ok": true,
+      "detail": "JS output matches Python engine",
+      "hard": true
+    },
+    {
+      "check": "all pages return HTTP 200",
+      "ok": true,
+      "detail": "27/27 OK",
+      "hard": true
+    },
+    {
+      "check": "no broken internal links",
+      "ok": true,
+      "detail": "",
+      "hard": true
+    },
+    {
+      "check": "no duplicate titles",
+      "ok": true,
+      "detail": "",
+      "hard": true
+    },
+    {
+      "check": "no duplicate meta descriptions",
+      "ok": true,
+      "detail": "",
+      "hard": true
+    },
+    {
+      "check": "no orphan pages",
+      "ok": false,
+      "detail": "/concrete-calculator/, /grass-seed-calculator/, /gravel-calculator/, /how-many-bags-of-concrete-do-i-need-for-a-10x10-slab/, /how-many-tiles-do-i-need-for-a-10x10-room/, /how-much-grass-seed-per-square-foot-overseeding/",
+      "hard": true
+    },
+    {
+      "check": "no placeholder content",
+      "ok": true,
+      "detail": "clean",
+      "hard": true
+    },
+    {
+      "check": "no per-page SEO problems",
+      "ok": false,
+      "detail": "/: canonical=https://HuzaifaMasood30.github.io/gardencalc/; /about/: canonical=https://HuzaifaMasood30.github.io/gardencalc/about/; /category/concrete/: canonical=https://HuzaifaMasood30.github.io/gardencalc/category/concrete/; /category/grass-seed/: canonical=https://HuzaifaMasood30.github.io/gardencalc/category/grass-seed/; /category/gravel/: canonical=https://HuzaifaMasood30.github.io/gardencalc/category/gravel/; /category/mulch/: canonical=https://HuzaifaMasood30.github.io/gardencalc/category/mulch/",
+      "hard": true
+    }
+  ]
+}

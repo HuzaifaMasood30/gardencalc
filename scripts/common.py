@@ -47,6 +47,13 @@ def site_config() -> dict:
         val = os.environ.get(env_key, "").strip()
         if val:
             cfg[cfg_key] = val
+    # GitHub Pages serves only lower-case hostnames, so canonical/og URLs must use a
+    # lower-case host or they point at a URL the platform does not answer on.
+    base = str(cfg.get("base_url", ""))
+    if "://" in base:
+        scheme, rest = base.split("://", 1)
+        host = rest.split("/", 1)[0].lower()
+        cfg["base_url"] = scheme + "://" + host + rest[len(host):]
     return cfg
 
 
