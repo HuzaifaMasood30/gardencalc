@@ -191,89 +191,7 @@
       "h2": 16
     }
   ],
-  "problems": {
-    "/": [
-      "canonical=https://HuzaifaMasood30.github.io/gardencalc/"
-    ],
-    "/about/": [
-      "canonical=https://HuzaifaMasood30.github.io/gardencalc/about/"
-    ],
-    "/category/concrete/": [
-      "canonical=https://HuzaifaMasood30.github.io/gardencalc/category/concrete/"
-    ],
-    "/category/grass-seed/": [
-      "canonical=https://HuzaifaMasood30.github.io/gardencalc/category/grass-seed/"
-    ],
-    "/category/gravel/": [
-      "canonical=https://HuzaifaMasood30.github.io/gardencalc/category/gravel/"
-    ],
-    "/category/mulch/": [
-      "canonical=https://HuzaifaMasood30.github.io/gardencalc/category/mulch/"
-    ],
-    "/category/paint/": [
-      "canonical=https://HuzaifaMasood30.github.io/gardencalc/category/paint/"
-    ],
-    "/category/soil/": [
-      "canonical=https://HuzaifaMasood30.github.io/gardencalc/category/soil/"
-    ],
-    "/category/tile/": [
-      "canonical=https://HuzaifaMasood30.github.io/gardencalc/category/tile/"
-    ],
-    "/concrete-calculator/": [
-      "canonical=https://HuzaifaMasood30.github.io/gardencalc/concrete-calculator/"
-    ],
-    "/contact/": [
-      "canonical=https://HuzaifaMasood30.github.io/gardencalc/contact/"
-    ],
-    "/disclaimer/": [
-      "canonical=https://HuzaifaMasood30.github.io/gardencalc/disclaimer/"
-    ],
-    "/grass-seed-calculator/": [
-      "canonical=https://HuzaifaMasood30.github.io/gardencalc/grass-seed-calculator/"
-    ],
-    "/gravel-calculator/": [
-      "canonical=https://HuzaifaMasood30.github.io/gardencalc/gravel-calculator/"
-    ],
-    "/how-many-bags-of-concrete-do-i-need-for-a-10x10-slab/": [
-      "canonical=https://HuzaifaMasood30.github.io/gardencalc/how-many-bags-of-concrete-do-i-need-for-a-10x10-slab/"
-    ],
-    "/how-many-tiles-do-i-need-for-a-10x10-room/": [
-      "canonical=https://HuzaifaMasood30.github.io/gardencalc/how-many-tiles-do-i-need-for-a-10x10-room/"
-    ],
-    "/how-much-grass-seed-per-square-foot-overseeding/": [
-      "canonical=https://HuzaifaMasood30.github.io/gardencalc/how-much-grass-seed-per-square-foot-overseeding/"
-    ],
-    "/how-much-gravel-do-i-need-for-my-driveway/": [
-      "canonical=https://HuzaifaMasood30.github.io/gardencalc/how-much-gravel-do-i-need-for-my-driveway/"
-    ],
-    "/how-much-mulch-do-i-need-for-500-sq-ft/": [
-      "canonical=https://HuzaifaMasood30.github.io/gardencalc/how-much-mulch-do-i-need-for-500-sq-ft/"
-    ],
-    "/how-much-paint-do-i-need-for-a-bedroom/": [
-      "canonical=https://HuzaifaMasood30.github.io/gardencalc/how-much-paint-do-i-need-for-a-bedroom/"
-    ],
-    "/how-much-soil-do-you-need-for-a-raised-bed/": [
-      "canonical=https://HuzaifaMasood30.github.io/gardencalc/how-much-soil-do-you-need-for-a-raised-bed/"
-    ],
-    "/mulch-calculator/": [
-      "canonical=https://HuzaifaMasood30.github.io/gardencalc/mulch-calculator/"
-    ],
-    "/paint-calculator/": [
-      "canonical=https://HuzaifaMasood30.github.io/gardencalc/paint-calculator/"
-    ],
-    "/privacy-policy/": [
-      "canonical=https://HuzaifaMasood30.github.io/gardencalc/privacy-policy/"
-    ],
-    "/raised-bed-soil-calculator/": [
-      "canonical=https://HuzaifaMasood30.github.io/gardencalc/raised-bed-soil-calculator/"
-    ],
-    "/terms/": [
-      "canonical=https://HuzaifaMasood30.github.io/gardencalc/terms/"
-    ],
-    "/tile-calculator/": [
-      "canonical=https://HuzaifaMasood30.github.io/gardencalc/tile-calculator/"
-    ]
-  },
+  "problems": {},
   "checks": [
     {
       "check": "homepage HTTP 200",
@@ -290,7 +208,7 @@
     {
       "check": "robots.txt valid and points at sitemap",
       "ok": true,
-      "detail": "HTTP 200; https://HuzaifaMasood30.github.io/gardencalc/sitemap.xml",
+      "detail": "HTTP 200; https://huzaifamasood30.github.io/gardencalc/sitemap.xml",
       "hard": true
     },
     {
@@ -343,8 +261,8 @@
     },
     {
       "check": "no orphan pages",
-      "ok": false,
-      "detail": "/concrete-calculator/, /grass-seed-calculator/, /gravel-calculator/, /how-many-bags-of-concrete-do-i-need-for-a-10x10-slab/, /how-many-tiles-do-i-need-for-a-10x10-room/, /how-much-grass-seed-per-square-foot-overseeding/",
+      "ok": true,
+      "detail": "",
       "hard": true
     },
     {
@@ -355,8 +273,8 @@
     },
     {
       "check": "no per-page SEO problems",
-      "ok": false,
-      "detail": "/: canonical=https://HuzaifaMasood30.github.io/gardencalc/; /about/: canonical=https://HuzaifaMasood30.github.io/gardencalc/about/; /category/concrete/: canonical=https://HuzaifaMasood30.github.io/gardencalc/category/concrete/; /category/grass-seed/: canonical=https://HuzaifaMasood30.github.io/gardencalc/category/grass-seed/; /category/gravel/: canonical=https://HuzaifaMasood30.github.io/gardencalc/category/gravel/; /category/mulch/: canonical=https://HuzaifaMasood30.github.io/gardencalc/category/mulch/",
+      "ok": true,
+      "detail": "",
       "hard": true
     }
   ]
