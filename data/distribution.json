@@ -1,0 +1,67 @@
+{
+  "completed": [],
+  "actions": [
+    {
+      "id": "google-search-console",
+      "title": "Verify the site in Google Search Console",
+      "done": false
+    },
+    {
+      "id": "bing-webmaster",
+      "title": "Add the site to Bing Webmaster Tools",
+      "done": false
+    },
+    {
+      "id": "github-pages",
+      "title": "Enable GitHub Pages on the repository",
+      "done": false
+    },
+    {
+      "id": "cloudflare-pages",
+      "title": "Add a custom domain via Cloudflare (optional)",
+      "done": false
+    },
+    {
+      "id": "reddit-diy",
+      "title": "Answer relevant r/DIY and r/landscaping questions",
+      "done": false
+    },
+    {
+      "id": "stackexchange",
+      "title": "Answer Gardening & Landscaping Stack Exchange questions",
+      "done": false
+    },
+    {
+      "id": "wikipedia-cite",
+      "title": "Propose citations where a calculator genuinely supports a claim",
+      "done": false
+    },
+    {
+      "id": "quora",
+      "title": "Answer Quora questions about material quantities",
+      "done": false
+    },
+    {
+      "id": "pinterest",
+      "title": "Create Pinterest boards per calculator",
+      "done": false
+    },
+    {
+      "id": "directory-diy",
+      "title": "Submit to reputable niche directories and blog roundups",
+      "done": false
+    },
+    {
+      "id": "rss-aggregators",
+      "title": "Submit the RSS feed to aggregators",
+      "done": false
+    },
+    {
+      "id": "schema-validate",
+      "title": "Validate structured data",
+      "done": false
+    }
+  ],
+  "done": 0,
+  "total": 12
+}

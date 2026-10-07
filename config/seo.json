@@ -1,0 +1,30 @@
+{
+  "limits": {
+    "max_articles_per_run": 3,
+    "max_articles_per_day": 3,
+    "min_word_count": 900,
+    "max_word_count": 2400,
+    "min_quality_score": 70,
+    "max_internal_links_per_article": 8,
+    "min_internal_links_per_article": 3
+  },
+  "autopublish": false,
+  "gates": {
+    "thin_content": true,
+    "duplicate_content": true,
+    "keyword_stuffing": true,
+    "ai_cliches": true,
+    "readability": true,
+    "heading_structure": true,
+    "has_calculator_or_data": true,
+    "meta_length": true,
+    "title_length": true,
+    "internal_links": true,
+    "schema_present": true,
+    "alt_text": true
+  },
+  "default_schema": ["Article", "BreadcrumbList"],
+  "title_max": 60,
+  "meta_max": 158,
+  "meta_min": 110
+}

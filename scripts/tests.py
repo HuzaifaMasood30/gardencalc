@@ -1,0 +1,123 @@
+"""Pipeline tests. Run with: python -m pytest scripts/tests.py -q  (or python scripts/tests.py)"""
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+import calculators
+import keywords
+import mdrender
+import quality
+import seo as seolib
+from common import site_config
+
+
+def test_calculator_results():
+    r = calculators.compute("mulch", {"length": 20, "width": 10, "depth": 3})
+    assert r["bags_2cf"] == 25, r
+    r = calculators.compute("soil", {"length": 8, "width": 4, "height": 12})
+    assert r["bags_1_5cf"] == 22, r
+    r = calculators.compute("gravel", {"length": 20, "width": 10, "depth": 3})
+    assert abs(r["tons"] - 2.59) < 0.01, r
+    r = calculators.compute("concrete", {"length": 10, "width": 10, "thickness": 4})
+    assert r["bags_60lb"] == 75 and r["bags_80lb"] == 56, r
+
+
+def test_keyword_relevance_filter():
+    assert not keywords.is_relevant("how much gravel for a 10 gallon fish tank",
+                                     "how much gravel do i need")
+    assert keywords.is_relevant("how much mulch do i need for 500 sq ft",
+                                "how much mulch do i need")
+
+
+def test_markdown_escapes_html_and_resolves_links():
+    out = mdrender.render("Hi <script>x</script> [a]({{url:mulch-calculator}}).",
+                          {"mulch-calculator": "https://x.test/mulch-calculator/"})
+    assert "<script>" not in out
+    assert "https://x.test/mulch-calculator/" in out
+
+
+def test_quality_rejects_thin_content():
+    art = {"slug": "t", "title": "T", "primary_keyword": "x",
+           "body_markdown": "## A\n\ntiny\n", "word_count": 3}
+    report = quality.evaluate(art, [art])
+    assert not report["passed"]
+    assert not report["gates"]["thin_content"]["pass"]
+
+
+def test_schema_types_present():
+    art = {"slug": "mulch-calculator", "title": "Mulch", "meta_description": "d" * 130,
+           "created": "2026-01-01", "updated": "2026-01-01", "cluster": "mulch",
+           "primary_keyword": "how much mulch", "secondary_keywords": [],
+           "faq": [{"q": "q", "a": "a"}]}
+    schemas = seolib.all_schema(art, site_config())
+    types = {s["@type"] for s in schemas}
+    assert {"Article", "BreadcrumbList", "HowTo", "FAQPage"} <= types, types
+
+
+def test_sitemap_is_valid_xml():
+    from xml.etree import ElementTree
+    xml = seolib.sitemap_xml([{"loc": "/", "priority": "1.0"}], site_config())
+    root = ElementTree.fromstring(xml)
+    assert root.tag.endswith("urlset")
+
+
+def test_js_and_python_calculators_agree():
+    """The client-side calculator must produce the same numbers as the Python engine."""
+    import json
+    import shutil
+    import subprocess
+    from pathlib import Path as _P
+
+    node = shutil.which("node")
+    if not node:
+        print("  (skipped: node not installed)")
+        return
+    root = _P(__file__).resolve().parent.parent
+    cases = [
+        ["mulch", {"length": 20, "width": 10, "depth": 3}],
+        ["soil", {"length": 8, "width": 4, "height": 12}],
+        ["gravel", {"length": 20, "width": 10, "depth": 3}],
+        ["paint", {"length": 12, "width": 10, "height": 8, "coats": 2, "doors": 1, "windows": 2}],
+        ["tile", {"length": 10, "width": 10, "tile_w": 12, "tile_h": 12, "waste": 10}],
+        ["grass_seed", {"area": 5000, "method": 1}],
+        ["concrete", {"length": 10, "width": 10, "thickness": 4}],
+    ]
+    proc = subprocess.run(
+        [node, str(root / "scripts/calc_parity.js"), str(root / "static/js/main.js"),
+         json.dumps(cases)],
+        capture_output=True, text=True)
+    assert proc.returncode == 0, proc.stderr
+    js_out = json.loads(proc.stdout)
+
+    labels = {
+        "square_feet": "Square feet", "cubic_feet": "Cubic feet",
+        "cubic_yards": "Cubic yards", "bags_2cf": "2 cu ft bags",
+        "bags_1_5cf": "1.5 cu ft bags", "tons": "Tons", "rate_per_1000": "Rate per 1000 sq ft",
+        "pounds": "Pounds", "bags_3lb": "3 lb bags", "gallons": "Gallons",
+        "bags_60lb": "60 lb bags", "bags_80lb": "80 lb bags",
+    }
+    for kind, inputs in cases:
+        py = calculators.compute(kind, inputs)
+        rows = js_out[kind]
+        for py_key, py_val in py.items():
+            label = labels.get(py_key)
+            if label and label in rows:
+                assert abs(float(rows[label]) - float(py_val)) <= 1.0, \
+                    (kind, py_key, rows[label], py_val)
+
+
+if __name__ == "__main__":
+    fns = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
+    failed = 0
+    for fn in fns:
+        try:
+            fn()
+            print(f"PASS {fn.__name__}")
+        except Exception as e:  # noqa: BLE001
+            failed += 1
+            print(f"FAIL {fn.__name__}: {e}")
+    print(f"\n{len(fns) - failed}/{len(fns)} passed")
+    sys.exit(1 if failed else 0)

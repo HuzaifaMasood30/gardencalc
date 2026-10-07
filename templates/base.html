@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="{{ site.language }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+{% if keywords %}<meta name="keywords" content="{{ keywords }}">{% endif %}
+<link rel="canonical" href="{{ canonical }}">
+{% if site.google_site_verification %}<meta name="google-site-verification" content="{{ site.google_site_verification }}">{% endif %}
+{% if site.bing_site_verification %}<meta name="msvalidate.01" content="{{ site.bing_site_verification }}">{% endif %}
+<meta name="robots" content="{{ robots|default('index, follow, max-snippet:-1, max-image-preview:large') }}">
+<meta name="theme-color" content="#14532d">
+
+<!-- Open Graph -->
+<meta property="og:type" content="{{ og_type|default('website') }}">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ og_image }}">
+<meta property="og:locale" content="{{ site.locale }}">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ title }}">
+<meta name="twitter:description" content="{{ description }}">
+<meta name="twitter:image" content="{{ og_image }}">
+
+<link rel="alternate" type="application/rss+xml" title="{{ site.name }} RSS" href="{{ base_url }}/rss.xml">
+<link rel="sitemap" type="application/xml" href="{{ base_url }}/sitemap.xml">
+<link rel="stylesheet" href="{{ base_url }}/static/css/style.css">
+{% block head_extra %}{% endblock %}
+
+{% for schema in schemas %}
+<script type="application/ld+json">{{ schema | safe }}</script>
+{% endfor %}
+{% if site.adsense_client %}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.adsense_client }}" crossorigin="anonymous"></script>
+{% endif %}
+{% if site.analytics_id %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics_id }}"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','{{ site.analytics_id }}');</script>
+{% endif %}
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="{{ base_url }}/">{{ site.name }}</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav" aria-label="Main">
+      {% for c in nav_categories %}
+      <a href="{{ base_url }}/category/{{ c.id }}/">{{ c.name }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+{% block content %}{% endblock %}
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; {{ year }} {{ site.name }}. {{ site.tagline }}.</p>
+    <nav aria-label="Footer">
+      <a href="{{ base_url }}/about/">About</a>
+      <a href="{{ base_url }}/contact/">Contact</a>
+      <a href="{{ base_url }}/privacy-policy/">Privacy Policy</a>
+      <a href="{{ base_url }}/terms/">Terms</a>
+      <a href="{{ base_url }}/disclaimer/">Disclaimer</a>
+      <a href="{{ base_url }}/rss.xml">RSS</a>
+    </nav>
+  </div>
+</footer>
+<script src="{{ base_url }}/static/js/main.js" defer></script>
+{% block body_extra %}{% endblock %}
+</body>
+</html>

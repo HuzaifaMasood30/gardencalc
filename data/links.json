@@ -1,0 +1,144 @@
+{
+  "graph": {
+    "mulch-calculator": [
+      "how-much-mulch-do-i-need-for-500-sq-ft",
+      "raised-bed-soil-calculator",
+      "gravel-calculator",
+      "paint-calculator",
+      "tile-calculator",
+      "grass-seed-calculator",
+      "concrete-calculator",
+      "how-much-soil-do-you-need-for-a-raised-bed"
+    ],
+    "raised-bed-soil-calculator": [
+      "how-much-soil-do-you-need-for-a-raised-bed",
+      "mulch-calculator",
+      "gravel-calculator",
+      "paint-calculator",
+      "tile-calculator",
+      "grass-seed-calculator",
+      "concrete-calculator",
+      "how-much-mulch-do-i-need-for-500-sq-ft"
+    ],
+    "gravel-calculator": [
+      "how-much-gravel-do-i-need-for-my-driveway",
+      "mulch-calculator",
+      "raised-bed-soil-calculator",
+      "paint-calculator",
+      "tile-calculator",
+      "grass-seed-calculator",
+      "concrete-calculator",
+      "how-much-mulch-do-i-need-for-500-sq-ft"
+    ],
+    "paint-calculator": [
+      "how-much-paint-do-i-need-for-a-bedroom",
+      "mulch-calculator",
+      "raised-bed-soil-calculator",
+      "gravel-calculator",
+      "tile-calculator",
+      "grass-seed-calculator",
+      "concrete-calculator",
+      "how-much-mulch-do-i-need-for-500-sq-ft"
+    ],
+    "tile-calculator": [
+      "how-many-tiles-do-i-need-for-a-10x10-room",
+      "mulch-calculator",
+      "raised-bed-soil-calculator",
+      "gravel-calculator",
+      "paint-calculator",
+      "grass-seed-calculator",
+      "concrete-calculator",
+      "how-much-mulch-do-i-need-for-500-sq-ft"
+    ],
+    "grass-seed-calculator": [
+      "how-much-grass-seed-per-square-foot-overseeding",
+      "mulch-calculator",
+      "raised-bed-soil-calculator",
+      "gravel-calculator",
+      "paint-calculator",
+      "tile-calculator",
+      "concrete-calculator",
+      "how-much-mulch-do-i-need-for-500-sq-ft"
+    ],
+    "concrete-calculator": [
+      "how-many-bags-of-concrete-do-i-need-for-a-10x10-slab",
+      "mulch-calculator",
+      "raised-bed-soil-calculator",
+      "gravel-calculator",
+      "paint-calculator",
+      "tile-calculator",
+      "grass-seed-calculator",
+      "how-much-mulch-do-i-need-for-500-sq-ft"
+    ],
+    "how-much-mulch-do-i-need-for-500-sq-ft": [
+      "mulch-calculator",
+      "raised-bed-soil-calculator",
+      "gravel-calculator",
+      "paint-calculator",
+      "tile-calculator",
+      "grass-seed-calculator",
+      "concrete-calculator",
+      "how-much-soil-do-you-need-for-a-raised-bed"
+    ],
+    "how-much-soil-do-you-need-for-a-raised-bed": [
+      "raised-bed-soil-calculator",
+      "mulch-calculator",
+      "gravel-calculator",
+      "paint-calculator",
+      "tile-calculator",
+      "grass-seed-calculator",
+      "concrete-calculator",
+      "how-much-mulch-do-i-need-for-500-sq-ft"
+    ],
+    "how-much-gravel-do-i-need-for-my-driveway": [
+      "gravel-calculator",
+      "mulch-calculator",
+      "raised-bed-soil-calculator",
+      "paint-calculator",
+      "tile-calculator",
+      "grass-seed-calculator",
+      "concrete-calculator",
+      "how-much-mulch-do-i-need-for-500-sq-ft"
+    ],
+    "how-much-paint-do-i-need-for-a-bedroom": [
+      "paint-calculator",
+      "mulch-calculator",
+      "raised-bed-soil-calculator",
+      "gravel-calculator",
+      "tile-calculator",
+      "grass-seed-calculator",
+      "concrete-calculator",
+      "how-much-mulch-do-i-need-for-500-sq-ft"
+    ],
+    "how-many-tiles-do-i-need-for-a-10x10-room": [
+      "tile-calculator",
+      "mulch-calculator",
+      "raised-bed-soil-calculator",
+      "gravel-calculator",
+      "paint-calculator",
+      "grass-seed-calculator",
+      "concrete-calculator",
+      "how-much-mulch-do-i-need-for-500-sq-ft"
+    ],
+    "how-much-grass-seed-per-square-foot-overseeding": [
+      "grass-seed-calculator",
+      "mulch-calculator",
+      "raised-bed-soil-calculator",
+      "gravel-calculator",
+      "paint-calculator",
+      "tile-calculator",
+      "concrete-calculator",
+      "how-much-mulch-do-i-need-for-500-sq-ft"
+    ],
+    "how-many-bags-of-concrete-do-i-need-for-a-10x10-slab": [
+      "concrete-calculator",
+      "mulch-calculator",
+      "raised-bed-soil-calculator",
+      "gravel-calculator",
+      "paint-calculator",
+      "tile-calculator",
+      "grass-seed-calculator",
+      "how-much-mulch-do-i-need-for-500-sq-ft"
+    ]
+  }
+}

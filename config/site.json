@@ -1,0 +1,19 @@
+{
+  "name": "GardenCalc",
+  "tagline": "Free home & garden calculators and how-to guides",
+  "base_url": "https://example.github.io/gardencalc",
+  "custom_domain": "",
+  "language": "en",
+  "author": "GardenCalc Team",
+  "author_url": "/about/",
+  "niche": "home-and-garden-calculators",
+  "locale": "en_US",
+  "twitter": "",
+  "adsense_client": "",
+  "contact_email": "",
+  "org_name": "GardenCalc",
+  "org_logo": "/static/img/logo.png",
+  "analytics_id": "",
+  "google_site_verification": "",
+  "bing_site_verification": ""
+}

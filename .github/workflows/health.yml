@@ -1,0 +1,36 @@
+name: Health check
+
+on:
+  schedule:
+    - cron: "43 7 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - name: Rebuild and verify
+        run: python scripts/build.py && python scripts/verify.py
+      - name: Open an issue if the site is unhealthy
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            let body = 'The daily SEO health check failed. See the workflow logs.';
+            try { body = '```json\n' + fs.readFileSync('data/health.json','utf8') + '\n```'; } catch (e) {}
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: 'SEO health check failed ' + new Date().toISOString().slice(0,10),
+              body,
+            });

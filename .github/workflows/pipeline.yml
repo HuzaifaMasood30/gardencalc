@@ -1,0 +1,83 @@
+name: SEO pipeline
+
+on:
+  schedule:
+    # 06:17 UTC daily. Off the hour to avoid the top-of-hour Actions rush.
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Articles to generate this run"
+        required: false
+        default: "3"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: seo-pipeline
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run tests
+        run: python scripts/tests.py
+
+      - name: Run pipeline
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          # Derive the canonical base URL from the repository so the deployed site never
+          # contains a placeholder. Project sites live at /<repo>/, user sites at the root.
+          SITE_BASE_URL: ${{ github.event.repository.name == format('{0}.github.io', github.repository_owner) && format('https://{0}.github.io', github.repository_owner) || format('https://{0}.github.io/{1}', github.repository_owner, github.event.repository.name) }}
+        run: python scripts/run_all.py --limit ${{ github.event.inputs.limit || '3' }}
+
+      - name: Fail if the site has broken links or missing tags
+        run: |
+          python - <<'PY'
+          import json, sys
+          h = json.load(open("data/health.json"))
+          print("health issues:", h["issues_total"])
+          sys.exit(1 if h["issues_total"] else 0)
+          PY
+
+      - name: Commit refreshed content and data
+        run: |
+          git config user.name "seo-bot"
+          git config user.email "seo-bot@users.noreply.github.com"
+          # site/ is generated and gitignored; only persist the content and data.
+          git add data content reports config/site.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: automated SEO run $(date -u +%Y-%m-%d)"
+            git push
+          fi
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,63 @@
+:root{--bg:#f8faf9;--fg:#14231a;--muted:#4b5f52;--accent:#14532d;--accent2:#166534;--card:#fff;--line:#dbe6df;--max:820px}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 18px}
+a{color:var(--accent2)}
+a:hover{color:var(--accent)}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:8px;top:8px;background:#fff;padding:8px;z-index:10}
+.site-header{background:var(--accent);color:#f0fdf4;position:sticky;top:0;z-index:5}
+.site-header .wrap{display:flex;align-items:center;gap:16px;min-height:56px;flex-wrap:wrap}
+.brand{color:#f0fdf4;font-weight:700;font-size:1.15rem;text-decoration:none;padding:12px 0}
+.site-nav{display:flex;gap:14px;flex-wrap:wrap;margin-left:auto}
+.site-nav a{color:#dcfce7;text-decoration:none;font-size:.94rem;padding:6px 2px}
+.site-nav a:hover{color:#fff;text-decoration:underline}
+.nav-toggle{display:none;background:none;border:0;color:#f0fdf4;font-size:1.4rem;margin-left:auto}
+main{padding:26px 0 60px;min-height:60vh}
+h1{font-size:1.85rem;line-height:1.25;margin:.4em 0 .5em}
+h2{font-size:1.35rem;margin:1.6em 0 .5em}
+h3{font-size:1.1rem;margin:1.3em 0 .4em}
+.lede{color:var(--muted);font-size:1.05rem}
+.breadcrumbs{font-size:.86rem;color:var(--muted);margin-bottom:6px}
+.byline{color:var(--muted);font-size:.86rem;margin-top:-.4em}
+.prose img{max-width:100%;height:auto}
+.prose table{width:100%;border-collapse:collapse;margin:1em 0;font-size:.94rem;display:block;overflow-x:auto}
+.prose th,.prose td{border:1px solid var(--line);padding:8px 10px;text-align:left}
+.prose th{background:#eef6f0}
+.prose code{background:#eef2ef;padding:2px 5px;border-radius:4px;font-size:.9em}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:1em 0}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;text-decoration:none;color:inherit;transition:box-shadow .15s}
+.card:hover{box-shadow:0 4px 14px rgba(20,83,45,.12)}
+.card h3{margin:0 0 6px}
+.card p{margin:0;color:var(--muted);font-size:.92rem}
+.post-list{list-style:none;padding:0}
+.post-list li{padding:14px 0;border-bottom:1px solid var(--line)}
+.post-list a{font-weight:600;text-decoration:none}
+.post-list a:hover{text-decoration:underline}
+.excerpt{display:block;color:var(--muted);font-size:.9rem;margin-top:4px}
+.calc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:1.4em 0}
+.calc h2{margin-top:0}
+.calc-form{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.calc-form label{display:flex;flex-direction:column;font-size:.86rem;color:var(--muted);gap:4px}
+.calc-form input{padding:9px 10px;border:1px solid var(--line);border-radius:8px;font-size:1rem}
+.calc-go{grid-column:1/-1;justify-self:start;background:var(--accent2);color:#fff;border:0;border-radius:8px;padding:11px 22px;font-size:1rem;cursor:pointer}
+.calc-go:hover{background:var(--accent)}
+.calc-result{margin-top:14px;font-size:1.02rem}
+.calc-result .row{display:flex;justify-content:space-between;border-bottom:1px dashed var(--line);padding:7px 0}
+.calc-result .row b{color:var(--accent)}
+.calc-hint{color:var(--muted)}
+.faq details{border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:10px 0;background:var(--card)}
+.faq summary{font-weight:600;cursor:pointer}
+.related{margin-top:2em;background:#eef6f0;border-radius:12px;padding:16px 20px}
+.related ul{margin:.5em 0 0;padding-left:1.2em}
+.site-footer{background:#0f3d22;color:#bbf7d0;padding:22px 0;font-size:.9rem}
+.site-footer nav{display:flex;gap:16px;flex-wrap:wrap;margin-top:8px}
+.site-footer a{color:#dcfce7;text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+@media(max-width:640px){
+ .site-nav{display:none;width:100%;flex-direction:column}
+ .site-nav.open{display:flex}
+ .nav-toggle{display:block}
+ h1{font-size:1.55rem}
+}

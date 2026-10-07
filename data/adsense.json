@@ -1,0 +1,48 @@
+{
+  "ready": false,
+  "passed": 6,
+  "total": 9,
+  "checks": {
+    "policy_pages": {
+      "ok": true,
+      "detail": "5/5 present"
+    },
+    "adsense_configured": {
+      "ok": false,
+      "detail": "set site.json adsense_client (ca-pub-...)"
+    },
+    "analytics_configured": {
+      "ok": false,
+      "detail": "set site.json analytics_id (G-...)"
+    },
+    "contact_email": {
+      "ok": false,
+      "detail": ""
+    },
+    "article_count": {
+      "ok": true,
+      "detail": "14/8 published"
+    },
+    "no_thin_pages": {
+      "ok": true,
+      "detail": "all >= 900 words"
+    },
+    "sitemap": {
+      "ok": true,
+      "detail": "sitemap.xml"
+    },
+    "robots": {
+      "ok": true,
+      "detail": "robots.txt"
+    },
+    "rss": {
+      "ok": true,
+      "detail": "rss.xml"
+    }
+  },
+  "blocking": [
+    "adsense_configured",
+    "analytics_configured",
+    "contact_email"
+  ]
+}

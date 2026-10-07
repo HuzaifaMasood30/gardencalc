@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <h1>{{ site.name }}</h1>
+  <p class="lede">{{ site.tagline }}. Work out exactly how much mulch, soil, gravel, paint, tile, seed or concrete you need — with the formula shown, so you can check the maths.</p>
+</section>
+
+<section aria-labelledby="tools-heading">
+  <h2 id="tools-heading">Popular calculators</h2>
+  <div class="grid">
+    {% for c in categories %}
+    <a class="card" href="{{ base_url }}/category/{{ c.id }}/">
+      <h3>{{ c.name }}</h3>
+      <p>{{ c.blurb }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section aria-labelledby="latest-heading">
+  <h2 id="latest-heading">Latest guides</h2>
+  <ul class="post-list">
+    {% for a in articles %}
+    <li>
+      <a href="{{ base_url }}/{{ a.slug }}/">{{ a.title }}</a>
+      <span class="excerpt">{{ a.meta_description }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}

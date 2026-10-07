@@ -1,0 +1,136 @@
+{
+  "seed_topics": [
+    "how much mulch do i need",
+    "how much soil for raised bed",
+    "how much gravel do i need",
+    "how much paint do i need",
+    "how many tiles do i need",
+    "how much grass seed per square foot",
+    "how much fertilizer per 1000 sq ft",
+    "how many bags of concrete do i need",
+    "how much topsoil do i need for a lawn",
+    "how much sand for paver base",
+    "how much compost to add to garden",
+    "how much river rock for landscaping"
+  ],
+  "clusters": [
+    {
+      "id": "mulch",
+      "name": "Mulch",
+      "calculator": "mulch",
+      "primary": "how much mulch do i need",
+      "pillar": "mulch-calculator"
+    },
+    {
+      "id": "soil",
+      "name": "Soil & Raised Beds",
+      "calculator": "soil",
+      "primary": "how much soil for raised bed",
+      "pillar": "raised-bed-soil-calculator"
+    },
+    {
+      "id": "gravel",
+      "name": "Gravel & Stone",
+      "calculator": "gravel",
+      "primary": "how much gravel do i need",
+      "pillar": "gravel-calculator"
+    },
+    {
+      "id": "paint",
+      "name": "Paint",
+      "calculator": "paint",
+      "primary": "how much paint do i need",
+      "pillar": "paint-calculator"
+    },
+    {
+      "id": "tile",
+      "name": "Tile",
+      "calculator": "tile",
+      "primary": "how many tiles do i need",
+      "pillar": "tile-calculator"
+    },
+    {
+      "id": "grass-seed",
+      "name": "Grass Seed & Lawn",
+      "calculator": "grass_seed",
+      "primary": "how much grass seed per square foot",
+      "pillar": "grass-seed-calculator"
+    },
+    {
+      "id": "concrete",
+      "name": "Concrete",
+      "calculator": "concrete",
+      "primary": "how many bags of concrete do i need",
+      "pillar": "concrete-calculator"
+    }
+  ],
+  "calculators": {
+    "mulch": {
+      "title": "Mulch Calculator",
+      "inputs": [
+        {"id": "length", "label": "Bed length (ft)", "min": 0.1, "max": 500, "default": 20},
+        {"id": "width", "label": "Bed width (ft)", "min": 0.1, "max": 500, "default": 10},
+        {"id": "depth", "label": "Mulch depth (inches)", "min": 0.5, "max": 12, "default": 3}
+      ],
+      "outputs": ["square_feet", "cubic_feet", "cubic_yards", "bags_2cf"]
+    },
+    "soil": {
+      "title": "Raised Bed Soil Calculator",
+      "inputs": [
+        {"id": "length", "label": "Bed length (ft)", "min": 0.1, "max": 200, "default": 8},
+        {"id": "width", "label": "Bed width (ft)", "min": 0.1, "max": 200, "default": 4},
+        {"id": "height", "label": "Bed height (inches)", "min": 1, "max": 48, "default": 12}
+      ],
+      "outputs": ["cubic_feet", "cubic_yards", "bags_1_5cf"]
+    },
+    "gravel": {
+      "title": "Gravel Calculator",
+      "inputs": [
+        {"id": "length", "label": "Length (ft)", "min": 0.1, "max": 1000, "default": 20},
+        {"id": "width", "label": "Width (ft)", "min": 0.1, "max": 1000, "default": 10},
+        {"id": "depth", "label": "Depth (inches)", "min": 0.5, "max": 24, "default": 3}
+      ],
+      "outputs": ["square_feet", "cubic_yards", "tons"]
+    },
+    "paint": {
+      "title": "Paint Calculator",
+      "inputs": [
+        {"id": "length", "label": "Room length (ft)", "min": 1, "max": 200, "default": 12},
+        {"id": "width", "label": "Room width (ft)", "min": 1, "max": 200, "default": 10},
+        {"id": "height", "label": "Wall height (ft)", "min": 1, "max": 30, "default": 8},
+        {"id": "coats", "label": "Number of coats", "min": 1, "max": 4, "default": 2},
+        {"id": "doors", "label": "Doors", "min": 0, "max": 20, "default": 1},
+        {"id": "windows", "label": "Windows", "min": 0, "max": 30, "default": 2}
+      ],
+      "outputs": ["wall_area", "paintable_area", "gallons"]
+    },
+    "tile": {
+      "title": "Tile Calculator",
+      "inputs": [
+        {"id": "length", "label": "Room length (ft)", "min": 0.1, "max": 500, "default": 12},
+        {"id": "width", "label": "Room width (ft)", "min": 0.1, "max": 500, "default": 10},
+        {"id": "tile_w", "label": "Tile width (inches)", "min": 1, "max": 48, "default": 12},
+        {"id": "tile_h", "label": "Tile height (inches)", "min": 1, "max": 48, "default": 12},
+        {"id": "waste", "label": "Waste allowance (%)", "min": 0, "max": 30, "default": 10}
+      ],
+      "outputs": ["floor_area", "tile_area", "tiles", "tiles_with_waste"]
+    },
+    "grass_seed": {
+      "title": "Grass Seed Calculator",
+      "inputs": [
+        {"id": "area", "label": "Lawn area (sq ft)", "min": 10, "max": 200000, "default": 5000},
+        {"id": "method", "label": "Method (1=new, 2=overseed)", "min": 1, "max": 2, "default": 1}
+      ],
+      "outputs": ["rate_per_1000", "pounds", "bags_3lb"]
+    },
+    "concrete": {
+      "title": "Concrete Calculator",
+      "inputs": [
+        {"id": "length", "label": "Length (ft)", "min": 0.1, "max": 1000, "default": 10},
+        {"id": "width", "label": "Width (ft)", "min": 0.1, "max": 1000, "default": 10},
+        {"id": "thickness", "label": "Thickness (inches)", "min": 1, "max": 36, "default": 4}
+      ],
+      "outputs": ["cubic_feet", "cubic_yards", "bags_60lb", "bags_80lb"]
+    }
+  }
+}

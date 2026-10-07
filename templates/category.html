@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="{{ base_url }}/">Home</a> <span>/</span> <span>{{ category.name }}</span>
+</nav>
+<h1>{{ category.name }} Calculators &amp; Guides</h1>
+<p class="lede">{{ category.blurb }}</p>
+<ul class="post-list">
+  {% for a in articles %}
+  <li>
+    <a href="{{ base_url }}/{{ a.slug }}/">{{ a.title }}</a>
+    <span class="excerpt">{{ a.meta_description }}</span>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

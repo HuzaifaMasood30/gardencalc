@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="{{ base_url }}/">Home</a> <span>/</span> <span>{{ breadcrumb }}</span>
+</nav>
+<article class="post">
+  <h1>{{ article.title }}</h1>
+  <p class="byline">Last updated <time datetime="{{ article.updated }}">{{ article.updated }}</time> · {{ article.word_count }} words</p>
+
+  {% include "calculator.html" %}
+
+  <div class="prose">
+    {{ body_html | safe }}
+  </div>
+
+  {% if article.faq %}
+  <section class="faq" aria-labelledby="faq-heading">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    {% for item in article.faq %}
+    <details open>
+      <summary>{{ item.q }}</summary>
+      <p>{{ item.a }}</p>
+    </details>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  {% if article.internal_links %}
+  <aside class="related" aria-labelledby="related-heading">
+    <h2 id="related-heading">Related Guides</h2>
+    <ul>
+      {% for link in article.internal_links %}
+      <li><a href="{{ base_url }}/{{ link.to }}/">{{ link.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </aside>
+  {% endif %}
+</article>
+{% endblock %}
