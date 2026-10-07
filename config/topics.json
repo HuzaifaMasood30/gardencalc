@@ -11,7 +11,8 @@
     "how much topsoil do i need for a lawn",
     "how much sand for paver base",
     "how much compost to add to garden",
-    "how much river rock for landscaping"
+    "how much river rock for landscaping",
+    "how much topsoil do i need"
   ],
   "clusters": [
     {
@@ -62,75 +63,332 @@
       "calculator": "concrete",
       "primary": "how many bags of concrete do i need",
       "pillar": "concrete-calculator"
+    },
+    {
+      "id": "topsoil",
+      "name": "Topsoil & Fill Dirt",
+      "calculator": "topsoil",
+      "primary": "how much topsoil do i need",
+      "pillar": "topsoil-calculator"
+    },
+    {
+      "id": "fertilizer",
+      "name": "Fertilizer & Lawn Feed",
+      "calculator": "fertilizer",
+      "primary": "how much fertilizer per 1000 sq ft",
+      "pillar": "fertilizer-calculator"
     }
   ],
   "calculators": {
     "mulch": {
       "title": "Mulch Calculator",
       "inputs": [
-        {"id": "length", "label": "Bed length (ft)", "min": 0.1, "max": 500, "default": 20},
-        {"id": "width", "label": "Bed width (ft)", "min": 0.1, "max": 500, "default": 10},
-        {"id": "depth", "label": "Mulch depth (inches)", "min": 0.5, "max": 12, "default": 3}
+        {
+          "id": "length",
+          "label": "Bed length (ft)",
+          "min": 0.1,
+          "max": 500,
+          "default": 20
+        },
+        {
+          "id": "width",
+          "label": "Bed width (ft)",
+          "min": 0.1,
+          "max": 500,
+          "default": 10
+        },
+        {
+          "id": "depth",
+          "label": "Mulch depth (inches)",
+          "min": 0.5,
+          "max": 12,
+          "default": 3
+        }
       ],
-      "outputs": ["square_feet", "cubic_feet", "cubic_yards", "bags_2cf"]
+      "outputs": [
+        "square_feet",
+        "cubic_feet",
+        "cubic_yards",
+        "bags_2cf"
+      ]
     },
     "soil": {
       "title": "Raised Bed Soil Calculator",
       "inputs": [
-        {"id": "length", "label": "Bed length (ft)", "min": 0.1, "max": 200, "default": 8},
-        {"id": "width", "label": "Bed width (ft)", "min": 0.1, "max": 200, "default": 4},
-        {"id": "height", "label": "Bed height (inches)", "min": 1, "max": 48, "default": 12}
+        {
+          "id": "length",
+          "label": "Bed length (ft)",
+          "min": 0.1,
+          "max": 200,
+          "default": 8
+        },
+        {
+          "id": "width",
+          "label": "Bed width (ft)",
+          "min": 0.1,
+          "max": 200,
+          "default": 4
+        },
+        {
+          "id": "height",
+          "label": "Bed height (inches)",
+          "min": 1,
+          "max": 48,
+          "default": 12
+        }
       ],
-      "outputs": ["cubic_feet", "cubic_yards", "bags_1_5cf"]
+      "outputs": [
+        "cubic_feet",
+        "cubic_yards",
+        "bags_1_5cf"
+      ]
     },
     "gravel": {
       "title": "Gravel Calculator",
       "inputs": [
-        {"id": "length", "label": "Length (ft)", "min": 0.1, "max": 1000, "default": 20},
-        {"id": "width", "label": "Width (ft)", "min": 0.1, "max": 1000, "default": 10},
-        {"id": "depth", "label": "Depth (inches)", "min": 0.5, "max": 24, "default": 3}
+        {
+          "id": "length",
+          "label": "Length (ft)",
+          "min": 0.1,
+          "max": 1000,
+          "default": 20
+        },
+        {
+          "id": "width",
+          "label": "Width (ft)",
+          "min": 0.1,
+          "max": 1000,
+          "default": 10
+        },
+        {
+          "id": "depth",
+          "label": "Depth (inches)",
+          "min": 0.5,
+          "max": 24,
+          "default": 3
+        }
       ],
-      "outputs": ["square_feet", "cubic_yards", "tons"]
+      "outputs": [
+        "square_feet",
+        "cubic_yards",
+        "tons"
+      ]
     },
     "paint": {
       "title": "Paint Calculator",
       "inputs": [
-        {"id": "length", "label": "Room length (ft)", "min": 1, "max": 200, "default": 12},
-        {"id": "width", "label": "Room width (ft)", "min": 1, "max": 200, "default": 10},
-        {"id": "height", "label": "Wall height (ft)", "min": 1, "max": 30, "default": 8},
-        {"id": "coats", "label": "Number of coats", "min": 1, "max": 4, "default": 2},
-        {"id": "doors", "label": "Doors", "min": 0, "max": 20, "default": 1},
-        {"id": "windows", "label": "Windows", "min": 0, "max": 30, "default": 2}
+        {
+          "id": "length",
+          "label": "Room length (ft)",
+          "min": 1,
+          "max": 200,
+          "default": 12
+        },
+        {
+          "id": "width",
+          "label": "Room width (ft)",
+          "min": 1,
+          "max": 200,
+          "default": 10
+        },
+        {
+          "id": "height",
+          "label": "Wall height (ft)",
+          "min": 1,
+          "max": 30,
+          "default": 8
+        },
+        {
+          "id": "coats",
+          "label": "Number of coats",
+          "min": 1,
+          "max": 4,
+          "default": 2
+        },
+        {
+          "id": "doors",
+          "label": "Doors",
+          "min": 0,
+          "max": 20,
+          "default": 1
+        },
+        {
+          "id": "windows",
+          "label": "Windows",
+          "min": 0,
+          "max": 30,
+          "default": 2
+        }
       ],
-      "outputs": ["wall_area", "paintable_area", "gallons"]
+      "outputs": [
+        "wall_area",
+        "paintable_area",
+        "gallons"
+      ]
     },
     "tile": {
       "title": "Tile Calculator",
       "inputs": [
-        {"id": "length", "label": "Room length (ft)", "min": 0.1, "max": 500, "default": 12},
-        {"id": "width", "label": "Room width (ft)", "min": 0.1, "max": 500, "default": 10},
-        {"id": "tile_w", "label": "Tile width (inches)", "min": 1, "max": 48, "default": 12},
-        {"id": "tile_h", "label": "Tile height (inches)", "min": 1, "max": 48, "default": 12},
-        {"id": "waste", "label": "Waste allowance (%)", "min": 0, "max": 30, "default": 10}
+        {
+          "id": "length",
+          "label": "Room length (ft)",
+          "min": 0.1,
+          "max": 500,
+          "default": 12
+        },
+        {
+          "id": "width",
+          "label": "Room width (ft)",
+          "min": 0.1,
+          "max": 500,
+          "default": 10
+        },
+        {
+          "id": "tile_w",
+          "label": "Tile width (inches)",
+          "min": 1,
+          "max": 48,
+          "default": 12
+        },
+        {
+          "id": "tile_h",
+          "label": "Tile height (inches)",
+          "min": 1,
+          "max": 48,
+          "default": 12
+        },
+        {
+          "id": "waste",
+          "label": "Waste allowance (%)",
+          "min": 0,
+          "max": 30,
+          "default": 10
+        }
       ],
-      "outputs": ["floor_area", "tile_area", "tiles", "tiles_with_waste"]
+      "outputs": [
+        "floor_area",
+        "tile_area",
+        "tiles",
+        "tiles_with_waste"
+      ]
     },
     "grass_seed": {
       "title": "Grass Seed Calculator",
       "inputs": [
-        {"id": "area", "label": "Lawn area (sq ft)", "min": 10, "max": 200000, "default": 5000},
-        {"id": "method", "label": "Method (1=new, 2=overseed)", "min": 1, "max": 2, "default": 1}
+        {
+          "id": "area",
+          "label": "Lawn area (sq ft)",
+          "min": 10,
+          "max": 200000,
+          "default": 5000
+        },
+        {
+          "id": "method",
+          "label": "Method (1=new, 2=overseed)",
+          "min": 1,
+          "max": 2,
+          "default": 1
+        }
       ],
-      "outputs": ["rate_per_1000", "pounds", "bags_3lb"]
+      "outputs": [
+        "rate_per_1000",
+        "pounds",
+        "bags_3lb"
+      ]
     },
     "concrete": {
       "title": "Concrete Calculator",
       "inputs": [
-        {"id": "length", "label": "Length (ft)", "min": 0.1, "max": 1000, "default": 10},
-        {"id": "width", "label": "Width (ft)", "min": 0.1, "max": 1000, "default": 10},
-        {"id": "thickness", "label": "Thickness (inches)", "min": 1, "max": 36, "default": 4}
+        {
+          "id": "length",
+          "label": "Length (ft)",
+          "min": 0.1,
+          "max": 1000,
+          "default": 10
+        },
+        {
+          "id": "width",
+          "label": "Width (ft)",
+          "min": 0.1,
+          "max": 1000,
+          "default": 10
+        },
+        {
+          "id": "thickness",
+          "label": "Thickness (inches)",
+          "min": 1,
+          "max": 36,
+          "default": 4
+        }
       ],
-      "outputs": ["cubic_feet", "cubic_yards", "bags_60lb", "bags_80lb"]
+      "outputs": [
+        "cubic_feet",
+        "cubic_yards",
+        "bags_60lb",
+        "bags_80lb"
+      ]
+    },
+    "topsoil": {
+      "title": "Topsoil Calculator",
+      "inputs": [
+        {
+          "id": "length",
+          "label": "Area length (ft)",
+          "min": 0.1,
+          "max": 500,
+          "default": 20
+        },
+        {
+          "id": "width",
+          "label": "Area width (ft)",
+          "min": 0.1,
+          "max": 500,
+          "default": 10
+        },
+        {
+          "id": "depth",
+          "label": "Depth (inches)",
+          "min": 0.5,
+          "max": 24,
+          "default": 2
+        }
+      ],
+      "outputs": [
+        "square_feet",
+        "cubic_feet",
+        "cubic_yards",
+        "bags_40lb"
+      ]
+    },
+    "fertilizer": {
+      "title": "Fertilizer Calculator",
+      "inputs": [
+        {
+          "id": "area",
+          "label": "Lawn area (sq ft)",
+          "min": 10,
+          "max": 200000,
+          "default": 5000
+        },
+        {
+          "id": "rate",
+          "label": "Nitrogen rate (lb N per 1000 sq ft)",
+          "min": 0.1,
+          "max": 2,
+          "default": 1
+        },
+        {
+          "id": "bag",
+          "label": "Bag size (lb)",
+          "min": 1,
+          "max": 100,
+          "default": 40
+        }
+      ],
+      "outputs": [
+        "pounds",
+        "bags"
+      ]
     }
   }
 }

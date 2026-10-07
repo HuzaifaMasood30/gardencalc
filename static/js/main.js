@@ -46,6 +46,16 @@
       var cuft = v.length * v.width * (v.thickness / 12);
       return [["Cubic feet", r(cuft, 1)], ["Cubic yards", r(cuft / 27, 2)],
               ["60 lb bags", Math.ceil(cuft / 0.45)], ["80 lb bags", Math.ceil(cuft / 0.60)]];
+    },
+    topsoil: function (v) {
+      var sqft = v.length * v.width, cuft = sqft * (v.depth / 12), cuyd = cuft / 27;
+      return [["Square feet", r(sqft, 1)], ["Cubic feet", r(cuft, 1)],
+              ["Cubic yards", r(cuyd, 2)], ["40 lb bags", Math.ceil(cuft / 0.75)]];
+    },
+    fertilizer: function (v) {
+      var bag = v.bag || 40;
+      var lb = v.area / 1000 * v.rate;
+      return [["Pounds", r(lb, 2)], ["Bags", Math.ceil(lb / bag)]];
     }
   };
 

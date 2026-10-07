@@ -1,9 +1,9 @@
 [
   {
     "date": "2026-10-07",
-    "articles": 17,
-    "avg_seo_score": 100.0,
-    "total_words": 12494,
+    "articles": 47,
+    "avg_seo_score": 98.8,
+    "total_words": 38735,
     "per_article": [
       {
         "slug": "mulch-calculator",
@@ -276,6 +276,486 @@
           "calculator": true
         },
         "word_count": 1003
+      },
+      {
+        "slug": "how-much-mulch-do-i-need-for-200-square-feet",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 915
+      },
+      {
+        "slug": "how-much-soil-for-a-raised-garden-bed",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 824
+      },
+      {
+        "slug": "how-much-gravel-do-i-need-for-a-20x20-area",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 872
+      },
+      {
+        "slug": "how-much-paint-do-i-need-for-a-10x10-room",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 717
+      },
+      {
+        "slug": "how-much-grass-seed-per-square-foot-for-new-lawn",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 986
+      },
+      {
+        "slug": "how-many-bags-of-concrete-do-i-need-for-a-4-x8-slab",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 851
+      },
+      {
+        "slug": "topsoil-calculator",
+        "score": 88.9,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": false,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 1003
+      },
+      {
+        "slug": "fertilizer-calculator",
+        "score": 88.9,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": false,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 763
+      },
+      {
+        "slug": "how-much-mulch-do-i-need-for-400-square-feet",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 892
+      },
+      {
+        "slug": "how-much-soil-for-a-4x8-raised-bed",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 792
+      },
+      {
+        "slug": "how-much-gravel-do-i-need-per-square-metre",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 973
+      },
+      {
+        "slug": "how-much-paint-do-i-need-for-a-front-door",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 768
+      },
+      {
+        "slug": "how-many-tiles-do-i-need-for-100-square-feet",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 889
+      },
+      {
+        "slug": "how-much-grass-seed-per-square-foot-canada",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 868
+      },
+      {
+        "slug": "how-much-mulch-do-i-need-for-my-flower-bed",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 1054
+      },
+      {
+        "slug": "how-much-soil-for-a-8x4x1-raised-bed",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 816
+      },
+      {
+        "slug": "how-much-paint-do-i-need-for-a-12x12-room",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 805
+      },
+      {
+        "slug": "how-many-tiles-do-i-need-for-my-bathroom",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 838
+      },
+      {
+        "slug": "how-much-grass-seed-per-square-foot-calculator",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 840
+      },
+      {
+        "slug": "how-much-fertilizer-per-1000-sq-ft-calculator",
+        "score": 88.9,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": false,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 907
+      },
+      {
+        "slug": "how-many-bags-of-concrete-do-i-need-for-a-4x4-slab",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 796
+      },
+      {
+        "slug": "how-much-mulch-do-i-need-for-1000-square-feet",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 794
+      },
+      {
+        "slug": "how-much-potting-soil-for-a-raised-bed",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 814
+      },
+      {
+        "slug": "how-much-gravel-do-i-need-for-a-10x12-shed",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 881
+      },
+      {
+        "slug": "how-much-paint-do-i-need-calculator-sq-ft",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 818
+      },
+      {
+        "slug": "how-many-tiles-do-i-need-for-20-square-feet",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 949
+      },
+      {
+        "slug": "how-much-buffalo-grass-seed-per-square-foot",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 979
+      },
+      {
+        "slug": "how-much-liquid-fertilizer-per-1000-sq-ft",
+        "score": 88.9,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": false,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 948
+      },
+      {
+        "slug": "how-many-bags-of-concrete-do-i-need-for-a-fence-post",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 947
+      },
+      {
+        "slug": "how-much-topsoil-do-i-need-for-a-lawn",
+        "score": 88.9,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": false,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 942
       }
     ]
   }

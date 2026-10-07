@@ -31,11 +31,8 @@ def build_clusters() -> dict:
 
 
 def _guess_cluster(keyword: str, cfg: dict) -> str:
-    k = keyword.lower()
-    for c in cfg.get("clusters", []):
-        if any(w in k for w in (c["id"], c["name"].lower().split()[0])):
-            return c["id"]
-    return ""
+    import keywords
+    return keywords.guess_cluster(keyword, cfg)
 
 
 def plan(limit: int = 3) -> list[dict]:

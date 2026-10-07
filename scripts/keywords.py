@@ -58,6 +58,13 @@ NOISE = [
     "song", "movie", "meaning", "meme", "recipe", "cake", "guitar", "wedding",
     "car ", "truck", "diesel", "pool filter", "cat litter", "dog", "horse",
     "dollar", "stock", "crypto", "job", "salary", "near me", "tattoo",
+    # Board games, hobbies and other senses of "tile"/"paint" that are not flooring
+    # or home improvement, which autosuggest returns for these seeds.
+    "mahjong", "scrabble", "domino", "poker", "chess", "catan", "dice", "rummikub",
+    "wordle", "sudoku", "crossword", "puzzle", "bingo", "nintendo", "xbox",
+    "playstation", "cosplay", "nail art", "face paint", "warhammer",
+    "body paint", "makeup", "art ", "painting a picture", "watercolor", "acrylic pour",
+    "gal tank", "gallon tank", "gal aquarium", "fish", "reef", "terrarium",
 ]
 
 # The material token each seed is actually about.
@@ -67,6 +74,41 @@ MATERIAL = {
     "fertilizer": "fertilizer", "topsoil": "topsoil", "sand": "sand",
     "compost": "compost", "river rock": "river rock",
 }
+
+
+# Keywords that do not contain a cluster's own name but still belong to it. Autosuggest
+# surfaces these under a seed such as "how much compost to add to garden", so without
+# this they are discovered with an empty cluster and never scheduled.
+CLUSTER_HINTS = [
+    (("fertilizer", "lawn feed", "nitrogen", "sulphate of ammonia"), "fertilizer"),
+    (("topsoil", "top soil", "fill dirt"), "topsoil"),
+    (("compost", "garden soil", "potting soil", "seed starting mix"), "soil"),
+    (("sand", "paver base", "polymeric sand", "river rock", "river stone",
+      "crushed stone", "pea gravel", "decomposed granite"), "gravel"),
+    (("grass seed", "seed", "overseed", "overseeding", "lawn"), "grass-seed"),
+    (("mulch", "bark", "wood chips"), "mulch"),
+    (("concrete", "cement", "quikrete", "mortar", "slab"), "concrete"),
+    (("paint", "primer", "coats"), "paint"),
+    (("tile", "grout", "backsplash", "thinset"), "tile"),
+]
+
+
+def guess_cluster(keyword: str, cfg: dict) -> str:
+    """Assign a keyword to the best-matching cluster (explicit name first, then hints).
+
+    Matching uses word boundaries so "topsoil" is not captured by the "soil" cluster.
+    """
+    import re as _re
+    k = keyword.lower()
+    for c in cfg.get("clusters", []):
+        cid = c["id"]
+        first = c["name"].lower().split()[0]
+        if _re.search(rf"\b{_re.escape(cid)}\b", k) or _re.search(rf"\b{_re.escape(first)}\b", k):
+            return cid
+    for words, cid in CLUSTER_HINTS:
+        if any(w in k for w in words):
+            return cid
+    return ""
 
 
 def is_relevant(keyword: str, primary: str) -> bool:
@@ -142,7 +184,7 @@ def discover(seeds: list[str] | None = None) -> list[dict]:
     results: list[dict] = []
     for seed in seeds:
         primary = seed
-        cluster_id = next((cid for p, cid in clusters.items() if p in seed or seed in p), "")
+        cluster_id = guess_cluster(seed, cfg)
         for kw in [seed] + expand(seed, alphabet=True):
             if kw in known or any(r["keyword"] == kw for r in results):
                 continue

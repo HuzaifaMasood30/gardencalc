@@ -115,15 +115,20 @@ def _meta_description(title: str, kw: str, calc_title: str, body: str = "") -> s
     plain = _re.sub(r"[#*`_>\[\]]", "", body or "")
     plain = _re.sub(r"\s+", " ", plain).strip()
     sentences = _re.split(r"(?<=[.!?])\s+", plain)
-    answer = ""
+    # Keep adding sentences until the meta is long enough to read as a real
+    # snippet (>=110 chars), then trim to the upper bound.
+    parts, length = [], 0
     for sent in sentences:
-        if len(sent) >= 60:
-            answer = sent
+        if len(sent) < 40:
+            continue
+        parts.append(sent)
+        length = len(" ".join(parts))
+        if length >= 110:
             break
+    answer = " ".join(parts).strip().replace("**", "")
     if not answer:
         answer = (f"How much {kw} you need, with the formula, a worked example and "
                   f"common mistakes.")
-    answer = answer.strip().replace("**", "")
     if len(answer) > 158:
         answer = answer[:155].rsplit(" ", 1)[0].rstrip(",;:") + "."
     return answer

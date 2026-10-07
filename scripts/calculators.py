@@ -106,6 +106,27 @@ def concrete(length_ft: float, width_ft: float, thickness_in: float) -> dict:
     }
 
 
+def topsoil(length_ft: float, width_ft: float, depth_in: float) -> dict:
+    sqft = length_ft * width_ft
+    cuft = sqft * (depth_in / 12.0)
+    cuyd = cuft / 27.0
+    return {
+        "square_feet": _round(sqft, 1),
+        "cubic_feet": _round(cuft, 1),
+        "cubic_yards": _round(cuyd, 2),
+        "bags_40lb": math.ceil(cuft / 0.75),  # 40 lb bag ~= 0.75 cu ft
+    }
+
+
+def fertilizer(area_sqft: float, rate_per_1000: float, bag_lb: float) -> dict:
+    pounds = area_sqft / 1000.0 * rate_per_1000
+    bag_lb = bag_lb or 40.0
+    return {
+        "pounds": _round(pounds, 2),
+        "bags": math.ceil(pounds / bag_lb),
+    }
+
+
 REGISTRY = {
     "mulch": mulch,
     "soil": soil,
@@ -114,6 +135,8 @@ REGISTRY = {
     "tile": tile,
     "grass_seed": grass_seed,
     "concrete": concrete,
+    "topsoil": topsoil,
+    "fertilizer": fertilizer,
 }
 
 # Maps config input ids -> function keyword arguments.
@@ -127,6 +150,8 @@ PARAM_MAP = {
              "tile_h": "tile_h_in", "waste": "waste_pct"},
     "grass_seed": {"area": "area_sqft", "method": "method"},
     "concrete": {"length": "length_ft", "width": "width_ft", "thickness": "thickness_in"},
+    "topsoil": {"length": "length_ft", "width": "width_ft", "depth": "depth_in"},
+    "fertilizer": {"area": "area_sqft", "rate": "rate_per_1000", "bag": "bag_lb"},
 }
 
 

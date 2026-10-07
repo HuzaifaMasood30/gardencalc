@@ -84,6 +84,8 @@ def test_js_and_python_calculators_agree():
         ["tile", {"length": 10, "width": 10, "tile_w": 12, "tile_h": 12, "waste": 10}],
         ["grass_seed", {"area": 5000, "method": 1}],
         ["concrete", {"length": 10, "width": 10, "thickness": 4}],
+        ["topsoil", {"length": 20, "width": 10, "depth": 2}],
+        ["fertilizer", {"area": 5000, "rate": 1, "bag": 40}],
     ]
     proc = subprocess.run(
         [node, str(root / "scripts/calc_parity.js"), str(root / "static/js/main.js"),
@@ -98,6 +100,7 @@ def test_js_and_python_calculators_agree():
         "bags_1_5cf": "1.5 cu ft bags", "tons": "Tons", "rate_per_1000": "Rate per 1000 sq ft",
         "pounds": "Pounds", "bags_3lb": "3 lb bags", "gallons": "Gallons",
         "bags_60lb": "60 lb bags", "bags_80lb": "80 lb bags",
+        "bags_40lb": "40 lb bags", "bags": "Bags",
     }
     for kind, inputs in cases:
         py = calculators.compute(kind, inputs)

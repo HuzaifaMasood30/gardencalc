@@ -504,15 +504,6 @@
     "used": false
   },
   {
-    "keyword": "how many tiles do i need for american mahjong",
-    "slug": "how-many-tiles-do-i-need-for-american-mahjong",
-    "cluster": "tile",
-    "intent": "calculator",
-    "score": 100.0,
-    "source": "autosuggest",
-    "used": false
-  },
-  {
     "keyword": "how many tiles do i need for 100 square feet",
     "slug": "how-many-tiles-do-i-need-for-100-square-feet",
     "cluster": "tile",
@@ -821,7 +812,7 @@
   {
     "keyword": "how much fertilizer per 1000 sq ft",
     "slug": "how-much-fertilizer-per-1000-sq-ft",
-    "cluster": "",
+    "cluster": "fertilizer",
     "intent": "calculator",
     "score": 100.0,
     "source": "autosuggest",
@@ -830,7 +821,7 @@
   {
     "keyword": "how much fertilizer per 1000 sq ft calculator",
     "slug": "how-much-fertilizer-per-1000-sq-ft-calculator",
-    "cluster": "",
+    "cluster": "fertilizer",
     "intent": "calculator",
     "score": 100.0,
     "source": "autosuggest",
@@ -839,7 +830,7 @@
   {
     "keyword": "how much liquid fertilizer per 1000 sq ft",
     "slug": "how-much-liquid-fertilizer-per-1000-sq-ft",
-    "cluster": "",
+    "cluster": "fertilizer",
     "intent": "calculator",
     "score": 100.0,
     "source": "autosuggest",
@@ -848,7 +839,7 @@
   {
     "keyword": "how much nitrogen fertilizer per 1000 sq ft",
     "slug": "how-much-nitrogen-fertilizer-per-1000-sq-ft",
-    "cluster": "",
+    "cluster": "fertilizer",
     "intent": "calculator",
     "score": 100.0,
     "source": "autosuggest",
@@ -857,7 +848,7 @@
   {
     "keyword": "how much starter fertilizer per 1000 sq ft",
     "slug": "how-much-starter-fertilizer-per-1000-sq-ft",
-    "cluster": "",
+    "cluster": "fertilizer",
     "intent": "calculator",
     "score": 100.0,
     "source": "autosuggest",
@@ -866,7 +857,7 @@
   {
     "keyword": "how much scotts starter fertilizer per 1000 sq ft",
     "slug": "how-much-scotts-starter-fertilizer-per-1000-sq-ft",
-    "cluster": "",
+    "cluster": "fertilizer",
     "intent": "calculator",
     "score": 100.0,
     "source": "autosuggest",
@@ -875,7 +866,7 @@
   {
     "keyword": "how many pounds of fertilizer per 1000 sq ft",
     "slug": "how-many-pounds-of-fertilizer-per-1000-sq-ft",
-    "cluster": "",
+    "cluster": "fertilizer",
     "intent": "calculator",
     "score": 100.0,
     "source": "autosuggest",
@@ -884,7 +875,7 @@
   {
     "keyword": "how much 10 10 10 fertilizer per 1000 sq ft",
     "slug": "how-much-10-10-10-fertilizer-per-1000-sq-ft",
-    "cluster": "",
+    "cluster": "fertilizer",
     "intent": "calculator",
     "score": 100.0,
     "source": "autosuggest",
@@ -893,7 +884,7 @@
   {
     "keyword": "how many pounds of starter fertilizer per 1000 sq ft",
     "slug": "how-many-pounds-of-starter-fertilizer-per-1000-sq-ft",
-    "cluster": "",
+    "cluster": "fertilizer",
     "intent": "calculator",
     "score": 100.0,
     "source": "autosuggest",
@@ -902,7 +893,7 @@
   {
     "keyword": "how many pounds of lawn fertilizer per 1000 sq ft",
     "slug": "how-many-pounds-of-lawn-fertilizer-per-1000-sq-ft",
-    "cluster": "",
+    "cluster": "fertilizer",
     "intent": "calculator",
     "score": 100.0,
     "source": "autosuggest",
@@ -911,7 +902,7 @@
   {
     "keyword": "how much starter fertilizer per 1000 square feet",
     "slug": "how-much-starter-fertilizer-per-1000-square-feet",
-    "cluster": "",
+    "cluster": "fertilizer",
     "intent": "calculator",
     "score": 100.0,
     "source": "autosuggest",
@@ -920,7 +911,7 @@
   {
     "keyword": "how much fertilizer do i need per 1000 sq ft",
     "slug": "how-much-fertilizer-do-i-need-per-1000-sq-ft",
-    "cluster": "",
+    "cluster": "fertilizer",
     "intent": "calculator",
     "score": 100.0,
     "source": "autosuggest",
@@ -1028,7 +1019,7 @@
   {
     "keyword": "how much topsoil do i need for a lawn",
     "slug": "how-much-topsoil-do-i-need-for-a-lawn",
-    "cluster": "",
+    "cluster": "topsoil",
     "intent": "calculator",
     "score": 100.0,
     "source": "autosuggest",
@@ -1037,7 +1028,7 @@
   {
     "keyword": "how much topsoil do i need for a new lawn",
     "slug": "how-much-topsoil-do-i-need-for-a-new-lawn",
-    "cluster": "",
+    "cluster": "topsoil",
     "intent": "calculator",
     "score": 100.0,
     "source": "autosuggest",
@@ -1046,7 +1037,7 @@
   {
     "keyword": "how much topsoil do i need for a garden bed",
     "slug": "how-much-topsoil-do-i-need-for-a-garden-bed",
-    "cluster": "",
+    "cluster": "topsoil",
     "intent": "calculator",
     "score": 100.0,
     "source": "autosuggest",
@@ -1055,7 +1046,7 @@
   {
     "keyword": "how much topsoil do i need for my raised garden bed",
     "slug": "how-much-topsoil-do-i-need-for-my-raised-garden-bed",
-    "cluster": "",
+    "cluster": "topsoil",
     "intent": "calculator",
     "score": 100.0,
     "source": "autosuggest",
@@ -1379,7 +1370,7 @@
   {
     "keyword": "how much compost to add to garden soil",
     "slug": "how-much-compost-to-add-to-garden-soil",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "calculator",
     "score": 98.0,
     "source": "autosuggest",
@@ -1388,7 +1379,7 @@
   {
     "keyword": "how much compost to add to garden bed",
     "slug": "how-much-compost-to-add-to-garden-bed",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "calculator",
     "score": 98.0,
     "source": "autosuggest",
@@ -1397,7 +1388,7 @@
   {
     "keyword": "how much compost to add to garden each year",
     "slug": "how-much-compost-to-add-to-garden-each-year",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "calculator",
     "score": 98.0,
     "source": "autosuggest",
@@ -1406,7 +1397,7 @@
   {
     "keyword": "how much compost to add to garden beds",
     "slug": "how-much-compost-to-add-to-garden-beds",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "calculator",
     "score": 98.0,
     "source": "autosuggest",
@@ -1478,7 +1469,7 @@
   {
     "keyword": "how much starter fertilizer per square foot",
     "slug": "how-much-starter-fertilizer-per-square-foot",
-    "cluster": "",
+    "cluster": "fertilizer",
     "intent": "calculator",
     "score": 94.0,
     "source": "autosuggest",
@@ -1487,7 +1478,7 @@
   {
     "keyword": "how many pounds of fertilizer per acre",
     "slug": "how-many-pounds-of-fertilizer-per-acre",
-    "cluster": "",
+    "cluster": "fertilizer",
     "intent": "calculator",
     "score": 94.0,
     "source": "autosuggest",
@@ -1496,7 +1487,7 @@
   {
     "keyword": "how many tons of fertilizer per acre",
     "slug": "how-many-tons-of-fertilizer-per-acre",
-    "cluster": "",
+    "cluster": "fertilizer",
     "intent": "calculator",
     "score": 94.0,
     "source": "autosuggest",
@@ -1505,7 +1496,7 @@
   {
     "keyword": "how many lbs of fertilizer per acre",
     "slug": "how-many-lbs-of-fertilizer-per-acre",
-    "cluster": "",
+    "cluster": "fertilizer",
     "intent": "calculator",
     "score": 94.0,
     "source": "autosuggest",
@@ -1514,7 +1505,7 @@
   {
     "keyword": "how much paver sand per square foot",
     "slug": "how-much-paver-sand-per-square-foot",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "calculator",
     "score": 94.0,
     "source": "autosuggest",
@@ -1523,7 +1514,7 @@
   {
     "keyword": "how much is river rock per yard",
     "slug": "how-much-is-river-rock-per-yard",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "calculator",
     "score": 94.0,
     "source": "autosuggest",
@@ -1532,7 +1523,7 @@
   {
     "keyword": "how much river rock per square foot",
     "slug": "how-much-river-rock-per-square-foot",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "calculator",
     "score": 94.0,
     "source": "autosuggest",
@@ -1667,7 +1658,7 @@
   {
     "keyword": "how much compost to add to garden",
     "slug": "how-much-compost-to-add-to-garden",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "calculator",
     "score": 92.0,
     "source": "autosuggest",
@@ -1739,7 +1730,7 @@
   {
     "keyword": "how much topsoil for raised garden bed calculator",
     "slug": "how-much-topsoil-for-raised-garden-bed-calculator",
-    "cluster": "soil",
+    "cluster": "topsoil",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -1901,7 +1892,7 @@
   {
     "keyword": "how much topsoil do i need to topdress a lawn",
     "slug": "how-much-topsoil-do-i-need-to-topdress-a-lawn",
-    "cluster": "",
+    "cluster": "topsoil",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -1910,7 +1901,7 @@
   {
     "keyword": "how much topsoil do i need for top dressing lawn",
     "slug": "how-much-topsoil-do-i-need-for-top-dressing-lawn",
-    "cluster": "",
+    "cluster": "topsoil",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -1919,7 +1910,7 @@
   {
     "keyword": "how much topsoil do i need for grass",
     "slug": "how-much-topsoil-do-i-need-for-grass",
-    "cluster": "",
+    "cluster": "grass-seed",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -1928,7 +1919,7 @@
   {
     "keyword": "how much topsoil do i need for turf",
     "slug": "how-much-topsoil-do-i-need-for-turf",
-    "cluster": "",
+    "cluster": "topsoil",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -1937,7 +1928,7 @@
   {
     "keyword": "how much top soil do i need for grass seed",
     "slug": "how-much-top-soil-do-i-need-for-grass-seed",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -1946,7 +1937,7 @@
   {
     "keyword": "how much topsoil do i need for grass to grow",
     "slug": "how-much-topsoil-do-i-need-for-grass-to-grow",
-    "cluster": "",
+    "cluster": "grass-seed",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -1955,7 +1946,7 @@
   {
     "keyword": "how much topsoil do i need to level my lawn",
     "slug": "how-much-topsoil-do-i-need-to-level-my-lawn",
-    "cluster": "",
+    "cluster": "topsoil",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -1964,7 +1955,7 @@
   {
     "keyword": "how much topsoil do i need to reseed my lawn",
     "slug": "how-much-topsoil-do-i-need-to-reseed-my-lawn",
-    "cluster": "",
+    "cluster": "topsoil",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -1973,7 +1964,7 @@
   {
     "keyword": "how much top soil do i need to top dress my lawn",
     "slug": "how-much-top-soil-do-i-need-to-top-dress-my-lawn",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -1982,7 +1973,7 @@
   {
     "keyword": "how much topsoil do i need for lawn",
     "slug": "how-much-topsoil-do-i-need-for-lawn",
-    "cluster": "",
+    "cluster": "topsoil",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -1991,7 +1982,7 @@
   {
     "keyword": "how much topsoil do i need for raised garden beds",
     "slug": "how-much-topsoil-do-i-need-for-raised-garden-beds",
-    "cluster": "",
+    "cluster": "topsoil",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -2000,7 +1991,7 @@
   {
     "keyword": "how much topsoil do i need before laying turf",
     "slug": "how-much-topsoil-do-i-need-before-laying-turf",
-    "cluster": "",
+    "cluster": "topsoil",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -2009,7 +2000,7 @@
   {
     "keyword": "how much topsoil do i need for sod",
     "slug": "how-much-topsoil-do-i-need-for-sod",
-    "cluster": "",
+    "cluster": "topsoil",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -2018,7 +2009,7 @@
   {
     "keyword": "how much sand paver base do i need",
     "slug": "how-much-sand-paver-base-do-i-need",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -2027,7 +2018,7 @@
   {
     "keyword": "how many inches of sand for paver base",
     "slug": "how-many-inches-of-sand-for-paver-base",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -2036,7 +2027,7 @@
   {
     "keyword": "how much sand on top of paver base",
     "slug": "how-much-sand-on-top-of-paver-base",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -2045,7 +2036,7 @@
   {
     "keyword": "how many bags of paver sand do i need",
     "slug": "how-many-bags-of-paver-sand-do-i-need",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -2054,7 +2045,7 @@
   {
     "keyword": "how much gravel and sand for paver base",
     "slug": "how-much-gravel-and-sand-for-paver-base",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -2063,7 +2054,7 @@
   {
     "keyword": "how much sand do i need for paver base",
     "slug": "how-much-sand-do-i-need-for-paver-base",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -2072,7 +2063,7 @@
   {
     "keyword": "how much paver base and sand do i need",
     "slug": "how-much-paver-base-and-sand-do-i-need",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -2081,7 +2072,7 @@
   {
     "keyword": "how much paver base and leveling sand do i need",
     "slug": "how-much-paver-base-and-leveling-sand-do-i-need",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -2090,7 +2081,7 @@
   {
     "keyword": "how much paver base sand do i need",
     "slug": "how-much-paver-base-sand-do-i-need",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -2099,7 +2090,7 @@
   {
     "keyword": "how much sand do you need for paver base",
     "slug": "how-much-sand-do-you-need-for-paver-base",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -2108,7 +2099,7 @@
   {
     "keyword": "how much compost to add to vegetable garden",
     "slug": "how-much-compost-to-add-to-vegetable-garden",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -2117,7 +2108,7 @@
   {
     "keyword": "how much mushroom compost to add for gardens",
     "slug": "how-much-mushroom-compost-to-add-for-gardens",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -2126,7 +2117,7 @@
   {
     "keyword": "how much compost to add to a garden",
     "slug": "how-much-compost-to-add-to-a-garden",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -2135,7 +2126,7 @@
   {
     "keyword": "how much compost to add to a garden bed",
     "slug": "how-much-compost-to-add-to-a-garden-bed",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -2144,7 +2135,7 @@
   {
     "keyword": "how much compost to add to raised garden bed",
     "slug": "how-much-compost-to-add-to-raised-garden-bed",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -2153,7 +2144,7 @@
   {
     "keyword": "how much compost to add to new garden bed",
     "slug": "how-much-compost-to-add-to-new-garden-bed",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -2162,7 +2153,7 @@
   {
     "keyword": "how much compost to add to existing garden bed",
     "slug": "how-much-compost-to-add-to-existing-garden-bed",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -2171,7 +2162,7 @@
   {
     "keyword": "how much compost should i add to my raised garden bed",
     "slug": "how-much-compost-should-i-add-to-my-raised-garden-bed",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -2180,7 +2171,7 @@
   {
     "keyword": "how to calculate how much river rock you need for landscaping",
     "slug": "how-to-calculate-how-much-river-rock-you-need-for-landscaping",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -2189,7 +2180,7 @@
   {
     "keyword": "how much river rock do i need for landscaping",
     "slug": "how-much-river-rock-do-i-need-for-landscaping",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -2198,7 +2189,7 @@
   {
     "keyword": "how deep should river rock be for landscaping",
     "slug": "how-deep-should-river-rock-be-for-landscaping",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "calculator",
     "score": 90.0,
     "source": "autosuggest",
@@ -2225,7 +2216,7 @@
   {
     "keyword": "how much liquid fertilizer per acre",
     "slug": "how-much-liquid-fertilizer-per-acre",
-    "cluster": "",
+    "cluster": "fertilizer",
     "intent": "calculator",
     "score": 88.0,
     "source": "autosuggest",
@@ -2234,7 +2225,7 @@
   {
     "keyword": "how much lawn fertilizer per acre",
     "slug": "how-much-lawn-fertilizer-per-acre",
-    "cluster": "",
+    "cluster": "fertilizer",
     "intent": "calculator",
     "score": 88.0,
     "source": "autosuggest",
@@ -2243,7 +2234,7 @@
   {
     "keyword": "how much fertilizer per square foot",
     "slug": "how-much-fertilizer-per-square-foot",
-    "cluster": "",
+    "cluster": "fertilizer",
     "intent": "calculator",
     "score": 88.0,
     "source": "autosuggest",
@@ -2252,7 +2243,7 @@
   {
     "keyword": "how much topsoil per square foot",
     "slug": "how-much-topsoil-per-square-foot",
-    "cluster": "",
+    "cluster": "topsoil",
     "intent": "calculator",
     "score": 88.0,
     "source": "autosuggest",
@@ -2306,7 +2297,7 @@
   {
     "keyword": "how much sand for paver base",
     "slug": "how-much-sand-for-paver-base",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "calculator",
     "score": 86.0,
     "source": "autosuggest",
@@ -2315,7 +2306,7 @@
   {
     "keyword": "how much river rock for landscaping",
     "slug": "how-much-river-rock-for-landscaping",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "calculator",
     "score": 86.0,
     "source": "autosuggest",
@@ -2441,7 +2432,7 @@
   {
     "keyword": "how much fertilizer to use on garden",
     "slug": "how-much-fertilizer-to-use-on-garden",
-    "cluster": "",
+    "cluster": "fertilizer",
     "intent": "calculator",
     "score": 84.0,
     "source": "autosuggest",
@@ -2459,7 +2450,7 @@
   {
     "keyword": "how much topsoil do i need calculator",
     "slug": "how-much-topsoil-do-i-need-calculator",
-    "cluster": "",
+    "cluster": "topsoil",
     "intent": "calculator",
     "score": 84.0,
     "source": "autosuggest",
@@ -2468,7 +2459,7 @@
   {
     "keyword": "how much topsoil for top dressing lawn",
     "slug": "how-much-topsoil-for-top-dressing-lawn",
-    "cluster": "",
+    "cluster": "topsoil",
     "intent": "calculator",
     "score": 84.0,
     "source": "autosuggest",
@@ -2477,7 +2468,7 @@
   {
     "keyword": "how many inches of topsoil for grass",
     "slug": "how-many-inches-of-topsoil-for-grass",
-    "cluster": "",
+    "cluster": "grass-seed",
     "intent": "calculator",
     "score": 84.0,
     "source": "autosuggest",
@@ -2486,7 +2477,7 @@
   {
     "keyword": "how much top soil for new lawn",
     "slug": "how-much-top-soil-for-new-lawn",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "calculator",
     "score": 84.0,
     "source": "autosuggest",
@@ -2495,7 +2486,7 @@
   {
     "keyword": "how to calculate how much topsoil needed",
     "slug": "how-to-calculate-how-much-topsoil-needed",
-    "cluster": "",
+    "cluster": "topsoil",
     "intent": "calculator",
     "score": 84.0,
     "source": "autosuggest",
@@ -2504,7 +2495,7 @@
   {
     "keyword": "how much topsoil to cover 1 acre",
     "slug": "how-much-topsoil-to-cover-1-acre",
-    "cluster": "",
+    "cluster": "topsoil",
     "intent": "calculator",
     "score": 84.0,
     "source": "autosuggest",
@@ -2513,7 +2504,7 @@
   {
     "keyword": "how much is 10 yards of topsoil",
     "slug": "how-much-is-10-yards-of-topsoil",
-    "cluster": "",
+    "cluster": "topsoil",
     "intent": "calculator",
     "score": 84.0,
     "source": "autosuggest",
@@ -2522,7 +2513,7 @@
   {
     "keyword": "how much sand for brock paver base",
     "slug": "how-much-sand-for-brock-paver-base",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "calculator",
     "score": 84.0,
     "source": "autosuggest",
@@ -2531,7 +2522,7 @@
   {
     "keyword": "how much sand under paver base panel",
     "slug": "how-much-sand-under-paver-base-panel",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "calculator",
     "score": 84.0,
     "source": "autosuggest",
@@ -2540,7 +2531,7 @@
   {
     "keyword": "how much compost to add to lawn",
     "slug": "how-much-compost-to-add-to-lawn",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "calculator",
     "score": 84.0,
     "source": "autosuggest",
@@ -2549,7 +2540,7 @@
   {
     "keyword": "how much is river rock for landscaping",
     "slug": "how-much-is-river-rock-for-landscaping",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "calculator",
     "score": 84.0,
     "source": "autosuggest",
@@ -2558,7 +2549,7 @@
   {
     "keyword": "how much are river rocks for landscaping",
     "slug": "how-much-are-river-rocks-for-landscaping",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "calculator",
     "score": 84.0,
     "source": "autosuggest",
@@ -2585,7 +2576,7 @@
   {
     "keyword": "how much fertilizer per plant",
     "slug": "how-much-fertilizer-per-plant",
-    "cluster": "",
+    "cluster": "fertilizer",
     "intent": "calculator",
     "score": 82.0,
     "source": "autosuggest",
@@ -2594,7 +2585,7 @@
   {
     "keyword": "how much fertilizer per acre",
     "slug": "how-much-fertilizer-per-acre",
-    "cluster": "",
+    "cluster": "fertilizer",
     "intent": "calculator",
     "score": 82.0,
     "source": "autosuggest",
@@ -2603,7 +2594,7 @@
   {
     "keyword": "how much topsoil per m2",
     "slug": "how-much-topsoil-per-m2",
-    "cluster": "",
+    "cluster": "topsoil",
     "intent": "calculator",
     "score": 82.0,
     "source": "autosuggest",
@@ -2612,7 +2603,7 @@
   {
     "keyword": "how much compost per m2",
     "slug": "how-much-compost-per-m2",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "calculator",
     "score": 82.0,
     "source": "autosuggest",
@@ -2621,7 +2612,7 @@
   {
     "keyword": "how much does river rock cost for landscaping",
     "slug": "how-much-does-river-rock-cost-for-landscaping",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "commercial",
     "score": 82.0,
     "source": "autosuggest",
@@ -2639,7 +2630,7 @@
   {
     "keyword": "how much topsoil for raised beds",
     "slug": "how-much-topsoil-for-raised-beds",
-    "cluster": "soil",
+    "cluster": "topsoil",
     "intent": "calculator",
     "score": 78.0,
     "source": "autosuggest",
@@ -2693,7 +2684,7 @@
   {
     "keyword": "how much topsoil do i need",
     "slug": "how-much-topsoil-do-i-need",
-    "cluster": "",
+    "cluster": "topsoil",
     "intent": "calculator",
     "score": 78.0,
     "source": "autosuggest",
@@ -2702,7 +2693,7 @@
   {
     "keyword": "how much topsoil in a yard",
     "slug": "how-much-topsoil-in-a-yard",
-    "cluster": "",
+    "cluster": "topsoil",
     "intent": "calculator",
     "score": 78.0,
     "source": "autosuggest",
@@ -2711,7 +2702,7 @@
   {
     "keyword": "calculate how much topsoil i need",
     "slug": "calculate-how-much-topsoil-i-need",
-    "cluster": "",
+    "cluster": "topsoil",
     "intent": "calculator",
     "score": 78.0,
     "source": "autosuggest",
@@ -2720,7 +2711,7 @@
   {
     "keyword": "how much topsoil for grass seed",
     "slug": "how-much-topsoil-for-grass-seed",
-    "cluster": "",
+    "cluster": "grass-seed",
     "intent": "calculator",
     "score": 78.0,
     "source": "autosuggest",
@@ -2729,7 +2720,7 @@
   {
     "keyword": "how much top soil for grass",
     "slug": "how-much-top-soil-for-grass",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "calculator",
     "score": 78.0,
     "source": "autosuggest",
@@ -2738,7 +2729,7 @@
   {
     "keyword": "how many yards of topsoil calculator",
     "slug": "how-many-yards-of-topsoil-calculator",
-    "cluster": "",
+    "cluster": "topsoil",
     "intent": "calculator",
     "score": 78.0,
     "source": "autosuggest",
@@ -2747,7 +2738,7 @@
   {
     "keyword": "how much sand under paver base",
     "slug": "how-much-sand-under-paver-base",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "calculator",
     "score": 78.0,
     "source": "autosuggest",
@@ -2756,7 +2747,7 @@
   {
     "keyword": "how much sand for pavers calculator",
     "slug": "how-much-sand-for-pavers-calculator",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "calculator",
     "score": 78.0,
     "source": "autosuggest",
@@ -2765,7 +2756,7 @@
   {
     "keyword": "how much leveling sand for pavers",
     "slug": "how-much-leveling-sand-for-pavers",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "calculator",
     "score": 78.0,
     "source": "autosuggest",
@@ -2774,7 +2765,7 @@
   {
     "keyword": "how thick should paver sand be",
     "slug": "how-thick-should-paver-sand-be",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "calculator",
     "score": 78.0,
     "source": "autosuggest",
@@ -2783,7 +2774,7 @@
   {
     "keyword": "how deep should paver sand be",
     "slug": "how-deep-should-paver-sand-be",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "calculator",
     "score": 78.0,
     "source": "autosuggest",
@@ -2792,7 +2783,7 @@
   {
     "keyword": "how much paver base and sand",
     "slug": "how-much-paver-base-and-sand",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "calculator",
     "score": 78.0,
     "source": "autosuggest",
@@ -2801,7 +2792,7 @@
   {
     "keyword": "can i use sand as a base for pavers",
     "slug": "can-i-use-sand-as-a-base-for-pavers",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "informational",
     "score": 78.0,
     "source": "autosuggest",
@@ -2810,7 +2801,7 @@
   {
     "keyword": "how much compost do i need",
     "slug": "how-much-compost-do-i-need",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "calculator",
     "score": 78.0,
     "source": "autosuggest",
@@ -2819,7 +2810,7 @@
   {
     "keyword": "how to add compost to garden after planting",
     "slug": "how-to-add-compost-to-garden-after-planting",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "informational",
     "score": 78.0,
     "source": "autosuggest",
@@ -2828,7 +2819,7 @@
   {
     "keyword": "how to add compost to an existing garden",
     "slug": "how-to-add-compost-to-an-existing-garden",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "informational",
     "score": 78.0,
     "source": "autosuggest",
@@ -2855,7 +2846,7 @@
   {
     "keyword": "how to compost for a garden",
     "slug": "how-to-compost-for-a-garden",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "informational",
     "score": 76.0,
     "source": "autosuggest",
@@ -2864,7 +2855,7 @@
   {
     "keyword": "how much fertilizer to use",
     "slug": "how-much-fertilizer-to-use",
-    "cluster": "",
+    "cluster": "fertilizer",
     "intent": "calculator",
     "score": 72.0,
     "source": "autosuggest",
@@ -2873,7 +2864,7 @@
   {
     "keyword": "how to level a lawn with topsoil",
     "slug": "how-to-level-a-lawn-with-topsoil",
-    "cluster": "",
+    "cluster": "topsoil",
     "intent": "informational",
     "score": 72.0,
     "source": "autosuggest",
@@ -2882,7 +2873,7 @@
   {
     "keyword": "how to level topsoil for new lawn",
     "slug": "how-to-level-topsoil-for-new-lawn",
-    "cluster": "",
+    "cluster": "topsoil",
     "intent": "informational",
     "score": 72.0,
     "source": "autosuggest",
@@ -2891,7 +2882,7 @@
   {
     "keyword": "what type of sand for paver base",
     "slug": "what-type-of-sand-for-paver-base",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "informational",
     "score": 72.0,
     "source": "autosuggest",
@@ -2900,7 +2891,7 @@
   {
     "keyword": "how much sand for pavers",
     "slug": "how-much-sand-for-pavers",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "calculator",
     "score": 72.0,
     "source": "autosuggest",
@@ -2909,7 +2900,7 @@
   {
     "keyword": "what kind of sand for paver base",
     "slug": "what-kind-of-sand-for-paver-base",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "informational",
     "score": 72.0,
     "source": "autosuggest",
@@ -2918,7 +2909,7 @@
   {
     "keyword": "how to add compost to existing garden",
     "slug": "how-to-add-compost-to-existing-garden",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "informational",
     "score": 72.0,
     "source": "autosuggest",
@@ -2927,7 +2918,7 @@
   {
     "keyword": "how to add compost to existing plants",
     "slug": "how-to-add-compost-to-existing-plants",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "informational",
     "score": 72.0,
     "source": "autosuggest",
@@ -2936,7 +2927,7 @@
   {
     "keyword": "calculate compost needed for garden",
     "slug": "calculate-compost-needed-for-garden",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "calculator",
     "score": 72.0,
     "source": "autosuggest",
@@ -2945,7 +2936,7 @@
   {
     "keyword": "how to compost at home for gardening",
     "slug": "how-to-compost-at-home-for-gardening",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "informational",
     "score": 72.0,
     "source": "autosuggest",
@@ -2954,7 +2945,7 @@
   {
     "keyword": "compost calculator for the garden",
     "slug": "compost-calculator-for-the-garden",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "calculator",
     "score": 72.0,
     "source": "autosuggest",
@@ -2963,7 +2954,7 @@
   {
     "keyword": "how to measure river rock for landscaping",
     "slug": "how-to-measure-river-rock-for-landscaping",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "informational",
     "score": 72.0,
     "source": "autosuggest",
@@ -2972,7 +2963,7 @@
   {
     "keyword": "river rock calculator for landscaping",
     "slug": "river-rock-calculator-for-landscaping",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "calculator",
     "score": 72.0,
     "source": "autosuggest",
@@ -2981,7 +2972,7 @@
   {
     "keyword": "calculate river rock for landscaping",
     "slug": "calculate-river-rock-for-landscaping",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "calculator",
     "score": 72.0,
     "source": "autosuggest",
@@ -3017,7 +3008,7 @@
   {
     "keyword": "starter fertilizer per sq ft",
     "slug": "starter-fertilizer-per-sq-ft",
-    "cluster": "",
+    "cluster": "fertilizer",
     "intent": "informational",
     "score": 70.0,
     "source": "autosuggest",
@@ -3026,7 +3017,7 @@
   {
     "keyword": "lawn fertilizer 5000 sq ft",
     "slug": "lawn-fertilizer-5000-sq-ft",
-    "cluster": "",
+    "cluster": "fertilizer",
     "intent": "informational",
     "score": 70.0,
     "source": "autosuggest",
@@ -3035,7 +3026,7 @@
   {
     "keyword": "lawn fertilizer 15000 sq ft",
     "slug": "lawn-fertilizer-15000-sq-ft",
-    "cluster": "",
+    "cluster": "fertilizer",
     "intent": "informational",
     "score": 70.0,
     "source": "autosuggest",
@@ -3044,7 +3035,7 @@
   {
     "keyword": "amount of fertilizer per acre",
     "slug": "amount-of-fertilizer-per-acre",
-    "cluster": "",
+    "cluster": "fertilizer",
     "intent": "informational",
     "score": 70.0,
     "source": "autosuggest",
@@ -3053,7 +3044,7 @@
   {
     "keyword": "fertilizer weight per cubic foot",
     "slug": "fertilizer-weight-per-cubic-foot",
-    "cluster": "",
+    "cluster": "fertilizer",
     "intent": "informational",
     "score": 70.0,
     "source": "autosuggest",
@@ -3062,7 +3053,7 @@
   {
     "keyword": "how much paver sand to buy",
     "slug": "how-much-paver-sand-to-buy",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "commercial",
     "score": 70.0,
     "source": "autosuggest",
@@ -3071,7 +3062,7 @@
   {
     "keyword": "making compost for a garden",
     "slug": "making-compost-for-a-garden",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "informational",
     "score": 70.0,
     "source": "autosuggest",
@@ -3080,7 +3071,7 @@
   {
     "keyword": "what size river rock is best for landscaping",
     "slug": "what-size-river-rock-is-best-for-landscaping",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "commercial",
     "score": 70.0,
     "source": "autosuggest",
@@ -3089,7 +3080,7 @@
   {
     "keyword": "river rock per cubic yard",
     "slug": "river-rock-per-cubic-yard",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "informational",
     "score": 70.0,
     "source": "autosuggest",
@@ -3098,7 +3089,7 @@
   {
     "keyword": "lawn fertilizer cost per square foot",
     "slug": "lawn-fertilizer-cost-per-square-foot",
-    "cluster": "",
+    "cluster": "fertilizer",
     "intent": "commercial",
     "score": 68.0,
     "source": "autosuggest",
@@ -3107,7 +3098,7 @@
   {
     "keyword": "cost of river rock per yard",
     "slug": "cost-of-river-rock-per-yard",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "commercial",
     "score": 68.0,
     "source": "autosuggest",
@@ -3116,7 +3107,7 @@
   {
     "keyword": "how much topsoil needed",
     "slug": "how-much-topsoil-needed",
-    "cluster": "",
+    "cluster": "topsoil",
     "intent": "calculator",
     "score": 66.0,
     "source": "autosuggest",
@@ -3125,7 +3116,7 @@
   {
     "keyword": "topsoil calculator for lawn",
     "slug": "topsoil-calculator-for-lawn",
-    "cluster": "",
+    "cluster": "topsoil",
     "intent": "calculator",
     "score": 66.0,
     "source": "autosuggest",
@@ -3134,7 +3125,7 @@
   {
     "keyword": "how to level sand for pavers",
     "slug": "how-to-level-sand-for-pavers",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "informational",
     "score": 66.0,
     "source": "autosuggest",
@@ -3143,7 +3134,7 @@
   {
     "keyword": "how to set pavers in sand",
     "slug": "how-to-set-pavers-in-sand",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "informational",
     "score": 66.0,
     "source": "autosuggest",
@@ -3152,7 +3143,7 @@
   {
     "keyword": "how to add sand to pavers",
     "slug": "how-to-add-sand-to-pavers",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "informational",
     "score": 66.0,
     "source": "autosuggest",
@@ -3161,7 +3152,7 @@
   {
     "keyword": "how to add compost to garden",
     "slug": "how-to-add-compost-to-garden",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "informational",
     "score": 66.0,
     "source": "autosuggest",
@@ -3170,7 +3161,7 @@
   {
     "keyword": "how to apply compost to garden",
     "slug": "how-to-apply-compost-to-garden",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "informational",
     "score": 66.0,
     "source": "autosuggest",
@@ -3179,7 +3170,7 @@
   {
     "keyword": "how to put compost in garden",
     "slug": "how-to-put-compost-in-garden",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "informational",
     "score": 66.0,
     "source": "autosuggest",
@@ -3188,7 +3179,7 @@
   {
     "keyword": "how to add compost to soil",
     "slug": "how-to-add-compost-to-soil",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "informational",
     "score": 66.0,
     "source": "autosuggest",
@@ -3197,7 +3188,7 @@
   {
     "keyword": "how to make compost for garden",
     "slug": "how-to-make-compost-for-garden",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "informational",
     "score": 66.0,
     "source": "autosuggest",
@@ -3206,7 +3197,7 @@
   {
     "keyword": "how to create compost for garden",
     "slug": "how-to-create-compost-for-garden",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "informational",
     "score": 66.0,
     "source": "autosuggest",
@@ -3215,7 +3206,7 @@
   {
     "keyword": "sizes of river rock for landscaping",
     "slug": "sizes-of-river-rock-for-landscaping",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "informational",
     "score": 66.0,
     "source": "autosuggest",
@@ -3224,7 +3215,7 @@
   {
     "keyword": "average cost of river rock for landscaping",
     "slug": "average-cost-of-river-rock-for-landscaping",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "commercial",
     "score": 64.0,
     "source": "autosuggest",
@@ -3233,7 +3224,7 @@
   {
     "keyword": "using large quantities of fertilizer",
     "slug": "using-large-quantities-of-fertilizer",
-    "cluster": "",
+    "cluster": "fertilizer",
     "intent": "informational",
     "score": 60.0,
     "source": "autosuggest",
@@ -3242,7 +3233,7 @@
   {
     "keyword": "minimum topsoil depth for grass",
     "slug": "minimum-topsoil-depth-for-grass",
-    "cluster": "",
+    "cluster": "grass-seed",
     "intent": "informational",
     "score": 60.0,
     "source": "autosuggest",
@@ -3251,7 +3242,7 @@
   {
     "keyword": "paver base and paver sand",
     "slug": "paver-base-and-paver-sand",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "informational",
     "score": 60.0,
     "source": "autosuggest",
@@ -3260,7 +3251,7 @@
   {
     "keyword": "adding compost to existing garden",
     "slug": "adding-compost-to-existing-garden",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "informational",
     "score": 60.0,
     "source": "autosuggest",
@@ -3269,7 +3260,7 @@
   {
     "keyword": "river rock for landscaping bulk",
     "slug": "river-rock-for-landscaping-bulk",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "informational",
     "score": 60.0,
     "source": "autosuggest",
@@ -3278,7 +3269,7 @@
   {
     "keyword": "large river rock for landscaping",
     "slug": "large-river-rock-for-landscaping",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "informational",
     "score": 60.0,
     "source": "autosuggest",
@@ -3287,7 +3278,7 @@
   {
     "keyword": "cost of river rocks for landscaping",
     "slug": "cost-of-river-rocks-for-landscaping",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "commercial",
     "score": 58.0,
     "source": "autosuggest",
@@ -3296,7 +3287,7 @@
   {
     "keyword": "topsoil depth for lawn",
     "slug": "topsoil-depth-for-lawn",
-    "cluster": "",
+    "cluster": "topsoil",
     "intent": "informational",
     "score": 54.0,
     "source": "autosuggest",
@@ -3305,7 +3296,7 @@
   {
     "keyword": "sand for paver base",
     "slug": "sand-for-paver-base",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "informational",
     "score": 54.0,
     "source": "autosuggest",
@@ -3314,7 +3305,7 @@
   {
     "keyword": "base sand for pavers",
     "slug": "base-sand-for-pavers",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "informational",
     "score": 54.0,
     "source": "autosuggest",
@@ -3323,7 +3314,7 @@
   {
     "keyword": "paver sand base depth",
     "slug": "paver-sand-base-depth",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "informational",
     "score": 54.0,
     "source": "autosuggest",
@@ -3332,7 +3323,7 @@
   {
     "keyword": "patio paver base sand",
     "slug": "patio-paver-base-sand",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "informational",
     "score": 54.0,
     "source": "autosuggest",
@@ -3341,7 +3332,7 @@
   {
     "keyword": "compost what to add",
     "slug": "compost-what-to-add",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "informational",
     "score": 54.0,
     "source": "autosuggest",
@@ -3350,7 +3341,7 @@
   {
     "keyword": "adding compost to soil",
     "slug": "adding-compost-to-soil",
-    "cluster": "",
+    "cluster": "soil",
     "intent": "informational",
     "score": 54.0,
     "source": "autosuggest",
@@ -3359,7 +3350,7 @@
   {
     "keyword": "landscaping using river rock",
     "slug": "landscaping-using-river-rock",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "informational",
     "score": 54.0,
     "source": "autosuggest",
@@ -3368,7 +3359,7 @@
   {
     "keyword": "river rocks for landscaping",
     "slug": "river-rocks-for-landscaping",
-    "cluster": "",
+    "cluster": "gravel",
     "intent": "informational",
     "score": 54.0,
     "source": "autosuggest",

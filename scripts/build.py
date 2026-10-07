@@ -78,6 +78,8 @@ def build() -> dict:
         "tile": "Count tiles and waste allowance for floors and walls.",
         "grass-seed": "Seed a new lawn or overseed an existing one at the right rate.",
         "concrete": "Get cubic yards and bag counts for slabs and footings.",
+        "topsoil": "Estimate cubic yards or bags of topsoil to fill or level any area.",
+        "fertilizer": "Find pounds and bags of fertilizer for your lawn at the right rate.",
     }
     for c in categories:
         c["blurb"] = blurbs.get(c["id"], "Free calculators and practical guides.")
@@ -120,7 +122,7 @@ def build() -> dict:
 
     # --- homepage ---
     ctx = common(title=f"{site['name']} — {site['tagline']}",
-                 description=site["tagline"] + " Free, fast calculators for mulch, soil, gravel, paint, tile, seed and concrete.",
+                 description=site["tagline"] + " Free, fast calculators for mulch, soil, topsoil, gravel, fertilizer, paint, tile, seed and concrete.",
                  canonical=_abs(site, "/"),
                  schemas=[json.dumps(seolib.website_schema(site), ensure_ascii=False)])
     ctx.update(categories=categories, articles=published[:12])
