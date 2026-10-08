@@ -448,9 +448,20 @@ def generate_article(plan_item: dict) -> dict | None:
             calc_title=calc_title, calc_short=calc_short.title(), worked=worked,
             facts=content_lib.facts_block(calc_key),
             size_table=content_lib.size_table_md(calc_key))
-        body = llm.generate(prompt, system=SYSTEM, max_tokens=4096)
+        # A truncated or interrupted response can come back very short. Retry once
+        # rather than publishing/throwing away the slot with a stub.
+        for attempt in range(2):
+            body = llm.generate(prompt, system=SYSTEM, max_tokens=4096)
+            if body and word_count(body) >= 400:
+                break
+            if body:
+                print(f"[generate] short draft for {slug} "
+                      f"({word_count(body)} words), retrying")
         if body:
             print(f"[generate] LLM draft for {slug}: {word_count(body)} words")
+        if body and word_count(body) < 300:
+            print(f"[generate] discard {slug}: draft too short after retry")
+            return None
     if not body:
         # Without an LLM key the fallbacks produce templated drafts that are short and
         # alike across a cluster. Publishing those at scale is what creates duplicate/thin

@@ -288,26 +288,8 @@
     "used": false
   },
   {
-    "keyword": "how much gravel do i need for a 10 gal tank",
-    "slug": "how-much-gravel-do-i-need-for-a-10-gal-tank",
-    "cluster": "gravel",
-    "intent": "calculator",
-    "score": 100.0,
-    "source": "autosuggest",
-    "used": false
-  },
-  {
     "keyword": "how much gravel do i need for a 10x12 shed",
     "slug": "how-much-gravel-do-i-need-for-a-10x12-shed",
-    "cluster": "gravel",
-    "intent": "calculator",
-    "score": 100.0,
-    "source": "autosuggest",
-    "used": false
-  },
-  {
-    "keyword": "how much gravel do i need for a 20 gal tank",
-    "slug": "how-much-gravel-do-i-need-for-a-20-gal-tank",
     "cluster": "gravel",
     "intent": "calculator",
     "score": 100.0,
@@ -326,24 +308,6 @@
   {
     "keyword": "how much gravel do i need for a driveway",
     "slug": "how-much-gravel-do-i-need-for-a-driveway",
-    "cluster": "gravel",
-    "intent": "calculator",
-    "score": 100.0,
-    "source": "autosuggest",
-    "used": false
-  },
-  {
-    "keyword": "how much gravel do i need for a 10 gallon tank",
-    "slug": "how-much-gravel-do-i-need-for-a-10-gallon-tank",
-    "cluster": "gravel",
-    "intent": "calculator",
-    "score": 100.0,
-    "source": "autosuggest",
-    "used": false
-  },
-  {
-    "keyword": "how much gravel do i need for a 5 gallon tank",
-    "slug": "how-much-gravel-do-i-need-for-a-5-gallon-tank",
     "cluster": "gravel",
     "intent": "calculator",
     "score": 100.0,

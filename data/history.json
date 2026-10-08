@@ -761,9 +761,9 @@
   },
   {
     "date": "2026-10-08",
-    "articles": 55,
+    "articles": 54,
     "avg_seo_score": 98.6,
-    "total_words": 45730,
+    "total_words": 44720,
     "per_article": [
       {
         "slug": "mulch-calculator",
@@ -1532,22 +1532,6 @@
           "calculator": true
         },
         "word_count": 852
-      },
-      {
-        "slug": "how-much-gravel-do-i-need-for-a-10-gal-tank",
-        "score": 100.0,
-        "checks": {
-          "title": true,
-          "meta": true,
-          "slug": true,
-          "h1_once": true,
-          "has_faq": true,
-          "schema": true,
-          "links": true,
-          "word_count": true,
-          "calculator": true
-        },
-        "word_count": 1010
       },
       {
         "slug": "how-much-paint-do-i-need-for-a-room",

@@ -22,8 +22,7 @@
       "how-much-gravel-do-i-need-for-a-french-drain",
       "how-much-gravel-do-i-need-for-a-20x20-area",
       "how-much-gravel-do-i-need-per-square-metre",
-      "how-much-gravel-do-i-need-for-a-10x12-shed",
-      "how-much-gravel-do-i-need-for-a-10-gal-tank"
+      "how-much-gravel-do-i-need-for-a-10x12-shed"
     ],
     "paint-calculator": [
       "how-much-paint-do-i-need-for-a-bedroom",
@@ -77,8 +76,7 @@
       "how-much-gravel-do-i-need-for-a-french-drain",
       "how-much-gravel-do-i-need-for-a-20x20-area",
       "how-much-gravel-do-i-need-per-square-metre",
-      "how-much-gravel-do-i-need-for-a-10x12-shed",
-      "how-much-gravel-do-i-need-for-a-10-gal-tank"
+      "how-much-gravel-do-i-need-for-a-10x12-shed"
     ],
     "how-much-paint-do-i-need-for-a-bedroom": [
       "paint-calculator",
@@ -132,8 +130,7 @@
       "how-much-gravel-do-i-need-for-my-driveway",
       "how-much-gravel-do-i-need-for-a-20x20-area",
       "how-much-gravel-do-i-need-per-square-metre",
-      "how-much-gravel-do-i-need-for-a-10x12-shed",
-      "how-much-gravel-do-i-need-for-a-10-gal-tank"
+      "how-much-gravel-do-i-need-for-a-10x12-shed"
     ],
     "how-much-mulch-do-i-need-for-200-square-feet": [
       "mulch-calculator",
@@ -157,8 +154,7 @@
       "how-much-gravel-do-i-need-for-my-driveway",
       "how-much-gravel-do-i-need-for-a-french-drain",
       "how-much-gravel-do-i-need-per-square-metre",
-      "how-much-gravel-do-i-need-for-a-10x12-shed",
-      "how-much-gravel-do-i-need-for-a-10-gal-tank"
+      "how-much-gravel-do-i-need-for-a-10x12-shed"
     ],
     "how-much-paint-do-i-need-for-a-10x10-room": [
       "paint-calculator",
@@ -220,8 +216,7 @@
       "how-much-gravel-do-i-need-for-my-driveway",
       "how-much-gravel-do-i-need-for-a-french-drain",
       "how-much-gravel-do-i-need-for-a-20x20-area",
-      "how-much-gravel-do-i-need-for-a-10x12-shed",
-      "how-much-gravel-do-i-need-for-a-10-gal-tank"
+      "how-much-gravel-do-i-need-for-a-10x12-shed"
     ],
     "how-much-paint-do-i-need-for-a-front-door": [
       "paint-calculator",
@@ -320,8 +315,7 @@
       "how-much-gravel-do-i-need-for-my-driveway",
       "how-much-gravel-do-i-need-for-a-french-drain",
       "how-much-gravel-do-i-need-for-a-20x20-area",
-      "how-much-gravel-do-i-need-per-square-metre",
-      "how-much-gravel-do-i-need-for-a-10-gal-tank"
+      "how-much-gravel-do-i-need-per-square-metre"
     ],
     "how-much-paint-do-i-need-calculator-sq-ft": [
       "paint-calculator",
@@ -376,14 +370,6 @@
       "how-much-soil-for-a-4x8-raised-bed",
       "how-much-soil-for-a-8x4x1-raised-bed",
       "how-much-potting-soil-for-a-raised-bed"
-    ],
-    "how-much-gravel-do-i-need-for-a-10-gal-tank": [
-      "gravel-calculator",
-      "how-much-gravel-do-i-need-for-my-driveway",
-      "how-much-gravel-do-i-need-for-a-french-drain",
-      "how-much-gravel-do-i-need-for-a-20x20-area",
-      "how-much-gravel-do-i-need-per-square-metre",
-      "how-much-gravel-do-i-need-for-a-10x12-shed"
     ],
     "how-much-paint-do-i-need-for-a-room": [
       "paint-calculator",

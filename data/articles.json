@@ -130,7 +130,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 54 available)"
+          "detail": "internal links 6 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -285,7 +285,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 54 available)"
+          "detail": "internal links 7 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -381,11 +381,6 @@
         "to": "how-much-gravel-do-i-need-for-a-10x12-shed",
         "anchor": "how much gravel do i need for a 10x12 shed",
         "title": "How Much Gravel Do I Need for a 10x12 Shed"
-      },
-      {
-        "to": "how-much-gravel-do-i-need-for-a-10-gal-tank",
-        "anchor": "how much gravel do i need for a 10 gal tank",
-        "title": "How Much Gravel Do I Need for a 10 Gal Tank"
       }
     ],
     "schema_types": [
@@ -435,7 +430,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 54 available)"
+          "detail": "internal links 5 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -588,7 +583,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 54 available)"
+          "detail": "internal links 6 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -736,7 +731,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 5 (want 3-8, 54 available)"
+          "detail": "internal links 5 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -885,7 +880,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 54 available)"
+          "detail": "internal links 6 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -1031,7 +1026,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 5 (want 3-8, 54 available)"
+          "detail": "internal links 5 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -1182,7 +1177,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 54 available)"
+          "detail": "internal links 6 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -1337,7 +1332,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 54 available)"
+          "detail": "internal links 7 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -1433,11 +1428,6 @@
         "to": "how-much-gravel-do-i-need-for-a-10x12-shed",
         "anchor": "how much gravel do i need for a 10x12 shed",
         "title": "How Much Gravel Do I Need for a 10x12 Shed"
-      },
-      {
-        "to": "how-much-gravel-do-i-need-for-a-10-gal-tank",
-        "anchor": "how much gravel do i need for a 10 gal tank",
-        "title": "How Much Gravel Do I Need for a 10 Gal Tank"
       }
     ],
     "schema_types": [
@@ -1487,7 +1477,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 54 available)"
+          "detail": "internal links 5 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -1640,7 +1630,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 54 available)"
+          "detail": "internal links 6 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -1788,7 +1778,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 5 (want 3-8, 54 available)"
+          "detail": "internal links 5 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -1937,7 +1927,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 54 available)"
+          "detail": "internal links 6 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -2083,7 +2073,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 5 (want 3-8, 54 available)"
+          "detail": "internal links 5 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -2234,7 +2224,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 54 available)"
+          "detail": "internal links 6 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -2389,7 +2379,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 54 available)"
+          "detail": "internal links 7 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -2485,11 +2475,6 @@
         "to": "how-much-gravel-do-i-need-for-a-10x12-shed",
         "anchor": "how much gravel do i need for a 10x12 shed",
         "title": "How Much Gravel Do I Need for a 10x12 Shed"
-      },
-      {
-        "to": "how-much-gravel-do-i-need-for-a-10-gal-tank",
-        "anchor": "how much gravel do i need for a 10 gal tank",
-        "title": "How Much Gravel Do I Need for a 10 Gal Tank"
       }
     ],
     "schema_types": [
@@ -2507,7 +2492,7 @@
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.14 vs how-much-gravel-do-i-need-for-a-10-gal-tank"
+          "detail": "max similarity 0.10 vs how-much-gravel-do-i-need-per-square-metre"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -2539,7 +2524,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 54 available)"
+          "detail": "internal links 5 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -2690,7 +2675,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 54 available)"
+          "detail": "internal links 6 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -2845,7 +2830,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 54 available)"
+          "detail": "internal links 7 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -2941,11 +2926,6 @@
         "to": "how-much-gravel-do-i-need-for-a-10x12-shed",
         "anchor": "how much gravel do i need for a 10x12 shed",
         "title": "How Much Gravel Do I Need for a 10x12 Shed"
-      },
-      {
-        "to": "how-much-gravel-do-i-need-for-a-10-gal-tank",
-        "anchor": "how much gravel do i need for a 10 gal tank",
-        "title": "How Much Gravel Do I Need for a 10 Gal Tank"
       }
     ],
     "schema_types": [
@@ -2963,7 +2943,7 @@
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.11 vs how-much-gravel-do-i-need-for-a-10-gal-tank"
+          "detail": "max similarity 0.09 vs how-much-gravel-do-i-need-for-a-10x12-shed"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -2995,7 +2975,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 54 available)"
+          "detail": "internal links 5 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3148,7 +3128,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 54 available)"
+          "detail": "internal links 6 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3297,7 +3277,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 54 available)"
+          "detail": "internal links 6 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3443,7 +3423,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 5 (want 3-8, 54 available)"
+          "detail": "internal links 5 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3586,7 +3566,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 54 available)"
+          "detail": "internal links 8 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3702,7 +3682,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 3 (want 3-8, 54 available)"
+          "detail": "internal links 3 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3853,7 +3833,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 54 available)"
+          "detail": "internal links 6 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -4008,7 +3988,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 54 available)"
+          "detail": "internal links 7 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -4104,11 +4084,6 @@
         "to": "how-much-gravel-do-i-need-for-a-10x12-shed",
         "anchor": "how much gravel do i need for a 10x12 shed",
         "title": "How Much Gravel Do I Need for a 10x12 Shed"
-      },
-      {
-        "to": "how-much-gravel-do-i-need-for-a-10-gal-tank",
-        "anchor": "how much gravel do i need for a 10 gal tank",
-        "title": "How Much Gravel Do I Need for a 10 Gal Tank"
       }
     ],
     "schema_types": [
@@ -4126,7 +4101,7 @@
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.14 vs how-much-gravel-do-i-need-for-a-10-gal-tank"
+          "detail": "max similarity 0.11 vs how-much-gravel-do-i-need-for-a-french-drain"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -4158,7 +4133,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 54 available)"
+          "detail": "internal links 5 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -4311,7 +4286,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 54 available)"
+          "detail": "internal links 6 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -4459,7 +4434,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 5 (want 3-8, 54 available)"
+          "detail": "internal links 5 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -4608,7 +4583,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 54 available)"
+          "detail": "internal links 6 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -4759,7 +4734,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 54 available)"
+          "detail": "internal links 6 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -4914,7 +4889,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 54 available)"
+          "detail": "internal links 7 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -5067,7 +5042,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 54 available)"
+          "detail": "internal links 6 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -5215,7 +5190,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 5 (want 3-8, 54 available)"
+          "detail": "internal links 5 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -5364,7 +5339,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 54 available)"
+          "detail": "internal links 6 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -5480,7 +5455,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 3 (want 3-8, 54 available)"
+          "detail": "internal links 3 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -5626,7 +5601,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 5 (want 3-8, 54 available)"
+          "detail": "internal links 5 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -5777,7 +5752,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 54 available)"
+          "detail": "internal links 6 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -5932,7 +5907,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 54 available)"
+          "detail": "internal links 7 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6028,11 +6003,6 @@
         "to": "how-much-gravel-do-i-need-per-square-metre",
         "anchor": "how much gravel do i need per square metre",
         "title": "How Much Gravel Do I Need Per Square Metre"
-      },
-      {
-        "to": "how-much-gravel-do-i-need-for-a-10-gal-tank",
-        "anchor": "how much gravel do i need for a 10 gal tank",
-        "title": "How Much Gravel Do I Need for a 10 Gal Tank"
       }
     ],
     "schema_types": [
@@ -6082,7 +6052,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 54 available)"
+          "detail": "internal links 5 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6235,7 +6205,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 54 available)"
+          "detail": "internal links 6 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6383,7 +6353,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 5 (want 3-8, 54 available)"
+          "detail": "internal links 5 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6532,7 +6502,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 54 available)"
+          "detail": "internal links 6 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6648,7 +6618,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 3 (want 3-8, 54 available)"
+          "detail": "internal links 3 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6794,7 +6764,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 5 (want 3-8, 54 available)"
+          "detail": "internal links 5 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6937,7 +6907,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 54 available)"
+          "detail": "internal links 8 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6956,162 +6926,6 @@
       "position": 0
     },
     "word_count": 942
-  },
-  {
-    "id": "how-much-mulch-do-i-need-for-600-square-feet",
-    "slug": "how-much-mulch-do-i-need-for-600-square-feet",
-    "title": "How Much Mulch Do I Need for 600 Square Feet",
-    "cluster": "mulch",
-    "primary_keyword": "how much mulch do i need for 600 square feet",
-    "secondary_keywords": [
-      "how much mulch do i need for 500 sq ft",
-      "how much mulch do i need for 300 square feet",
-      "how much mulch do i need for 200 square feet",
-      "how much mulch do i need for 400 square feet",
-      "how much mulch do i need for my flower bed"
-    ],
-    "intent": "calculator",
-    "is_pillar": false,
-    "calculator": "mulch",
-    "calculator_title": "Mulch Calculator",
-    "calculator_defaults": {
-      "length": 24.5,
-      "width": 24.5,
-      "depth": 3
-    },
-    "calculator_output": {
-      "square_feet": 600.3,
-      "cubic_feet": 150.1,
-      "cubic_yards": 5.56,
-      "bags_2cf": 76
-    },
-    "meta_description": "To cover 600 square feet with a standard 3-inch layer of mulch, you need 150 cubic feet of mulch, which equals 5.56 cubic yards or 76 standard.",
-    "body_markdown": "To cover 600 square feet with a standard 3-inch layer of mulch, you need 150 cubic feet of mulch, which equals 5.56 cubic yards or 76 standard two-cubic-foot bags. If you apply a lighter 2-inch layer, you will need roughly 100 cubic feet, which equals 3.7 cubic yards or 50 bags.\n\nMulch is sold either by the bag or in bulk by the cubic yard. Standard store-bought bags usually hold 2 cubic feet of material. Bulk mulch from landscape suppliers is measured in cubic yards, where one cubic yard equals 27 cubic feet (or 13.5 two-cubic-foot bags). For larger areas like 600 square feet,",
-    "faq": [
-      {
-        "q": "How deep should mulch be?",
-        "a": "Two to three inches for most beds. More than four inches can hold too much moisture against stems."
-      },
-      {
-        "q": "How many bags of mulch is a cubic yard?",
-        "a": "Thirteen and a half 2-cubic-foot bags, since a cubic yard is 27 cubic feet."
-      },
-      {
-        "q": "When is the best time to mulch?",
-        "a": "Early spring, after the soil has warmed, and again in autumn if you want winter protection."
-      },
-      {
-        "q": "Does mulch prevent weeds?",
-        "a": "It suppresses most weeds if the layer is at least two inches deep and kept clear of plant stems."
-      }
-    ],
-    "status": "rejected",
-    "created": "2026-10-08",
-    "updated": "2026-10-08",
-    "revision": 1,
-    "internal_links": [
-      {
-        "to": "mulch-calculator",
-        "anchor": "how much mulch do i need",
-        "title": "Mulch Calculator: How Much Mulch Do You Need?"
-      },
-      {
-        "to": "how-much-mulch-do-i-need-for-500-sq-ft",
-        "anchor": "how much mulch do i need for 500 sq ft",
-        "title": "How Much Mulch for 500 Sq Ft? Yards and Bags"
-      },
-      {
-        "to": "how-much-mulch-do-i-need-for-300-square-feet",
-        "anchor": "how much mulch do i need for 300 square feet",
-        "title": "How Much Mulch Do I Need for 300 Square Feet"
-      },
-      {
-        "to": "how-much-mulch-do-i-need-for-200-square-feet",
-        "anchor": "how much mulch do i need for 200 square feet",
-        "title": "How Much Mulch Do I Need for 200 Square Feet"
-      },
-      {
-        "to": "how-much-mulch-do-i-need-for-400-square-feet",
-        "anchor": "how much mulch do i need for 400 square feet",
-        "title": "How Much Mulch Do I Need for 400 Square Feet"
-      },
-      {
-        "to": "how-much-mulch-do-i-need-for-my-flower-bed",
-        "anchor": "how much mulch do i need for my flower bed",
-        "title": "How Much Mulch Do I Need for My Flower Bed"
-      },
-      {
-        "to": "how-much-mulch-do-i-need-for-1000-square-feet",
-        "anchor": "how much mulch do i need for 1000 square feet",
-        "title": "How Much Mulch Do I Need for 1000 Square Feet"
-      }
-    ],
-    "schema_types": [
-      "Article",
-      "BreadcrumbList",
-      "FAQPage"
-    ],
-    "quality": {
-      "score": 72.0,
-      "passed": false,
-      "gates": {
-        "thin_content": {
-          "pass": false,
-          "detail": "word count 107 (min 600)"
-        },
-        "duplicate_content": {
-          "pass": true,
-          "detail": "max similarity 0.04 vs mulch-calculator"
-        },
-        "keyword_stuffing": {
-          "pass": true,
-          "detail": "keyword density 0.00%"
-        },
-        "ai_cliches": {
-          "pass": true,
-          "detail": "cliches: none"
-        },
-        "readability": {
-          "pass": true,
-          "detail": "avg sentence length 11.9 words"
-        },
-        "heading_structure": {
-          "pass": false,
-          "detail": "h2=0 h3=0 (no h1 in body)"
-        },
-        "has_calculator_or_data": {
-          "pass": true,
-          "detail": "has calculator + computed output"
-        },
-        "meta_length": {
-          "pass": true,
-          "detail": "meta length 143"
-        },
-        "title_length": {
-          "pass": true,
-          "detail": "title length 44"
-        },
-        "internal_links": {
-          "pass": true,
-          "detail": "internal links 7 (want 3-8, 55 available)"
-        },
-        "schema_present": {
-          "pass": true,
-          "detail": "schema: ['Article', 'BreadcrumbList', 'FAQPage']"
-        },
-        "alt_text": {
-          "pass": true,
-          "detail": "hero alt derivable from title"
-        }
-      }
-    },
-    "metrics": {
-      "clicks": 0,
-      "impressions": 0,
-      "ctr": 0,
-      "position": 0
-    },
-    "word_count": 107
   },
   {
     "id": "how-much-soil-for-a-4x2x1-raised-garden-bed",
@@ -7248,7 +7062,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 54 available)"
+          "detail": "internal links 7 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -7267,156 +7081,6 @@
       "position": 0
     },
     "word_count": 852
-  },
-  {
-    "id": "how-much-gravel-do-i-need-for-a-10-gal-tank",
-    "slug": "how-much-gravel-do-i-need-for-a-10-gal-tank",
-    "title": "How Much Gravel Do I Need for a 10 Gal Tank",
-    "cluster": "gravel",
-    "primary_keyword": "how much gravel do i need for a 10 gal tank",
-    "secondary_keywords": [
-      "how much gravel do i need for my driveway",
-      "how much gravel do i need for a french drain",
-      "how much gravel do i need for a 20x20 area",
-      "how much gravel do i need per square metre",
-      "how much gravel do i need for a 10x12 shed"
-    ],
-    "intent": "calculator",
-    "is_pillar": false,
-    "calculator": "gravel",
-    "calculator_title": "Gravel Calculator",
-    "calculator_defaults": {
-      "length": 20,
-      "width": 10,
-      "depth": 3
-    },
-    "calculator_output": {
-      "square_feet": 200.0,
-      "cubic_yards": 1.85,
-      "tons": 2.59
-    },
-    "meta_description": "For a standard 10-gallon aquarium, you need approximately 10 to 15 pounds of gravel to achieve a substrate depth of 1.5 to 2 inches.",
-    "body_markdown": "For a standard 10-gallon aquarium, you need approximately 10 to 15 pounds of gravel to achieve a substrate depth of 1.5 to 2 inches. This amount provides enough coverage for the bottom of the tank to support beneficial bacteria and root your aquatic plants.\n\nWhen planning larger outdoor projects, the volume of gravel required increases significantly. Whether you are wondering how much gravel do i need for my driveway or how much gravel do i need for a french drain, the math remains consistent based on the dimensions of your project.\n\n## How to Calculate Gravel\n\nTo determine the amount of gravel needed for any area, you must calculate the volume in cubic feet and then convert that to cubic yards or tons. Gravel is typically sold by the cubic yard or by the ton. A cubic yard of 3/4 inch crushed stone weighs about 1.4 tons.\n\nFollow these steps to find your total:\n\n1. Measure the length and width of the area in feet. Multiply these to get the square footage.\n2. Determine your desired depth in inches and convert it to feet (for example, 3 inches is 0.25 feet).\n3. Multiply the square footage by the depth in feet to get the volume in cubic feet.\n4. Divide the cubic feet by 27 to find the total cubic yards.\n5. Multiply the cubic yards by 1.4 to estimate the weight in tons.\n\n### Worked Example\n\nIf you are calculating how much gravel do i need for a 20x20 area, or in this specific case, a 20-foot by 10-foot space at a depth of 3 inches, here is the breakdown:\n\n*   Length: 20 feet\n*   Width: 10 feet\n*   Depth: 3 inches (0.25 feet)\n*   Square Feet: 200.0\n*   Cubic Yards: 1.85\n*   Tons: 2.59\n\nWhen calculating how much gravel do i need per square metre for metric-based projects, remember that 1 cubic metre is roughly equivalent to 1.3 cubic yards. Always round your final estimate up by 10% to account for settling and minor variations in depth.\n\n## How Much You Need at Common Sizes\n\nUse the following table as a reference for standard project sizes. These estimates assume a consistent depth across the entire area.\n\n| Job size | Cubic yards | Tons |\n|---|---|---|\n| 100 sq ft, 3 in deep | 0.93 | 1.3 |\n| 200 sq ft, 3 in deep | 1.85 | 2.59 |\n| 400 sq ft, 4 in deep | 4.94 | 6.91 |\n| 600 sq ft, 4 in deep | 7.41 | 10.37 |\n\nIf you are trying to figure out how much gravel do i need for a 10x12 shed, you are looking at 120 square feet. At a standard 3-inch depth, you would require approximately 1.11 cubic yards, or roughly 1.55 tons of material.\n\n## Choosing the Right Material\n\nThe type of gravel you choose dictates both the aesthetic and the functionality of your space.\n\n*   3/4 inch crushed stone: This is the industry standard for an all-round base. It is the most common answer for those asking how much gravel do i need for my driveway, as the angular edges lock together to create a stable surface.\n*   Pea gravel: These are small, rounded stones. They are excellent for garden paths and play areas but can be unstable underfoot. They do not compact as well as crushed stone.\n*   River rock: Best used for decorative borders or dry creek beds. Because they are smooth and rounded, they will shift if used in high-traffic areas.\n*   Decomposed granite: This material compacts into a very firm surface. It is an excellent choice for patios and formal paths where you want a natural, rustic look that won't shift when you walk on it.\n\n## Practical Installation Tips\n\nBefore ordering your gravel, prepare your site properly to ensure the longevity of your project.\n\n### Lay Landscape Fabric\nAlways lay a high-quality landscape fabric before spreading your stone. This prevents the gravel from sinking into the soil over time and helps suppress weed growth. Without this barrier, your gravel will eventually disappear into the dirt, requiring you to add more material every few years.\n\n### Compact in Layers\nIf you are building a driveway or a heavy-duty path, do not dump all your gravel at once. Compact the base in two thinner layers rather than one thick one. This ensures the material settles evenly and prevents soft spots from forming. Using a plate compactor or a heavy hand tamper between layers significantly increases the stability of the finished project.\n\n### Install Border Edging\nGravel is notorious for migrating into lawns and flower beds. Install a physical border edge—such as pressure-treated timber, steel, or plastic edging—to keep the stones contained. This prevents the gravel from spreading into your grass, which makes lawn maintenance much easier and keeps your landscape looking tidy.\n\n### Consider Your Depth\nYour intended use should dictate the depth of your gravel layer:\n*   2 inches: Suitable for light footpaths or decorative borders.\n*   3 inches: The standard for garden paths and patio bases, especially when placed over landscape fabric.\n*   4 inches: Required for light driveways. This should be laid and compacted in two separate layers.\n*   6 inches: Necessary for areas with regular vehicle traffic or parking.\n\n## Common Mistakes to Avoid\n\nThe most frequent error is underestimating the amount of material required. When calculating, always account for the fact that gravel will settle. If you order the exact minimum, you will likely find yourself with thin spots within a few months.\n\nAnother mistake is failing to level the subgrade. If the ground underneath is uneven, your gravel layer will be deeper in some spots and shallower in others. This leads to inconsistent drainage and shifting stones. Spend time leveling and smoothing the soil before you lay your fabric.\n\nFinally, avoid choosing the wrong stone size for the application. Using large, decorative river rock for a high-traffic driveway will result in a difficult walking surface and a messy appearance. Conversely, using fine, dusty gravel for a drainage project may clog your system. Match the stone size to the specific needs of your project to ensure the best results.",
-    "faq": [
-      {
-        "q": "How much does a cubic yard of gravel weigh?",
-        "a": "Roughly 1.4 tons for 3/4-inch crushed stone, though it varies by stone type."
-      },
-      {
-        "q": "How deep should gravel be for a driveway?",
-        "a": "Four inches compacted for a light drive, six inches for regular vehicle traffic."
-      },
-      {
-        "q": "Can I put gravel directly on soil?",
-        "a": "Yes for paths, but lay landscape fabric first to stop the gravel sinking into the soil."
-      },
-      {
-        "q": "How many tons of gravel in a cubic yard?",
-        "a": "About 1.3 to 1.5 tons depending on the stone, with 1.4 tons a good default."
-      }
-    ],
-    "status": "approved",
-    "created": "2026-10-08",
-    "updated": "2026-10-08",
-    "revision": 1,
-    "internal_links": [
-      {
-        "to": "gravel-calculator",
-        "anchor": "how much gravel do i need",
-        "title": "Gravel Calculator: How Much Gravel Do You Need?"
-      },
-      {
-        "to": "how-much-gravel-do-i-need-for-my-driveway",
-        "anchor": "how much gravel do i need for my driveway",
-        "title": "How Much Gravel for a Driveway? Yards and Tons"
-      },
-      {
-        "to": "how-much-gravel-do-i-need-for-a-french-drain",
-        "anchor": "how much gravel do i need for a french drain",
-        "title": "How Much Gravel Do I Need for a French Drain"
-      },
-      {
-        "to": "how-much-gravel-do-i-need-for-a-20x20-area",
-        "anchor": "how much gravel do i need for a 20x20 area",
-        "title": "How Much Gravel Do I Need for a 20x20 Area"
-      },
-      {
-        "to": "how-much-gravel-do-i-need-per-square-metre",
-        "anchor": "how much gravel do i need per square metre",
-        "title": "How Much Gravel Do I Need Per Square Metre"
-      },
-      {
-        "to": "how-much-gravel-do-i-need-for-a-10x12-shed",
-        "anchor": "how much gravel do i need for a 10x12 shed",
-        "title": "How Much Gravel Do I Need for a 10x12 Shed"
-      }
-    ],
-    "schema_types": [
-      "Article",
-      "BreadcrumbList",
-      "FAQPage"
-    ],
-    "quality": {
-      "score": 100.0,
-      "passed": true,
-      "gates": {
-        "thin_content": {
-          "pass": true,
-          "detail": "word count 1010 (min 600)"
-        },
-        "duplicate_content": {
-          "pass": true,
-          "detail": "max similarity 0.09 vs how-much-gravel-do-i-need-per-square-metre"
-        },
-        "keyword_stuffing": {
-          "pass": true,
-          "detail": "keyword density 0.00%"
-        },
-        "ai_cliches": {
-          "pass": true,
-          "detail": "cliches: none"
-        },
-        "readability": {
-          "pass": true,
-          "detail": "avg sentence length 13.0 words"
-        },
-        "heading_structure": {
-          "pass": true,
-          "detail": "h2=5 h3=5 (no h1 in body)"
-        },
-        "has_calculator_or_data": {
-          "pass": true,
-          "detail": "has calculator + computed output"
-        },
-        "meta_length": {
-          "pass": true,
-          "detail": "meta length 132"
-        },
-        "title_length": {
-          "pass": true,
-          "detail": "title length 43"
-        },
-        "internal_links": {
-          "pass": true,
-          "detail": "internal links 6 (want 3-8, 54 available)"
-        },
-        "schema_present": {
-          "pass": true,
-          "detail": "schema: ['Article', 'BreadcrumbList', 'FAQPage']"
-        },
-        "alt_text": {
-          "pass": true,
-          "detail": "hero alt derivable from title"
-        }
-      }
-    },
-    "metrics": {
-      "clicks": 0,
-      "impressions": 0,
-      "ctr": 0,
-      "position": 0
-    },
-    "word_count": 1010
   },
   {
     "id": "how-much-paint-do-i-need-for-a-room",
@@ -7551,7 +7215,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 54 available)"
+          "detail": "internal links 6 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -7699,7 +7363,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 5 (want 3-8, 54 available)"
+          "detail": "internal links 5 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -7848,7 +7512,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 54 available)"
+          "detail": "internal links 6 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -7964,7 +7628,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 3 (want 3-8, 54 available)"
+          "detail": "internal links 3 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -8110,7 +7774,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 5 (want 3-8, 54 available)"
+          "detail": "internal links 5 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
@@ -8253,7 +7917,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 54 available)"
+          "detail": "internal links 8 (want 3-8, 53 available)"
         },
         "schema_present": {
           "pass": true,
