@@ -1,0 +1,23 @@
+{
+  "done": [],
+  "events": [
+    {
+      "uid": "action:indexnow",
+      "at": "2026-10-08T15:56:00+00:00",
+      "result": "blocked",
+      "detail": "Bing IndexNow returned 403 UserForbiddedToAccessSite (the key cannot be served at the host root on a GitHub project page). Retry needs a custom domain or account-level verification."
+    },
+    {
+      "uid": "action:pingomatic",
+      "at": "2026-10-08T15:53:00+00:00",
+      "result": "accepted",
+      "detail": "weblogUpdates.extendedPing accepted (HTTP 200, flerror=0) with the RSS URL."
+    },
+    {
+      "uid": "action:archive",
+      "at": "2026-10-08T15:55:00+00:00",
+      "result": "archived",
+      "detail": "web.archive.org/save snapshots created for /, /mulch-calculator/, /raised-bed-soil-calculator/, /gravel-calculator/, /concrete-calculator/."
+    }
+  ]
+}
