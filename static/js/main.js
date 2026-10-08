@@ -63,7 +63,8 @@
 
   function readForm(form) {
     var out = {};
-    form.querySelectorAll("input").forEach(function (i) {
+    form.querySelectorAll("input, select").forEach(function (i) {
+      if (!i.name) return;
       out[i.name] = parseFloat(i.value);
     });
     return out;
@@ -84,6 +85,30 @@
     box.innerHTML = html;
   }
 
+  function initToc() {
+    var links = Array.prototype.slice.call(document.querySelectorAll(".toc a"));
+    if (!links.length || !("IntersectionObserver" in window)) return;
+    var byId = {};
+    links.forEach(function (a) {
+      var id = a.getAttribute("href").slice(1);
+      var el = document.getElementById(id);
+      if (el) byId[id] = a;
+    });
+    var heads = links.map(function (a) {
+      return document.getElementById(a.getAttribute("href").slice(1));
+    }).filter(Boolean);
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          links.forEach(function (l) { l.classList.remove("active"); });
+          var a = byId[e.target.id];
+          if (a) a.classList.add("active");
+        }
+      });
+    }, { rootMargin: "-80px 0px -70% 0px", threshold: 0 });
+    heads.forEach(function (h) { obs.observe(h); });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     var tog = document.querySelector(".nav-toggle");
     var nav = document.querySelector(".site-nav");
@@ -97,7 +122,9 @@
       var go = form.querySelector(".calc-go");
       if (go) go.addEventListener("click", function () { run(form); });
       form.addEventListener("input", function () { run(form); });
+      form.addEventListener("change", function () { run(form); });
       run(form);
     });
+    initToc();
   });
 })();

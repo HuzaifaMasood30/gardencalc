@@ -1,16 +1,42 @@
 {% extends "base.html" %}
 {% block content %}
+<div class="wrap">
 <nav class="breadcrumbs" aria-label="Breadcrumb">
-  <a href="{{ base_url }}/">Home</a> <span>/</span> <span>{{ category.name }}</span>
+  <a href="{{ base_url }}/">Home</a>
+  <span class="sep">/</span>
+  <span>{{ category.name }}</span>
 </nav>
-<h1>{{ category.name }} Calculators &amp; Guides</h1>
-<p class="lede">{{ category.blurb }}</p>
-<ul class="post-list">
-  {% for a in articles %}
-  <li>
-    <a href="{{ base_url }}/{{ a.slug }}/">{{ a.title }}</a>
-    <span class="excerpt">{{ a.meta_description }}</span>
-  </li>
-  {% endfor %}
-</ul>
+<div class="cat-hero">
+  <h1>{{ category.name }} calculators &amp; guides</h1>
+  <p>{{ category.blurb }} Every guide includes the exact formula and a worked example, so you can order the right amount the first time.</p>
+</div>
+
+{% if pillars %}
+<section aria-labelledby="cat-tools">
+  <div class="section-head"><h2 id="cat-tools">Start with a calculator</h2></div>
+  <div class="grid a-cards">
+    {% for a in pillars %}
+    <a class="a-card" href="{{ base_url }}/{{ a.slug }}/">
+      <figure><img src="{{ a.thumb }}" width="480" height="270" alt="{{ a.alt }}" loading="lazy" decoding="async"></figure>
+      <div class="a-card-body"><span class="tag">Calculator</span><h3>{{ a.title }}</h3><p>{{ a.desc }}</p></div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% if others %}
+<section class="section" aria-labelledby="cat-guides">
+  <div class="section-head"><h2 id="cat-guides">Guides for {{ category.name|lower }} projects</h2></div>
+  <div class="grid a-cards">
+    {% for a in others %}
+    <a class="a-card" href="{{ base_url }}/{{ a.slug }}/">
+      <figure><img src="{{ a.thumb }}" width="480" height="270" alt="{{ a.alt }}" loading="lazy" decoding="async"></figure>
+      <div class="a-card-body"><h3>{{ a.title }}</h3><p>{{ a.desc }}</p></div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+</div>
 {% endblock %}

@@ -284,10 +284,18 @@
         },
         {
           "id": "method",
-          "label": "Method (1=new, 2=overseed)",
-          "min": 1,
-          "max": 2,
-          "default": 1
+          "label": "Seeding method",
+          "default": 1,
+          "options": [
+            {
+              "value": 1,
+              "label": "New lawn (4.5 lb / 1000 sq ft)"
+            },
+            {
+              "value": 2,
+              "label": "Overseeding (2 lb / 1000 sq ft)"
+            }
+          ]
         }
       ],
       "outputs": [

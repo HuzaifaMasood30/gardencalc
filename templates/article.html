@@ -1,39 +1,107 @@
 {% extends "base.html" %}
 {% block content %}
+<div class="wrap">
 <nav class="breadcrumbs" aria-label="Breadcrumb">
-  <a href="{{ base_url }}/">Home</a> <span>/</span> <span>{{ breadcrumb }}</span>
+  <a href="{{ base_url }}/">Home</a>
+  <span class="sep">/</span>
+  <a href="{{ base_url }}/category/{{ article.cluster }}/">{{ category_name }}</a>
+  <span class="sep">/</span>
+  <span>{{ article.title }}</span>
 </nav>
-<article class="post">
+</div>
+
+<header class="article-head wrap">
   <h1>{{ article.title }}</h1>
-  <p class="byline">Last updated <time datetime="{{ article.updated }}">{{ article.updated }}</time> · {{ article.word_count }} words</p>
+  <p class="byline">
+    <span>By {{ site.author }}</span><span class="dot">·</span>
+    <span>Updated <time datetime="{{ article.updated }}">{{ article.updated }}</time></span>
+    <span class="dot">·</span><span>{{ article.word_count }} words</span>
+    <span class="dot">·</span><span>{{ reading_time }} min read</span>
+  </p>
+</header>
 
-  {% include "calculator.html" %}
+<div class="wrap">
+{% include "calculator.html" %}
+<div class="article-body">
+  <div>
+    {% if figure %}
+    <figure class="feature">
+      <img src="{{ figure.src }}" width="1200" height="675" alt="{{ figure.alt }}"
+           fetchpriority="high" decoding="async">
+      <figcaption>{{ figure.caption }}</figcaption>
+    </figure>
+    {% endif %}
+    <div class="prose">
+      {{ body_html | safe }}
+    </div>
 
-  <div class="prose">
-    {{ body_html | safe }}
+    {% if faq %}
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 id="faq-heading">Frequently asked questions</h2>
+      {% for item in faq %}
+      <details>
+        <summary>{{ item.q }}</summary>
+        <div class="faq-a"><p>{{ item.a }}</p></div>
+      </details>
+      {% endfor %}
+    </section>
+    {% endif %}
+
+    <div class="share">
+      <span>Was this helpful? Share it:</span>
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{ canonical }}" rel="nofollow noopener" target="_blank">Facebook</a>
+      <a href="https://twitter.com/intent/tweet?url={{ canonical }}&text={{ article.title }}" rel="nofollow noopener" target="_blank">X</a>
+      <a href="https://www.pinterest.com/pin/create/button/?url={{ canonical }}&description={{ article.title }}" rel="nofollow noopener" target="_blank">Pinterest</a>
+    </div>
+
+    {% if pager.prev or pager.next %}
+    <nav class="pager" aria-label="More in {{ category_name }}">
+      {% if pager.prev %}
+      <a href="{{ base_url }}/{{ pager.prev.slug }}/">
+        <span class="dir">Previous</span>
+        <span class="t">{{ pager.prev.title }}</span>
+      </a>
+      {% else %}<span></span>{% endif %}
+      {% if pager.next %}
+      <a class="next" href="{{ base_url }}/{{ pager.next.slug }}/">
+        <span class="dir">Next</span>
+        <span class="t">{{ pager.next.title }}</span>
+      </a>
+      {% endif %}
+    </nav>
+    {% endif %}
   </div>
 
-  {% if article.faq %}
-  <section class="faq" aria-labelledby="faq-heading">
-    <h2 id="faq-heading">Frequently Asked Questions</h2>
-    {% for item in article.faq %}
-    <details open>
-      <summary>{{ item.q }}</summary>
-      <p>{{ item.a }}</p>
-    </details>
-    {% endfor %}
-  </section>
-  {% endif %}
-
-  {% if article.internal_links %}
-  <aside class="related" aria-labelledby="related-heading">
-    <h2 id="related-heading">Related Guides</h2>
-    <ul>
-      {% for link in article.internal_links %}
-      <li><a href="{{ base_url }}/{{ link.to }}/">{{ link.title }}</a></li>
-      {% endfor %}
-    </ul>
+  {% if toc %}
+  <aside class="toc" aria-label="On this page">
+    <h2>On this page</h2>
+    <ol>
+      {% for t in toc %}<li><a href="#{{ t.id }}">{{ t.text }}</a></li>{% endfor %}
+    </ol>
   </aside>
   {% endif %}
-</article>
+</div>
+</div>
+
+{% if related %}
+<section class="wrap">
+  <div class="related">
+    <h2>Related {{ category_name }} guides</h2>
+    <div class="related-grid">
+      {% for r in related %}
+      <a class="a-card" href="{{ base_url }}/{{ r.slug }}/">
+        {% if r.thumb %}
+        <figure><img src="{{ r.thumb }}" width="480" height="270" alt="{{ r.alt }}"
+                     loading="lazy" decoding="async"></figure>
+        {% endif %}
+        <div class="a-card-body">
+          <h3>{{ r.title }}</h3>
+          <p>{{ r.desc }}</p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
 {% endblock %}

@@ -14,6 +14,54 @@ import seo as seolib
 from common import site_config
 
 
+def test_render_adds_heading_ids_and_toc():
+    html, toc = mdrender.render_with_toc("## First section\n\ntext\n\n## Second section\n\nmore")
+    assert '<h2 id="first-section">' in html
+    assert '<h2 id="second-section">' in html
+    assert [t["text"] for t in toc] == ["First section", "Second section"], toc
+
+
+def test_render_escapes_html_but_keeps_markdown():
+    html, _ = mdrender.render_with_toc("## Head\n\n<script>alert(1)</script> **bold**")
+    assert "<script>" not in html
+    assert "<strong>bold</strong>" in html
+
+
+def test_sitemap_supports_image_extension():
+    site = {"name": "T", "base_url": "https://t.example", "language": "en",
+            "author": "A", "locale": "en_US"}
+    xml = seolib.sitemap_xml(
+        [{"loc": "/a/", "priority": "0.9", "image": "https://t.example/img/a.webp",
+          "image_title": "A & B"}], site)
+    assert 'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"' in xml
+    assert "<image:loc>https://t.example/img/a.webp</image:loc>" in xml
+    assert "A &amp; B" in xml
+
+
+def test_collection_schema_lists_items():
+    cat = {"id": "mulch", "name": "Mulch", "blurb": "b"}
+    items = [{"slug": "a", "title": "A"}, {"slug": "b", "title": "B"}]
+    site = {"name": "T", "base_url": "https://t.example"}
+    sch = seolib.collection_schema(cat, items, site)
+    assert sch["@type"] == "CollectionPage"
+    assert sch["mainEntity"]["numberOfItems"] == 2
+    assert sch["mainEntity"]["itemListElement"][1]["position"] == 2
+
+
+def test_images_render_per_cluster():
+    import images
+    if not images.HAVE_PIL:
+        return
+    for cluster in images.CLUSTERS:
+        art = {"slug": "x", "title": "How Much Something Do I Need", "cluster": cluster,
+               "meta_description": "A useful summary of the calculation.",
+               "calculator_defaults": {"length": 10, "width": 10, "depth": 3,
+                                       "height": 8, "thickness": 4, "tile_w": 12,
+                                       "tile_h": 12, "waste": 10, "area": 5000}}
+        img = images.render_figure(art)
+        assert img is not None and img.size == (images.W, images.H), cluster
+
+
 def test_calculator_results():
     r = calculators.compute("mulch", {"length": 20, "width": 10, "depth": 3})
     assert r["bags_2cf"] == 25, r
@@ -51,7 +99,7 @@ def test_no_orphans_from_singleton_cluster():
         {"slug": "cluster-solo", "cluster": "solo", "title": "Solo",
          "primary_keyword": "solo", "quality": {}, "internal_links": []},
     ]
-    interlink.link_all(arts)
+    interlink.link_all(arts, persist=False)
     assert interlink.orphans(arts) == [], interlink.orphans(arts)
 
 

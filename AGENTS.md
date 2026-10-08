@@ -61,3 +61,17 @@ python3 scripts/live_audit.py https://huzaifamasood30.github.io/gardencalc/
 - Google/Bing console verification and sitemap submission require the user's account.
 - A separate working PAT (not the system GITHUB_TOKEN, which gets 403) is needed to
   `workflow_dispatch`; system token can only read.
+
+## Design system & figures
+- `static/css/style.css` is a self-contained design system (CSS variables, no web
+  fonts, no frameworks) so Core Web Vitals stay green. Templates must only use
+  classes defined there.
+- `scripts/images.py` generates an original WebP figure + thumbnail per article via
+  Pillow (installed from requirements.txt). Figures are written into the *copied*
+  `site/static/img/{fig,thumb}` during `build.py`.
+- `build.py` copies static first, then generates figures, then writes pages; keep
+  that order. Pillow is optional at runtime: without it the build still succeeds and
+  templates fall back to CSS.
+- Article bodies render via `mdrender.render_with_toc`, which adds `<h2 id>` anchors
+  and returns a table of contents; `article.html` renders the TOC and a scroll-spy
+  highlights the active section in `main.js`.

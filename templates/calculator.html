@@ -1,23 +1,26 @@
-{% set calc = article.calculator %}
-{% set cdef = calc_defs.get(calc) %}
-{% if cdef %}
-<section class="calc" aria-labelledby="calc-heading">
-  <h2 id="calc-heading">{{ cdef.title }}</h2>
-  <form class="calc-form" data-calc="{{ calc }}" onsubmit="return false;">
-    {% for inp in cdef.inputs %}
+{% if calc %}
+<div class="calc">
+  <h2><svg aria-hidden="true"><use href="#i-calc"></use></svg>{{ calc.title }}</h2>
+  <p class="calc-sub">{{ calc.sub }}</p>
+  <form class="calc-form" data-calc="{{ calc.key }}" aria-label="{{ calc.title }}">
+    {% for inp in calc.inputs %}
     <label for="in-{{ inp.id }}">{{ inp.label }}
-      <input id="in-{{ inp.id }}" name="{{ inp.id }}" type="number"
-             value="{{ article.calculator_defaults[inp.id] }}"
-             min="{{ inp.min }}" max="{{ inp.max }}" step="any" inputmode="decimal">
+      {% if inp.options %}
+      <select id="in-{{ inp.id }}" name="{{ inp.id }}">
+        {% for opt in inp.options %}
+        <option value="{{ opt.value }}"{% if opt.value == inp.default %} selected{% endif %}>{{ opt.label }}</option>
+        {% endfor %}
+      </select>
+      {% else %}
+      <input type="number" inputmode="decimal" id="in-{{ inp.id }}" name="{{ inp.id }}"
+             min="{{ inp.min }}" max="{{ inp.max }}" step="{{ inp.step|default('0.1') }}"
+             value="{{ inp.default }}">
+      {% endif %}
     </label>
     {% endfor %}
     <button type="button" class="calc-go">Calculate</button>
   </form>
-  <div class="calc-result" aria-live="polite" data-outputs="{{ cdef.outputs | join(',') }}">
-    <p class="calc-hint">Enter your measurements and press Calculate.</p>
-  </div>
-  <noscript>
-    <p>JavaScript is off. Default results are shown in the article table below.</p>
-  </noscript>
-</section>
+  <div class="calc-result" role="status" aria-live="polite"></div>
+  <p class="calc-hint">{{ calc.hint }}</p>
+</div>
 {% endif %}

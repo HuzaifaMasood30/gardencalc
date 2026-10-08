@@ -71,7 +71,7 @@ def inject(art: dict, site_url: str) -> str:
     return body + "\n" + "\n".join(lines) + "\n"
 
 
-def link_all(arts: list[dict]) -> list[dict]:
+def link_all(arts: list[dict], persist: bool = True) -> list[dict]:
     # Always rebuild links, even for articles currently rejected. Zeroing them made the
     # links gate re-reject an article forever: a rejected page had no links, so it could
     # never pass and never recover once its other gates were fixed. Rejected articles
@@ -83,7 +83,8 @@ def link_all(arts: list[dict]) -> list[dict]:
         a["slug"]: [l["to"] for l in a.get("internal_links", [])]
         for a in arts if a.get("status") != "rejected"
     }
-    save_json(DATA / "links.json", {"graph": graph})
+    if persist:
+        save_json(DATA / "links.json", {"graph": graph})
     return arts
 
 

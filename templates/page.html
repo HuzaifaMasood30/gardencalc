@@ -1,7 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-<article class="page">
+<div class="wrap">
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="{{ base_url }}/">Home</a>
+  <span class="sep">/</span>
+  <span>{{ page.title }}</span>
+</nav>
+<article class="prose narrow">
   <h1>{{ page.title }}</h1>
-  <div class="prose">{{ page.html | safe }}</div>
+  {{ page.html | safe }}
 </article>
+</div>
 {% endblock %}

@@ -1,31 +1,85 @@
 {% extends "base.html" %}
 {% block content %}
 <section class="hero">
-  <h1>{{ site.name }}</h1>
-  <p class="lede">{{ site.tagline }}. Work out exactly how much mulch, soil, topsoil, gravel, fertilizer, paint, tile, seed or concrete you need — with the formula shown, so you can check the maths.</p>
+  <div class="wrap hero-inner">
+    <div>
+      <h1>Garden &amp; home calculators that show their working</h1>
+      <p class="lede">{{ site.tagline }}. Work out exactly how much mulch, soil, topsoil, gravel,
+        fertilizer, paint, tile, seed or concrete you need — with the formula shown, so you can
+        check the maths and understand the method.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#calculators">Browse calculators</a>
+        <a class="btn btn-ghost" href="#latest">Latest guides</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>{{ article_count }}</b><span>guides &amp; calculators</span></div>
+        <div><b>{{ category_count }}</b><span>project categories</span></div>
+        <div><b>100%</b><span>free, no sign-up</span></div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h2><svg aria-hidden="true" style="width:20px;height:20px;vertical-align:-3px"><use href="#i-bolt"></use></svg> Why these calculators</h2>
+      <p>Each tool runs instantly in your browser and prints the formula it used.</p>
+      <ul class="small" style="margin:0;padding-left:1.1em;color:var(--fg-soft)">
+        <li>Bags, cubic feet and cubic yards, side by side</li>
+        <li>Depth guidance for real projects</li>
+        <li>Worked examples you can copy</li>
+      </ul>
+      <div style="margin-top:14px">
+        <a class="btn btn-primary" style="background:var(--brand);color:#fff" href="{{ base_url }}/category/mulch/">Start with mulch</a>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section aria-labelledby="tools-heading">
-  <h2 id="tools-heading">Popular calculators</h2>
-  <div class="grid">
+<div class="wrap">
+<section class="section" id="calculators" aria-labelledby="tools-heading">
+  <div class="section-head">
+    <h2 id="tools-heading">Calculators by project</h2>
+    <a href="{{ base_url }}/about/">How they work →</a>
+  </div>
+  <div class="grid grid-cats">
     {% for c in categories %}
     <a class="card" href="{{ base_url }}/category/{{ c.id }}/">
-      <h3>{{ c.name }}</h3>
-      <p>{{ c.blurb }}</p>
+      <span class="ico"><svg aria-hidden="true"><use href="#i-{{ c.icon }}"></use></svg></span>
+      <span class="card-body">
+        <h3>{{ c.name }}</h3>
+        <p>{{ c.blurb }}</p>
+      </span>
     </a>
     {% endfor %}
   </div>
 </section>
 
-<section aria-labelledby="latest-heading">
-  <h2 id="latest-heading">Latest guides</h2>
+<section class="section" aria-labelledby="popular-heading">
+  <div class="section-head"><h2 id="popular-heading">Most-used calculators</h2></div>
+  <div class="grid a-cards">
+    {% for a in pillar_cards %}
+    <a class="a-card" href="{{ base_url }}/{{ a.slug }}/">
+      <figure><img src="{{ a.thumb }}" width="480" height="270" alt="{{ a.alt }}" loading="lazy" decoding="async"></figure>
+      <div class="a-card-body">
+        <span class="tag">{{ a.category }}</span>
+        <h3>{{ a.title }}</h3>
+        <p>{{ a.desc }}</p>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section" aria-labelledby="latest-heading" id="latest">
+  <div class="section-head"><h2 id="latest-heading">Latest guides</h2></div>
   <ul class="post-list">
     {% for a in articles %}
     <li>
-      <a href="{{ base_url }}/{{ a.slug }}/">{{ a.title }}</a>
-      <span class="excerpt">{{ a.meta_description }}</span>
+      <span>
+        <a href="{{ base_url }}/{{ a.slug }}/">{{ a.title }}</a>
+        <span class="excerpt">{{ a.meta_description }}</span>
+      </span>
+      <span class="when">{{ a.updated }}</span>
     </li>
     {% endfor %}
   </ul>
 </section>
+</div>
 {% endblock %}

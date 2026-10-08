@@ -13,8 +13,9 @@ def _abs(site: dict, path: str) -> str:
     return base + "/" + path.lstrip("/")
 
 
-def article_schema(art: dict, site: dict) -> dict:
+def article_schema(art: dict, site: dict, figure: str | None = None) -> dict:
     url = _abs(site, f"/{art['slug']}/")
+    img = figure or _abs(site, f"/static/img/og/{art['slug']}.svg")
     return {
         "@context": "https://schema.org",
         "@type": "Article",
@@ -27,9 +28,40 @@ def article_schema(art: dict, site: dict) -> dict:
         "publisher": {"@type": "Organization", "name": site["name"],
                       "logo": {"@type": "ImageObject", "url": _abs(site, site.get("org_logo", ""))}},
         "mainEntityOfPage": {"@type": "WebPage", "@id": url},
-        "image": _abs(site, f"/static/img/og/{art['slug']}.svg"),
+        "image": {"@type": "ImageObject", "url": img, "width": 1200, "height": 675},
         "articleSection": art.get("cluster", ""),
         "keywords": ", ".join([art.get("primary_keyword", "")] + art.get("secondary_keywords", [])),
+    }
+
+
+def collection_schema(cat: dict, items: list[dict], site: dict) -> dict:
+    return {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": f"{cat['name']} calculators & guides",
+        "description": cat.get("blurb", ""),
+        "url": _abs(site, f"/category/{cat['id']}/"),
+        "isPartOf": {"@type": "WebSite", "name": site["name"], "url": _abs(site, "/")},
+        "mainEntity": {
+            "@type": "ItemList",
+            "numberOfItems": len(items),
+            "itemListElement": [
+                {"@type": "ListItem", "position": i + 1, "name": a["title"],
+                 "url": _abs(site, f"/{a['slug']}/")}
+                for i, a in enumerate(items[:20])
+            ],
+        },
+    }
+
+
+def webpage_schema(title: str, description: str, url: str, site: dict) -> dict:
+    return {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": title,
+        "description": description,
+        "url": url,
+        "isPartOf": {"@type": "WebSite", "name": site["name"], "url": _abs(site, "/")},
     }
 
 
@@ -95,8 +127,9 @@ def website_schema(site: dict) -> dict:
     }
 
 
-def all_schema(art: dict, site: dict) -> list[dict]:
-    out = [article_schema(art, site), breadcrumb_schema(art, site), howto_schema(art, site)]
+def all_schema(art: dict, site: dict, figure: str | None = None) -> list[dict]:
+    out = [article_schema(art, site, figure=figure), breadcrumb_schema(art, site),
+           howto_schema(art, site)]
     faq = faq_schema(art)
     if faq:
         out.append(faq)
@@ -104,9 +137,10 @@ def all_schema(art: dict, site: dict) -> list[dict]:
 
 
 def sitemap_xml(urls: list[dict], site: dict) -> str:
-    """urls: [{'loc':..., 'lastmod':..., 'priority':...}]"""
+    """urls: [{'loc':..., 'lastmod':..., 'priority':..., 'image':..., 'image_title':...}]"""
     lines = ['<?xml version="1.0" encoding="UTF-8"?>',
-             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
+             '        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">']
     for u in urls:
         lines.append("  <url>")
         lines.append(f"    <loc>{html.escape(_abs(site, u['loc']))}</loc>")
@@ -114,6 +148,12 @@ def sitemap_xml(urls: list[dict], site: dict) -> str:
             lines.append(f"    <lastmod>{u['lastmod']}</lastmod>")
         if u.get("priority"):
             lines.append(f"    <priority>{u['priority']}</priority>")
+        if u.get("image"):
+            lines.append("    <image:image>")
+            lines.append(f"      <image:loc>{html.escape(u['image'])}</image:loc>")
+            if u.get("image_title"):
+                lines.append(f"      <image:title>{html.escape(u['image_title'])}</image:title>")
+            lines.append("    </image:image>")
         lines.append("  </url>")
     lines.append("</urlset>")
     return "\n".join(lines) + "\n"
