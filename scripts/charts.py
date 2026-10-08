@@ -7,6 +7,7 @@ long-tail "how much for <size>" searches on one strong page instead of many thin
 from __future__ import annotations
 
 import math
+import re
 
 import calculators as C
 
@@ -310,10 +311,45 @@ CHARTS: list[dict] = [
 ]
 
 
+def _slugify(text: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", str(text).lower()).strip("-")
+
+
+# The direct question each chart answers, used in the answer-first block for snippets.
+CHART_QUESTIONS = {
+    "mulch-coverage-chart": "How much mulch do I need?",
+    "concrete-bags-by-slab-size-chart": "How many bags of concrete do I need?",
+    "raised-bed-soil-chart": "How much soil does a raised bed need?",
+    "gravel-coverage-chart": "How much gravel do I need?",
+    "paint-coverage-chart": "How much paint do I need?",
+    "tile-quantity-chart": "How many tiles do I need?",
+    "grass-seed-rate-chart": "How much grass seed do I need?",
+    "fertilizer-rate-chart": "How much fertilizer does my lawn need?",
+}
+
+
 def page(chart: dict, base: str, site: dict) -> dict:
     """Build the render context for one chart page."""
     url = f"{base}/{chart['slug']}/"
     calc_slug = chart.get("calc", "")
+    tables = chart["tables"]()
+    # Jump links: one anchor per distinct first-column value (the size/area), so
+    # Google can surface deep links and readers can skip to their row. Only the first
+    # row for each label gets the id, so ids never repeat.
+    anchors = []
+    seen: set[str] = set()
+    for tbl in tables:
+        ids = []
+        for row in tbl["rows"]:
+            label = str(row[0])
+            rid = _slugify(label)
+            if rid and rid not in seen:
+                seen.add(rid)
+                ids.append(rid)
+                anchors.append({"label": label, "id": rid})
+            else:
+                ids.append("")
+        tbl["ids"] = ids
     related = {
         "calculator": f"{base}/{calc_slug}/" if calc_slug else "",
         "category": f"{base}/category/{chart['cluster']}/",
@@ -324,8 +360,10 @@ def page(chart: dict, base: str, site: dict) -> dict:
         "description": chart["description"],
         "keyword": chart["keyword"],
         "cluster": chart["cluster"],
+        "question": CHART_QUESTIONS.get(chart["slug"], chart["title"]),
         "intro": chart["intro"],
-        "tables": chart["tables"](),
+        "tables": tables,
+        "anchors": anchors,
         "faqs": [{"q": q, "a": a} for q, a in chart["faqs"]],
         "url": url,
         "related": related,

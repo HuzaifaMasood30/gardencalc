@@ -238,6 +238,46 @@ def render_figure(art: dict, size=(W, H)):
     return img
 
 
+def render_pins(cards: list[dict], static_root: Path) -> dict:
+    """Vertical 1000x1500 Pinterest pins for charts and planners.
+
+    One pin per linkable asset, brand-coloured, with the page title, the question it
+    answers and the GardenCalc URL so every repin carries a citation back to the page.
+    """
+    if not HAVE_PIL:
+        return {"pins": 0}
+    pin_dir = static_root / "img" / "pins"
+    pin_dir.mkdir(parents=True, exist_ok=True)
+    PW, PH = 1000, 1500
+    n = 0
+    for card in cards:
+        accent = CLUSTERS.get(card.get("cluster", ""), CLUSTERS["mulch"])[1]
+        img = Image.new("RGB", (PW, PH), accent)
+        d = ImageDraw.Draw(img)
+        # diagonal texture, matching the figure/OG house style
+        for i in range(-PH, PW, 60):
+            d.line([i, PH, i + 160, 0], fill=(accent[0] + 16, accent[1] + 16, accent[2] + 16), width=4)
+        d.text((72, 120), "GARDENCALC", font=_font(BOLD, 40), fill=(198, 235, 205))
+        title_f = _font(BOLD, 78)
+        y = 300
+        for ln in _wrap(d, card.get("title", ""), title_f, PW - 144)[:4]:
+            d.text((72, y), ln, font=title_f, fill=WHITE)
+            y += 92
+        q = card.get("question") or ""
+        if q:
+            qf = _font(REG, 46)
+            y += 40
+            for ln in _wrap(d, q, qf, PW - 144)[:3]:
+                d.text((72, y), ln, font=qf, fill=(225, 245, 230))
+                y += 56
+        d.text((72, PH - 160), "huzaifamasood30.github.io/gardencalc", font=_font(BOLD, 40), fill=(225, 245, 230))
+        d.text((72, PH - 100), "Free calculators that show the formula", font=_font(REG, 38), fill=(198, 235, 205))
+        img.save(pin_dir / f"{card['slug']}.png", "PNG")
+        n += 1
+    print(f"[images] generated {n} pins")
+    return {"pins": n}
+
+
 def render_brand(static_root: Path) -> dict:
     """Write the publisher logo, favicon and PNG OG fallback.
 

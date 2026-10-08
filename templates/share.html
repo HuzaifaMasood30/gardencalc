@@ -7,8 +7,8 @@
      target="_blank" rel="noopener noreferrer" data-share="facebook">Facebook</a>
   <a href="https://twitter.com/intent/tweet?url={{ canonical | urlencode }}&text={{ title | urlencode }}"
      target="_blank" rel="noopener noreferrer" data-share="x">X</a>
-  <a href="https://www.pinterest.com/pin/create/button/?url={{ canonical | urlencode }}&description={{ title | urlencode }}"
-     target="_blank" rel="noopener noreferrer" data-share="pinterest">Pinterest</a>
+  <a href="https://www.pinterest.com/pin/create/button/?url={{ canonical | urlencode }}&media={{ (pin_image | default(og_image)) | urlencode }}&description={{ title | urlencode }}"
+     target="_blank" rel="noopener noreferrer" data-share="pinterest" data-pin>Pinterest</a>
   <a href="https://www.reddit.com/submit?url={{ canonical | urlencode }}&title={{ title | urlencode }}"
      target="_blank" rel="noopener noreferrer" data-share="reddit">Reddit</a>
   <a href="mailto:?subject={{ title | urlencode }}&body={{ canonical | urlencode }}"

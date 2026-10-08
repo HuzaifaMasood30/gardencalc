@@ -17,11 +17,18 @@
 </header>
 
 <div class="answer-first">
-  <p>{{ answer }}</p>
+  <p><strong>{{ chart.question }}</strong> {{ answer }}</p>
 </div>
 
 <section class="chart-body prose">
   <p>{{ chart.intro }}</p>
+
+  {% if chart.anchors %}
+  <nav class="jump" aria-label="Jump to a size">
+    <span>Jump to:</span>
+    {% for a in chart.anchors %}<a href="#{{ a.id }}">{{ a.label }}</a>{% endfor %}
+  </nav>
+  {% endif %}
 
   {% for tbl in chart.tables %}
   {% set tloop = loop %}
@@ -32,7 +39,7 @@
       </thead>
       <tbody>
         {% for row in tbl.rows %}
-        <tr id="t{{ tloop.index }}-r{{ loop.index }}">
+        <tr{% if tbl.ids[loop.index0] %} id="{{ tbl.ids[loop.index0] }}"{% endif %}>
           {% for cell in row %}<td>{{ cell }}</td>{% endfor %}
         </tr>
         {% endfor %}

@@ -24,6 +24,20 @@
 </section>
 {% endfor %}
 
+<section class="section" aria-labelledby="planners-h">
+  <div class="section-head"><h2 id="planners-h">Project planners</h2>
+    <p>Multi-material shopping lists for whole projects.</p></div>
+  <div class="card-grid">
+    {% for p in planner_cards %}
+    <a class="card" href="{{ base_url }}/{{ p.slug }}/">
+      <span class="card-tag">{{ p.cluster_name }}</span>
+      <h3>{{ p.title }}</h3>
+      <p>{{ p.description }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
 <section class="section" aria-labelledby="charts-h">
   <div class="section-head"><h2 id="charts-h">Coverage &amp; reference charts</h2></div>
   {% include "charts_list.html" %}

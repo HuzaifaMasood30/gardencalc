@@ -154,7 +154,7 @@ def _title_case(text: str) -> str:
 
 def _title_for(kw: str, calc_title: str) -> str:
     kw_title = _title_case(kw.strip())
-    suffix = ": Free Calculator & Guide"
+    suffix = ": Calculator & Guide"
     if len(kw_title) + len(suffix) <= 60:
         return kw_title + suffix
     if len(kw_title) <= 60:

@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="wrap">
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="{{ base_url }}/">Home</a>
+  <span class="sep">/</span>
+  <a href="{{ base_url }}/category/{{ planner.cluster }}/">{{ cluster_name }}</a>
+  <span class="sep">/</span>
+  <span>{{ title }}</span>
+</nav>
+
+<header class="article-head">
+  <h1>{{ title }}</h1>
+  <p class="byline"><span>{{ description }}</span></p>
+</header>
+
+<div class="answer-first">
+  <p><strong>{{ planner.question }}</strong> {{ answer }}</p>
+</div>
+
+<section class="prose">
+  <p>{{ planner.intro }}</p>
+
+  <h2>How the planner works</h2>
+  <p>{{ planner.formula }}</p>
+
+  {% for tbl in planner.tables %}
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>{% for h in tbl.headers %}<th scope="col">{{ h }}</th>{% endfor %}</tr>
+      </thead>
+      <tbody>
+        {% for row in tbl.rows %}
+        <tr>{% for cell in row %}<td>{{ cell }}</td>{% endfor %}</tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% endfor %}
+
+  <p class="chart-cta">
+    Want the figure for your own measurements? Use the
+    <a href="{{ planner.calculator }}">calculator</a>, which shows the formula it used.
+  </p>
+
+  <div class="print-actions">
+    <button type="button" class="btn btn-ghost" onclick="window.print()">Print / Save as PDF</button>
+    <button type="button" class="share-copy" data-share="copy" data-url="{{ canonical }}">Copy link to this plan</button>
+  </div>
+
+  {% if planner.faqs %}
+  <section class="faq" aria-labelledby="faq-heading">
+    <h2 id="faq-heading">Frequently asked questions</h2>
+    {% for item in planner.faqs %}
+    <details><summary>{{ item.q }}</summary><div class="faq-a"><p>{{ item.a }}</p></div></details>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  <div class="cite">
+    <h2>Cite this page</h2>
+    <p>{{ site.name }}. "{{ title }}". {{ canonical }}</p>
+    <button type="button" class="share-copy" data-share="copy" data-url="{{ canonical }}">Copy citation link</button>
+  </div>
+</section>
+
+{% include "share.html" %}
+
+<nav class="pager" aria-label="Planner navigation">
+  <a href="{{ planner.calculator }}"><span class="dir">Calculator</span><span class="t">{{ cluster_name }} calculator</span></a>
+  <a class="next" href="{{ base_url }}/calculators/"><span class="dir">All tools</span><span class="t">Calculators index</span></a>
+</nav>
+</div>
+{% endblock %}

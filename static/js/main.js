@@ -217,13 +217,39 @@
     document.querySelectorAll("[data-share]").forEach(function (el) {
       el.addEventListener("click", function () {
         var net = el.getAttribute("data-share");
-        track("share_click", { network: net });
+        track(net === "pinterest" ? "pin_save_click" : "share_click", { network: net });
         if (net === "copy") {
           copyText(el.getAttribute("data-url") || location.href);
           el.textContent = "Copied!";
           setTimeout(function () { el.textContent = "Copy link"; }, 1500);
         }
       });
+    });
+  }
+
+  function initEmbedCopy() {
+    document.querySelectorAll("[data-copy-embed]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var ta = btn.parentElement.querySelector("textarea");
+        if (!ta) return;
+        copyText(ta.value);
+        track("embed_code_copy", { page: location.pathname });
+        var old = btn.textContent;
+        btn.textContent = "Copied!";
+        setTimeout(function () { btn.textContent = old; }, 1500);
+      });
+    });
+  }
+
+  // Which calculator links inside a page actually get clicked - tells us where to add
+  // more internal links and which tools people look for next.
+  function initInternalCalcClicks() {
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest ? e.target.closest("a") : null;
+      if (!a) return;
+      var href = a.getAttribute("href") || "";
+      if (href.indexOf("-calculator/") === -1) return;
+      track("internal_calculator_click", { calculator: href, from: location.pathname });
     });
   }
 
@@ -267,6 +293,8 @@
     initToc();
     initSearch();
     initShare();
+    initEmbedCopy();
+    initInternalCalcClicks();
     initGuidesFilter();
   });
 })();

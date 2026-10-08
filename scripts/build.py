@@ -12,6 +12,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 import charts
 import images
 import mdrender
+import planners
 import seo as seolib
 from common import (CONFIG, CONTENT, DATA, SITE, STATIC, TEMPLATES, load_json,
                     save_json, seo_config, site_config, topics_config)
@@ -34,7 +35,6 @@ PROJECT_NEXT_STEPS = {
 
 # Extra indexable site pages, appended to the sitemap with a real lastmod.
 EXTRA_PAGES = ["/calculators/", "/guides/", "/sitemap/", "/for-publishers/"]
-
 # Inline SVG icon id for each project category (symbols live in base.html).
 CATEGORY_ICONS = {
     "mulch": "mulch", "soil": "soil", "gravel": "gravel", "paint": "paint",
@@ -142,6 +142,7 @@ def _calc_context(art: dict, cfg: dict, site: dict) -> dict | None:
         "hint": "Estimates only. Round up when ordering and check with your supplier.",
         "inputs": inputs,
         "defaults": defaults,
+        "slug": art["slug"],
     }
 
 
@@ -189,6 +190,9 @@ def build() -> dict:
     chart_cards = [{"slug": ch["slug"], "title": ch["title"], "description": ch["description"],
                     "cluster_name": cat_map.get(ch["cluster"], {}).get("name", ch["cluster"].title())}
                    for ch in charts.CHARTS]
+    planner_cards = [{"slug": pl["slug"], "title": pl["title"], "description": pl["description"],
+                      "cluster_name": cat_map.get(pl["cluster"], {}).get("name", pl["cluster"].title())}
+                     for pl in planners.PLANNERS]
 
     # --- articles ---
     for art in published:
@@ -251,7 +255,7 @@ def build() -> dict:
         pillars = [a for a in items if a.get("is_pillar")]
         others = [a for a in items if not a.get("is_pillar")]
         og = _thumb(site, pillars[0]) if pillars else (_thumb(site, items[0]) if items else _abs(site, "/static/img/og-default.png"))
-        ctx = common(title=f"{c['name']} Calculator & Guides | {site['name']}",
+        ctx = common(title=f"{c['name']} Calculators | {site['name']}",
                      description=(c["blurb"] + " Free, instant calculators with the formula shown.")[:155],
                      canonical=_abs(site, f"/category/{c['id']}/"), og_image=og,
                      schemas=[json.dumps(seolib.collection_schema(
@@ -273,6 +277,7 @@ def build() -> dict:
     ctx.update(categories=categories, articles=published[:12],
                article_count=len(published), category_count=len(categories),
                chart_count=len(charts.CHARTS), chart_cards=chart_cards,
+               planner_cards=planner_cards,
                pillar_cards=[_card_meta(site, a) for a in pillars])
     _write(SITE / "index.html", env.get_template("index.html").render(**ctx))
 
@@ -346,9 +351,34 @@ def build() -> dict:
                                    {"faq": [{"q": q, "a": a} for q, a in ch["faqs"]]}),
                                    ensure_ascii=False)])
         cctx.update(chart=cp, cluster_name=cluster_name,
-                    answer=ch["faqs"][0][1] if ch.get("faqs") else ch["description"])
+                    answer=ch["faqs"][0][1] if ch.get("faqs") else ch["description"],
+                    pin_image=_abs(site, f"/static/img/pins/{ch['slug']}.png"))
         _write(SITE / ch["slug"] / "index.html",
                env.get_template("chart.html").render(**cctx))
+
+    # --- project planners (multi-material shopping lists) ---
+    for pl in planners.PLANNERS:
+        cluster = cat_map.get(pl["cluster"], {})
+        cluster_name = cluster.get("name", pl["cluster"].title())
+        pp = planners.page(pl, base, site)
+        pctx = common(title=pl["title"], description=pl["description"],
+                      canonical=pp["url"], og_type="article",
+                      og_image=_thumb(site, pillar_by_cluster.get(pl["cluster"], published[0])),
+                      keywords=pl["question"],
+                      schemas=[json.dumps(seolib.breadcrumb_list(
+                                   [("Home", "/"), (cluster_name, f"/category/{pl['cluster']}/"),
+                                    (pl["title"], f"/{pl['slug']}/")], site), ensure_ascii=False),
+                               json.dumps(seolib.webpage_schema(
+                                   pl["title"], pl["description"], pp["url"], site),
+                                   ensure_ascii=False),
+                               json.dumps(seolib.faq_schema(
+                                   {"faq": [{"q": q, "a": a} for q, a in pl["faqs"]]}),
+                                   ensure_ascii=False)])
+        pctx.update(planner=pp, cluster_name=cluster_name,
+                    answer=pl["faqs"][0][1] if pl.get("faqs") else pl["description"],
+                    pin_image=_abs(site, f"/static/img/pins/{pl['slug']}.png"))
+        _write(SITE / pl["slug"] / "index.html",
+               env.get_template("planner.html").render(**pctx))
 
     # --- calculators hub ---
     groups = []
@@ -363,7 +393,7 @@ def build() -> dict:
                  canonical=_abs(site, "/calculators/"),
                  schemas=[json.dumps(seolib.breadcrumb_list([("Home", "/"), ("Calculators", "/calculators/")], site),
                                      ensure_ascii=False)])
-    ctx.update(groups=groups, chart_cards=chart_cards)
+    ctx.update(groups=groups, chart_cards=chart_cards, planner_cards=planner_cards)
     _write(SITE / "calculators" / "index.html",
            env.get_template("calculators.html").render(**ctx))
 
@@ -394,7 +424,7 @@ def build() -> dict:
     ctx.update(groups=guide_groups,
                calculators=[_card_meta(site, a, cat_map.get(a.get("cluster", ""), {}).get("name", ""))
                             for a in published if a.get("is_pillar")],
-               chart_cards=chart_cards, site_pages=site_pages)
+               chart_cards=chart_cards, planner_cards=planner_cards, site_pages=site_pages)
     _write(SITE / "sitemap" / "index.html", env.get_template("sitemap.html").render(**ctx))
 
     # --- for publishers (indexable; explains how to embed/cite the calculators) ---
@@ -437,6 +467,11 @@ def build() -> dict:
     # Generate original figures into the copied static dir so pages can link them.
     img_stats = images.generate(published, static_dest)
     brand_stats = images.render_brand(static_dest)
+    pin_cards = [{"slug": ch["slug"], "title": ch["title"], "question": charts.CHART_QUESTIONS.get(ch["slug"], ""),
+                  "cluster": ch["cluster"]} for ch in charts.CHARTS]
+    pin_cards += [{"slug": pl["slug"], "title": pl["title"], "question": pl["question"],
+                   "cluster": pl["cluster"]} for pl in planners.PLANNERS]
+    pin_stats = images.render_pins(pin_cards, static_dest)
     _write(static_dest / "search-index.json", json.dumps(search_index, ensure_ascii=False))
 
     # --- sitemap, robots, rss, CNAME ---
@@ -450,11 +485,16 @@ def build() -> dict:
     urls += [{"loc": f"/{a['slug']}/", "lastmod": a.get("updated"),
               "image": _fig(site, a), "image_title": a["title"]} for a in published]
     urls += [{"loc": f"/{ch['slug']}/", "lastmod": today} for ch in charts.CHARTS]
+    urls += [{"loc": f"/{pl['slug']}/", "lastmod": today} for pl in planners.PLANNERS]
     urls += [{"loc": f"/{s}/", "lastmod": today} for s, _, _ in pages]
     urls += [{"loc": p, "lastmod": today} for p in EXTRA_PAGES]
     _write(SITE / "sitemap.xml", seolib.sitemap_xml(urls, site))
     _write(SITE / "robots.txt", seolib.robots_txt(site, _abs(site, "/sitemap.xml")))
-    _write(SITE / "rss.xml", seolib.rss_xml(published, site))
+    feed_extra = [{"title": ch["title"], "url": _abs(site, f"/{ch['slug']}/"),
+                   "description": ch["description"]} for ch in charts.CHARTS]
+    feed_extra += [{"title": pl["title"], "url": _abs(site, f"/{pl['slug']}/"),
+                    "description": pl["description"]} for pl in planners.PLANNERS]
+    _write(SITE / "rss.xml", seolib.rss_xml(published, site, extra=feed_extra))
     if site.get("custom_domain"):
         _write(SITE / "CNAME", site["custom_domain"] + "\n")
     _write(SITE / ".nojekyll", "")

@@ -19,6 +19,15 @@
   </ul>
 </section>
 
+<section class="section" aria-labelledby="sm-planners">
+  <div class="section-head"><h2 id="sm-planners">Project planners</h2></div>
+  <ul class="link-list">
+    {% for p in planner_cards %}
+    <li><a href="{{ base_url }}/{{ p.slug }}/">{{ p.title }}</a></li>
+    {% endfor %}
+  </ul>
+</section>
+
 <section class="section" aria-labelledby="sm-charts">
   <div class="section-head"><h2 id="sm-charts">Coverage &amp; reference charts</h2></div>
   {% include "charts_list.html" %}

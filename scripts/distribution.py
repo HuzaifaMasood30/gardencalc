@@ -8,8 +8,10 @@ channel. It then records completion so the state survives across runs.
 """
 from __future__ import annotations
 
+import csv
 import datetime as dt
 import json
+import re
 
 from common import DATA, REPORTS, load_json, save_json, site_config
 
@@ -105,7 +107,7 @@ def channels() -> list[dict]:
         {
             "id": "schema-validate",
             "title": "Validate structured data",
-            "why": "Confirms the Article/FAQ/HowTo/Breadcrumb markup will be eligible for rich results.",
+            "why": "Confirms the Article/FAQ/WebApplication/Breadcrumb markup will be eligible for rich results.",
             "url": "https://search.google.com/test/rich-results",
             "template": "Paste each article URL after deploy and confirm no errors.",
         },
@@ -132,6 +134,75 @@ def material(art: dict) -> dict:
             f"readers: {base}/{art['slug']}/"
         ),
     }
+
+
+def export_titles() -> dict:
+    """Write docs/titles.csv so the owner can review every title/description in bulk.
+
+    The growth brief asks for a url,current_title,proposed_title,current_description,
+    proposed_description export. Proposed values are the tightened targets; the owner
+    approves or edits them here.
+    """
+    from common import ROOT
+    site = site_config()
+    base = (site.get("custom_domain") or site["base_url"]).rstrip("/")
+    arts = [a for a in load_json(DATA / "articles.json", default=[])
+            if a.get("status") in ("published", "approved")]
+    docs = ROOT / "docs"
+    docs.mkdir(parents=True, exist_ok=True)
+    rows = [["url", "current_title", "proposed_title", "current_description", "proposed_description"]]
+    special = {
+        "/": ("Home & Garden Calculators: Free & Instant | " + site["name"],
+              "Free home and garden calculators for mulch, soil, gravel, paint, tile, "
+              "seed and concrete. Instant answers that show the formula used."),
+    }
+    seen = set()
+    for a in arts:
+        url = f"/{a['slug']}/"
+        if url in seen:
+            continue
+        seen.add(url)
+        cur_t = a.get("title", "")
+        des = a.get("meta_description", "")
+        rows.append([base + url, cur_t, suggest_title(cur_t), des, suggest_desc(des, a)])
+    for url, (t, d) in special.items():
+        rows.append([base + url, "", t, "", d])
+    path = docs / "titles.csv"
+    with path.open("w", encoding="utf-8", newline="") as fh:
+        w = csv.writer(fh)
+        w.writerows(rows)
+    return {"titles_csv": str(path), "rows": len(rows) - 1}
+
+
+# "Free Calculator & Guide" and "Free Calculator" tails take 21+ characters of the
+# ~60 Google shows. Tighten them to "(Free)" so the keyword stays first and the tag
+# does not get truncated mid-word.
+_TITLE_FIXES = [
+    (" : Free Calculator & Guide", " (Free)"),
+    (": Free Calculator & Guide", " (Free)"),
+    (" Free Calculator & Guide", " (Free)"),
+    ("Free Calculator &", "Free"),
+    ("Calculator & Guide", "Calculator"),
+]
+
+
+def suggest_title(title: str) -> str:
+    out = title
+    for old, new in _TITLE_FIXES:
+        out = out.replace(old, new)
+    out = re.sub(r"\s+", " ", out).strip()
+    if len(out) > 60:
+        # Last resort: drop a trailing parenthetical rather than truncate mid-word.
+        out = re.sub(r"\s*\([^)]*\)\s*$", "", out).strip()
+    return out
+
+
+def suggest_desc(desc: str, art: dict) -> str:
+    """Ensure the description opens with the answer and ends with a mini CTA."""
+    d = re.sub(r"\s+", " ", desc).strip()
+    if "calculat" not in d.lower():
+        d = (d + " Free calculator with the formula shown.").strip()
+    return d
 
 
 def write_pack() -> dict:
@@ -207,4 +278,5 @@ if __name__ == "__main__":
         print("unmarked", args.undo)
     else:
         p = write_pack()
+        export_titles()
         print(json.dumps({"channels": len(p["channels"]), "articles": len(p["articles"])}, indent=2))

@@ -241,10 +241,19 @@ def robots_txt(site: dict, sitemap_url: str) -> str:
     return (f"User-agent: *\nAllow: /\n\nSitemap: {sitemap_url}\n")
 
 
-def rss_xml(arts: list[dict], site: dict) -> str:
+def rss_xml(arts: list[dict], site: dict, extra: list[dict] | None = None) -> str:
     base = (site.get("custom_domain") or site["base_url"]).rstrip("/")
     now = dt.datetime.now(dt.timezone.utc).strftime("%a, %d %b %Y %H:%M:%S +0000")
     items = []
+    # New non-article pages (charts, planners, hubs) lead the feed so subscribers see them.
+    for x in (extra or []):
+        items.append(
+            f"  <item>\n"
+            f"    <title>{html.escape(x['title'])}</title>\n"
+            f"    <link>{x['url']}</link>\n"
+            f"    <guid>{x['url']}</guid>\n"
+            f"    <description>{html.escape(x.get('description', ''))}</description>\n"
+            f"  </item>")
     for a in arts[:50]:
         items.append(
             f"  <item>\n"

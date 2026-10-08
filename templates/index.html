@@ -67,6 +67,20 @@
   </div>
 </section>
 
+<section class="section" aria-labelledby="planners-heading">
+  <div class="section-head"><h2 id="planners-heading">Project planners</h2>
+    <p>Plan a whole project and get one shopping list.</p></div>
+  <div class="card-grid">
+    {% for p in planner_cards %}
+    <a class="card" href="{{ base_url }}/{{ p.slug }}/">
+      <span class="card-tag">{{ p.cluster_name }}</span>
+      <h3>{{ p.title }}</h3>
+      <p>{{ p.description }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
 <section class="section" aria-labelledby="charts-heading">
   <div class="section-head"><h2 id="charts-heading">Coverage &amp; reference charts</h2>
     <a href="{{ base_url }}/calculators/">All calculators →</a></div>
