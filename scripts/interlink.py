@@ -98,15 +98,20 @@ def _repair_orphans(arts: list[dict]) -> None:
     published = _published(arts)
     if len(published) < 2:
         return
+    hi = seo_config()["limits"]["max_internal_links_per_article"]
     for _ in range(len(published)):
         inbound = {l["to"] for a in published for l in a.get("internal_links", [])}
         missing = [a for a in published if a["slug"] not in inbound]
         if not missing:
             return
         for orphan in missing:
+            # Prefer a source that still has spare link capacity (so we do not push it
+            # past the cap and fail its own internal-links gate), then a same-cluster
+            # source, then a pillar, then the highest scoring.
             sources = sorted(
                 (a for a in published if a["slug"] != orphan["slug"]),
                 key=lambda a: (
+                    0 if len(a.get("internal_links", [])) < hi else 1,
                     0 if a.get("cluster") == orphan.get("cluster") else 1,
                     0 if a.get("is_pillar") else 1,
                     -a.get("quality", {}).get("score", 0),

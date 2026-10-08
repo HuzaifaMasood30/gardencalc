@@ -43,8 +43,12 @@ def run(limit: int | None = None) -> dict:
         after = {a["slug"]: a.get("status") for a in arts}
         if before == after:
             break
-    interlink.link_all(arts)  # final pass drops any newly rejected link targets
+    # Gate once more, then rebuild links for the final statuses and save. Linking must
+    # be the last mutation: quality.apply() can reject an article that was the only
+    # inbound link for another, so repairing links *before* the last gate left an
+    # orphan behind and aborted the run.
     quality.apply(arts)
+    interlink.link_all(arts)
     save_json(DATA / "articles.json", arts)
     orphans = interlink.orphans(arts)
     steps["orphans"] = orphans

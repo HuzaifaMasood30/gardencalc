@@ -39,6 +39,22 @@ def test_markdown_escapes_html_and_resolves_links():
     assert "https://x.test/mulch-calculator/" in out
 
 
+def test_no_orphans_from_singleton_cluster():
+    import interlink
+
+    arts = [
+        {"slug": "cluster-a-one", "cluster": "a", "title": "A One",
+         "primary_keyword": "a one", "quality": {}, "internal_links": []},
+        {"slug": "cluster-a-two", "cluster": "a", "title": "A Two",
+         "primary_keyword": "a two", "quality": {}, "internal_links": []},
+        # A keyword whose cluster has only this member would otherwise be orphaned.
+        {"slug": "cluster-solo", "cluster": "solo", "title": "Solo",
+         "primary_keyword": "solo", "quality": {}, "internal_links": []},
+    ]
+    interlink.link_all(arts)
+    assert interlink.orphans(arts) == [], interlink.orphans(arts)
+
+
 def test_quality_rejects_thin_content():
     art = {"slug": "t", "title": "T", "primary_keyword": "x",
            "body_markdown": "## A\n\ntiny\n", "word_count": 3}
