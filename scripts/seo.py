@@ -15,7 +15,7 @@ def _abs(site: dict, path: str) -> str:
 
 def article_schema(art: dict, site: dict, figure: str | None = None) -> dict:
     url = _abs(site, f"/{art['slug']}/")
-    img = figure or _abs(site, f"/static/img/og/{art['slug']}.svg")
+    img = figure or _abs(site, f"/static/img/og/{art['slug']}.png")
     return {
         "@context": "https://schema.org",
         "@type": "Article",
