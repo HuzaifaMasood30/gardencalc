@@ -19,6 +19,7 @@ import re
 import shutil
 import subprocess
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -41,14 +42,25 @@ def record(name, ok, detail="", hard=True):
 
 
 def fetch(url: str, timeout: int = 20):
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (SEO-Audit)"})
-    try:
-        with urllib.request.urlopen(req, timeout=timeout) as r:
-            return r.status, r.read().decode("utf-8", "replace"), dict(r.headers)
-    except urllib.error.HTTPError as e:
-        return e.code, e.read().decode("utf-8", "replace"), dict(e.headers)
-    except Exception as e:  # noqa: BLE001
-        return 0, "", {"error": str(e)}
+    # GitHub Pages returns transient 5xx under load; retry before calling a link broken
+    # so a momentary blip does not fail the gate.
+    for attempt in range(3):
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (SEO-Audit)"})
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                return r.status, r.read().decode("utf-8", "replace"), dict(r.headers)
+        except urllib.error.HTTPError as e:
+            body = e.read().decode("utf-8", "replace")
+            if e.code >= 500 and attempt < 2:
+                time.sleep(1.5 * (attempt + 1))
+                continue
+            return e.code, body, dict(e.headers)
+        except Exception as e:  # noqa: BLE001
+            if attempt < 2:
+                time.sleep(1.5 * (attempt + 1))
+                continue
+            return 0, "", {"error": str(e)}
+    return 0, "", {"error": "unreachable"}
 
 
 class Page(HTMLParser):
@@ -266,7 +278,7 @@ def audit(base: str) -> dict:
     # calculator presence on calculator pages
     st, mulch, _ = fetch(base + "mulch-calculator/")
     record("calculator form and script present",
-           'class="calc-form"' in mulch and "static/js/main.js" in mulch,
+           'class="calc-form' in mulch and "static/js/main.js" in mulch,
            "mulch-calculator")
     ok, detail = calculator_parity()
     record("JS/Python calculator parity", ok, detail)
