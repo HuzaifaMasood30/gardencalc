@@ -761,9 +761,9 @@
   },
   {
     "date": "2026-10-08",
-    "articles": 72,
-    "avg_seo_score": 98.3,
-    "total_words": 60477,
+    "articles": 81,
+    "avg_seo_score": 98.2,
+    "total_words": 68223,
     "per_article": [
       {
         "slug": "mulch-calculator",
@@ -1916,6 +1916,150 @@
           "calculator": true
         },
         "word_count": 975
+      },
+      {
+        "slug": "how-much-mulch-do-i-need-for-a-flower-bed",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 974
+      },
+      {
+        "slug": "how-much-gravel-do-i-need-for-a-10x10-patio",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 878
+      },
+      {
+        "slug": "how-much-paint-do-i-need-for-a-door",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 806
+      },
+      {
+        "slug": "how-many-tiles-do-i-need-for-a-4x4-room",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 806
+      },
+      {
+        "slug": "how-much-bermuda-grass-seed-per-1000-square-feet",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 996
+      },
+      {
+        "slug": "how-many-pounds-of-fertilizer-per-1000-sq-ft",
+        "score": 88.9,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": false,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 847
+      },
+      {
+        "slug": "how-many-bags-of-concrete-do-i-need-for-a-12x12-slab",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 894
+      },
+      {
+        "slug": "how-to-calculate-how-much-soil-for-raised-bed",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 768
+      },
+      {
+        "slug": "how-much-topsoil-for-raised-garden-bed-calculator",
+        "score": 88.9,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": false,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 777
       }
     ]
   }
