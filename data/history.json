@@ -761,9 +761,9 @@
   },
   {
     "date": "2026-10-08",
-    "articles": 54,
-    "avg_seo_score": 98.6,
-    "total_words": 44720,
+    "articles": 63,
+    "avg_seo_score": 98.4,
+    "total_words": 52299,
     "per_article": [
       {
         "slug": "mulch-calculator",
@@ -1628,6 +1628,150 @@
           "calculator": true
         },
         "word_count": 912
+      },
+      {
+        "slug": "how-much-mulch-do-i-need-for-600-square-feet",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 882
+      },
+      {
+        "slug": "how-much-soil-do-i-need-for-a-raised-bed",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 911
+      },
+      {
+        "slug": "how-much-gravel-do-i-need-for-my-walkway",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 790
+      },
+      {
+        "slug": "how-much-paint-do-i-need-for-a-12x16-shed",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 762
+      },
+      {
+        "slug": "how-many-tiles-do-i-need-for-my-floor",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 750
+      },
+      {
+        "slug": "how-much-grass-seed-needed-per-square-foot",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 936
+      },
+      {
+        "slug": "how-much-starter-fertilizer-per-1000-sq-ft",
+        "score": 88.9,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": false,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 804
+      },
+      {
+        "slug": "how-many-bags-of-concrete-do-i-need-for-a-20x20-slab",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 781
+      },
+      {
+        "slug": "how-much-topsoil-do-i-need-for-a-garden-bed",
+        "score": 88.9,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": false,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 963
       }
     ]
   }
