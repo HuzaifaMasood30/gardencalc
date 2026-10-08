@@ -1,7 +1,7 @@
 {
   "limits": {
-    "max_articles_per_run": 3,
-    "max_articles_per_day": 3,
+    "max_articles_per_run": 5,
+    "max_articles_per_day": 5,
     "min_word_count": 600,
     "max_word_count": 2400,
     "min_quality_score": 70,
