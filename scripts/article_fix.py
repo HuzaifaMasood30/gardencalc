@@ -576,12 +576,12 @@ def run(arts: list[dict]) -> dict:
 
 
 if __name__ == "__main__":
-    import json
+    from common import load_json, save_json
 
     path = Path(__file__).resolve().parent.parent / "data" / "articles.json"
-    arts = json.load(open(path))
+    arts = load_json(path, default=[])
     rep = run(arts)
-    json.dump(arts, open(path, "w"), indent=2, ensure_ascii=False)
+    save_json(path, arts)
     for slug, ch in rep.items():
         print(slug)
         for c in ch:
