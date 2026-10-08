@@ -86,6 +86,11 @@
         "to": "how-much-mulch-do-i-need-for-600-square-feet",
         "anchor": "how much mulch do i need for 600 square feet",
         "title": "How Much Mulch Do I Need for 600 Square Feet"
+      },
+      {
+        "to": "how-much-mulch-do-i-need-for-32-square-feet",
+        "anchor": "how much mulch do i need for 32 square feet",
+        "title": "How Much Mulch Do I Need for 32 Square Feet"
       }
     ],
     "schema_types": [
@@ -135,7 +140,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -295,7 +300,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -396,6 +401,16 @@
         "to": "how-much-gravel-do-i-need-for-my-walkway",
         "anchor": "how much gravel do i need for my walkway",
         "title": "How Much Gravel Do I Need for My Walkway"
+      },
+      {
+        "to": "how-much-gravel-do-i-need-for-a-driveway",
+        "anchor": "how much gravel do i need for a driveway",
+        "title": "How Much Gravel Do I Need for a Driveway"
+      },
+      {
+        "to": "how-much-soil-for-raised-bed-calculator-uk",
+        "anchor": "how much soil for raised bed calculator uk",
+        "title": "How Much Soil for Raised Bed Calculator Uk"
       }
     ],
     "schema_types": [
@@ -445,7 +460,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -554,6 +569,11 @@
         "to": "how-much-paint-do-i-need-for-a-12x16-shed",
         "anchor": "how much paint do i need for a 12x16 shed",
         "title": "How Much Paint Do I Need for a 12x16 Shed"
+      },
+      {
+        "to": "how-much-paint-do-i-need-for-1800-sq-ft-house",
+        "anchor": "how much paint do i need for 1800 sq ft house",
+        "title": "How Much Paint Do I Need for 1800 SQ FT House"
       }
     ],
     "schema_types": [
@@ -603,7 +623,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -707,6 +727,11 @@
         "to": "how-many-tiles-do-i-need-for-my-floor",
         "anchor": "how many tiles do i need for my floor",
         "title": "How Many Tiles Do I Need for My Floor"
+      },
+      {
+        "to": "how-many-tiles-do-i-need-for-my-room",
+        "anchor": "how many tiles do i need for my room",
+        "title": "How Many Tiles Do I Need for My Room"
       }
     ],
     "schema_types": [
@@ -756,7 +781,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -861,6 +886,11 @@
         "to": "how-much-grass-seed-needed-per-square-foot",
         "anchor": "how much grass seed needed per square foot",
         "title": "How Much Grass Seed Needed Per Square Foot"
+      },
+      {
+        "to": "how-much-grass-seed-do-i-need-per-square-foot",
+        "anchor": "how much grass seed do i need per square foot",
+        "title": "How Much Grass Seed Do I Need Per Square Foot"
       }
     ],
     "schema_types": [
@@ -910,7 +940,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -1012,6 +1042,11 @@
         "to": "how-many-bags-of-concrete-do-i-need-for-a-20x20-slab",
         "anchor": "how many bags of concrete do i need for a",
         "title": "How Many Bags of Concrete Do I Need for a 20x20 Slab"
+      },
+      {
+        "to": "how-many-bags-of-concrete-do-i-need-for-a-8x8-slab",
+        "anchor": "how many bags of concrete do i need for a",
+        "title": "How Many Bags of Concrete Do I Need for a 8x8 Slab"
       }
     ],
     "schema_types": [
@@ -1061,7 +1096,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -1168,6 +1203,11 @@
         "to": "how-much-mulch-do-i-need-for-600-square-feet",
         "anchor": "how much mulch do i need for 600 square feet",
         "title": "How Much Mulch Do I Need for 600 Square Feet"
+      },
+      {
+        "to": "how-much-mulch-do-i-need-for-32-square-feet",
+        "anchor": "how much mulch do i need for 32 square feet",
+        "title": "How Much Mulch Do I Need for 32 Square Feet"
       }
     ],
     "schema_types": [
@@ -1217,7 +1257,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -1377,7 +1417,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -1478,6 +1518,11 @@
         "to": "how-much-gravel-do-i-need-for-my-walkway",
         "anchor": "how much gravel do i need for my walkway",
         "title": "How Much Gravel Do I Need for My Walkway"
+      },
+      {
+        "to": "how-much-gravel-do-i-need-for-a-driveway",
+        "anchor": "how much gravel do i need for a driveway",
+        "title": "How Much Gravel Do I Need for a Driveway"
       }
     ],
     "schema_types": [
@@ -1527,7 +1572,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -1636,6 +1681,11 @@
         "to": "how-much-paint-do-i-need-for-a-12x16-shed",
         "anchor": "how much paint do i need for a 12x16 shed",
         "title": "How Much Paint Do I Need for a 12x16 Shed"
+      },
+      {
+        "to": "how-much-paint-do-i-need-for-1800-sq-ft-house",
+        "anchor": "how much paint do i need for 1800 sq ft house",
+        "title": "How Much Paint Do I Need for 1800 SQ FT House"
       }
     ],
     "schema_types": [
@@ -1685,7 +1735,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -1789,6 +1839,11 @@
         "to": "how-many-tiles-do-i-need-for-my-floor",
         "anchor": "how many tiles do i need for my floor",
         "title": "How Many Tiles Do I Need for My Floor"
+      },
+      {
+        "to": "how-many-tiles-do-i-need-for-my-room",
+        "anchor": "how many tiles do i need for my room",
+        "title": "How Many Tiles Do I Need for My Room"
       }
     ],
     "schema_types": [
@@ -1838,7 +1893,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -1943,6 +1998,11 @@
         "to": "how-much-grass-seed-needed-per-square-foot",
         "anchor": "how much grass seed needed per square foot",
         "title": "How Much Grass Seed Needed Per Square Foot"
+      },
+      {
+        "to": "how-much-grass-seed-do-i-need-per-square-foot",
+        "anchor": "how much grass seed do i need per square foot",
+        "title": "How Much Grass Seed Do I Need Per Square Foot"
       }
     ],
     "schema_types": [
@@ -1992,7 +2052,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -2094,6 +2154,11 @@
         "to": "how-many-bags-of-concrete-do-i-need-for-a-20x20-slab",
         "anchor": "how many bags of concrete do i need for a",
         "title": "How Many Bags of Concrete Do I Need for a 20x20 Slab"
+      },
+      {
+        "to": "how-many-bags-of-concrete-do-i-need-for-a-8x8-slab",
+        "anchor": "how many bags of concrete do i need for a",
+        "title": "How Many Bags of Concrete Do I Need for a 8x8 Slab"
       }
     ],
     "schema_types": [
@@ -2143,7 +2208,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -2250,6 +2315,11 @@
         "to": "how-much-mulch-do-i-need-for-600-square-feet",
         "anchor": "how much mulch do i need for 600 square feet",
         "title": "How Much Mulch Do I Need for 600 Square Feet"
+      },
+      {
+        "to": "how-much-mulch-do-i-need-for-32-square-feet",
+        "anchor": "how much mulch do i need for 32 square feet",
+        "title": "How Much Mulch Do I Need for 32 Square Feet"
       }
     ],
     "schema_types": [
@@ -2299,7 +2369,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -2427,7 +2497,7 @@
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.19 vs how-much-soil-for-a-raised-garden-bed"
+          "detail": "max similarity 0.19 vs how-much-soil-for-raised-bed-calculator-uk"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -2459,7 +2529,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -2560,6 +2630,11 @@
         "to": "how-much-gravel-do-i-need-for-my-walkway",
         "anchor": "how much gravel do i need for my walkway",
         "title": "How Much Gravel Do I Need for My Walkway"
+      },
+      {
+        "to": "how-much-gravel-do-i-need-for-a-driveway",
+        "anchor": "how much gravel do i need for a driveway",
+        "title": "How Much Gravel Do I Need for a Driveway"
       }
     ],
     "schema_types": [
@@ -2609,7 +2684,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -2716,6 +2791,11 @@
         "to": "how-much-mulch-do-i-need-for-600-square-feet",
         "anchor": "how much mulch do i need for 600 square feet",
         "title": "How Much Mulch Do I Need for 600 Square Feet"
+      },
+      {
+        "to": "how-much-mulch-do-i-need-for-32-square-feet",
+        "anchor": "how much mulch do i need for 32 square feet",
+        "title": "How Much Mulch Do I Need for 32 Square Feet"
       }
     ],
     "schema_types": [
@@ -2765,7 +2845,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -2925,7 +3005,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3026,6 +3106,11 @@
         "to": "how-much-gravel-do-i-need-for-my-walkway",
         "anchor": "how much gravel do i need for my walkway",
         "title": "How Much Gravel Do I Need for My Walkway"
+      },
+      {
+        "to": "how-much-gravel-do-i-need-for-a-driveway",
+        "anchor": "how much gravel do i need for a driveway",
+        "title": "How Much Gravel Do I Need for a Driveway"
       }
     ],
     "schema_types": [
@@ -3075,7 +3160,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3184,6 +3269,11 @@
         "to": "how-much-paint-do-i-need-for-a-12x16-shed",
         "anchor": "how much paint do i need for a 12x16 shed",
         "title": "How Much Paint Do I Need for a 12x16 Shed"
+      },
+      {
+        "to": "how-much-paint-do-i-need-for-1800-sq-ft-house",
+        "anchor": "how much paint do i need for 1800 sq ft house",
+        "title": "How Much Paint Do I Need for 1800 SQ FT House"
       }
     ],
     "schema_types": [
@@ -3201,7 +3291,7 @@
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.07 vs how-much-paint-do-i-need-for-a-front-door"
+          "detail": "max similarity 0.07 vs how-much-paint-do-i-need-for-1800-sq-ft-house"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -3233,7 +3323,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3338,6 +3428,11 @@
         "to": "how-much-grass-seed-needed-per-square-foot",
         "anchor": "how much grass seed needed per square foot",
         "title": "How Much Grass Seed Needed Per Square Foot"
+      },
+      {
+        "to": "how-much-grass-seed-do-i-need-per-square-foot",
+        "anchor": "how much grass seed do i need per square foot",
+        "title": "How Much Grass Seed Do I Need Per Square Foot"
       }
     ],
     "schema_types": [
@@ -3387,7 +3482,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3489,6 +3584,11 @@
         "to": "how-many-bags-of-concrete-do-i-need-for-a-20x20-slab",
         "anchor": "how many bags of concrete do i need for a",
         "title": "How Many Bags of Concrete Do I Need for a 20x20 Slab"
+      },
+      {
+        "to": "how-many-bags-of-concrete-do-i-need-for-a-8x8-slab",
+        "anchor": "how many bags of concrete do i need for a",
+        "title": "How Many Bags of Concrete Do I Need for a 8x8 Slab"
       }
     ],
     "schema_types": [
@@ -3538,7 +3638,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3608,6 +3708,11 @@
         "to": "how-much-topsoil-do-i-need-for-a-garden-bed",
         "anchor": "how much topsoil do i need for a garden bed",
         "title": "How Much Topsoil Do I Need for a Garden Bed"
+      },
+      {
+        "to": "how-much-topsoil-do-i-need-for-my-raised-garden-bed",
+        "anchor": "how much topsoil do i need for my raised",
+        "title": "How Much Topsoil Do I Need for My Raised Garden Bed"
       }
     ],
     "schema_types": [
@@ -3656,7 +3761,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 3 (want 3-8, 62 available)"
+          "detail": "internal links 4 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3729,6 +3834,11 @@
         "to": "how-much-starter-fertilizer-per-1000-sq-ft",
         "anchor": "how much starter fertilizer per 1000 sq ft",
         "title": "How Much Starter Fertilizer Per 1000 SQ FT"
+      },
+      {
+        "to": "how-much-scotts-starter-fertilizer-per-1000-sq-ft",
+        "anchor": "how much scotts starter fertilizer per",
+        "title": "How Much Scotts Starter Fertilizer Per 1000 SQ FT"
       }
     ],
     "schema_types": [
@@ -3777,7 +3887,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 4 (want 3-8, 62 available)"
+          "detail": "internal links 5 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3884,6 +3994,11 @@
         "to": "how-much-mulch-do-i-need-for-600-square-feet",
         "anchor": "how much mulch do i need for 600 square feet",
         "title": "How Much Mulch Do I Need for 600 Square Feet"
+      },
+      {
+        "to": "how-much-mulch-do-i-need-for-32-square-feet",
+        "anchor": "how much mulch do i need for 32 square feet",
+        "title": "How Much Mulch Do I Need for 32 Square Feet"
       }
     ],
     "schema_types": [
@@ -3933,7 +4048,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -4093,7 +4208,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -4194,6 +4309,11 @@
         "to": "how-much-gravel-do-i-need-for-my-walkway",
         "anchor": "how much gravel do i need for my walkway",
         "title": "How Much Gravel Do I Need for My Walkway"
+      },
+      {
+        "to": "how-much-gravel-do-i-need-for-a-driveway",
+        "anchor": "how much gravel do i need for a driveway",
+        "title": "How Much Gravel Do I Need for a Driveway"
       }
     ],
     "schema_types": [
@@ -4243,7 +4363,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -4352,6 +4472,11 @@
         "to": "how-much-paint-do-i-need-for-a-12x16-shed",
         "anchor": "how much paint do i need for a 12x16 shed",
         "title": "How Much Paint Do I Need for a 12x16 Shed"
+      },
+      {
+        "to": "how-much-paint-do-i-need-for-1800-sq-ft-house",
+        "anchor": "how much paint do i need for 1800 sq ft house",
+        "title": "How Much Paint Do I Need for 1800 SQ FT House"
       }
     ],
     "schema_types": [
@@ -4369,7 +4494,7 @@
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.12 vs how-much-paint-do-i-need-for-a-room"
+          "detail": "max similarity 0.12 vs how-much-paint-do-i-need-for-1800-sq-ft-house"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -4401,7 +4526,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -4505,6 +4630,11 @@
         "to": "how-many-tiles-do-i-need-for-my-floor",
         "anchor": "how many tiles do i need for my floor",
         "title": "How Many Tiles Do I Need for My Floor"
+      },
+      {
+        "to": "how-many-tiles-do-i-need-for-my-room",
+        "anchor": "how many tiles do i need for my room",
+        "title": "How Many Tiles Do I Need for My Room"
       }
     ],
     "schema_types": [
@@ -4554,7 +4684,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -4659,6 +4789,11 @@
         "to": "how-much-grass-seed-needed-per-square-foot",
         "anchor": "how much grass seed needed per square foot",
         "title": "How Much Grass Seed Needed Per Square Foot"
+      },
+      {
+        "to": "how-much-grass-seed-do-i-need-per-square-foot",
+        "anchor": "how much grass seed do i need per square foot",
+        "title": "How Much Grass Seed Do I Need Per Square Foot"
       }
     ],
     "schema_types": [
@@ -4676,7 +4811,7 @@
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.11 vs how-much-grass-seed-needed-per-square-foot"
+          "detail": "max similarity 0.11 vs how-much-grass-seed-do-i-need-per-square-foot"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -4708,7 +4843,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -4815,6 +4950,11 @@
         "to": "how-much-mulch-do-i-need-for-600-square-feet",
         "anchor": "how much mulch do i need for 600 square feet",
         "title": "How Much Mulch Do I Need for 600 Square Feet"
+      },
+      {
+        "to": "how-much-mulch-do-i-need-for-32-square-feet",
+        "anchor": "how much mulch do i need for 32 square feet",
+        "title": "How Much Mulch Do I Need for 32 Square Feet"
       }
     ],
     "schema_types": [
@@ -4864,7 +5004,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -5024,7 +5164,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -5133,6 +5273,11 @@
         "to": "how-much-paint-do-i-need-for-a-12x16-shed",
         "anchor": "how much paint do i need for a 12x16 shed",
         "title": "How Much Paint Do I Need for a 12x16 Shed"
+      },
+      {
+        "to": "how-much-paint-do-i-need-for-1800-sq-ft-house",
+        "anchor": "how much paint do i need for 1800 sq ft house",
+        "title": "How Much Paint Do I Need for 1800 SQ FT House"
       }
     ],
     "schema_types": [
@@ -5182,7 +5327,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -5286,6 +5431,11 @@
         "to": "how-many-tiles-do-i-need-for-my-floor",
         "anchor": "how many tiles do i need for my floor",
         "title": "How Many Tiles Do I Need for My Floor"
+      },
+      {
+        "to": "how-many-tiles-do-i-need-for-my-room",
+        "anchor": "how many tiles do i need for my room",
+        "title": "How Many Tiles Do I Need for My Room"
       }
     ],
     "schema_types": [
@@ -5335,7 +5485,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -5440,6 +5590,11 @@
         "to": "how-much-grass-seed-needed-per-square-foot",
         "anchor": "how much grass seed needed per square foot",
         "title": "How Much Grass Seed Needed Per Square Foot"
+      },
+      {
+        "to": "how-much-grass-seed-do-i-need-per-square-foot",
+        "anchor": "how much grass seed do i need per square foot",
+        "title": "How Much Grass Seed Do I Need Per Square Foot"
       }
     ],
     "schema_types": [
@@ -5489,7 +5644,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -5562,6 +5717,11 @@
         "to": "how-much-starter-fertilizer-per-1000-sq-ft",
         "anchor": "how much starter fertilizer per 1000 sq ft",
         "title": "How Much Starter Fertilizer Per 1000 SQ FT"
+      },
+      {
+        "to": "how-much-scotts-starter-fertilizer-per-1000-sq-ft",
+        "anchor": "how much scotts starter fertilizer per",
+        "title": "How Much Scotts Starter Fertilizer Per 1000 SQ FT"
       }
     ],
     "schema_types": [
@@ -5610,7 +5770,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 4 (want 3-8, 62 available)"
+          "detail": "internal links 5 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -5712,6 +5872,11 @@
         "to": "how-many-bags-of-concrete-do-i-need-for-a-20x20-slab",
         "anchor": "how many bags of concrete do i need for a",
         "title": "How Many Bags of Concrete Do I Need for a 20x20 Slab"
+      },
+      {
+        "to": "how-many-bags-of-concrete-do-i-need-for-a-8x8-slab",
+        "anchor": "how many bags of concrete do i need for a",
+        "title": "How Many Bags of Concrete Do I Need for a 8x8 Slab"
       }
     ],
     "schema_types": [
@@ -5729,7 +5894,7 @@
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.11 vs how-many-bags-of-concrete-do-i-need-for-a-4-x8-slab"
+          "detail": "max similarity 0.14 vs how-many-bags-of-concrete-do-i-need-for-a-8x8-slab"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -5761,7 +5926,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -5868,6 +6033,11 @@
         "to": "how-much-mulch-do-i-need-for-600-square-feet",
         "anchor": "how much mulch do i need for 600 square feet",
         "title": "How Much Mulch Do I Need for 600 Square Feet"
+      },
+      {
+        "to": "how-much-mulch-do-i-need-for-32-square-feet",
+        "anchor": "how much mulch do i need for 32 square feet",
+        "title": "How Much Mulch Do I Need for 32 Square Feet"
       }
     ],
     "schema_types": [
@@ -5917,7 +6087,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6077,7 +6247,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6178,6 +6348,11 @@
         "to": "how-much-gravel-do-i-need-for-my-walkway",
         "anchor": "how much gravel do i need for my walkway",
         "title": "How Much Gravel Do I Need for My Walkway"
+      },
+      {
+        "to": "how-much-gravel-do-i-need-for-a-driveway",
+        "anchor": "how much gravel do i need for a driveway",
+        "title": "How Much Gravel Do I Need for a Driveway"
       }
     ],
     "schema_types": [
@@ -6227,7 +6402,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6336,6 +6511,11 @@
         "to": "how-much-paint-do-i-need-for-a-12x16-shed",
         "anchor": "how much paint do i need for a 12x16 shed",
         "title": "How Much Paint Do I Need for a 12x16 Shed"
+      },
+      {
+        "to": "how-much-paint-do-i-need-for-1800-sq-ft-house",
+        "anchor": "how much paint do i need for 1800 sq ft house",
+        "title": "How Much Paint Do I Need for 1800 SQ FT House"
       }
     ],
     "schema_types": [
@@ -6385,7 +6565,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6489,6 +6669,11 @@
         "to": "how-many-tiles-do-i-need-for-my-floor",
         "anchor": "how many tiles do i need for my floor",
         "title": "How Many Tiles Do I Need for My Floor"
+      },
+      {
+        "to": "how-many-tiles-do-i-need-for-my-room",
+        "anchor": "how many tiles do i need for my room",
+        "title": "How Many Tiles Do I Need for My Room"
       }
     ],
     "schema_types": [
@@ -6538,7 +6723,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6643,6 +6828,11 @@
         "to": "how-much-grass-seed-needed-per-square-foot",
         "anchor": "how much grass seed needed per square foot",
         "title": "How Much Grass Seed Needed Per Square Foot"
+      },
+      {
+        "to": "how-much-grass-seed-do-i-need-per-square-foot",
+        "anchor": "how much grass seed do i need per square foot",
+        "title": "How Much Grass Seed Do I Need Per Square Foot"
       }
     ],
     "schema_types": [
@@ -6692,7 +6882,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6765,6 +6955,11 @@
         "to": "how-much-starter-fertilizer-per-1000-sq-ft",
         "anchor": "how much starter fertilizer per 1000 sq ft",
         "title": "How Much Starter Fertilizer Per 1000 SQ FT"
+      },
+      {
+        "to": "how-much-scotts-starter-fertilizer-per-1000-sq-ft",
+        "anchor": "how much scotts starter fertilizer per",
+        "title": "How Much Scotts Starter Fertilizer Per 1000 SQ FT"
       }
     ],
     "schema_types": [
@@ -6813,7 +7008,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 4 (want 3-8, 62 available)"
+          "detail": "internal links 5 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6915,6 +7110,11 @@
         "to": "how-many-bags-of-concrete-do-i-need-for-a-20x20-slab",
         "anchor": "how many bags of concrete do i need for a",
         "title": "How Many Bags of Concrete Do I Need for a 20x20 Slab"
+      },
+      {
+        "to": "how-many-bags-of-concrete-do-i-need-for-a-8x8-slab",
+        "anchor": "how many bags of concrete do i need for a",
+        "title": "How Many Bags of Concrete Do I Need for a 8x8 Slab"
       }
     ],
     "schema_types": [
@@ -6964,7 +7164,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -7034,6 +7234,11 @@
         "to": "how-much-topsoil-do-i-need-for-a-garden-bed",
         "anchor": "how much topsoil do i need for a garden bed",
         "title": "How Much Topsoil Do I Need for a Garden Bed"
+      },
+      {
+        "to": "how-much-topsoil-do-i-need-for-my-raised-garden-bed",
+        "anchor": "how much topsoil do i need for my raised",
+        "title": "How Much Topsoil Do I Need for My Raised Garden Bed"
       }
     ],
     "schema_types": [
@@ -7050,7 +7255,7 @@
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.13 vs topsoil-calculator"
+          "detail": "max similarity 0.13 vs how-much-topsoil-do-i-need-for-my-raised-garden-bed"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -7082,7 +7287,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 3 (want 3-8, 62 available)"
+          "detail": "internal links 4 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -7242,7 +7447,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -7351,6 +7556,11 @@
         "to": "how-much-paint-do-i-need-for-a-12x16-shed",
         "anchor": "how much paint do i need for a 12x16 shed",
         "title": "How Much Paint Do I Need for a 12x16 Shed"
+      },
+      {
+        "to": "how-much-paint-do-i-need-for-1800-sq-ft-house",
+        "anchor": "how much paint do i need for 1800 sq ft house",
+        "title": "How Much Paint Do I Need for 1800 SQ FT House"
       }
     ],
     "schema_types": [
@@ -7400,7 +7610,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -7504,6 +7714,11 @@
         "to": "how-many-tiles-do-i-need-for-my-floor",
         "anchor": "how many tiles do i need for my floor",
         "title": "How Many Tiles Do I Need for My Floor"
+      },
+      {
+        "to": "how-many-tiles-do-i-need-for-my-room",
+        "anchor": "how many tiles do i need for my room",
+        "title": "How Many Tiles Do I Need for My Room"
       }
     ],
     "schema_types": [
@@ -7521,7 +7736,7 @@
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.10 vs how-many-tiles-do-i-need-for-100-square-feet"
+          "detail": "max similarity 0.13 vs how-many-tiles-do-i-need-for-my-room"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -7553,7 +7768,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -7658,6 +7873,11 @@
         "to": "how-much-grass-seed-needed-per-square-foot",
         "anchor": "how much grass seed needed per square foot",
         "title": "How Much Grass Seed Needed Per Square Foot"
+      },
+      {
+        "to": "how-much-grass-seed-do-i-need-per-square-foot",
+        "anchor": "how much grass seed do i need per square foot",
+        "title": "How Much Grass Seed Do I Need Per Square Foot"
       }
     ],
     "schema_types": [
@@ -7707,7 +7927,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -7780,6 +8000,11 @@
         "to": "how-much-starter-fertilizer-per-1000-sq-ft",
         "anchor": "how much starter fertilizer per 1000 sq ft",
         "title": "How Much Starter Fertilizer Per 1000 SQ FT"
+      },
+      {
+        "to": "how-much-scotts-starter-fertilizer-per-1000-sq-ft",
+        "anchor": "how much scotts starter fertilizer per",
+        "title": "How Much Scotts Starter Fertilizer Per 1000 SQ FT"
       }
     ],
     "schema_types": [
@@ -7828,7 +8053,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 4 (want 3-8, 62 available)"
+          "detail": "internal links 5 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -7930,6 +8155,11 @@
         "to": "how-many-bags-of-concrete-do-i-need-for-a-20x20-slab",
         "anchor": "how many bags of concrete do i need for a",
         "title": "How Many Bags of Concrete Do I Need for a 20x20 Slab"
+      },
+      {
+        "to": "how-many-bags-of-concrete-do-i-need-for-a-8x8-slab",
+        "anchor": "how many bags of concrete do i need for a",
+        "title": "How Many Bags of Concrete Do I Need for a 8x8 Slab"
       }
     ],
     "schema_types": [
@@ -7979,7 +8209,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -8049,6 +8279,11 @@
         "to": "how-much-topsoil-do-i-need-for-a-garden-bed",
         "anchor": "how much topsoil do i need for a garden bed",
         "title": "How Much Topsoil Do I Need for a Garden Bed"
+      },
+      {
+        "to": "how-much-topsoil-do-i-need-for-my-raised-garden-bed",
+        "anchor": "how much topsoil do i need for my raised",
+        "title": "How Much Topsoil Do I Need for My Raised Garden Bed"
       }
     ],
     "schema_types": [
@@ -8097,7 +8332,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 3 (want 3-8, 62 available)"
+          "detail": "internal links 4 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -8204,6 +8439,11 @@
         "to": "how-much-mulch-do-i-need-for-1000-square-feet",
         "anchor": "how much mulch do i need for 1000 square feet",
         "title": "How Much Mulch Do I Need for 1000 Square Feet"
+      },
+      {
+        "to": "how-much-mulch-do-i-need-for-32-square-feet",
+        "anchor": "how much mulch do i need for 32 square feet",
+        "title": "How Much Mulch Do I Need for 32 Square Feet"
       }
     ],
     "schema_types": [
@@ -8253,7 +8493,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -8413,7 +8653,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -8514,6 +8754,11 @@
         "to": "how-much-gravel-do-i-need-for-a-10x12-shed",
         "anchor": "how much gravel do i need for a 10x12 shed",
         "title": "How Much Gravel Do I Need for a 10x12 Shed"
+      },
+      {
+        "to": "how-much-gravel-do-i-need-for-a-driveway",
+        "anchor": "how much gravel do i need for a driveway",
+        "title": "How Much Gravel Do I Need for a Driveway"
       }
     ],
     "schema_types": [
@@ -8563,7 +8808,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -8672,6 +8917,11 @@
         "to": "how-much-paint-do-i-need-for-a-room",
         "anchor": "how much paint do i need for a room",
         "title": "How Much Paint Do I Need for a Room: Free Calculator & Guide"
+      },
+      {
+        "to": "how-much-paint-do-i-need-for-1800-sq-ft-house",
+        "anchor": "how much paint do i need for 1800 sq ft house",
+        "title": "How Much Paint Do I Need for 1800 SQ FT House"
       }
     ],
     "schema_types": [
@@ -8721,7 +8971,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -8825,6 +9075,11 @@
         "to": "how-many-tiles-do-i-need-for-120-square-feet",
         "anchor": "how many tiles do i need for 120 square feet",
         "title": "How Many Tiles Do I Need for 120 Square Feet"
+      },
+      {
+        "to": "how-many-tiles-do-i-need-for-my-room",
+        "anchor": "how many tiles do i need for my room",
+        "title": "How Many Tiles Do I Need for My Room"
       }
     ],
     "schema_types": [
@@ -8874,7 +9129,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -8979,6 +9234,11 @@
         "to": "how-much-bermuda-grass-seed-per-square-foot",
         "anchor": "how much bermuda grass seed per square foot",
         "title": "How Much Bermuda Grass Seed Per Square Foot"
+      },
+      {
+        "to": "how-much-grass-seed-do-i-need-per-square-foot",
+        "anchor": "how much grass seed do i need per square foot",
+        "title": "How Much Grass Seed Do I Need Per Square Foot"
       }
     ],
     "schema_types": [
@@ -8996,7 +9256,7 @@
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.12 vs how-much-bermuda-grass-seed-per-square-foot"
+          "detail": "max similarity 0.13 vs how-much-grass-seed-do-i-need-per-square-foot"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -9028,7 +9288,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -9101,6 +9361,11 @@
         "to": "how-much-nitrogen-fertilizer-per-1000-sq-ft",
         "anchor": "how much nitrogen fertilizer per 1000 sq ft",
         "title": "How Much Nitrogen Fertilizer Per 1000 SQ FT"
+      },
+      {
+        "to": "how-much-scotts-starter-fertilizer-per-1000-sq-ft",
+        "anchor": "how much scotts starter fertilizer per",
+        "title": "How Much Scotts Starter Fertilizer Per 1000 SQ FT"
       }
     ],
     "schema_types": [
@@ -9117,7 +9382,7 @@
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.07 vs fertilizer-calculator"
+          "detail": "max similarity 0.09 vs how-much-scotts-starter-fertilizer-per-1000-sq-ft"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -9149,7 +9414,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 4 (want 3-8, 62 available)"
+          "detail": "internal links 5 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -9251,6 +9516,11 @@
         "to": "how-many-bags-of-concrete-do-i-need-for-a-10x12-slab",
         "anchor": "how many bags of concrete do i need for a",
         "title": "How Many Bags of Concrete Do I Need for a 10x12 Slab"
+      },
+      {
+        "to": "how-many-bags-of-concrete-do-i-need-for-a-8x8-slab",
+        "anchor": "how many bags of concrete do i need for a",
+        "title": "How Many Bags of Concrete Do I Need for a 8x8 Slab"
       }
     ],
     "schema_types": [
@@ -9300,7 +9570,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -9370,6 +9640,11 @@
         "to": "how-much-topsoil-do-i-need-for-a-new-lawn",
         "anchor": "how much topsoil do i need for a new lawn",
         "title": "How Much Topsoil Do I Need for a New Lawn"
+      },
+      {
+        "to": "how-much-topsoil-do-i-need-for-my-raised-garden-bed",
+        "anchor": "how much topsoil do i need for my raised",
+        "title": "How Much Topsoil Do I Need for My Raised Garden Bed"
       }
     ],
     "schema_types": [
@@ -9386,7 +9661,7 @@
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.07 vs topsoil-calculator"
+          "detail": "max similarity 0.13 vs how-much-topsoil-do-i-need-for-my-raised-garden-bed"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -9418,7 +9693,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 3 (want 3-8, 62 available)"
+          "detail": "internal links 4 (want 3-8, 71 available)"
         },
         "schema_present": {
           "pass": true,
@@ -9437,5 +9712,1366 @@
       "position": 0
     },
     "word_count": 963
+  },
+  {
+    "id": "how-much-mulch-do-i-need-for-32-square-feet",
+    "slug": "how-much-mulch-do-i-need-for-32-square-feet",
+    "title": "How Much Mulch Do I Need for 32 Square Feet",
+    "cluster": "mulch",
+    "primary_keyword": "how much mulch do i need for 32 square feet",
+    "secondary_keywords": [
+      "how much mulch do i need for 500 sq ft",
+      "how much mulch do i need for 300 square feet",
+      "how much mulch do i need for 200 square feet",
+      "how much mulch do i need for 400 square feet",
+      "how much mulch do i need for my flower bed"
+    ],
+    "intent": "calculator",
+    "is_pillar": false,
+    "calculator": "mulch",
+    "calculator_title": "Mulch Calculator",
+    "calculator_defaults": {
+      "length": 5.7,
+      "width": 5.7,
+      "depth": 3
+    },
+    "calculator_output": {
+      "square_feet": 32.5,
+      "cubic_feet": 8.1,
+      "cubic_yards": 0.3,
+      "bags_2cf": 5
+    },
+    "meta_description": "To cover 32 square feet at the standard 3-inch depth, you need 8 cubic feet of organic material, which equals five 2-cubic-foot bags or about 0.3 cubic yards.",
+    "body_markdown": "To cover 32 square feet at the standard 3-inch depth, you need 8 cubic feet of organic material, which equals five 2-cubic-foot bags or about 0.3 cubic yards. If you are figuring out how much mulch do i need for 32 square feet, purchasing five bags gives you enough material to accommodate ground unevenness and normal settling.\n\nMulch is one of the most effective tools for protecting plant roots, retaining soil moisture, and blocking weeds. Buying the correct volume saves you from extra trips to the garden center or paying high delivery fees for small shortfalls.\n\n## How to Calculate Mulch\n\nCalculating volume requires three primary dimensions: length, width, and desired depth. First, multiply the length by the width in feet to calculate the total square footage. Next, convert your target depth from inches into feet by dividing by 12. Multiplying your square footage by that decimal depth yields the total cubic feet required.\n\nBecause suppliers package material in different units, you will need to convert cubic feet into either cubic yards or individual bags. Bulk material is measured in cubic yards, where one cubic yard equals 27 cubic feet. Bagged mulch is typically sold in 2-cubic-foot bags.\n\nHere is a step-by-step example using realistic measurements for a small bed:\n\n*   **Length:** 5.7 feet\n*   **Width:** 5.7 feet\n*   **Target Depth:** 3 inches (0.25 feet)\n*   Square Feet: **32.5**\n*   Cubic Feet: **8.1**\n*   Cubic Yards: **0.3**\n*   Bags 2Cf: **5**\n\nWhen you run these calculations, always round up to the nearest full bag. Soil surfaces are rarely perfectly level, and loose organic matter settles naturally after application. If you have an irregularly shaped bed, using an online Mulch Calculator can help you split the area into smaller sections for an accurate total.\n\n## Selecting the Right Depth\n\nThe depth of your mulch bed dictates how well it suppresses weeds and regulates ground temperature. Applying the wrong thickness can harm your plants rather than protect them.\n\n*   **1 to 2 inches:** Best for refreshing thin beds that already have a base layer or for mulching around shallow-rooted plants like annuals and perennials.\n*   **2 to 3 inches:** The recommended default depth for most flower beds, borders, and woody shrubs. It provides ideal weed suppression while allowing air and moisture to pass through.\n*   **3 to 4 inches:** Ideal for establishing brand new garden beds or controlling heavy weed growth in tough areas.\n*   **4+ inches:** Avoid applying at this thickness. Excessive material restricts soil airflow, creates a barrier that sheds rainfall, and traps moisture against plant bases, causing root rot.\n\nWhen asking yourself how much mulch do i need for my flower bed, stick to the standard 2 to 3-inch target unless you are lightly refreshing an established site.\n\n## Choosing the Right Material\n\nThe type of mulch you choose alters both the visual appeal of your yard and how frequently you need to replenish it. Bulk and bagged products generally come in four main varieties:\n\n### Shredded Hardwood\nShredded hardwood is a durable, heavy option that mats together tightly. It resists washing away on sloped borders and breaks down slowly over time. Hardwood alters soil pH slightly toward alkaline as it decomposes, making it suitable for standard flowers and landscape shrubs.\n\n### Pine Bark\nPine bark nuggets or shredded pine bark offer a rich dark color and decompose slower than hardwood. Pine bark creates an aesthetically pleasing, loose texture that allows water to penetrate easily. It is slightly acidic, making it an excellent match for acid-loving species like azaleas, rhododendrons, and blueberries.\n\n### Straw\nLightweight and budget-friendly, clean straw is best suited for vegetable gardens and newly seeded lawn patches. It insulates vegetable roots well and helps conserve soil moisture, but it breaks down quickly and must be replaced every season.\n\n### Compost\nCompost serves as a dual-purpose top dressing that feeds the soil while suppressing weeds. Because compost breaks down fastest of all materials, soil microbes and earthworms incorporate it into the ground rapidly. It adds vital organic nutrients but requires more frequent reapplication than woody bark.\n\n## How Much You Need at Common Sizes\n\nTo help you estimate material needs for larger projects around your yard, here is a quick reference table based on the standard 3-inch application depth. This helps if you need to know how much mulch do i need for 200 square feet or larger landscape beds.\n\n| Job size | Cubic feet | Cubic yards | 2 cu ft bags |\n|---|---|---|---|\n| 32 sq ft | 8 | 0.3 | 4 |\n| 100 sq ft | 25 | 0.9 | 13 |\n| 200 sq ft | 50 | 1.9 | 25 |\n| 300 sq ft | 75 | 2.8 | 38 |\n| 400 sq ft | 100 | 3.7 | 50 |\n| 500 sq ft | 125 | 4.6 | 63 |\n\nFor smaller jobs, buying bagged material at a home center is manageable. However, if you are figuring out how much mulch do i need for 300 square feet, how much mulch do i need for 400 square feet, or how much mulch do i need for 500 sq ft, ordering a bulk delivery by the cubic yard is generally more economical and saves significant plastic waste.\n\n## Common Mistakes to Avoid\n\nProper application technique is just as vital as buying the correct amount of material. Avoid these common errors when spreading your layer:\n\n*   **Volcano Mulching:** Piling material high directly against tree trunks and plant stems traps excessive moisture against the bark. This encourages fungal rot, attracts boring insects, and leads to plant decline. Keep material 2 to 3 inches away from trunks and woody stems.\n*   **Mulching Dry Soil:** Organic material acts as an insulator. If you apply it over dry soil, it prevents light rain from penetrating down to root zones. Always water the bed thoroughly before mulching, not just after.\n*   **Over-Applying Annual Layers:** Do not add a full 3-inch layer on top of old material every spring. Thick accumulation chokes plant roots. Reapply a thin 1-inch layer each spring to restore color and depth rather than layering heavily year after year.\n*   **Neglecting Weed Removal:** Mulch slows weed germination, but established perennial weeds will grow right through a fresh layer. Thoroughly weed and clean the bed area before spreading new material.\n\n## Application Tips for Success\n\nClear the target area of all dead leaves, sticks, and established weeds before you begin dumping bags or wheelbarrow loads. Edge the bed with a spade to create a clean perimeter ditch; this holds the edge of your mulch layer neatly and keeps it from spilling onto lawns or pathways.\n\nDump small piles throughout the bed area rather than one large heap in the center. Use a bow rake or your hands to smooth the material evenly across the soil surface to your desired depth. \n\nOnce your layer is level and pulled back slightly from plant stems, give the surface a light spray with a garden hose. This dampens the top layer, helping the particles settle into a cohesive mat that resists wind and water movement.",
+    "faq": [
+      {
+        "q": "How deep should mulch be?",
+        "a": "Two to three inches for most beds. More than four inches can hold too much moisture against stems."
+      },
+      {
+        "q": "How many bags of mulch is a cubic yard?",
+        "a": "Thirteen and a half 2-cubic-foot bags, since a cubic yard is 27 cubic feet."
+      },
+      {
+        "q": "When is the best time to mulch?",
+        "a": "Early spring, after the soil has warmed, and again in autumn if you want winter protection."
+      },
+      {
+        "q": "Does mulch prevent weeds?",
+        "a": "It suppresses most weeds if the layer is at least two inches deep and kept clear of plant stems."
+      }
+    ],
+    "status": "approved",
+    "created": "2026-10-08",
+    "updated": "2026-10-08",
+    "revision": 1,
+    "internal_links": [
+      {
+        "to": "mulch-calculator",
+        "anchor": "how much mulch do i need",
+        "title": "Mulch Calculator: How Much Mulch Do You Need?"
+      },
+      {
+        "to": "how-much-mulch-do-i-need-for-500-sq-ft",
+        "anchor": "how much mulch do i need for 500 sq ft",
+        "title": "How Much Mulch for 500 Sq Ft? Yards and Bags"
+      },
+      {
+        "to": "how-much-mulch-do-i-need-for-300-square-feet",
+        "anchor": "how much mulch do i need for 300 square feet",
+        "title": "How Much Mulch Do I Need for 300 Square Feet"
+      },
+      {
+        "to": "how-much-mulch-do-i-need-for-200-square-feet",
+        "anchor": "how much mulch do i need for 200 square feet",
+        "title": "How Much Mulch Do I Need for 200 Square Feet"
+      },
+      {
+        "to": "how-much-mulch-do-i-need-for-400-square-feet",
+        "anchor": "how much mulch do i need for 400 square feet",
+        "title": "How Much Mulch Do I Need for 400 Square Feet"
+      },
+      {
+        "to": "how-much-mulch-do-i-need-for-my-flower-bed",
+        "anchor": "how much mulch do i need for my flower bed",
+        "title": "How Much Mulch Do I Need for My Flower Bed"
+      },
+      {
+        "to": "how-much-mulch-do-i-need-for-1000-square-feet",
+        "anchor": "how much mulch do i need for 1000 square feet",
+        "title": "How Much Mulch Do I Need for 1000 Square Feet"
+      },
+      {
+        "to": "how-much-mulch-do-i-need-for-600-square-feet",
+        "anchor": "how much mulch do i need for 600 square feet",
+        "title": "How Much Mulch Do I Need for 600 Square Feet"
+      }
+    ],
+    "schema_types": [
+      "Article",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "quality": {
+      "score": 100.0,
+      "passed": true,
+      "gates": {
+        "thin_content": {
+          "pass": true,
+          "detail": "word count 1143 (min 600)"
+        },
+        "duplicate_content": {
+          "pass": true,
+          "detail": "max similarity 0.07 vs how-much-mulch-do-i-need-for-300-square-feet"
+        },
+        "keyword_stuffing": {
+          "pass": true,
+          "detail": "keyword density 0.87%"
+        },
+        "ai_cliches": {
+          "pass": true,
+          "detail": "cliches: none"
+        },
+        "readability": {
+          "pass": true,
+          "detail": "avg sentence length 17.1 words"
+        },
+        "heading_structure": {
+          "pass": true,
+          "detail": "h2=6 h3=4 (no h1 in body)"
+        },
+        "has_calculator_or_data": {
+          "pass": true,
+          "detail": "has calculator + computed output"
+        },
+        "meta_length": {
+          "pass": true,
+          "detail": "meta length 158"
+        },
+        "title_length": {
+          "pass": true,
+          "detail": "title length 43"
+        },
+        "internal_links": {
+          "pass": true,
+          "detail": "internal links 8 (want 3-8, 71 available)"
+        },
+        "schema_present": {
+          "pass": true,
+          "detail": "schema: ['Article', 'BreadcrumbList', 'FAQPage']"
+        },
+        "alt_text": {
+          "pass": true,
+          "detail": "hero alt derivable from title"
+        }
+      }
+    },
+    "metrics": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": 0
+    },
+    "word_count": 1143
+  },
+  {
+    "id": "how-much-gravel-do-i-need-for-a-driveway",
+    "slug": "how-much-gravel-do-i-need-for-a-driveway",
+    "title": "How Much Gravel Do I Need for a Driveway",
+    "cluster": "gravel",
+    "primary_keyword": "how much gravel do i need for a driveway",
+    "secondary_keywords": [
+      "how much gravel do i need for my driveway",
+      "how much gravel do i need for a french drain",
+      "how much gravel do i need for a 20x20 area",
+      "how much gravel do i need per square metre",
+      "how much gravel do i need for a 10x12 shed"
+    ],
+    "intent": "calculator",
+    "is_pillar": false,
+    "calculator": "gravel",
+    "calculator_title": "Gravel Calculator",
+    "calculator_defaults": {
+      "length": 30,
+      "width": 12,
+      "depth": 4
+    },
+    "calculator_output": {
+      "square_feet": 360.0,
+      "cubic_yards": 4.44,
+      "tons": 6.22
+    },
+    "meta_description": "To determine how much gravel you need for a driveway, multiply the length by the width to get the square footage, then multiply by the depth in feet and.",
+    "body_markdown": "To determine how much gravel you need for a driveway, multiply the length by the width to get the square footage, then multiply by the depth in feet and divide by 27 to find the cubic yardage. Most suppliers sell by the ton, so multiply your cubic yardage by 1.4 to estimate the weight if you are using standard 3/4 inch crushed stone.\n\n## How to Calculate Gravel\n\nCalculating volume can seem daunting, but it follows a simple geometric formula. First, measure the length and width of your area in feet. Multiply these two numbers to get the total square footage. Next, determine your desired depth in inches and convert that to feet by dividing by 12. For example, a 4-inch depth is 0.33 feet.\n\nMultiply your square footage by the depth in feet to get the volume in cubic feet. Since gravel is sold by the cubic yard, divide that total by 27. If you need to know how much gravel you need per square metre, remember that one square metre is approximately 10.76 square feet, and you must adjust your depth measurements to metric units accordingly.\n\nTo find the weight in tons, multiply your cubic yard total by 1.4. This is the industry standard weight for one cubic yard of 3/4 inch crushed stone.\n\n### Worked Example: Driveway Project\n\nIf you are wondering how much gravel do i need for my driveway measuring 30 feet long and 12 feet wide at a depth of 4 inches, follow these steps:\n\n1. Calculate square feet: 30 ft x 12 ft = 360.0 square feet.\n2. Calculate cubic yards: (360.0 sq ft x 0.33 ft depth) / 27 = 4.44 cubic yards.\n3. Calculate tons: 4.44 cubic yards x 1.4 = 6.22 tons.\n\nYou should order approximately 6.22 tons of material for this project. When calculating for other projects, such as how much gravel do i need for a 10x12 shed base, use the same formula: 120 square feet at your chosen depth. For a 20x20 area, you are covering 400 square feet, which requires significantly more material depending on the depth.\n\n## How Much You Need at Common Sizes\n\n| Job size | Cubic yards | Tons |\n|---|---|---|\n| 100 sq ft, 3 in deep | 0.93 | 1.3 |\n| 200 sq ft, 3 in deep | 1.85 | 2.59 |\n| 400 sq ft, 4 in deep | 4.94 | 6.91 |\n| 600 sq ft, 4 in deep | 7.41 | 10.37 |\n\n## Choosing the Right Depth and Material\n\nThe depth of your gravel depends entirely on the intended use. For decorative borders or light footpaths, 2 inches is sufficient. Garden paths and patio bases usually require 3 inches of material placed over landscape fabric. \n\nIf you are building a light driveway, 4 inches is the standard, provided you compact the material in two separate layers. For high-traffic areas or spaces where heavy vehicles will park regularly, 6 inches is recommended to ensure the surface remains stable over time.\n\nMaterial selection is equally important. Crushed stone, specifically 3/4 inch, is the most versatile choice for driveways because the jagged edges lock together to form a firm surface. Pea gravel is aesthetically pleasing but remains loose, making it better suited for paths or play areas. River rock is smooth and rounded, which is ideal for decorative accents or dry creek beds, while decomposed granite is excellent for patios because it compacts into a very firm, almost concrete-like surface.\n\n## Understanding Drainage and Preparation\n\nIf you are tackling a drainage project, you might ask how much gravel do i need for a french drain. The amount depends on the width and depth of your trench. Generally, you want enough to surround the perforated pipe with at least 6 inches of stone on all sides. Always calculate the volume of the trench using the same method as the driveway, but remember to subtract the volume occupied by the pipe itself if you want a precise number.\n\nBefore you pour any gravel, clear the area of topsoil and vegetation. Lay down professional-grade landscape fabric across the entire base. This is a critical step because it prevents the gravel from sinking into the soft soil below, which saves you from needing to add more material every year. \n\nOnce the fabric is down, install a physical border edge. This can be made of pressure-treated timber, steel, or stone. A border prevents the gravel from migrating into your lawn or flower beds during heavy rain or vehicle movement.\n\n## Common Mistakes to Avoid\n\nOne of the most frequent errors is failing to compact the base. If you dump 4 inches of stone in one go and drive over it, the surface will likely become rutted very quickly. Always compact the gravel in two thinner layers. Using a plate compactor or a heavy hand tamper ensures the stones settle into a tight matrix.\n\nAnother common mistake is underestimating the amount of material. It is always better to have a small amount of leftover gravel than to run out mid-project. If you find yourself short, you will have to pay for an additional delivery fee, which often costs more than the extra half-ton of stone you might have needed.\n\nFinally, do not skip the landscape fabric. Many people assume the gravel will stay put on its own, but without a barrier, the weight of a car will push the stones into the mud, eventually causing the driveway to disappear into the ground. Investing in quality fabric at the start is the most effective way to protect your investment and maintain a clean, level surface for years to come.",
+    "faq": [
+      {
+        "q": "How much does a cubic yard of gravel weigh?",
+        "a": "Roughly 1.4 tons for 3/4-inch crushed stone, though it varies by stone type."
+      },
+      {
+        "q": "How deep should gravel be for a driveway?",
+        "a": "Four inches compacted for a light drive, six inches for regular vehicle traffic."
+      },
+      {
+        "q": "Can I put gravel directly on soil?",
+        "a": "Yes for paths, but lay landscape fabric first to stop the gravel sinking into the soil."
+      },
+      {
+        "q": "How many tons of gravel in a cubic yard?",
+        "a": "About 1.3 to 1.5 tons depending on the stone, with 1.4 tons a good default."
+      }
+    ],
+    "status": "approved",
+    "created": "2026-10-08",
+    "updated": "2026-10-08",
+    "revision": 1,
+    "internal_links": [
+      {
+        "to": "gravel-calculator",
+        "anchor": "how much gravel do i need",
+        "title": "Gravel Calculator: How Much Gravel Do You Need?"
+      },
+      {
+        "to": "how-much-gravel-do-i-need-for-my-driveway",
+        "anchor": "how much gravel do i need for my driveway",
+        "title": "How Much Gravel for a Driveway? Yards and Tons"
+      },
+      {
+        "to": "how-much-gravel-do-i-need-for-a-french-drain",
+        "anchor": "how much gravel do i need for a french drain",
+        "title": "How Much Gravel Do I Need for a French Drain"
+      },
+      {
+        "to": "how-much-gravel-do-i-need-for-a-20x20-area",
+        "anchor": "how much gravel do i need for a 20x20 area",
+        "title": "How Much Gravel Do I Need for a 20x20 Area"
+      },
+      {
+        "to": "how-much-gravel-do-i-need-per-square-metre",
+        "anchor": "how much gravel do i need per square metre",
+        "title": "How Much Gravel Do I Need Per Square Metre"
+      },
+      {
+        "to": "how-much-gravel-do-i-need-for-a-10x12-shed",
+        "anchor": "how much gravel do i need for a 10x12 shed",
+        "title": "How Much Gravel Do I Need for a 10x12 Shed"
+      },
+      {
+        "to": "how-much-gravel-do-i-need-for-my-walkway",
+        "anchor": "how much gravel do i need for my walkway",
+        "title": "How Much Gravel Do I Need for My Walkway"
+      }
+    ],
+    "schema_types": [
+      "Article",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "quality": {
+      "score": 100.0,
+      "passed": true,
+      "gates": {
+        "thin_content": {
+          "pass": true,
+          "detail": "word count 936 (min 600)"
+        },
+        "duplicate_content": {
+          "pass": true,
+          "detail": "max similarity 0.10 vs how-much-gravel-do-i-need-for-my-walkway"
+        },
+        "keyword_stuffing": {
+          "pass": true,
+          "detail": "keyword density 0.00%"
+        },
+        "ai_cliches": {
+          "pass": true,
+          "detail": "cliches: none"
+        },
+        "readability": {
+          "pass": true,
+          "detail": "avg sentence length 13.7 words"
+        },
+        "heading_structure": {
+          "pass": true,
+          "detail": "h2=5 h3=1 (no h1 in body)"
+        },
+        "has_calculator_or_data": {
+          "pass": true,
+          "detail": "has calculator + computed output"
+        },
+        "meta_length": {
+          "pass": true,
+          "detail": "meta length 153"
+        },
+        "title_length": {
+          "pass": true,
+          "detail": "title length 40"
+        },
+        "internal_links": {
+          "pass": true,
+          "detail": "internal links 7 (want 3-8, 71 available)"
+        },
+        "schema_present": {
+          "pass": true,
+          "detail": "schema: ['Article', 'BreadcrumbList', 'FAQPage']"
+        },
+        "alt_text": {
+          "pass": true,
+          "detail": "hero alt derivable from title"
+        }
+      }
+    },
+    "metrics": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": 0
+    },
+    "word_count": 936
+  },
+  {
+    "id": "how-much-paint-do-i-need-for-1800-sq-ft-house",
+    "slug": "how-much-paint-do-i-need-for-1800-sq-ft-house",
+    "title": "How Much Paint Do I Need for 1800 SQ FT House",
+    "cluster": "paint",
+    "primary_keyword": "how much paint do i need for 1800 sq ft house",
+    "secondary_keywords": [
+      "how much paint do i need for a bedroom",
+      "how much paint do i need for a 10x10 room",
+      "how much paint do i need for a front door",
+      "how much paint do i need for a 12x12 room",
+      "how much paint do i need calculator sq ft"
+    ],
+    "intent": "calculator",
+    "is_pillar": false,
+    "calculator": "paint",
+    "calculator_title": "Paint Calculator",
+    "calculator_defaults": {
+      "length": 42.4,
+      "width": 42.4,
+      "height": 8,
+      "coats": 2,
+      "doors": 1,
+      "windows": 2
+    },
+    "calculator_output": {
+      "wall_area": 1356.8,
+      "paintable_area": 1305.8,
+      "gallons": 17.73
+    },
+    "meta_description": "To determine how much paint you need for an 1800 sq ft house, you should plan for approximately 18 to 20 gallons for a standard two-coat interior project.",
+    "body_markdown": "To determine how much paint you need for an 1800 sq ft house, you should plan for approximately 18 to 20 gallons for a standard two-coat interior project. This estimate accounts for typical wall surface areas after subtracting openings like windows and doors.\n\n## How to Calculate Paint\n\nTo get an accurate estimate, you must calculate the total surface area of your walls rather than the floor area of the house. One gallon of paint typically covers roughly 350 square feet per coat on a smooth, primed wall.\n\nStart by measuring the perimeter of the room and multiplying it by the ceiling height. Once you have the total square footage of the walls, subtract 21 sq ft for every door and 15 sq ft for every window. If you are applying two coats, multiply the final paintable area by two, then divide that number by 350 to find the total gallons required.\n\n### Worked Example\n\nIf you are painting a space with a length of 42.4 feet and a width of 42.4 feet with 8-foot ceilings, here is how the math breaks down for two coats, including one door and two windows:\n\n*   Wall Area: 1356.8 sq ft\n*   Subtracting openings (1 door at 21 sq ft + 2 windows at 15 sq ft each = 51 sq ft): 1305.8 sq ft\n*   Paintable Area (for two coats): 2611.6 sq ft\n*   Gallons Required: 17.73 gallons\n\nAlways round up to the nearest whole gallon to ensure you have enough to finish the job without running out mid-wall.\n\n## How Much You Need at Common Sizes\n\nWhen planning smaller projects, such as individual rooms, you can use these general estimates based on standard ceiling heights.\n\n| Job size | Paintable sq ft | Gallons |\n|---|---|---|\n| Front door | 21 | 0.25 (Quart) |\n| 10x10 room | 320 | 1 |\n| 12x12 room | 448 | 1.5 |\n| 1800 sq ft house | 4000+ | 18-20 |\n\nIf you are looking for a more precise figure for your specific layout, use an online paint calculator sq ft tool to input your exact room dimensions. \n\n## Choosing the Right Finish\n\nBeyond the volume of paint, selecting the right sheen is vital for the longevity of your walls.\n\n*   Matt emulsion: Best for ceilings and low-traffic areas like bedrooms. It is excellent at hiding minor imperfections in the drywall.\n*   Eggshell: A versatile choice for family rooms and hallways. It offers a slight sheen and is much easier to wipe clean than matt finishes.\n*   Satin: Ideal for kitchens, bathrooms, and trim. It resists moisture and stands up well to frequent scrubbing.\n*   Primer + topcoat: Always use this combination if you are painting bare drywall, making significant repairs, or covering over dark, stained surfaces.\n\n## Common Mistakes to Avoid\n\nThe most frequent error homeowners make is underestimating the number of coats required. While a single coat might work for a color refresh on a similar tone, most projects require two coats to achieve a professional, uniform look. If you are attempting a major color change—such as moving from a dark shade to a light one—you may even need three coats.\n\nAnother mistake is buying paint in separate trips. Even with the same color name, batches can vary slightly in pigment. Buy all the paint you need for a project at once so that every can comes from the same manufacturing batch. This prevents visible \"flashing\" or color shifts on your walls.\n\nFinally, do not throw away your leftovers. Keep roughly 10% of your total paint purchase as spare for future touch-ups. Always write the specific color code and the room it was used in on the lid or the side of the can. This ensures that if you accidentally scuff a wall in a bedroom or a high-traffic hallway, you can perform a seamless repair years later. \n\nRemember that these figures are estimates. Factors like wall texture, the porosity of the surface, and the quality of your roller or brush can all influence how much paint your walls actually soak up. If you are painting a highly textured wall, buy an extra gallon to account for the increased surface area.",
+    "faq": [
+      {
+        "q": "How much does a gallon of paint cover?",
+        "a": "Around 350 square feet per coat on a smooth, primed surface."
+      },
+      {
+        "q": "Do I need to subtract windows and doors?",
+        "a": "Yes. Allow about 21 square feet per door and 15 square feet per window."
+      },
+      {
+        "q": "How many coats of paint do I need?",
+        "a": "Two coats for a colour change, and often two even when refreshing the same colour."
+      },
+      {
+        "q": "Should I buy extra paint?",
+        "a": "Keep about 10% spare for touch-ups, and note the colour code for future matching."
+      }
+    ],
+    "status": "approved",
+    "created": "2026-10-08",
+    "updated": "2026-10-08",
+    "revision": 1,
+    "internal_links": [
+      {
+        "to": "paint-calculator",
+        "anchor": "how much paint do i need",
+        "title": "Paint Calculator: How Much Paint Do You Need?"
+      },
+      {
+        "to": "how-much-paint-do-i-need-for-a-bedroom",
+        "anchor": "how much paint do i need for a bedroom",
+        "title": "How Much Paint for a Bedroom? Gallons by Size"
+      },
+      {
+        "to": "how-much-paint-do-i-need-for-a-10x10-room",
+        "anchor": "how much paint do i need for a 10x10 room",
+        "title": "How Much Paint Do I Need for a 10x10 Room"
+      },
+      {
+        "to": "how-much-paint-do-i-need-for-a-front-door",
+        "anchor": "how much paint do i need for a front door",
+        "title": "How Much Paint Do I Need for a Front Door"
+      },
+      {
+        "to": "how-much-paint-do-i-need-for-a-12x12-room",
+        "anchor": "how much paint do i need for a 12x12 room",
+        "title": "How Much Paint Do I Need for a 12x12 Room"
+      },
+      {
+        "to": "how-much-paint-do-i-need-calculator-sq-ft",
+        "anchor": "how much paint do i need calculator sq ft",
+        "title": "How Much Paint Do I Need Calculator SQ FT"
+      },
+      {
+        "to": "how-much-paint-do-i-need-for-a-room",
+        "anchor": "how much paint do i need for a room",
+        "title": "How Much Paint Do I Need for a Room: Free Calculator & Guide"
+      },
+      {
+        "to": "how-much-paint-do-i-need-for-a-12x16-shed",
+        "anchor": "how much paint do i need for a 12x16 shed",
+        "title": "How Much Paint Do I Need for a 12x16 Shed"
+      }
+    ],
+    "schema_types": [
+      "Article",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "quality": {
+      "score": 100.0,
+      "passed": true,
+      "gates": {
+        "thin_content": {
+          "pass": true,
+          "detail": "word count 675 (min 600)"
+        },
+        "duplicate_content": {
+          "pass": true,
+          "detail": "max similarity 0.12 vs how-much-paint-do-i-need-for-a-12x12-room"
+        },
+        "keyword_stuffing": {
+          "pass": true,
+          "detail": "keyword density 0.00%"
+        },
+        "ai_cliches": {
+          "pass": true,
+          "detail": "cliches: ['seamless']"
+        },
+        "readability": {
+          "pass": true,
+          "detail": "avg sentence length 17.6 words"
+        },
+        "heading_structure": {
+          "pass": true,
+          "detail": "h2=4 h3=1 (no h1 in body)"
+        },
+        "has_calculator_or_data": {
+          "pass": true,
+          "detail": "has calculator + computed output"
+        },
+        "meta_length": {
+          "pass": true,
+          "detail": "meta length 154"
+        },
+        "title_length": {
+          "pass": true,
+          "detail": "title length 45"
+        },
+        "internal_links": {
+          "pass": true,
+          "detail": "internal links 8 (want 3-8, 71 available)"
+        },
+        "schema_present": {
+          "pass": true,
+          "detail": "schema: ['Article', 'BreadcrumbList', 'FAQPage']"
+        },
+        "alt_text": {
+          "pass": true,
+          "detail": "hero alt derivable from title"
+        }
+      }
+    },
+    "metrics": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": 0
+    },
+    "word_count": 675
+  },
+  {
+    "id": "how-many-tiles-do-i-need-for-my-room",
+    "slug": "how-many-tiles-do-i-need-for-my-room",
+    "title": "How Many Tiles Do I Need for My Room",
+    "cluster": "tile",
+    "primary_keyword": "how many tiles do i need for my room",
+    "secondary_keywords": [
+      "how many tiles do i need for a 10x10 room",
+      "how many tiles do i need for 100 square feet",
+      "how many tiles do i need for my bathroom",
+      "how many tiles do i need for 20 square feet",
+      "how many tiles do i need for 120 square feet"
+    ],
+    "intent": "calculator",
+    "is_pillar": false,
+    "calculator": "tile",
+    "calculator_title": "Tile Calculator",
+    "calculator_defaults": {
+      "length": 12,
+      "width": 10,
+      "tile_w": 12,
+      "tile_h": 12,
+      "waste": 10
+    },
+    "calculator_output": {
+      "floor_area": 120.0,
+      "tile_area": 1.0,
+      "tiles": 120,
+      "tiles_with_waste": 132
+    },
+    "meta_description": "To determine how many tiles you need for your room, calculate the total square footage of your floor or wall area and add 10% to 20% for waste.",
+    "body_markdown": "To determine how many tiles you need for your room, calculate the total square footage of your floor or wall area and add 10% to 20% for waste. You then divide this total by the coverage area provided on the tile packaging to find the number of boxes required.\n\n## How to Calculate Tile\n\nCalculating the number of tiles needed starts with measuring the area you intend to cover. Use a tape measure to find the length and width of the room in feet. Multiply these two numbers together to get the total square footage.\n\nFor example, if you want to know how many tiles you need for a 10x10 room, the calculation is 10 multiplied by 10, resulting in 100 square feet. If you are wondering how many tiles you need for 100 square feet, always remember to account for cuts and breakage.\n\nWhen you purchase tile, look at the box label. Manufacturers list how many square feet a single box covers. Do not rely solely on the number of individual tiles in the box, as sizes vary significantly.\n\n### Worked Example\n\nIf you are planning a project for a room that is 12 feet long and 10 feet wide using 12-inch by 12-inch tiles, here is the breakdown:\n\n*   Floor Area: 120.0 square feet\n*   Tile Area: 1.0 square foot\n*   Base Tile Count: 120 tiles\n*   Waste Factor (10%): 12 tiles\n*   Total Tiles Needed: 132 tiles\n\nIn this scenario, you would purchase enough boxes to cover 132 square feet. This ensures you have enough material to complete the job even after accounting for the pieces you must cut to fit against the walls.\n\n## How Much You Need at Common Sizes\n\nUse this table as a quick reference for your planning. Remember that these figures represent the net amount plus a 10% waste buffer.\n\n| Job size | Tiles | With 10% waste |\n|---|---|---|\n| 20 sq. ft. | 20 | 22 |\n| 100 sq. ft. | 100 | 110 |\n| 120 sq. ft. | 120 | 132 |\n\n## Choosing the Right Material\n\nYour choice of material affects how you calculate your waste. \n\nCeramic is a popular choice for walls and light-traffic floors. It is relatively soft, making it easy to cut with a manual tile cutter. Because it is easier to work with, a 10% waste factor is usually sufficient.\n\nPorcelain is denser and more water-resistant than ceramic. It is the standard for high-traffic floors and wet areas like bathrooms. If you are wondering how many tiles you need for your bathroom, keep in mind that porcelain is harder to cut. If you are doing a complex layout, consider bumping your waste factor to 15%.\n\nNatural stone, such as marble or slate, provides a high-end look but requires sealing. Because natural stone can have variations in quality or may crack during cutting, you should always order on the higher end of the waste estimate.\n\nMosaic tiles are often sold on mesh sheets. These are excellent for shower floors or curved surfaces. Because they are flexible and easy to trim, they are forgiving for beginners, but you still need to account for the edges where the sheets meet the wall.\n\n## Accounting for Patterns and Waste\n\nThe layout of your tile changes how much material you must buy. \n\nA straight, simple grid layout is the most efficient. For this, a 10% waste factor is standard. This covers the tiles you have to trim to fit against the perimeter of the room.\n\nIf you choose a diagonal or offset (running bond) pattern, you will create more offcuts. These pieces are often unusable elsewhere in the room, so you should increase your waste factor to 15%.\n\nA herringbone pattern is the most complex. It requires frequent, precise cuts at the edges. For herringbone, a 20% waste factor is recommended to ensure you do not run out of material mid-project.\n\n## Common Mistakes to Avoid\n\nThe most common error is failing to account for the \"dye lot.\" Tiles are manufactured in batches, and the color or shade can vary slightly between runs. Always check the dye lot number on the side of every box you buy. If you purchase tiles from different batches, your finished floor may show noticeable color patches.\n\nBuy all your tiles in one order. Even if you calculate exactly how many tiles you need for 120 square feet, buying the entire amount at once ensures all boxes come from the same production run.\n\nOnce you have the tiles at home, open every box. Mix the tiles from different boxes before you begin laying them. This helps blend any subtle shade variations across the floor, creating a more professional and uniform look.\n\nFinally, do not throw away the leftovers. Keep a few spares in a garage or utility closet. If a pipe leaks or a heavy object cracks a tile years down the road, having matching tiles from the original batch is the only way to perform a seamless repair. If you calculate your needs correctly the first time, you will have enough to finish the job and a few extra to store for the future.",
+    "faq": [
+      {
+        "q": "How much extra tile should I buy?",
+        "a": "Add 10% for straight layouts and 15% for diagonal or patterned work."
+      },
+      {
+        "q": "How many tiles in a box?",
+        "a": "It varies by size; check the box coverage in square feet rather than counting tiles."
+      },
+      {
+        "q": "Do I need to account for grout lines?",
+        "a": "Yes for precise work, though the waste allowance usually covers the small difference."
+      },
+      {
+        "q": "Can I return leftover tile?",
+        "a": "Often yes if unopened and from the same batch, but dye lots differ, so buy all you need at once."
+      }
+    ],
+    "status": "approved",
+    "created": "2026-10-08",
+    "updated": "2026-10-08",
+    "revision": 1,
+    "internal_links": [
+      {
+        "to": "tile-calculator",
+        "anchor": "how many tiles do i need",
+        "title": "Tile Calculator: How Many Tiles Do You Need?"
+      },
+      {
+        "to": "how-many-tiles-do-i-need-for-a-10x10-room",
+        "anchor": "how many tiles do i need for a 10x10 room",
+        "title": "How Many Tiles for a 10x10 Room? Count by Size"
+      },
+      {
+        "to": "how-many-tiles-do-i-need-for-100-square-feet",
+        "anchor": "how many tiles do i need for 100 square feet",
+        "title": "How Many Tiles Do I Need for 100 Square Feet"
+      },
+      {
+        "to": "how-many-tiles-do-i-need-for-my-bathroom",
+        "anchor": "how many tiles do i need for my bathroom",
+        "title": "How Many Tiles Do I Need for My Bathroom"
+      },
+      {
+        "to": "how-many-tiles-do-i-need-for-20-square-feet",
+        "anchor": "how many tiles do i need for 20 square feet",
+        "title": "How Many Tiles Do I Need for 20 Square Feet"
+      },
+      {
+        "to": "how-many-tiles-do-i-need-for-120-square-feet",
+        "anchor": "how many tiles do i need for 120 square feet",
+        "title": "How Many Tiles Do I Need for 120 Square Feet"
+      },
+      {
+        "to": "how-many-tiles-do-i-need-for-my-floor",
+        "anchor": "how many tiles do i need for my floor",
+        "title": "How Many Tiles Do I Need for My Floor"
+      }
+    ],
+    "schema_types": [
+      "Article",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "quality": {
+      "score": 100.0,
+      "passed": true,
+      "gates": {
+        "thin_content": {
+          "pass": true,
+          "detail": "word count 838 (min 600)"
+        },
+        "duplicate_content": {
+          "pass": true,
+          "detail": "max similarity 0.14 vs how-many-tiles-do-i-need-for-120-square-feet"
+        },
+        "keyword_stuffing": {
+          "pass": true,
+          "detail": "keyword density 0.00%"
+        },
+        "ai_cliches": {
+          "pass": true,
+          "detail": "cliches: ['seamless']"
+        },
+        "readability": {
+          "pass": true,
+          "detail": "avg sentence length 15.1 words"
+        },
+        "heading_structure": {
+          "pass": true,
+          "detail": "h2=5 h3=1 (no h1 in body)"
+        },
+        "has_calculator_or_data": {
+          "pass": true,
+          "detail": "has calculator + computed output"
+        },
+        "meta_length": {
+          "pass": true,
+          "detail": "meta length 143"
+        },
+        "title_length": {
+          "pass": true,
+          "detail": "title length 36"
+        },
+        "internal_links": {
+          "pass": true,
+          "detail": "internal links 7 (want 3-8, 71 available)"
+        },
+        "schema_present": {
+          "pass": true,
+          "detail": "schema: ['Article', 'BreadcrumbList', 'FAQPage']"
+        },
+        "alt_text": {
+          "pass": true,
+          "detail": "hero alt derivable from title"
+        }
+      }
+    },
+    "metrics": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": 0
+    },
+    "word_count": 838
+  },
+  {
+    "id": "how-much-grass-seed-do-i-need-per-square-foot",
+    "slug": "how-much-grass-seed-do-i-need-per-square-foot",
+    "title": "How Much Grass Seed Do I Need Per Square Foot",
+    "cluster": "grass-seed",
+    "primary_keyword": "how much grass seed do i need per square foot",
+    "secondary_keywords": [
+      "how much grass seed per square foot",
+      "how much grass seed per square foot overseeding",
+      "how much grass seed per square foot for new lawn",
+      "how much grass seed per square foot canada",
+      "how much grass seed per square foot calculator"
+    ],
+    "intent": "calculator",
+    "is_pillar": false,
+    "calculator": "grass_seed",
+    "calculator_title": "Grass Seed Calculator",
+    "calculator_defaults": {
+      "area": 5000,
+      "method": 1
+    },
+    "calculator_output": {
+      "rate_per_1000": 4.5,
+      "pounds": 22.5,
+      "bags_3lb": 8
+    },
+    "meta_description": "For a new lawn, you typically need 4 to 5 pounds of grass seed per 1,000 square feet. If you are overseeding an existing lawn, you need about 2 pounds of.",
+    "body_markdown": "For a new lawn, you typically need 4 to 5 pounds of grass seed per 1,000 square feet. If you are overseeding an existing lawn, you need about 2 pounds of seed per 1,000 square feet.\n\nDetermining how much grass seed per square foot you require depends entirely on the condition of your soil and your goals for the area. Buying too little leads to patchy, thin grass that struggles to compete with weeds, while buying too much can lead to overcrowding, where seedlings compete for nutrients and fail to thrive.\n\n## How to Calculate Grass Seed\n\nTo find the exact amount of seed for your project, start by measuring your lawn. Multiply the length by the width of the area to get the total square footage. Once you have this number, divide it by 1,000, then multiply by your target rate.\n\nIf you are starting a new lawn from bare soil, use a rate of 4.5 pounds per 1,000 square feet. If you are looking for a quick tool, you can use a grass seed calculator to input these variables.\n\nHere is a worked example for a new lawn project:\n\n*   Total Area: 5,000 square feet\n*   Rate per 1,000 square feet: 4.5 pounds\n*   Calculation: (5,000 / 1,000) * 4.5 = 22.5 pounds\n*   Total bags needed (3 lb bags): 8 bags (this provides 24 pounds of seed)\n\nWhether you are in the United States or Canada, these weight-based ratios remain the standard for professional results. Always check the label on your bag, as different grass species have different seed sizes and recommended coverage rates.\n\n## How Much You Need at Common Sizes\n\nUse this table to quickly estimate how much grass seed per square foot for new lawn projects you need to purchase. These figures are based on the standard 4.5 lb per 1,000 sq ft rate.\n\n| Job size | Pounds | 3 lb bags |\n|---|---|---|\n| 500 sq ft | 2.25 | 1 |\n| 1,000 sq ft | 4.5 | 2 |\n| 2,500 sq ft | 11.25 | 4 |\n| 5,000 sq ft | 22.5 | 8 |\n| 10,000 sq ft | 45 | 15 |\n\n## Choosing the Right Seed Type\n\nThe amount of seed you need is only part of the equation; you must also choose the right variety for your climate and soil conditions.\n\nRyegrass is an excellent choice for overseeding because it germinates quickly, helping to fill in thin spots before weeds can take hold. If you have a yard with significant tree cover, Fescue is a better option because it is highly shade-tolerant and drought-resistant. For high-traffic areas where durability is the priority, Bluegrass creates a dense, hard-wearing carpet, though it takes longer to germinate than other varieties. Many homeowners are also opting for a clover blend, which requires fewer inputs, fixes nitrogen in the soil, and stays green during dry spells.\n\n## Timing and Soil Preparation\n\nThe best time to sow seed is in early autumn. At this time of year, the soil is still warm from the summer, which encourages quick germination, while the cooler air temperatures help reduce stress on young seedlings. Furthermore, many common lawn weeds begin to slow their growth cycle in the fall, giving your grass a better chance to establish itself without heavy competition.\n\nBefore you distribute the seed, ensure the soil surface is loose and free of debris. If you are overseeding, mow your existing grass short and remove the clippings to ensure the new seeds make direct contact with the soil. If seeds sit on top of thick, dead thatch, they will likely dry out before they can put down roots.\n\n## Watering and Maintenance\n\nOnce you have distributed the correct amount of seed, the most critical step is moisture management. You do not need to bury the seeds; in fact, burying them too deep can prevent them from germinating. Most grass seeds require exposure to light and warmth to sprout.\n\nKeep the surface of the soil damp for the first two weeks. The goal is to provide water lightly and often. If the soil surface dries out completely after the seed has begun to swell, the embryo will die. Use a light misting setting on your hose or sprinkler to avoid washing the seeds away, especially if you are working on a slope.\n\n## Common Mistakes to Avoid\n\nOne of the most frequent errors is inconsistent spreading. Use a broadcast or drop spreader rather than tossing the seed by hand to ensure an even distribution. If you apply the seed unevenly, you will end up with clumps of grass in some areas and bare patches in others.\n\nAnother common mistake is neglecting the soil pH. If your soil is too acidic or too alkaline, even the best quality seed will struggle. If you have had trouble growing grass in the past, consider a simple soil test before investing in a large amount of seed.\n\nFinally, avoid the temptation to walk on the newly seeded area. Foot traffic can displace the seeds and compact the soil, making it difficult for the tender roots to penetrate the ground. Flag off the area or use temporary barriers to keep pets and children away until the grass has been mowed at least once. By following these guidelines and calculating your needs accurately, you provide your lawn with the best possible foundation for long-term growth.",
+    "faq": [
+      {
+        "q": "How much grass seed per 1000 square feet?",
+        "a": "About 4 to 5 pounds for a new lawn, and 2 pounds when overseeding an existing one."
+      },
+      {
+        "q": "What is the best time to sow grass seed?",
+        "a": "Early autumn, when the soil is warm and weeds are slowing down."
+      },
+      {
+        "q": "How long until grass seed grows?",
+        "a": "Seven to fourteen days for ryegrass, up to three weeks for bluegrass."
+      },
+      {
+        "q": "Should I cover grass seed with soil?",
+        "a": "A thin layer of compost or topsoil helps, but leave the seed near the surface so it can sprout."
+      }
+    ],
+    "status": "approved",
+    "created": "2026-10-08",
+    "updated": "2026-10-08",
+    "revision": 1,
+    "internal_links": [
+      {
+        "to": "grass-seed-calculator",
+        "anchor": "how much grass seed per square foot",
+        "title": "Grass Seed Calculator: How Much Seed You Need"
+      },
+      {
+        "to": "how-much-grass-seed-per-square-foot-overseeding",
+        "anchor": "how much grass seed per square foot",
+        "title": "How Much Grass Seed Per Square Foot to Overseed?"
+      },
+      {
+        "to": "how-much-grass-seed-per-square-foot-for-new-lawn",
+        "anchor": "how much grass seed per square foot for",
+        "title": "How Much Grass Seed Per Square Foot for New Lawn"
+      },
+      {
+        "to": "how-much-grass-seed-per-square-foot-canada",
+        "anchor": "how much grass seed per square foot canada",
+        "title": "How Much Grass Seed Per Square Foot Canada"
+      },
+      {
+        "to": "how-much-grass-seed-per-square-foot-calculator",
+        "anchor": "how much grass seed per square foot",
+        "title": "How Much Grass Seed Per Square Foot Calculator"
+      },
+      {
+        "to": "how-much-buffalo-grass-seed-per-square-foot",
+        "anchor": "how much buffalo grass seed per square foot",
+        "title": "How Much Buffalo Grass Seed Per Square Foot"
+      },
+      {
+        "to": "how-much-bermuda-grass-seed-per-square-foot",
+        "anchor": "how much bermuda grass seed per square foot",
+        "title": "How Much Bermuda Grass Seed Per Square Foot"
+      },
+      {
+        "to": "how-much-grass-seed-needed-per-square-foot",
+        "anchor": "how much grass seed needed per square foot",
+        "title": "How Much Grass Seed Needed Per Square Foot"
+      }
+    ],
+    "schema_types": [
+      "Article",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "quality": {
+      "score": 100.0,
+      "passed": true,
+      "gates": {
+        "thin_content": {
+          "pass": true,
+          "detail": "word count 889 (min 600)"
+        },
+        "duplicate_content": {
+          "pass": true,
+          "detail": "max similarity 0.13 vs how-much-grass-seed-needed-per-square-foot"
+        },
+        "keyword_stuffing": {
+          "pass": true,
+          "detail": "keyword density 0.00%"
+        },
+        "ai_cliches": {
+          "pass": true,
+          "detail": "cliches: none"
+        },
+        "readability": {
+          "pass": true,
+          "detail": "avg sentence length 18.2 words"
+        },
+        "heading_structure": {
+          "pass": true,
+          "detail": "h2=6 h3=0 (no h1 in body)"
+        },
+        "has_calculator_or_data": {
+          "pass": true,
+          "detail": "has calculator + computed output"
+        },
+        "meta_length": {
+          "pass": true,
+          "detail": "meta length 154"
+        },
+        "title_length": {
+          "pass": true,
+          "detail": "title length 45"
+        },
+        "internal_links": {
+          "pass": true,
+          "detail": "internal links 8 (want 3-8, 71 available)"
+        },
+        "schema_present": {
+          "pass": true,
+          "detail": "schema: ['Article', 'BreadcrumbList', 'FAQPage']"
+        },
+        "alt_text": {
+          "pass": true,
+          "detail": "hero alt derivable from title"
+        }
+      }
+    },
+    "metrics": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": 0
+    },
+    "word_count": 889
+  },
+  {
+    "id": "how-much-scotts-starter-fertilizer-per-1000-sq-ft",
+    "slug": "how-much-scotts-starter-fertilizer-per-1000-sq-ft",
+    "title": "How Much Scotts Starter Fertilizer Per 1000 SQ FT",
+    "cluster": "fertilizer",
+    "primary_keyword": "how much scotts starter fertilizer per 1000 sq ft",
+    "secondary_keywords": [
+      "how much fertilizer per 1000 sq ft",
+      "how much fertilizer per 1000 sq ft calculator",
+      "how much liquid fertilizer per 1000 sq ft",
+      "how much nitrogen fertilizer per 1000 sq ft",
+      "how much starter fertilizer per 1000 sq ft"
+    ],
+    "intent": "calculator",
+    "is_pillar": false,
+    "calculator": "fertilizer",
+    "calculator_title": "Fertilizer Calculator",
+    "calculator_defaults": {
+      "area": 5000,
+      "rate": 1,
+      "bag": 40
+    },
+    "calculator_output": {
+      "pounds": 5.0,
+      "bags": 1
+    },
+    "meta_description": "You should apply Scotts Starter Fertilizer at a rate of 1 pound of product per 1,000 square feet for most seeding or sodding projects.",
+    "body_markdown": "You should apply Scotts Starter Fertilizer at a rate of 1 pound of product per 1,000 square feet for most seeding or sodding projects. Always check the specific bag instructions, as application rates can vary slightly depending on the exact formulation and the nutrient concentration of the product you purchased.\n\nUsing the correct amount of fertilizer is the difference between a lush, established lawn and burnt, patchy grass. Applying too little provides insufficient nutrients for root development, while applying too much can stress young seedlings.\n\n## How to Calculate Fertilizer\n\nTo determine exactly how much fertilizer per 1000 sq ft you need for your specific lawn, you must first measure your total square footage. If you do not have a pre-made how much fertilizer per 1000 sq ft calculator, you can use simple arithmetic to find your total requirements.\n\nFirst, measure the length and width of your lawn and multiply them to get the total area. If your lawn is an irregular shape, break it into smaller rectangles, calculate each, and add them together.\n\nOnce you have your total square footage, divide that number by 1,000. Take that result and multiply it by the recommended application rate found on the Scotts bag.\n\n### Worked Example\n\nIf you are treating a lawn that is 5,000 square feet and the recommended rate is 1 pound of product per 1,000 square feet, the calculation is as follows:\n\n1. Divide 5,000 by 1,000, which equals 5.\n2. Multiply 5 by the rate of 1, which equals 5.0.\n\nYou will need **5.0** pounds of fertilizer for this area. If your bag weighs 40 pounds, you will need **1** bag to complete the job.\n\n## How Much You Need at Common Sizes\n\nRefer to the table below to quickly estimate how much starter fertilizer per 1000 sq ft you should apply based on your lawn size.\n\n| Lawn Size (Sq Ft) | Fertilizer Needed (Lbs) |\n| :--- | :--- |\n| 1,000 | 1.0 |\n| 2,500 | 2.5 |\n| 5,000 | 5.0 |\n| 10,000 | 10.0 |\n\n## Understanding Nutrient Application\n\nWhen you look at a bag of fertilizer, you will see three numbers, such as 24-25-4. These represent the percentage of Nitrogen, Phosphorus, and Potassium. When asking how much nitrogen fertilizer per 1000 sq ft you are actually applying, you must look at that first number.\n\nIf you apply 1 pound of a 24-25-4 fertilizer, you are applying 0.24 pounds of actual nitrogen to your soil. Starter fertilizers are typically high in phosphorus to encourage root growth, which is why they are distinct from standard lawn maintenance fertilizers.\n\nIf you are using a liquid fertilizer, the math changes significantly because you are measuring by volume rather than weight. Always check the label for the specific dilution ratio. If the label says to apply a certain amount of concentrate per gallon of water, follow that strictly. When calculating how much liquid fertilizer per 1000 sq ft is required, ensure your sprayer is calibrated to cover the area evenly.\n\n## How to Apply Fertilizer Evenly\n\nThe most accurate way to apply granular fertilizer is with a broadcast spreader. A drop spreader is also effective, though it takes longer to cover larger areas.\n\n1. **Calculate the area:** Use the steps mentioned above to determine your total square footage.\n2. **Set the spreader:** Look at the bag for the recommended spreader setting. If your specific spreader model is not listed, start with a lower setting and go over the lawn twice in perpendicular directions to ensure even coverage without over-applying in any one spot.\n3. **Fill the spreader on pavement:** Always fill your spreader on a driveway or sidewalk, not over the grass. This prevents spills from burning a concentrated spot in your lawn.\n4. **Walk at a steady pace:** Maintain a consistent walking speed to ensure the fertilizer is distributed uniformly.\n5. **Water it in:** Starter fertilizer needs to be watered into the soil to reach the root zone. A light watering immediately after application helps move the nutrients into the soil where the seeds or sod can access them.\n\n## Common Mistakes to Avoid\n\nThe most frequent error is over-application. Applying more than the recommended amount does not make grass grow faster; instead, it can cause \"fertilizer burn,\" which turns grass yellow or brown. If you spill a pile of fertilizer, do not leave it. Sweep it up or use a vacuum to remove the excess granules immediately.\n\nAnother common mistake is applying fertilizer when the grass is wet. While you need to water the area after application, applying granules to wet grass can cause the fertilizer to stick to the blades, which increases the risk of burning the foliage. Wait for the dew to dry before you begin your application.\n\nDo not ignore the weather forecast. If a heavy rainstorm is predicted within a few hours of your application, wait for another day. Heavy rain can wash the fertilizer away before it has a chance to settle into the soil, leading to wasted product and potential runoff into storm drains.\n\nFinally, do not skip the calibration step. Even if you have used your spreader many times, the settings can drift over time. Taking five minutes to verify your coverage rate can save you money and protect your lawn from uneven growth patterns. Always read the back of the bag for specific instructions on how to adjust your equipment for that particular product.",
+    "faq": [],
+    "status": "approved",
+    "created": "2026-10-08",
+    "updated": "2026-10-08",
+    "revision": 1,
+    "internal_links": [
+      {
+        "to": "fertilizer-calculator",
+        "anchor": "how much fertilizer per 1000 sq ft",
+        "title": "How Much Fertilizer Per 1000 SQ FT: Free Calculator & Guide"
+      },
+      {
+        "to": "how-much-fertilizer-per-1000-sq-ft-calculator",
+        "anchor": "how much fertilizer per 1000 sq ft calculator",
+        "title": "How Much Fertilizer Per 1000 SQ FT Calculator"
+      },
+      {
+        "to": "how-much-liquid-fertilizer-per-1000-sq-ft",
+        "anchor": "how much liquid fertilizer per 1000 sq ft",
+        "title": "How Much Liquid Fertilizer Per 1000 SQ FT"
+      },
+      {
+        "to": "how-much-nitrogen-fertilizer-per-1000-sq-ft",
+        "anchor": "how much nitrogen fertilizer per 1000 sq ft",
+        "title": "How Much Nitrogen Fertilizer Per 1000 SQ FT"
+      },
+      {
+        "to": "how-much-starter-fertilizer-per-1000-sq-ft",
+        "anchor": "how much starter fertilizer per 1000 sq ft",
+        "title": "How Much Starter Fertilizer Per 1000 SQ FT"
+      }
+    ],
+    "schema_types": [
+      "Article",
+      "BreadcrumbList"
+    ],
+    "quality": {
+      "score": 100.0,
+      "passed": true,
+      "gates": {
+        "thin_content": {
+          "pass": true,
+          "detail": "word count 901 (min 600)"
+        },
+        "duplicate_content": {
+          "pass": true,
+          "detail": "max similarity 0.06 vs how-much-liquid-fertilizer-per-1000-sq-ft"
+        },
+        "keyword_stuffing": {
+          "pass": true,
+          "detail": "keyword density 0.00%"
+        },
+        "ai_cliches": {
+          "pass": true,
+          "detail": "cliches: none"
+        },
+        "readability": {
+          "pass": true,
+          "detail": "avg sentence length 14.7 words"
+        },
+        "heading_structure": {
+          "pass": true,
+          "detail": "h2=5 h3=1 (no h1 in body)"
+        },
+        "has_calculator_or_data": {
+          "pass": true,
+          "detail": "has calculator + computed output"
+        },
+        "meta_length": {
+          "pass": true,
+          "detail": "meta length 134"
+        },
+        "title_length": {
+          "pass": true,
+          "detail": "title length 49"
+        },
+        "internal_links": {
+          "pass": true,
+          "detail": "internal links 5 (want 3-8, 71 available)"
+        },
+        "schema_present": {
+          "pass": true,
+          "detail": "schema: ['Article', 'BreadcrumbList']"
+        },
+        "alt_text": {
+          "pass": true,
+          "detail": "hero alt derivable from title"
+        }
+      }
+    },
+    "metrics": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": 0
+    },
+    "word_count": 901
+  },
+  {
+    "id": "how-many-bags-of-concrete-do-i-need-for-a-8x8-slab",
+    "slug": "how-many-bags-of-concrete-do-i-need-for-a-8x8-slab",
+    "title": "How Many Bags of Concrete Do I Need for a 8x8 Slab",
+    "cluster": "concrete",
+    "primary_keyword": "how many bags of concrete do i need for a 8x8 slab",
+    "secondary_keywords": [
+      "how many bags of concrete do i need for a 10x10 slab",
+      "how many bags of concrete do i need for a 4 x8 slab",
+      "how many bags of concrete do i need for a 4x4 slab",
+      "how many bags of concrete do i need for a fence post",
+      "how many bags of concrete do i need for a 10x12 slab"
+    ],
+    "intent": "calculator",
+    "is_pillar": false,
+    "calculator": "concrete",
+    "calculator_title": "Concrete Calculator",
+    "calculator_defaults": {
+      "length": 8.0,
+      "width": 8.0,
+      "thickness": 4
+    },
+    "calculator_output": {
+      "cubic_feet": 21.3,
+      "cubic_yards": 0.79,
+      "bags_60lb": 48,
+      "bags_80lb": 36
+    },
+    "meta_description": "To determine how many bags of concrete you need for an 8x8 slab at 4 inches thick, you will require 36 bags if using 80 lb bags or 48 bags if using 60 lb.",
+    "body_markdown": "To determine how many bags of concrete you need for an 8x8 slab at 4 inches thick, you will require 36 bags if using 80 lb bags or 48 bags if using 60 lb bags. Always purchase 10% extra to account for spillage, uneven subgrade, or variations in form depth.\n\n## How to Calculate Concrete\n\nTo find the amount of concrete required for any project, you must calculate the volume in cubic feet or cubic yards. The formula is length × width × depth. If you are measuring in inches, divide the depth by 12 to convert it to feet before multiplying.\n\nFor an 8x8 slab with a 4-inch thickness, the math looks like this:\n*   Length: 8.0 feet\n*   Width: 8.0 feet\n*   Depth: 0.33 feet (4 inches divided by 12)\n*   Total volume: 21.3 cubic feet\n*   Total in cubic yards: 0.79 cubic yards\n\nBased on these figures, you would need 48 bags of 60 lb concrete or 36 bags of 80 lb concrete. An 80 lb bag typically yields about 0.6 cubic feet of mixed concrete. If your calculations result in a volume of one cubic yard or more, it is often more cost-effective and physically manageable to order ready-mix concrete from a local supplier rather than mixing dozens of individual bags by hand.\n\n## How Much You Need at Common Sizes\n\nUse this table as a quick reference for standard 4-inch deep slabs. If you are building a 4x4 slab, a 4x8 slab, or a 10x12 slab, you can extrapolate these figures based on the square footage.\n\n| Job size | Cubic yards | 60 lb bags | 80 lb bags |\n|---|---|---|---|\n| 4x4 slab, 4 in | 0.2 | 12 | 9 |\n| 8x8 slab, 4 in | 0.79 | 48 | 36 |\n| 10x10 slab, 4 in | 1.23 | 75 | 56 |\n| 20x20 slab, 4 in | 4.94 | 297 | 223 |\n\nWhen calculating for a 4x8 slab, you are working with half the area of an 8x8 slab, meaning you would need approximately 18 bags of 80 lb concrete. For a 10x12 slab, which covers 120 square feet, you are significantly above the one-yard threshold and should consider a professional delivery.\n\n## Specialized Projects and Depth Requirements\n\nNot every project requires a standard 4-inch slab. Your intended use determines the necessary thickness and the type of mix you should buy.\n\n### Fence Posts\nWhen figuring out how many bags of concrete you need for a fence post, the math changes because you are filling a cylindrical hole rather than a square area. A standard 4x4 fence post set in a 10-inch diameter hole typically requires two to three 80 lb bags. For these projects, use a rapid-set mix, which allows the post to be set and secured quickly without the need for extensive bracing.\n\n### Slab Thickness\n*   3 inches: Suitable for garden paths or light foot traffic.\n*   4 inches: The standard depth for patios, shed bases, and walkways.\n*   5-6 inches: Necessary for driveways or areas that will support vehicles.\n*   6+ inches: Required for heavy loads or machinery; consider adding steel reinforcement or wire mesh to prevent structural cracking.\n\n## Material Selection\n\nChoosing the right bag is as important as calculating the volume. Standard 80 lb bags are the most common choice for slabs and footings. If you are pouring a large area, look for fibre-reinforced concrete, which contains small synthetic strands that help control shrinkage and cracking as the concrete cures. For smaller repairs or projects where speed is the priority, rapid-set concrete is a convenient option, though it is more expensive per bag than standard pre-mixed concrete.\n\n## Practical Tips for a Successful Pour\n\nPreparation is the most critical step in any concrete project. Before you open your first bag, ensure your subgrade is properly prepared. Compact and level a layer of gravel base to provide a stable foundation and ensure proper drainage. If the ground is soft or uneven, your slab is prone to cracking regardless of how much concrete you pour.\n\nWhen mixing, add water gradually. It is a common mistake to add too much water at once, which creates a \"soupy\" consistency. Excess water weakens the final product and increases the likelihood of surface dusting or cracking once the concrete dries. The ideal consistency should resemble thick oatmeal.\n\nOnce the concrete is poured, leveled, and smoothed, do not let it dry out too quickly. Concrete does not \"dry\"; it cures through a chemical reaction that requires moisture. On hot or windy days, keep the surface damp by lightly misting it with water or covering it with plastic sheeting for the first few days. This slow curing process ensures the concrete reaches its maximum potential strength.\n\n## Common Mistakes to Avoid\n\nThe most frequent error is underestimating the volume. Always calculate based on the absolute maximum depth of your formwork. If your ground is slightly uneven, you will use more concrete than the theoretical volume suggests. Buying an extra 10% of the required bags is a small insurance policy against running out of materials mid-pour, which can lead to unsightly \"cold joints\" where a new batch of concrete meets a batch that has already begun to set.\n\nAnother common mistake is failing to account for the physical labor involved. Mixing 36 bags of concrete by hand is a strenuous task. If you are working alone, you may find that the first bags you mixed have already begun to harden by the time you finish the final bags. If you are tackling a project larger than a 10x10 slab, enlist a helper or consider the logistics of a ready-mix truck. \n\nFinally, ensure your forms are securely staked. The weight of wet concrete is immense—roughly 150 pounds per cubic foot. If your wooden forms are not braced properly, the pressure of the wet mix will cause them to bow or burst, ruining the straight edges of your slab. Check your stakes and bracing one final time before you start pouring.",
+    "faq": [
+      {
+        "q": "How many bags of concrete make a cubic yard?",
+        "a": "About 45 bags of 80 lb mix, or 60 bags of 60 lb mix, per cubic yard."
+      },
+      {
+        "q": "How thick should a concrete slab be?",
+        "a": "Four inches for paths and patios, five to six inches for driveways and heavy loads."
+      },
+      {
+        "q": "How much water do I add to concrete mix?",
+        "a": "Follow the bag instructions; roughly 3 quarts per 80 lb bag, added gradually."
+      },
+      {
+        "q": "Can I pour concrete over soil?",
+        "a": "Yes if the ground is compacted and level, with a gravel base for drainage."
+      }
+    ],
+    "status": "approved",
+    "created": "2026-10-08",
+    "updated": "2026-10-08",
+    "revision": 1,
+    "internal_links": [
+      {
+        "to": "concrete-calculator",
+        "anchor": "how many bags of concrete do i need",
+        "title": "Concrete Calculator: Bags or Yards You Need"
+      },
+      {
+        "to": "how-many-bags-of-concrete-do-i-need-for-a-10x10-slab",
+        "anchor": "how many bags of concrete do i need for a",
+        "title": "How Many Bags of Concrete for a 10x10 Slab?"
+      },
+      {
+        "to": "how-many-bags-of-concrete-do-i-need-for-a-4-x8-slab",
+        "anchor": "how many bags of concrete do i need for a",
+        "title": "How Many Bags of Concrete Do I Need for a 4 X8 Slab"
+      },
+      {
+        "to": "how-many-bags-of-concrete-do-i-need-for-a-4x4-slab",
+        "anchor": "how many bags of concrete do i need for a",
+        "title": "How Many Bags of Concrete Do I Need for a 4x4 Slab"
+      },
+      {
+        "to": "how-many-bags-of-concrete-do-i-need-for-a-fence-post",
+        "anchor": "how many bags of concrete do i need for a",
+        "title": "How Many Bags of Concrete Do I Need for a Fence Post"
+      },
+      {
+        "to": "how-many-bags-of-concrete-do-i-need-for-a-10x12-slab",
+        "anchor": "how many bags of concrete do i need for a",
+        "title": "How Many Bags of Concrete Do I Need for a 10x12 Slab"
+      },
+      {
+        "to": "how-many-bags-of-concrete-do-i-need-for-a-20x20-slab",
+        "anchor": "how many bags of concrete do i need for a",
+        "title": "How Many Bags of Concrete Do I Need for a 20x20 Slab"
+      }
+    ],
+    "schema_types": [
+      "Article",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "quality": {
+      "score": 100.0,
+      "passed": true,
+      "gates": {
+        "thin_content": {
+          "pass": true,
+          "detail": "word count 975 (min 600)"
+        },
+        "duplicate_content": {
+          "pass": true,
+          "detail": "max similarity 0.18 vs how-many-bags-of-concrete-do-i-need-for-a-4x4-slab"
+        },
+        "keyword_stuffing": {
+          "pass": true,
+          "detail": "keyword density 0.00%"
+        },
+        "ai_cliches": {
+          "pass": true,
+          "detail": "cliches: none"
+        },
+        "readability": {
+          "pass": true,
+          "detail": "avg sentence length 17.1 words"
+        },
+        "heading_structure": {
+          "pass": true,
+          "detail": "h2=6 h3=2 (no h1 in body)"
+        },
+        "has_calculator_or_data": {
+          "pass": true,
+          "detail": "has calculator + computed output"
+        },
+        "meta_length": {
+          "pass": true,
+          "detail": "meta length 154"
+        },
+        "title_length": {
+          "pass": true,
+          "detail": "title length 50"
+        },
+        "internal_links": {
+          "pass": true,
+          "detail": "internal links 7 (want 3-8, 71 available)"
+        },
+        "schema_present": {
+          "pass": true,
+          "detail": "schema: ['Article', 'BreadcrumbList', 'FAQPage']"
+        },
+        "alt_text": {
+          "pass": true,
+          "detail": "hero alt derivable from title"
+        }
+      }
+    },
+    "metrics": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": 0
+    },
+    "word_count": 975
+  },
+  {
+    "id": "how-much-topsoil-do-i-need-for-my-raised-garden-bed",
+    "slug": "how-much-topsoil-do-i-need-for-my-raised-garden-bed",
+    "title": "How Much Topsoil Do I Need for My Raised Garden Bed",
+    "cluster": "topsoil",
+    "primary_keyword": "how much topsoil do i need for my raised garden bed",
+    "secondary_keywords": [
+      "how much topsoil do i need for a lawn",
+      "how much topsoil do i need for a new lawn",
+      "how much topsoil do i need for a garden bed",
+      "how much topsoil for raised garden bed calculator",
+      "how much topsoil do i need to topdress a lawn"
+    ],
+    "intent": "calculator",
+    "is_pillar": false,
+    "calculator": "topsoil",
+    "calculator_title": "Topsoil Calculator",
+    "calculator_defaults": {
+      "length": 20,
+      "width": 10,
+      "depth": 2
+    },
+    "calculator_output": {
+      "square_feet": 200.0,
+      "cubic_feet": 33.3,
+      "cubic_yards": 1.23,
+      "bags_40lb": 45
+    },
+    "meta_description": "To determine how much topsoil you need for your raised garden bed, multiply the length by the width to get the square footage, then multiply that by your.",
+    "body_markdown": "To determine how much topsoil you need for your raised garden bed, multiply the length by the width to get the square footage, then multiply that by your desired depth in feet. For the most accurate result, use a topsoil calculator to convert those dimensions into cubic yards, which is how most bulk soil suppliers sell their product.\n\n## How to Calculate Topsoil\n\nCalculating the volume of soil for your garden bed is a straightforward process involving basic geometry. You need three measurements: the length, the width, and the depth of the bed in feet. If you measure in inches, divide each number by 12 to convert it to feet before you begin.\n\nThe formula is: Length × Width × Depth = Cubic Feet. \n\nOnce you have the total cubic feet, you can determine how many cubic yards you need by dividing the cubic feet by 27. This is the standard unit of measurement for bulk deliveries. If you are buying bags, check the label for the volume of the bag, which is usually listed in cubic feet.\n\n### Worked Example\n\nTo see how the math works in practice, let’s look at a large raised bed with the following dimensions: length = 20 feet, width = 10 feet, and depth = 2 feet.\n\n*   Square Feet: 200.0\n*   Cubic Feet: 33.3\n*   Cubic Yards: 1.23\n*   Bags 40Lb: 45\n\nBy following these steps, you avoid the common issue of under-ordering or over-ordering materials for your project.\n\n## How Much You Need at Common Sizes\n\nUse this reference table to estimate the volume required for standard bed sizes at a depth of 1 foot.\n\n| Bed Size (Feet) | Cubic Feet | Cubic Yards | 40lb Bags (approx) |\n| :--- | :--- | :--- | :--- |\n| 4 x 4 | 16 | 0.6 | 22 |\n| 4 x 8 | 32 | 1.2 | 43 |\n| 4 x 10 | 40 | 1.5 | 54 |\n| 2 x 6 | 12 | 0.4 | 16 |\n| 2 x 8 | 16 | 0.6 | 22 |\n\n## Estimating for Other Projects\n\nWhile raised beds are a common use for soil, you may also be wondering how much topsoil you need for a lawn or other landscape projects. The math remains the same, though the scale changes.\n\n### How Much Topsoil Do I Need for a New Lawn?\nWhen preparing for a new lawn, you typically need a layer of topsoil between 4 and 6 inches deep to provide a healthy base for grass seed or sod. To calculate this, measure the total area of your yard in square feet. Multiply that area by 0.33 (for 4 inches) or 0.5 (for 6 inches) to find your required cubic footage.\n\n### How Much Topsoil Do I Need to Topdress a Lawn?\nTopdressing is the process of applying a thin layer of soil—usually 1/4 to 1/2 inch—over an existing lawn to level uneven spots or improve soil quality. Because the layer is so thin, you will need significantly less material than you would for a new bed or a new lawn. For topdressing, calculate your square footage and multiply by 0.02 to 0.04 to find the cubic footage needed.\n\n## Common Mistakes to Avoid\n\nThe most frequent error gardeners make is failing to account for soil settling. When you first fill a raised bed, the soil is loose and airy. After the first few heavy rains or waterings, the soil will naturally compact and sink by 10% to 15%. Always order 10% more soil than your calculation suggests to ensure your beds remain full after the first season.\n\nAnother common mistake is choosing the wrong type of soil. A raised bed needs a blend of organic matter, compost, and topsoil to drain properly. If you use heavy, clay-based topsoil alone, it will become compacted and prevent root growth. Look for a \"raised bed mix\" from your supplier, which is specifically formulated to stay loose and retain moisture.\n\nFinally, do not underestimate the weight of the material. If you are ordering in bulk, ensure the delivery truck can access the drop-off site. If you are buying bags, remember that 45 bags of 40lb soil weigh 1,800 pounds. Plan your transport carefully to avoid injury or damage to your vehicle.\n\n## Choosing Between Bulk and Bags\n\nDeciding between bulk delivery and bagged soil often comes down to the size of your project. If you are filling a single 4x4 bed, bags are convenient and easy to manage. However, if you are filling multiple beds or preparing a large area for a new lawn, bulk delivery is almost always more cost-effective.\n\nWhen ordering in bulk, ask your supplier if the soil is screened. Screened topsoil has been passed through a mesh to remove large rocks, roots, and debris, resulting in a much easier-to-work-with product. While it may cost slightly more per cubic yard, it saves significant time and effort during the installation process.\n\nAlways measure twice before placing your order. While it is easy to pick up an extra bag at the store, scheduling a second bulk delivery can be expensive and time-consuming. Using a topsoil calculator and adding that 10% buffer for settling will help you get the job done right the first time.",
+    "faq": [],
+    "status": "approved",
+    "created": "2026-10-08",
+    "updated": "2026-10-08",
+    "revision": 1,
+    "internal_links": [
+      {
+        "to": "topsoil-calculator",
+        "anchor": "how much topsoil do i need",
+        "title": "How Much Topsoil Do I Need: Free Calculator & Guide"
+      },
+      {
+        "to": "how-much-topsoil-do-i-need-for-a-lawn",
+        "anchor": "how much topsoil do i need for a lawn",
+        "title": "How Much Topsoil Do I Need for a Lawn"
+      },
+      {
+        "to": "how-much-topsoil-do-i-need-for-a-new-lawn",
+        "anchor": "how much topsoil do i need for a new lawn",
+        "title": "How Much Topsoil Do I Need for a New Lawn"
+      },
+      {
+        "to": "how-much-topsoil-do-i-need-for-a-garden-bed",
+        "anchor": "how much topsoil do i need for a garden bed",
+        "title": "How Much Topsoil Do I Need for a Garden Bed"
+      }
+    ],
+    "schema_types": [
+      "Article",
+      "BreadcrumbList"
+    ],
+    "quality": {
+      "score": 100.0,
+      "passed": true,
+      "gates": {
+        "thin_content": {
+          "pass": true,
+          "detail": "word count 846 (min 600)"
+        },
+        "duplicate_content": {
+          "pass": true,
+          "detail": "max similarity 0.12 vs topsoil-calculator"
+        },
+        "keyword_stuffing": {
+          "pass": true,
+          "detail": "keyword density 0.00%"
+        },
+        "ai_cliches": {
+          "pass": true,
+          "detail": "cliches: none"
+        },
+        "readability": {
+          "pass": true,
+          "detail": "avg sentence length 16.2 words"
+        },
+        "heading_structure": {
+          "pass": true,
+          "detail": "h2=5 h3=3 (no h1 in body)"
+        },
+        "has_calculator_or_data": {
+          "pass": true,
+          "detail": "has calculator + computed output"
+        },
+        "meta_length": {
+          "pass": true,
+          "detail": "meta length 154"
+        },
+        "title_length": {
+          "pass": true,
+          "detail": "title length 51"
+        },
+        "internal_links": {
+          "pass": true,
+          "detail": "internal links 4 (want 3-8, 71 available)"
+        },
+        "schema_present": {
+          "pass": true,
+          "detail": "schema: ['Article', 'BreadcrumbList']"
+        },
+        "alt_text": {
+          "pass": true,
+          "detail": "hero alt derivable from title"
+        }
+      }
+    },
+    "metrics": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": 0
+    },
+    "word_count": 846
+  },
+  {
+    "id": "how-much-soil-for-raised-bed-calculator-uk",
+    "slug": "how-much-soil-for-raised-bed-calculator-uk",
+    "title": "How Much Soil for Raised Bed Calculator Uk",
+    "cluster": "soil",
+    "primary_keyword": "how much soil for raised bed calculator uk",
+    "secondary_keywords": [
+      "how much soil do you need for a raised bed",
+      "how much soil for a raised bed calculator",
+      "how much soil for a raised garden bed",
+      "how much soil for a 4x8 raised bed",
+      "how much soil for a 8x4x1 raised bed"
+    ],
+    "intent": "calculator",
+    "is_pillar": false,
+    "calculator": "soil",
+    "calculator_title": "Raised Bed Soil Calculator",
+    "calculator_defaults": {
+      "length": 8,
+      "width": 4,
+      "height": 12
+    },
+    "calculator_output": {
+      "cubic_feet": 32.0,
+      "cubic_yards": 1.19,
+      "bags_1_5cf": 22
+    },
+    "meta_description": "To find out how much soil for a raised bed calculator UK users need, you must multiply the length by the width by the height of your bed in feet.",
+    "body_markdown": "To find out how much soil for a raised bed calculator UK users need, you must multiply the length by the width by the height of your bed in feet. This calculation provides the total volume in cubic feet, which you can then convert into cubic yards or the number of bags required for your project.\n\n## How to Calculate Soil\n\nTo determine how much soil do you need for a raised bed, start by measuring the internal dimensions of your structure in feet. If your bed is measured in inches, divide each measurement by 12 to get the foot equivalent. For example, a 12-inch deep bed is exactly 1 foot deep.\n\nMultiply the length x width x depth to get your total cubic footage. If you are ordering bulk soil, you will need to convert this number into cubic yards. Since there are 27 cubic feet in a cubic yard, simply divide your total cubic feet by 27.\n\nIf you are buying bagged soil, check the label for the volume, as it is usually sold in 1.5 or 2 cubic foot bags. Divide your total cubic feet by the bag size to find out how many bags to purchase. Always remember to leave two inches of freeboard at the top of the bed so soil does not wash out during heavy rain or watering.\n\n### Worked Example\n\nIf you are wondering how much soil for a 4x8 raised bed that stands 12 inches high, follow this math:\n\n*   Length: 8 feet\n*   Width: 4 feet\n*   Height: 1 foot (12 inches)\n*   Calculation: 8 x 4 x 1 = 32.0 cubic feet\n*   Cubic Yards: 32.0 / 27 = 1.19 cubic yards\n*   Bags (1.5 cubic foot size): 32.0 / 1.5 = 21.33, rounded up to 22 bags\n\nThis calculation confirms that for an 8x4x1 raised bed, you will need approximately 1.19 cubic yards of soil or 22 bags of 1.5 cubic foot capacity.\n\n## How Much You Need at Common Sizes\n\nUse this reference table to quickly estimate the volume for standard bed sizes. Note that these figures assume a 12-inch or 18-inch depth.\n\n| Job size | Cubic feet | Cubic yards | 1.5 cu ft bags |\n|---|---|---|---|\n| 4x4 bed, 12 in deep | 16.0 | 0.59 | 11 |\n| 4x8 bed, 12 in deep | 32.0 | 1.19 | 22 |\n| 4x8 bed, 18 in deep | 48.0 | 1.78 | 32 |\n| 4x12 bed, 12 in deep | 48.0 | 1.78 | 32 |\n\n## Selecting Your Soil Blend\n\nOnce you know how much soil for a raised garden bed you require, you must choose the right mix. A general-purpose raised-bed blend consists of 60% topsoil, 30% compost, and 10% perlite. This provides a balance of structure, nutrient retention, and drainage.\n\nIf you are growing hungry feeders like tomatoes or courgettes, you may prefer a compost-heavy mix to provide extra nitrogen and organic matter. Conversely, root vegetables like carrots and parsnips perform better in a sandy mix that allows for easy root penetration. If your garden is situated on heavy clay soil, consider adding coarse grit to your base mix to improve drainage and prevent waterlogging.\n\n## Proper Filling Techniques\n\nWhen you have your materials delivered or bought, do not simply dump the soil into the frame. Fill the bed in layers, and water each layer as you go. This helps the soil settle into the corners and eliminates large air pockets that can cause the soil level to drop unevenly later.\n\nEven with careful packing, your soil level will naturally sink over time as organic matter breaks down. Expect to top up your beds by about 10% each year. This is a great opportunity to mix in fresh compost or organic fertilizer to replenish nutrients for the coming season.\n\n## Choosing the Right Depth\n\nThe depth of your bed dictates the type of plants you can grow. For herbs, lettuce, and other shallow-rooted crops, a depth of 6 inches is sufficient. Most vegetables and flowering plants thrive in a depth of 10-12 inches.\n\nIf you plan on growing deep-rooted crops like carrots, parsnips, or tomatoes, aim for a depth of 12-18 inches. For beds built over poor ground or areas where drainage is a significant concern, a depth of 18 inches or more provides a sufficient buffer zone between your plants and the native soil below.\n\n## Common Mistakes to Avoid\n\nOne of the most frequent errors is failing to account for the thickness of the bed walls. When using a how much soil for a raised bed calculator, always measure the *inside* dimensions. If you measure the outside, you will end up ordering more soil than your bed can actually hold.\n\nAnother mistake is using garden soil straight from the ground. Native soil is often too dense for a raised bed, leading to poor aeration and drainage issues. Always use a dedicated raised-bed mix or create your own blend using topsoil and organic amendments.\n\nFinally, avoid over-filling the bed to the very brim. As mentioned, leave two inches of freeboard. This space acts as a reservoir during watering, ensuring that moisture sinks into the root zone rather than running off the sides of the bed. If you fill it to the top, the first heavy rainfall will likely wash your expensive soil mix out onto your paths or lawn.\n\n## Long-Term Maintenance\n\nBeyond the initial fill, keep in mind that raised beds are dynamic environments. Because they are elevated, they tend to drain faster than ground-level beds. During the peak of summer, you may find that you need to water more frequently.\n\nMonitor the structure of the soil over time. If the soil becomes overly compacted after a few seasons, you can gently fork in some organic matter or compost to reintroduce air and improve drainage. By following these steps and using the provided calculations, you can ensure your plants have the optimal environment to thrive throughout the year.",
+    "faq": [
+      {
+        "q": "How much soil do I need for a raised bed?",
+        "a": "Multiply length by width by depth in feet. An 8x4 ft bed 12 inches deep needs 32 cubic feet, about 1.2 cubic yards."
+      },
+      {
+        "q": "What is the best soil mix for a raised bed?",
+        "a": "A common blend is 60% topsoil, 30% compost and 10% perlite or coarse sand for drainage."
+      },
+      {
+        "q": "Do I need a liner under a raised bed?",
+        "a": "On soil, no. On concrete or gravel, use landscape fabric to stop weeds and slow drainage loss."
+      },
+      {
+        "q": "How deep should a raised bed be?",
+        "a": "Ten to twelve inches for most vegetables; six inches is enough for shallow-rooted herbs and salads."
+      }
+    ],
+    "status": "approved",
+    "created": "2026-10-08",
+    "updated": "2026-10-08",
+    "revision": 1,
+    "internal_links": [
+      {
+        "to": "raised-bed-soil-calculator",
+        "anchor": "how much soil for raised bed",
+        "title": "Raised Bed Soil Calculator: How Much Soil You Need"
+      },
+      {
+        "to": "how-much-soil-do-you-need-for-a-raised-bed",
+        "anchor": "how much soil do you need for a raised bed",
+        "title": "How Much Soil for a Raised Bed? Bags and Yards"
+      },
+      {
+        "to": "how-much-soil-for-a-raised-bed-calculator",
+        "anchor": "how much soil for a raised bed calculator",
+        "title": "How Much Soil for a Raised Bed Calculator"
+      },
+      {
+        "to": "how-much-soil-for-a-raised-garden-bed",
+        "anchor": "how much soil for a raised garden bed",
+        "title": "How Much Soil for a Raised Garden Bed"
+      },
+      {
+        "to": "how-much-soil-for-a-4x8-raised-bed",
+        "anchor": "how much soil for a 4x8 raised bed",
+        "title": "How Much Soil for a 4x8 Raised Bed: Free Calculator & Guide"
+      },
+      {
+        "to": "how-much-soil-for-a-8x4x1-raised-bed",
+        "anchor": "how much soil for a 8x4x1 raised bed",
+        "title": "How Much Soil for a 8x4x1 Raised Bed"
+      },
+      {
+        "to": "how-much-potting-soil-for-a-raised-bed",
+        "anchor": "how much potting soil for a raised bed",
+        "title": "How Much Potting Soil for a Raised Bed"
+      },
+      {
+        "to": "how-much-soil-for-a-4x2x1-raised-garden-bed",
+        "anchor": "how much soil for a 4x2x1 raised garden bed",
+        "title": "How Much Soil for a 4x2x1 Raised Garden Bed"
+      }
+    ],
+    "schema_types": [
+      "Article",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "quality": {
+      "score": 100.0,
+      "passed": true,
+      "gates": {
+        "thin_content": {
+          "pass": true,
+          "detail": "word count 975 (min 600)"
+        },
+        "duplicate_content": {
+          "pass": true,
+          "detail": "max similarity 0.19 vs how-much-potting-soil-for-a-raised-bed"
+        },
+        "keyword_stuffing": {
+          "pass": true,
+          "detail": "keyword density 0.00%"
+        },
+        "ai_cliches": {
+          "pass": true,
+          "detail": "cliches: none"
+        },
+        "readability": {
+          "pass": true,
+          "detail": "avg sentence length 15.3 words"
+        },
+        "heading_structure": {
+          "pass": true,
+          "detail": "h2=7 h3=1 (no h1 in body)"
+        },
+        "has_calculator_or_data": {
+          "pass": true,
+          "detail": "has calculator + computed output"
+        },
+        "meta_length": {
+          "pass": true,
+          "detail": "meta length 145"
+        },
+        "title_length": {
+          "pass": true,
+          "detail": "title length 42"
+        },
+        "internal_links": {
+          "pass": true,
+          "detail": "internal links 8 (want 3-8, 71 available)"
+        },
+        "schema_present": {
+          "pass": true,
+          "detail": "schema: ['Article', 'BreadcrumbList', 'FAQPage']"
+        },
+        "alt_text": {
+          "pass": true,
+          "detail": "hero alt derivable from title"
+        }
+      }
+    },
+    "metrics": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": 0
+    },
+    "word_count": 975
   }
 ]
