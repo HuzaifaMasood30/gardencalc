@@ -3431,12 +3431,28 @@
       {
         "q": "How deep should topsoil be for a raised bed or new lawn?",
         "a": "Use 6 to 12 inches in a raised bed and 2 to 4 inches for a new lawn base. Deeper fill gives roots more room but adds volume fast, so measure the width and length before ordering."
+      },
+      {
+        "q": "How much topsoil fills a raised garden bed?",
+        "a": "Multiply the length by the width by the depth in feet to get cubic feet, then convert to cubic yards or bags. A 4 by 8 foot bed at 10 inches needs about 27 cubic feet."
+      },
+      {
+        "q": "How do I convert soil volume to cubic yards?",
+        "a": "Divide cubic feet by 27. For example, 27 cubic feet is exactly 1 cubic yard."
+      },
+      {
+        "q": "How deep should the soil be in a raised bed?",
+        "a": "Aim for 6 to 12 inches depending on what you grow, leaving a couple of inches of clearance below the rim."
+      },
+      {
+        "q": "Can I fill a raised bed with only topsoil?",
+        "a": "You can, but mixing in compost improves drainage and nutrients. Topsoil works as the base and can be amended over the seasons."
       }
     ],
     "status": "approved",
     "created": "2026-10-07",
-    "updated": "2026-10-07",
-    "revision": 1,
+    "updated": "2026-10-08",
+    "revision": 2,
     "internal_links": [
       {
         "to": "how-much-topsoil-do-i-need-for-a-new-lawn",
@@ -3564,12 +3580,28 @@
       {
         "q": "Can I apply too much fertilizer?",
         "a": "Yes. Over-application burns grass, harms soil and causes nutrient runoff, which is why you calculate the product weight rather than spreading by eye."
+      },
+      {
+        "q": "How do I calculate how much fertilizer per 1000 sq ft?",
+        "a": "Divide the desired nitrogen rate by the nitrogen percentage in the bag and multiply by 100, then multiply by your total square footage divided by 1000."
+      },
+      {
+        "q": "What is the ideal nitrogen rate for a lawn?",
+        "a": "Most lawns take 0.5 to 1.0 pounds of actual nitrogen per 1000 square feet per application. Split heavier annual targets across several lighter feedings."
+      },
+      {
+        "q": "Why should I use a fertilizer calculator instead of guessing?",
+        "a": "Guessing risks over-application, which burns grass, damages soil health and leads to nutrient runoff. The calculator converts a nitrogen rate into an exact product weight."
+      },
+      {
+        "q": "Does the type of fertilizer change the amount I need?",
+        "a": "Yes. Starter, granular and liquid products carry different nitrogen concentrations, so each one needs a different product weight to deliver the same rate of actual nitrogen."
       }
     ],
     "status": "approved",
     "created": "2026-10-07",
     "updated": "2026-10-08",
-    "revision": 2,
+    "revision": 3,
     "internal_links": [
       {
         "to": "how-much-liquid-fertilizer-per-1000-sq-ft",
@@ -7650,12 +7682,28 @@
       {
         "q": "How many cubic yards is 2 inches of topsoil over 1000 sq ft?",
         "a": "Two inches is 0.167 feet, so 1000 square feet needs about 167 cubic feet, or roughly 6.2 cubic yards."
+      },
+      {
+        "q": "How deep should topsoil be for a new lawn?",
+        "a": "Use 2 to 4 inches of topsoil to give grass seed or sod a level, nutrient-rich base that supports deep roots."
+      },
+      {
+        "q": "How do I calculate topsoil for a lawn?",
+        "a": "Multiply the length by the width to get square footage, then multiply by the depth in feet. A lawn 20 feet by 10 feet at 4 inches deep needs about 67 cubic feet, or 2.5 cubic yards."
+      },
+      {
+        "q": "Can I add too much topsoil to a lawn?",
+        "a": "Yes. Too little starves the root zone and too much can bury existing growth, so match the depth to the job: 2 to 4 inches for a new lawn and a thin layer for topdressing."
+      },
+      {
+        "q": "What is topdressing and how much soil does it need?",
+        "a": "Topdressing spreads a thin layer of soil over an existing lawn to level it and improve the surface. It needs far less than a full new-lawn depth."
       }
     ],
     "status": "approved",
     "created": "2026-10-08",
     "updated": "2026-10-08",
-    "revision": 2,
+    "revision": 3,
     "internal_links": [
       {
         "to": "topsoil-calculator",
@@ -8620,12 +8668,28 @@
       {
         "q": "Can I use regular fertilizer as starter fertilizer?",
         "a": "You can, but standard products are lower in phosphorus. If you do, calculate the product weight from the nitrogen percentage as usual."
+      },
+      {
+        "q": "How much Scotts Starter Fertilizer per 1000 sq ft?",
+        "a": "Apply about 1 pound of product per 1000 square feet for most seeding or sodding projects, and confirm the rate on the specific bag you bought."
+      },
+      {
+        "q": "Why do I need to check the bag for the exact rate?",
+        "a": "Application rates vary slightly with the formulation and nutrient concentration, so the bag label is the authority for your product."
+      },
+      {
+        "q": "How do I spread starter fertilizer evenly?",
+        "a": "Calibrate your spreader and split the application into two passes at right angles to avoid streaks and burned patches."
+      },
+      {
+        "q": "What happens if I apply too much starter fertilizer?",
+        "a": "Over-application stresses young seedlings and can burn the new grass, while too little leaves them short of the nutrients roots need."
       }
     ],
     "status": "approved",
     "created": "2026-10-08",
     "updated": "2026-10-08",
-    "revision": 4,
+    "revision": 5,
     "internal_links": [
       {
         "to": "fertilizer-calculator",
