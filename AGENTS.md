@@ -100,4 +100,22 @@ python3 scripts/live_audit.py https://huzaifamasood30.github.io/gardencalc/
 - The pipeline's "Commit refreshed content and data" step rebases (`git pull --rebase
   --autostash`) before pushing, because a manual push during a run otherwise causes a
   non-fast-forward and the deploy is skipped.
+- `pipeline.yml` only runs on the daily cron / manual dispatch, so code or template
+  changes are published by `deploy.yml`, which runs on main pushes to site-affecting
+  paths. Both share the `seo-pipeline` concurrency group so they serialise.
+- `scripts/verify.py` exits non-zero on any issue, so the deploy gate and the health
+  check actually block a bad build.
+
+## Sitemap rules
+- `seo.sitemap_xml` is the single source of truth: it emits absolute escaped `<loc>`,
+  a `<lastmod>` only when it is a real non-future ISO date, and no `<priority>`
+  (ignored by Google/Bing). It de-duplicates by `<loc>` and drops any URL that escapes
+  `base_url`, so a wrong-host or duplicate URL cannot reach production.
+- Every sitemap URL must resolve to a 200, be self-canonical and be indexable. Never
+  put a `noindex` page in the sitemap; `verify.py` now fails if one appears.
+- `base_url`/`custom_domain` is lower-cased in `common.site_config()` because GitHub
+  Pages only answers on the lower-case host; the pipeline env var carries a
+  capital-H owner, so keep that normalization.
+- Google Search Console must be a URL-prefix property for the full project URL
+  (`https://<user>.github.io/<repo>/`); a bare-host property cannot host this sitemap.
 
