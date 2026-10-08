@@ -505,10 +505,11 @@ def build() -> dict:
                 project_links.append({"slug": p["slug"], "title": p["title"],
                                       "desc": p.get("meta_description", "")[:90]})
 
-        # Answer-first block (featured-snippet bait): the first FAQ answer is a direct,
-        # numeric answer to the page's main question.
+        # Answer-first block (featured-snippet bait): a page-specific, computed
+        # answer beats a generic FAQ reply. Falls back to the first FAQ answer.
         faq_items = art.get("faq") or []
-        answer_first = faq_items[0]["a"] if faq_items else art.get("meta_description", "")
+        answer_first = (art.get("answer")
+                        or (faq_items[0]["a"] if faq_items else art.get("meta_description", "")))
 
         schemas = [json.dumps(s, ensure_ascii=False) for s in
                    seolib.all_schema(art, site, figure=_abs(site, f"/static/img/og/{art['slug']}.png"))]

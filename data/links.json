@@ -39,7 +39,6 @@
       "how-much-paint-do-i-need-for-a-small-bathroom"
     ],
     "tile-calculator": [
-      "how-many-tiles-do-i-need-for-a-10x10-room",
       "how-many-tiles-do-i-need-for-100-square-feet",
       "how-many-tiles-do-i-need-for-my-bathroom",
       "how-many-tiles-do-i-need-for-20-square-feet",
@@ -85,15 +84,6 @@
       "how-much-paint-do-i-need-for-a-12x16-shed",
       "how-much-paint-do-i-need-for-1800-sq-ft-house",
       "how-much-paint-do-i-need-for-a-small-bathroom"
-    ],
-    "how-many-tiles-do-i-need-for-a-10x10-room": [
-      "tile-calculator",
-      "how-many-tiles-do-i-need-for-100-square-feet",
-      "how-many-tiles-do-i-need-for-my-bathroom",
-      "how-many-tiles-do-i-need-for-20-square-feet",
-      "how-many-tiles-do-i-need-for-120-square-feet",
-      "how-many-tiles-do-i-need-for-a-4x4-room",
-      "how-many-tiles-do-i-need-for-a-room"
     ],
     "how-much-grass-seed-per-square-foot-overseeding": [
       "grass-seed-calculator",
@@ -233,7 +223,6 @@
     ],
     "how-many-tiles-do-i-need-for-100-square-feet": [
       "tile-calculator",
-      "how-many-tiles-do-i-need-for-a-10x10-room",
       "how-many-tiles-do-i-need-for-my-bathroom",
       "how-many-tiles-do-i-need-for-20-square-feet",
       "how-many-tiles-do-i-need-for-120-square-feet",
@@ -252,7 +241,6 @@
     ],
     "how-many-tiles-do-i-need-for-my-bathroom": [
       "tile-calculator",
-      "how-many-tiles-do-i-need-for-a-10x10-room",
       "how-many-tiles-do-i-need-for-100-square-feet",
       "how-many-tiles-do-i-need-for-20-square-feet",
       "how-many-tiles-do-i-need-for-120-square-feet",
@@ -298,7 +286,6 @@
     ],
     "how-many-tiles-do-i-need-for-20-square-feet": [
       "tile-calculator",
-      "how-many-tiles-do-i-need-for-a-10x10-room",
       "how-many-tiles-do-i-need-for-100-square-feet",
       "how-many-tiles-do-i-need-for-my-bathroom",
       "how-many-tiles-do-i-need-for-120-square-feet",
@@ -349,7 +336,6 @@
     ],
     "how-many-tiles-do-i-need-for-120-square-feet": [
       "tile-calculator",
-      "how-many-tiles-do-i-need-for-a-10x10-room",
       "how-many-tiles-do-i-need-for-100-square-feet",
       "how-many-tiles-do-i-need-for-my-bathroom",
       "how-many-tiles-do-i-need-for-20-square-feet",
@@ -520,7 +506,6 @@
     ],
     "how-many-tiles-do-i-need-for-a-4x4-room": [
       "tile-calculator",
-      "how-many-tiles-do-i-need-for-a-10x10-room",
       "how-many-tiles-do-i-need-for-100-square-feet",
       "how-many-tiles-do-i-need-for-my-bathroom",
       "how-many-tiles-do-i-need-for-20-square-feet",
@@ -591,7 +576,6 @@
     ],
     "how-many-tiles-do-i-need-for-a-room": [
       "tile-calculator",
-      "how-many-tiles-do-i-need-for-a-10x10-room",
       "how-many-tiles-do-i-need-for-100-square-feet",
       "how-many-tiles-do-i-need-for-my-bathroom",
       "how-many-tiles-do-i-need-for-20-square-feet",

@@ -48,15 +48,7 @@
   {% if article %}<p class="calc-updated">Last updated <time datetime="{{ article.updated }}">{{ article.updated | date_human }}</time>. Estimates only — check with your supplier before ordering.</p>{% endif %}
 </div>
 
-<section class="embed-cta" aria-labelledby="embed-h">
-  <h2 id="embed-h">Embed this calculator</h2>
-  <p>Free to use on your blog, forum or resource page. Please keep the visible credit link.</p>
-  <textarea readonly rows="3" aria-label="Embed code for {{ calc.title }}"
-            onclick="this.select()">&lt;iframe src="{{ base_url }}/embed/{{ calc.key }}/" width="100%" height="520" style="border:1px solid #e5e7eb;border-radius:12px" loading="lazy" title="{{ calc.title }} by {{ site.name }}"&gt;&lt;/iframe&gt;
-&lt;p&gt;Calculator by &lt;a href="{{ base_url }}/{{ calc.slug }}/"&gt;{{ site.name }}&lt;/a&gt;&lt;/p&gt;</textarea>
-  <button type="button" class="btn btn-ghost" data-copy-embed>Copy embed code</button>
-  <a class="btn btn-ghost" href="{{ base_url }}/for-publishers/">More ways to cite us →</a>
-</section>
+{% include "_embed.html" %}
 
 {% if calc.video and calc.video.id %}
 <section class="video-embed" aria-labelledby="video-h">

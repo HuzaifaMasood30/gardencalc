@@ -10,6 +10,7 @@ import datetime as dt
 import sys
 
 import adsense
+import article_fix
 import build
 import cluster
 import dashboard
@@ -31,6 +32,11 @@ def run(limit: int | None = None) -> dict:
 
     print("== 1/10 generate ==")
     generate.run(limit=limit)
+
+    print("== 1b/10 recompute article figures ==")
+    arts = load_json(DATA / "articles.json", default=[])
+    steps["figure_fixes"] = len(article_fix.run(arts))
+    save_json(DATA / "articles.json", arts)
 
     print("== 2/10 internal links + quality (to convergence) ==")
     arts = load_json(DATA / "articles.json", default=[])

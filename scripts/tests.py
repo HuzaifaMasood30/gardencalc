@@ -81,12 +81,78 @@ def test_brand_assets_render():
 def test_calculator_results():
     r = calculators.compute("mulch", {"length": 20, "width": 10, "depth": 3})
     assert r["bags_2cf"] == 25, r
+    # 600 sq ft at 3 in is 150 cu ft; two-cu-ft bags round to 75, not 76.
+    r = calculators.compute("mulch", {"length": 30, "width": 20, "depth": 3})
+    assert r["bags_2cf"] == 75, r
     r = calculators.compute("soil", {"length": 8, "width": 4, "height": 12})
     assert r["bags_1_5cf"] == 22, r
     r = calculators.compute("gravel", {"length": 20, "width": 10, "depth": 3})
     assert abs(r["tons"] - 2.59) < 0.01, r
     r = calculators.compute("concrete", {"length": 10, "width": 10, "thickness": 4})
     assert r["bags_60lb"] == 75 and r["bags_80lb"] == 56, r
+
+
+def test_article_fix_is_idempotent():
+    import article_fix
+
+    arts = [{"slug": "how-much-mulch-do-i-need-for-600-square-feet", "title": "T",
+             "cluster": "mulch", "calculator": "mulch", "status": "published",
+             "primary_keyword": "how much mulch do i need for 600 square feet",
+             "calculator_defaults": {"length": 30, "width": 20, "depth": 3},
+             "body_markdown": "## How Much You Need at Common Sizes\n\n"
+                              "| Job size | Cubic feet | Cubic yards | 2 cu ft bags |\n"
+                              "|---|---|---|---|\n| 600 sq ft | 150 | 5.56 | 76 |\n"}]
+    first = article_fix.run(arts)
+    second = article_fix.run(arts)
+    assert first and not second, (first, second)
+    assert "| 600 sq ft | 150 | 5.56 | 75 |" in arts[0]["body_markdown"]
+
+
+def test_published_tables_match_the_engine():
+    """Every cubic-feet table row must agree with the calculators engine."""
+    import re
+
+    import article_fix
+    from common import DATA, load_json
+
+    arts = load_json(DATA / "articles.json", default=[])
+    checked = 0
+    for art in arts:
+        if art.get("status") not in ("published", "approved"):
+            continue
+        md = art.get("body_markdown", "")
+        lines = md.split("\n")
+        for i, line in enumerate(lines):
+            if not line.strip().startswith("|") or i + 1 >= len(lines):
+                continue
+            if not set(lines[i + 1].strip()) <= set("|-: "):
+                continue
+            headers = [c.strip() for c in line.strip().strip("|").split("|")]
+            if not any("cubic feet" in h.lower() for h in headers):
+                continue
+            for row in lines[i + 2:]:
+                if not row.strip().startswith("|"):
+                    break
+                cells = [c.strip() for c in row.strip().strip("|").split("|")]
+                by = dict(zip(headers, cells))
+                cuft = by.get("Cubic feet")
+                size = cells[0]
+                m = re.match(r"([\d,]+)\s*sq ft", size, re.I)
+                if not (cuft and m):
+                    continue
+                area = float(m.group(1).replace(",", ""))
+                ins = dict(article_fix.headline_inputs(art))
+                if "length" not in ins or "width" not in ins:
+                    continue
+                ins["length"] = ins["width"] = area ** 0.5
+                out = calculators.compute(art["calculator"], ins)
+                assert abs(float(cuft) - out["cubic_feet"]) <= 0.1, (art["slug"], row, out)
+                for h, v in by.items():
+                    field = article_fix._LABEL_FIELD.get(h.lower())
+                    if field and field in out:
+                        assert abs(float(v) - out[field]) <= 1, (art["slug"], row, out)
+                        checked += 1
+    assert checked > 0
 
 
 def test_keyword_relevance_filter():
