@@ -6,7 +6,7 @@
       "status": 200,
       "title": "GardenCalc \u2014 Free Home & Garden Calculators",
       "h1": 1,
-      "h2": 7
+      "h2": 13
     },
     {
       "path": "/about/",
@@ -16,65 +16,79 @@
       "h2": 7
     },
     {
+      "path": "/calculators/",
+      "status": 200,
+      "title": "Home & Garden Calculators | GardenCalc",
+      "h1": 1,
+      "h2": 15
+    },
+    {
       "path": "/category/concrete/",
       "status": 200,
-      "title": "Concrete Calculator & Guides | GardenCalc",
+      "title": "Concrete Calculators | GardenCalc",
       "h1": 1,
-      "h2": 5
+      "h2": 6
     },
     {
       "path": "/category/fertilizer/",
       "status": 200,
-      "title": "Fertilizer & Lawn Feed Calculator & Guides | GardenCalc",
+      "title": "Fertilizer & Lawn Feed Calculators | GardenCalc",
       "h1": 1,
-      "h2": 5
+      "h2": 6
     },
     {
       "path": "/category/grass-seed/",
       "status": 200,
-      "title": "Grass Seed & Lawn Calculator & Guides | GardenCalc",
+      "title": "Grass Seed & Lawn Calculators | GardenCalc",
       "h1": 1,
-      "h2": 5
+      "h2": 6
     },
     {
       "path": "/category/gravel/",
       "status": 200,
-      "title": "Gravel & Stone Calculator & Guides | GardenCalc",
+      "title": "Gravel & Stone Calculators | GardenCalc",
       "h1": 1,
-      "h2": 5
+      "h2": 6
     },
     {
       "path": "/category/mulch/",
       "status": 200,
-      "title": "Mulch Calculator & Guides | GardenCalc",
+      "title": "Mulch Calculators | GardenCalc",
       "h1": 1,
-      "h2": 5
+      "h2": 6
     },
     {
       "path": "/category/paint/",
       "status": 200,
-      "title": "Paint Calculator & Guides | GardenCalc",
+      "title": "Paint Calculators | GardenCalc",
       "h1": 1,
-      "h2": 5
+      "h2": 6
     },
     {
       "path": "/category/soil/",
       "status": 200,
-      "title": "Soil & Raised Beds Calculator & Guides | GardenCalc",
+      "title": "Soil & Raised Beds Calculators | GardenCalc",
       "h1": 1,
-      "h2": 5
+      "h2": 6
     },
     {
       "path": "/category/tile/",
       "status": 200,
-      "title": "Tile Calculator & Guides | GardenCalc",
+      "title": "Tile Calculators | GardenCalc",
       "h1": 1,
-      "h2": 5
+      "h2": 6
     },
     {
       "path": "/category/topsoil/",
       "status": 200,
-      "title": "Topsoil & Fill Dirt Calculator & Guides | GardenCalc",
+      "title": "Topsoil & Fill Dirt Calculators | GardenCalc",
+      "h1": 1,
+      "h2": 6
+    },
+    {
+      "path": "/concrete-bags-by-slab-size-chart/",
+      "status": 200,
+      "title": "Concrete Bags by Slab Size Chart (40, 60 & 80 lb)",
       "h1": 1,
       "h2": 5
     },
@@ -83,7 +97,7 @@
       "status": 200,
       "title": "Concrete Calculator: Bags or Yards You Need",
       "h1": 1,
-      "h2": 16
+      "h2": 18
     },
     {
       "path": "/contact/",
@@ -100,254 +114,275 @@
       "h2": 7
     },
     {
+      "path": "/fall-lawn-fertilizer-timing/",
+      "status": 200,
+      "title": "Fall Lawn Fertilizer Timing: When and How Much",
+      "h1": 1,
+      "h2": 12
+    },
+    {
       "path": "/fertilizer-calculator/",
       "status": 200,
-      "title": "How Much Fertilizer Per 1000 SQ FT: Free Calculator & Guide",
+      "title": "Fertilizer Calculator: How Much per 1,000 Sq Ft?",
       "h1": 1,
-      "h2": 11
+      "h2": 13
+    },
+    {
+      "path": "/fertilizer-rate-chart/",
+      "status": 200,
+      "title": "Fertilizer Rate Chart: Pounds of Fertilizer per 1,000 Sq Ft",
+      "h1": 1,
+      "h2": 5
+    },
+    {
+      "path": "/for-publishers/",
+      "status": 200,
+      "title": "Embed or Cite Our Calculators | GardenCalc",
+      "h1": 1,
+      "h2": 7
+    },
+    {
+      "path": "/garden-bed-makeover-planner/",
+      "status": 200,
+      "title": "Garden Bed Makeover Planner: Soil & Mulch",
+      "h1": 1,
+      "h2": 6
     },
     {
       "path": "/grass-seed-calculator/",
       "status": 200,
       "title": "Grass Seed Calculator: How Much Seed You Need",
       "h1": 1,
-      "h2": 16
+      "h2": 18
+    },
+    {
+      "path": "/grass-seed-rate-chart/",
+      "status": 200,
+      "title": "Grass Seed Rate Chart: Pounds per 1,000 Sq Ft",
+      "h1": 1,
+      "h2": 5
     },
     {
       "path": "/gravel-calculator/",
       "status": 200,
       "title": "Gravel Calculator: How Much Gravel Do You Need?",
       "h1": 1,
-      "h2": 16
+      "h2": 18
+    },
+    {
+      "path": "/gravel-coverage-chart/",
+      "status": 200,
+      "title": "Gravel Coverage Chart: Yards & Tons by Area and Depth",
+      "h1": 1,
+      "h2": 5
+    },
+    {
+      "path": "/guides/",
+      "status": 200,
+      "title": "Garden & Home Project Guides | GardenCalc",
+      "h1": 1,
+      "h2": 13
     },
     {
       "path": "/how-many-bags-of-concrete-do-i-need-for-a-10x10-slab/",
       "status": 200,
       "title": "How Many Bags of Concrete for a 10x10 Slab?",
       "h1": 1,
-      "h2": 14
+      "h2": 16
     },
     {
       "path": "/how-many-bags-of-concrete-do-i-need-for-a-10x12-slab/",
       "status": 200,
       "title": "How Many Bags of Concrete Do I Need for a 10x12 Slab",
       "h1": 1,
-      "h2": 12
+      "h2": 14
     },
     {
       "path": "/how-many-bags-of-concrete-do-i-need-for-a-12x12-slab/",
       "status": 200,
       "title": "How Many Bags of Concrete Do I Need for a 12x12 Slab",
       "h1": 1,
-      "h2": 13
+      "h2": 15
     },
     {
       "path": "/how-many-bags-of-concrete-do-i-need-for-a-20x20-slab/",
       "status": 200,
       "title": "How Many Bags of Concrete Do I Need for a 20x20 Slab",
       "h1": 1,
-      "h2": 11
-    },
-    {
-      "path": "/how-many-bags-of-concrete-do-i-need-for-a-4-x8-slab/",
-      "status": 200,
-      "title": "How Many Bags of Concrete Do I Need for a 4 X8 Slab",
-      "h1": 1,
-      "h2": 12
+      "h2": 13
     },
     {
       "path": "/how-many-bags-of-concrete-do-i-need-for-a-4x4-slab/",
       "status": 200,
       "title": "How Many Bags of Concrete Do I Need for a 4x4 Slab",
       "h1": 1,
-      "h2": 11
+      "h2": 13
+    },
+    {
+      "path": "/how-many-bags-of-concrete-do-i-need-for-a-4x8-slab/",
+      "status": 200,
+      "title": "How Many Bags of Concrete for a 4x8 Slab?",
+      "h1": 1,
+      "h2": 14
     },
     {
       "path": "/how-many-bags-of-concrete-do-i-need-for-a-8x8-slab/",
       "status": 200,
       "title": "How Many Bags of Concrete Do I Need for a 8x8 Slab",
       "h1": 1,
-      "h2": 13
+      "h2": 15
     },
     {
       "path": "/how-many-bags-of-concrete-do-i-need-for-a-fence-post/",
       "status": 200,
       "title": "How Many Bags of Concrete Do I Need for a Fence Post",
       "h1": 1,
-      "h2": 12
+      "h2": 14
+    },
+    {
+      "path": "/how-many-pounds-of-bermuda-grass-seed-per-square-foot/",
+      "status": 200,
+      "title": "How Many Pounds of Bermuda Grass Seed Per Square Foot",
+      "h1": 1,
+      "h2": 14
     },
     {
       "path": "/how-many-pounds-of-fertilizer-per-1000-sq-ft/",
       "status": 200,
-      "title": "How Many Pounds of Fertilizer Per 1000 SQ FT",
+      "title": "How Many Pounds of Fertilizer per 1,000 Sq Ft?",
       "h1": 1,
-      "h2": 13
+      "h2": 15
     },
     {
       "path": "/how-many-tiles-do-i-need-for-100-square-feet/",
       "status": 200,
       "title": "How Many Tiles Do I Need for 100 Square Feet",
       "h1": 1,
-      "h2": 12
+      "h2": 14
     },
     {
       "path": "/how-many-tiles-do-i-need-for-120-square-feet/",
       "status": 200,
       "title": "How Many Tiles Do I Need for 120 Square Feet",
       "h1": 1,
-      "h2": 12
+      "h2": 14
     },
     {
       "path": "/how-many-tiles-do-i-need-for-20-square-feet/",
       "status": 200,
       "title": "How Many Tiles Do I Need for 20 Square Feet",
       "h1": 1,
-      "h2": 12
+      "h2": 14
     },
     {
       "path": "/how-many-tiles-do-i-need-for-a-10x10-room/",
       "status": 200,
       "title": "How Many Tiles for a 10x10 Room? Count by Size",
       "h1": 1,
-      "h2": 15
+      "h2": 17
     },
     {
       "path": "/how-many-tiles-do-i-need-for-a-4x4-room/",
       "status": 200,
       "title": "How Many Tiles Do I Need for a 4x4 Room",
       "h1": 1,
-      "h2": 11
+      "h2": 13
+    },
+    {
+      "path": "/how-many-tiles-do-i-need-for-a-room/",
+      "status": 200,
+      "title": "How Many Tiles Do I Need for a Room: Calculator & Guide",
+      "h1": 1,
+      "h2": 14
     },
     {
       "path": "/how-many-tiles-do-i-need-for-my-bathroom/",
       "status": 200,
       "title": "How Many Tiles Do I Need for My Bathroom",
       "h1": 1,
-      "h2": 12
-    },
-    {
-      "path": "/how-many-tiles-do-i-need-for-my-floor/",
-      "status": 200,
-      "title": "How Many Tiles Do I Need for My Floor",
-      "h1": 1,
-      "h2": 12
-    },
-    {
-      "path": "/how-many-tiles-do-i-need-for-my-room/",
-      "status": 200,
-      "title": "How Many Tiles Do I Need for My Room",
-      "h1": 1,
-      "h2": 12
+      "h2": 14
     },
     {
       "path": "/how-much-bermuda-grass-seed-per-1000-square-feet/",
       "status": 200,
       "title": "How Much Bermuda Grass Seed Per 1000 Square Feet",
       "h1": 1,
-      "h2": 12
+      "h2": 14
     },
     {
       "path": "/how-much-bermuda-grass-seed-per-square-foot/",
       "status": 200,
       "title": "How Much Bermuda Grass Seed Per Square Foot",
       "h1": 1,
-      "h2": 12
+      "h2": 14
     },
     {
       "path": "/how-much-buffalo-grass-seed-per-square-foot/",
       "status": 200,
       "title": "How Much Buffalo Grass Seed Per Square Foot",
       "h1": 1,
-      "h2": 12
-    },
-    {
-      "path": "/how-much-fertilizer-per-1000-sq-ft-calculator/",
-      "status": 200,
-      "title": "How Much Fertilizer Per 1000 SQ FT Calculator",
-      "h1": 1,
-      "h2": 12
+      "h2": 14
     },
     {
       "path": "/how-much-grass-seed-do-i-need-per-square-foot/",
       "status": 200,
       "title": "How Much Grass Seed Do I Need Per Square Foot",
       "h1": 1,
-      "h2": 13
-    },
-    {
-      "path": "/how-much-grass-seed-needed-per-square-foot/",
-      "status": 200,
-      "title": "How Much Grass Seed Needed Per Square Foot",
-      "h1": 1,
-      "h2": 12
-    },
-    {
-      "path": "/how-much-grass-seed-per-square-foot-calculator/",
-      "status": 200,
-      "title": "How Much Grass Seed Per Square Foot Calculator",
-      "h1": 1,
-      "h2": 13
-    },
-    {
-      "path": "/how-much-grass-seed-per-square-foot-canada/",
-      "status": 200,
-      "title": "How Much Grass Seed Per Square Foot Canada",
-      "h1": 1,
-      "h2": 12
+      "h2": 15
     },
     {
       "path": "/how-much-grass-seed-per-square-foot-for-new-lawn/",
       "status": 200,
       "title": "How Much Grass Seed Per Square Foot for New Lawn",
       "h1": 1,
-      "h2": 12
+      "h2": 14
     },
     {
       "path": "/how-much-grass-seed-per-square-foot-overseeding/",
       "status": 200,
       "title": "How Much Grass Seed Per Square Foot to Overseed?",
       "h1": 1,
-      "h2": 15
+      "h2": 17
     },
     {
       "path": "/how-much-gravel-do-i-need-for-a-10x10-patio/",
       "status": 200,
       "title": "How Much Gravel Do I Need for a 10x10 Patio",
       "h1": 1,
-      "h2": 12
+      "h2": 14
     },
     {
       "path": "/how-much-gravel-do-i-need-for-a-10x12-shed/",
       "status": 200,
       "title": "How Much Gravel Do I Need for a 10x12 Shed",
       "h1": 1,
-      "h2": 11
+      "h2": 13
     },
     {
       "path": "/how-much-gravel-do-i-need-for-a-20x20-area/",
       "status": 200,
       "title": "How Much Gravel Do I Need for a 20x20 Area",
       "h1": 1,
-      "h2": 12
+      "h2": 14
+    },
+    {
+      "path": "/how-much-gravel-do-i-need-for-a-backfill-retaining-wall/",
+      "status": 200,
+      "title": "How Much Gravel Do I Need for a Backfill Retaining Wall",
+      "h1": 1,
+      "h2": 14
     },
     {
       "path": "/how-much-gravel-do-i-need-for-a-driveway/",
       "status": 200,
       "title": "How Much Gravel Do I Need for a Driveway",
       "h1": 1,
-      "h2": 12
+      "h2": 14
     },
     {
       "path": "/how-much-gravel-do-i-need-for-a-french-drain/",
       "status": 200,
       "title": "How Much Gravel Do I Need for a French Drain",
-      "h1": 1,
-      "h2": 12
-    },
-    {
-      "path": "/how-much-gravel-do-i-need-for-my-driveway/",
-      "status": 200,
-      "title": "How Much Gravel for a Driveway? Yards and Tons",
       "h1": 1,
       "h2": 14
     },
@@ -356,287 +391,252 @@
       "status": 200,
       "title": "How Much Gravel Do I Need for My Walkway",
       "h1": 1,
-      "h2": 12
+      "h2": 14
     },
     {
       "path": "/how-much-gravel-do-i-need-per-square-metre/",
       "status": 200,
       "title": "How Much Gravel Do I Need Per Square Metre",
       "h1": 1,
-      "h2": 13
+      "h2": 15
     },
     {
       "path": "/how-much-liquid-fertilizer-per-1000-sq-ft/",
       "status": 200,
-      "title": "How Much Liquid Fertilizer Per 1000 SQ FT",
+      "title": "How Much Liquid Fertilizer per 1,000 Sq Ft?",
       "h1": 1,
-      "h2": 13
+      "h2": 15
     },
     {
       "path": "/how-much-mulch-do-i-need-for-1000-square-feet/",
       "status": 200,
       "title": "How Much Mulch Do I Need for 1000 Square Feet",
       "h1": 1,
-      "h2": 12
+      "h2": 14
     },
     {
       "path": "/how-much-mulch-do-i-need-for-200-square-feet/",
       "status": 200,
       "title": "How Much Mulch Do I Need for 200 Square Feet",
       "h1": 1,
-      "h2": 13
+      "h2": 15
     },
     {
       "path": "/how-much-mulch-do-i-need-for-300-square-feet/",
       "status": 200,
       "title": "How Much Mulch Do I Need for 300 Square Feet",
       "h1": 1,
-      "h2": 13
+      "h2": 15
     },
     {
       "path": "/how-much-mulch-do-i-need-for-32-square-feet/",
       "status": 200,
       "title": "How Much Mulch Do I Need for 32 Square Feet",
       "h1": 1,
-      "h2": 13
+      "h2": 15
     },
     {
       "path": "/how-much-mulch-do-i-need-for-400-square-feet/",
       "status": 200,
       "title": "How Much Mulch Do I Need for 400 Square Feet",
       "h1": 1,
-      "h2": 12
+      "h2": 14
     },
     {
       "path": "/how-much-mulch-do-i-need-for-500-sq-ft/",
       "status": 200,
       "title": "How Much Mulch for 500 Sq Ft? Yards and Bags",
       "h1": 1,
-      "h2": 15
+      "h2": 17
     },
     {
       "path": "/how-much-mulch-do-i-need-for-600-square-feet/",
       "status": 200,
       "title": "How Much Mulch Do I Need for 600 Square Feet",
       "h1": 1,
-      "h2": 13
+      "h2": 15
     },
     {
       "path": "/how-much-mulch-do-i-need-for-a-flower-bed/",
       "status": 200,
       "title": "How Much Mulch Do I Need for a Flower Bed",
       "h1": 1,
-      "h2": 12
+      "h2": 14
     },
     {
-      "path": "/how-much-mulch-do-i-need-for-my-flower-bed/",
+      "path": "/how-much-mulch-do-i-need-for-my-yard/",
       "status": 200,
-      "title": "How Much Mulch Do I Need for My Flower Bed",
+      "title": "How Much Mulch Do I Need for My Yard: Calculator & Guide",
       "h1": 1,
-      "h2": 13
+      "h2": 14
     },
     {
       "path": "/how-much-nitrogen-fertilizer-per-1000-sq-ft/",
       "status": 200,
-      "title": "How Much Nitrogen Fertilizer Per 1000 SQ FT",
+      "title": "How Much Nitrogen Fertilizer per 1,000 Sq Ft?",
       "h1": 1,
-      "h2": 12
-    },
-    {
-      "path": "/how-much-paint-do-i-need-calculator-sq-ft/",
-      "status": 200,
-      "title": "How Much Paint Do I Need Calculator SQ FT",
-      "h1": 1,
-      "h2": 11
+      "h2": 14
     },
     {
       "path": "/how-much-paint-do-i-need-for-1800-sq-ft-house/",
       "status": 200,
-      "title": "How Much Paint Do I Need for 1800 SQ FT House",
+      "title": "How Much Paint for an 1800 Sq Ft House?",
       "h1": 1,
-      "h2": 11
+      "h2": 13
     },
     {
       "path": "/how-much-paint-do-i-need-for-a-10x10-room/",
       "status": 200,
       "title": "How Much Paint Do I Need for a 10x10 Room",
       "h1": 1,
-      "h2": 11
+      "h2": 13
     },
     {
       "path": "/how-much-paint-do-i-need-for-a-12x12-room/",
       "status": 200,
       "title": "How Much Paint Do I Need for a 12x12 Room",
       "h1": 1,
-      "h2": 11
+      "h2": 13
     },
     {
       "path": "/how-much-paint-do-i-need-for-a-12x16-shed/",
       "status": 200,
       "title": "How Much Paint Do I Need for a 12x16 Shed",
       "h1": 1,
-      "h2": 11
+      "h2": 13
     },
     {
       "path": "/how-much-paint-do-i-need-for-a-bedroom/",
       "status": 200,
       "title": "How Much Paint for a Bedroom? Gallons by Size",
       "h1": 1,
-      "h2": 15
-    },
-    {
-      "path": "/how-much-paint-do-i-need-for-a-door/",
-      "status": 200,
-      "title": "How Much Paint Do I Need for a Door: Free Calculator & Guide",
-      "h1": 1,
-      "h2": 12
+      "h2": 17
     },
     {
       "path": "/how-much-paint-do-i-need-for-a-front-door/",
       "status": 200,
       "title": "How Much Paint Do I Need for a Front Door",
       "h1": 1,
-      "h2": 11
+      "h2": 13
     },
     {
       "path": "/how-much-paint-do-i-need-for-a-room/",
       "status": 200,
-      "title": "How Much Paint Do I Need for a Room: Free Calculator & Guide",
+      "title": "How Much Paint for a Room: Calculator & Guide",
       "h1": 1,
-      "h2": 12
+      "h2": 14
+    },
+    {
+      "path": "/how-much-paint-do-i-need-for-a-small-bathroom/",
+      "status": 200,
+      "title": "How Much Paint Do I Need for a Small Bathroom",
+      "h1": 1,
+      "h2": 14
     },
     {
       "path": "/how-much-potting-soil-for-a-raised-bed/",
       "status": 200,
       "title": "How Much Potting Soil for a Raised Bed",
       "h1": 1,
-      "h2": 13
-    },
-    {
-      "path": "/how-much-scotts-starter-fertilizer-per-1000-sq-ft/",
-      "status": 200,
-      "title": "How Much Scotts Starter Fertilizer Per 1000 SQ FT",
-      "h1": 1,
-      "h2": 12
+      "h2": 15
     },
     {
       "path": "/how-much-soil-do-i-need-for-a-raised-bed/",
       "status": 200,
       "title": "How Much Soil Do I Need for a Raised Bed",
       "h1": 1,
-      "h2": 13
-    },
-    {
-      "path": "/how-much-soil-do-you-need-for-a-raised-bed/",
-      "status": 200,
-      "title": "How Much Soil for a Raised Bed? Bags and Yards",
-      "h1": 1,
-      "h2": 14
+      "h2": 15
     },
     {
       "path": "/how-much-soil-for-a-4x2x1-raised-garden-bed/",
       "status": 200,
       "title": "How Much Soil for a 4x2x1 Raised Garden Bed",
       "h1": 1,
-      "h2": 12
+      "h2": 14
     },
     {
       "path": "/how-much-soil-for-a-4x8-raised-bed/",
       "status": 200,
-      "title": "How Much Soil for a 4x8 Raised Bed: Free Calculator & Guide",
-      "h1": 1,
-      "h2": 12
-    },
-    {
-      "path": "/how-much-soil-for-a-8x4x1-raised-bed/",
-      "status": 200,
-      "title": "How Much Soil for a 8x4x1 Raised Bed",
-      "h1": 1,
-      "h2": 12
-    },
-    {
-      "path": "/how-much-soil-for-a-raised-bed-calculator/",
-      "status": 200,
-      "title": "How Much Soil for a Raised Bed Calculator",
-      "h1": 1,
-      "h2": 13
-    },
-    {
-      "path": "/how-much-soil-for-a-raised-garden-bed/",
-      "status": 200,
-      "title": "How Much Soil for a Raised Garden Bed",
-      "h1": 1,
-      "h2": 13
-    },
-    {
-      "path": "/how-much-soil-for-raised-bed-calculator-uk/",
-      "status": 200,
-      "title": "How Much Soil for Raised Bed Calculator Uk",
+      "title": "How Much Soil for a 4x8 Raised Bed: Calculator",
       "h1": 1,
       "h2": 14
     },
     {
       "path": "/how-much-starter-fertilizer-per-1000-sq-ft/",
       "status": 200,
-      "title": "How Much Starter Fertilizer Per 1000 SQ FT",
+      "title": "How Much Starter Fertilizer per 1,000 Sq Ft?",
       "h1": 1,
-      "h2": 12
+      "h2": 14
     },
     {
       "path": "/how-much-topsoil-do-i-need-for-a-garden-bed/",
       "status": 200,
       "title": "How Much Topsoil Do I Need for a Garden Bed",
       "h1": 1,
-      "h2": 13
-    },
-    {
-      "path": "/how-much-topsoil-do-i-need-for-a-lawn/",
-      "status": 200,
-      "title": "How Much Topsoil Do I Need for a Lawn",
-      "h1": 1,
-      "h2": 10
+      "h2": 15
     },
     {
       "path": "/how-much-topsoil-do-i-need-for-a-new-lawn/",
       "status": 200,
       "title": "How Much Topsoil Do I Need for a New Lawn",
       "h1": 1,
-      "h2": 12
+      "h2": 14
     },
     {
       "path": "/how-much-topsoil-do-i-need-for-my-raised-garden-bed/",
       "status": 200,
       "title": "How Much Topsoil Do I Need for My Raised Garden Bed",
       "h1": 1,
-      "h2": 12
-    },
-    {
-      "path": "/how-much-topsoil-for-raised-garden-bed-calculator/",
-      "status": 200,
-      "title": "How Much Topsoil for Raised Garden Bed Calculator",
-      "h1": 1,
-      "h2": 11
+      "h2": 14
     },
     {
       "path": "/how-to-calculate-how-much-soil-for-raised-bed/",
       "status": 200,
       "title": "How to Calculate How Much Soil for Raised Bed",
       "h1": 1,
-      "h2": 12
+      "h2": 14
     },
     {
       "path": "/mulch-calculator/",
       "status": 200,
       "title": "Mulch Calculator: How Much Mulch Do You Need?",
       "h1": 1,
-      "h2": 16
+      "h2": 18
+    },
+    {
+      "path": "/mulch-coverage-chart/",
+      "status": 200,
+      "title": "Mulch Coverage Chart: Bags & Yards by Area and Depth",
+      "h1": 1,
+      "h2": 5
+    },
+    {
+      "path": "/new-lawn-planner/",
+      "status": 200,
+      "title": "New Lawn Planner: Topsoil, Seed & Fertilizer",
+      "h1": 1,
+      "h2": 6
     },
     {
       "path": "/paint-calculator/",
       "status": 200,
       "title": "Paint Calculator: How Much Paint Do You Need?",
       "h1": 1,
-      "h2": 16
+      "h2": 18
+    },
+    {
+      "path": "/paint-coverage-chart/",
+      "status": 200,
+      "title": "Paint Coverage Chart: Gallons per Room, 1 or 2 Coats",
+      "h1": 1,
+      "h2": 5
+    },
+    {
+      "path": "/patio-base-planner/",
+      "status": 200,
+      "title": "Patio Base Planner: Gravel, Sand & Paver Count",
+      "h1": 1,
+      "h2": 6
     },
     {
       "path": "/privacy-policy/",
@@ -650,7 +650,35 @@
       "status": 200,
       "title": "Raised Bed Soil Calculator: How Much Soil You Need",
       "h1": 1,
-      "h2": 16
+      "h2": 18
+    },
+    {
+      "path": "/raised-bed-soil-chart/",
+      "status": 200,
+      "title": "Raised Bed Soil Chart: Bags & Yards by Bed Size",
+      "h1": 1,
+      "h2": 5
+    },
+    {
+      "path": "/raised-garden-bed-planner/",
+      "status": 200,
+      "title": "Raised Garden Bed Planner: Soil, Mulch & Gravel",
+      "h1": 1,
+      "h2": 6
+    },
+    {
+      "path": "/sitemap/",
+      "status": 200,
+      "title": "Sitemap | GardenCalc",
+      "h1": 1,
+      "h2": 17
+    },
+    {
+      "path": "/spring-garden-bed-checklist/",
+      "status": 200,
+      "title": "Spring Garden Bed Checklist: What to Do First",
+      "h1": 1,
+      "h2": 12
     },
     {
       "path": "/terms/",
@@ -664,17 +692,42 @@
       "status": 200,
       "title": "Tile Calculator: How Many Tiles Do You Need?",
       "h1": 1,
-      "h2": 16
+      "h2": 18
+    },
+    {
+      "path": "/tile-quantity-chart/",
+      "status": 200,
+      "title": "Tile Quantity Chart: How Many Tiles by Room and Size",
+      "h1": 1,
+      "h2": 5
     },
     {
       "path": "/topsoil-calculator/",
       "status": 200,
       "title": "How Much Topsoil Do I Need: Free Calculator & Guide",
       "h1": 1,
-      "h2": 11
+      "h2": 13
+    },
+    {
+      "path": "/when-to-mulch/",
+      "status": 200,
+      "title": "When to Mulch: The Best Time of Year for Beds",
+      "h1": 1,
+      "h2": 12
+    },
+    {
+      "path": "/when-to-overseed-a-lawn/",
+      "status": 200,
+      "title": "When to Overseed a Lawn: Best Time and Seed Rate",
+      "h1": 1,
+      "h2": 12
     }
   ],
-  "problems": {},
+  "problems": {
+    "/category/gravel/": [
+      "broken link -> /gardencalc/how-much-gravel-do-i-need-for-a-10x12-shed/ (HTTP 503)"
+    ]
+  },
   "checks": [
     {
       "check": "homepage HTTP 200",
@@ -685,7 +738,7 @@
     {
       "check": "sitemap is valid XML",
       "ok": true,
-      "detail": "96 URLs",
+      "detail": "103 URLs",
       "hard": true
     },
     {
@@ -697,7 +750,7 @@
     {
       "check": "RSS valid",
       "ok": true,
-      "detail": "50 items",
+      "detail": "66 items",
       "hard": true
     },
     {
@@ -714,7 +767,7 @@
     },
     {
       "check": "calculator form and script present",
-      "ok": true,
+      "ok": false,
       "detail": "mulch-calculator",
       "hard": true
     },
@@ -727,13 +780,13 @@
     {
       "check": "all pages return HTTP 200",
       "ok": true,
-      "detail": "96/96 OK",
+      "detail": "103/103 OK",
       "hard": true
     },
     {
       "check": "no broken internal links",
-      "ok": true,
-      "detail": "",
+      "ok": false,
+      "detail": "/category/gravel/: broken link -> /gardencalc/how-much-gravel-do-i-need-for-a-10x12-shed/ (HTTP 503)",
       "hard": true
     },
     {
@@ -762,8 +815,8 @@
     },
     {
       "check": "no per-page SEO problems",
-      "ok": true,
-      "detail": "",
+      "ok": false,
+      "detail": "/category/gravel/: broken link -> /gardencalc/how-much-gravel-do-i-need-for-a-10x12-shed/ (HTTP 503)",
       "hard": true
     }
   ]

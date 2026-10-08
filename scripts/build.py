@@ -666,15 +666,12 @@ def build() -> dict:
     # --- redirect stubs for merged pages (kept alive, canonical to the target) ---
     for st in merges.stubs(arts) + merges.rename_stubs(arts):
         target_url = _abs(site, f"/{st['target']}/")
-        sctx = common(title=f"{st['old_title']} (Moved) | {site['name']}",
+        sctx = common(title=st["old_title"],
                       description=f"This page has moved to {st['target_title']}.",
-                      canonical=target_url)
+                      canonical=target_url, robots="noindex, follow")
         sctx.update(page={"title": "This page has moved"},
                     target_url=target_url, target_title=st["target_title"])
         html = env.get_template("redirect.html").render(**sctx)
-        html = html.replace(
-            "<head>",
-            f'<head>\n<meta http-equiv="refresh" content="0; url={target_url}">', 1)
         _write(SITE / st["slug"] / "index.html", html)
 
     # --- chart pages (linkable, formula-derived reference tables) ---
