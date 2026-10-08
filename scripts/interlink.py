@@ -78,12 +78,50 @@ def link_all(arts: list[dict]) -> list[dict]:
     # are still excluded as link *targets* (see _published) and are never rendered.
     for art in arts:
         art["internal_links"] = build_for(art, arts)
+    _repair_orphans(arts)
     graph = {
         a["slug"]: [l["to"] for l in a.get("internal_links", [])]
         for a in arts if a.get("status") != "rejected"
     }
     save_json(DATA / "links.json", {"graph": graph})
     return arts
+
+
+def _repair_orphans(arts: list[dict]) -> None:
+    """Guarantee every published article has at least one inbound internal link.
+
+    The cluster ring covers clusters with two or more members; a keyword that lands
+    in a cluster of its own (or a brand-new cluster) would otherwise be orphaned and
+    fail the build. Add inbound links from the closest available sources until none
+    remain.
+    """
+    published = _published(arts)
+    if len(published) < 2:
+        return
+    for _ in range(len(published)):
+        inbound = {l["to"] for a in published for l in a.get("internal_links", [])}
+        missing = [a for a in published if a["slug"] not in inbound]
+        if not missing:
+            return
+        for orphan in missing:
+            sources = sorted(
+                (a for a in published if a["slug"] != orphan["slug"]),
+                key=lambda a: (
+                    0 if a.get("cluster") == orphan.get("cluster") else 1,
+                    0 if a.get("is_pillar") else 1,
+                    -a.get("quality", {}).get("score", 0),
+                ),
+            )
+            for src in sources:
+                targets = {l["to"] for l in src.get("internal_links", [])}
+                if orphan["slug"] in targets:
+                    break
+                src.setdefault("internal_links", []).append({
+                    "to": orphan["slug"],
+                    "anchor": _anchor_for(orphan),
+                    "title": orphan["title"],
+                })
+                break
 
 
 def orphans(arts: list[dict]) -> list[str]:
