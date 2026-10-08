@@ -3,6 +3,7 @@
   "use strict";
 
   var TONS_PER_CUYD = 1.4;
+  var BASE = (typeof window !== "undefined" && window.GC_BASE) || "";
 
   var CALCS = {
     mulch: function (v) {
@@ -109,6 +110,30 @@
     heads.forEach(function (h) { obs.observe(h); });
   }
 
+  function initSearch() {
+    var input = document.getElementById("q");
+    var out = document.getElementById("results");
+    if (!input || !out) return;
+    var data = [];
+    fetch(BASE + "/static/search-index.json").then(function (r) { return r.json(); })
+      .then(function (d) { data = d; input.focus(); run(input.value); })
+      .catch(function () { out.innerHTML = "<li>Search index unavailable.</li>"; });
+    var pre = new URLSearchParams(location.search).get("q");
+    if (pre) input.value = pre;
+    function run(q) {
+      q = (q || "").trim().toLowerCase();
+      var hits = !q ? [] : data.filter(function (a) {
+        return (a.t + " " + a.k + " " + a.d + " " + a.c).toLowerCase().indexOf(q) > -1;
+      }).slice(0, 40);
+      out.innerHTML = hits.length ? hits.map(function (a) {
+        return '<li><span><a href="' + BASE + "/" + a.s + '/">' + a.t +
+               '</a><span class="excerpt">' + a.d + '</span></span>' +
+               '<span class="when">' + a.c + '</span></li>';
+      }).join("") : (q ? "<li>No matches. Try 'mulch', 'concrete' or 'seed'.</li>" : "");
+    }
+    input.addEventListener("input", function () { run(input.value); });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     var tog = document.querySelector(".nav-toggle");
     var nav = document.querySelector(".site-nav");
@@ -126,5 +151,6 @@
       run(form);
     });
     initToc();
+    initSearch();
   });
 })();

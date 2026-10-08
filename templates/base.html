@@ -80,6 +80,9 @@
       <a href="{{ base_url }}/category/{{ c.id }}/">{{ c.name }}</a>
       {% endfor %}
     </nav>
+    <form class="site-search" action="{{ base_url }}/search/" role="search">
+      <input type="search" name="q" placeholder="Search…" aria-label="Search calculators and guides">
+    </form>
   </div>
 </header>
 <main id="main">
@@ -114,6 +117,7 @@
     </div>
   </div>
 </footer>
+<script>window.GC_BASE={{ base_url | tojson }};</script>
 <script src="{{ base_url }}/static/js/main.js" defer></script>
 {% block body_extra %}{% endblock %}
 </body>

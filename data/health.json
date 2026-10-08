@@ -1,6 +1,499 @@
 {
-  "pages": 97,
-  "issues_total": 0,
-  "by_type": {},
-  "issues": []
+  "pages": 98,
+  "issues_total": 98,
+  "by_type": {
+    "canonical_mismatch": 98
+  },
+  "issues": [
+    {
+      "type": "canonical_mismatch",
+      "page": "/",
+      "canonical": "http://localhost:8123/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/404.html",
+      "canonical": "http://localhost:8123/404.html"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/about/",
+      "canonical": "http://localhost:8123/about/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/fertilizer-calculator/",
+      "canonical": "http://localhost:8123/fertilizer-calculator/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-many-bags-of-concrete-do-i-need-for-a-12x12-slab/",
+      "canonical": "http://localhost:8123/how-many-bags-of-concrete-do-i-need-for-a-12x12-slab/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-fertilizer-per-1000-sq-ft-calculator/",
+      "canonical": "http://localhost:8123/how-much-fertilizer-per-1000-sq-ft-calculator/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-topsoil-do-i-need-for-a-new-lawn/",
+      "canonical": "http://localhost:8123/how-much-topsoil-do-i-need-for-a-new-lawn/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-many-bags-of-concrete-do-i-need-for-a-20x20-slab/",
+      "canonical": "http://localhost:8123/how-many-bags-of-concrete-do-i-need-for-a-20x20-slab/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-gravel-do-i-need-for-my-driveway/",
+      "canonical": "http://localhost:8123/how-much-gravel-do-i-need-for-my-driveway/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-many-tiles-do-i-need-for-20-square-feet/",
+      "canonical": "http://localhost:8123/how-many-tiles-do-i-need-for-20-square-feet/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-mulch-do-i-need-for-a-flower-bed/",
+      "canonical": "http://localhost:8123/how-much-mulch-do-i-need-for-a-flower-bed/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-soil-for-a-8x4x1-raised-bed/",
+      "canonical": "http://localhost:8123/how-much-soil-for-a-8x4x1-raised-bed/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-paint-do-i-need-for-a-bedroom/",
+      "canonical": "http://localhost:8123/how-much-paint-do-i-need-for-a-bedroom/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-gravel-do-i-need-for-my-walkway/",
+      "canonical": "http://localhost:8123/how-much-gravel-do-i-need-for-my-walkway/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/grass-seed-calculator/",
+      "canonical": "http://localhost:8123/grass-seed-calculator/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-gravel-do-i-need-for-a-french-drain/",
+      "canonical": "http://localhost:8123/how-much-gravel-do-i-need-for-a-french-drain/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-buffalo-grass-seed-per-square-foot/",
+      "canonical": "http://localhost:8123/how-much-buffalo-grass-seed-per-square-foot/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/mulch-calculator/",
+      "canonical": "http://localhost:8123/mulch-calculator/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-many-bags-of-concrete-do-i-need-for-a-fence-post/",
+      "canonical": "http://localhost:8123/how-many-bags-of-concrete-do-i-need-for-a-fence-post/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-mulch-do-i-need-for-1000-square-feet/",
+      "canonical": "http://localhost:8123/how-much-mulch-do-i-need-for-1000-square-feet/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-gravel-do-i-need-for-a-driveway/",
+      "canonical": "http://localhost:8123/how-much-gravel-do-i-need-for-a-driveway/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-soil-for-a-raised-garden-bed/",
+      "canonical": "http://localhost:8123/how-much-soil-for-a-raised-garden-bed/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-mulch-do-i-need-for-32-square-feet/",
+      "canonical": "http://localhost:8123/how-much-mulch-do-i-need-for-32-square-feet/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-starter-fertilizer-per-1000-sq-ft/",
+      "canonical": "http://localhost:8123/how-much-starter-fertilizer-per-1000-sq-ft/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-mulch-do-i-need-for-500-sq-ft/",
+      "canonical": "http://localhost:8123/how-much-mulch-do-i-need-for-500-sq-ft/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-soil-for-a-raised-bed-calculator/",
+      "canonical": "http://localhost:8123/how-much-soil-for-a-raised-bed-calculator/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-mulch-do-i-need-for-200-square-feet/",
+      "canonical": "http://localhost:8123/how-much-mulch-do-i-need-for-200-square-feet/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-topsoil-do-i-need-for-a-lawn/",
+      "canonical": "http://localhost:8123/how-much-topsoil-do-i-need-for-a-lawn/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-many-bags-of-concrete-do-i-need-for-a-10x12-slab/",
+      "canonical": "http://localhost:8123/how-many-bags-of-concrete-do-i-need-for-a-10x12-slab/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-many-tiles-do-i-need-for-a-4x4-room/",
+      "canonical": "http://localhost:8123/how-many-tiles-do-i-need-for-a-4x4-room/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-paint-do-i-need-for-a-front-door/",
+      "canonical": "http://localhost:8123/how-much-paint-do-i-need-for-a-front-door/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-grass-seed-needed-per-square-foot/",
+      "canonical": "http://localhost:8123/how-much-grass-seed-needed-per-square-foot/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-mulch-do-i-need-for-my-flower-bed/",
+      "canonical": "http://localhost:8123/how-much-mulch-do-i-need-for-my-flower-bed/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-many-bags-of-concrete-do-i-need-for-a-4-x8-slab/",
+      "canonical": "http://localhost:8123/how-many-bags-of-concrete-do-i-need-for-a-4-x8-slab/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-soil-for-a-4x8-raised-bed/",
+      "canonical": "http://localhost:8123/how-much-soil-for-a-4x8-raised-bed/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-paint-do-i-need-for-a-door/",
+      "canonical": "http://localhost:8123/how-much-paint-do-i-need-for-a-door/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/paint-calculator/",
+      "canonical": "http://localhost:8123/paint-calculator/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-mulch-do-i-need-for-400-square-feet/",
+      "canonical": "http://localhost:8123/how-much-mulch-do-i-need-for-400-square-feet/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-topsoil-for-raised-garden-bed-calculator/",
+      "canonical": "http://localhost:8123/how-much-topsoil-for-raised-garden-bed-calculator/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-potting-soil-for-a-raised-bed/",
+      "canonical": "http://localhost:8123/how-much-potting-soil-for-a-raised-bed/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/gravel-calculator/",
+      "canonical": "http://localhost:8123/gravel-calculator/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-soil-for-raised-bed-calculator-uk/",
+      "canonical": "http://localhost:8123/how-much-soil-for-raised-bed-calculator-uk/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-paint-do-i-need-for-a-room/",
+      "canonical": "http://localhost:8123/how-much-paint-do-i-need-for-a-room/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/privacy-policy/",
+      "canonical": "http://localhost:8123/privacy-policy/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-gravel-do-i-need-for-a-20x20-area/",
+      "canonical": "http://localhost:8123/how-much-gravel-do-i-need-for-a-20x20-area/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-gravel-do-i-need-per-square-metre/",
+      "canonical": "http://localhost:8123/how-much-gravel-do-i-need-per-square-metre/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-topsoil-do-i-need-for-a-garden-bed/",
+      "canonical": "http://localhost:8123/how-much-topsoil-do-i-need-for-a-garden-bed/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/tile-calculator/",
+      "canonical": "http://localhost:8123/tile-calculator/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-soil-do-i-need-for-a-raised-bed/",
+      "canonical": "http://localhost:8123/how-much-soil-do-i-need-for-a-raised-bed/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-gravel-do-i-need-for-a-10x10-patio/",
+      "canonical": "http://localhost:8123/how-much-gravel-do-i-need-for-a-10x10-patio/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/contact/",
+      "canonical": "http://localhost:8123/contact/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-many-bags-of-concrete-do-i-need-for-a-4x4-slab/",
+      "canonical": "http://localhost:8123/how-many-bags-of-concrete-do-i-need-for-a-4x4-slab/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-to-calculate-how-much-soil-for-raised-bed/",
+      "canonical": "http://localhost:8123/how-to-calculate-how-much-soil-for-raised-bed/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-scotts-starter-fertilizer-per-1000-sq-ft/",
+      "canonical": "http://localhost:8123/how-much-scotts-starter-fertilizer-per-1000-sq-ft/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/search/",
+      "canonical": "http://localhost:8123/search/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/concrete-calculator/",
+      "canonical": "http://localhost:8123/concrete-calculator/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-soil-do-you-need-for-a-raised-bed/",
+      "canonical": "http://localhost:8123/how-much-soil-do-you-need-for-a-raised-bed/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-nitrogen-fertilizer-per-1000-sq-ft/",
+      "canonical": "http://localhost:8123/how-much-nitrogen-fertilizer-per-1000-sq-ft/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-paint-do-i-need-for-a-12x16-shed/",
+      "canonical": "http://localhost:8123/how-much-paint-do-i-need-for-a-12x16-shed/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-topsoil-do-i-need-for-my-raised-garden-bed/",
+      "canonical": "http://localhost:8123/how-much-topsoil-do-i-need-for-my-raised-garden-bed/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-many-tiles-do-i-need-for-my-room/",
+      "canonical": "http://localhost:8123/how-many-tiles-do-i-need-for-my-room/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-bermuda-grass-seed-per-1000-square-feet/",
+      "canonical": "http://localhost:8123/how-much-bermuda-grass-seed-per-1000-square-feet/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-grass-seed-per-square-foot-canada/",
+      "canonical": "http://localhost:8123/how-much-grass-seed-per-square-foot-canada/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-soil-for-a-4x2x1-raised-garden-bed/",
+      "canonical": "http://localhost:8123/how-much-soil-for-a-4x2x1-raised-garden-bed/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-mulch-do-i-need-for-600-square-feet/",
+      "canonical": "http://localhost:8123/how-much-mulch-do-i-need-for-600-square-feet/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/disclaimer/",
+      "canonical": "http://localhost:8123/disclaimer/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-paint-do-i-need-for-a-10x10-room/",
+      "canonical": "http://localhost:8123/how-much-paint-do-i-need-for-a-10x10-room/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-grass-seed-per-square-foot-for-new-lawn/",
+      "canonical": "http://localhost:8123/how-much-grass-seed-per-square-foot-for-new-lawn/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-many-bags-of-concrete-do-i-need-for-a-8x8-slab/",
+      "canonical": "http://localhost:8123/how-many-bags-of-concrete-do-i-need-for-a-8x8-slab/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-gravel-do-i-need-for-a-10x12-shed/",
+      "canonical": "http://localhost:8123/how-much-gravel-do-i-need-for-a-10x12-shed/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-grass-seed-per-square-foot-calculator/",
+      "canonical": "http://localhost:8123/how-much-grass-seed-per-square-foot-calculator/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/topsoil-calculator/",
+      "canonical": "http://localhost:8123/topsoil-calculator/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-liquid-fertilizer-per-1000-sq-ft/",
+      "canonical": "http://localhost:8123/how-much-liquid-fertilizer-per-1000-sq-ft/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-many-tiles-do-i-need-for-120-square-feet/",
+      "canonical": "http://localhost:8123/how-many-tiles-do-i-need-for-120-square-feet/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-paint-do-i-need-for-1800-sq-ft-house/",
+      "canonical": "http://localhost:8123/how-much-paint-do-i-need-for-1800-sq-ft-house/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-many-bags-of-concrete-do-i-need-for-a-10x10-slab/",
+      "canonical": "http://localhost:8123/how-many-bags-of-concrete-do-i-need-for-a-10x10-slab/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-mulch-do-i-need-for-300-square-feet/",
+      "canonical": "http://localhost:8123/how-much-mulch-do-i-need-for-300-square-feet/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/terms/",
+      "canonical": "http://localhost:8123/terms/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-paint-do-i-need-calculator-sq-ft/",
+      "canonical": "http://localhost:8123/how-much-paint-do-i-need-calculator-sq-ft/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-many-tiles-do-i-need-for-my-floor/",
+      "canonical": "http://localhost:8123/how-many-tiles-do-i-need-for-my-floor/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-paint-do-i-need-for-a-12x12-room/",
+      "canonical": "http://localhost:8123/how-much-paint-do-i-need-for-a-12x12-room/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/raised-bed-soil-calculator/",
+      "canonical": "http://localhost:8123/raised-bed-soil-calculator/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-bermuda-grass-seed-per-square-foot/",
+      "canonical": "http://localhost:8123/how-much-bermuda-grass-seed-per-square-foot/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-many-tiles-do-i-need-for-a-10x10-room/",
+      "canonical": "http://localhost:8123/how-many-tiles-do-i-need-for-a-10x10-room/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-many-tiles-do-i-need-for-my-bathroom/",
+      "canonical": "http://localhost:8123/how-many-tiles-do-i-need-for-my-bathroom/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-grass-seed-do-i-need-per-square-foot/",
+      "canonical": "http://localhost:8123/how-much-grass-seed-do-i-need-per-square-foot/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-much-grass-seed-per-square-foot-overseeding/",
+      "canonical": "http://localhost:8123/how-much-grass-seed-per-square-foot-overseeding/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-many-tiles-do-i-need-for-100-square-feet/",
+      "canonical": "http://localhost:8123/how-many-tiles-do-i-need-for-100-square-feet/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/how-many-pounds-of-fertilizer-per-1000-sq-ft/",
+      "canonical": "http://localhost:8123/how-many-pounds-of-fertilizer-per-1000-sq-ft/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/category/gravel/",
+      "canonical": "http://localhost:8123/category/gravel/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/category/grass-seed/",
+      "canonical": "http://localhost:8123/category/grass-seed/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/category/soil/",
+      "canonical": "http://localhost:8123/category/soil/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/category/concrete/",
+      "canonical": "http://localhost:8123/category/concrete/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/category/fertilizer/",
+      "canonical": "http://localhost:8123/category/fertilizer/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/category/paint/",
+      "canonical": "http://localhost:8123/category/paint/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/category/mulch/",
+      "canonical": "http://localhost:8123/category/mulch/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/category/tile/",
+      "canonical": "http://localhost:8123/category/tile/"
+    },
+    {
+      "type": "canonical_mismatch",
+      "page": "/category/topsoil/",
+      "canonical": "http://localhost:8123/category/topsoil/"
+    }
+  ]
 }

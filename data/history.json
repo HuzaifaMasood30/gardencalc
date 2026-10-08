@@ -762,7 +762,7 @@
   {
     "date": "2026-10-08",
     "articles": 81,
-    "avg_seo_score": 98.2,
+    "avg_seo_score": 100.0,
     "total_words": 68223,
     "per_article": [
       {
@@ -1135,13 +1135,13 @@
       },
       {
         "slug": "topsoil-calculator",
-        "score": 88.9,
+        "score": 100.0,
         "checks": {
           "title": true,
           "meta": true,
           "slug": true,
           "h1_once": true,
-          "has_faq": false,
+          "has_faq": true,
           "schema": true,
           "links": true,
           "word_count": true,
@@ -1151,13 +1151,13 @@
       },
       {
         "slug": "fertilizer-calculator",
-        "score": 88.9,
+        "score": 100.0,
         "checks": {
           "title": true,
           "meta": true,
           "slug": true,
           "h1_once": true,
-          "has_faq": false,
+          "has_faq": true,
           "schema": true,
           "links": true,
           "word_count": true,
@@ -1343,13 +1343,13 @@
       },
       {
         "slug": "how-much-fertilizer-per-1000-sq-ft-calculator",
-        "score": 88.9,
+        "score": 100.0,
         "checks": {
           "title": true,
           "meta": true,
           "slug": true,
           "h1_once": true,
-          "has_faq": false,
+          "has_faq": true,
           "schema": true,
           "links": true,
           "word_count": true,
@@ -1471,13 +1471,13 @@
       },
       {
         "slug": "how-much-liquid-fertilizer-per-1000-sq-ft",
-        "score": 88.9,
+        "score": 100.0,
         "checks": {
           "title": true,
           "meta": true,
           "slug": true,
           "h1_once": true,
-          "has_faq": false,
+          "has_faq": true,
           "schema": true,
           "links": true,
           "word_count": true,
@@ -1503,13 +1503,13 @@
       },
       {
         "slug": "how-much-topsoil-do-i-need-for-a-lawn",
-        "score": 88.9,
+        "score": 100.0,
         "checks": {
           "title": true,
           "meta": true,
           "slug": true,
           "h1_once": true,
-          "has_faq": false,
+          "has_faq": true,
           "schema": true,
           "links": true,
           "word_count": true,
@@ -1583,13 +1583,13 @@
       },
       {
         "slug": "how-much-nitrogen-fertilizer-per-1000-sq-ft",
-        "score": 88.9,
+        "score": 100.0,
         "checks": {
           "title": true,
           "meta": true,
           "slug": true,
           "h1_once": true,
-          "has_faq": false,
+          "has_faq": true,
           "schema": true,
           "links": true,
           "word_count": true,
@@ -1615,13 +1615,13 @@
       },
       {
         "slug": "how-much-topsoil-do-i-need-for-a-new-lawn",
-        "score": 88.9,
+        "score": 100.0,
         "checks": {
           "title": true,
           "meta": true,
           "slug": true,
           "h1_once": true,
-          "has_faq": false,
+          "has_faq": true,
           "schema": true,
           "links": true,
           "word_count": true,
@@ -1727,13 +1727,13 @@
       },
       {
         "slug": "how-much-starter-fertilizer-per-1000-sq-ft",
-        "score": 88.9,
+        "score": 100.0,
         "checks": {
           "title": true,
           "meta": true,
           "slug": true,
           "h1_once": true,
-          "has_faq": false,
+          "has_faq": true,
           "schema": true,
           "links": true,
           "word_count": true,
@@ -1759,13 +1759,13 @@
       },
       {
         "slug": "how-much-topsoil-do-i-need-for-a-garden-bed",
-        "score": 88.9,
+        "score": 100.0,
         "checks": {
           "title": true,
           "meta": true,
           "slug": true,
           "h1_once": true,
-          "has_faq": false,
+          "has_faq": true,
           "schema": true,
           "links": true,
           "word_count": true,
@@ -1855,13 +1855,13 @@
       },
       {
         "slug": "how-much-scotts-starter-fertilizer-per-1000-sq-ft",
-        "score": 88.9,
+        "score": 100.0,
         "checks": {
           "title": true,
           "meta": true,
           "slug": true,
           "h1_once": true,
-          "has_faq": false,
+          "has_faq": true,
           "schema": true,
           "links": true,
           "word_count": true,
@@ -1887,13 +1887,13 @@
       },
       {
         "slug": "how-much-topsoil-do-i-need-for-my-raised-garden-bed",
-        "score": 88.9,
+        "score": 100.0,
         "checks": {
           "title": true,
           "meta": true,
           "slug": true,
           "h1_once": true,
-          "has_faq": false,
+          "has_faq": true,
           "schema": true,
           "links": true,
           "word_count": true,
@@ -1999,13 +1999,13 @@
       },
       {
         "slug": "how-many-pounds-of-fertilizer-per-1000-sq-ft",
-        "score": 88.9,
+        "score": 100.0,
         "checks": {
           "title": true,
           "meta": true,
           "slug": true,
           "h1_once": true,
-          "has_faq": false,
+          "has_faq": true,
           "schema": true,
           "links": true,
           "word_count": true,
@@ -2047,13 +2047,13 @@
       },
       {
         "slug": "how-much-topsoil-for-raised-garden-bed-calculator",
-        "score": 88.9,
+        "score": 100.0,
         "checks": {
           "title": true,
           "meta": true,
           "slug": true,
           "h1_once": true,
-          "has_faq": false,
+          "has_faq": true,
           "schema": true,
           "links": true,
           "word_count": true,

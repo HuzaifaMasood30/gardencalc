@@ -251,6 +251,20 @@ def build() -> dict:
         ctx.update(page={"title": title, "html": mdrender.render(body)})
         _write(SITE / slug / "index.html", env.get_template("page.html").render(**ctx))
 
+    # --- search (client-side; backs the WebSite SearchAction) ---
+    search_index = [{"t": a["title"], "s": a["slug"], "k": a.get("primary_keyword", ""),
+                     "c": cat_map.get(a.get("cluster", ""), {}).get("name", ""),
+                     "d": a.get("meta_description", "")} for a in published]
+    ctx = common(title=f"Search | {site['name']}",
+                 description="Search GardenCalc's mulch, soil, gravel and other calculators.",
+                 canonical=_abs(site, "/search/"), robots="noindex, follow")
+    ctx.update(page={"title": "Search calculators & guides",
+                     "html": '<div id="search-ui"><input type="search" id="q" '
+                             'placeholder="Search calculators and guides…" aria-label="Search">'
+                             '<ul id="results" class="post-list"></ul></div>',
+                     "search": True})
+    _write(SITE / "search" / "index.html", env.get_template("page.html").render(**ctx))
+
     # --- 404 ---
     ctx = common(title=f"Page not found | {site['name']}",
                  description="The page you requested was not found.",
@@ -267,6 +281,7 @@ def build() -> dict:
 
     # Generate original figures into the copied static dir so pages can link them.
     img_stats = images.generate(published, static_dest)
+    _write(static_dest / "search-index.json", json.dumps(search_index, ensure_ascii=False))
 
     # --- sitemap, robots, rss, CNAME ---
     urls = [{"loc": "/", "priority": "1.0", "lastmod": dt.date.today().isoformat(),
