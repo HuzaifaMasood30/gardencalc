@@ -51,6 +51,8 @@
   <p class="chart-cta">
     Need an exact figure for your own measurements? Use the
     <a href="{{ chart.related.calculator }}">calculator</a>, which shows the formula it used.
+    {% if cluster_planner %} Planning the whole job?
+    <a href="{{ base_url }}/{{ cluster_planner.slug }}/">{{ cluster_planner.title }}</a> turns these numbers into one shopping list.{% endif %}
   </p>
 
   <div class="print-actions">

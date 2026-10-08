@@ -42,5 +42,21 @@
   <div class="section-head"><h2 id="charts-h">Coverage &amp; reference charts</h2></div>
   {% include "charts_list.html" %}
 </section>
+
+{% if seasonal_cards %}
+<section class="section" aria-labelledby="seasonal-h">
+  <div class="section-head"><h2 id="seasonal-h">Seasonal guides</h2>
+    <p>Evergreen timing guides, updated each year.</p></div>
+  <div class="card-grid">
+    {% for s in seasonal_cards %}
+    <a class="card" href="{{ base_url }}/{{ s.slug }}/">
+      <span class="card-tag">{{ s.cluster_name }}</span>
+      <h3>{{ s.title }}</h3>
+      <p>{{ s.description }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
 </div>
 {% endblock %}

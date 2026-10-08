@@ -87,6 +87,20 @@
   {% include "charts_list.html" %}
 </section>
 
+<section class="section" aria-labelledby="seasonal-heading">
+  <div class="section-head"><h2 id="seasonal-heading">Seasonal guides</h2>
+    <p>Timing guides for the right time of year, updated each season.</p></div>
+  <div class="card-grid">
+    {% for s in seasonal_cards %}
+    <a class="card" href="{{ base_url }}/{{ s.slug }}/">
+      <span class="card-tag">{{ s.cluster_name }}</span>
+      <h3>{{ s.title }}</h3>
+      <p>{{ s.description }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
 <section class="section" aria-labelledby="latest-heading" id="latest">
   <div class="section-head"><h2 id="latest-heading">Latest guides</h2></div>
   <ul class="post-list">

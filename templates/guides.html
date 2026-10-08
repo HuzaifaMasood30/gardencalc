@@ -30,5 +30,20 @@
 </section>
 {% endfor %}
 </div>
+
+{% if seasonal_cards %}
+<section class="section" aria-labelledby="gg-seasonal">
+  <div class="section-head"><h2 id="gg-seasonal">Seasonal timing guides</h2></div>
+  <ul class="post-list">
+    {% for s in seasonal_cards %}
+    <li data-guide>
+      <span><a href="{{ base_url }}/{{ s.slug }}/">{{ s.title }}</a>
+        <span class="excerpt">{{ s.description }}</span></span>
+      <span class="when">{{ s.cluster_name }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
 </div>
 {% endblock %}

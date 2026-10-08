@@ -13,6 +13,7 @@ import charts
 import images
 import mdrender
 import planners
+import seasonal
 import seo as seolib
 from common import (CONFIG, CONTENT, DATA, SITE, STATIC, TEMPLATES, load_json,
                     save_json, seo_config, site_config, topics_config)
@@ -193,6 +194,12 @@ def build() -> dict:
     planner_cards = [{"slug": pl["slug"], "title": pl["title"], "description": pl["description"],
                       "cluster_name": cat_map.get(pl["cluster"], {}).get("name", pl["cluster"].title())}
                      for pl in planners.PLANNERS]
+    seasonal_cards = [{"slug": it["slug"], "title": it["title"], "description": it["description"],
+                       "cluster_name": cat_map.get(it["cluster"], {}).get("name", it["cluster"].title())}
+                      for it in seasonal.SEASONAL]
+    chart_by_cluster = {ch["cluster"]: {"slug": ch["slug"], "title": ch["title"]} for ch in charts.CHARTS}
+    planner_by_cluster = {pl["cluster"]: {"slug": pl["slug"], "title": pl["title"]} for pl in planners.PLANNERS}
+    seasonal_by_cluster = {it["cluster"]: {"slug": it["slug"], "title": it["title"]} for it in seasonal.SEASONAL}
 
     # --- articles ---
     for art in published:
@@ -213,6 +220,12 @@ def build() -> dict:
         prev_art = cl[pos - 1] if pos > 0 else None
         next_art = cl[pos + 1] if pos + 1 < len(cl) else None
         related = [_card_meta(site, a, category_name) for a in sib[:3]]
+
+        # Link the article to its own coverage chart and project planner (where they exist)
+        # so crawl equity flows both ways and readers find the printable/reference view.
+        cluster_chart = chart_by_cluster.get(art.get("cluster", ""))
+        cluster_planner = planner_by_cluster.get(art.get("cluster", ""))
+        cluster_seasonal = seasonal_by_cluster.get(art.get("cluster", ""))
 
         # "Plan the whole project": link to the pillar calculator of the usual follow-up
         # clusters, so crawl equity moves between categories and users find the next step.
@@ -244,6 +257,8 @@ def build() -> dict:
                    calc=calc_ctx, faq=faq_items, answer_first=answer_first,
                    category_name=category_name, reading_time=_reading_time(art.get("word_count", 0)),
                    related=related, project_links=project_links,
+                   cluster_chart=cluster_chart, cluster_planner=cluster_planner,
+                   cluster_seasonal=cluster_seasonal,
                    pager={"prev": {"slug": prev_art["slug"], "title": prev_art["title"]} if prev_art else None,
                           "next": {"slug": next_art["slug"], "title": next_art["title"]} if next_art else None})
         _write(SITE / art["slug"] / "index.html",
@@ -277,7 +292,7 @@ def build() -> dict:
     ctx.update(categories=categories, articles=published[:12],
                article_count=len(published), category_count=len(categories),
                chart_count=len(charts.CHARTS), chart_cards=chart_cards,
-               planner_cards=planner_cards,
+               planner_cards=planner_cards, seasonal_cards=seasonal_cards,
                pillar_cards=[_card_meta(site, a) for a in pillars])
     _write(SITE / "index.html", env.get_template("index.html").render(**ctx))
 
@@ -352,7 +367,8 @@ def build() -> dict:
                                    ensure_ascii=False)])
         cctx.update(chart=cp, cluster_name=cluster_name,
                     answer=ch["faqs"][0][1] if ch.get("faqs") else ch["description"],
-                    pin_image=_abs(site, f"/static/img/pins/{ch['slug']}.png"))
+                    pin_image=_abs(site, f"/static/img/pins/{ch['slug']}.png"),
+                    cluster_planner=planner_by_cluster.get(ch["cluster"]))
         _write(SITE / ch["slug"] / "index.html",
                env.get_template("chart.html").render(**cctx))
 
@@ -380,6 +396,30 @@ def build() -> dict:
         _write(SITE / pl["slug"] / "index.html",
                env.get_template("planner.html").render(**pctx))
 
+    # --- seasonal evergreen guides (stable URLs, refreshed dates) ---
+    for item in seasonal.SEASONAL:
+        cluster = cat_map.get(item["cluster"], {})
+        cluster_name = cluster.get("name", item["cluster"].title())
+        sp = seasonal.page(item, base, site)
+        sctx = common(title=item["title"], description=item["description"],
+                      canonical=sp["url"], og_type="article",
+                      og_image=_thumb(site, pillar_by_cluster.get(item["cluster"], published[0])),
+                      keywords=item["keyword"],
+                      schemas=[json.dumps(seolib.breadcrumb_list(
+                                   [("Home", "/"), (cluster_name, f"/category/{item['cluster']}/"),
+                                    (item["title"], f"/{item['slug']}/")], site), ensure_ascii=False),
+                               json.dumps(seolib.webpage_schema(
+                                   item["title"], item["description"], sp["url"], site),
+                                   ensure_ascii=False),
+                               json.dumps(seolib.faq_schema(
+                                   {"faq": [{"q": q, "a": a} for q, a in item["faqs"]]}),
+                                   ensure_ascii=False)])
+        sctx.update(seasonal=sp, cluster_name=cluster_name,
+                    answer=item["faqs"][0][1],
+                    pin_image=_abs(site, f"/static/img/pins/{item['slug']}.png"))
+        _write(SITE / item["slug"] / "index.html",
+               env.get_template("seasonal.html").render(**sctx))
+
     # --- calculators hub ---
     groups = []
     for c in categories:
@@ -393,7 +433,8 @@ def build() -> dict:
                  canonical=_abs(site, "/calculators/"),
                  schemas=[json.dumps(seolib.breadcrumb_list([("Home", "/"), ("Calculators", "/calculators/")], site),
                                      ensure_ascii=False)])
-    ctx.update(groups=groups, chart_cards=chart_cards, planner_cards=planner_cards)
+    ctx.update(groups=groups, chart_cards=chart_cards, planner_cards=planner_cards,
+               seasonal_cards=seasonal_cards)
     _write(SITE / "calculators" / "index.html",
            env.get_template("calculators.html").render(**ctx))
 
@@ -410,7 +451,7 @@ def build() -> dict:
                  canonical=_abs(site, "/guides/"),
                  schemas=[json.dumps(seolib.breadcrumb_list([("Home", "/"), ("Guides", "/guides/")], site),
                                      ensure_ascii=False)])
-    ctx.update(groups=guide_groups)
+    ctx.update(groups=guide_groups, seasonal_cards=seasonal_cards)
     _write(SITE / "guides" / "index.html", env.get_template("guides.html").render(**ctx))
 
     # --- HTML sitemap (human-readable; helps discovery and internal linking) ---
@@ -424,7 +465,8 @@ def build() -> dict:
     ctx.update(groups=guide_groups,
                calculators=[_card_meta(site, a, cat_map.get(a.get("cluster", ""), {}).get("name", ""))
                             for a in published if a.get("is_pillar")],
-               chart_cards=chart_cards, planner_cards=planner_cards, site_pages=site_pages)
+               chart_cards=chart_cards, planner_cards=planner_cards,
+               seasonal_cards=seasonal_cards, site_pages=site_pages)
     _write(SITE / "sitemap" / "index.html", env.get_template("sitemap.html").render(**ctx))
 
     # --- for publishers (indexable; explains how to embed/cite the calculators) ---
@@ -471,6 +513,8 @@ def build() -> dict:
                   "cluster": ch["cluster"]} for ch in charts.CHARTS]
     pin_cards += [{"slug": pl["slug"], "title": pl["title"], "question": pl["question"],
                    "cluster": pl["cluster"]} for pl in planners.PLANNERS]
+    pin_cards += [{"slug": it["slug"], "title": it["title"], "question": it["question"],
+                   "cluster": it["cluster"]} for it in seasonal.SEASONAL]
     pin_stats = images.render_pins(pin_cards, static_dest)
     _write(static_dest / "search-index.json", json.dumps(search_index, ensure_ascii=False))
 
@@ -486,6 +530,7 @@ def build() -> dict:
               "image": _fig(site, a), "image_title": a["title"]} for a in published]
     urls += [{"loc": f"/{ch['slug']}/", "lastmod": today} for ch in charts.CHARTS]
     urls += [{"loc": f"/{pl['slug']}/", "lastmod": today} for pl in planners.PLANNERS]
+    urls += [{"loc": f"/{item['slug']}/", "lastmod": item["updated"]} for item in seasonal.SEASONAL]
     urls += [{"loc": f"/{s}/", "lastmod": today} for s, _, _ in pages]
     urls += [{"loc": p, "lastmod": today} for p in EXTRA_PAGES]
     _write(SITE / "sitemap.xml", seolib.sitemap_xml(urls, site))
@@ -494,6 +539,8 @@ def build() -> dict:
                    "description": ch["description"]} for ch in charts.CHARTS]
     feed_extra += [{"title": pl["title"], "url": _abs(site, f"/{pl['slug']}/"),
                     "description": pl["description"]} for pl in planners.PLANNERS]
+    feed_extra += [{"title": item["title"], "url": _abs(site, f"/{item['slug']}/"),
+                    "description": item["description"]} for item in seasonal.SEASONAL]
     _write(SITE / "rss.xml", seolib.rss_xml(published, site, extra=feed_extra))
     if site.get("custom_domain"):
         _write(SITE / "CNAME", site["custom_domain"] + "\n")

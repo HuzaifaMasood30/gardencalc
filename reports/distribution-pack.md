@@ -37,6 +37,9 @@ Base URL: https://huzaifamasood30.github.io/gardencalc
 - [ ] **Submit the RSS feed to aggregators** — Free redistribution of new posts; can surface them to relevant readers.
   - Open: https://huzaifamasood30.github.io/gardencalc/rss.xml
   - Do: Feed URL: https://huzaifamasood30.github.io/gardencalc/rss.xml
+- [ ] **Share a seasonal timing guide each season** — Timing searches spike every spring/autumn; the evergreen guides are the natural asset to push.
+  - Open: https://huzaifamasood30.github.io/gardencalc/when-to-mulch/
+  - Do: Rotate https://huzaifamasood30.github.io/gardencalc/when-to-mulch/, https://huzaifamasood30.github.io/gardencalc/when-to-overseed-a-lawn/, https://huzaifamasood30.github.io/gardencalc/spring-garden-bed-checklist/ and https://huzaifamasood30.github.io/gardencalc/fall-lawn-fertilizer-timing/ on Pinterest/Threads/X with a UTM link so the traffic is attributable.
 - [ ] **Validate structured data** — Confirms the Article/FAQ/WebApplication/Breadcrumb markup will be eligible for rich results.
   - Open: https://search.google.com/test/rich-results
   - Do: Paste each article URL after deploy and confirm no errors.
@@ -213,7 +216,7 @@ Base URL: https://huzaifamasood30.github.io/gardencalc
 
 ### fertilizer-calculator
 - URL: https://huzaifamasood30.github.io/gardencalc/fertilizer-calculator/
-- Title: How Much Fertilizer Per 1000 SQ FT: Free Calculator & Guide
+- Title: Fertilizer Per 1000 SQ FT: Calculator & Guide
 - Meta: To determine how much fertilizer per 1000 sq ft you need, divide the desired nitrogen rate by the percentage of nitrogen in your bag and multiply by 100.
 - Forum answer: Here's the arithmetic for your job: multiply length x width to get the area, then x depth in feet to get the volume. To determine how much fertilizer per 1000 sq ft you need, divide the desired nitrogen rate by the percentage of nitrogen in your bag and multiply by 100. I wrote the formula and a calculator here: https://huzaifamasood30.github.io/gardencalc/fertilizer-calculator/
 - Outreach pitch: Hi — I built a free how much fertilizer per 1000 sq ft calculator that shows the formula and a worked example rather than just an answer. Might be useful for your readers: https://huzaifamasood30.github.io/gardencalc/fertilizer-calculator/
@@ -227,7 +230,7 @@ Base URL: https://huzaifamasood30.github.io/gardencalc
 
 ### how-much-soil-for-a-4x8-raised-bed
 - URL: https://huzaifamasood30.github.io/gardencalc/how-much-soil-for-a-4x8-raised-bed/
-- Title: How Much Soil for a 4x8 Raised Bed: Free Calculator & Guide
+- Title: How Much Soil for a 4x8 Raised Bed: Calculator
 - Meta: To fill a standard 4x8 raised bed that is 12 inches deep, you need 32 cubic feet of soil. This volume is equivalent to approximately 1.2 cubic yards or 22.
 - Forum answer: Here's the arithmetic for your job: multiply length x width to get the area, then x depth in feet to get the volume. To fill a standard 4x8 raised bed that is 12 inches deep, you need 32 cubic feet of soil. This volume is equivalent to approximately 1.2 cubic yards or 22. I wrote the formula and a calculator here: https://huzaifamasood30.github.io/gardencalc/how-much-soil-for-a-4x8-raised-bed/
 - Outreach pitch: Hi — I built a free how much soil for a 4x8 raised bed calculator that shows the formula and a worked example rather than just an answer. Might be useful for your readers: https://huzaifamasood30.github.io/gardencalc/how-much-soil-for-a-4x8-raised-bed/
@@ -381,7 +384,7 @@ Base URL: https://huzaifamasood30.github.io/gardencalc
 
 ### how-much-paint-do-i-need-for-a-room
 - URL: https://huzaifamasood30.github.io/gardencalc/how-much-paint-do-i-need-for-a-room/
-- Title: How Much Paint Do I Need for a Room: Free Calculator & Guide
+- Title: How Much Paint for a Room: Calculator & Guide
 - Meta: To determine how much paint you need for a room, measure the total surface area of your walls and divide that number by 350, then multiply by the number.
 - Forum answer: Here's the arithmetic for your job: multiply length x width to get the area, then x depth in feet to get the volume. To determine how much paint you need for a room, measure the total surface area of your walls and divide that number by 350, then multiply by the number. I wrote the formula and a calculator here: https://huzaifamasood30.github.io/gardencalc/how-much-paint-do-i-need-for-a-room/
 - Outreach pitch: Hi — I built a free how much paint do i need for a room calculator that shows the formula and a worked example rather than just an answer. Might be useful for your readers: https://huzaifamasood30.github.io/gardencalc/how-much-paint-do-i-need-for-a-room/
@@ -563,7 +566,7 @@ Base URL: https://huzaifamasood30.github.io/gardencalc
 
 ### how-much-paint-do-i-need-for-a-door
 - URL: https://huzaifamasood30.github.io/gardencalc/how-much-paint-do-i-need-for-a-door/
-- Title: How Much Paint Do I Need for a Door: Free Calculator & Guide
+- Title: How Much Paint for a Door: Calculator & Guide
 - Meta: For a standard interior door, you typically need one quart of paint to apply two coats. This amount provides enough coverage for both sides of the door.
 - Forum answer: Here's the arithmetic for your job: multiply length x width to get the area, then x depth in feet to get the volume. For a standard interior door, you typically need one quart of paint to apply two coats. This amount provides enough coverage for both sides of the door. I wrote the formula and a calculator here: https://huzaifamasood30.github.io/gardencalc/how-much-paint-do-i-need-for-a-door/
 - Outreach pitch: Hi — I built a free how much paint do i need for a door calculator that shows the formula and a worked example rather than just an answer. Might be useful for your readers: https://huzaifamasood30.github.io/gardencalc/how-much-paint-do-i-need-for-a-door/
@@ -609,4 +612,116 @@ Base URL: https://huzaifamasood30.github.io/gardencalc
 - Meta: To determine how much topsoil for your raised garden bed calculator, you must multiply the length by the width and the depth of your bed.
 - Forum answer: Here's the arithmetic for your job: multiply length x width to get the area, then x depth in feet to get the volume. To determine how much topsoil for your raised garden bed calculator, you must multiply the length by the width and the depth of your bed. I wrote the formula and a calculator here: https://huzaifamasood30.github.io/gardencalc/how-much-topsoil-for-raised-garden-bed-calculator/
 - Outreach pitch: Hi — I built a free how much topsoil for raised garden bed calculator calculator that shows the formula and a worked example rather than just an answer. Might be useful for your readers: https://huzaifamasood30.github.io/gardencalc/how-much-topsoil-for-raised-garden-bed-calculator/
+
+### mulch-coverage-chart
+- URL: https://huzaifamasood30.github.io/gardencalc/mulch-coverage-chart/
+- Title: Mulch Coverage Chart: Bags & Yards by Area and Depth
+- Meta: How much mulch you need by area and depth: cubic feet, cubic yards and 2 cu ft bags for 100-1,000 sq ft at 2, 3 and 4 inches deep.
+- Forum answer: Here's the arithmetic for your job: multiply length x width to get the area, then x depth in feet to get the volume. How much mulch you need by area and depth: cubic feet, cubic yards and 2 cu ft bags for 100-1,000 sq ft at 2, 3 and 4 inches deep. I put the formula and full reference tables here: https://huzaifamasood30.github.io/gardencalc/mulch-coverage-chart/
+- Outreach pitch: Hi — I built a free mulch coverage chart reference page that shows the formula and worked examples rather than just an answer. Might be useful for your readers: https://huzaifamasood30.github.io/gardencalc/mulch-coverage-chart/
+
+### concrete-bags-by-slab-size-chart
+- URL: https://huzaifamasood30.github.io/gardencalc/concrete-bags-by-slab-size-chart/
+- Title: Concrete Bags by Slab Size Chart (40, 60 & 80 lb)
+- Meta: Bags of concrete for common slab sizes at 4 in thick: 4x4 to 20x20 ft, with cubic feet, yards and 40, 60 and 80 lb bag counts.
+- Forum answer: Here's the arithmetic for your job: multiply length x width to get the area, then x depth in feet to get the volume. Bags of concrete for common slab sizes at 4 in thick: 4x4 to 20x20 ft, with cubic feet, yards and 40, 60 and 80 lb bag counts. I put the formula and full reference tables here: https://huzaifamasood30.github.io/gardencalc/concrete-bags-by-slab-size-chart/
+- Outreach pitch: Hi — I built a free concrete bags per slab size reference page that shows the formula and worked examples rather than just an answer. Might be useful for your readers: https://huzaifamasood30.github.io/gardencalc/concrete-bags-by-slab-size-chart/
+
+### raised-bed-soil-chart
+- URL: https://huzaifamasood30.github.io/gardencalc/raised-bed-soil-chart/
+- Title: Raised Bed Soil Chart: Bags & Yards by Bed Size
+- Meta: Soil needed for raised beds from 4x4 to 4x12 ft at 6 to 12 in deep, in cubic feet, cubic yards and 1.5 cu ft bags.
+- Forum answer: Here's the arithmetic for your job: multiply length x width to get the area, then x depth in feet to get the volume. Soil needed for raised beds from 4x4 to 4x12 ft at 6 to 12 in deep, in cubic feet, cubic yards and 1.5 cu ft bags. I put the formula and full reference tables here: https://huzaifamasood30.github.io/gardencalc/raised-bed-soil-chart/
+- Outreach pitch: Hi — I built a free raised bed soil chart reference page that shows the formula and worked examples rather than just an answer. Might be useful for your readers: https://huzaifamasood30.github.io/gardencalc/raised-bed-soil-chart/
+
+### gravel-coverage-chart
+- URL: https://huzaifamasood30.github.io/gardencalc/gravel-coverage-chart/
+- Title: Gravel Coverage Chart: Yards & Tons by Area and Depth
+- Meta: Gravel needed by area and depth in cubic yards and tons, with light (1.2 t/yd³) and heavy (1.5 t/yd³) weight ranges.
+- Forum answer: Here's the arithmetic for your job: multiply length x width to get the area, then x depth in feet to get the volume. Gravel needed by area and depth in cubic yards and tons, with light (1.2 t/yd³) and heavy (1.5 t/yd³) weight ranges. I put the formula and full reference tables here: https://huzaifamasood30.github.io/gardencalc/gravel-coverage-chart/
+- Outreach pitch: Hi — I built a free gravel coverage chart reference page that shows the formula and worked examples rather than just an answer. Might be useful for your readers: https://huzaifamasood30.github.io/gardencalc/gravel-coverage-chart/
+
+### paint-coverage-chart
+- URL: https://huzaifamasood30.github.io/gardencalc/paint-coverage-chart/
+- Title: Paint Coverage Chart: Gallons per Room, 1 or 2 Coats
+- Meta: Gallons of paint per room size for one and two coats at about 350 sq ft per gallon, deducting a door and two windows.
+- Forum answer: Here's the arithmetic for your job: multiply length x width to get the area, then x depth in feet to get the volume. Gallons of paint per room size for one and two coats at about 350 sq ft per gallon, deducting a door and two windows. I put the formula and full reference tables here: https://huzaifamasood30.github.io/gardencalc/paint-coverage-chart/
+- Outreach pitch: Hi — I built a free paint coverage chart reference page that shows the formula and worked examples rather than just an answer. Might be useful for your readers: https://huzaifamasood30.github.io/gardencalc/paint-coverage-chart/
+
+### tile-quantity-chart
+- URL: https://huzaifamasood30.github.io/gardencalc/tile-quantity-chart/
+- Title: Tile Quantity Chart: How Many Tiles by Room and Size
+- Meta: How many tiles for common rooms and tile sizes, with a 10% waste allowance for cuts and breakage built in.
+- Forum answer: Here's the arithmetic for your job: multiply length x width to get the area, then x depth in feet to get the volume. How many tiles for common rooms and tile sizes, with a 10% waste allowance for cuts and breakage built in. I put the formula and full reference tables here: https://huzaifamasood30.github.io/gardencalc/tile-quantity-chart/
+- Outreach pitch: Hi — I built a free tile quantity chart reference page that shows the formula and worked examples rather than just an answer. Might be useful for your readers: https://huzaifamasood30.github.io/gardencalc/tile-quantity-chart/
+
+### grass-seed-rate-chart
+- URL: https://huzaifamasood30.github.io/gardencalc/grass-seed-rate-chart/
+- Title: Grass Seed Rate Chart: Pounds per 1,000 Sq Ft
+- Meta: Pounds of grass seed for lawns of 1,000 to 10,000 sq ft for new lawns and overseeding, with 3 lb bag counts.
+- Forum answer: Here's the arithmetic for your job: multiply length x width to get the area, then x depth in feet to get the volume. Pounds of grass seed for lawns of 1,000 to 10,000 sq ft for new lawns and overseeding, with 3 lb bag counts. I put the formula and full reference tables here: https://huzaifamasood30.github.io/gardencalc/grass-seed-rate-chart/
+- Outreach pitch: Hi — I built a free grass seed rate chart reference page that shows the formula and worked examples rather than just an answer. Might be useful for your readers: https://huzaifamasood30.github.io/gardencalc/grass-seed-rate-chart/
+
+### fertilizer-rate-chart
+- URL: https://huzaifamasood30.github.io/gardencalc/fertilizer-rate-chart/
+- Title: Fertilizer Rate Chart: Pounds of Fertilizer per 1,000 Sq Ft
+- Meta: Fertilizer needed for lawns of 1,000 to 10,000 sq ft at 0.5 and 1.0 lb of nitrogen per 1,000 sq ft, with 40 lb bag counts.
+- Forum answer: Here's the arithmetic for your job: multiply length x width to get the area, then x depth in feet to get the volume. Fertilizer needed for lawns of 1,000 to 10,000 sq ft at 0.5 and 1.0 lb of nitrogen per 1,000 sq ft, with 40 lb bag counts. I put the formula and full reference tables here: https://huzaifamasood30.github.io/gardencalc/fertilizer-rate-chart/
+- Outreach pitch: Hi — I built a free fertilizer rate chart reference page that shows the formula and worked examples rather than just an answer. Might be useful for your readers: https://huzaifamasood30.github.io/gardencalc/fertilizer-rate-chart/
+
+### new-lawn-planner
+- URL: https://huzaifamasood30.github.io/gardencalc/new-lawn-planner/
+- Title: New Lawn Planner: Topsoil, Seed & Fertilizer
+- Meta: A shopping list for a new lawn: topsoil, grass seed and starter fertilizer for 500-10,000 sq ft, with bags and cubic yards.
+- Forum answer: Here's the arithmetic for your job: multiply length x width to get the area, then x depth in feet to get the volume. A shopping list for a new lawn: topsoil, grass seed and starter fertilizer for 500-10,000 sq ft, with bags and cubic yards. I put the formula and full reference tables here: https://huzaifamasood30.github.io/gardencalc/new-lawn-planner/
+- Outreach pitch: Hi — I built a free garden material reference page that shows the formula and worked examples rather than just an answer. Might be useful for your readers: https://huzaifamasood30.github.io/gardencalc/new-lawn-planner/
+
+### raised-garden-bed-planner
+- URL: https://huzaifamasood30.github.io/gardencalc/raised-garden-bed-planner/
+- Title: Raised Garden Bed Planner: Soil, Mulch & Gravel
+- Meta: A materials list for a raised bed: soil to fill it, mulch to top it off and gravel for drainage, for 4x4, 4x8 and 4x12 beds.
+- Forum answer: Here's the arithmetic for your job: multiply length x width to get the area, then x depth in feet to get the volume. A materials list for a raised bed: soil to fill it, mulch to top it off and gravel for drainage, for 4x4, 4x8 and 4x12 beds. I put the formula and full reference tables here: https://huzaifamasood30.github.io/gardencalc/raised-garden-bed-planner/
+- Outreach pitch: Hi — I built a free garden material reference page that shows the formula and worked examples rather than just an answer. Might be useful for your readers: https://huzaifamasood30.github.io/gardencalc/raised-garden-bed-planner/
+
+### patio-base-planner
+- URL: https://huzaifamasood30.github.io/gardencalc/patio-base-planner/
+- Title: Patio Base Planner: Gravel, Sand & Paver Count
+- Meta: Plan a paver patio base: 4 in of gravel, 1 in of bedding sand and the number of 12x12 pavers for 8x8 to 12x16 ft patios.
+- Forum answer: Here's the arithmetic for your job: multiply length x width to get the area, then x depth in feet to get the volume. Plan a paver patio base: 4 in of gravel, 1 in of bedding sand and the number of 12x12 pavers for 8x8 to 12x16 ft patios. I put the formula and full reference tables here: https://huzaifamasood30.github.io/gardencalc/patio-base-planner/
+- Outreach pitch: Hi — I built a free garden material reference page that shows the formula and worked examples rather than just an answer. Might be useful for your readers: https://huzaifamasood30.github.io/gardencalc/patio-base-planner/
+
+### garden-bed-makeover-planner
+- URL: https://huzaifamasood30.github.io/gardencalc/garden-bed-makeover-planner/
+- Title: Garden Bed Makeover Planner: Soil & Mulch
+- Meta: Refresh a tired bed: how much soil to top up and mulch to cover, in bags, cubic feet and cubic yards for beds up to 6x6 ft.
+- Forum answer: Here's the arithmetic for your job: multiply length x width to get the area, then x depth in feet to get the volume. Refresh a tired bed: how much soil to top up and mulch to cover, in bags, cubic feet and cubic yards for beds up to 6x6 ft. I put the formula and full reference tables here: https://huzaifamasood30.github.io/gardencalc/garden-bed-makeover-planner/
+- Outreach pitch: Hi — I built a free garden material reference page that shows the formula and worked examples rather than just an answer. Might be useful for your readers: https://huzaifamasood30.github.io/gardencalc/garden-bed-makeover-planner/
+
+### when-to-mulch
+- URL: https://huzaifamasood30.github.io/gardencalc/when-to-mulch/
+- Title: When to Mulch: The Best Time of Year for Beds
+- Meta: The best time to mulch is mid-to-late spring once the soil has warmed, with a second pass in autumn. How deep, and what to avoid.
+- Forum answer: Here's the arithmetic for your job: multiply length x width to get the area, then x depth in feet to get the volume. The best time to mulch is mid-to-late spring once the soil has warmed, with a second pass in autumn. How deep, and what to avoid. I put the formula and full reference tables here: https://huzaifamasood30.github.io/gardencalc/when-to-mulch/
+- Outreach pitch: Hi — I built a free when to mulch reference page that shows the formula and worked examples rather than just an answer. Might be useful for your readers: https://huzaifamasood30.github.io/gardencalc/when-to-mulch/
+
+### when-to-overseed-a-lawn
+- URL: https://huzaifamasood30.github.io/gardencalc/when-to-overseed-a-lawn/
+- Title: When to Overseed a Lawn: Best Time and Seed Rate
+- Meta: Overseed cool-season lawns in late summer to early autumn, about 4-6 weeks before the first frost. Timing, seed rate and follow-up.
+- Forum answer: Here's the arithmetic for your job: multiply length x width to get the area, then x depth in feet to get the volume. Overseed cool-season lawns in late summer to early autumn, about 4-6 weeks before the first frost. Timing, seed rate and follow-up. I put the formula and full reference tables here: https://huzaifamasood30.github.io/gardencalc/when-to-overseed-a-lawn/
+- Outreach pitch: Hi — I built a free when to overseed a lawn reference page that shows the formula and worked examples rather than just an answer. Might be useful for your readers: https://huzaifamasood30.github.io/gardencalc/when-to-overseed-a-lawn/
+
+### spring-garden-bed-checklist
+- URL: https://huzaifamasood30.github.io/gardencalc/spring-garden-bed-checklist/
+- Title: Spring Garden Bed Checklist: What to Do First
+- Meta: A practical spring garden bed checklist in order: soil, compost, edging, mulch timing and planting, with quantities for each step.
+- Forum answer: Here's the arithmetic for your job: multiply length x width to get the area, then x depth in feet to get the volume. A practical spring garden bed checklist in order: soil, compost, edging, mulch timing and planting, with quantities for each step. I put the formula and full reference tables here: https://huzaifamasood30.github.io/gardencalc/spring-garden-bed-checklist/
+- Outreach pitch: Hi — I built a free spring garden bed checklist reference page that shows the formula and worked examples rather than just an answer. Might be useful for your readers: https://huzaifamasood30.github.io/gardencalc/spring-garden-bed-checklist/
+
+### fall-lawn-fertilizer-timing
+- URL: https://huzaifamasood30.github.io/gardencalc/fall-lawn-fertilizer-timing/
+- Title: Fall Lawn Fertilizer Timing: When and How Much
+- Meta: Feed cool-season lawns in early autumn and again in late autumn, about 1 lb of nitrogen per 1,000 sq ft each time. Timing and rates.
+- Forum answer: Here's the arithmetic for your job: multiply length x width to get the area, then x depth in feet to get the volume. Feed cool-season lawns in early autumn and again in late autumn, about 1 lb of nitrogen per 1,000 sq ft each time. Timing and rates. I put the formula and full reference tables here: https://huzaifamasood30.github.io/gardencalc/fall-lawn-fertilizer-timing/
+- Outreach pitch: Hi — I built a free fall lawn fertilizer timing reference page that shows the formula and worked examples rather than just an answer. Might be useful for your readers: https://huzaifamasood30.github.io/gardencalc/fall-lawn-fertilizer-timing/
 

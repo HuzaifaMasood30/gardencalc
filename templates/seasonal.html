@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="wrap">
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="{{ base_url }}/">Home</a>
+  <span class="sep">/</span>
+  <a href="{{ base_url }}/category/{{ seasonal.cluster }}/">{{ cluster_name }}</a>
+  <span class="sep">/</span>
+  <span>{{ title }}</span>
+</nav>
+
+<header class="article-head">
+  <h1>{{ title }}</h1>
+  <p class="byline">
+    <span>{{ description }}</span>
+    <span class="updated">Updated {{ seasonal.updated }}</span>
+  </p>
+</header>
+
+<div class="answer-first">
+  <p><strong>{{ seasonal.question }}</strong> {{ answer }}</p>
+</div>
+
+<section class="prose">
+  <p>{{ seasonal.intro }}</p>
+
+  {% for sec in seasonal.sections %}
+  <h2>{{ sec.h2 }}</h2>
+  {% for p in sec.paras %}<p>{{ p }}</p>{% endfor %}
+  {% endfor %}
+
+  {% if seasonal.faqs %}
+  <section class="faq" aria-labelledby="faq-heading">
+    <h2 id="faq-heading">Frequently asked questions</h2>
+    {% for item in seasonal.faqs %}
+    <details><summary>{{ item.q }}</summary><div class="faq-a"><p>{{ item.a }}</p></div></details>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  {% if seasonal.calculator or seasonal.chart or seasonal.planner %}
+  <section class="project-links" aria-labelledby="season-tools">
+    <h2 id="season-tools">Work out your own numbers</h2>
+    <ul>
+      {% if seasonal.calculator %}<li><a href="{{ seasonal.calculator }}">Calculator</a> — enter your measurements for an exact figure.</li>{% endif %}
+      {% if seasonal.chart %}<li><a href="{{ seasonal.chart }}">Coverage chart</a> — printable reference tables by size and depth.</li>{% endif %}
+      {% if seasonal.planner %}<li><a href="{{ seasonal.planner }}">Project planner</a> — a full shopping list in one place.</li>{% endif %}
+    </ul>
+  </section>
+  {% endif %}
+
+  <div class="cite">
+    <h2>Cite this page</h2>
+    <p>GardenCalc. "{{ title }}". {{ canonical }}</p>
+    <button type="button" class="share-copy" data-share="copy"
+            data-url="{{ canonical }}">Copy citation link</button>
+  </div>
+</section>
+
+{% include "share.html" %}
+
+<nav class="pager" aria-label="More guides">
+  <a href="{{ seasonal.category }}"><span class="dir">Category</span><span class="t">All {{ cluster_name|lower }} guides</span></a>
+  <a class="next" href="{{ base_url }}/guides/"><span class="dir">All tools</span><span class="t">Guides index</span></a>
+</nav>
+</div>
+{% endblock %}

@@ -15,6 +15,10 @@ import re
 
 from common import DATA, REPORTS, load_json, save_json, site_config
 
+import charts
+import planners
+import seasonal
+
 
 def channels() -> list[dict]:
     site = site_config()
@@ -105,6 +109,17 @@ def channels() -> list[dict]:
             "template": "Feed URL: " + base + "/rss.xml",
         },
         {
+            "id": "seasonal-social",
+            "title": "Share a seasonal timing guide each season",
+            "why": "Timing searches spike every spring/autumn; the evergreen guides are the natural asset to push.",
+            "url": base + "/when-to-mulch/",
+            "template": ("Rotate " + base + "/when-to-mulch/, " + base
+                         + "/when-to-overseed-a-lawn/, " + base
+                         + "/spring-garden-bed-checklist/ and " + base
+                         + "/fall-lawn-fertilizer-timing/ on Pinterest/Threads/X with a UTM link "
+                         "so the traffic is attributable."),
+        },
+        {
             "id": "schema-validate",
             "title": "Validate structured data",
             "why": "Confirms the Article/FAQ/WebApplication/Breadcrumb markup will be eligible for rich results.",
@@ -167,6 +182,25 @@ def export_titles() -> dict:
         rows.append([base + url, cur_t, suggest_title(cur_t), des, suggest_desc(des, a)])
     for url, (t, d) in special.items():
         rows.append([base + url, "", t, "", d])
+
+    # Charts, planners and seasonal guides are generated pages, not articles, so they
+    # are pulled straight from their modules to keep this export complete.
+    extra_sets = [
+        [{"slug": c["slug"], "title": c["title"], "meta_description": c["description"]}
+         for c in charts.CHARTS],
+        [{"slug": p["slug"], "title": p["title"], "meta_description": p["description"]}
+         for p in planners.PLANNERS],
+        [{"slug": s["slug"], "title": s["title"], "meta_description": s["description"]}
+         for s in seasonal.SEASONAL],
+    ]
+    for group in extra_sets:
+        for a in group:
+            url = f"/{a['slug']}/"
+            if url in seen:
+                continue
+            seen.add(url)
+            rows.append([base + url, a["title"], suggest_title(a["title"]),
+                         a["meta_description"], suggest_desc(a["meta_description"], a)])
     path = docs / "titles.csv"
     with path.open("w", encoding="utf-8", newline="") as fh:
         w = csv.writer(fh)
@@ -205,6 +239,31 @@ def suggest_desc(desc: str, art: dict) -> str:
     return d
 
 
+def material_page(item: dict) -> dict:
+    """Promotion copy for a generated page (chart, planner, seasonal guide)."""
+    site = site_config()
+    base = (site.get("custom_domain") or site["base_url"]).rstrip("/")
+    slug = item["slug"]
+    kw = item.get("primary_keyword", "") or item.get("keyword", "")
+    desc = item.get("meta_description") or item.get("description", "")
+    return {
+        "slug": slug,
+        "url": f"{base}/{slug}/",
+        "title": item["title"],
+        "meta": desc,
+        "reddit_answer": (
+            f"Here's the arithmetic for your job: multiply length x width to get the area, "
+            f"then x depth in feet to get the volume. {desc} "
+            f"I put the formula and full reference tables here: {base}/{slug}/"
+        ),
+        "pitch": (
+            f"Hi — I built a free {kw or 'garden material'} reference page that shows the "
+            f"formula and worked examples rather than just an answer. Might be useful for your "
+            f"readers: {base}/{slug}/"
+        ),
+    }
+
+
 def write_pack() -> dict:
     site = site_config()
     arts = [a for a in load_json(DATA / "articles.json", default=[])
@@ -216,12 +275,18 @@ def write_pack() -> dict:
     for c in channels():
         items.append({**c, "done": c["id"] in done_ids})
 
+    generated = (
+        [dict(c, meta_description=c["description"]) for c in charts.CHARTS]
+        + [dict(p, meta_description=p["description"]) for p in planners.PLANNERS]
+        + [dict(s, meta_description=s["description"]) for s in seasonal.SEASONAL]
+    )
+
     pack = {
         "generated": dt.datetime.now(dt.timezone.utc).isoformat(),
         "site": site["name"],
         "base_url": (site.get("custom_domain") or site["base_url"]),
         "channels": items,
-        "articles": [material(a) for a in arts],
+        "articles": [material(a) for a in arts] + [material_page(g) for g in generated],
     }
     REPORTS.mkdir(parents=True, exist_ok=True)
     (REPORTS / "distribution-pack.md").write_text(_to_markdown(pack), encoding="utf-8")

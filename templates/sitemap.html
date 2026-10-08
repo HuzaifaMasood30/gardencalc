@@ -33,6 +33,17 @@
   {% include "charts_list.html" %}
 </section>
 
+{% if seasonal_cards %}
+<section class="section" aria-labelledby="sm-seasonal">
+  <div class="section-head"><h2 id="sm-seasonal">Seasonal guides</h2></div>
+  <ul class="link-list">
+    {% for s in seasonal_cards %}
+    <li><a href="{{ base_url }}/{{ s.slug }}/">{{ s.title }}</a></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
 {% for group in groups %}
 <section class="section" aria-labelledby="sm-{{ group.id }}">
   <div class="section-head"><h2 id="sm-{{ group.id }}">{{ group.name }}</h2>

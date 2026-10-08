@@ -57,11 +57,16 @@
       "done": false
     },
     {
+      "id": "seasonal-social",
+      "title": "Share a seasonal timing guide each season",
+      "done": false
+    },
+    {
       "id": "schema-validate",
       "title": "Validate structured data",
       "done": false
     }
   ],
   "done": 0,
-  "total": 12
+  "total": 13
 }

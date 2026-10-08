@@ -58,15 +58,30 @@
       <button type="button" class="share-copy" data-share="copy" data-url="{{ canonical }}">Copy link</button>
     </div>
 
-    {% if project_links %}
+    {% if project_links or cluster_chart or cluster_planner or cluster_seasonal %}
     <section class="project-links" aria-labelledby="plan-heading">
       <h2 id="plan-heading">Plan the whole project</h2>
+      {% if cluster_chart or cluster_planner or cluster_seasonal %}
+      <ul>
+        {% if cluster_chart %}
+        <li><a href="{{ base_url }}/{{ cluster_chart.slug }}/">{{ cluster_chart.title }}</a> — coverage chart you can print or save.</li>
+        {% endif %}
+        {% if cluster_planner %}
+        <li><a href="{{ base_url }}/{{ cluster_planner.slug }}/">{{ cluster_planner.title }}</a> — one shopping list for the whole job.</li>
+        {% endif %}
+        {% if cluster_seasonal %}
+        <li><a href="{{ base_url }}/{{ cluster_seasonal.slug }}/">{{ cluster_seasonal.title }}</a> — the right time of year to do it.</li>
+        {% endif %}
+      </ul>
+      {% endif %}
+      {% if project_links %}
       <p>If this job is part of a bigger one, these calculators cover the next step:</p>
       <ul>
         {% for p in project_links %}
         <li><a href="{{ base_url }}/{{ p.slug }}/">{{ p.title }}</a> — {{ p.desc }}</li>
         {% endfor %}
       </ul>
+      {% endif %}
     </section>
     {% endif %}
 
