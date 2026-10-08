@@ -673,9 +673,11 @@ def build() -> dict:
     # --- redirect stubs for merged pages (kept alive, canonical to the target) ---
     for st in merges.stubs(arts) + merges.rename_stubs(arts):
         target_url = _abs(site, f"/{st['target']}/")
-        sctx = common(title=st["old_title"],
+        # Canonical (not noindex) so Google follows the refresh and consolidates the
+        # old URL's signals into the target rather than dropping them.
+        sctx = common(title=f"{st['old_title']} (Moved) | {site['name']}",
                       description=f"This page has moved to {st['target_title']}.",
-                      canonical=target_url, robots="noindex, follow")
+                      canonical=target_url)
         sctx.update(page={"title": "This page has moved"},
                     target_url=target_url, target_title=st["target_title"])
         html = env.get_template("redirect.html").render(**sctx)
