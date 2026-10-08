@@ -1,9 +1,9 @@
 {
-  "generated": "2026-10-08T11:29:12+00:00",
+  "generated": "2026-10-08T15:40:20+00:00",
   "site": "https://huzaifamasood30.github.io/gardencalc/",
   "counts": {
-    "articles": 81,
-    "approved": 81,
+    "articles": 86,
+    "approved": 68,
     "clusters": 9,
     "charts": 8,
     "planners": 4,
@@ -12,12 +12,12 @@
   "clusters": {
     "concrete": 9,
     "fertilizer": 5,
-    "grass-seed": 7,
-    "gravel": 8,
-    "mulch": 9,
-    "paint": 8,
+    "grass-seed": 8,
+    "gravel": 9,
+    "mulch": 10,
+    "paint": 9,
     "soil": 6,
-    "tile": 7,
+    "tile": 8,
     "topsoil": 4
   },
   "duplicates": [

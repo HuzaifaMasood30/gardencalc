@@ -118,6 +118,49 @@ def test_no_orphans_from_singleton_cluster():
     assert interlink.orphans(arts) == [], interlink.orphans(arts)
 
 
+def test_inject_links_first_mention_only():
+    import interlink
+
+    art = {
+        "slug": "a",
+        "body_markdown": ("Mulch depth matters. Multiply length by width to get the "
+                          "area, then divide by the depth. Mulch depth is the same "
+                          "step everywhere."),
+        "internal_links": [{"to": "how-much-mulch", "anchor": "mulch depth",
+                            "title": "How much mulch"}],
+    }
+    body = interlink.inject(art)
+    assert body.count("[Mulch depth]({{url:how-much-mulch}})") == 1, body
+
+
+def test_inject_matches_on_topic_prefix():
+    import interlink
+
+    art = {
+        "slug": "a",
+        "body_markdown": "For a bed, how much mulch you spread depends on depth.",
+        "internal_links": [{"to": "x", "anchor": "how much mulch for a bed",
+                            "title": "How much mulch for a bed"}],
+    }
+    body = interlink.inject(art)
+    # The full anchor is absent, but its on-topic prefix 'how much mulch' should
+    # still be linked, rather than dropping the link or emitting an empty anchor.
+    assert "[how much mulch]({{url:x}})" in body, body
+
+
+def test_inject_adds_a_body_link_when_prose_never_mentions_a_sibling():
+    import interlink
+
+    art = {
+        "slug": "concrete-calculator",
+        "body_markdown": "This tool returns cubic yards and the number of bags.",
+        "internal_links": [{"to": "how-many-bags", "anchor": "how many bags of concrete",
+                            "title": "How many bags of concrete do I need"}],
+    }
+    body = interlink.inject(art)
+    assert "({{url:how-many-bags}})" in body, body
+
+
 def test_quality_rejects_thin_content():
     art = {"slug": "t", "title": "T", "primary_keyword": "x",
            "body_markdown": "## A\n\ntiny\n", "word_count": 3}

@@ -210,3 +210,21 @@ python3 scripts/live_audit.py https://huzaifamasood30.github.io/gardencalc/
   not Google); it currently gets 403 UserForbiddedToAccessSite because the key
   file is served under /gardencalc/ rather than the host root, so Bing cannot
   verify it for a project page.
+- `GH_PAT` (env) is a valid classic PAT with `admin`/`push` on the repo and is what
+  actually allows a push/deploy here; `GITHUB_TOKEN` returns 401 and `origin`'s
+  stored credential is read-only. Use `https://x-access-token:$GH_PAT@github.com/...`
+  for push.
+
+## Internal linking (contextual body links)
+- The link graph lives in `data/articles.json` (`internal_links` per article) and
+  `data/links.json`. `build.py` calls `interlink.inject(art)` before rendering the
+  body, so every approved article gets contextual in-prose links, not just template
+  chrome (related grid, project links, breadcrumbs).
+- `inject` matches each target's anchor, then progressively shorter three-word
+  prefixes (trailing stop words trimmed), at the first non-overlapping mention so the
+  anchor text stays on-topic. Anchors are nested-prefix de-duplicated and long-tail
+  targets are placed first, so a specific anchor keeps the spot over a vaguer sibling.
+- Pages whose prose never mentions a sibling with the anchor's words (the generic
+  pillar calculators) get one plain fallback sentence in the body. Never emit an
+  empty `[](...)` anchor: the placeholder regex `{{url:<slug>}}` only allows
+  `[a-z0-9-]`, so a blank anchor renders as `<a href="#">`.

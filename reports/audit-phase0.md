@@ -1,6 +1,6 @@
 # GardenCalc — Phase 0 audit
 
-Generated 2026-10-08T11:29:12+00:00. Report only; no edits made.
+Generated 2026-10-08T15:40:20+00:00. Report only; no edits made.
 
 ## How the site is built
 - `scripts/run_all.py` runs the pipeline: generate -> interlink -> quality -> build -> verify.
@@ -9,9 +9,9 @@ Generated 2026-10-08T11:29:12+00:00. Report only; no edits made.
 - Deploy: GitHub Actions `deploy.yml` (push) and `pipeline.yml` (cron).
 
 ## Page counts
-- Articles: 81 total, 81 live (merged stubs excluded)
+- Articles: 86 total, 68 live (merged stubs excluded)
 - Categories: 9; Charts: 8; Planners: 4; Seasonal: 4
-- Mean article length: 842 words
+- Mean article length: 841 words
 
 ## Near-duplicate pages (same intent, similarity >= 0.80)
 These pairs share a searcher intent and should merge or be differentiated. Pairs that differ only by a sizing number are legitimate long-tail pages, listed separately below.

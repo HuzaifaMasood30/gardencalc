@@ -11,6 +11,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 import charts
 import images
+import interlink
 import mdrender
 import merges
 import planners
@@ -470,7 +471,8 @@ def build() -> dict:
 
     # --- articles ---
     for art in published:
-        body_html, toc = mdrender.render_with_toc(art.get("body_markdown", ""),
+        body_md = interlink.inject(art)
+        body_html, toc = mdrender.render_with_toc(body_md,
                                                   {x["slug"]: f"{base}/{x['slug']}/" for x in published})
         figure = {
             "src": _fig(site, art),

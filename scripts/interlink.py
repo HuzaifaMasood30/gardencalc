@@ -49,27 +49,96 @@ def _anchor_for(target: dict) -> str:
     return target["title"][:45]
 
 
-def inject(art: dict, site_url: str) -> str:
-    """Append an internal 'Related guides' block and inline links where natural."""
+_STOPWORDS = {
+    "a", "an", "and", "are", "at", "by", "do", "does", "for", "from", "i", "in",
+    "is", "it", "my", "of", "on", "or", "per", "the", "to", "what", "with", "your",
+}
+
+
+def _anchor_variants(anchor: str) -> list[str]:
+    """Candidate phrases for inline matching, longest first.
+
+    Anchors are long-tail keywords ('how much mulch do i need for 500 sq ft') that
+    rarely appear verbatim in a sibling's body, so fall back to progressively shorter
+    prefixes. Two rules keep the fallbacks clean: a phrase keeps at least three words
+    (or the whole anchor when it is shorter), and trailing stop words are trimmed so a
+    link never ends mid-phrase on 'for'/'of'/'the'.
+    """
+    words = re.sub(r"[\[\]()<>`*_]", "", anchor).split()
+    floor = min(3, len(words))
+    out: list[str] = []
+    for n in range(len(words), floor - 1, -1):
+        phrase = words[:n]
+        while len(phrase) > floor and phrase[-1].lower() in _STOPWORDS:
+            phrase = phrase[:-1]
+        text = " ".join(phrase)
+        if text.lower() not in {v.lower() for v in out}:
+            out.append(text)
+    return out
+
+
+def _link(text: str, slug: str) -> str:
+    return f"[{text}]({{{{url:{slug}}}}})"
+
+
+def inject(art: dict) -> str:
+    """Return the body with a contextual internal link at each target's first mention.
+
+    Uses the persisted ``internal_links`` graph. Each target is linked at most once,
+    at the first *non-overlapping* natural mention of its anchor (or an anchor prefix),
+    keeping the visible text on-topic instead of 'click here'. Targets whose phrase
+    never appears are skipped here and still reachable via the page's related grid,
+    project links and breadcrumbs.
+    """
     body = art.get("body_markdown", "")
     links = art.get("internal_links", [])
-    if not links:
+    if not body or not links:
         return body
 
-    # Inline: link the first natural mention of each related keyword if present.
-    for link in links:
-        anchor = link["anchor"]
-        if not anchor:
+    used: set[str] = set()
+    spans: list[tuple[int, int, str]] = []
+    placed: list[str] = []
+    # Place the most specific anchors first so a long-tail target wins the spot over
+    # a vaguer sibling whose anchor is only a prefix of it.
+    for link in sorted(links, key=lambda l: -len((l.get("anchor") or "").split())):
+        slug = link.get("to", "")
+        anchor = (link.get("anchor") or "").strip()
+        if not slug or not anchor or slug in used:
             continue
-        pattern = re.compile(r"(?<!\[)(?<!>)(" + re.escape(anchor) + r")(?!\]|\()", re.I)
-        if pattern.search(body):
-            body = pattern.sub(
-                f"[{anchor}]({{{{url:{link['to']}}}}})", body, count=1)
+        for variant in _anchor_variants(anchor):
+            vlow = variant.lower()
+            # Skip a phrase nested inside one already placed (either direction): the
+            # shorter form would add a second, vaguer link over the same words instead
+            # of a distinct one. Long-tail targets are matched first, so the specific
+            # anchor keeps the spot.
+            if any(vlow.startswith(p) or p.startswith(vlow) for p in placed):
+                continue
+            for m in re.finditer(
+                    r"(?<![\[\w/])(" + re.escape(variant) + r")(?![\w\]])", body, re.I):
+                s, e = m.span()
+                if any(not (e <= a or s >= b) for a, b, _ in spans):
+                    continue  # overlaps a link already placed
+                spans.append((s, e, f"[{m.group(0)}]({{{{url:{slug}}}}})"))
+                placed.append(vlow)
+                used.add(slug)
+                break
+            else:
+                continue
+            break
 
-    lines = ["\n## Related Guides\n"]
-    for link in links:
-        lines.append(f"- [{link['title']}]({{{{url:{link['to']}}}}})")
-    return body + "\n" + "\n".join(lines) + "\n"
+    for s, e, rep in sorted(spans, key=lambda t: t[0], reverse=True):
+        body = body[:s] + rep + body[e:]
+
+    # Fallback for pages whose prose never names a sibling using the anchor's words
+    # (the generic pillar calculators, where plenty of sibling coverage exists and a
+    # reader needs the entry point). One plain in-content sentence guarantees the page
+    # still carries a contextual link rather than only template chrome.
+    if not spans:
+        extra = [l for l in links if l.get("to") not in used and l.get("title")]
+        if extra:
+            name = extra[0]["title"].rstrip(".")
+            body += f"\n\nFor coverage at other sizes, see {_link(name, extra[0]['to'])}.\n"
+    return body
 
 
 def link_all(arts: list[dict], persist: bool = True) -> list[dict]:
