@@ -278,6 +278,45 @@ def render_pins(cards: list[dict], static_root: Path) -> dict:
     return {"pins": n}
 
 
+def render_og(art: dict, static_root: Path) -> str | None:
+    """Write a 1200x630 PNG social card for one article. Returns the slug or None.
+
+    One card per article instead of a single shared fallback: social and search
+    previews show the actual page topic, which lifts click-through on shared links.
+    """
+    if not HAVE_PIL:
+        return None
+    og_dir = static_root / "img" / "og"
+    og_dir.mkdir(parents=True, exist_ok=True)
+    accent = CLUSTERS.get(art.get("cluster", ""), CLUSTERS["mulch"])[1]
+    OW, OH = 1200, 630
+    img = Image.new("RGB", (OW, OH), accent)
+    d = ImageDraw.Draw(img)
+    for i in range(-OH, OW, 46):
+        d.line([i, 0, i + 120, OH], fill=(accent[0] + 18, accent[1] + 18, accent[2] + 18), width=3)
+    label = _cluster_meta(art.get("cluster", ""))[0].upper()
+    chip_f = _font(BOLD, 22)
+    tw = d.textlength(label, font=chip_f)
+    d.rounded_rectangle([64, 70, 64 + tw + 34, 112], radius=21, fill=WHITE)
+    d.text((81, 79), label, font=chip_f, fill=accent)
+    title_f = _font(BOLD, 52)
+    y = 210
+    for ln in _wrap(d, art.get("title", ""), title_f, OW - 128)[:3]:
+        d.text((64, y), ln, font=title_f, fill=WHITE)
+        y += 62
+    desc_f = _font(REG, 27)
+    y += 16
+    for ln in _wrap(d, art.get("meta_description", ""), desc_f, OW - 128)[:2]:
+        d.text((64, y), ln, font=desc_f, fill=(226, 247, 234))
+        y += 38
+    d.line([64, OH - 96, OW - 64, OH - 96], fill=(255, 255, 255), width=2)
+    d.text((64, OH - 74), "GardenCalc", font=_font(BOLD, 28), fill=WHITE)
+    d.text((OW - 560, OH - 70), "huzaifamasood30.github.io/gardencalc",
+           font=_font(REG, 22), fill=(200, 236, 210))
+    img.save(og_dir / f"{art['slug']}.png", "PNG", optimize=True)
+    return art["slug"]
+
+
 def render_brand(static_root: Path) -> dict:
     """Write the publisher logo, favicon and PNG OG fallback.
 

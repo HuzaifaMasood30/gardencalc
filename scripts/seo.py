@@ -28,7 +28,7 @@ def article_schema(art: dict, site: dict, figure: str | None = None) -> dict:
         "publisher": {"@type": "Organization", "name": site["name"],
                       "logo": {"@type": "ImageObject", "url": _abs(site, site.get("org_logo", ""))}},
         "mainEntityOfPage": {"@type": "WebPage", "@id": url},
-        "image": {"@type": "ImageObject", "url": img, "width": 1200, "height": 675},
+        "image": {"@type": "ImageObject", "url": img, "width": 1200, "height": 630},
         "articleSection": art.get("cluster", ""),
         "keywords": ", ".join([art.get("primary_keyword", "")] + art.get("secondary_keywords", [])),
     }

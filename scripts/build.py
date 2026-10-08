@@ -413,7 +413,14 @@ def build() -> dict:
     default_og_png = default_og.rsplit(".", 1)[0] + ".png"
 
     def _og(url: str) -> str:
-        return default_og_png if url.endswith((".webp", ".svg")) else url
+        # Social scrapers handle PNG far more reliably than WebP/SVG. Per-article PNG
+        # cards are generated alongside the figures; the generic card is the fallback.
+        if url.endswith(".webp"):
+            png = url.rsplit(".", 1)[0] + ".png"
+            return png
+        if url.endswith(".svg"):
+            return default_og_png
+        return url
 
     # Cache-busting token for the CSS/JS bundle: a short hash of the source files, so a
     # redeploy always serves fresh assets to returning visitors. Safe to change every run.
@@ -489,7 +496,7 @@ def build() -> dict:
         answer_first = faq_items[0]["a"] if faq_items else art.get("meta_description", "")
 
         schemas = [json.dumps(s, ensure_ascii=False) for s in
-                   seolib.all_schema(art, site, figure=_fig(site, art))]
+                   seolib.all_schema(art, site, figure=_abs(site, f"/static/img/og/{art['slug']}.png"))]
         calc_ctx = _calc_context(art, tcfg, site)
         if calc_ctx:
             schemas.append(json.dumps(seolib.webapp_schema(
@@ -504,7 +511,7 @@ def build() -> dict:
                 schemas.append(json.dumps(v, ensure_ascii=False))
         ctx = common(title=art["title"], description=art["meta_description"],
                      canonical=_abs(site, f"/{art['slug']}/"), og_type="article",
-                     og_image=_fig(site, art), schemas=schemas,
+                     og_image=_abs(site, f"/static/img/og/{art['slug']}.png"), schemas=schemas,
                      keywords=", ".join([art.get("primary_keyword", "")] +
                                         art.get("secondary_keywords", [])))
         body_head, body_rest = _split_first_section(body_html)
@@ -837,6 +844,8 @@ def build() -> dict:
     # Generate original figures into the copied static dir so pages can link them.
     img_stats = images.generate(published, static_dest)
     brand_stats = images.render_brand(static_dest)
+    for _a in published:
+        images.render_og(_a, static_dest)
     pin_cards = [{"slug": ch["slug"], "title": ch["title"], "question": charts.CHART_QUESTIONS.get(ch["slug"], ""),
                   "cluster": ch["cluster"]} for ch in charts.CHARTS]
     pin_cards += [{"slug": pl["slug"], "title": pl["title"], "question": pl["question"],
