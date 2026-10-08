@@ -285,13 +285,15 @@ def build() -> dict:
     _write(static_dest / "search-index.json", json.dumps(search_index, ensure_ascii=False))
 
     # --- sitemap, robots, rss, CNAME ---
-    urls = [{"loc": "/", "priority": "1.0", "lastmod": dt.date.today().isoformat(),
+    # Only canonical, indexable pages go in the sitemap. <priority> is omitted: it is
+    # ignored by Google/Bing, so emitting it only adds noise.
+    urls = [{"loc": "/", "lastmod": dt.date.today().isoformat(),
              "image": _thumb(site, published[0]) if published else None,
              "image_title": site["name"]}]
-    urls += [{"loc": f"/category/{c['id']}/", "priority": "0.8"} for c in categories]
-    urls += [{"loc": f"/{a['slug']}/", "priority": "0.9", "lastmod": a.get("updated"),
+    urls += [{"loc": f"/category/{c['id']}/"} for c in categories]
+    urls += [{"loc": f"/{a['slug']}/", "lastmod": a.get("updated"),
               "image": _fig(site, a), "image_title": a["title"]} for a in published]
-    urls += [{"loc": f"/{s}/", "priority": "0.3"} for s, _, _ in pages]
+    urls += [{"loc": f"/{s}/"} for s, _, _ in pages]
     _write(SITE / "sitemap.xml", seolib.sitemap_xml(urls, site))
     _write(SITE / "robots.txt", seolib.robots_txt(site, _abs(site, "/sitemap.xml")))
     _write(SITE / "rss.xml", seolib.rss_xml(published, site))

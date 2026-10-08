@@ -100,21 +100,42 @@ def check() -> dict:
         if a["slug"] not in inbound:
             issues.append({"type": "orphan_article", "page": "/" + a["slug"] + "/"})
 
-    # sitemap present + valid-ish
+    # sitemap present + full Google-compliance checks
     sm = SITE / "sitemap.xml"
     if not sm.exists():
         issues.append({"type": "missing_sitemap", "page": "/sitemap.xml"})
     else:
         xml = sm.read_text(encoding="utf-8")
-        if "<urlset" not in xml:
+        # must be well-formed XML with the sitemap namespace and no BOM
+        if xml.startswith("\ufeff") or "<urlset" not in xml:
             issues.append({"type": "invalid_sitemap", "page": "/sitemap.xml"})
-        locs = re.findall(r"<loc>(.*?)</loc>", xml)
-        for loc in locs:
+        try:
+            from xml.etree import ElementTree as _ET
+            root = _ET.fromstring(xml)
+            ns = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
+            if root.tag != ns + "urlset":
+                issues.append({"type": "invalid_sitemap_namespace",
+                               "page": "/sitemap.xml"})
+            sitemap_locs = [e.findtext(ns + "loc") or "" for e in root.iter(ns + "url")]
+        except _ET.ParseError:
+            issues.append({"type": "malformed_sitemap", "page": "/sitemap.xml"})
+            sitemap_locs = []
+        if len(sitemap_locs) != len(set(sitemap_locs)):
+            issues.append({"type": "duplicate_sitemap_url", "page": "/sitemap.xml"})
+        # Every sitemap URL must sit under the deployed base path (never the bare host).
+        for loc in sitemap_locs:
+            if not (loc == base or loc.startswith(base + "/")):
+                issues.append({"type": "sitemap_wrong_host", "url": loc})
             path = urlparse(loc).path
             if path.endswith((".xml", ".txt")):
                 continue
             if normalize(path) not in existing:
                 issues.append({"type": "sitemap_url_missing", "url": loc})
+        # A noindex page must never be advertised in the sitemap.
+        for loc in sitemap_locs:
+            p = SITE / normalize(urlparse(loc).path).lstrip("/") / "index.html"
+            if p.exists() and "noindex" in p.read_text(encoding="utf-8"):
+                issues.append({"type": "noindex_url_in_sitemap", "url": loc})
 
     if not (SITE / "robots.txt").exists():
         issues.append({"type": "missing_robots", "page": "/robots.txt"})

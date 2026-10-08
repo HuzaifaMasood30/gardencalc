@@ -136,23 +136,63 @@ def all_schema(art: dict, site: dict, figure: str | None = None) -> list[dict]:
     return out
 
 
+def _valid_lastmod(value) -> str | None:
+    """Return an ISO date string only if it is a real, non-future date.
+
+    Google rejects sitemaps whose <lastmod> is not a valid W3C datetime. Article
+    records can carry a non-date value, so normalise or drop it rather than emitting
+    whatever is in the data file.
+    """
+    if not value:
+        return None
+    text = str(value).strip()
+    m = re.match(r"^(\d{4}-\d{2}-\d{2})", text)
+    if not m:
+        return None
+    try:
+        d = dt.date.fromisoformat(m.group(1))
+    except ValueError:
+        return None
+    if d > dt.date.today():
+        return None
+    return m.group(1)
+
+
 def sitemap_xml(urls: list[dict], site: dict) -> str:
-    """urls: [{'loc':..., 'lastmod':..., 'priority':..., 'image':..., 'image_title':...}]"""
+    """urls: [{'loc':..., 'lastmod':..., 'image':..., 'image_title':...}]
+
+    Emits a Google-compliant urlset: absolute, escaped <loc>, ISO <lastmod> only when
+    valid, and no <priority> (search engines ignore it, so it is dead weight). Entries
+    are de-duplicated by <loc> in first-seen order and any URL whose generated <loc>
+    escapes the site's own base path is dropped, so this method cannot reintroduce a
+    wrong-host or duplicate URL.
+    """
+    base = (site.get("custom_domain") or site["base_url"]).rstrip("/")
+    seen: set[str] = set()
+    entries: list[dict] = []
+    for u in urls:
+        loc = _abs(site, u["loc"])
+        if not loc.startswith(base + "/") and loc != base:
+            continue
+        if loc in seen:
+            continue
+        seen.add(loc)
+        entries.append({**u, "abs_loc": loc})
+
     lines = ['<?xml version="1.0" encoding="UTF-8"?>',
              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
              '        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">']
-    for u in urls:
+    for u in entries:
         lines.append("  <url>")
-        lines.append(f"    <loc>{html.escape(_abs(site, u['loc']))}</loc>")
-        if u.get("lastmod"):
-            lines.append(f"    <lastmod>{u['lastmod']}</lastmod>")
-        if u.get("priority"):
-            lines.append(f"    <priority>{u['priority']}</priority>")
+        lines.append(f"    <loc>{html.escape(u['abs_loc'], quote=True)}</loc>")
+        lastmod = _valid_lastmod(u.get("lastmod"))
+        if lastmod:
+            lines.append(f"    <lastmod>{lastmod}</lastmod>")
         if u.get("image"):
             lines.append("    <image:image>")
-            lines.append(f"      <image:loc>{html.escape(u['image'])}</image:loc>")
+            lines.append(f"      <image:loc>{html.escape(u['image'], quote=True)}</image:loc>")
             if u.get("image_title"):
-                lines.append(f"      <image:title>{html.escape(u['image_title'])}</image:title>")
+                lines.append(f"      <image:title>{html.escape(u['image_title'], quote=True)}</image:title>")
             lines.append("    </image:image>")
         lines.append("  </url>")
     lines.append("</urlset>")

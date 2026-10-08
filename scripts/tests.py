@@ -141,6 +141,26 @@ def test_sitemap_is_valid_xml():
     assert root.tag.endswith("urlset")
 
 
+def test_sitemap_drops_priority_and_bad_lastmod():
+    from xml.etree import ElementTree
+    site = {"name": "T", "base_url": "https://t.example"}
+    xml = seolib.sitemap_xml(
+        [{"loc": "/a/", "lastmod": "not-a-date", "priority": "0.9"},
+         {"loc": "/b/", "lastmod": "2099-01-01", "priority": "0.9"}],
+        site)
+    assert "<priority>" not in xml
+    root = ElementTree.fromstring(xml)
+    assert root.findall("{http://www.sitemaps.org/schemas/sitemap/0.9}url")[0].find(
+        "{http://www.sitemaps.org/schemas/sitemap/0.9}lastmod") is None
+
+
+def test_sitemap_dedupes_and_enforces_base_path():
+    site = {"name": "T", "base_url": "https://t.example/gardencalc"}
+    xml = seolib.sitemap_xml([{"loc": "/a/"}, {"loc": "/a/"}, {"loc": "/b/"}], site)
+    assert xml.count("<loc>https://t.example/gardencalc/a/</loc>") == 1
+    assert "<loc>https://t.example/a/</loc>" not in xml
+
+
 def test_js_and_python_calculators_agree():
     """The client-side calculator must produce the same numbers as the Python engine."""
     import json
