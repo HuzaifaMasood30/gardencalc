@@ -33,11 +33,31 @@ generate -> internal links -> quality gates -> build -> monitor -> dashboard -> 
 
 ## Validation
 ```bash
-python3 scripts/tests.py                 # 7 unit/parity tests
+python3 scripts/tests.py                 # 8 unit/parity tests
 python3 scripts/live_audit.py https://huzaifamasood30.github.io/gardencalc/
 ```
+
+## Internal linking rules (important)
+- Same-cluster siblings are linked as a stable ring so every article has inbound
+  links; do not revert `build_for` to a greedy "top N", which starves the
+  lowest-ranked sibling once a cluster passes the link cap.
+- `_repair_orphans` guarantees an inbound link for articles in singleton/new
+  clusters and must prefer sources with spare link capacity (else it pushes the
+  source past `max_internal_links_per_article` and fails the source's gate).
+- `run_all.py` must rebuild links as the LAST step: `quality.apply()` can reject a
+  page that was another page's only inbound link.
+
+## IndexNow / Bing
+- IndexNow needs a key file at the *host root* (`https://<user>.github.io/<key>.txt`),
+  which a GitHub project page cannot serve, so api.indexnow.org answers 403
+  `UserForbiddedToAccessSite`. Bing's GET endpoint also 403s until the site is
+  verified in Bing Webmaster Tools (or imported from Google Search Console).
+- `scripts/indexnow.py` tries Bing's endpoint then the shared POST. It is best-effort
+  and never fails the pipeline. Real fix = user verifies the site in Bing WMT.
 
 ## Access notes
 - Actions Secrets API is not reachable by the agent token (403); the repo secret
   GEMINI_API_KEY must be added by the user in the GitHub UI.
 - Google/Bing console verification and sitemap submission require the user's account.
+- A separate working PAT (not the system GITHUB_TOKEN, which gets 403) is needed to
+  `workflow_dispatch`; system token can only read.
