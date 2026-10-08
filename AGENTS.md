@@ -228,3 +228,21 @@ python3 scripts/live_audit.py https://huzaifamasood30.github.io/gardencalc/
   pillar calculators) get one plain fallback sentence in the body. Never emit an
   empty `[](...)` anchor: the placeholder regex `{{url:<slug>}}` only allows
   `[a-z0-9-]`, so a blank anchor renders as `<a href="#">`.
+
+## Off-site promotion (no-login backlink work)
+- `scripts/promotion.py` holds the curated, *specific* backlink targets: real open
+  Stack Exchange questions (found via the public SE API, no key), Reddit/HN/Pinterest/
+  Quora channels, real resource pages that invite submissions, and one explicit
+  "not recommended" Wikipedia entry. It writes `reports/promotion-playbook.md` with the
+  exact post text, anchor, target GardenCalc page, link type and rules per item.
+- The dedupe guard is `data/promotion-log.json`; each opportunity has a stable
+  `uid = <platform>:<target-url>`. Run `python scripts/promotion.py --mark <uid>` after
+  posting and `--check` to fail on a duplicate. `run_all.py` regenerates the playbook.
+- Actions done without any account credential: Ping-O-Matic blog ping (`weblogUpdates.
+  extendedPing` with the RSS URL) and Internet Archive `web.archive.org/save/` snapshots.
+- Hard blockers (record, do not loop): Google Search Console and Bing Webmaster both
+  require the owner's login. IndexNow stays 403 on a GitHub *project* page because the
+  key must be served at the host root. Reddit/Quora/SE/Pinterest/HN all require the
+  owner's account; the playbook supplies the copy so the owner only has to paste.
+- Never create accounts for the owner, mass-post, or buy links. One link per
+  contribution, disclosed, only where the tool is the direct answer.

@@ -129,18 +129,42 @@ def channels() -> list[dict]:
     ]
 
 
+# The opening line of a forum answer must match the actual calculation. A single
+# volume formula ("length x width x depth") is wrong for paint, tile, seed and
+# fertiliser, so the lead is chosen from the page's topic instead of hard-coded.
+_TOPIC_LEADS = [
+    (("paint",), "Add up the wall area, multiply by the number of coats, and divide by "
+                 "the coverage per gallon."),
+    (("tile",), "Divide the floor area by the tile area, then add a waste allowance for cuts."),
+    (("grass", "seed", "overseed"),
+     "Multiply the area by the seed rate per 1,000 sq ft, then divide by 1,000."),
+    (("fertil", "nitrogen"),
+     "Multiply the area by the nitrogen rate per 1,000 sq ft, then divide by the bag weight."),
+    (("mulch", "soil", "topsoil", "gravel", "concrete", "sand", "stone", "fill", "sod"),
+     "Multiply length x width for the area, then x depth in feet for the volume."),
+]
+
+
+def _formula_lead(*texts: str) -> str:
+    blob = " ".join(t or "" for t in texts).lower()
+    for keys, lead in _TOPIC_LEADS:
+        if any(k in blob for k in keys):
+            return lead
+    return "Multiply the measurements for the quantity, then convert to the unit you buy in."
+
+
 def material(art: dict) -> dict:
     """Ready-to-paste promotion copy for one article."""
     site = site_config()
     base = (site.get("custom_domain") or site["base_url"]).rstrip("/")
+    lead = _formula_lead(art["slug"], art.get("primary_keyword", ""), art.get("cluster", ""))
     return {
         "slug": art["slug"],
         "url": f"{base}/{art['slug']}/",
         "title": art["title"],
         "meta": art.get("meta_description", ""),
         "reddit_answer": (
-            f"Here's the arithmetic for your job: multiply length x width to get the area, "
-            f"then x depth in feet to get the volume. {art.get('meta_description','')} "
+            f"Here's the arithmetic for your job: {lead} {art.get('meta_description','')} "
             f"I wrote the formula and a calculator here: {base}/{art['slug']}/"
         ),
         "pitch": (
@@ -252,8 +276,8 @@ def material_page(item: dict) -> dict:
         "title": item["title"],
         "meta": desc,
         "reddit_answer": (
-            f"Here's the arithmetic for your job: multiply length x width to get the area, "
-            f"then x depth in feet to get the volume. {desc} "
+            f"Here's the arithmetic for your job: "
+            f"{_formula_lead(slug, item.get('title', ''), kw)} {desc} "
             f"I put the formula and full reference tables here: {base}/{slug}/"
         ),
         "pitch": (

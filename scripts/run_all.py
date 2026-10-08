@@ -1,5 +1,5 @@
 """Full pipeline: keywords -> clusters -> generate -> link -> quality -> build -> verify
--> adsense -> monitor -> dashboard.
+-> adsense -> monitor -> dashboard -> promotion playbook.
 
 This is the single entry point used by the scheduled GitHub Action and by hand.
 """
@@ -29,10 +29,10 @@ def run(limit: int | None = None) -> dict:
         limit = seo["limits"]["max_articles_per_run"]
     steps: dict = {}
 
-    print("== 1/9 generate ==")
+    print("== 1/10 generate ==")
     generate.run(limit=limit)
 
-    print("== 2/9 internal links + quality (to convergence) ==")
+    print("== 2/10 internal links + quality (to convergence) ==")
     arts = load_json(DATA / "articles.json", default=[])
     # Linking and gating are mutually dependent on a young site: an article needs links
     # to pass, but only passing articles are worth linking to. Iterate until the set of
@@ -60,27 +60,31 @@ def run(limit: int | None = None) -> dict:
     interlink.link_all(arts)
     save_json(DATA / "articles.json", arts)
 
-    print("== 3/9 quality gates ==")
+    print("== 3/10 quality gates ==")
     approved = [a for a in arts if a.get("status") in ("published", "approved")]
     steps["approved"] = len(approved)
     steps["total"] = len(arts)
 
-    print("== 4/9 build ==")
+    print("== 4/10 build ==")
     steps["build"] = build.build()
 
-    print("== 5/9 verify ==")
+    print("== 5/10 verify ==")
     steps["health"] = verify.check()
 
-    print("== 6/9 adsense readiness ==")
+    print("== 6/10 adsense readiness ==")
     steps["adsense"] = adsense.readiness()
 
-    print("== 7/9 monitor ==")
+    print("== 7/10 monitor ==")
     steps["monitor"] = monitor.snapshot()
 
-    print("== 8/9 dashboard ==")
+    print("== 8/10 dashboard ==")
     dashboard.build()
 
-    print("== 9/9 report ==")
+    print("== 9/10 promotion playbook ==")
+    import promotion
+    steps["promotion"] = promotion.write()
+
+    print("== 10/10 report ==")
     _write_report(steps)
     return steps
 

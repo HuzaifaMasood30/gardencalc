@@ -6959,7 +6959,7 @@
         },
         "meta_length": {
           "pass": true,
-          "detail": "meta length 152"
+          "detail": "meta length 149"
         },
         "title_length": {
           "pass": true,
@@ -7122,7 +7122,7 @@
         },
         "meta_length": {
           "pass": true,
-          "detail": "meta length 153"
+          "detail": "meta length 149"
         },
         "title_length": {
           "pass": true,
@@ -10761,7 +10761,7 @@
         },
         "meta_length": {
           "pass": true,
-          "detail": "meta length 152"
+          "detail": "meta length 145"
         },
         "title_length": {
           "pass": true,
@@ -12210,7 +12210,7 @@
         },
         "meta_length": {
           "pass": true,
-          "detail": "meta length 154"
+          "detail": "meta length 155"
         },
         "title_length": {
           "pass": true,

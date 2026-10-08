@@ -43,6 +43,7 @@ python -m http.server -d site 8000      # preview at http://localhost:8000
 | `monitor.py` | Score snapshots and regression detection |
 | `dashboard.py` | Single-file HTML dashboard |
 | `distribution.py` | Ready-to-paste off-site promotion copy and a tracked checklist |
+| `promotion.py` | Curated no-login backlink targets with exact post text, anchor and link type; dedupe log |
 
 ## Configuration
 

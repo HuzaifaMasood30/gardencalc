@@ -10,6 +10,7 @@ import calculators
 import keywords
 import mdrender
 import merges
+import promotion
 import quality
 import seasonal
 import seo as seolib
@@ -159,6 +160,25 @@ def test_inject_adds_a_body_link_when_prose_never_mentions_a_sibling():
     }
     body = interlink.inject(art)
     assert "({{url:how-many-bags}})" in body, body
+
+
+def test_promotion_targets_are_unique_and_each_names_a_real_page():
+    opps = promotion.opportunities()
+    assert len(opps) >= 12
+    uids = [o["uid"] for o in opps]
+    assert len(uids) == len(set(uids)), "duplicate promotion uid"
+    for o in opps:
+        # Every recommended post must name a real GardenCalc page, except the
+        # deliberate non-promotional Wikipedia decision entry.
+        if o["uid"].startswith("citation:"):
+            continue
+        assert promotion.BASE in o["promote"] or promotion.BASE in o["copy"], o["uid"]
+        assert o["copy"].strip(), o["uid"]
+        assert o["requirement"], o["uid"]
+
+
+def test_promotion_duplicate_check_is_clean():
+    assert promotion.check() == []
 
 
 def test_quality_rejects_thin_content():
