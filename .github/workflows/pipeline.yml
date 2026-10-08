@@ -63,6 +63,9 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "chore: automated SEO run $(date -u +%Y-%m-%d)"
+            # A manual push can land while this job runs; rebase so the automation
+            # does not fail on a non-fast-forward and skip deploy.
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME:-main}"
             git push
           fi
 
