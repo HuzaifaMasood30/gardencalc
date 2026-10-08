@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="wrap">
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="{{ base_url }}/">Home</a>
+  <span class="sep">/</span>
+  <a href="{{ base_url }}/category/{{ chart.cluster }}/">{{ cluster_name }}</a>
+  <span class="sep">/</span>
+  <span>{{ title }}</span>
+</nav>
+
+<header class="article-head">
+  <h1>{{ title }}</h1>
+  <p class="byline">
+    <span>{{ description }}</span>
+  </p>
+</header>
+
+<div class="answer-first">
+  <p>{{ answer }}</p>
+</div>
+
+<section class="chart-body prose">
+  <p>{{ chart.intro }}</p>
+
+  {% for tbl in chart.tables %}
+  {% set tloop = loop %}
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>{% for h in tbl.headers %}<th scope="col">{{ h }}</th>{% endfor %}</tr>
+      </thead>
+      <tbody>
+        {% for row in tbl.rows %}
+        <tr id="t{{ tloop.index }}-r{{ loop.index }}">
+          {% for cell in row %}<td>{{ cell }}</td>{% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% endfor %}
+
+  <p class="chart-cta">
+    Need an exact figure for your own measurements? Use the
+    <a href="{{ chart.related.calculator }}">calculator</a>, which shows the formula it used.
+  </p>
+
+  <div class="print-actions">
+    <button type="button" class="btn btn-ghost" onclick="window.print()">Print / Save as PDF</button>
+  </div>
+
+  {% if chart.faqs %}
+  <section class="faq" aria-labelledby="faq-heading">
+    <h2 id="faq-heading">Frequently asked questions</h2>
+    {% for item in chart.faqs %}
+    <details><summary>{{ item.q }}</summary><div class="faq-a"><p>{{ item.a }}</p></div></details>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  <div class="cite">
+    <h2>Cite this page</h2>
+    <p>GardenCalc. "{{ title }}". {{ base_url }}/{{ chart.slug }}/</p>
+    <button type="button" class="share-copy" data-share="copy"
+            data-url="{{ canonical }}">Copy citation link</button>
+  </div>
+</section>
+
+{% include "share.html" %}
+
+<nav class="pager" aria-label="Chart navigation">
+  <a href="{{ chart.related.calculator }}"><span class="dir">Calculator</span><span class="t">{{ cluster_name }} calculator</span></a>
+  <a class="next" href="{{ chart.related.category }}"><span class="dir">Category</span><span class="t">All {{ cluster_name|lower }} guides</span></a>
+</nav>
+</div>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="wrap">
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="{{ base_url }}/">Home</a><span class="sep">/</span><span>Guides</span>
+</nav>
+<header class="article-head">
+  <h1>Garden &amp; Home Project Guides</h1>
+  <p class="byline"><span>Every how-to guide, grouped by project. Filter the list to find yours.</span></p>
+</header>
+
+<div class="guides-filter">
+  <input type="search" id="guides-q" placeholder="Filter guides…" aria-label="Filter guides by title">
+</div>
+
+<div id="guides-groups">
+{% for group in groups %}
+<section class="section" aria-labelledby="gg-{{ group.id }}" data-group>
+  <div class="section-head"><h2 id="gg-{{ group.id }}">{{ group.name }}</h2>
+    <a href="{{ base_url }}/category/{{ group.id }}/">Category page →</a></div>
+  <ul class="post-list">
+    {% for a in group.entries %}
+    <li data-guide>
+      <span><a href="{{ base_url }}/{{ a.slug }}/">{{ a.title }}</a>
+        <span class="excerpt">{{ a.desc }}</span></span>
+      <span class="when">{{ a.updated }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endfor %}
+</div>
+</div>
+{% endblock %}

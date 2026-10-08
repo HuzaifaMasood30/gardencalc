@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="wrap">
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="{{ base_url }}/">Home</a><span class="sep">/</span><span>Sitemap</span>
+</nav>
+<header class="article-head">
+  <h1>Sitemap</h1>
+  <p class="byline"><span>Every page on {{ site.name }}, in one place.</span></p>
+</header>
+
+<section class="section" aria-labelledby="sm-tools">
+  <div class="section-head"><h2 id="sm-tools">Calculators</h2></div>
+  <ul class="post-list">
+    {% for a in calculators %}
+    <li><span><a href="{{ base_url }}/{{ a.slug }}/">{{ a.title }}</a></span>
+        <span class="when">{{ a.category }}</span></li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="section" aria-labelledby="sm-charts">
+  <div class="section-head"><h2 id="sm-charts">Coverage &amp; reference charts</h2></div>
+  {% include "charts_list.html" %}
+</section>
+
+{% for group in groups %}
+<section class="section" aria-labelledby="sm-{{ group.id }}">
+  <div class="section-head"><h2 id="sm-{{ group.id }}">{{ group.name }}</h2>
+    <a href="{{ base_url }}/category/{{ group.id }}/">Category page →</a></div>
+  <ul class="post-list">
+    {% for a in group.entries %}
+    <li><span><a href="{{ base_url }}/{{ a.slug }}/">{{ a.title }}</a></span>
+        <span class="when">{{ a.updated }}</span></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endfor %}
+
+<section class="section" aria-labelledby="sm-site">
+  <div class="section-head"><h2 id="sm-site">Site pages</h2></div>
+  <ul class="post-list">
+    {% for p in site_pages %}
+    <li><span><a href="{{ base_url }}/{{ p.slug }}/">{{ p.title }}</a></span></li>
+    {% endfor %}
+    <li><span><a href="{{ base_url }}/sitemap/">HTML sitemap</a></span></li>
+    <li><span><a href="{{ base_url }}/for-publishers/">Embed &amp; cite our calculators</a></span></li>
+    <li><span><a href="{{ base_url }}/rss.xml">RSS feed</a> · <a href="{{ base_url }}/sitemap.xml">XML sitemap</a></span></li>
+  </ul>
+</section>
+</div>
+{% endblock %}

@@ -43,6 +43,10 @@ def check() -> dict:
         html = p.read_text(encoding="utf-8")
         rel = "/" + p.relative_to(SITE).as_posix().replace("index.html", "")
 
+        # noindex pages (embed widgets, search, 404) are not canonical landing pages:
+        # they are allowed a description-less head and a canonical pointing elsewhere.
+        noindex = 'content="noindex' in html
+
         m = re.search(r"<title>(.*?)</title>", html, re.S)
         if not m or not m.group(1).strip():
             issues.append({"type": "missing_title", "page": rel})
@@ -51,7 +55,8 @@ def check() -> dict:
 
         d = re.search(r'name="description" content="(.*?)"', html, re.S)
         if not d or not d.group(1).strip():
-            issues.append({"type": "missing_meta_description", "page": rel})
+            if not noindex:
+                issues.append({"type": "missing_meta_description", "page": rel})
         else:
             metas.setdefault(d.group(1).strip(), []).append(rel)
             descs[rel] = d.group(1).strip()
@@ -59,7 +64,7 @@ def check() -> dict:
         c = re.search(r'rel="canonical" href="(.*?)"', html)
         if not c:
             issues.append({"type": "missing_canonical", "page": rel})
-        elif c.group(1).rstrip("/") != (base + rel.rstrip("/")):
+        elif not noindex and c.group(1).rstrip("/") != (base + rel.rstrip("/")):
             issues.append({"type": "canonical_mismatch", "page": rel,
                            "canonical": c.group(1)})
 

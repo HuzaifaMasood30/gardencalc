@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="wrap">
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="{{ base_url }}/">Home</a><span class="sep">/</span><span>For publishers</span>
+</nav>
+<header class="article-head">
+  <h1>Embed or cite our calculators</h1>
+  <p class="byline"><span>Free to use on your own site. Please keep the credit link.</span></p>
+</header>
+
+<section class="prose">
+  <p>Every {{ site.name }} calculator can be embedded in your blog, forum post or resource
+     page with a single line of HTML. The widget is small, fast and works without tracking.</p>
+
+  <h2>How to embed</h2>
+  <p>Copy the snippet below and paste it into your page where you want the calculator to
+     appear. The height is fixed so it will not shift your layout.</p>
+
+  {% for e in embeds %}
+  <h3>{{ e.title }}</h3>
+  <div class="embed-preview">
+    <a class="btn btn-ghost" href="{{ base_url }}/{{ e.calc_slug }}/">Open the {{ e.title|lower }} →</a>
+    <textarea readonly rows="3" aria-label="Embed code for {{ e.title }}"
+              onclick="this.select()">&lt;iframe src="{{ e.embed_url }}" width="100%" height="520" style="border:1px solid #e5e7eb;border-radius:12px" loading="lazy" title="{{ e.title }} by {{ site.name }}"&gt;&lt;/iframe&gt;
+&lt;p&gt;Calculator by &lt;a href="{{ base_url }}/{{ e.calc_slug }}/"&gt;{{ site.name }}&lt;/a&gt;&lt;/p&gt;</textarea>
+  </div>
+  {% endfor %}
+
+  <h2>Cite us</h2>
+  <p>If you prefer to link rather than embed, this citation line works well after a figure
+     or table:</p>
+  <p><code>Source: {{ site.name }}, "{{ site.name }} calculators", {{ base_url }}/</code></p>
+
+  <h2>Our logo</h2>
+  <p>A simple text logo is available for use alongside a link back to {{ site.name }}:</p>
+  <p><img src="{{ base_url }}/static/img/logo.svg" width="180" height="40" alt="{{ site.name }}"></p>
+  <p><a href="{{ base_url }}/static/img/logo.svg" download>Download logo (SVG)</a></p>
+
+  <h2>What we ask</h2>
+  <ul>
+    <li>Keep the visible credit link to {{ site.name }}.</li>
+    <li>Do not alter the numbers or the formula shown by the widget.</li>
+    <li>Link to the full calculator page, not a copy of the content.</li>
+  </ul>
+</section>
+</div>
+{% endblock %}

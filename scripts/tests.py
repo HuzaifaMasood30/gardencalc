@@ -131,7 +131,8 @@ def test_schema_types_present():
            "faq": [{"q": "q", "a": "a"}]}
     schemas = seolib.all_schema(art, site_config())
     types = {s["@type"] for s in schemas}
-    assert {"Article", "BreadcrumbList", "HowTo", "FAQPage"} <= types, types
+    # HowTo is deliberately not emitted; Article + Breadcrumb + FAQ are the baseline.
+    assert {"Article", "BreadcrumbList", "FAQPage"} <= types, types
 
 
 def test_sitemap_is_valid_xml():

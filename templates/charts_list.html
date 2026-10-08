@@ -1,0 +1,9 @@
+<ul class="post-list">
+  {% for ch in chart_cards %}
+  <li>
+    <span><a href="{{ base_url }}/{{ ch.slug }}/">{{ ch.title }}</a>
+      <span class="excerpt">{{ ch.description }}</span></span>
+    <span class="when">{{ ch.cluster_name }}</span>
+  </li>
+  {% endfor %}
+</ul>

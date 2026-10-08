@@ -55,9 +55,29 @@ python3 scripts/live_audit.py https://huzaifamasood30.github.io/gardencalc/
 - `scripts/indexnow.py` tries Bing's endpoint then the shared POST. It is best-effort
   and never fails the pipeline. Real fix = user verifies the site in Bing WMT.
 
+## SEO / growth layer (added)
+- `scripts/charts.py` holds 8 coverage/reference chart pages. Their numbers are derived
+  from `scripts/calculators.py`, so a chart can never disagree with its calculator.
+  Add a chart there; it is picked up by the sitemap, hubs and homepage automatically.
+- Indexable hub pages: `/calculators/`, `/guides/` (client-side filter), `/sitemap/`,
+  `/for-publishers/`. They live in `EXTRA_PAGES` in `build.py` (sitemap) and each has a
+  template. `/embed/<calc>/` widgets are noindex and canonical to the full calculator,
+  so keep them OUT of the sitemap and out of `EXTRA_PAGES`.
+- Schema: `seo.all_schema` emits Article + BreadcrumbList + FAQPage. HowTo was removed
+  (its steps were generic and not page-specific). Calculator articles also get
+  WebApplication, the homepage gets WebSite + Organization.
+- `verify.py` skips noindex pages for the meta-description and canonical checks, since
+  embed/search/404 pages are not canonical landing pages.
+- Analytics + GA4 events are documented in `docs/tracking.md`. `analytics_id` in
+  `config/site.json` (or the `ANALYTICS_ID` secret) is the single switch; empty = no
+  script, no cookies. Events: calculate_click, copy_result, print_result, share_click.
+
 ## Access notes
 - Actions Secrets API is not reachable by the agent token (403); the repo secret
   GEMINI_API_KEY must be added by the user in the GitHub UI.
+- The agent sandbox `GITHUB_TOKEN` is periodically invalid (401 Bad credentials), so
+  `git push` can fail even when the work is committed locally. When that happens, commit
+  locally and tell the user to re-authorise / push; do not force anything.
 - Google/Bing console verification and sitemap submission require the user's account.
 - A separate working PAT (not the system GITHUB_TOKEN, which gets 403) is needed to
   `workflow_dispatch`; system token can only read.

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="wrap">
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="{{ base_url }}/">Home</a><span class="sep">/</span><span>Calculators</span>
+</nav>
+<header class="article-head">
+  <h1>Home &amp; Garden Calculators</h1>
+  <p class="byline"><span>Every free calculator, grouped by project. Each one shows the formula it used.</span></p>
+</header>
+
+{% for group in groups %}
+<section class="section" aria-labelledby="g-{{ group.id }}">
+  <div class="section-head"><h2 id="g-{{ group.id }}">{{ group.name }}</h2>
+    <a href="{{ base_url }}/category/{{ group.id }}/">All {{ group.name|lower }} guides →</a></div>
+  <div class="grid a-cards">
+    {% for a in group.cards %}
+    <a class="a-card" href="{{ base_url }}/{{ a.slug }}/">
+      {% if a.thumb %}<figure><img src="{{ a.thumb }}" width="480" height="270" alt="{{ a.alt }}" loading="lazy" decoding="async"></figure>{% endif %}
+      <div class="a-card-body"><span class="tag">Calculator</span><h3>{{ a.title }}</h3><p>{{ a.desc }}</p></div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endfor %}
+
+<section class="section" aria-labelledby="charts-h">
+  <div class="section-head"><h2 id="charts-h">Coverage &amp; reference charts</h2></div>
+  {% include "charts_list.html" %}
+</section>
+</div>
+{% endblock %}

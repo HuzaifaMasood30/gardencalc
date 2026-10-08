@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="{{ site.language }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ calc.title }} — {{ site.name }}</title>
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="{{ canonical }}">
+<meta name="description" content="{{ calc.title }}: a free, embeddable calculator. Enter your numbers for an instant answer and the formula used.">
+<meta name="theme-color" content="#14532d">
+<link rel="stylesheet" href="{{ base_url }}/static/css/style.css">
+</head>
+<body class="embed-body">
+<main class="wrap embed-wrap">
+  <div class="calc">
+    <h1 class="embed-h1"><svg aria-hidden="true"><use href="#i-calc"></use></svg>{{ calc.title }}</h1>
+    <form class="calc-form" data-calc="{{ calc.key }}" aria-label="{{ calc.title }}">
+      {% for inp in calc.inputs %}
+      <label for="in-{{ inp.id }}">{{ inp.label }}
+        {% if inp.options %}
+        <select id="in-{{ inp.id }}" name="{{ inp.id }}">
+          {% for opt in inp.options %}
+          <option value="{{ opt.value }}"{% if opt.value == inp.default %} selected{% endif %}>{{ opt.label }}</option>
+          {% endfor %}
+        </select>
+        {% else %}
+        <input type="number" inputmode="decimal" id="in-{{ inp.id }}" name="{{ inp.id }}"
+               min="{{ inp.min }}" max="{{ inp.max }}" step="{{ inp.step|default('0.1') }}"
+               value="{{ inp.default }}">
+        {% endif %}
+      </label>
+      {% endfor %}
+      <button type="button" class="calc-go">Calculate</button>
+    </form>
+    <div class="calc-result" role="status" aria-live="polite"></div>
+    <p class="calc-hint">{{ calc.hint }}</p>
+  </div>
+  <p class="embed-credit">Calculator by <a href="{{ calc_url }}" target="_blank" rel="noopener">{{ site.name }}</a></p>
+</main>
+<script>window.GC_BASE={{ base_url | tojson }};</script>
+<script src="{{ base_url }}/static/js/main.js" defer></script>
+</body>
+</html>

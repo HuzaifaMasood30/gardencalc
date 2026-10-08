@@ -11,8 +11,10 @@ our servers.
 ## Analytics
 
 If analytics are enabled, we use Google Analytics to understand which pages are useful.
-Analytics data is aggregated and does not identify you personally. You can opt out with
-the [Google Analytics opt-out add-on](https://tools.google.com/dlpage/gaoptout).
+This includes aggregated interaction events such as using a calculator, copying a result
+or clicking a share button. Analytics data is aggregated and does not identify you
+personally. You can opt out with the
+[Google Analytics opt-out add-on](https://tools.google.com/dlpage/gaoptout).
 
 ## Advertising
 

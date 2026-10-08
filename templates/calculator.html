@@ -1,5 +1,5 @@
 {% if calc %}
-<div class="calc">
+<div class="calc" data-calc-shell>
   <h2><svg aria-hidden="true"><use href="#i-calc"></use></svg>{{ calc.title }}</h2>
   <p class="calc-sub">{{ calc.sub }}</p>
   <form class="calc-form" data-calc="{{ calc.key }}" aria-label="{{ calc.title }}">
@@ -21,6 +21,11 @@
     <button type="button" class="calc-go">Calculate</button>
   </form>
   <div class="calc-result" role="status" aria-live="polite"></div>
+  <div class="calc-actions">
+    <button type="button" class="calc-copy" data-act="copy">Copy result</button>
+    <button type="button" class="calc-print" data-act="print">Print</button>
+    <button type="button" class="calc-share" data-act="share">Share link</button>
+  </div>
   <p class="calc-hint">{{ calc.hint }}</p>
 </div>
 {% endif %}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="40" viewBox="0 0 180 40" role="img" aria-label="GardenCalc">
+  <rect width="40" height="40" rx="9" fill="#14532d"/>
+  <path d="M20 30V17M20 21c0-5 3.4-8.4 8.5-8.4 0 6.7-3.4 10-8.5 10ZM20 23c0-5-3.4-8.4-8.5-8.4 0 6.7 3.4 10 8.5 10Z" fill="none" stroke="#86efac" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M20 30v2.5" stroke="#ffd479" stroke-width="3" stroke-linecap="round"/>
+  <text x="50" y="26" font-family="Georgia,serif" font-size="21" fill="#14532d">GardenCalc</text>
+</svg>

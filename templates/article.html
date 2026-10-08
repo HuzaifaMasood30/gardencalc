@@ -21,6 +21,7 @@
 </header>
 
 <div class="wrap">
+{% if answer_first %}<div class="answer-first"><p>{{ answer_first }}</p></div>{% endif %}
 {% include "calculator.html" %}
 <div class="article-body">
   <div>
@@ -49,9 +50,30 @@
 
     <div class="share">
       <span>Was this helpful? Share it:</span>
-      <a href="https://www.facebook.com/sharer/sharer.php?u={{ canonical }}" rel="nofollow noopener" target="_blank">Facebook</a>
-      <a href="https://twitter.com/intent/tweet?url={{ canonical }}&text={{ article.title }}" rel="nofollow noopener" target="_blank">X</a>
-      <a href="https://www.pinterest.com/pin/create/button/?url={{ canonical }}&description={{ article.title }}" rel="nofollow noopener" target="_blank">Pinterest</a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{ canonical }}" rel="nofollow noopener" target="_blank" data-share="facebook">Facebook</a>
+      <a href="https://twitter.com/intent/tweet?url={{ canonical }}&text={{ article.title }}" rel="nofollow noopener" target="_blank" data-share="x">X</a>
+      <a href="https://www.pinterest.com/pin/create/button/?url={{ canonical }}&description={{ article.title }}" rel="nofollow noopener" target="_blank" data-share="pinterest">Pinterest</a>
+      <a href="https://www.reddit.com/submit?url={{ canonical }}&title={{ article.title }}" rel="nofollow noopener" target="_blank" data-share="reddit">Reddit</a>
+      <a href="https://wa.me/?text={{ article.title | urlencode }}%20{{ canonical | urlencode }}" rel="nofollow noopener" target="_blank" data-share="whatsapp">WhatsApp</a>
+      <button type="button" class="share-copy" data-share="copy" data-url="{{ canonical }}">Copy link</button>
+    </div>
+
+    {% if project_links %}
+    <section class="project-links" aria-labelledby="plan-heading">
+      <h2 id="plan-heading">Plan the whole project</h2>
+      <p>If this job is part of a bigger one, these calculators cover the next step:</p>
+      <ul>
+        {% for p in project_links %}
+        <li><a href="{{ base_url }}/{{ p.slug }}/">{{ p.title }}</a> — {{ p.desc }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+
+    <div class="cite">
+      <h2>Cite this page</h2>
+      <p>{{ site.name }}. "{{ article.title }}". {{ canonical }}</p>
+      <button type="button" class="share-copy" data-share="copy" data-url="{{ canonical }}">Copy citation link</button>
     </div>
 
     {% if pager.prev or pager.next %}

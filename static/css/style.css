@@ -234,6 +234,54 @@ hr{border:0;border-top:1px solid var(--line);margin:2em 0}
 .pager .next{text-align:right}
 .share{margin-top:26px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;
   font-size:.85rem;color:var(--muted)}
+.share-copy{font:inherit;font-size:.85rem;background:var(--brand-tint);color:var(--brand-dark,#14532d);
+  border:1px solid var(--line);border-radius:999px;padding:6px 12px;cursor:pointer}
+.share-copy:hover{background:var(--brand-tint-2,#dcfce7)}
+
+/* ---------- answer-first / charts / tables ---------- */
+.answer-first{background:var(--brand-tint);border-left:4px solid var(--brand,#14532d);
+  border-radius:10px;padding:14px 18px;margin:0 0 22px;font-size:1.02rem}
+.answer-first p{margin:0}
+.table-scroll{overflow-x:auto;margin:18px 0;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;white-space:nowrap}
+thead th{background:var(--brand-tint);color:var(--brand-dark,#14532d);position:sticky;top:0}
+tbody tr:nth-child(even){background:rgba(20,83,45,.03)}
+.chart-cta{margin:22px 0 10px}
+.print-actions{margin:10px 0 26px}
+.cite,.project-links{background:var(--brand-tint);border-radius:12px;padding:16px 18px;margin:26px 0}
+.cite h2,.project-links h2{font-size:1rem;margin:0 0 8px}
+.cite p{margin:0 0 10px;font-size:.9rem;word-break:break-word}
+.project-links ul{margin:0;padding-left:1.1em}
+.project-links li{margin:4px 0}
+
+/* ---------- calculator action buttons ---------- */
+.calc-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.calc-actions button{font:inherit;font-size:.85rem;background:#fff;border:1px solid var(--line);
+  border-radius:999px;padding:8px 14px;cursor:pointer;min-height:44px}
+.calc-actions button:hover{background:var(--brand-tint)}
+.guides-filter{margin:0 0 20px}
+.guides-filter input{width:100%;max-width:420px;padding:10px 12px;border:1px solid var(--line);
+  border-radius:10px;font:inherit}
+
+/* ---------- embed pages ---------- */
+.embed-body{background:#fff}
+.embed-wrap{padding:14px;max-width:760px;margin:0 auto}
+.embed-h1{font-size:1.15rem;display:flex;align-items:center;gap:8px;margin:0 0 8px}
+.embed-h1 svg{width:20px;height:20px}
+.embed-credit{margin:10px 0 0;font-size:.8rem;color:var(--muted);text-align:center}
+.embed-preview textarea{width:100%;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:.78rem;padding:10px;border:1px solid var(--line);border-radius:10px;margin:8px 0 18px}
+
+/* ---------- print / cheat sheets ---------- */
+@media print{
+  .site-header,.site-footer,.share,.calc-actions,.print-actions,.site-nav,.guides-filter,
+  .breadcrumbs,.pager,.related{display:none!important}
+  .table-scroll{overflow:visible}
+  table{font-size:11pt}
+  a{color:#000;text-decoration:none}
+  @page{margin:14mm}
+}
 
 /* ---------- category page ---------- */
 .cat-hero{background:var(--brand-tint);border-radius:var(--radius);padding:clamp(20px,3vw,30px);

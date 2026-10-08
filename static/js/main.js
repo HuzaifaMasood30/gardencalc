@@ -62,6 +62,14 @@
 
   function r(x, p) { var f = Math.pow(10, p); return Math.round((x + 1e-9) * f) / f; }
 
+  function track(name, params) {
+    try {
+      if (typeof window.gtag === "function") {
+        window.gtag("event", name, params || {});
+      }
+    } catch (e) { /* analytics must never break the page */ }
+  }
+
   function readForm(form) {
     var out = {};
     form.querySelectorAll("input, select").forEach(function (i) {
@@ -71,7 +79,41 @@
     return out;
   }
 
-  function run(form) {
+  function calcName(form) { return form.getAttribute("data-calc") || "unknown"; }
+
+  // Reflected query params keep the URL shareable while the canonical stays clean.
+  function writeQuery(form) {
+    if (!window.history || !window.history.replaceState) return;
+    var v = readForm(form);
+    var qs = Object.keys(v).map(function (k) {
+      return encodeURIComponent(k) + "=" + encodeURIComponent(v[k]);
+    }).join("&");
+    var url = location.pathname + (qs ? "?" + qs : "");
+    try { history.replaceState(null, "", url); } catch (e) { /* ignore */ }
+  }
+
+  function applyQuery(form) {
+    var p = new URLSearchParams(location.search);
+    var any = false;
+    form.querySelectorAll("input, select").forEach(function (i) {
+      if (!i.name || !p.has(i.name)) return;
+      i.value = p.get(i.name);
+      any = true;
+    });
+    return any;
+  }
+
+  function buildShareUrl(form) {
+    var v = readForm(form);
+    var qs = Object.keys(v).map(function (k) {
+      return encodeURIComponent(k) + "=" + encodeURIComponent(v[k]);
+    }).join("&");
+    return location.origin + location.pathname + (qs ? "?" + qs : "");
+  }
+
+  var LAST_RESULT = "";
+
+  function run(form, opts) {
     var key = form.getAttribute("data-calc");
     var fn = CALCS[key];
     if (!fn) return;
@@ -80,10 +122,14 @@
     var rows = fn(v);
     var box = form.parentNode.querySelector(".calc-result");
     var html = "";
+    var plain = [];
     rows.forEach(function (row) {
       html += '<div class="row"><span>' + row[0] + '</span><b>' + row[1] + "</b></div>";
+      plain.push(row[0] + ": " + row[1]);
     });
     box.innerHTML = html;
+    LAST_RESULT = plain.join("\n");
+    if (opts && opts.write !== false) writeQuery(form);
   }
 
   function initToc() {
@@ -134,6 +180,71 @@
     input.addEventListener("input", function () { run(input.value); });
   }
 
+  function initCalcActions(form) {
+    applyQuery(form);
+    run(form, { write: false });
+    var shell = form.parentNode;
+    var copy = shell.querySelector(".calc-copy");
+    var print = shell.querySelector(".calc-print");
+    var share = shell.querySelector(".calc-share");
+    if (copy) copy.addEventListener("click", function () {
+      track("copy_result", { calculator_name: calcName(form) });
+      copyText(LAST_RESULT || "GardenCalc");
+    });
+    if (print) print.addEventListener("click", function () {
+      track("print_result", { calculator_name: calcName(form) });
+      window.print();
+    });
+    if (share) share.addEventListener("click", function () {
+      track("share_click", { calculator_name: calcName(form), network: "link" });
+      var u = buildShareUrl(form);
+      copyText(u);
+      if (navigator.share) { navigator.share({ url: u }).catch(function () {}); }
+    });
+  }
+
+  function copyText(text) {
+    try {
+      if (navigator.clipboard) { navigator.clipboard.writeText(text); return; }
+    } catch (e) { /* fall through */ }
+    var ta = document.createElement("textarea");
+    ta.value = text; document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); } catch (e) {}
+    document.body.removeChild(ta);
+  }
+
+  function initShare() {
+    document.querySelectorAll("[data-share]").forEach(function (el) {
+      el.addEventListener("click", function () {
+        var net = el.getAttribute("data-share");
+        track("share_click", { network: net });
+        if (net === "copy") {
+          copyText(el.getAttribute("data-url") || location.href);
+          el.textContent = "Copied!";
+          setTimeout(function () { el.textContent = "Copy link"; }, 1500);
+        }
+      });
+    });
+  }
+
+  function initGuidesFilter() {
+    var input = document.getElementById("guides-q");
+    if (!input) return;
+    var groups = document.querySelectorAll("[data-group]");
+    input.addEventListener("input", function () {
+      var q = input.value.trim().toLowerCase();
+      groups.forEach(function (g) {
+        var shown = 0;
+        g.querySelectorAll("[data-guide]").forEach(function (li) {
+          var hit = !q || li.textContent.toLowerCase().indexOf(q) > -1;
+          li.style.display = hit ? "" : "none";
+          if (hit) shown++;
+        });
+        g.style.display = shown ? "" : "none";
+      });
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     var tog = document.querySelector(".nav-toggle");
     var nav = document.querySelector(".site-nav");
@@ -145,12 +256,17 @@
     }
     document.querySelectorAll("form.calc-form").forEach(function (form) {
       var go = form.querySelector(".calc-go");
-      if (go) go.addEventListener("click", function () { run(form); });
+      if (go) go.addEventListener("click", function () {
+        track("calculate_click", { calculator_name: calcName(form) });
+        run(form);
+      });
       form.addEventListener("input", function () { run(form); });
       form.addEventListener("change", function () { run(form); });
-      run(form);
+      initCalcActions(form);
     });
     initToc();
     initSearch();
+    initShare();
+    initGuidesFilter();
   });
 })();

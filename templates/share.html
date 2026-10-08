@@ -1,0 +1,18 @@
+{# Share bar: every link opens in a new tab with noopener. JS emits share_click events. #}
+<div class="share" aria-label="Share this page">
+  <span>Share:</span>
+  <a href="https://wa.me/?text={{ title | urlencode }}%20{{ canonical | urlencode }}"
+     target="_blank" rel="noopener noreferrer" data-share="whatsapp">WhatsApp</a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u={{ canonical | urlencode }}"
+     target="_blank" rel="noopener noreferrer" data-share="facebook">Facebook</a>
+  <a href="https://twitter.com/intent/tweet?url={{ canonical | urlencode }}&text={{ title | urlencode }}"
+     target="_blank" rel="noopener noreferrer" data-share="x">X</a>
+  <a href="https://www.pinterest.com/pin/create/button/?url={{ canonical | urlencode }}&description={{ title | urlencode }}"
+     target="_blank" rel="noopener noreferrer" data-share="pinterest">Pinterest</a>
+  <a href="https://www.reddit.com/submit?url={{ canonical | urlencode }}&title={{ title | urlencode }}"
+     target="_blank" rel="noopener noreferrer" data-share="reddit">Reddit</a>
+  <a href="mailto:?subject={{ title | urlencode }}&body={{ canonical | urlencode }}"
+     rel="noopener noreferrer" data-share="email">Email</a>
+  <button type="button" class="share-copy" data-share="copy"
+          data-url="{{ canonical }}">Copy link</button>
+</div>

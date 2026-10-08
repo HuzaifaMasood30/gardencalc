@@ -127,9 +127,47 @@ def website_schema(site: dict) -> dict:
     }
 
 
+def organization_schema(site: dict) -> dict:
+    return {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": site.get("org_name", site["name"]),
+        "url": _abs(site, "/"),
+        "logo": {"@type": "ImageObject", "url": _abs(site, site.get("org_logo", "/static/img/logo.png"))},
+    }
+
+
+def webapp_schema(title: str, url: str, description: str, site: dict) -> dict:
+    """WebApplication markup for a calculator page (the page *is* a free tool)."""
+    return {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": title,
+        "url": url,
+        "description": description,
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+        "isPartOf": {"@type": "WebSite", "name": site["name"], "url": _abs(site, "/")},
+    }
+
+
+def breadcrumb_list(items: list[tuple[str, str]], site: dict) -> dict:
+    """items: [(name, path-or-absolute-url), ...] in order. Paths are made absolute."""
+    out = []
+    for i, (name, target) in enumerate(items):
+        url = target if "://" in target else _abs(site, target)
+        out.append({"@type": "ListItem", "position": i + 1, "name": name, "item": url})
+    return {"@context": "https://schema.org", "@type": "BreadcrumbList",
+            "itemListElement": out}
+
+
 def all_schema(art: dict, site: dict, figure: str | None = None) -> list[dict]:
-    out = [article_schema(art, site, figure=figure), breadcrumb_schema(art, site),
-           howto_schema(art, site)]
+    # Article + BreadcrumbList always; FAQPage only when the article really has FAQs.
+    # HowTo is intentionally not emitted: its steps were generic text that did not match
+    # each page, and Google expects HowTo content to be fully visible on the page.
+    out = [article_schema(art, site, figure=figure), breadcrumb_schema(art, site)]
     faq = faq_schema(art)
     if faq:
         out.append(faq)
