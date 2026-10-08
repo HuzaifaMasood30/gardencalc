@@ -151,7 +151,10 @@ def check() -> dict:
 
 
 if __name__ == "__main__":
+    import sys
     r = check()
     print(json.dumps({k: v for k, v in r.items() if k != "issues"}, indent=2))
     for i in r["issues"][:40]:
         print(" -", i)
+    # Non-zero exit so CI gates (health check, deploy) actually block on a bad build.
+    sys.exit(1 if r["issues_total"] else 0)
