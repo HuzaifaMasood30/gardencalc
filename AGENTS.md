@@ -111,6 +111,25 @@ python3 scripts/live_audit.py https://huzaifamasood30.github.io/gardencalc/
 - `config/site.json:base_url` must be the real deployed URL, not a placeholder; the
   distribution reports and local builds use it directly.
 
+## Social cards (per-page OG images)
+- `images.render_og(key, title, description, static_root, cluster="")` writes a
+  1200x630 PNG card into `static/img/og/{key}.png` using the same Pillow house style
+  as the figures. It runs for every published article (key = slug), every category
+  hub (`category-<id>`) and the four landing pages in `HUB_OG_CARDS` (`hub-*`).
+- Every indexable page now points `og:image`/`twitter:image` at its own card; only
+  the homepage and non-article pages without a card fall back to `og-default.png`.
+  `og:image:alt` and `twitter:image:alt` default to the page title.
+- The `Article` schema image (and its 1200x630 dimensions) must match the real PNG.
+  The old `_generate_og_images` SVG generator was removed; nothing referenced its
+  `og-default.svg`. Do not reintroduce a card URL that is not actually written.
+
+## Redirect stubs (do not add noindex)
+- A merged/renamed stub keeps `index, follow` plus a `meta refresh` and a canonical
+  to its target. Do NOT add `noindex`: a noindexed redirecting URL can stop Google
+  consolidating the old URL's signals into the target. The only real bug found in the
+  stubs was a nested second `<main>` (base.html already provides the landmark);
+  `templates/redirect.html` now puts the refresh in `head_extra` and renders one main.
+
 ## Search page
 - `/search/` is a client-side page backed by `static/search-index.json` (both written
   by `build.py`). The homepage `WebSite` SearchAction points at `/search/?q=`; keep
