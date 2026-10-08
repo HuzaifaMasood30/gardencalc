@@ -205,18 +205,24 @@ def answer_text(art: dict) -> str:
 
 
 def _intro_paragraph(art: dict) -> str:
-    for line in art.get("body_markdown", "").split("\n"):
-        s = line.strip()
-        if s and s[0] not in "#|*-" and not s[0].isdigit() and not s.startswith(">"):
-            return s
-    return art.get("meta_description", "")
+    return art["body_markdown"].split("\n")[_intro_index(
+        art.get("body_markdown", "").split("\n")) or 0] or art.get("meta_description", "")
 
 
 def _intro_index(lines: list[str]) -> int | None:
     for i, line in enumerate(lines):
         s = line.strip()
-        if s and s[0] not in "#|*-" and not s[0].isdigit() and not s.startswith(">"):
-            return i
+        if not s or s[0] in "#|->":
+            continue
+        # A bullet ("* x") is not the intro, but a bold lead sentence ("**x**")
+        # is: only skip "*" when it is not the start of "**".
+        if s[0] == "*" and not s.startswith("**"):
+            continue
+        # Skip numbered-list items ("1. Area: ...") but not answers that merely
+        # start with a figure ("10x10 ft slab at 4 in needs ...").
+        if re.match(r"\d+[.)]\s", s):
+            continue
+        return i
     return None
 
 
@@ -531,8 +537,10 @@ def fix_article(art: dict) -> list[str]:
     if art["slug"] in SPECIAL_SLUGS:
         # The box calculator cannot model this query; keep the hand-written prose
         # and widget defaults untouched and only fill the answer box.
-        art["answer"] = answer_text(art)
-        return ["answer box (special-case page)"]
+        new = answer_text(art)
+        changed = new != art.get("answer")
+        art["answer"] = new
+        return ["answer box (special-case page)"] if changed else []
     changes: list[str] = []
     ins = headline_inputs(art)
     # Prose fixes compare against the *old* defaults, so run them before the swap.

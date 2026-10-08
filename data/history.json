@@ -761,9 +761,9 @@
   },
   {
     "date": "2026-10-08",
-    "articles": 67,
+    "articles": 68,
     "avg_seo_score": 100.0,
-    "total_words": 56063,
+    "total_words": 57280,
     "per_article": [
       {
         "slug": "mulch-calculator",
@@ -907,7 +907,23 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 716
+        "word_count": 682
+      },
+      {
+        "slug": "how-many-tiles-do-i-need-for-a-10x10-room",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 631
       },
       {
         "slug": "how-much-grass-seed-per-square-foot-overseeding",
@@ -923,7 +939,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 659
+        "word_count": 638
       },
       {
         "slug": "how-many-bags-of-concrete-do-i-need-for-a-10x10-slab",
@@ -939,7 +955,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 706
+        "word_count": 665
       },
       {
         "slug": "how-much-mulch-do-i-need-for-300-square-feet",
@@ -987,7 +1003,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 908
+        "word_count": 955
       },
       {
         "slug": "how-much-gravel-do-i-need-for-a-20x20-area",
@@ -1003,7 +1019,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 842
+        "word_count": 870
       },
       {
         "slug": "how-much-paint-do-i-need-for-a-10x10-room",
@@ -1019,7 +1035,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 695
+        "word_count": 735
       },
       {
         "slug": "how-much-grass-seed-per-square-foot-for-new-lawn",
@@ -1051,7 +1067,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 849
+        "word_count": 876
       },
       {
         "slug": "topsoil-calculator",
@@ -1195,7 +1211,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 785
+        "word_count": 826
       },
       {
         "slug": "how-many-bags-of-concrete-do-i-need-for-a-4x4-slab",
@@ -1211,7 +1227,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 788
+        "word_count": 793
       },
       {
         "slug": "how-much-mulch-do-i-need-for-1000-square-feet",
@@ -1243,7 +1259,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 784
+        "word_count": 810
       },
       {
         "slug": "how-much-gravel-do-i-need-for-a-10x12-shed",
@@ -1275,7 +1291,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 888
+        "word_count": 942
       },
       {
         "slug": "how-much-buffalo-grass-seed-per-square-foot",
@@ -1339,7 +1355,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 830
+        "word_count": 872
       },
       {
         "slug": "how-much-paint-do-i-need-for-a-room",
@@ -1371,7 +1387,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 827
+        "word_count": 883
       },
       {
         "slug": "how-much-bermuda-grass-seed-per-square-foot",
@@ -1403,7 +1419,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 766
+        "word_count": 799
       },
       {
         "slug": "how-many-bags-of-concrete-do-i-need-for-a-10x12-slab",
@@ -1419,7 +1435,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 856
+        "word_count": 884
       },
       {
         "slug": "how-much-topsoil-do-i-need-for-a-new-lawn",
@@ -1451,7 +1467,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 891
+        "word_count": 909
       },
       {
         "slug": "how-much-soil-do-i-need-for-a-raised-bed",
@@ -1467,7 +1483,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 851
+        "word_count": 896
       },
       {
         "slug": "how-much-gravel-do-i-need-for-my-walkway",
@@ -1531,7 +1547,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 749
+        "word_count": 785
       },
       {
         "slug": "how-much-topsoil-do-i-need-for-a-garden-bed",
@@ -1547,7 +1563,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 958
+        "word_count": 979
       },
       {
         "slug": "how-much-mulch-do-i-need-for-32-square-feet",
@@ -1627,7 +1643,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 959
+        "word_count": 982
       },
       {
         "slug": "how-much-topsoil-do-i-need-for-my-raised-garden-bed",
@@ -1675,7 +1691,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 830
+        "word_count": 865
       },
       {
         "slug": "how-many-tiles-do-i-need-for-a-4x4-room",
@@ -1723,7 +1739,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 801
+        "word_count": 839
       },
       {
         "slug": "how-many-bags-of-concrete-do-i-need-for-a-12x12-slab",
@@ -1819,7 +1835,7 @@
           "word_count": true,
           "calculator": true
         },
-        "word_count": 895
+        "word_count": 934
       },
       {
         "slug": "how-many-pounds-of-bermuda-grass-seed-per-square-foot",
