@@ -148,7 +148,7 @@ def build() -> dict:
     env.globals.update(base_url=base, site=site, year=YEAR,
                        nav_categories=nav_categories, calc_defs=tcfg.get("calculators", {}))
 
-    default_og = _thumb(site, published[0]) if published else _abs(site, "/static/img/og-default.svg")
+    default_og = _thumb(site, published[0]) if published else _abs(site, "/static/img/og-default.png")
 
     def common(title, description, canonical, og_type="website", og_image=None,
                schemas=None, robots=None, keywords=None):
@@ -281,6 +281,7 @@ def build() -> dict:
 
     # Generate original figures into the copied static dir so pages can link them.
     img_stats = images.generate(published, static_dest)
+    brand_stats = images.render_brand(static_dest)
     _write(static_dest / "search-index.json", json.dumps(search_index, ensure_ascii=False))
 
     # --- sitemap, robots, rss, CNAME ---

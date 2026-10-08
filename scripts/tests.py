@@ -62,6 +62,19 @@ def test_images_render_per_cluster():
         assert img is not None and img.size == (images.W, images.H), cluster
 
 
+def test_brand_assets_render():
+    import images
+    if not images.HAVE_PIL:
+        return
+    import tempfile
+    with tempfile.TemporaryDirectory() as d:
+        stats = images.render_brand(Path(d))
+        assert stats["logo"] == 1 and stats["og"] == 1
+        for name in ("logo.png", "favicon.ico", "apple-touch-icon.png", "og-default.png"):
+            p = Path(d) / "img" / name
+            assert p.exists() and p.stat().st_size > 0, name
+
+
 def test_calculator_results():
     r = calculators.compute("mulch", {"length": 20, "width": 10, "depth": 3})
     assert r["bags_2cf"] == 25, r

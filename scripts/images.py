@@ -238,6 +238,44 @@ def render_figure(art: dict, size=(W, H)):
     return img
 
 
+def render_brand(static_root: Path) -> dict:
+    """Write the publisher logo, favicon and PNG OG fallback.
+
+    These are branding assets rather than per-article figures, but they share the
+    Pillow dependency and the copied static root, so they live here.
+    """
+    if not HAVE_PIL:
+        return {"logo": 0, "favicon": 0, "og": 0}
+    img_dir = static_root / "img"
+    img_dir.mkdir(parents=True, exist_ok=True)
+    accent = CLUSTERS["mulch"][1]
+
+    logo = Image.new("RGB", (336, 336), WHITE)
+    d = ImageDraw.Draw(logo)
+    d.rounded_rectangle([0, 0, 335, 335], radius=60, fill=accent)
+    cx, cy = 168, 150
+    d.line([(cx, cy + 96), (cx, cy - 20)], fill=(134, 239, 172), width=14)
+    d.line([(cx, cy + 40), (cx + 82, cy - 30)], fill=(134, 239, 172), width=14)
+    d.line([(cx, cy + 62), (cx - 82, cy - 8)], fill=(134, 239, 172), width=14)
+    d.line([(cx, cy - 12), (cx, cy - 52)], fill=(255, 212, 121), width=16)
+    d.text((70, 268), "GardenCalc", font=_font(BOLD, 40), fill=WHITE)
+    logo.save(img_dir / "logo.png", "PNG")
+
+    logo.resize((180, 180), Image.LANCZOS).save(img_dir / "apple-touch-icon.png", "PNG")
+    logo.resize((48, 48), Image.LANCZOS).save(img_dir / "favicon.ico", "ICO")
+
+    og = Image.new("RGB", (W, H), WHITE)
+    od = ImageDraw.Draw(og)
+    od.rectangle([0, 0, W, H], fill=accent)
+    for i in range(-H, W, 46):
+        od.line([i, 0, i + 120, H], fill=(accent[0] + 18, accent[1] + 18, accent[2] + 18), width=3)
+    od.text((72, 150), "GardenCalc", font=_font(BOLD, 92), fill=WHITE)
+    od.text((74, 262), "Free home & garden calculators", font=_font(REG, 44), fill=(220, 240, 225))
+    od.text((74, 322), "and practical how-to guides", font=_font(REG, 44), fill=(220, 240, 225))
+    og.save(img_dir / "og-default.png", "PNG")
+    return {"logo": 1, "favicon": 2, "og": 1}
+
+
 def generate(published: list[dict], static_root: Path) -> dict:
     """Write fig/ and thumb/ WebP images. Returns counts for the build report."""
     if not HAVE_PIL:
