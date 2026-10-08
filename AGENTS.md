@@ -167,3 +167,27 @@ python3 scripts/live_audit.py https://huzaifamasood30.github.io/gardencalc/
   click-to-load `youtube-nocookie` facade only when a real id exists; `build.py` then
   adds `VideoObject` schema. Never add fake videos.
 
+
+
+## On-page pass (2026-10-08, second run)
+- Meta descriptions were being cut mid-sentence ("...this.", "...manufacturer's.")
+  and many sat under 140 chars. A rewrite of 40 descriptions now targets
+  140-160 display chars and always carries a concrete result (cubic yards, bags,
+  tons) or a free-tool CTA. Watch for duplicate descriptions across near-twin
+  pages; the raised-bed pair shipped an identical one and tripped verify.
+- `verify.py` flags `duplicate_meta_description`; `build.py` must be rerun after
+  any `data/articles.json` description edit before the health gate passes.
+
+## Access reality (check this before planning anything)
+- `GITHUB_TOKEN`/`GH_TOKEN` here are invalid every run: the GitHub API rejects
+  them and HTTPS push fails with "Invalid username or token". `git fetch` works
+  only because origin's URL still carries an old embedded credential with read
+  but not write scope.
+- Consequence: the agent cannot deploy. Commits accumulate locally on `main`
+  and must be pushed by the owner, or by a token with `contents:write`. Verify
+  with one `curl`, then hand off - do not loop on the push.
+- No Blogger admin session, Search Console or Analytics credential exists here.
+  IndexNow (`scripts/indexnow.py`) is available and legitimate (Bing/DuckDuckGo,
+  not Google); it currently gets 403 UserForbiddedToAccessSite because the key
+  file is served under /gardencalc/ rather than the host root, so Bing cannot
+  verify it for a project page.
