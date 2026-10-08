@@ -761,9 +761,9 @@
   },
   {
     "date": "2026-10-08",
-    "articles": 63,
+    "articles": 68,
     "avg_seo_score": 100.0,
-    "total_words": 52811,
+    "total_words": 57214,
     "per_article": [
       {
         "slug": "mulch-calculator",
@@ -1772,6 +1772,86 @@
           "calculator": true
         },
         "word_count": 768
+      },
+      {
+        "slug": "how-much-mulch-do-i-need-for-my-yard",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 839
+      },
+      {
+        "slug": "how-much-gravel-do-i-need-for-a-backfill-retaining-wall",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 866
+      },
+      {
+        "slug": "how-much-paint-do-i-need-for-a-small-bathroom",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 885
+      },
+      {
+        "slug": "how-many-tiles-do-i-need-for-a-room",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 932
+      },
+      {
+        "slug": "how-many-pounds-of-bermuda-grass-seed-per-square-foot",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 881
       }
     ]
   }

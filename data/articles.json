@@ -140,7 +140,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -236,6 +236,11 @@
         "to": "how-to-calculate-how-much-soil-for-raised-bed",
         "anchor": "how to calculate how much soil for raised bed",
         "title": "How to Calculate How Much Soil for Raised Bed"
+      },
+      {
+        "to": "how-much-mulch-do-i-need-for-my-yard",
+        "anchor": "how much mulch do i need for my yard",
+        "title": "How Much Mulch Do I Need for My Yard: Calculator & Guide"
       }
     ],
     "schema_types": [
@@ -285,7 +290,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 5 (want 3-8, 62 available)"
+          "detail": "internal links 6 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -391,6 +396,11 @@
         "to": "how-much-gravel-do-i-need-for-a-10x10-patio",
         "anchor": "how much gravel do i need for a 10x10 patio",
         "title": "How Much Gravel Do I Need for a 10x10 Patio"
+      },
+      {
+        "to": "how-much-gravel-do-i-need-for-a-backfill-retaining-wall",
+        "anchor": "how much gravel do i need for a backfill",
+        "title": "How Much Gravel Do I Need for a Backfill Retaining Wall"
       }
     ],
     "schema_types": [
@@ -440,7 +450,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -549,6 +559,11 @@
         "to": "how-much-paint-do-i-need-for-1800-sq-ft-house",
         "anchor": "how much paint do i need for 1800 sq ft house",
         "title": "How Much Paint for an 1800 Sq Ft House?"
+      },
+      {
+        "to": "how-much-paint-do-i-need-for-a-small-bathroom",
+        "anchor": "how much paint do i need for a small bathroom",
+        "title": "How Much Paint Do I Need for a Small Bathroom"
       }
     ],
     "schema_types": [
@@ -598,7 +613,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -702,6 +717,11 @@
         "to": "how-many-tiles-do-i-need-for-a-4x4-room",
         "anchor": "how many tiles do i need for a 4x4 room",
         "title": "How Many Tiles Do I Need for a 4x4 Room"
+      },
+      {
+        "to": "how-many-tiles-do-i-need-for-a-room",
+        "anchor": "how many tiles do i need for a room",
+        "title": "How Many Tiles Do I Need for a Room: Calculator & Guide"
       }
     ],
     "schema_types": [
@@ -751,7 +771,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -851,6 +871,11 @@
         "to": "how-much-bermuda-grass-seed-per-1000-square-feet",
         "anchor": "how much bermuda grass seed per 1000",
         "title": "How Much Bermuda Grass Seed Per 1000 Square Feet"
+      },
+      {
+        "to": "how-many-pounds-of-bermuda-grass-seed-per-square-foot",
+        "anchor": "how many pounds of bermuda grass seed per",
+        "title": "How Many Pounds of Bermuda Grass Seed Per Square Foot"
       }
     ],
     "schema_types": [
@@ -900,7 +925,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -1061,7 +1086,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -1222,7 +1247,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -1547,6 +1572,11 @@
         "to": "how-much-paint-do-i-need-for-1800-sq-ft-house",
         "anchor": "how much paint do i need for 1800 sq ft house",
         "title": "How Much Paint for an 1800 Sq Ft House?"
+      },
+      {
+        "to": "how-much-paint-do-i-need-for-a-small-bathroom",
+        "anchor": "how much paint do i need for a small bathroom",
+        "title": "How Much Paint Do I Need for a Small Bathroom"
       }
     ],
     "schema_types": [
@@ -1596,7 +1626,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -1700,6 +1730,11 @@
         "to": "how-many-tiles-do-i-need-for-a-4x4-room",
         "anchor": "how many tiles do i need for a 4x4 room",
         "title": "How Many Tiles Do I Need for a 4x4 Room"
+      },
+      {
+        "to": "how-many-tiles-do-i-need-for-a-room",
+        "anchor": "how many tiles do i need for a room",
+        "title": "How Many Tiles Do I Need for a Room: Calculator & Guide"
       }
     ],
     "schema_types": [
@@ -1749,7 +1784,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -1849,6 +1884,11 @@
         "to": "how-much-bermuda-grass-seed-per-1000-square-feet",
         "anchor": "how much bermuda grass seed per 1000",
         "title": "How Much Bermuda Grass Seed Per 1000 Square Feet"
+      },
+      {
+        "to": "how-many-pounds-of-bermuda-grass-seed-per-square-foot",
+        "anchor": "how many pounds of bermuda grass seed per",
+        "title": "How Many Pounds of Bermuda Grass Seed Per Square Foot"
       }
     ],
     "schema_types": [
@@ -1898,7 +1938,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -2059,7 +2099,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -2220,7 +2260,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -2429,6 +2469,11 @@
         "to": "how-much-gravel-do-i-need-for-a-10x10-patio",
         "anchor": "how much gravel do i need for a 10x10 patio",
         "title": "How Much Gravel Do I Need for a 10x10 Patio"
+      },
+      {
+        "to": "how-much-gravel-do-i-need-for-a-backfill-retaining-wall",
+        "anchor": "how much gravel do i need for a backfill",
+        "title": "How Much Gravel Do I Need for a Backfill Retaining Wall"
       }
     ],
     "schema_types": [
@@ -2478,7 +2523,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -2639,7 +2684,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -2848,6 +2893,11 @@
         "to": "how-much-gravel-do-i-need-for-a-10x10-patio",
         "anchor": "how much gravel do i need for a 10x10 patio",
         "title": "How Much Gravel Do I Need for a 10x10 Patio"
+      },
+      {
+        "to": "how-much-gravel-do-i-need-for-a-backfill-retaining-wall",
+        "anchor": "how much gravel do i need for a backfill",
+        "title": "How Much Gravel Do I Need for a Backfill Retaining Wall"
       }
     ],
     "schema_types": [
@@ -2897,7 +2947,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3006,6 +3056,11 @@
         "to": "how-much-paint-do-i-need-for-1800-sq-ft-house",
         "anchor": "how much paint do i need for 1800 sq ft house",
         "title": "How Much Paint for an 1800 Sq Ft House?"
+      },
+      {
+        "to": "how-much-paint-do-i-need-for-a-small-bathroom",
+        "anchor": "how much paint do i need for a small bathroom",
+        "title": "How Much Paint Do I Need for a Small Bathroom"
       }
     ],
     "schema_types": [
@@ -3023,7 +3078,7 @@
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.07 vs how-much-paint-do-i-need-for-1800-sq-ft-house"
+          "detail": "max similarity 0.09 vs how-much-paint-do-i-need-for-a-small-bathroom"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -3055,7 +3110,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3155,6 +3210,11 @@
         "to": "how-much-bermuda-grass-seed-per-1000-square-feet",
         "anchor": "how much bermuda grass seed per 1000",
         "title": "How Much Bermuda Grass Seed Per 1000 Square Feet"
+      },
+      {
+        "to": "how-many-pounds-of-bermuda-grass-seed-per-square-foot",
+        "anchor": "how many pounds of bermuda grass seed per",
+        "title": "How Many Pounds of Bermuda Grass Seed Per Square Foot"
       }
     ],
     "schema_types": [
@@ -3204,7 +3264,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3365,7 +3425,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3516,7 +3576,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 3 (want 3-8, 62 available)"
+          "detail": "internal links 3 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3670,7 +3730,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 4 (want 3-8, 62 available)"
+          "detail": "internal links 4 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3831,7 +3891,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3976,7 +4036,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 5 (want 3-8, 62 available)"
+          "detail": "internal links 5 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -4082,6 +4142,11 @@
         "to": "how-much-gravel-do-i-need-for-a-10x10-patio",
         "anchor": "how much gravel do i need for a 10x10 patio",
         "title": "How Much Gravel Do I Need for a 10x10 Patio"
+      },
+      {
+        "to": "how-much-gravel-do-i-need-for-a-backfill-retaining-wall",
+        "anchor": "how much gravel do i need for a backfill",
+        "title": "How Much Gravel Do I Need for a Backfill Retaining Wall"
       }
     ],
     "schema_types": [
@@ -4131,7 +4196,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -4240,6 +4305,11 @@
         "to": "how-much-paint-do-i-need-for-1800-sq-ft-house",
         "anchor": "how much paint do i need for 1800 sq ft house",
         "title": "How Much Paint for an 1800 Sq Ft House?"
+      },
+      {
+        "to": "how-much-paint-do-i-need-for-a-small-bathroom",
+        "anchor": "how much paint do i need for a small bathroom",
+        "title": "How Much Paint Do I Need for a Small Bathroom"
       }
     ],
     "schema_types": [
@@ -4257,7 +4327,7 @@
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.12 vs how-much-paint-do-i-need-for-1800-sq-ft-house"
+          "detail": "max similarity 0.16 vs how-much-paint-do-i-need-for-a-small-bathroom"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -4289,7 +4359,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -4393,6 +4463,11 @@
         "to": "how-many-tiles-do-i-need-for-a-4x4-room",
         "anchor": "how many tiles do i need for a 4x4 room",
         "title": "How Many Tiles Do I Need for a 4x4 Room"
+      },
+      {
+        "to": "how-many-tiles-do-i-need-for-a-room",
+        "anchor": "how many tiles do i need for a room",
+        "title": "How Many Tiles Do I Need for a Room: Calculator & Guide"
       }
     ],
     "schema_types": [
@@ -4442,7 +4517,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -4547,6 +4622,11 @@
         "to": "how-much-bermuda-grass-seed-per-1000-square-feet",
         "anchor": "how much bermuda grass seed per 1000",
         "title": "How Much Bermuda Grass Seed Per 1000 Square Feet"
+      },
+      {
+        "to": "how-many-pounds-of-bermuda-grass-seed-per-square-foot",
+        "anchor": "how many pounds of bermuda grass seed per",
+        "title": "How Many Pounds of Bermuda Grass Seed Per Square Foot"
       }
     ],
     "schema_types": [
@@ -4875,6 +4955,11 @@
         "to": "how-much-paint-do-i-need-for-1800-sq-ft-house",
         "anchor": "how much paint do i need for 1800 sq ft house",
         "title": "How Much Paint for an 1800 Sq Ft House?"
+      },
+      {
+        "to": "how-much-paint-do-i-need-for-a-small-bathroom",
+        "anchor": "how much paint do i need for a small bathroom",
+        "title": "How Much Paint Do I Need for a Small Bathroom"
       }
     ],
     "schema_types": [
@@ -4924,7 +5009,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -5028,6 +5113,11 @@
         "to": "how-many-tiles-do-i-need-for-a-4x4-room",
         "anchor": "how many tiles do i need for a 4x4 room",
         "title": "How Many Tiles Do I Need for a 4x4 Room"
+      },
+      {
+        "to": "how-many-tiles-do-i-need-for-a-room",
+        "anchor": "how many tiles do i need for a room",
+        "title": "How Many Tiles Do I Need for a Room: Calculator & Guide"
       }
     ],
     "schema_types": [
@@ -5077,7 +5167,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -5182,6 +5272,11 @@
         "to": "how-much-bermuda-grass-seed-per-1000-square-feet",
         "anchor": "how much bermuda grass seed per 1000",
         "title": "How Much Bermuda Grass Seed Per 1000 Square Feet"
+      },
+      {
+        "to": "how-many-pounds-of-bermuda-grass-seed-per-square-foot",
+        "anchor": "how many pounds of bermuda grass seed per",
+        "title": "How Many Pounds of Bermuda Grass Seed Per Square Foot"
       }
     ],
     "schema_types": [
@@ -5441,7 +5536,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -5602,7 +5697,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -5747,7 +5842,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 5 (want 3-8, 62 available)"
+          "detail": "internal links 5 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -5853,6 +5948,11 @@
         "to": "how-much-gravel-do-i-need-for-a-10x10-patio",
         "anchor": "how much gravel do i need for a 10x10 patio",
         "title": "How Much Gravel Do I Need for a 10x10 Patio"
+      },
+      {
+        "to": "how-much-gravel-do-i-need-for-a-backfill-retaining-wall",
+        "anchor": "how much gravel do i need for a backfill",
+        "title": "How Much Gravel Do I Need for a Backfill Retaining Wall"
       }
     ],
     "schema_types": [
@@ -5870,7 +5970,7 @@
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.10 vs how-much-gravel-do-i-need-for-a-10x10-patio"
+          "detail": "max similarity 0.10 vs how-much-gravel-do-i-need-for-a-backfill-retaining-wall"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -5902,7 +6002,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6122,6 +6222,11 @@
         "to": "how-many-tiles-do-i-need-for-a-4x4-room",
         "anchor": "how many tiles do i need for a 4x4 room",
         "title": "How Many Tiles Do I Need for a 4x4 Room"
+      },
+      {
+        "to": "how-many-tiles-do-i-need-for-a-room",
+        "anchor": "how many tiles do i need for a room",
+        "title": "How Many Tiles Do I Need for a Room: Calculator & Guide"
       }
     ],
     "schema_types": [
@@ -6171,7 +6276,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6271,6 +6376,11 @@
         "to": "how-much-bermuda-grass-seed-per-1000-square-feet",
         "anchor": "how much bermuda grass seed per 1000",
         "title": "How Much Bermuda Grass Seed Per 1000 Square Feet"
+      },
+      {
+        "to": "how-many-pounds-of-bermuda-grass-seed-per-square-foot",
+        "anchor": "how many pounds of bermuda grass seed per",
+        "title": "How Many Pounds of Bermuda Grass Seed Per Square Foot"
       }
     ],
     "schema_types": [
@@ -6320,7 +6430,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6458,7 +6568,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 4 (want 3-8, 62 available)"
+          "detail": "internal links 4 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6619,7 +6729,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6857,7 +6967,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 5 (want 3-8, 62 available)"
+          "detail": "internal links 5 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6966,6 +7076,11 @@
         "to": "how-much-paint-do-i-need-for-1800-sq-ft-house",
         "anchor": "how much paint do i need for 1800 sq ft house",
         "title": "How Much Paint for an 1800 Sq Ft House?"
+      },
+      {
+        "to": "how-much-paint-do-i-need-for-a-small-bathroom",
+        "anchor": "how much paint do i need for a small bathroom",
+        "title": "How Much Paint Do I Need for a Small Bathroom"
       }
     ],
     "schema_types": [
@@ -7015,7 +7130,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -7119,6 +7234,11 @@
         "to": "how-many-tiles-do-i-need-for-a-4x4-room",
         "anchor": "how many tiles do i need for a 4x4 room",
         "title": "How Many Tiles Do I Need for a 4x4 Room"
+      },
+      {
+        "to": "how-many-tiles-do-i-need-for-a-room",
+        "anchor": "how many tiles do i need for a room",
+        "title": "How Many Tiles Do I Need for a Room: Calculator & Guide"
       }
     ],
     "schema_types": [
@@ -7168,7 +7288,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -7268,6 +7388,11 @@
         "to": "how-much-bermuda-grass-seed-per-1000-square-feet",
         "anchor": "how much bermuda grass seed per 1000",
         "title": "How Much Bermuda Grass Seed Per 1000 Square Feet"
+      },
+      {
+        "to": "how-many-pounds-of-bermuda-grass-seed-per-square-foot",
+        "anchor": "how many pounds of bermuda grass seed per",
+        "title": "How Many Pounds of Bermuda Grass Seed Per Square Foot"
       }
     ],
     "schema_types": [
@@ -7317,7 +7442,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -7455,7 +7580,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 4 (want 3-8, 62 available)"
+          "detail": "internal links 4 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -7616,7 +7741,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -7767,7 +7892,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 3 (want 3-8, 62 available)"
+          "detail": "internal links 3 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -7928,7 +8053,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -8073,7 +8198,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 5 (want 3-8, 62 available)"
+          "detail": "internal links 5 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -8179,6 +8304,11 @@
         "to": "how-much-gravel-do-i-need-for-a-10x10-patio",
         "anchor": "how much gravel do i need for a 10x10 patio",
         "title": "How Much Gravel Do I Need for a 10x10 Patio"
+      },
+      {
+        "to": "how-much-gravel-do-i-need-for-a-backfill-retaining-wall",
+        "anchor": "how much gravel do i need for a backfill",
+        "title": "How Much Gravel Do I Need for a Backfill Retaining Wall"
       }
     ],
     "schema_types": [
@@ -8228,7 +8358,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -8337,6 +8467,11 @@
         "to": "how-much-paint-do-i-need-for-1800-sq-ft-house",
         "anchor": "how much paint do i need for 1800 sq ft house",
         "title": "How Much Paint for an 1800 Sq Ft House?"
+      },
+      {
+        "to": "how-much-paint-do-i-need-for-a-small-bathroom",
+        "anchor": "how much paint do i need for a small bathroom",
+        "title": "How Much Paint Do I Need for a Small Bathroom"
       }
     ],
     "schema_types": [
@@ -8386,7 +8521,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -8495,6 +8630,11 @@
         "to": "how-many-tiles-do-i-need-for-a-4x4-room",
         "anchor": "how many tiles do i need for a 4x4 room",
         "title": "How Many Tiles Do I Need for a 4x4 Room"
+      },
+      {
+        "to": "how-many-tiles-do-i-need-for-a-room",
+        "anchor": "how many tiles do i need for a room",
+        "title": "How Many Tiles Do I Need for a Room: Calculator & Guide"
       }
     ],
     "schema_types": [
@@ -8602,6 +8742,11 @@
         "to": "how-much-bermuda-grass-seed-per-1000-square-feet",
         "anchor": "how much bermuda grass seed per 1000",
         "title": "How Much Bermuda Grass Seed Per 1000 Square Feet"
+      },
+      {
+        "to": "how-many-pounds-of-bermuda-grass-seed-per-square-foot",
+        "anchor": "how many pounds of bermuda grass seed per",
+        "title": "How Many Pounds of Bermuda Grass Seed Per Square Foot"
       }
     ],
     "schema_types": [
@@ -8758,7 +8903,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 4 (want 3-8, 62 available)"
+          "detail": "internal links 4 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -8919,7 +9064,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -9054,7 +9199,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 3 (want 3-8, 62 available)"
+          "detail": "internal links 3 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -9215,7 +9360,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -9321,6 +9466,11 @@
         "to": "how-much-gravel-do-i-need-for-a-10x10-patio",
         "anchor": "how much gravel do i need for a 10x10 patio",
         "title": "How Much Gravel Do I Need for a 10x10 Patio"
+      },
+      {
+        "to": "how-much-gravel-do-i-need-for-a-backfill-retaining-wall",
+        "anchor": "how much gravel do i need for a backfill",
+        "title": "How Much Gravel Do I Need for a Backfill Retaining Wall"
       }
     ],
     "schema_types": [
@@ -9370,7 +9520,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -9479,6 +9629,11 @@
         "to": "how-much-paint-do-i-need-for-a-12x16-shed",
         "anchor": "how much paint do i need for a 12x16 shed",
         "title": "How Much Paint Do I Need for a 12x16 Shed"
+      },
+      {
+        "to": "how-much-paint-do-i-need-for-a-small-bathroom",
+        "anchor": "how much paint do i need for a small bathroom",
+        "title": "How Much Paint Do I Need for a Small Bathroom"
       }
     ],
     "schema_types": [
@@ -9528,7 +9683,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -9637,6 +9792,11 @@
         "to": "how-many-tiles-do-i-need-for-a-4x4-room",
         "anchor": "how many tiles do i need for a 4x4 room",
         "title": "How Many Tiles Do I Need for a 4x4 Room"
+      },
+      {
+        "to": "how-many-tiles-do-i-need-for-a-room",
+        "anchor": "how many tiles do i need for a room",
+        "title": "How Many Tiles Do I Need for a Room: Calculator & Guide"
       }
     ],
     "schema_types": [
@@ -9739,6 +9899,11 @@
         "to": "how-much-bermuda-grass-seed-per-1000-square-feet",
         "anchor": "how much bermuda grass seed per 1000",
         "title": "How Much Bermuda Grass Seed Per 1000 Square Feet"
+      },
+      {
+        "to": "how-many-pounds-of-bermuda-grass-seed-per-square-foot",
+        "anchor": "how many pounds of bermuda grass seed per",
+        "title": "How Many Pounds of Bermuda Grass Seed Per Square Foot"
       }
     ],
     "schema_types": [
@@ -9788,7 +9953,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -10045,7 +10210,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -10180,7 +10345,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 3 (want 3-8, 62 available)"
+          "detail": "internal links 3 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -10444,7 +10609,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -10550,6 +10715,11 @@
         "to": "how-much-gravel-do-i-need-for-a-driveway",
         "anchor": "how much gravel do i need for a driveway",
         "title": "How Much Gravel Do I Need for a Driveway"
+      },
+      {
+        "to": "how-much-gravel-do-i-need-for-a-backfill-retaining-wall",
+        "anchor": "how much gravel do i need for a backfill",
+        "title": "How Much Gravel Do I Need for a Backfill Retaining Wall"
       }
     ],
     "schema_types": [
@@ -10599,7 +10769,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -10819,6 +10989,11 @@
         "to": "how-many-tiles-do-i-need-for-120-square-feet",
         "anchor": "how many tiles do i need for 120 square feet",
         "title": "How Many Tiles Do I Need for 120 Square Feet"
+      },
+      {
+        "to": "how-many-tiles-do-i-need-for-a-room",
+        "anchor": "how many tiles do i need for a room",
+        "title": "How Many Tiles Do I Need for a Room: Calculator & Guide"
       }
     ],
     "schema_types": [
@@ -10868,7 +11043,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -10968,6 +11143,11 @@
         "to": "how-much-grass-seed-do-i-need-per-square-foot",
         "anchor": "how much grass seed do i need per square foot",
         "title": "How Much Grass Seed Do I Need Per Square Foot"
+      },
+      {
+        "to": "how-many-pounds-of-bermuda-grass-seed-per-square-foot",
+        "anchor": "how many pounds of bermuda grass seed per",
+        "title": "How Many Pounds of Bermuda Grass Seed Per Square Foot"
       }
     ],
     "schema_types": [
@@ -11017,7 +11197,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 62 available)"
+          "detail": "internal links 7 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -11155,7 +11335,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 4 (want 3-8, 62 available)"
+          "detail": "internal links 4 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -11316,7 +11496,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 62 available)"
+          "detail": "internal links 8 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -11461,7 +11641,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 5 (want 3-8, 62 available)"
+          "detail": "internal links 5 (want 3-8, 67 available)"
         },
         "schema_present": {
           "pass": true,
@@ -11573,5 +11753,801 @@
     },
     "word_count": 777,
     "merged_into": "topsoil-calculator"
+  },
+  {
+    "id": "how-much-mulch-do-i-need-for-my-yard",
+    "slug": "how-much-mulch-do-i-need-for-my-yard",
+    "title": "How Much Mulch Do I Need for My Yard: Calculator & Guide",
+    "cluster": "mulch",
+    "primary_keyword": "how much mulch do i need for my yard",
+    "secondary_keywords": [
+      "how much mulch do i need for 500 sq ft",
+      "how much mulch do i need for 300 square feet",
+      "how much mulch do i need for 200 square feet",
+      "how much mulch do i need for 400 square feet",
+      "how much mulch do i need for my flower bed"
+    ],
+    "intent": "calculator",
+    "is_pillar": false,
+    "calculator": "mulch",
+    "calculator_title": "Mulch Calculator",
+    "calculator_defaults": {
+      "length": 20,
+      "width": 10,
+      "depth": 3
+    },
+    "calculator_output": {
+      "square_feet": 200.0,
+      "cubic_feet": 50.0,
+      "cubic_yards": 1.85,
+      "bags_2cf": 25
+    },
+    "meta_description": "To determine how much mulch you need for your yard, calculate the total square footage of your beds and multiply it by your desired depth in feet.",
+    "body_markdown": "To determine how much mulch you need for your yard, calculate the total square footage of your beds and multiply it by your desired depth in feet. Most residential landscapes require between 2 and 3 inches of mulch to effectively suppress weeds and retain soil moisture.\n\n## How to Calculate Mulch\n\nTo find the exact amount of material required for your flower bed, you must calculate the volume of the space you intend to cover. Follow these steps:\n\n1. Measure the length and width of the area in feet.\n2. Multiply length by width to get the total square footage.\n3. Decide on your desired depth. For most projects, 3 inches (or 0.25 feet) is the standard.\n4. Multiply your square footage by the depth in feet to get the total cubic feet required.\n5. Divide the total cubic feet by 27 to convert the measurement into cubic yards.\n\n### Worked Example\n\nIf you are working on a project that measures 20 feet by 10 feet and you want a depth of 3 inches, here is how the math breaks down:\n\n*   Square Feet: 200.0\n*   Cubic Feet: 50.0\n*   Cubic Yards: 1.85\n*   Bags (2 cubic feet each): 25\n\nWhen purchasing, always round up to the nearest whole bag or half-yard to account for minor measurement errors or uneven terrain.\n\n## How Much You Need at Common Sizes\n\nUse the following table to estimate your needs based on a standard 3-inch depth application.\n\n| Job size | Cubic feet | Cubic yards | 2 cu ft bags |\n|---|---|---|---|\n| 200 sq ft | 50.0 | 1.85 | 25 |\n| 300 sq ft | 75.0 | 2.78 | 38 |\n| 400 sq ft | 100.0 | 3.70 | 50 |\n| 500 sq ft | 125.0 | 4.63 | 63 |\n\n## Choosing the Right Material\n\nThe type of mulch you choose impacts both the health of your soil and the frequency with which you will need to reapply it.\n\n### Shredded Hardwood\nThis is a popular choice for borders and formal landscapes. It settles well, forming a dense mat that resists washing away during heavy rain. It is long-lasting and provides a clean, finished look.\n\n### Pine Bark\nPine bark is aesthetically pleasing and slower to break down than hardwood. It is an excellent choice for acid-loving plants, as it can slightly lower the soil pH as it decomposes.\n\n### Straw\nStraw is lightweight and inexpensive, making it the preferred choice for vegetable beds. It is easy to move and rake, though it does not provide the same aesthetic longevity as wood-based mulches.\n\n### Compost\nCompost is the most beneficial option for soil health. It is rich in nutrients and feeds your plants as it breaks down. Because it is highly organic, it decomposes the fastest and may require more frequent replenishment than wood chips or bark.\n\n## Practical Tips for Application\n\nProper technique is just as important as the quantity of mulch you apply.\n\n*   **Prepare the soil:** Water your flower bed thoroughly before applying mulch. This ensures the soil underneath has adequate moisture before you seal it off with a protective layer.\n*   **Clear the stems:** Never pile mulch directly against the trunks of trees or the stems of your flowers. Keep a gap of a few inches to allow for airflow; otherwise, the trapped moisture can lead to rot and disease.\n*   **Layering strategy:** Avoid the temptation to apply a massive amount of mulch all at once. It is better to reapply a thin layer each spring to refresh the appearance and suppress new weeds rather than piling on 5 or 6 inches of material.\n*   **Depth guidelines:** Use 1–2 inches for refreshing thin beds or around shallow-rooted plants. Use 2–3 inches for standard flower beds and borders. If you are starting a new bed from scratch or battling a heavy weed infestation, 3–4 inches will provide the necessary suppression. Avoid exceeding 4 inches, as this can create a barrier that prevents water from reaching the root zone.\n\n## Common Mistakes to Avoid\n\nThe most frequent error homeowners make is over-calculating the depth. Applying too much mulch creates a thick, impenetrable mat that can prevent oxygen from reaching the roots of your plants. This can lead to yellowing leaves and stunted growth.\n\nAnother common mistake is failing to clear existing weeds before mulching. While mulch suppresses weed seeds by blocking sunlight, it will not kill deep-rooted perennial weeds. Pull these by hand or remove them before spreading your new layer.\n\nFinally, do not rely on \"volcano mulching,\" which is the practice of mounding mulch high up against the base of a tree trunk. This traps moisture against the bark, inviting insects and fungal decay. Always keep the mulch level lower near the plant stems and thicker toward the edges of the bed.\n\nBy measuring your yard accurately and choosing the right material for your specific garden needs, you can create a healthy environment for your plants while minimizing the time you spend on maintenance. Whether you are covering 200 square feet or 500 square feet, following these guidelines will help ensure you order the correct amount of material for the job.",
+    "faq": [
+      {
+        "q": "How deep should mulch be?",
+        "a": "Two to three inches for most beds. More than four inches can hold too much moisture against stems."
+      },
+      {
+        "q": "How many bags of mulch is a cubic yard?",
+        "a": "Thirteen and a half 2-cubic-foot bags, since a cubic yard is 27 cubic feet."
+      },
+      {
+        "q": "When is the best time to mulch?",
+        "a": "Early spring, after the soil has warmed, and again in autumn if you want winter protection."
+      },
+      {
+        "q": "Does mulch prevent weeds?",
+        "a": "It suppresses most weeds if the layer is at least two inches deep and kept clear of plant stems."
+      }
+    ],
+    "status": "approved",
+    "created": "2026-10-08",
+    "updated": "2026-10-08",
+    "revision": 1,
+    "internal_links": [
+      {
+        "to": "mulch-calculator",
+        "anchor": "how much mulch do i need",
+        "title": "Mulch Calculator: How Much Mulch Do You Need?"
+      },
+      {
+        "to": "how-much-mulch-do-i-need-for-500-sq-ft",
+        "anchor": "how much mulch do i need for 500 sq ft",
+        "title": "How Much Mulch for 500 Sq Ft? Yards and Bags"
+      },
+      {
+        "to": "how-much-mulch-do-i-need-for-300-square-feet",
+        "anchor": "how much mulch do i need for 300 square feet",
+        "title": "How Much Mulch Do I Need for 300 Square Feet"
+      },
+      {
+        "to": "how-much-mulch-do-i-need-for-200-square-feet",
+        "anchor": "how much mulch do i need for 200 square feet",
+        "title": "How Much Mulch Do I Need for 200 Square Feet"
+      },
+      {
+        "to": "how-much-mulch-do-i-need-for-400-square-feet",
+        "anchor": "how much mulch do i need for 400 square feet",
+        "title": "How Much Mulch Do I Need for 400 Square Feet"
+      },
+      {
+        "to": "how-much-mulch-do-i-need-for-1000-square-feet",
+        "anchor": "how much mulch do i need for 1000 square feet",
+        "title": "How Much Mulch Do I Need for 1000 Square Feet"
+      },
+      {
+        "to": "how-much-mulch-do-i-need-for-600-square-feet",
+        "anchor": "how much mulch do i need for 600 square feet",
+        "title": "How Much Mulch Do I Need for 600 Square Feet"
+      },
+      {
+        "to": "how-much-mulch-do-i-need-for-32-square-feet",
+        "anchor": "how much mulch do i need for 32 square feet",
+        "title": "How Much Mulch Do I Need for 32 Square Feet"
+      }
+    ],
+    "schema_types": [
+      "Article",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "quality": {
+      "score": 100.0,
+      "passed": true,
+      "gates": {
+        "thin_content": {
+          "pass": true,
+          "detail": "word count 839 (min 600)"
+        },
+        "duplicate_content": {
+          "pass": true,
+          "detail": "max similarity 0.14 vs how-much-mulch-do-i-need-for-my-flower-bed"
+        },
+        "keyword_stuffing": {
+          "pass": true,
+          "detail": "keyword density 0.00%"
+        },
+        "ai_cliches": {
+          "pass": true,
+          "detail": "cliches: none"
+        },
+        "readability": {
+          "pass": true,
+          "detail": "avg sentence length 14.3 words"
+        },
+        "heading_structure": {
+          "pass": true,
+          "detail": "h2=5 h3=5 (no h1 in body)"
+        },
+        "has_calculator_or_data": {
+          "pass": true,
+          "detail": "has calculator + computed output"
+        },
+        "meta_length": {
+          "pass": true,
+          "detail": "meta length 146"
+        },
+        "title_length": {
+          "pass": true,
+          "detail": "title length 56"
+        },
+        "internal_links": {
+          "pass": true,
+          "detail": "internal links 8 (want 3-8, 67 available)"
+        },
+        "schema_present": {
+          "pass": true,
+          "detail": "schema: ['Article', 'BreadcrumbList', 'FAQPage']"
+        },
+        "alt_text": {
+          "pass": true,
+          "detail": "hero alt derivable from title"
+        }
+      }
+    },
+    "metrics": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": 0
+    },
+    "word_count": 839
+  },
+  {
+    "id": "how-much-gravel-do-i-need-for-a-backfill-retaining-wall",
+    "slug": "how-much-gravel-do-i-need-for-a-backfill-retaining-wall",
+    "title": "How Much Gravel Do I Need for a Backfill Retaining Wall",
+    "cluster": "gravel",
+    "primary_keyword": "how much gravel do i need for a backfill retaining wall",
+    "secondary_keywords": [
+      "how much gravel do i need for my driveway",
+      "how much gravel do i need for a french drain",
+      "how much gravel do i need for a 20x20 area",
+      "how much gravel do i need per square metre",
+      "how much gravel do i need for a 10x12 shed"
+    ],
+    "intent": "calculator",
+    "is_pillar": false,
+    "calculator": "gravel",
+    "calculator_title": "Gravel Calculator",
+    "calculator_defaults": {
+      "length": 20,
+      "width": 10,
+      "depth": 3
+    },
+    "calculator_output": {
+      "square_feet": 200.0,
+      "cubic_yards": 1.85,
+      "tons": 2.59
+    },
+    "meta_description": "To determine how much gravel you need for a backfill retaining wall, multiply the length, width, and depth of the drainage trench behind the wall to find.",
+    "body_markdown": "To determine how much gravel you need for a backfill retaining wall, multiply the length, width, and depth of the drainage trench behind the wall to find the cubic footage, then divide by 27 to convert that volume into cubic yards. Most retaining walls require a drainage zone at least 12 inches wide filled with 3/4-inch crushed stone to prevent hydrostatic pressure from pushing the wall over.\n\n## How to Calculate Gravel\n\nTo get an accurate estimate for any project, you need to calculate the volume of the space you are filling. Whether you are figuring out how much gravel you need for a 10x12 shed base or calculating material for a garden path, the math remains the same.\n\n1. Measure the length, width, and depth of your area in feet.\n2. Multiply these three numbers together to get the total cubic feet.\n3. Divide the cubic feet by 27 to convert the volume into cubic yards, as most suppliers sell gravel by the yard.\n4. To find the weight in tons, multiply your cubic yardage by 1.4, as a cubic yard of 3/4-inch crushed stone typically weighs about 1.4 tons.\n\n### Worked Example\n\nIf you are filling a space that is 20 feet long and 10 feet wide with a depth of 3 inches (0.25 feet), the calculation looks like this:\n\n*   Square Feet: 200.0\n*   Cubic Yards: 1.85\n*   Tons: 2.59\n\nBy using these figures, you can order your materials with confidence. Always round up slightly to account for spillage or uneven ground.\n\n## How Much You Need at Common Sizes\n\nUse this reference table to quickly estimate materials for standard project sizes. These calculations assume a standard density for crushed stone.\n\n| Job size | Cubic yards | Tons |\n|---|---|---|\n| 100 sq ft, 3 in deep | 0.93 | 1.3 |\n| 200 sq ft, 3 in deep | 1.85 | 2.59 |\n| 400 sq ft, 4 in deep | 4.94 | 6.91 |\n| 600 sq ft, 4 in deep | 7.41 | 10.37 |\n\n## Choosing the Right Gravel\n\nThe type of gravel you choose dictates how the material performs over time. \n\n3/4-inch crushed stone is the industry standard for backfill, driveways, and base layers. Its angular shape allows the stones to lock together, providing excellent stability and drainage. If you are wondering how much gravel you need for your driveway, this is the most reliable material to use.\n\nPea gravel features small, rounded stones. Because the stones do not lock together, they shift easily underfoot. This makes it a poor choice for heavy traffic areas but an excellent option for decorative paths or play areas.\n\nRiver rock offers a smooth, natural aesthetic. It is best suited for dry creek beds or as a decorative border around flower beds. Because of its rounded edges, it does not compact well and should not be used as a structural base.\n\nDecomposed granite is a finer material that compacts very firmly. It is ideal for patios and walking paths where you want a surface that feels more like a solid floor than loose stone.\n\n## Planning Your Project\n\nBefore you begin hauling stone, prepare the site properly. Laying high-quality landscape fabric is a vital step. This barrier prevents your gravel from sinking into the underlying soil over time, which keeps your layers clean and prevents weeds from pushing through.\n\nIf you are calculating how much gravel you need for a 20x20 area, remember that depth is the most important factor. For light footpaths, 2 inches is sufficient. For a garden path or a patio base, 3 inches is standard. If you are planning a light driveway, 4 inches is recommended, and for areas with regular vehicle traffic, you should aim for 6 inches of depth.\n\nIf you are installing a French drain, the volume of gravel depends on the width of your trench. You generally need enough gravel to surround the perforated pipe by at least 6 inches on all sides. When asking how much gravel you need for a French drain, measure your trench length and multiply by the width and depth of the gravel-filled zone.\n\n## Common Mistakes to Avoid\n\nThe most common error is failing to account for compaction. If you dump 6 inches of gravel into a driveway area all at once, the bottom layer will remain loose. Instead, compact the material in two thinner layers. This creates a much firmer, more durable surface.\n\nAnother frequent oversight is the lack of a border. Without a solid edge, such as pressure-treated lumber, steel, or stone pavers, gravel will migrate into your lawn or flower beds every time it rains or when you walk on it. A simple border saves you from having to rake the stone back into place periodically.\n\nFinally, do not underestimate the weight of the material. If you are having gravel delivered, ensure the truck has a clear path to the drop zone. If you are picking it up yourself, check your vehicle’s payload capacity. A ton of gravel is heavy, and exceeding your truck’s limit can cause significant damage to the suspension or frame. Always confirm the delivery truck’s dimensions if you have narrow gates or overhanging tree branches that might obstruct the path.",
+    "faq": [
+      {
+        "q": "How much does a cubic yard of gravel weigh?",
+        "a": "Roughly 1.4 tons for 3/4-inch crushed stone, though it varies by stone type."
+      },
+      {
+        "q": "How deep should gravel be for a driveway?",
+        "a": "Four inches compacted for a light drive, six inches for regular vehicle traffic."
+      },
+      {
+        "q": "Can I put gravel directly on soil?",
+        "a": "Yes for paths, but lay landscape fabric first to stop the gravel sinking into the soil."
+      },
+      {
+        "q": "How many tons of gravel in a cubic yard?",
+        "a": "About 1.3 to 1.5 tons depending on the stone, with 1.4 tons a good default."
+      }
+    ],
+    "status": "approved",
+    "created": "2026-10-08",
+    "updated": "2026-10-08",
+    "revision": 1,
+    "internal_links": [
+      {
+        "to": "gravel-calculator",
+        "anchor": "how much gravel do i need",
+        "title": "Gravel Calculator: How Much Gravel Do You Need?"
+      },
+      {
+        "to": "how-much-gravel-do-i-need-for-a-french-drain",
+        "anchor": "how much gravel do i need for a french drain",
+        "title": "How Much Gravel Do I Need for a French Drain"
+      },
+      {
+        "to": "how-much-gravel-do-i-need-for-a-20x20-area",
+        "anchor": "how much gravel do i need for a 20x20 area",
+        "title": "How Much Gravel Do I Need for a 20x20 Area"
+      },
+      {
+        "to": "how-much-gravel-do-i-need-per-square-metre",
+        "anchor": "how much gravel do i need per square metre",
+        "title": "How Much Gravel Do I Need Per Square Metre"
+      },
+      {
+        "to": "how-much-gravel-do-i-need-for-a-10x12-shed",
+        "anchor": "how much gravel do i need for a 10x12 shed",
+        "title": "How Much Gravel Do I Need for a 10x12 Shed"
+      },
+      {
+        "to": "how-much-gravel-do-i-need-for-my-walkway",
+        "anchor": "how much gravel do i need for my walkway",
+        "title": "How Much Gravel Do I Need for My Walkway"
+      },
+      {
+        "to": "how-much-gravel-do-i-need-for-a-driveway",
+        "anchor": "how much gravel do i need for a driveway",
+        "title": "How Much Gravel Do I Need for a Driveway"
+      },
+      {
+        "to": "how-much-gravel-do-i-need-for-a-10x10-patio",
+        "anchor": "how much gravel do i need for a 10x10 patio",
+        "title": "How Much Gravel Do I Need for a 10x10 Patio"
+      }
+    ],
+    "schema_types": [
+      "Article",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "quality": {
+      "score": 100.0,
+      "passed": true,
+      "gates": {
+        "thin_content": {
+          "pass": true,
+          "detail": "word count 866 (min 600)"
+        },
+        "duplicate_content": {
+          "pass": true,
+          "detail": "max similarity 0.11 vs how-much-gravel-do-i-need-for-my-walkway"
+        },
+        "keyword_stuffing": {
+          "pass": true,
+          "detail": "keyword density 0.00%"
+        },
+        "ai_cliches": {
+          "pass": true,
+          "detail": "cliches: none"
+        },
+        "readability": {
+          "pass": true,
+          "detail": "avg sentence length 13.8 words"
+        },
+        "heading_structure": {
+          "pass": true,
+          "detail": "h2=5 h3=1 (no h1 in body)"
+        },
+        "has_calculator_or_data": {
+          "pass": true,
+          "detail": "has calculator + computed output"
+        },
+        "meta_length": {
+          "pass": true,
+          "detail": "meta length 154"
+        },
+        "title_length": {
+          "pass": true,
+          "detail": "title length 55"
+        },
+        "internal_links": {
+          "pass": true,
+          "detail": "internal links 8 (want 3-8, 67 available)"
+        },
+        "schema_present": {
+          "pass": true,
+          "detail": "schema: ['Article', 'BreadcrumbList', 'FAQPage']"
+        },
+        "alt_text": {
+          "pass": true,
+          "detail": "hero alt derivable from title"
+        }
+      }
+    },
+    "metrics": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": 0
+    },
+    "word_count": 866
+  },
+  {
+    "id": "how-much-paint-do-i-need-for-a-small-bathroom",
+    "slug": "how-much-paint-do-i-need-for-a-small-bathroom",
+    "title": "How Much Paint Do I Need for a Small Bathroom",
+    "cluster": "paint",
+    "primary_keyword": "how much paint do i need for a small bathroom",
+    "secondary_keywords": [
+      "how much paint do i need for a bedroom",
+      "how much paint do i need for a 10x10 room",
+      "how much paint do i need for a front door",
+      "how much paint do i need for a 12x12 room",
+      "how much paint do i need calculator sq ft"
+    ],
+    "intent": "calculator",
+    "is_pillar": false,
+    "calculator": "paint",
+    "calculator_title": "Paint Calculator",
+    "calculator_defaults": {
+      "length": 12,
+      "width": 10,
+      "height": 8,
+      "coats": 2,
+      "doors": 1,
+      "windows": 2
+    },
+    "calculator_output": {
+      "wall_area": 352.0,
+      "paintable_area": 301.0,
+      "gallons": 2.41
+    },
+    "meta_description": "For a standard small bathroom, you typically need one gallon of paint to cover the walls with two coats. If the bathroom is particularly large or you are.",
+    "body_markdown": "For a standard small bathroom, you typically need one gallon of paint to cover the walls with two coats. If the bathroom is particularly large or you are making a drastic color change, you might need a second gallon to ensure full coverage.\n\n## How to Calculate Paint\n\nTo determine the exact amount of paint required, you must find the total surface area of your walls and subtract the areas that will not be painted, such as doors and windows. One gallon of paint covers roughly 350 square feet per coat on a smooth, primed wall.\n\nFirst, measure the length and height of each wall. Multiply the length by the height to get the square footage for each wall, then add them together to get the total wall area. Subtract 21 square feet for every door and 15 square feet for every window in the room. Finally, multiply the result by the number of coats you intend to apply.\n\n### Worked Example\n\nIf you are planning a project for a 12x12 room or a similar space, the math remains consistent. Consider a room with a length of 12 feet, a width of 10 feet, and a height of 8 feet. \n\nUsing the following inputs:\n- Length: 12\n- Width: 10\n- Height: 8\n- Coats: 2\n- Doors: 1\n- Windows: 2\n\nThe calculation proceeds as follows: \n- Total Wall Area: 352.0 square feet\n- Paintable Area (after subtracting 21 sq ft for one door and 30 sq ft for two windows): 301.0 square feet\n- Total Gallons required for 2 coats: 2.41 gallons\n\nWhen using a paint calculator sq ft tool, always round up to the nearest half-gallon or full gallon to account for spills, brush loading, and future touch-ups.\n\n## How Much You Need at Common Sizes\n\nUse this table as a general guide for standard room dimensions assuming two coats of paint.\n\n| Job size | Paintable sq ft | Gallons |\n|---|---|---|\n| Small Bathroom | 150 | 1 |\n| 10x10 room | 250 | 1.5 |\n| 12x12 room | 300 | 2 |\n| Bedroom (Standard) | 350 | 2.5 |\n| Front door (one side) | 20 | 0.25 |\n\n## Selecting the Right Finish\n\nThe type of paint you choose for your bathroom is just as important as the quantity. Bathrooms are high-humidity environments, which can cause standard paints to peel or mildew.\n\nSatin finish is generally the best choice for bathrooms and trim. It offers a subtle sheen that is moisture-resistant and easier to wipe clean than flat paints. If you are painting a ceiling in a well-ventilated bathroom, a matt emulsion can help hide surface imperfections, but ensure it is a moisture-resistant formula.\n\nFor a bedroom, where moisture is not a concern, you might prefer the soft look of matt emulsion. If you are wondering how much paint do i need for a bedroom, the logic remains the same: calculate the wall area, subtract openings, and multiply by the number of coats.\n\nWhen painting a front door, you will need very little paint. Because doors are often painted with high-gloss or semi-gloss enamels, a single quart is usually sufficient for two coats. If you are asking how much paint do i need for a front door, remember that the surface area is small, but the finish quality is high, so invest in a high-quality exterior-grade paint.\n\n## Preparation and Application Tips\n\nBefore you begin, assess the condition of your walls. If you are painting over bare drywall, repairs, or dark colors, you must use a primer. Primer creates a uniform base that helps your topcoat adhere properly and ensures your color looks true. \n\nIf you are wondering how much paint do i need for a 10x10 room or a 12x12 room, remember that these calculations assume a standard two-coat application. If you are transitioning from a dark color to a light color, you may need a third coat, which increases your total paint requirement by 50%.\n\nAlways buy all the paint you need for a single room at the same time. Paint is mixed in batches, and even a slight variation in the tinting process can result in visible color differences if you have to go back to the store for an extra can mid-project.\n\n## Common Mistakes to Avoid\n\nThe most frequent error is failing to account for the porosity of the wall. Fresh, unprimed drywall acts like a sponge, soaking up the first layer of paint and requiring significantly more product to achieve an even finish. Always prime bare surfaces first.\n\nAnother mistake is neglecting to keep spare paint. It is standard practice to keep roughly 10% of your total paint volume for future touch-ups. Label the can with the room name and the date of the project. If you have a professional mix your paint, save the formula sticker provided by the store.\n\nDo not try to stretch your paint too thin to save money. If you apply a coat that is too thin, the color will appear streaky, and you will inevitably end up needing a third or fourth coat to fix the finish. Use a high-quality roller and brush to ensure even distribution.\n\nFinally, do not forget to factor in the trim. If you are painting baseboards, door frames, or window casings a different color than the walls, you will need to purchase additional paint specifically for those areas. A quart of trim paint is usually enough for a standard bathroom or bedroom.",
+    "faq": [
+      {
+        "q": "How much does a gallon of paint cover?",
+        "a": "Around 350 square feet per coat on a smooth, primed surface."
+      },
+      {
+        "q": "Do I need to subtract windows and doors?",
+        "a": "Yes. Allow about 21 square feet per door and 15 square feet per window."
+      },
+      {
+        "q": "How many coats of paint do I need?",
+        "a": "Two coats for a colour change, and often two even when refreshing the same colour."
+      },
+      {
+        "q": "Should I buy extra paint?",
+        "a": "Keep about 10% spare for touch-ups, and note the colour code for future matching."
+      }
+    ],
+    "status": "approved",
+    "created": "2026-10-08",
+    "updated": "2026-10-08",
+    "revision": 1,
+    "internal_links": [
+      {
+        "to": "paint-calculator",
+        "anchor": "how much paint do i need",
+        "title": "Paint Calculator: How Much Paint Do You Need?"
+      },
+      {
+        "to": "how-much-paint-do-i-need-for-a-bedroom",
+        "anchor": "how much paint do i need for a bedroom",
+        "title": "How Much Paint for a Bedroom? Gallons by Size"
+      },
+      {
+        "to": "how-much-paint-do-i-need-for-a-10x10-room",
+        "anchor": "how much paint do i need for a 10x10 room",
+        "title": "How Much Paint Do I Need for a 10x10 Room"
+      },
+      {
+        "to": "how-much-paint-do-i-need-for-a-front-door",
+        "anchor": "how much paint do i need for a front door",
+        "title": "How Much Paint Do I Need for a Front Door"
+      },
+      {
+        "to": "how-much-paint-do-i-need-for-a-12x12-room",
+        "anchor": "how much paint do i need for a 12x12 room",
+        "title": "How Much Paint Do I Need for a 12x12 Room"
+      },
+      {
+        "to": "how-much-paint-do-i-need-for-a-room",
+        "anchor": "how much paint do i need for a room",
+        "title": "How Much Paint for a Room: Calculator & Guide"
+      },
+      {
+        "to": "how-much-paint-do-i-need-for-a-12x16-shed",
+        "anchor": "how much paint do i need for a 12x16 shed",
+        "title": "How Much Paint Do I Need for a 12x16 Shed"
+      },
+      {
+        "to": "how-much-paint-do-i-need-for-1800-sq-ft-house",
+        "anchor": "how much paint do i need for 1800 sq ft house",
+        "title": "How Much Paint for an 1800 Sq Ft House?"
+      }
+    ],
+    "schema_types": [
+      "Article",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "quality": {
+      "score": 100.0,
+      "passed": true,
+      "gates": {
+        "thin_content": {
+          "pass": true,
+          "detail": "word count 885 (min 600)"
+        },
+        "duplicate_content": {
+          "pass": true,
+          "detail": "max similarity 0.13 vs how-much-paint-do-i-need-for-a-front-door"
+        },
+        "keyword_stuffing": {
+          "pass": true,
+          "detail": "keyword density 0.00%"
+        },
+        "ai_cliches": {
+          "pass": true,
+          "detail": "cliches: none"
+        },
+        "readability": {
+          "pass": true,
+          "detail": "avg sentence length 19.1 words"
+        },
+        "heading_structure": {
+          "pass": true,
+          "detail": "h2=5 h3=1 (no h1 in body)"
+        },
+        "has_calculator_or_data": {
+          "pass": true,
+          "detail": "has calculator + computed output"
+        },
+        "meta_length": {
+          "pass": true,
+          "detail": "meta length 154"
+        },
+        "title_length": {
+          "pass": true,
+          "detail": "title length 45"
+        },
+        "internal_links": {
+          "pass": true,
+          "detail": "internal links 8 (want 3-8, 67 available)"
+        },
+        "schema_present": {
+          "pass": true,
+          "detail": "schema: ['Article', 'BreadcrumbList', 'FAQPage']"
+        },
+        "alt_text": {
+          "pass": true,
+          "detail": "hero alt derivable from title"
+        }
+      }
+    },
+    "metrics": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": 0
+    },
+    "word_count": 885
+  },
+  {
+    "id": "how-many-tiles-do-i-need-for-a-room",
+    "slug": "how-many-tiles-do-i-need-for-a-room",
+    "title": "How Many Tiles Do I Need for a Room: Calculator & Guide",
+    "cluster": "tile",
+    "primary_keyword": "how many tiles do i need for a room",
+    "secondary_keywords": [
+      "how many tiles do i need for a 10x10 room",
+      "how many tiles do i need for 100 square feet",
+      "how many tiles do i need for my bathroom",
+      "how many tiles do i need for 20 square feet",
+      "how many tiles do i need for 120 square feet"
+    ],
+    "intent": "calculator",
+    "is_pillar": false,
+    "calculator": "tile",
+    "calculator_title": "Tile Calculator",
+    "calculator_defaults": {
+      "length": 12,
+      "width": 10,
+      "tile_w": 12,
+      "tile_h": 12,
+      "waste": 10
+    },
+    "calculator_output": {
+      "floor_area": 120.0,
+      "tile_area": 1.0,
+      "tiles": 120,
+      "tiles_with_waste": 132
+    },
+    "meta_description": "To determine how many tiles you need for a room, calculate the total square footage of your floor or wall area and add 10% to 20% for waste.",
+    "body_markdown": "To determine how many tiles you need for a room, calculate the total square footage of your floor or wall area and add 10% to 20% for waste. You then divide that total area by the square footage of a single tile to find the number of pieces required.\n\n## How to Calculate Tile\n\nCalculating the number of tiles starts with measuring your space accurately. Measure the length and width of the room in feet and multiply them together to get the total square footage. If you are tiling a bathroom, measure the floor and wall sections separately, as they often require different tile types or quantities.\n\nOnce you have your total square footage, you must account for \"waste.\" This covers cuts, breakage, and mistakes. For a standard straight layout, add 10%. For diagonal or offset patterns, add 15%. For complex herringbone patterns, add 20%.\n\n### Worked Example\n\nIf you are tiling a room that is 12 feet long and 10 feet wide using 12-inch by 12-inch tiles, here is the breakdown:\n\n*   **Floor Area:** 120.0 square feet\n*   **Tile Area:** 1.0 square foot per tile\n*   **Tiles Required:** 120 tiles\n*   **Tiles With 10% Waste:** 132 tiles\n\nWhen purchasing, always check the box label. Manufacturers list the total square footage covered by the contents of the box. It is often easier to buy by the box based on square footage rather than counting individual tiles.\n\n## How Much You Need at Common Sizes\n\nUse this table as a starting point for your planning. Remember that these figures represent the net area plus a standard 10% waste factor for simple, straight installations.\n\n| Job size | Tiles | With 10% waste |\n|---|---|---|\n| 20 square feet | 20 | 22 |\n| 100 square feet | 100 | 110 |\n| 120 square feet | 120 | 132 |\n\nIf you are wondering how many tiles do i need for a 10x10 room, the answer is 100 square feet of tile, plus your waste allowance. If you are tiling a smaller space, such as a backsplash, you might ask how many tiles do i need for 20 square feet; in that case, 22 tiles (at 1 square foot each) will cover the area plus the 10% buffer. For larger projects, such as how many tiles do i need for 120 square feet, ensure you have at least 132 tiles or the equivalent in square footage.\n\n## Understanding Material Choices\n\nThe material you choose affects your installation process and the amount of waste you should anticipate.\n\n*   **Ceramic:** These are generally softer and easier to cut. They are excellent for walls and light-traffic floors. Because they are easier to cut, you might get away with the lower end of the waste percentage.\n*   **Porcelain:** Denser and more water-resistant than ceramic, porcelain is the standard for bathroom floors and high-moisture areas. Because it is harder, it can be more prone to snapping incorrectly during difficult cuts, so ensure your waste estimate is accurate.\n*   **Natural Stone:** Materials like marble or slate provide a high-end look but require sealing. They are often sold in specific sizes that may not fit perfectly into your room dimensions, necessitating more cuts.\n*   **Mosaic:** Often sold on mesh sheets, mosaics are ideal for shower floors or curved surfaces. When calculating for mosaic, you are measuring the square footage of the sheets rather than individual tiny tiles.\n\n## Common Mistakes to Avoid\n\nThe most frequent error is failing to account for the layout pattern. A simple grid layout is forgiving, but a diagonal layout creates a triangular cut at every single wall edge. These offcuts are rarely reusable, which is why you must increase your waste percentage to 15% or 20%.\n\nAnother common mistake is ignoring \"dye lots.\" Tiles are manufactured in batches, and the color can vary slightly between runs. Always check the batch number on the side of every box before you leave the store. If you buy tiles from two different batches, you may notice a visible color shift once they are installed.\n\nAlways purchase your entire supply in one order. If you run short and have to go back to the store a week later, the store may no longer have your specific dye lot in stock. \n\nWhen you begin the installation, open several boxes at once and mix the tiles. This ensures that if there are subtle shade variations within the production run, they are distributed evenly across the floor rather than grouped in one noticeable patch.\n\nFinally, do not discard your leftovers. Keep a small box of spare tiles in a garage or utility closet. If a pipe leaks or a heavy object cracks a tile years down the road, you will have exact matches from the original batch to make the repair invisible.\n\n## Practical Tips for Success\n\nWhen planning how many tiles do i need for my bathroom, remember to subtract the area taken up by permanent fixtures like the bathtub or vanity. Do not tile underneath heavy cabinets if they are already installed, as this wastes material and money.\n\nIf you are working with large-format tiles, be aware that they require a perfectly level subfloor. Any \"lippage\"—where one edge of a tile sits higher than the next—will be much more obvious with large tiles than with small ones. \n\nAlways dry-lay your tiles before applying thin-set mortar. This allows you to see exactly where your cuts will fall and helps you avoid ending up with a tiny, one-inch sliver of tile at the edge of the room, which is difficult to cut and looks unprofessional. Adjust your starting line slightly to ensure that the cut tiles at both ends of the room are of a similar, substantial size.",
+    "faq": [
+      {
+        "q": "How much extra tile should I buy?",
+        "a": "Add 10% for straight layouts and 15% for diagonal or patterned work."
+      },
+      {
+        "q": "How many tiles in a box?",
+        "a": "It varies by size; check the box coverage in square feet rather than counting tiles."
+      },
+      {
+        "q": "Do I need to account for grout lines?",
+        "a": "Yes for precise work, though the waste allowance usually covers the small difference."
+      },
+      {
+        "q": "Can I return leftover tile?",
+        "a": "Often yes if unopened and from the same batch, but dye lots differ, so buy all you need at once."
+      }
+    ],
+    "status": "approved",
+    "created": "2026-10-08",
+    "updated": "2026-10-08",
+    "revision": 1,
+    "internal_links": [
+      {
+        "to": "tile-calculator",
+        "anchor": "how many tiles do i need",
+        "title": "Tile Calculator: How Many Tiles Do You Need?"
+      },
+      {
+        "to": "how-many-tiles-do-i-need-for-a-10x10-room",
+        "anchor": "how many tiles do i need for a 10x10 room",
+        "title": "How Many Tiles for a 10x10 Room? Count by Size"
+      },
+      {
+        "to": "how-many-tiles-do-i-need-for-100-square-feet",
+        "anchor": "how many tiles do i need for 100 square feet",
+        "title": "How Many Tiles Do I Need for 100 Square Feet"
+      },
+      {
+        "to": "how-many-tiles-do-i-need-for-my-bathroom",
+        "anchor": "how many tiles do i need for my bathroom",
+        "title": "How Many Tiles Do I Need for My Bathroom"
+      },
+      {
+        "to": "how-many-tiles-do-i-need-for-20-square-feet",
+        "anchor": "how many tiles do i need for 20 square feet",
+        "title": "How Many Tiles Do I Need for 20 Square Feet"
+      },
+      {
+        "to": "how-many-tiles-do-i-need-for-120-square-feet",
+        "anchor": "how many tiles do i need for 120 square feet",
+        "title": "How Many Tiles Do I Need for 120 Square Feet"
+      },
+      {
+        "to": "how-many-tiles-do-i-need-for-a-4x4-room",
+        "anchor": "how many tiles do i need for a 4x4 room",
+        "title": "How Many Tiles Do I Need for a 4x4 Room"
+      }
+    ],
+    "schema_types": [
+      "Article",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "quality": {
+      "score": 100.0,
+      "passed": true,
+      "gates": {
+        "thin_content": {
+          "pass": true,
+          "detail": "word count 932 (min 600)"
+        },
+        "duplicate_content": {
+          "pass": true,
+          "detail": "max similarity 0.11 vs how-many-tiles-do-i-need-for-my-bathroom"
+        },
+        "keyword_stuffing": {
+          "pass": true,
+          "detail": "keyword density 0.00%"
+        },
+        "ai_cliches": {
+          "pass": true,
+          "detail": "cliches: none"
+        },
+        "readability": {
+          "pass": true,
+          "detail": "avg sentence length 18.8 words"
+        },
+        "heading_structure": {
+          "pass": true,
+          "detail": "h2=5 h3=1 (no h1 in body)"
+        },
+        "has_calculator_or_data": {
+          "pass": true,
+          "detail": "has calculator + computed output"
+        },
+        "meta_length": {
+          "pass": true,
+          "detail": "meta length 140"
+        },
+        "title_length": {
+          "pass": true,
+          "detail": "title length 55"
+        },
+        "internal_links": {
+          "pass": true,
+          "detail": "internal links 7 (want 3-8, 67 available)"
+        },
+        "schema_present": {
+          "pass": true,
+          "detail": "schema: ['Article', 'BreadcrumbList', 'FAQPage']"
+        },
+        "alt_text": {
+          "pass": true,
+          "detail": "hero alt derivable from title"
+        }
+      }
+    },
+    "metrics": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": 0
+    },
+    "word_count": 932
+  },
+  {
+    "id": "how-many-pounds-of-bermuda-grass-seed-per-square-foot",
+    "slug": "how-many-pounds-of-bermuda-grass-seed-per-square-foot",
+    "title": "How Many Pounds of Bermuda Grass Seed Per Square Foot",
+    "cluster": "grass-seed",
+    "primary_keyword": "how many pounds of bermuda grass seed per square foot",
+    "secondary_keywords": [
+      "how much grass seed per square foot",
+      "how much grass seed per square foot overseeding",
+      "how much grass seed per square foot for new lawn",
+      "how much grass seed per square foot canada",
+      "how much grass seed per square foot calculator"
+    ],
+    "intent": "calculator",
+    "is_pillar": false,
+    "calculator": "grass_seed",
+    "calculator_title": "Grass Seed Calculator",
+    "calculator_defaults": {
+      "area": 5000,
+      "method": 1
+    },
+    "calculator_output": {
+      "rate_per_1000": 4.5,
+      "pounds": 22.5,
+      "bags_3lb": 8
+    },
+    "meta_description": "For a new lawn, you should use between 4 and 5 pounds of Bermuda grass seed per 1,000 square feet. This translates to approximately 0.004 to 0.005 pounds.",
+    "body_markdown": "For a new lawn, you should use between 4 and 5 pounds of Bermuda grass seed per 1,000 square feet. This translates to approximately 0.004 to 0.005 pounds of seed per square foot.\n\nDetermining how much grass seed per square foot you need is the first step toward a healthy lawn. Using too little seed leads to thin, patchy grass that invites weeds, while using too much causes seedlings to compete for nutrients, resulting in weak, spindly growth.\n\n## How to Calculate Grass Seed\n\nTo find the exact amount of seed required, first measure the total square footage of your lawn. Multiply the length by the width of the area you intend to seed. Once you have this number, you can apply the standard application rates based on your specific project.\n\nIf you are wondering how much grass seed per square foot for new lawn projects, use the 4 to 5 pounds per 1,000 square feet rate. If you are performing maintenance, the rate for overseeding an existing lawn is 2 pounds per 1,000 square feet. For high-traffic areas or steep banks that need extra coverage, use 5 to 6 pounds per 1,000 square feet.\n\nIf you are looking for a how much grass seed per square foot calculator, the math is straightforward. Divide your total square footage by 1,000, then multiply that result by your target rate.\n\n### Worked Example\n\nIf you have a lawn area of 5,000 square feet and you are planting a new lawn, follow this calculation:\n\n1. Divide your area (5,000) by 1,000 to get 5 units.\n2. Multiply those 5 units by the rate of 4.5 pounds per 1,000 square feet.\n3. Total seed required: 22.5 pounds.\n4. Since seed is sold in 3 lb bags, divide 22.5 by 3 to get 7.5.\n5. Round up to the nearest whole bag, which means you need 8 bags of 3 lb seed.\n\n## How Much You Need at Common Sizes\n\nUse this table to estimate your requirements based on the standard new-lawn rate of 4.5 pounds per 1,000 square feet.\n\n| Job size | Pounds | 3 lb bags |\n|---|---|---|\n| 500 sq ft | 2.25 | 1 |\n| 1,000 sq ft | 4.5 | 2 |\n| 2,000 sq ft | 9 | 3 |\n| 5,000 sq ft | 22.5 | 8 |\n| 10,000 sq ft | 45 | 15 |\n\n## Considerations for Different Climates\n\nWhether you are gardening in the United States or looking for how much grass seed per square foot Canada homeowners require, the fundamental principles remain the same. Bermuda grass is a warm-season grass. It thrives when soil temperatures are consistently high. If you live in a region with shorter growing seasons, ensure you plant early enough in the spring or summer to allow the grass to establish before the first frost.\n\nWhile Bermuda grass is the primary focus, consider your lawn's specific needs. Ryegrass is excellent for fast establishment and is often used for overseeding. Fescue provides shade tolerance and drought resistance, while Bluegrass creates a dense, hard-wearing surface. Some homeowners also incorporate a clover blend, which acts as a low-input, nitrogen-fixing ground cover.\n\n## Tips for Successful Seeding\n\nThe timing of your planting is just as important as the quantity of seed. Sow in early autumn when the soil is still warm from the summer but weed growth is beginning to slow down. This gives the grass a head start before winter dormancy.\n\nOnce the seed is down, do not bury it. Bermuda grass seed needs light and warmth to germinate. Lightly rake the surface to ensure good seed-to-soil contact, but avoid covering the seeds with a thick layer of soil, which will prevent them from sprouting.\n\nWatering is the most critical maintenance task in the first two weeks. Keep the soil surface damp by watering lightly and often. If the top layer of soil dries out during the germination phase, the seedlings will likely die. Aim to keep the area moist, not saturated, until the grass is well-established.\n\n## Common Mistakes to Avoid\n\nThe most frequent error is improper soil preparation. Before spreading seed, clear away rocks, debris, and heavy thatch. If the soil is compacted, aerate it first to allow roots to penetrate deep into the ground.\n\nAnother common mistake is uneven distribution. Using a mechanical spreader is much more effective than hand-seeding. Hand-seeding often results in clumps of grass in some areas and bare patches in others. If you are using a spreader, apply half the seed in one direction (north to south) and the remaining half in the perpendicular direction (east to west) to ensure complete, uniform coverage.\n\nAvoid applying weed killers or pre-emergent herbicides at the same time you seed. These products can prevent your grass seeds from germinating. Read the labels on any lawn care products carefully; most recommend waiting until the new grass has been mowed at least three or four times before applying any chemical treatments.\n\nFinally, do not rush the mowing process. Wait until the new grass has reached a height of about 3 inches before your first mow. Ensure your mower blades are sharp, as dull blades can tear tender young seedlings rather than cutting them cleanly, which increases the risk of disease and slows down the maturation of your lawn.",
+    "faq": [
+      {
+        "q": "How much grass seed per 1000 square feet?",
+        "a": "About 4 to 5 pounds for a new lawn, and 2 pounds when overseeding an existing one."
+      },
+      {
+        "q": "What is the best time to sow grass seed?",
+        "a": "Early autumn, when the soil is warm and weeds are slowing down."
+      },
+      {
+        "q": "How long until grass seed grows?",
+        "a": "Seven to fourteen days for ryegrass, up to three weeks for bluegrass."
+      },
+      {
+        "q": "Should I cover grass seed with soil?",
+        "a": "A thin layer of compost or topsoil helps, but leave the seed near the surface so it can sprout."
+      }
+    ],
+    "status": "approved",
+    "created": "2026-10-08",
+    "updated": "2026-10-08",
+    "revision": 1,
+    "internal_links": [
+      {
+        "to": "grass-seed-calculator",
+        "anchor": "how much grass seed per square foot",
+        "title": "Grass Seed Calculator: How Much Seed You Need"
+      },
+      {
+        "to": "how-much-grass-seed-per-square-foot-overseeding",
+        "anchor": "how much grass seed per square foot",
+        "title": "How Much Grass Seed Per Square Foot to Overseed?"
+      },
+      {
+        "to": "how-much-grass-seed-per-square-foot-for-new-lawn",
+        "anchor": "how much grass seed per square foot for",
+        "title": "How Much Grass Seed Per Square Foot for New Lawn"
+      },
+      {
+        "to": "how-much-buffalo-grass-seed-per-square-foot",
+        "anchor": "how much buffalo grass seed per square foot",
+        "title": "How Much Buffalo Grass Seed Per Square Foot"
+      },
+      {
+        "to": "how-much-bermuda-grass-seed-per-square-foot",
+        "anchor": "how much bermuda grass seed per square foot",
+        "title": "How Much Bermuda Grass Seed Per Square Foot"
+      },
+      {
+        "to": "how-much-grass-seed-do-i-need-per-square-foot",
+        "anchor": "how much grass seed do i need per square foot",
+        "title": "How Much Grass Seed Do I Need Per Square Foot"
+      },
+      {
+        "to": "how-much-bermuda-grass-seed-per-1000-square-feet",
+        "anchor": "how much bermuda grass seed per 1000",
+        "title": "How Much Bermuda Grass Seed Per 1000 Square Feet"
+      }
+    ],
+    "schema_types": [
+      "Article",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "quality": {
+      "score": 100.0,
+      "passed": true,
+      "gates": {
+        "thin_content": {
+          "pass": true,
+          "detail": "word count 881 (min 600)"
+        },
+        "duplicate_content": {
+          "pass": true,
+          "detail": "max similarity 0.10 vs how-much-grass-seed-per-square-foot-canada"
+        },
+        "keyword_stuffing": {
+          "pass": true,
+          "detail": "keyword density 0.00%"
+        },
+        "ai_cliches": {
+          "pass": true,
+          "detail": "cliches: none"
+        },
+        "readability": {
+          "pass": true,
+          "detail": "avg sentence length 13.9 words"
+        },
+        "heading_structure": {
+          "pass": true,
+          "detail": "h2=5 h3=1 (no h1 in body)"
+        },
+        "has_calculator_or_data": {
+          "pass": true,
+          "detail": "has calculator + computed output"
+        },
+        "meta_length": {
+          "pass": true,
+          "detail": "meta length 154"
+        },
+        "title_length": {
+          "pass": true,
+          "detail": "title length 53"
+        },
+        "internal_links": {
+          "pass": true,
+          "detail": "internal links 7 (want 3-8, 67 available)"
+        },
+        "schema_present": {
+          "pass": true,
+          "detail": "schema: ['Article', 'BreadcrumbList', 'FAQPage']"
+        },
+        "alt_text": {
+          "pass": true,
+          "detail": "hero alt derivable from title"
+        }
+      }
+    },
+    "metrics": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": 0
+    },
+    "word_count": 881
   }
 ]
