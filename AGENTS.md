@@ -139,3 +139,31 @@ python3 scripts/live_audit.py https://huzaifamasood30.github.io/gardencalc/
 - Google Search Console must be a URL-prefix property for the full project URL
   (`https://<user>.github.io/<repo>/`); a bare-host property cannot host this sitemap.
 
+## Duplicate merges & renames (Phase 2)
+- `scripts/merges.py` is the single source of truth. `MERGES` (old_slug -> target_slug)
+  marks a page `status="merged"`; `build.py` then drops it from listings, RSS, the
+  sitemap and internal links, and renders a redirect stub from `templates/redirect.html`
+  (`meta refresh` + self-less `rel=canonical` to the target, no noindex, visible link).
+- Adding to `MERGES` leaves the old URL alive as the stub, so indexed URLs never 404.
+  Removing an entry restores the page with no other edit (`merges.apply` re-derives).
+- `RENAMES` (old_slug -> cleaned_slug) is for URL cleanups, not intent merges: it emits a
+  rename stub only when the old slug no longer exists as a real page.
+- `run_all.py` applies merges after the quality gate and relinks, so no live page links
+  to a stub. `quality.apply` and `interlink` both skip `status="merged"`.
+- `verify.py` skips stubs for title/description/canonical duplication checks, because a
+  stub intentionally shares those with its target.
+- When auditing duplicates, differentiate by intent, not body Jaccard: sized long-tail
+  pages (200 vs 300 sq ft) are distinct queries and must stay. `audit_phase0.py` splits
+  `duplicates` from `sized_variants` using the slug's digits.
+
+## Seasonal guides
+- `scripts/seasonal.py` holds the four evergreen timing guides; each carries a `table`
+  ({caption, head, rows, note}) rendered by `templates/seasonal.html` for featured
+  snippet value. Keep the numbers consistent with `calculators.py` and `charts.py`.
+
+## Video embeds
+- `data/videos.json` maps a calculator key to `{"id": "<youtube id>", "upload": "date"}`.
+  Empty = nothing renders. `templates/calculator.html` + `main.js` render a
+  click-to-load `youtube-nocookie` facade only when a real id exists; `build.py` then
+  adds `VideoObject` schema. Never add fake videos.
+

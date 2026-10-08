@@ -29,6 +29,23 @@
   {% for p in sec.paras %}<p>{{ p }}</p>{% endfor %}
   {% endfor %}
 
+  {% if seasonal.table %}
+  <section aria-labelledby="season-table">
+    <h2 id="season-table">{{ seasonal.table.caption }}</h2>
+    <div class="table-scroll">
+      <table>
+        <thead><tr>{% for h in seasonal.table.head %}<th scope="col">{{ h }}</th>{% endfor %}</tr></thead>
+        <tbody>
+          {% for row in seasonal.table.rows %}
+          <tr>{% for cell in row %}{% if loop.first %}<th scope="row">{{ cell }}</th>{% else %}<td>{{ cell }}</td>{% endif %}{% endfor %}</tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">{{ seasonal.table.note }}</p>
+  </section>
+  {% endif %}
+
   {% if seasonal.faqs %}
   <section class="faq" aria-labelledby="faq-heading">
     <h2 id="faq-heading">Frequently asked questions</h2>

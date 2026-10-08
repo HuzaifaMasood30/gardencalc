@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<main id="main" class="wrap">
+  <h1>{{ page.title }}</h1>
+  <p>This page has moved. You will be taken to <a href="{{ target_url }}">{{ target_title }}</a> automatically.</p>
+  <p><a class="btn" href="{{ target_url }}">Go to {{ target_title }}</a> &middot;
+     <a href="{{ base_url }}/">Home</a></p>
+</main>
+{% endblock %}

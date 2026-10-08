@@ -15,6 +15,7 @@ import cluster
 import dashboard
 import generate
 import interlink
+import merges
 import monitor
 import quality
 import verify
@@ -52,6 +53,12 @@ def run(limit: int | None = None) -> dict:
     save_json(DATA / "articles.json", arts)
     orphans = interlink.orphans(arts)
     steps["orphans"] = orphans
+
+    # Merged pages (Phase 2) become stubs after linking/gating so no live page links
+    # to them. Re-apply links once more so the graph excludes the merged slugs.
+    merges.apply(arts)
+    interlink.link_all(arts)
+    save_json(DATA / "articles.json", arts)
 
     print("== 3/9 quality gates ==")
     approved = [a for a in arts if a.get("status") in ("published", "approved")]

@@ -182,6 +182,9 @@ def apply(arts: list[dict]) -> list[dict]:
     for art in arts:
         if art.get("status") in ("published",) and art.get("quality", {}).get("passed"):
             continue
+        if art.get("status") == "merged":
+            # Merged pages are redirect stubs; their status is owned by merges.apply().
+            continue
         q = evaluate(art, arts)
         art["quality"] = q
         if q["passed"] and q["score"] >= min_score:

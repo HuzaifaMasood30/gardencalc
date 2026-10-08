@@ -15,7 +15,8 @@ def _published(arts: list[dict]) -> list[dict]:
     # Link to every live article, including drafts. Links are built before the gates
     # run, and the pipeline iterates link->gate to convergence, so any article that is
     # later rejected is dropped as a target on the next round (and never rendered).
-    return [a for a in arts if a.get("status") != "rejected"]
+    # Merged pages are stubs, so they are never a link target or source.
+    return [a for a in arts if a.get("status") not in ("rejected", "merged")]
 
 
 def build_for(art: dict, arts: list[dict]) -> list[dict]:
@@ -81,7 +82,7 @@ def link_all(arts: list[dict], persist: bool = True) -> list[dict]:
     _repair_orphans(arts)
     graph = {
         a["slug"]: [l["to"] for l in a.get("internal_links", [])]
-        for a in arts if a.get("status") != "rejected"
+        for a in arts if a.get("status") not in ("rejected", "merged")
     }
     if persist:
         save_json(DATA / "links.json", {"graph": graph})

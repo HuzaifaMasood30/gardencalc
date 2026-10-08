@@ -247,6 +247,16 @@ table{border-collapse:collapse;width:100%;font-size:.9rem}
 th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;white-space:nowrap}
 thead th{background:var(--brand-tint);color:var(--brand-dark,#14532d);position:sticky;top:0}
 tbody tr:nth-child(even){background:rgba(20,83,45,.03)}
+.table-note{font-size:.85rem;color:var(--muted,#4b5563);margin:6px 0 0}
+.video-embed{margin:24px 0}
+.video-facade{position:relative;aspect-ratio:16/9;background:#0b3b21;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;overflow:hidden}
+.video-frame{width:100%;height:100%;border:0}
+.video-load{display:flex;flex-direction:column;align-items:center;gap:8px;color:#f0fdf4;
+  background:transparent;border:2px solid #4ade80;border-radius:12px;padding:16px 22px;
+  min-height:44px;cursor:pointer;font-size:1rem}
+.video-load:hover{background:rgba(74,222,128,.12)}
+.video-load:focus-visible{outline:3px solid #f0fdf4;outline-offset:2px}
 .chart-cta{margin:22px 0 10px}
 .jump{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 16px;font-size:.85rem}
 .jump span{color:var(--muted)}

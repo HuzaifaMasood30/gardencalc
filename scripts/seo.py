@@ -153,6 +153,20 @@ def webapp_schema(title: str, url: str, description: str, site: dict) -> dict:
     }
 
 
+def video_schema(title: str, video_id: str, url: str, description: str) -> dict:
+    """VideoObject for an embedded walkthrough. Only emitted when a real id exists."""
+    return {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": title,
+        "description": description,
+        "thumbnailUrl": f"https://i.ytimg.com/vi/{video_id}/hqdefault.jpg",
+        "uploadDate": "",
+        "contentUrl": f"https://www.youtube.com/watch?v={video_id}",
+        "embedUrl": f"https://www.youtube-nocookie.com/embed/{video_id}",
+    }
+
+
 def breadcrumb_list(items: list[tuple[str, str]], site: dict) -> dict:
     """items: [(name, path-or-absolute-url), ...] in order. Paths are made absolute."""
     out = []

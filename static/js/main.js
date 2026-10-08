@@ -271,6 +271,30 @@
     });
   }
 
+  // Click-to-load YouTube facade: no third-party request until the user asks for it,
+  // and youtube-nocookie keeps the page privacy-friendly.
+  function initVideoFacade() {
+    document.querySelectorAll(".video-facade").forEach(function (box) {
+      var btn = box.querySelector(".video-load");
+      if (!btn) return;
+      btn.addEventListener("click", function () {
+        var id = box.getAttribute("data-video-id");
+        if (!id || !/^[A-Za-z0-9_-]{6,20}$/.test(id)) return;
+        var title = box.getAttribute("data-title") || "Video";
+        var frame = document.createElement("iframe");
+        frame.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0";
+        frame.title = title;
+        frame.loading = "lazy";
+        frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+        frame.setAttribute("allowfullscreen", "");
+        frame.className = "video-frame";
+        box.innerHTML = "";
+        box.appendChild(frame);
+        track("video_play", { calculator_name: title });
+      });
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     var tog = document.querySelector(".nav-toggle");
     var nav = document.querySelector(".site-nav");
@@ -296,5 +320,6 @@
     initEmbedCopy();
     initInternalCalcClicks();
     initGuidesFilter();
+    initVideoFacade();
   });
 })();

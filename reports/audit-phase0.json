@@ -1,0 +1,274 @@
+{
+  "generated": "2026-10-08T11:29:12+00:00",
+  "site": "https://huzaifamasood30.github.io/gardencalc/",
+  "counts": {
+    "articles": 81,
+    "approved": 81,
+    "clusters": 9,
+    "charts": 8,
+    "planners": 4,
+    "seasonal": 4
+  },
+  "clusters": {
+    "concrete": 9,
+    "fertilizer": 5,
+    "grass-seed": 7,
+    "gravel": 8,
+    "mulch": 9,
+    "paint": 8,
+    "soil": 6,
+    "tile": 7,
+    "topsoil": 4
+  },
+  "duplicates": [
+    {
+      "similarity": 0.8,
+      "a": "raised-bed-soil-calculator",
+      "b": "how-much-soil-for-a-4x8-raised-bed",
+      "cluster": "soil"
+    },
+    {
+      "similarity": 0.8,
+      "a": "raised-bed-soil-calculator",
+      "b": "how-much-soil-do-i-need-for-a-raised-bed",
+      "cluster": "soil"
+    },
+    {
+      "similarity": 0.8,
+      "a": "how-much-topsoil-do-i-need-for-a-garden-bed",
+      "b": "how-much-topsoil-do-i-need-for-my-raised-garden-bed",
+      "cluster": "topsoil"
+    }
+  ],
+  "sized_variants": [
+    {
+      "similarity": 0.8,
+      "a": "how-many-bags-of-concrete-do-i-need-for-a-10x10-slab",
+      "b": "how-many-bags-of-concrete-do-i-need-for-a-4x8-slab",
+      "cluster": "concrete"
+    },
+    {
+      "similarity": 1.0,
+      "a": "how-much-mulch-do-i-need-for-300-square-feet",
+      "b": "how-much-mulch-do-i-need-for-200-square-feet",
+      "cluster": "mulch"
+    },
+    {
+      "similarity": 1.0,
+      "a": "how-much-mulch-do-i-need-for-300-square-feet",
+      "b": "how-much-mulch-do-i-need-for-400-square-feet",
+      "cluster": "mulch"
+    },
+    {
+      "similarity": 0.83,
+      "a": "how-much-mulch-do-i-need-for-300-square-feet",
+      "b": "how-much-mulch-do-i-need-for-1000-square-feet",
+      "cluster": "mulch"
+    },
+    {
+      "similarity": 1.0,
+      "a": "how-much-mulch-do-i-need-for-300-square-feet",
+      "b": "how-much-mulch-do-i-need-for-600-square-feet",
+      "cluster": "mulch"
+    },
+    {
+      "similarity": 1.0,
+      "a": "how-much-mulch-do-i-need-for-300-square-feet",
+      "b": "how-much-mulch-do-i-need-for-32-square-feet",
+      "cluster": "mulch"
+    },
+    {
+      "similarity": 1.0,
+      "a": "how-much-mulch-do-i-need-for-200-square-feet",
+      "b": "how-much-mulch-do-i-need-for-400-square-feet",
+      "cluster": "mulch"
+    },
+    {
+      "similarity": 0.83,
+      "a": "how-much-mulch-do-i-need-for-200-square-feet",
+      "b": "how-much-mulch-do-i-need-for-1000-square-feet",
+      "cluster": "mulch"
+    },
+    {
+      "similarity": 1.0,
+      "a": "how-much-mulch-do-i-need-for-200-square-feet",
+      "b": "how-much-mulch-do-i-need-for-600-square-feet",
+      "cluster": "mulch"
+    },
+    {
+      "similarity": 1.0,
+      "a": "how-much-mulch-do-i-need-for-200-square-feet",
+      "b": "how-much-mulch-do-i-need-for-32-square-feet",
+      "cluster": "mulch"
+    },
+    {
+      "similarity": 0.8,
+      "a": "how-many-bags-of-concrete-do-i-need-for-a-4x8-slab",
+      "b": "how-many-bags-of-concrete-do-i-need-for-a-4x4-slab",
+      "cluster": "concrete"
+    },
+    {
+      "similarity": 0.8,
+      "a": "how-many-bags-of-concrete-do-i-need-for-a-4x8-slab",
+      "b": "how-many-bags-of-concrete-do-i-need-for-a-8x8-slab",
+      "cluster": "concrete"
+    },
+    {
+      "similarity": 0.83,
+      "a": "how-much-mulch-do-i-need-for-400-square-feet",
+      "b": "how-much-mulch-do-i-need-for-1000-square-feet",
+      "cluster": "mulch"
+    },
+    {
+      "similarity": 1.0,
+      "a": "how-much-mulch-do-i-need-for-400-square-feet",
+      "b": "how-much-mulch-do-i-need-for-600-square-feet",
+      "cluster": "mulch"
+    },
+    {
+      "similarity": 1.0,
+      "a": "how-much-mulch-do-i-need-for-400-square-feet",
+      "b": "how-much-mulch-do-i-need-for-32-square-feet",
+      "cluster": "mulch"
+    },
+    {
+      "similarity": 1.0,
+      "a": "how-many-tiles-do-i-need-for-100-square-feet",
+      "b": "how-many-tiles-do-i-need-for-20-square-feet",
+      "cluster": "tile"
+    },
+    {
+      "similarity": 1.0,
+      "a": "how-many-tiles-do-i-need-for-100-square-feet",
+      "b": "how-many-tiles-do-i-need-for-120-square-feet",
+      "cluster": "tile"
+    },
+    {
+      "similarity": 0.83,
+      "a": "how-many-bags-of-concrete-do-i-need-for-a-4x4-slab",
+      "b": "how-many-bags-of-concrete-do-i-need-for-a-10x12-slab",
+      "cluster": "concrete"
+    },
+    {
+      "similarity": 0.83,
+      "a": "how-many-bags-of-concrete-do-i-need-for-a-4x4-slab",
+      "b": "how-many-bags-of-concrete-do-i-need-for-a-20x20-slab",
+      "cluster": "concrete"
+    },
+    {
+      "similarity": 1.0,
+      "a": "how-many-bags-of-concrete-do-i-need-for-a-4x4-slab",
+      "b": "how-many-bags-of-concrete-do-i-need-for-a-8x8-slab",
+      "cluster": "concrete"
+    },
+    {
+      "similarity": 0.83,
+      "a": "how-many-bags-of-concrete-do-i-need-for-a-4x4-slab",
+      "b": "how-many-bags-of-concrete-do-i-need-for-a-12x12-slab",
+      "cluster": "concrete"
+    },
+    {
+      "similarity": 0.83,
+      "a": "how-much-mulch-do-i-need-for-1000-square-feet",
+      "b": "how-much-mulch-do-i-need-for-600-square-feet",
+      "cluster": "mulch"
+    },
+    {
+      "similarity": 0.83,
+      "a": "how-much-mulch-do-i-need-for-1000-square-feet",
+      "b": "how-much-mulch-do-i-need-for-32-square-feet",
+      "cluster": "mulch"
+    },
+    {
+      "similarity": 1.0,
+      "a": "how-many-tiles-do-i-need-for-20-square-feet",
+      "b": "how-many-tiles-do-i-need-for-120-square-feet",
+      "cluster": "tile"
+    },
+    {
+      "similarity": 0.83,
+      "a": "how-many-bags-of-concrete-do-i-need-for-a-10x12-slab",
+      "b": "how-many-bags-of-concrete-do-i-need-for-a-8x8-slab",
+      "cluster": "concrete"
+    },
+    {
+      "similarity": 1.0,
+      "a": "how-much-mulch-do-i-need-for-600-square-feet",
+      "b": "how-much-mulch-do-i-need-for-32-square-feet",
+      "cluster": "mulch"
+    },
+    {
+      "similarity": 0.83,
+      "a": "how-many-bags-of-concrete-do-i-need-for-a-20x20-slab",
+      "b": "how-many-bags-of-concrete-do-i-need-for-a-8x8-slab",
+      "cluster": "concrete"
+    },
+    {
+      "similarity": 0.83,
+      "a": "how-many-bags-of-concrete-do-i-need-for-a-8x8-slab",
+      "b": "how-many-bags-of-concrete-do-i-need-for-a-12x12-slab",
+      "cluster": "concrete"
+    }
+  ],
+  "weak_pages": [],
+  "missing_elements": [],
+  "sitemap_issues": [],
+  "intent_groups": [
+    {
+      "cluster": "soil",
+      "urls": [
+        "how-much-soil-for-raised-bed-calculator-uk"
+      ],
+      "note": "Merge metric/unit variants into the main calculator page."
+    },
+    {
+      "cluster": "grass-seed",
+      "urls": [
+        "how-much-grass-seed-per-square-foot-canada"
+      ],
+      "note": "Metric/local-unit variant; keep only if it uses metric and local terms."
+    },
+    {
+      "cluster": "paint",
+      "urls": [
+        "how-much-paint-do-i-need-for-a-door"
+      ],
+      "note": "Door vs front door overlap; merge the generic into the front-door page."
+    },
+    {
+      "cluster": "topsoil",
+      "urls": [
+        "how-much-topsoil-do-i-need-for-a-lawn"
+      ],
+      "note": "New-lawn vs lawn overlap; merge into the new-lawn page."
+    },
+    {
+      "cluster": "fertilizer",
+      "urls": [
+        "how-much-fertilizer-per-1000-sq-ft-calculator"
+      ],
+      "note": "Calculator-intent duplicate of the fertilizer pillar."
+    },
+    {
+      "cluster": "paint",
+      "urls": [
+        "how-much-paint-do-i-need-calculator-sq-ft"
+      ],
+      "note": "Calculator-intent duplicate of the paint pillar."
+    },
+    {
+      "cluster": "tile",
+      "urls": [
+        "how-many-tiles-do-i-need-for-my-floor"
+      ],
+      "note": "Generic floor page; merge into the room page or pillar."
+    },
+    {
+      "cluster": "tile",
+      "urls": [
+        "how-many-tiles-do-i-need-for-my-room"
+      ],
+      "note": "Generic room page; merge into the room-size pages."
+    }
+  ]
+}

@@ -38,4 +38,16 @@
   <button type="button" class="btn btn-ghost" data-copy-embed>Copy embed code</button>
   <a class="btn btn-ghost" href="{{ base_url }}/for-publishers/">More ways to cite us →</a>
 </section>
+
+{% if calc.video and calc.video.id %}
+<section class="video-embed" aria-labelledby="video-h">
+  <h2 id="video-h">Watch it worked through</h2>
+  <div class="video-facade" data-video-id="{{ calc.video.id }}" data-title="{{ calc.title }}">
+    <button type="button" class="video-load" aria-label="Load video: {{ calc.title }}">
+      <svg aria-hidden="true" width="48" height="48" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+      <span>Play walkthrough</span>
+    </button>
+  </div>
+</section>
+{% endif %}
 {% endif %}

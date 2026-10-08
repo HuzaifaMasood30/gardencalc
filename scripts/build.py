@@ -12,6 +12,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 import charts
 import images
 import mdrender
+import merges
 import planners
 import seasonal
 import seo as seolib
@@ -144,6 +145,9 @@ def _calc_context(art: dict, cfg: dict, site: dict) -> dict | None:
         "inputs": inputs,
         "defaults": defaults,
         "slug": art["slug"],
+        # Set data/videos.json as {"mulch": {"id": "...", "upload": "YYYY-MM-DD"}} to
+        # publish a walkthrough; empty renders nothing (no fake videos, no empty player).
+        "video": (load_json(DATA / "videos.json", default={}) or {}).get(calc_key, {}),
     }
 
 
@@ -155,6 +159,16 @@ def build() -> dict:
                  if a.get("status") in ("published", "approved")
                  and a.get("quality", {}).get("passed")]
     published.sort(key=lambda a: a.get("created", ""), reverse=True)
+
+    # Merged URLs stay alive as redirect stubs (Phase 2) but must not appear in
+    # listings, the sitemap, RSS, feeds or the internal link graph.
+    merged_slugs = merges.merged_slugs()
+    live = [a for a in published if a["slug"] not in merged_slugs]
+    for a in live:
+        a.setdefault("internal_links", [])
+        a["internal_links"] = [l for l in a["internal_links"]
+                               if l.get("to") not in merged_slugs]
+    published = live
 
     if SITE.exists():
         shutil.rmtree(SITE)
@@ -248,6 +262,13 @@ def build() -> dict:
             schemas.append(json.dumps(seolib.webapp_schema(
                 calc_ctx["title"], _abs(site, f"/{art['slug']}/"),
                 art.get("meta_description", ""), site), ensure_ascii=False))
+            vid = calc_ctx.get("video") or {}
+            if vid.get("id"):
+                v = seolib.video_schema(calc_ctx["title"], vid["id"],
+                                        _abs(site, f"/{art['slug']}/"),
+                                        art.get("meta_description", ""))
+                v["uploadDate"] = vid.get("upload", art.get("updated", ""))
+                schemas.append(json.dumps(v, ensure_ascii=False))
         ctx = common(title=art["title"], description=art["meta_description"],
                      canonical=_abs(site, f"/{art['slug']}/"), og_type="article",
                      og_image=_fig(site, art), schemas=schemas,
@@ -345,6 +366,20 @@ def build() -> dict:
                      "html": ("<p>That page does not exist. Try the <a href='" + base + "/'>homepage</a>, "
                               "or jump straight to a category:</p><ul>" + cats_links + "</ul>")})
     _write(SITE / "404.html", env.get_template("page.html").render(**ctx))
+
+    # --- redirect stubs for merged pages (kept alive, canonical to the target) ---
+    for st in merges.stubs(arts) + merges.rename_stubs(arts):
+        target_url = _abs(site, f"/{st['target']}/")
+        sctx = common(title=f"{st['old_title']} (Moved) | {site['name']}",
+                      description=f"This page has moved to {st['target_title']}.",
+                      canonical=target_url)
+        sctx.update(page={"title": "This page has moved"},
+                    target_url=target_url, target_title=st["target_title"])
+        html = env.get_template("redirect.html").render(**sctx)
+        html = html.replace(
+            "<head>",
+            f'<head>\n<meta http-equiv="refresh" content="0; url={target_url}">', 1)
+        _write(SITE / st["slug"] / "index.html", html)
 
     # --- chart pages (linkable, formula-derived reference tables) ---
     for ch in charts.CHARTS:

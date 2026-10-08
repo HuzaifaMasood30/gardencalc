@@ -9,7 +9,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import calculators
 import keywords
 import mdrender
+import merges
 import quality
+import seasonal
 import seo as seolib
 from common import site_config
 
@@ -160,6 +162,44 @@ def test_sitemap_dedupes_and_enforces_base_path():
     xml = seolib.sitemap_xml([{"loc": "/a/"}, {"loc": "/a/"}, {"loc": "/b/"}], site)
     assert xml.count("<loc>https://t.example/gardencalc/a/</loc>") == 1
     assert "<loc>https://t.example/a/</loc>" not in xml
+
+
+def test_merged_pages_become_stubs_and_leave_the_sitemap():
+    """Merged pages must keep their URL (for no-404) but drop out of the live site."""
+    arts = [
+        {"slug": "how-much-mulch-do-i-need-for-my-flower-bed", "title": "A",
+         "status": "approved"},
+        {"slug": "how-much-mulch-do-i-need-for-a-flower-bed", "title": "B",
+         "status": "approved"},
+    ]
+    merges.apply(arts)
+    by = {a["slug"]: a for a in arts}
+    assert by["how-much-mulch-do-i-need-for-my-flower-bed"]["status"] == "merged"
+    assert by["how-much-mulch-do-i-need-for-my-flower-bed"]["merged_into"] == \
+        "how-much-mulch-do-i-need-for-a-flower-bed"
+    assert "how-much-mulch-do-i-need-for-my-flower-bed" in merges.merged_slugs()
+    stubs = merges.stubs(arts)
+    assert any(s["slug"] == "how-much-mulch-do-i-need-for-my-flower-bed" and
+               s["target"] == "how-much-mulch-do-i-need-for-a-flower-bed"
+               for s in stubs)
+
+
+def test_rename_stub_keeps_old_url_alive():
+    arts = [{"slug": "how-many-bags-of-concrete-do-i-need-for-a-4x8-slab"}]
+    stubs = merges.rename_stubs(arts)
+    assert any(s["slug"] == "how-many-bags-of-concrete-do-i-need-for-a-4-x8-slab"
+               and s["target"] == "how-many-bags-of-concrete-do-i-need-for-a-4x8-slab"
+               for s in stubs)
+    # When the old slug still exists, no rename stub is emitted.
+    assert merges.rename_stubs(
+        [{"slug": "how-many-bags-of-concrete-do-i-need-for-a-4-x8-slab"}]) == []
+
+
+def test_seasonal_pages_have_reference_tables():
+    """Every seasonal guide must ship a real HTML table for featured-snippet value."""
+    for item in seasonal.SEASONAL:
+        assert item.get("table"), item["slug"]
+        assert item["table"]["head"] and len(item["table"]["rows"]) >= 3
 
 
 def test_js_and_python_calculators_agree():

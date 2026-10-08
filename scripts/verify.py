@@ -45,26 +45,29 @@ def check() -> dict:
 
         # noindex pages (embed widgets, search, 404) are not canonical landing pages:
         # they are allowed a description-less head and a canonical pointing elsewhere.
+        # Merged-page stubs are the same: they canonical to their target by design.
         noindex = 'content="noindex' in html
+        is_stub = 'http-equiv="refresh"' in html
 
         m = re.search(r"<title>(.*?)</title>", html, re.S)
         if not m or not m.group(1).strip():
             issues.append({"type": "missing_title", "page": rel})
-        else:
+        elif not is_stub:
+            # Redirect stubs share titles/descriptions with their target by design.
             titles.setdefault(m.group(1).strip(), []).append(rel)
 
         d = re.search(r'name="description" content="(.*?)"', html, re.S)
         if not d or not d.group(1).strip():
             if not noindex:
                 issues.append({"type": "missing_meta_description", "page": rel})
-        else:
+        elif not is_stub:
             metas.setdefault(d.group(1).strip(), []).append(rel)
             descs[rel] = d.group(1).strip()
 
         c = re.search(r'rel="canonical" href="(.*?)"', html)
         if not c:
             issues.append({"type": "missing_canonical", "page": rel})
-        elif not noindex and c.group(1).rstrip("/") != (base + rel.rstrip("/")):
+        elif not noindex and not is_stub and c.group(1).rstrip("/") != (base + rel.rstrip("/")):
             issues.append({"type": "canonical_mismatch", "page": rel,
                            "canonical": c.group(1)})
 

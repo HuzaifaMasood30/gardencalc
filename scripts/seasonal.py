@@ -23,6 +23,17 @@ SEASONAL: list[dict] = [
                   "moment and you trap cold, wet soil in spring or smother roots in summer; "
                   "spread it at the right moment and you cut watering, suppress weeds and "
                   "steady soil temperature for the whole season."),
+        "table": {
+            "caption": "Mulch quantity by bed size at 3 inches deep",
+            "head": ["Bed / area", "Cubic feet", "Cubic yards", "2 cu ft bags"],
+            "rows": [
+                ["12 ft x 4 ft (48 sq ft)", "12", "0.44", "6"],
+                ["10 ft x 10 ft (100 sq ft)", "25", "0.93", "13"],
+                ["20 ft x 20 ft (400 sq ft)", "100", "3.70", "50"],
+                ["500 sq ft", "125", "4.63", "63"],
+            ],
+            "note": "Volume = length x width x depth (ft). At 3 in the depth is 0.25 ft. One cubic yard is 27 cubic feet; bags are 2 cubic feet.",
+        },
         "sections": [
             {"h2": "The short answer",
              "paras": [
@@ -110,6 +121,17 @@ SEASONAL: list[dict] = [
         "intro": ("Overseeding thickens a thin lawn without starting over, but it only works "
                   "if the seed has warm soil and enough time to establish before winter. "
                   "Choosing the window is the whole job."),
+        "table": {
+            "caption": "Grass seed to buy by lawn size",
+            "head": ["Lawn area", "New lawn (4-5 lb/1,000)", "Overseed (2-4 lb/1,000)"],
+            "rows": [
+                ["1,000 sq ft", "4-5 lb", "2-4 lb"],
+                ["2,500 sq ft", "10-13 lb", "5-10 lb"],
+                ["5,000 sq ft", "20-25 lb", "10-20 lb"],
+                ["10,000 sq ft", "40-50 lb", "20-40 lb"],
+            ],
+            "note": "Rates are per 1,000 sq ft and depend on the seed label and species. Match the bag rate to your grass type and seed size.",
+        },
         "sections": [
             {"h2": "The short answer",
              "paras": [
@@ -192,6 +214,16 @@ SEASONAL: list[dict] = [
         "intro": ("Spring work in a garden bed is a sequence, not a list. Do the steps in "
                   "the wrong order and you undo your own effort, especially if you mulch "
                   "before the soil has warmed or plant before you have fixed drainage."),
+        "table": {
+            "caption": "Compost and mulch for a 4 ft x 8 ft bed",
+            "head": ["Job", "Depth", "Cubic feet", "2 cu ft bags"],
+            "rows": [
+                ["Compost (top-dress)", "2 in", "5.3", "3"],
+                ["Mulch", "3 in", "8.0", "4"],
+                ["Mulch", "4 in", "10.7", "6"],
+            ],
+            "note": "Volume = 4 x 8 x depth (ft). Two inches is 0.167 ft, three inches 0.25 ft, four inches 0.333 ft. Bags are 2 cubic feet.",
+        },
         "sections": [
             {"h2": "1. Clear and assess before you feed",
              "paras": [
@@ -261,6 +293,16 @@ SEASONAL: list[dict] = [
         "intro": ("Autumn is the most valuable feeding of the year for a cool-season lawn. "
                   "Roots are growing strongly, top growth is slowing, and the nutrients go "
                   "into storage rather than into leaves you then have to mow."),
+        "table": {
+            "caption": "Fertilizer product to deliver 1 lb nitrogen per 1,000 sq ft",
+            "head": ["Bag N-P-K", "Product per 1,000 sq ft", "Product for 5,000 sq ft"],
+            "rows": [
+                ["10-10-10", "10 lb", "50 lb"],
+                ["20-5-10", "5 lb", "25 lb"],
+                ["24-0-6", "4.2 lb", "21 lb"],
+            ],
+            "note": "Product = 100 divided by the first number in the N-P-K ratio. Divide again by the bag size to count bags.",
+        },
         "sections": [
             {"h2": "The short answer",
              "paras": [
@@ -335,6 +377,7 @@ def page(item: dict, base: str, site: dict) -> dict:
         "url": f"{base}/{item['slug']}/",
         "intro": item["intro"],
         "sections": item["sections"],
+        "table": item.get("table"),
         "faqs": [{"q": q, "a": a} for q, a in item["faqs"]],
         "calculator": f"{base}/{calc}/" if calc else "",
         "chart": f"{base}/{item['chart']}/" if item.get("chart") else "",
