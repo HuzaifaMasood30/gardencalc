@@ -13,7 +13,7 @@
   <h1>{{ title }}</h1>
   <p class="byline">
     <span>{{ description }}</span>
-    <span class="updated">Updated {{ seasonal.updated }}</span>
+    <span class="updated">Updated {{ seasonal.updated | date_human }}</span>
   </p>
 </header>
 

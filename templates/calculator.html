@@ -2,31 +2,50 @@
 <div class="calc" data-calc-shell>
   <h2><svg aria-hidden="true"><use href="#i-calc"></use></svg>{{ calc.title }}</h2>
   <p class="calc-sub">{{ calc.sub }}</p>
-  <form class="calc-form" data-calc="{{ calc.key }}" aria-label="{{ calc.title }}">
-    {% for inp in calc.inputs %}
-    <label for="in-{{ inp.id }}">{{ inp.label }}
-      {% if inp.options %}
-      <select id="in-{{ inp.id }}" name="{{ inp.id }}">
-        {% for opt in inp.options %}
-        <option value="{{ opt.value }}"{% if opt.value == inp.default %} selected{% endif %}>{{ opt.label }}</option>
+  <div class="calc-body">
+    <form class="calc-form calc-inputs" data-calc="{{ calc.key }}" aria-label="{{ calc.title }}">
+      {% for inp in calc.inputs %}
+      <label for="in-{{ inp.id }}">{{ inp.label }}
+        {% if inp.options %}
+        <select id="in-{{ inp.id }}" name="{{ inp.id }}">
+          {% for opt in inp.options %}
+          <option value="{{ opt.value }}"{% if opt.value == inp.default %} selected{% endif %}>{{ opt.label }}</option>
+          {% endfor %}
+        </select>
+        {% else %}
+        <input type="number" inputmode="decimal" id="in-{{ inp.id }}" name="{{ inp.id }}"
+               min="{{ inp.min }}" max="{{ inp.max }}" step="{{ inp.step|default('0.1') }}"
+               value="{{ inp.default }}">
+        {% endif %}
+      </label>
+      {% endfor %}
+      <button type="button" class="calc-go">Calculate</button>
+    </form>
+    <div class="calc-panel">
+      {% if calc.presets %}
+      <div class="quick-presets calc-presets">
+        <span class="presets-label">Common:</span>
+        {% for p in calc.presets %}
+        <button type="button" class="chip" data-preset='{{ p.v | tojson }}'>{{ p.label }}</button>
         {% endfor %}
-      </select>
-      {% else %}
-      <input type="number" inputmode="decimal" id="in-{{ inp.id }}" name="{{ inp.id }}"
-             min="{{ inp.min }}" max="{{ inp.max }}" step="{{ inp.step|default('0.1') }}"
-             value="{{ inp.default }}">
+      </div>
       {% endif %}
-    </label>
-    {% endfor %}
-    <button type="button" class="calc-go">Calculate</button>
-  </form>
-  <div class="calc-result" role="status" aria-live="polite"></div>
-  <div class="calc-actions">
-    <button type="button" class="calc-copy" data-act="copy">Copy result</button>
-    <button type="button" class="calc-print" data-act="print">Print</button>
-    <button type="button" class="calc-share" data-act="share">Share link</button>
+      <div class="calc-result" role="status" aria-live="polite"></div>
+      <details class="quick-working calc-working">
+        <summary>Show working</summary>
+        <div class="quick-working-body" data-working></div>
+      </details>
+      <div class="calc-actions">
+        <button type="button" class="calc-copy" data-act="copy">Copy</button>
+        <button type="button" class="calc-print" data-act="print">Print</button>
+        <button type="button" class="calc-share" data-act="share">Share</button>
+        <a class="calc-pin" href="#" data-share="pinterest" rel="nofollow noopener" target="_blank"
+           title="Save this calculator to Pinterest">Save to Pinterest</a>
+      </div>
+      <p class="calc-hint">{{ calc.hint }}</p>
+    </div>
   </div>
-  <p class="calc-hint">{{ calc.hint }}</p>
+  {% if article %}<p class="calc-updated">Last updated <time datetime="{{ article.updated }}">{{ article.updated | date_human }}</time>. Estimates only — check with your supplier before ordering.</p>{% endif %}
 </div>
 
 <section class="embed-cta" aria-labelledby="embed-h">

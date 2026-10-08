@@ -38,5 +38,17 @@
   </div>
 </section>
 {% endif %}
+
+{% if cat_faqs %}
+<section class="faq" aria-labelledby="cat-faq-heading">
+  <h2 id="cat-faq-heading">{{ category.name }} questions</h2>
+  {% for item in cat_faqs %}
+  <details>
+    <summary>{{ item.q }}</summary>
+    <div class="faq-a"><p>{{ item.a }}</p></div>
+  </details>
+  {% endfor %}
+</section>
+{% endif %}
 </div>
 {% endblock %}

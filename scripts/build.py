@@ -16,8 +16,9 @@ import merges
 import planners
 import seasonal
 import seo as seolib
-from common import (CONFIG, CONTENT, DATA, SITE, STATIC, TEMPLATES, load_json,
-                    save_json, seo_config, site_config, topics_config)
+import calculators
+from common import (CONFIG, CONTENT, DATA, SITE, STATIC, TEMPLATES, human_date,
+                    load_json, save_json, seo_config, site_config, topics_config)
 
 YEAR = dt.date.today().year
 
@@ -67,10 +68,183 @@ FIG_CAPTION = {
     "tile": "Tile layout showing the waste allowance added for cuts and breakage.",
 }
 
+# Homepage quick calculator: a compact version of the most common tools. Each tab shows
+# only the 2-3 inputs that drive the headline result; the engine (static/js/main.js) is
+# the same code the full calculator pages use, so the numbers can never disagree.
+QUICK_CALCS = [
+    {"key": "mulch", "label": "Mulch", "icon": "mulch", "slug": "mulch-calculator",
+     "inputs": ["length", "width", "depth"],
+     "presets": [{"label": "4x8 bed, 3 in", "v": {"length": 8, "width": 4, "depth": 3}},
+                 {"label": "500 sq ft, 3 in", "v": {"length": 25, "width": 20, "depth": 3}}]},
+    {"key": "soil", "label": "Soil", "icon": "soil", "slug": "raised-bed-soil-calculator",
+     "inputs": ["length", "width", "height"],
+     "presets": [{"label": "4x8 bed, 12 in", "v": {"length": 8, "width": 4, "height": 12}},
+                 {"label": "4x4 bed, 6 in", "v": {"length": 4, "width": 4, "height": 6}}]},
+    {"key": "gravel", "label": "Gravel", "icon": "gravel", "slug": "gravel-calculator",
+     "inputs": ["length", "width", "depth"],
+     "presets": [{"label": "10x10 patio, 3 in", "v": {"length": 10, "width": 10, "depth": 3}},
+                 {"label": "Driveway 20x10, 4 in", "v": {"length": 20, "width": 10, "depth": 4}}]},
+    {"key": "concrete", "label": "Concrete", "icon": "concrete", "slug": "concrete-calculator",
+     "inputs": ["length", "width", "thickness"],
+     "presets": [{"label": "10x12 slab, 4 in", "v": {"length": 12, "width": 10, "thickness": 4}},
+                 {"label": "10x10 slab, 4 in", "v": {"length": 10, "width": 10, "thickness": 4}}]},
+    {"key": "paint", "label": "Paint", "icon": "paint", "slug": "paint-calculator",
+     "inputs": ["length", "width", "height", "coats"],
+     "units": {"height": "ft"},
+     "presets": [{"label": "12x10 room, 2 coats", "v": {"length": 12, "width": 10, "height": 8, "coats": 2}}]},
+    {"key": "tile", "label": "Tile", "icon": "tile", "slug": "tile-calculator",
+     "inputs": ["length", "width", "tile_w", "tile_h", "waste"],
+     "presets": [{"label": "10x10, 12 in tiles", "v": {"length": 10, "width": 10, "tile_w": 12, "tile_h": 12, "waste": 10}}]},
+    {"key": "grass_seed", "label": "Grass seed", "icon": "seed", "slug": "grass-seed-calculator",
+     "inputs": ["area", "method"],
+     "presets": [{"label": "5,000 sq ft new lawn", "v": {"area": 5000, "method": 1}}]},
+    {"key": "fertilizer", "label": "Fertilizer", "icon": "fertilizer", "slug": "fertilizer-calculator",
+     "inputs": ["area", "rate", "bag"],
+     "presets": [{"label": "5,000 sq ft, 1 lb N", "v": {"area": 5000, "rate": 1, "bag": 40}}]},
+]
+# Short unit suffixes so the compact inputs stay readable on a 360 px screen.
+QUICK_UNITS = {"length": "ft", "width": "ft", "depth": "in", "height": "in",
+               "thickness": "in", "tile_w": "in", "tile_h": "in", "waste": "%",
+               "area": "sq ft", "rate": "lb", "bag": "lb", "coats": "", "method": ""}
+
+# "Popular quick answers": real numbers computed at build time from scripts/calculators.py
+# (the same engine the pages use), each linking to the calculator that produced it. The
+# answer text is derived from the function output, never typed by hand.
+QUICK_ANSWERS = [
+    {"calc": "concrete", "args": {"length": 12, "width": 10, "thickness": 4},
+     "q": "10x12 ft slab, 4 in thick",
+     "answer": lambda o: f"{o['cubic_yards']} cubic yards — about {o['bags_80lb']} bags of 80 lb or {o['bags_60lb']} bags of 60 lb"},
+    {"calc": "mulch", "args": {"length": 25, "width": 20, "depth": 3},
+     "q": "500 sq ft bed, 3 in deep",
+     "answer": lambda o: f"{o['cubic_yards']} cubic yards — about {o['bags_2cf']} bags of 2 cu ft"},
+    {"calc": "soil", "args": {"length": 8, "width": 4, "height": 12},
+     "q": "4x8 ft raised bed, 12 in deep",
+     "answer": lambda o: f"{o['cubic_feet']} cubic feet — about {o['bags_1_5cf']} bags of 1.5 cu ft"},
+    {"calc": "gravel", "args": {"length": 10, "width": 10, "depth": 3},
+     "q": "10x10 ft patio, 3 in deep",
+     "answer": lambda o: f"{o['cubic_yards']} cubic yards, roughly {o['tons']} tons"},
+    {"calc": "paint", "args": {"length": 12, "width": 10, "height": 8, "coats": 2},
+     "q": "12x10 ft room, 2 coats",
+     "answer": lambda o: f"about {o['gallons']} gallons"},
+    {"calc": "tile", "args": {"length": 10, "width": 10, "tile_w": 12, "tile_h": 12, "waste": 10},
+     "q": "10x10 ft floor, 12 in tiles",
+     "answer": lambda o: f"{o['tiles']} tiles, or {o['tiles_with_waste']} with 10% waste"},
+    {"calc": "grass_seed", "args": {"area": 5000, "method": 1},
+     "q": "5,000 sq ft new lawn",
+     "answer": lambda o: f"{o['pounds']} lb of seed — about {o['bags_3lb']} bags of 3 lb"},
+    {"calc": "fertilizer", "args": {"area": 5000, "rate": 1, "bag": 40},
+     "q": "5,000 sq ft lawn at 1 lb N",
+     "answer": lambda o: f"{o['pounds']} lb — about {o['bags']} bag of 40 lb"},
+]
+
+# Homepage FAQ. These exact questions and answers are rendered visibly in accordions AND
+# emitted as FAQPage schema, so the markup always matches what a visitor can read.
+HOME_FAQS = [
+    {"q": "How do I work out how much mulch I need?",
+     "a": "Multiply the bed's length by its width to get square feet, multiply by the depth in "
+          "feet, then divide by 27 for cubic yards. A 500 sq ft bed at 3 in deep needs about "
+          "4.63 cubic yards, or 63 bags of 2 cu ft."},
+    {"q": "How many bags of concrete do I need for a 10x12 slab?",
+     "a": "A 10x12 ft slab at 4 in thick needs about 1.48 cubic yards: roughly 67 bags of 80 lb "
+          "mix or 89 bags of 60 lb mix."},
+    {"q": "How much area does a cubic yard cover?",
+     "a": "One cubic yard is 27 cubic feet. Spread 3 in deep it covers about 108 sq ft; at 2 in "
+          "deep it covers about 162 sq ft."},
+    {"q": "How much paint do I need for a room?",
+     "a": "Measure the wall area, subtract the doors and windows, divide by about 350 sq ft per "
+          "gallon, then multiply by the number of coats."},
+    {"q": "Are the calculator results accurate enough to order materials?",
+     "a": "The formulas are the standard rules of thumb suppliers publish, but every result is "
+          "an estimate. Round up and confirm the coverage on the bag or with your supplier "
+          "before ordering."},
+    {"q": "Is GardenCalc free to use and embed?",
+     "a": "Yes. Every calculator is free, needs no sign-up, and can be embedded on your own site "
+          "with the credit link kept intact."},
+]
+
+# Short, factual FAQ per category hub (2 items each) — answers reuse the standard rates the
+# calculators already use, so the FAQPage schema matches visible text exactly.
+CATEGORY_FAQS = {
+    "mulch": [
+        {"q": "How deep should mulch be?",
+         "a": "Most beds are mulched 2 to 3 inches deep. Deeper than 4 inches can smother roots "
+              "and hold too much moisture, so 3 inches is a safe default."},
+        {"q": "How many bags of mulch is a cubic yard?",
+         "a": "A cubic yard is 27 cubic feet, so it equals about 13.5 bags of 2 cubic feet."},
+    ],
+    "soil": [
+        {"q": "How much soil does a raised bed need?",
+         "a": "Multiply the bed length by width by the fill depth in feet to get cubic feet, then "
+              "divide by 27 for cubic yards. A 4x8 bed filled 12 inches deep needs 32 cubic feet."},
+        {"q": "Should I fill a raised bed with topsoil or a mix?",
+         "a": "A blend of topsoil and compost is usual. The calculator gives the total volume; use "
+              "the depth your plants need rather than filling to the very top."},
+    ],
+    "gravel": [
+        {"q": "How much does a cubic yard of gravel weigh?",
+         "a": "Gravel is about 1.2 to 1.5 tons per cubic yard depending on the stone, so the "
+              "calculator uses 1.4 tons per cubic yard as a working figure."},
+        {"q": "How deep should gravel be for a driveway?",
+         "a": "A working driveway usually has 4 inches of gravel over a compacted base. Paths and "
+              "decorative beds often use 2 to 3 inches."},
+    ],
+    "paint": [
+        {"q": "How many square feet does a gallon of paint cover?",
+         "a": "About 350 square feet per gallon for a single coat on a smooth, sealed wall. Rough "
+              "or porous surfaces can use more."},
+        {"q": "Do I need to subtract doors and windows?",
+         "a": "Yes. Deducting a door (about 21 square feet) and a window (about 15 square feet) "
+              "keeps the estimate realistic."},
+    ],
+    "tile": [
+        {"q": "How much waste should I allow for tile?",
+         "a": "Add 10 percent for a straight lay and 15 to 20 percent for diagonal or patterned "
+              "layouts, to cover cuts and breakage."},
+        {"q": "How do I work out how many tiles I need?",
+         "a": "Divide the floor area by the area of one tile, then round up and add the waste "
+              "allowance. The calculator does both steps for you."},
+    ],
+    "grass-seed": [
+        {"q": "How much grass seed do I need per 1,000 square feet?",
+         "a": "A new lawn uses about 4.5 pounds per 1,000 square feet; overseeding an existing lawn "
+              "uses about 2 pounds per 1,000 square feet."},
+        {"q": "When is the best time to sow grass seed?",
+         "a": "Late summer to early autumn suits cool-season grasses, giving the seed warm soil and "
+              "cool, damp air. Spring works too if you keep it watered."},
+    ],
+    "concrete": [
+        {"q": "How many bags of concrete make a cubic yard?",
+         "a": "About 45 bags of 80 lb mix or 60 bags of 60 lb mix make a cubic yard, depending on "
+              "the yield printed on the bag."},
+        {"q": "How thick should a concrete slab be?",
+         "a": "A garden path or shed base is usually 4 inches thick. Driveways and heavier loads "
+              "often use 5 to 6 inches over a compacted base."},
+    ],
+    "topsoil": [
+        {"q": "How much topsoil do I need to level a lawn?",
+         "a": "Multiply the area by the depth in feet to get cubic feet, then divide by 27 for "
+              "cubic yards. Spread thinly and settle it rather than smothering the grass."},
+        {"q": "Is topsoil sold by the bag or the yard?",
+         "a": "Both. Small jobs use 40 lb bags; larger jobs are cheaper by the cubic yard. The "
+              "calculator shows the bag and cubic-yard totals side by side."},
+    ],
+    "fertilizer": [
+        {"q": "How much fertilizer do I put on my lawn?",
+         "a": "A common rate is 1 pound of actual nitrogen per 1,000 square feet per feeding. Check "
+              "the nitrogen number on the bag to convert that to product."},
+        {"q": "How do I convert a nitrogen rate to bags?",
+         "a": "Divide the pounds of nitrogen by the nitrogen share on the bag label, then divide by "
+              "the bag weight. The calculator does this from your area and bag size."},
+    ],
+}
+
 
 def _env() -> Environment:
-    return Environment(loader=FileSystemLoader(str(TEMPLATES)),
-                       autoescape=select_autoescape(["html", "xml"]))
+    env = Environment(loader=FileSystemLoader(str(TEMPLATES)),
+                      autoescape=select_autoescape(["html", "xml"]))
+    # Display dates as "Oct 8, 2026" while <time datetime> keeps the ISO value.
+    env.filters["date_human"] = human_date
+    return env
 
 
 def _base(site: dict) -> str:
@@ -113,16 +287,55 @@ def _fig(site: dict, art: dict) -> str:
     return _abs(site, f"/static/img/fig/{art['slug']}.webp")
 
 
+def _short_desc(text: str, limit: int = 120) -> str:
+    """Trim a meta description to a card length at a word boundary, with an ellipsis."""
+    text = (text or "").strip()
+    if len(text) <= limit:
+        return text
+    cut = text[:limit].rsplit(" ", 1)[0].rstrip(" ,;:—-")
+    return cut + "…"
+
+
+def _one_sentence(text: str) -> str:
+    """First complete sentence of a meta description, for card excerpts.
+
+    Falls back to the whole text when the first sentence is too short to stand alone, so
+    an excerpt never ends on a dangling fragment.
+    """
+    text = (text or "").strip()
+    m = re.match(r"(.+?[.!?])(\s|$)", text)
+    if m and len(m.group(1)) >= 60:
+        return m.group(1)
+    return _short_desc(text)
+
+
 def _card_meta(site: dict, art: dict, category: str | None = None) -> dict:
     return {
         "slug": art["slug"],
         "title": art["title"],
-        "desc": art.get("meta_description", "")[:120],
+        "desc": _short_desc(art.get("meta_description", "")),
+        "excerpt": _one_sentence(art.get("meta_description", "")),
         "thumb": _thumb(site, art),
         "alt": FIG_CAPTION.get(art.get("cluster", ""), art["title"]),
-        "category": category,
+        "category": category or "",
         "updated": art.get("updated", ""),
+        "updated_human": human_date(art.get("updated", "")),
     }
+
+
+def _split_first_section(body_html: str) -> tuple[str, str]:
+    """Split rendered article HTML after the first <h2> section.
+
+    Lets guide pages drop the "open the calculator" card right after the opening
+    section, where readers have just read the answer and are ready to use the tool.
+    """
+    idx = body_html.find("<h2 ")
+    if idx <= 0:
+        return body_html, ""
+    end = body_html.find("<h2 ", idx + 1)
+    if end == -1:
+        return body_html, ""
+    return body_html[:end], body_html[end:]
 
 
 def _calc_context(art: dict, cfg: dict, site: dict) -> dict | None:
@@ -137,6 +350,7 @@ def _calc_context(art: dict, cfg: dict, site: dict) -> dict | None:
         d.setdefault("step", "0.1")
         inputs.append(d)
         defaults[d["id"]] = d.get("default")
+    presets = next((q.get("presets", []) for q in QUICK_CALCS if q["key"] == calc_key), [])
     return {
         "key": calc_key,
         "title": art.get("calculator_title") or defs.get("title", "Calculator"),
@@ -144,6 +358,7 @@ def _calc_context(art: dict, cfg: dict, site: dict) -> dict | None:
         "hint": "Estimates only. Round up when ordering and check with your supplier.",
         "inputs": inputs,
         "defaults": defaults,
+        "presets": presets,
         "slug": art["slug"],
         # Set data/videos.json as {"mulch": {"id": "...", "upload": "YYYY-MM-DD"}} to
         # publish a walkthrough; empty renders nothing (no fake videos, no empty player).
@@ -180,21 +395,39 @@ def build() -> dict:
         c["blurb"] = BLURBS.get(c["id"], "Free calculators and practical guides.")
         c["icon"] = CATEGORY_ICONS.get(c["id"], "leaf")
     cat_map = {c["id"]: c for c in categories}
-    nav_categories = [{"id": c["id"], "name": c["name"]} for c in categories]
+    nav_categories = [{"id": c["id"], "name": c["name"], "icon": c["icon"],
+                       "blurb": c["blurb"]} for c in categories]
+    # Top calculators for the footer's "Popular calculators" column, in the same order the
+    # homepage shows them so the two never drift apart.
+    popular_calcs = [{"slug": a["slug"], "title": a.get("calculator_title") or a["title"]}
+                     for a in published if a.get("is_pillar")][:6]
 
     env = _env()
     env.globals.update(base_url=base, site=site, year=YEAR,
-                       nav_categories=nav_categories, calc_defs=tcfg.get("calculators", {}))
+                       nav_categories=nav_categories, popular_calcs=popular_calcs,
+                       calc_defs=tcfg.get("calculators", {}))
 
-    default_og = _thumb(site, published[0]) if published else _abs(site, "/static/img/og-default.png")
+    default_og = _abs(site, "/static/img/og-default.png")
+    # Social scrapers handle PNG far more reliably than WebP, so the OG card always
+    # points at a PNG. Page figures are WebP; swap them for their PNG twin.
+    default_og_png = default_og.rsplit(".", 1)[0] + ".png"
+
+    def _og(url: str) -> str:
+        return default_og_png if url.endswith((".webp", ".svg")) else url
+
+    # Cache-busting token for the CSS/JS bundle: a short hash of the source files, so a
+    # redeploy always serves fresh assets to returning visitors. Safe to change every run.
+    import hashlib
+    _asset_src = (STATIC / "css" / "style.css").read_bytes() + (STATIC / "js" / "main.js").read_bytes()
+    asset_v = hashlib.sha1(_asset_src).hexdigest()[:8]
 
     def common(title, description, canonical, og_type="website", og_image=None,
                schemas=None, robots=None, keywords=None):
         return dict(title=title, description=description, canonical=canonical,
-                    og_type=og_type, og_image=og_image or default_og,
+                    og_type=og_type, og_image=_og(og_image or default_og),
                     schemas=schemas or [],
                     robots=robots or "index, follow, max-snippet:-1, max-image-preview:large",
-                    keywords=keywords, base_url=base)
+                    keywords=keywords, base_url=base, asset_v=asset_v)
 
     # Index for prev/next within each cluster, ordered by creation date.
     by_cluster: dict[str, list[dict]] = {}
@@ -274,10 +507,16 @@ def build() -> dict:
                      og_image=_fig(site, art), schemas=schemas,
                      keywords=", ".join([art.get("primary_keyword", "")] +
                                         art.get("secondary_keywords", [])))
-        ctx.update(article=art, body_html=body_html, toc=toc, figure=figure,
+        body_head, body_rest = _split_first_section(body_html)
+        ctx.update(article=art, body_html=body_html, body_head=body_head, body_rest=body_rest,
+                   toc=toc, figure=figure,
                    calc=calc_ctx, faq=faq_items, answer_first=answer_first,
                    category_name=category_name, reading_time=_reading_time(art.get("word_count", 0)),
                    related=related, project_links=project_links,
+                   # Guide pages get a compact link back to their category's calculator.
+                   calc_link=(_card_meta(site, pillar_by_cluster[art["cluster"]], category_name)
+                              if not art.get("is_pillar")
+                              and art.get("cluster") in pillar_by_cluster else None),
                    cluster_chart=cluster_chart, cluster_planner=cluster_planner,
                    cluster_seasonal=cluster_seasonal,
                    pager={"prev": {"slug": prev_art["slug"], "title": prev_art["title"]} if prev_art else None,
@@ -290,31 +529,88 @@ def build() -> dict:
         items = [a for a in published if a.get("cluster") == c["id"]]
         pillars = [a for a in items if a.get("is_pillar")]
         others = [a for a in items if not a.get("is_pillar")]
-        og = _thumb(site, pillars[0]) if pillars else (_thumb(site, items[0]) if items else _abs(site, "/static/img/og-default.png"))
+        og = _abs(site, "/static/img/og-default.png")  # brand card for category hubs
+        cat_faqs = CATEGORY_FAQS.get(c["id"], [])
+        schemas = [json.dumps(seolib.collection_schema(c, items, site), ensure_ascii=False)]
+        if cat_faqs:
+            schemas.append(json.dumps(seolib.faq_schema({"faq": cat_faqs}), ensure_ascii=False))
         ctx = common(title=f"{c['name']} Calculators | {site['name']}",
                      description=(c["blurb"] + " Free, instant calculators with the formula shown.")[:155],
                      canonical=_abs(site, f"/category/{c['id']}/"), og_image=og,
-                     schemas=[json.dumps(seolib.collection_schema(
-                         c, items, site), ensure_ascii=False)])
+                     schemas=schemas)
         ctx.update(category=c,
                    pillars=[_card_meta(site, a, c["name"]) for a in pillars],
-                   others=[_card_meta(site, a, c["name"]) for a in others])
+                   others=[_card_meta(site, a, c["name"]) for a in others],
+                   cat_faqs=cat_faqs)
         _write(SITE / "category" / c["id"] / "index.html",
                env.get_template("category.html").render(**ctx))
 
     # --- homepage ---
     pillars = [a for a in published if a.get("is_pillar")][:8]
+    by_slug = {a["slug"]: a for a in published}
+    calc_defs_all = tcfg.get("calculators", {})
+    quick_calcs = []
+    for qc in QUICK_CALCS:
+        cdef = calc_defs_all.get(qc["key"], {})
+        defs = {i["id"]: i for i in cdef.get("inputs", [])}
+        inputs = []
+        for iid in qc["inputs"]:
+            if iid not in defs:
+                continue
+            d = defs[iid]
+            inputs.append({
+                "id": iid,
+                "label": d.get("label", iid).split(" (")[0],
+                "min": d.get("min"), "max": d.get("max"),
+                "step": d.get("step", "0.1"),
+                "default": d.get("default"),
+                "unit": qc.get("units", {}).get(iid, QUICK_UNITS.get(iid, "")),
+                "options": d.get("options"),
+            })
+        art = by_slug.get(qc["slug"])
+        quick_calcs.append({
+            "key": qc["key"], "label": qc["label"], "icon": qc["icon"],
+            "title": cdef.get("title", qc["label"]),
+            "slug": qc["slug"],
+            "url": _abs(site, f"/{qc['slug']}/") if art else "",
+            "inputs": inputs,
+            "presets": qc.get("presets", []),
+        })
     ctx = common(title=f"{site['name']} — Free Home & Garden Calculators",
                  description=("Free mulch, soil, topsoil, gravel, fertilizer, paint, tile, seed and "
                               "concrete calculators. Instant answers with the formula shown."),
                  canonical=_abs(site, "/"),
                  schemas=[json.dumps(seolib.website_schema(site), ensure_ascii=False),
-                          json.dumps(seolib.organization_schema(site), ensure_ascii=False)])
+                          json.dumps(seolib.organization_schema(site), ensure_ascii=False),
+                          json.dumps(seolib.faq_schema({"faq": HOME_FAQS}), ensure_ascii=False)])
+    quick_answer_items = []
+    for qa in QUICK_ANSWERS:
+        try:
+            out = calculators.compute(qa["calc"], qa["args"])
+        except Exception:
+            continue
+        art = by_slug.get(f"{qa['calc'].replace('_', '-')}-calculator")
+        quick_answer_items.append({
+            "q": qa["q"], "answer": qa["answer"](out),
+            "url": _abs(site, f"/{art['slug']}/") if art else "",
+            "label": calc_defs_all.get(qa["calc"], {}).get("title", qa["calc"].replace("_", " ").title()),
+        })
     ctx.update(categories=categories, articles=published[:12],
                article_count=len(published), category_count=len(categories),
                chart_count=len(charts.CHARTS), chart_cards=chart_cards,
                planner_cards=planner_cards, seasonal_cards=seasonal_cards,
-               pillar_cards=[_card_meta(site, a) for a in pillars])
+               quick_calcs=quick_calcs, quick_answers=quick_answer_items,
+               home_faqs=HOME_FAQS,
+               latest_cards=[_card_meta(site, a, cat_map.get(a.get("cluster", ""), {}).get("name", ""))
+                             for a in published[:6]],
+               latest_all=[{"slug": a["slug"], "title": a["title"],
+                            "desc": _one_sentence(a.get("meta_description", "")),
+                            "updated": a.get("updated", ""),
+                            "updated_human": human_date(a.get("updated", "")),
+                            "category": cat_map.get(a.get("cluster", ""), {}).get("name", "")}
+                           for a in published[6:12]],
+               pillar_cards=[_card_meta(site, a, cat_map.get(a.get("cluster", ""), {}).get("name", ""))
+                             for a in pillars])
     _write(SITE / "index.html", env.get_template("index.html").render(**ctx))
 
     # --- legal / info pages ---
@@ -389,7 +685,7 @@ def build() -> dict:
         calc_slug = ch.get("calc", "")
         cctx = common(title=ch["title"], description=ch["description"],
                       canonical=cp["url"], og_type="article",
-                      og_image=_thumb(site, pillar_by_cluster.get(ch["cluster"], published[0])),
+                      og_image=_abs(site, "/static/img/og-default.png"),
                       keywords=ch["keyword"],
                       schemas=[json.dumps(seolib.breadcrumb_list(
                                    [("Home", "/"), (cluster_name, f"/category/{ch['cluster']}/"),
@@ -414,7 +710,7 @@ def build() -> dict:
         pp = planners.page(pl, base, site)
         pctx = common(title=pl["title"], description=pl["description"],
                       canonical=pp["url"], og_type="article",
-                      og_image=_thumb(site, pillar_by_cluster.get(pl["cluster"], published[0])),
+                      og_image=_abs(site, "/static/img/og-default.png"),
                       keywords=pl["question"],
                       schemas=[json.dumps(seolib.breadcrumb_list(
                                    [("Home", "/"), (cluster_name, f"/category/{pl['cluster']}/"),
@@ -438,7 +734,7 @@ def build() -> dict:
         sp = seasonal.page(item, base, site)
         sctx = common(title=item["title"], description=item["description"],
                       canonical=sp["url"], og_type="article",
-                      og_image=_thumb(site, pillar_by_cluster.get(item["cluster"], published[0])),
+                      og_image=_abs(site, "/static/img/og-default.png"),
                       keywords=item["keyword"],
                       schemas=[json.dumps(seolib.breadcrumb_list(
                                    [("Home", "/"), (cluster_name, f"/category/{item['cluster']}/"),

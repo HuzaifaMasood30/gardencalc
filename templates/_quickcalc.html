@@ -1,0 +1,69 @@
+{% if quick_calcs %}
+<div class="quick-calc" data-quick>
+  <div class="quick-head">
+    <h2 id="quick-heading">Quick calculator</h2>
+    <a href="{{ base_url }}/calculators/">All 9 →</a>
+  </div>
+  <p class="quick-sub">Pick a tool and type your numbers — the answer appears instantly, right in your browser.</p>
+  <div class="quick-tabs" role="tablist" aria-label="Choose a calculator">
+    {% for q in quick_calcs %}
+    <button type="button" role="tab" id="qt-{{ q.key }}"
+            aria-controls="qp-{{ q.key }}" aria-selected="{{ 'true' if loop.first else 'false' }}"
+            tabindex="{{ '0' if loop.first else '-1' }}"
+            class="quick-tab{% if loop.first %} is-active{% endif %}" data-qtab="{{ q.key }}">
+      <svg aria-hidden="true"><use href="#i-{{ q.icon }}"></use></svg><span>{{ q.label }}</span>
+    </button>
+    {% endfor %}
+  </div>
+
+  {% for q in quick_calcs %}
+  <div class="quick-panel{% if not loop.first %} is-hidden{% endif %}" role="tabpanel"
+       id="qp-{{ q.key }}" aria-labelledby="qt-{{ q.key }}" data-qpanel="{{ q.key }}"
+       {% if not loop.first %}hidden{% endif %}>
+    <div class="calc" data-calc-shell>
+      <form class="calc-form quick-form" data-calc="{{ q.key }}" aria-label="{{ q.title }}">
+        {% for inp in q.inputs %}
+        <label for="q-{{ q.key }}-{{ inp.id }}" class="quick-field">{{ inp.label }}
+          {% if inp.options %}
+          <select id="q-{{ q.key }}-{{ inp.id }}" name="{{ inp.id }}">
+            {% for opt in inp.options %}
+            <option value="{{ opt.value }}"{% if opt.value == inp.default %} selected{% endif %}>{{ opt.label }}</option>
+            {% endfor %}
+          </select>
+          {% else %}
+          <span class="quick-input">
+            <input type="number" inputmode="decimal" id="q-{{ q.key }}-{{ inp.id }}" name="{{ inp.id }}"
+                   min="{{ inp.min }}" max="{{ inp.max }}" step="{{ inp.step|default('0.1') }}"
+                   value="{{ inp.default }}">
+            {% if inp.unit %}<span class="unit">{{ inp.unit }}</span>{% endif %}
+          </span>
+          {% endif %}
+        </label>
+        {% endfor %}
+        <button type="button" class="calc-go">Calculate</button>
+      </form>
+
+      {% if q.presets %}
+      <div class="quick-presets" aria-label="Common sizes">
+        <span class="presets-label">Common:</span>
+        {% for p in q.presets %}
+        <button type="button" class="chip" data-preset='{{ p.v | tojson }}'>{{ p.label }}</button>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <div class="calc-result" role="status" aria-live="polite"></div>
+      <details class="quick-working">
+        <summary>Show working</summary>
+        <div class="quick-working-body" data-working></div>
+      </details>
+      <div class="calc-actions">
+        <button type="button" class="calc-copy" data-act="copy">Copy result</button>
+        <button type="button" class="calc-share" data-act="share">Share link</button>
+        {% if q.url %}<a class="calc-more" href="{{ q.url }}">Open the full calculator →</a>{% endif %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}

@@ -8,26 +8,17 @@
         fertilizer, paint, tile, seed or concrete you need — with the formula shown, so you can
         check the maths and understand the method.</p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="#calculators">Browse calculators</a>
+        <a class="btn btn-primary" href="#quick-heading">Browse calculators</a>
         <a class="btn btn-ghost" href="#latest">Latest guides</a>
       </div>
       <div class="hero-stats">
-        <div><b>{{ article_count }}</b><span>guides &amp; calculators</span></div>
-        <div><b>{{ category_count }}</b><span>project categories</span></div>
-        <div><b>100%</b><span>free, no sign-up</span></div>
+        <div><b>Free</b><span>no sign-up</span></div>
+        <div><b>Formula</b><span>shown every time</span></div>
+        <div><b>Bags</b><span>cubic feet &amp; cubic yards</span></div>
       </div>
     </div>
-    <div class="hero-card">
-      <h2><svg aria-hidden="true" style="width:20px;height:20px;vertical-align:-3px"><use href="#i-bolt"></use></svg> Why these calculators</h2>
-      <p>Each tool runs instantly in your browser and prints the formula it used.</p>
-      <ul class="small" style="margin:0;padding-left:1.1em;color:var(--fg-soft)">
-        <li>Bags, cubic feet and cubic yards, side by side</li>
-        <li>Depth guidance for real projects</li>
-        <li>Worked examples you can copy</li>
-      </ul>
-      <div style="margin-top:14px">
-        <a class="btn btn-primary" style="background:var(--brand);color:#fff" href="{{ base_url }}/category/mulch/">Start with mulch</a>
-      </div>
+    <div class="hero-card hero-quick">
+      {% include "_quickcalc.html" %}
     </div>
   </div>
 </section>
@@ -58,13 +49,44 @@
     <a class="a-card" href="{{ base_url }}/{{ a.slug }}/">
       <figure><img src="{{ a.thumb }}" width="480" height="270" alt="{{ a.alt }}" loading="lazy" decoding="async"></figure>
       <div class="a-card-body">
-        <span class="tag">{{ a.category }}</span>
+        {% if a.category %}<span class="tag">{{ a.category }}</span>{% endif %}
         <h3>{{ a.title }}</h3>
         <p>{{ a.desc }}</p>
       </div>
     </a>
     {% endfor %}
   </div>
+</section>
+
+{% if quick_answers %}
+<section class="section" aria-labelledby="answers-heading">
+  <div class="section-head"><h2 id="answers-heading">Popular quick answers</h2>
+    <a href="{{ base_url }}/calculators/">All calculators →</a></div>
+  <p class="section-sub">Real results from our calculators — tap one to open the full tool.</p>
+  <ul class="qa-list">
+    {% for qa in quick_answers %}
+    <li>
+      <a href="{{ qa.url or (base_url + '/calculators/') }}">
+        <span class="qa-q">{{ qa.q }}</span>
+        <span class="qa-a">{{ qa.answer }}</span>
+        <span class="qa-open">{{ qa.label }} →</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+<section class="section how-it-works" aria-labelledby="how-heading">
+  <div class="section-head"><h2 id="how-heading">How it works</h2></div>
+  <ol class="steps">
+    <li><span class="step-n">1</span><h3>Enter your measurements</h3>
+      <p>Type the size of your bed, room, slab or lawn. Nothing is sent anywhere.</p></li>
+    <li><span class="step-n">2</span><h3>See the result with the formula</h3>
+      <p>You get cubic feet, cubic yards, bags or gallons — plus the working, so you can check it.</p></li>
+    <li><span class="step-n">3</span><h3>Print or share your list</h3>
+      <p>Copy, print or share the result, then take the materials list to your supplier.</p></li>
+  </ol>
 </section>
 
 <section class="section" aria-labelledby="planners-heading">
@@ -102,18 +124,48 @@
 </section>
 
 <section class="section" aria-labelledby="latest-heading" id="latest">
-  <div class="section-head"><h2 id="latest-heading">Latest guides</h2></div>
-  <ul class="post-list">
-    {% for a in articles %}
+  <div class="section-head"><h2 id="latest-heading">Latest guides</h2>
+    <a href="{{ base_url }}/guides/">View all guides →</a></div>
+  <div class="grid a-cards">
+    {% for a in latest_cards %}
+    <a class="a-card" href="{{ base_url }}/{{ a.slug }}/">
+      <figure><img src="{{ a.thumb }}" width="480" height="270" alt="{{ a.alt }}" loading="lazy" decoding="async"></figure>
+      <div class="a-card-body">
+        {% if a.category %}<span class="tag">{{ a.category }}</span>{% endif %}
+        <h3>{{ a.title }}</h3>
+        <p>{{ a.excerpt }}</p>
+        <span class="when"><time datetime="{{ a.updated }}">{{ a.updated | date_human }}</time></span>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+  {% if latest_all %}
+  <ul class="post-list more-guides">
+    {% for a in latest_all %}
     <li>
       <span>
         <a href="{{ base_url }}/{{ a.slug }}/">{{ a.title }}</a>
-        <span class="excerpt">{{ a.meta_description }}</span>
+        <span class="excerpt">{{ a.desc }}</span>
       </span>
-      <span class="when">{{ a.updated }}</span>
+      <span class="when"><time datetime="{{ a.updated }}">{{ a.updated_human }}</time></span>
     </li>
     {% endfor %}
   </ul>
+  {% endif %}
 </section>
+
+{% if home_faqs %}
+<section class="section" aria-labelledby="home-faq-heading">
+  <div class="section-head"><h2 id="home-faq-heading">Frequently asked questions</h2></div>
+  <div class="faq">
+    {% for item in home_faqs %}
+    <details>
+      <summary>{{ item.q }}</summary>
+      <div class="faq-a"><p>{{ item.a }}</p></div>
+    </details>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
 </div>
 {% endblock %}

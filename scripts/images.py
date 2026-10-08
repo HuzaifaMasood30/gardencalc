@@ -304,14 +304,15 @@ def render_brand(static_root: Path) -> dict:
     logo.resize((180, 180), Image.LANCZOS).save(img_dir / "apple-touch-icon.png", "PNG")
     logo.resize((48, 48), Image.LANCZOS).save(img_dir / "favicon.ico", "ICO")
 
-    og = Image.new("RGB", (W, H), WHITE)
+    og = Image.new("RGB", (1200, 630), WHITE)
     od = ImageDraw.Draw(og)
-    od.rectangle([0, 0, W, H], fill=accent)
-    for i in range(-H, W, 46):
-        od.line([i, 0, i + 120, H], fill=(accent[0] + 18, accent[1] + 18, accent[2] + 18), width=3)
-    od.text((72, 150), "GardenCalc", font=_font(BOLD, 92), fill=WHITE)
-    od.text((74, 262), "Free home & garden calculators", font=_font(REG, 44), fill=(220, 240, 225))
-    od.text((74, 322), "and practical how-to guides", font=_font(REG, 44), fill=(220, 240, 225))
+    od.rectangle([0, 0, 1200, 630], fill=accent)
+    for i in range(-630, 1200, 46):
+        od.line([i, 0, i + 120, 630], fill=(accent[0] + 18, accent[1] + 18, accent[2] + 18), width=3)
+    od.text((72, 132), "GardenCalc", font=_font(BOLD, 92), fill=WHITE)
+    od.text((74, 244), "Free home & garden calculators", font=_font(REG, 44), fill=(220, 240, 225))
+    od.text((74, 304), "and practical how-to guides", font=_font(REG, 44), fill=(220, 240, 225))
+    od.text((74, 452), "huzaifamasood30.github.io/gardencalc", font=_font(REG, 30), fill=(190, 232, 200))
     og.save(img_dir / "og-default.png", "PNG")
     return {"logo": 1, "favicon": 2, "og": 1}
 

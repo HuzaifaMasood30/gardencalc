@@ -14,7 +14,7 @@
   <h1>{{ article.title }}</h1>
   <p class="byline">
     <span>By {{ site.author }}</span><span class="dot">·</span>
-    <span>Updated <time datetime="{{ article.updated }}">{{ article.updated }}</time></span>
+    <span>Updated <time datetime="{{ article.updated }}">{{ article.updated | date_human }}</time></span>
     <span class="dot">·</span><span>{{ article.word_count }} words</span>
     <span class="dot">·</span><span>{{ reading_time }} min read</span>
   </p>
@@ -22,6 +22,15 @@
 
 <div class="wrap">
 {% if answer_first %}<div class="answer-first"><p>{{ answer_first }}</p></div>{% endif %}
+{% if calc_link %}
+<a class="calc-cta" href="{{ base_url }}/{{ calc_link.slug }}/">
+  <span class="calc-cta-body">
+    <strong>Open the {{ category_name|lower }} calculator</strong>
+    <span>{{ calc_link.desc }}</span>
+  </span>
+  <span class="calc-cta-go">Use it →</span>
+</a>
+{% endif %}
 {% include "calculator.html" %}
 <div class="article-body">
   <div>
@@ -33,7 +42,19 @@
     </figure>
     {% endif %}
     <div class="prose">
-      {{ body_html | safe }}
+      {{ body_head | safe }}
+    </div>
+    {% if calc_link %}
+    <a class="calc-cta calc-cta-inline" href="{{ base_url }}/{{ calc_link.slug }}/">
+      <span class="calc-cta-body">
+        <strong>Skip the maths — use the {{ category_name|lower }} calculator</strong>
+        <span>Type your measurements and get the answer instantly.</span>
+      </span>
+      <span class="calc-cta-go">Open →</span>
+    </a>
+    {% endif %}
+    <div class="prose">
+      {{ body_rest | safe }}
     </div>
 
     {% if faq %}
@@ -110,11 +131,13 @@
   </div>
 
   {% if toc %}
-  <aside class="toc" aria-label="On this page">
-    <h2>On this page</h2>
-    <ol>
-      {% for t in toc %}<li><a href="#{{ t.id }}">{{ t.text }}</a></li>{% endfor %}
-    </ol>
+  <aside class="toc-col" aria-label="On this page">
+    <details class="toc" open>
+      <summary>On this page</summary>
+      <ol>
+        {% for t in toc %}<li><a href="#{{ t.id }}">{{ t.text }}</a></li>{% endfor %}
+      </ol>
+    </details>
   </aside>
   {% endif %}
 </div>

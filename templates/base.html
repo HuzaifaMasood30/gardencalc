@@ -21,7 +21,7 @@
 <meta property="og:url" content="{{ canonical }}">
 <meta property="og:image" content="{{ og_image }}">
 <meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="675">
+<meta property="og:image:height" content="630">
 <meta property="og:locale" content="{{ site.locale }}">
 
 <!-- Twitter -->
@@ -34,7 +34,7 @@
 <link rel="sitemap" type="application/xml" href="{{ base_url }}/sitemap.xml">
 <link rel="icon" href="{{ base_url }}/static/img/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="{{ base_url }}/static/img/apple-touch-icon.png">
-<link rel="stylesheet" href="{{ base_url }}/static/css/style.css">
+<link rel="stylesheet" href="{{ base_url }}/static/css/style.css?v={{ asset_v }}">
 {% block head_extra %}{% endblock %}
 
 {% for schema in schemas %}
@@ -74,15 +74,29 @@
   <div class="wrap">
     <a class="brand" href="{{ base_url }}/">
       <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#14532d"/><path d="M12 18V10M12 12c0-3 2-5 5-5 0 4-2 6-5 6ZM12 13c0-3-2-5-5-5 0 4 2 6 5 6Z" fill="none" stroke="#86efac" stroke-width="1.6" stroke-linecap="round"/><path d="M12 18v1.5" stroke="#ffd479" stroke-width="2" stroke-linecap="round"/></svg>
-      <span>{{ site.name }}<small>{{ site.tagline }}</small></span>
+      <span>{{ site.name }}</span>
     </a>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">&#9776;</button>
     <nav class="site-nav" id="site-nav" aria-label="Main">
-      {% for c in nav_categories %}
-      <a href="{{ base_url }}/category/{{ c.id }}/">{{ c.name }}</a>
-      {% endfor %}
-      <a href="{{ base_url }}/calculators/">All calculators</a>
+      <details class="mega">
+        <summary>Calculators</summary>
+        <div class="mega-panel">
+          <ul class="mega-grid">
+            {% for c in nav_categories %}
+            <li>
+              <a href="{{ base_url }}/category/{{ c.id }}/">
+                <span class="mega-ico"><svg aria-hidden="true"><use href="#i-{{ c.icon }}"></use></svg></span>
+                <span class="mega-txt"><b>{{ c.name }}</b><small>{{ c.blurb }}</small></span>
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+          <a class="mega-all" href="{{ base_url }}/calculators/">All calculators &rarr;</a>
+        </div>
+      </details>
       <a href="{{ base_url }}/guides/">Guides</a>
+      <a href="{{ base_url }}/about/">About</a>
+      <a href="{{ base_url }}/contact/">Contact</a>
     </nav>
     <form class="site-search" action="{{ base_url }}/search/" role="search">
       <input type="search" name="q" placeholder="Search…" aria-label="Search calculators and guides">
@@ -96,17 +110,25 @@
   <div class="wrap">
     <div class="footer-grid">
       <div>
-        <h2>About {{ site.name }}</h2>
-        <p>{{ site.tagline }}. Every calculator shows its formula, so you can check the maths and learn the method rather than just trust a number.</p>
-        <p>{{ site.name }} publishes free guidance for home and garden projects.</p>
+        <a class="brand footer-brand" href="{{ base_url }}/">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#14532d"/><path d="M12 18V10M12 12c0-3 2-5 5-5 0 4-2 6-5 6ZM12 13c0-3-2-5-5-5 0 4 2 6 5 6Z" fill="none" stroke="#86efac" stroke-width="1.6" stroke-linecap="round"/><path d="M12 18v1.5" stroke="#ffd479" stroke-width="2" stroke-linecap="round"/></svg>
+          <span>{{ site.name }}</span>
+        </a>
+        <p class="footer-tag">{{ site.tagline }}.</p>
+        <p>Every calculator shows its formula, so you can check the maths and learn the method rather than just trust a number.</p>
       </div>
-      <nav aria-label="Popular calculators">
+      <nav aria-label="Calculator categories">
         <h2>Calculators</h2>
-        {% for c in nav_categories[:6] %}
-        <a href="{{ base_url }}/category/{{ c.id }}/">{{ c.name }} calculator</a>
+        {% for c in nav_categories %}
+        <a href="{{ base_url }}/category/{{ c.id }}/">{{ c.name }}</a>
+        {% endfor %}
+      </nav>
+      <nav aria-label="Popular calculators">
+        <h2>Popular</h2>
+        {% for a in popular_calcs %}
+        <a href="{{ base_url }}/{{ a.slug }}/">{{ a.title }}</a>
         {% endfor %}
         <a href="{{ base_url }}/calculators/">All calculators</a>
-        <a href="{{ base_url }}/#planners-heading">Project planners</a>
       </nav>
       <nav aria-label="Site information">
         <h2>Site</h2>
@@ -126,7 +148,7 @@
   </div>
 </footer>
 <script>window.GC_BASE={{ base_url | tojson }};</script>
-<script src="{{ base_url }}/static/js/main.js" defer></script>
+<script src="{{ base_url }}/static/js/main.js?v={{ asset_v }}" defer></script>
 {% block body_extra %}{% endblock %}
 </body>
 </html>

@@ -92,6 +92,25 @@ def word_count(html_or_text: str) -> int:
     return len(re.findall(r"\b[\w'-]+\b", text))
 
 
+def human_date(value: str) -> str:
+    """Format an ISO date as "Oct 8, 2026" for display.
+
+    Returns the input unchanged when it is missing or not a real ISO date, so a bad
+    value degrades to the raw string instead of raising during the build.
+    """
+    import datetime as _dt
+    if not value:
+        return ""
+    try:
+        return _dt.date.fromisoformat(str(value)[:10]).strftime("%b %-d, %Y")
+    except ValueError:
+        try:
+            # %-d is POSIX-only; fall back to a portable strip for other platforms.
+            return _dt.date.fromisoformat(str(value)[:10]).strftime("%b %d, %Y").replace(" 0", " ")
+        except ValueError:
+            return str(value)
+
+
 def parse_frontmatter(text: str) -> tuple[dict, str]:
     """Parse a leading --- YAML-ish block into a flat dict (stdlib only)."""
     if not text.startswith("---"):

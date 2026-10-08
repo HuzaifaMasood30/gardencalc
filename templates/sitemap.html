@@ -51,7 +51,7 @@
   <ul class="post-list">
     {% for a in group.entries %}
     <li><span><a href="{{ base_url }}/{{ a.slug }}/">{{ a.title }}</a></span>
-        <span class="when">{{ a.updated }}</span></li>
+        <span class="when"><time datetime="{{ a.updated }}">{{ a.updated | date_human }}</time></span></li>
     {% endfor %}
   </ul>
 </section>
