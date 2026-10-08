@@ -75,3 +75,29 @@ python3 scripts/live_audit.py https://huzaifamasood30.github.io/gardencalc/
 - Article bodies render via `mdrender.render_with_toc`, which adds `<h2 id>` anchors
   and returns a table of contents; `article.html` renders the TOC and a scroll-spy
   highlights the active section in `main.js`.
+
+## FAQ blocks
+- Every published article should carry a non-empty `faq` list: 13 topsoil/fertilizer
+  pages originally had none, each costing ~11 SEO points and an FAQPage rich-result
+  slot. Answers must restate content already visible in the body (Google requires the
+  answer text on the page); never add an FAQ whose answer is not in the article.
+- `seo.faq_schema` emits FAQPage JSON-LD whenever `faq` is non-empty.
+
+## Brand assets
+- `images.render_brand(static_root)` writes `logo.png`, `favicon.ico`,
+  `apple-touch-icon.png` and a PNG `og-default.png`. It runs in `build.py` right after
+  `images.generate`, into the copied static dir, so the Organization publisher logo
+  (`config/site.json:org_logo`) actually resolves. Keep the URL as a PNG path.
+- `config/site.json:base_url` must be the real deployed URL, not a placeholder; the
+  distribution reports and local builds use it directly.
+
+## Search page
+- `/search/` is a client-side page backed by `static/search-index.json` (both written
+  by `build.py`). The homepage `WebSite` SearchAction points at `/search/?q=`; keep
+  that URL and the index in sync when either changes.
+
+## CI note
+- The pipeline's "Commit refreshed content and data" step rebases (`git pull --rebase
+  --autostash`) before pushing, because a manual push during a run otherwise causes a
+  non-fast-forward and the deploy is skipped.
+
