@@ -31,9 +31,25 @@ generate -> internal links -> quality gates -> build -> monitor -> dashboard -> 
   `approved` to publish. Internal links are rebuilt every run (do not clear links on
   rejection — that caused a permanent re-reject loop).
 
+## Content numbers (article_fix)
+- `scripts/article_fix.py` treats `calculators.py` as the source of truth and repairs
+  `data/articles.json` in place. `run_all.py` runs it as step 1b after generation.
+- It recomputes the intro's numeric claim, the worked-example bullets, the
+  worked-region "Label: value" lines and every standard size-table row
+  (bags = ceil(cu ft / bag size)); cu yd = cu ft / 27. It also fills each article's
+  `answer` field, which `build.py` prefers for the answer box.
+- `SPECIAL_SLUGS` are queries the box-shaped calculator cannot model (post hole,
+  front door, whole-house exterior, metric area, trench, backfill wall). Keep their
+  hand-written intro; only the answer box is derived from it.
+- It must be idempotent: `python scripts/article_fix.py` twice in a row reports
+  changes on the first run only. `test_article_fix_is_idempotent` guards this.
+- Never hand-edit figures in `data/articles.json`: run the fixer.
+
 ## Validation
 ```bash
-python3 scripts/tests.py                 # 8 unit/parity tests
+python3 scripts/tests.py                 # 26 unit/parity/consistency tests
+python3 scripts/article_fix.py           # idempotent content repair (second run: 0)
+python3 scripts/verify.py                # site health: links, tags, sitemap
 python3 scripts/live_audit.py https://huzaifamasood30.github.io/gardencalc/
 ```
 
