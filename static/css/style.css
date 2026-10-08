@@ -66,8 +66,6 @@ hr{border:0;border-top:1px solid var(--line);margin:2em 0}
 .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.16rem;
   color:var(--brand);text-decoration:none;letter-spacing:-.02em}
 .brand svg{width:30px;height:30px;flex:none}
-.brand span small{display:block;font-size:.66rem;font-weight:600;color:var(--muted);
-  letter-spacing:.06em;text-transform:uppercase;margin-top:-4px}
 .site-nav{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto;align-items:center}
 .site-search{display:flex;margin-left:10px}
 .site-search input{border:1px solid var(--line);border-radius:999px;padding:7px 14px;
@@ -105,10 +103,12 @@ hr{border:0;border-top:1px solid var(--line);margin:2em 0}
 .mega-txt small{font-size:.76rem;color:var(--muted);line-height:1.35}
 .mega-all{display:inline-block;font-size:.88rem;font-weight:700;text-decoration:none;
   padding:6px 4px}
+.nav-search-link{display:none}
 @media(max-width:1023px){
   .mega-panel{position:static;width:auto;box-shadow:none;border:0;padding:0 0 8px;background:none}
   .mega-grid{grid-template-columns:1fr;margin-bottom:4px}
   .mega-txt small{display:none}
+  .mega>summary{padding:11px 12px;min-height:44px}
 }
 .skip{position:absolute;left:-9999px}
 .skip:focus{left:10px;top:10px;background:#fff;padding:10px 14px;z-index:40;border-radius:8px;
@@ -413,6 +413,9 @@ tbody tr:nth-child(even){background:rgba(20,83,45,.03)}
     padding-bottom:8px;border-top:1px solid var(--line);margin-top:6px}
   .site-nav.open{display:flex}
   .site-nav a{padding:11px 12px}
+  /* Keep the inline field from crowding the bar at 320px; the drawer carries Search. */
+  .site-search{display:none}
+  .nav-search-link{display:block}
   .nav-toggle{display:block}
   .post-list li{flex-direction:column;gap:2px}
   .pager{grid-template-columns:1fr}
