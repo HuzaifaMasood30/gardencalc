@@ -194,13 +194,18 @@
       "how-much-topsoil-do-i-need-for-a-new-lawn",
       "how-much-topsoil-do-i-need-for-a-garden-bed",
       "how-much-topsoil-do-i-need-for-my-raised-garden-bed",
-      "how-much-paint-do-i-need-for-a-bathroom"
+      "how-much-paint-do-i-need-for-a-bathroom",
+      "how-much-mulch-do-i-need-for-100-square-feet",
+      "how-much-paint-do-i-need-for-a-small-bedroom",
+      "how-many-tiles-do-i-need-for-a-14x12-room",
+      "how-much-grass-seed-do-i-need-for-1000-square-feet"
     ],
     "fertilizer-calculator": [
       "how-much-liquid-fertilizer-per-1000-sq-ft",
       "how-much-nitrogen-fertilizer-per-1000-sq-ft",
       "how-much-starter-fertilizer-per-1000-sq-ft",
-      "how-many-pounds-of-fertilizer-per-1000-sq-ft"
+      "how-many-pounds-of-fertilizer-per-1000-sq-ft",
+      "how-much-10-10-10-fertilizer-per-1000-sq-ft"
     ],
     "how-much-mulch-do-i-need-for-400-square-feet": [
       "mulch-calculator",
@@ -330,7 +335,8 @@
       "fertilizer-calculator",
       "how-much-nitrogen-fertilizer-per-1000-sq-ft",
       "how-much-starter-fertilizer-per-1000-sq-ft",
-      "how-many-pounds-of-fertilizer-per-1000-sq-ft"
+      "how-many-pounds-of-fertilizer-per-1000-sq-ft",
+      "how-much-10-10-10-fertilizer-per-1000-sq-ft"
     ],
     "how-many-bags-of-concrete-do-i-need-for-a-fence-post": [
       "concrete-calculator",
@@ -383,7 +389,8 @@
       "fertilizer-calculator",
       "how-much-liquid-fertilizer-per-1000-sq-ft",
       "how-much-starter-fertilizer-per-1000-sq-ft",
-      "how-many-pounds-of-fertilizer-per-1000-sq-ft"
+      "how-many-pounds-of-fertilizer-per-1000-sq-ft",
+      "how-much-10-10-10-fertilizer-per-1000-sq-ft"
     ],
     "how-many-bags-of-concrete-do-i-need-for-a-10x12-slab": [
       "concrete-calculator",
@@ -441,7 +448,8 @@
       "fertilizer-calculator",
       "how-much-liquid-fertilizer-per-1000-sq-ft",
       "how-much-nitrogen-fertilizer-per-1000-sq-ft",
-      "how-many-pounds-of-fertilizer-per-1000-sq-ft"
+      "how-many-pounds-of-fertilizer-per-1000-sq-ft",
+      "how-much-10-10-10-fertilizer-per-1000-sq-ft"
     ],
     "how-many-bags-of-concrete-do-i-need-for-a-20x20-slab": [
       "concrete-calculator",
@@ -557,7 +565,8 @@
       "fertilizer-calculator",
       "how-much-liquid-fertilizer-per-1000-sq-ft",
       "how-much-nitrogen-fertilizer-per-1000-sq-ft",
-      "how-much-starter-fertilizer-per-1000-sq-ft"
+      "how-much-starter-fertilizer-per-1000-sq-ft",
+      "how-much-10-10-10-fertilizer-per-1000-sq-ft"
     ],
     "how-many-bags-of-concrete-do-i-need-for-a-12x12-slab": [
       "concrete-calculator",
@@ -675,6 +684,53 @@
       "how-much-grass-seed-do-i-need-per-square-foot",
       "how-much-bermuda-grass-seed-per-1000-square-feet",
       "how-many-pounds-of-bermuda-grass-seed-per-square-foot"
+    ],
+    "how-much-mulch-do-i-need-for-100-square-feet": [
+      "mulch-calculator",
+      "how-much-mulch-do-i-need-for-500-sq-ft",
+      "how-much-mulch-do-i-need-for-300-square-feet",
+      "how-much-mulch-do-i-need-for-200-square-feet",
+      "how-much-mulch-do-i-need-for-400-square-feet",
+      "how-much-mulch-do-i-need-for-1000-square-feet",
+      "how-much-mulch-do-i-need-for-600-square-feet",
+      "how-much-mulch-do-i-need-for-32-square-feet"
+    ],
+    "how-much-paint-do-i-need-for-a-small-bedroom": [
+      "paint-calculator",
+      "how-much-paint-do-i-need-for-a-bedroom",
+      "how-much-paint-do-i-need-for-a-10x10-room",
+      "how-much-paint-do-i-need-for-a-front-door",
+      "how-much-paint-do-i-need-for-a-12x12-room",
+      "how-much-paint-do-i-need-for-a-room",
+      "how-much-paint-do-i-need-for-a-12x16-shed",
+      "how-much-paint-do-i-need-for-1800-sq-ft-house"
+    ],
+    "how-many-tiles-do-i-need-for-a-14x12-room": [
+      "tile-calculator",
+      "how-many-tiles-do-i-need-for-a-10x10-room",
+      "how-many-tiles-do-i-need-for-100-square-feet",
+      "how-many-tiles-do-i-need-for-my-bathroom",
+      "how-many-tiles-do-i-need-for-20-square-feet",
+      "how-many-tiles-do-i-need-for-120-square-feet",
+      "how-many-tiles-do-i-need-for-a-4x4-room",
+      "how-many-tiles-do-i-need-for-a-room"
+    ],
+    "how-much-grass-seed-do-i-need-for-1000-square-feet": [
+      "grass-seed-calculator",
+      "how-much-grass-seed-per-square-foot-overseeding",
+      "how-much-grass-seed-per-square-foot-for-new-lawn",
+      "how-much-buffalo-grass-seed-per-square-foot",
+      "how-much-bermuda-grass-seed-per-square-foot",
+      "how-much-grass-seed-do-i-need-per-square-foot",
+      "how-much-bermuda-grass-seed-per-1000-square-feet",
+      "how-many-pounds-of-bermuda-grass-seed-per-square-foot"
+    ],
+    "how-much-10-10-10-fertilizer-per-1000-sq-ft": [
+      "fertilizer-calculator",
+      "how-much-liquid-fertilizer-per-1000-sq-ft",
+      "how-much-nitrogen-fertilizer-per-1000-sq-ft",
+      "how-much-starter-fertilizer-per-1000-sq-ft",
+      "how-many-pounds-of-fertilizer-per-1000-sq-ft"
     ]
   }
 }
