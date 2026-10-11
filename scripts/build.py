@@ -6,6 +6,7 @@ import json
 import os
 import re
 import shutil
+import subprocess
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
@@ -18,7 +19,7 @@ import planners
 import seasonal
 import seo as seolib
 import calculators
-from common import (CONFIG, CONTENT, DATA, SITE, STATIC, TEMPLATES, human_date,
+from common import (CONFIG, CONTENT, DATA, ROOT, SITE, STATIC, TEMPLATES, human_date,
                     load_json, save_json, seo_config, site_config, topics_config)
 
 YEAR = dt.date.today().year
@@ -272,6 +273,31 @@ def _abs(site: dict, path: str) -> str:
 def _write(path, text: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(text, encoding="utf-8")
+
+
+def _stamp(path) -> str:
+    """Last real content-change date for a page, from git history.
+
+    A page's <lastmod> must reflect when its content actually changed, not when
+    the pipeline last rebuilt it. We read the file's last git commit date and
+    fall back to today only when git has no record (first build of a new file).
+    """
+    try:
+        out = subprocess.run(
+            ["git", "log", "-1", "--format=%cs", "--", str(path)],
+            cwd=ROOT, capture_output=True, text=True, timeout=15)
+        stamp = out.stdout.strip()
+        if stamp and re.fullmatch(r"\d{4}-\d{2}-\d{2}", stamp):
+            return stamp
+    except Exception:
+        pass
+    return dt.date.today().isoformat()
+
+
+def _latest(*paths) -> str:
+    """The most recent real change date across several repo-relative paths."""
+    dates = [_stamp(ROOT / p) for p in paths]
+    return max(dates) if dates else dt.date.today().isoformat()
 
 
 def _contact_block(site: dict) -> str:
@@ -887,20 +913,29 @@ def build() -> dict:
     # --- sitemap, robots, rss, CNAME ---
     # Only canonical, indexable pages go in the sitemap. <priority> is omitted: it is
     # ignored by Google/Bing, so emitting it only adds noise.
-    today = dt.date.today().isoformat()
-    urls = [{"loc": "/", "lastmod": today,
+    # lastmod = the page's real content-change date (git), never a build bump.
+    data_dates = _latest("data/articles.json")
+    hub_date = _latest("templates/index.html", "data/articles.json")
+    cat_date = _latest("templates/category.html", "data/articles.json")
+    chart_date = _latest("scripts/charts.py", "templates/chart.html")
+    planner_date = _latest("scripts/planners.py", "templates/planner.html")
+    seasonal_date = _latest("scripts/seasonal.py", "templates/seasonal.html")
+    extra_tpl = {"calculators": "calculators.html", "guides": "guides.html",
+                 "sitemap": "sitemap.html", "for-publishers": "publishers.html"}
+    urls = [{"loc": "/", "lastmod": hub_date,
              "image": _thumb(site, published[0]) if published else None,
              "image_title": site["name"]}]
-    urls += [{"loc": f"/category/{c['id']}/", "lastmod": today} for c in categories]
-    urls += [{"loc": f"/{a['slug']}/", "lastmod": a.get("updated"),
+    urls += [{"loc": f"/category/{c['id']}/", "lastmod": cat_date} for c in categories]
+    urls += [{"loc": f"/{a['slug']}/", "lastmod": a.get("updated") or data_dates,
               "image": _fig(site, a), "image_title": a["title"]} for a in published]
-    urls += [{"loc": f"/{ch['slug']}/", "lastmod": today} for ch in charts.CHARTS]
-    urls += [{"loc": f"/{pl['slug']}/", "lastmod": today} for pl in planners.PLANNERS]
+    urls += [{"loc": f"/{ch['slug']}/", "lastmod": chart_date} for ch in charts.CHARTS]
+    urls += [{"loc": f"/{pl['slug']}/", "lastmod": planner_date} for pl in planners.PLANNERS]
     urls += [{"loc": f"/{item['slug']}/", "lastmod": item["updated"]} for item in seasonal.SEASONAL]
-    urls += [{"loc": f"/{s}/", "lastmod": today} for s, _, _ in pages]
-    urls += [{"loc": p, "lastmod": today} for p in EXTRA_PAGES]
+    urls += [{"loc": f"/{s}/", "lastmod": _latest(f"content/pages/{s}.md")} for s, _, _ in pages]
+    urls += [{"loc": p, "lastmod": _latest(f"templates/{extra_tpl[p.strip('/')]}")}
+             for p in EXTRA_PAGES]
     _write(SITE / "sitemap.xml", seolib.sitemap_xml(urls, site))
-    _write(SITE / "robots.txt", seolib.robots_txt(site, _abs(site, "/sitemap.xml")))
+    _write(SITE / "robots.txt", seolib.robots_txt(site))
     feed_extra = [{"title": ch["title"], "url": _abs(site, f"/{ch['slug']}/"),
                    "description": ch["description"]} for ch in charts.CHARTS]
     feed_extra += [{"title": pl["title"], "url": _abs(site, f"/{pl['slug']}/"),

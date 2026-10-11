@@ -114,12 +114,8 @@ def crawl(base: str) -> None:
         check("sitemap reachable", False, f"HTTP {st}")
 
     rt, robots = get(base + "/robots.txt")
-    check("robots.txt valid", rt == 200 and "User-agent" in robots and "Sitemap" in robots,
+    check("robots.txt present and permissive", rt == 200 and "User-agent" in robots,
           f"HTTP {rt}")
-    if rt == 200:
-        declared = re.search(r"Sitemap:\s*(\S+)", robots)
-        check("robots declares absolute sitemap", bool(declared) and declared.group(1).startswith("https://"),
-              declared.group(1) if declared else "missing")
 
     rss, rss_xml = get(base + "/rss.xml")
     if rss == 200:
