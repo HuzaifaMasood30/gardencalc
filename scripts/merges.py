@@ -58,7 +58,46 @@ MERGES: dict[str, str] = {
     # Generic floor/room pages duplicate the tile pillar; sized pages stay.
     "how-many-tiles-do-i-need-for-my-floor": "tile-calculator",
     "how-many-tiles-do-i-need-for-my-room": "tile-calculator",
+    # --- consolidation pass (keyword-overlap evidence) ---
+    # "do I need per square foot" is word-for-word the grass-seed pillar keyword.
+    "how-much-grass-seed-do-i-need-per-square-foot": "grass-seed-calculator",
+    # "how many pounds of seed per square foot" is the same rate question.
+    "how-many-pounds-of-grass-seed-per-square-foot": "grass-seed-calculator",
+    # Three pages asked the bermuda rate; keep the per-square-foot head term.
+    "how-many-pounds-of-bermuda-grass-seed-per-square-foot":
+        "how-much-bermuda-grass-seed-per-square-foot",
+    "how-much-bermuda-grass-seed-per-1000-square-feet":
+        "how-much-bermuda-grass-seed-per-square-foot",
+    # Raised-bed soil was split across four near-identical questions.
+    "how-much-soil-do-i-need-for-a-raised-bed": "raised-bed-soil-calculator",
+    "how-much-potting-soil-for-a-raised-bed": "raised-bed-soil-calculator",
+    "how-to-calculate-how-much-soil-for-raised-bed": "raised-bed-soil-calculator",
+    # "A room" restates the paint/tile pillar; sized rooms stay.
+    "how-much-paint-do-i-need-for-a-room": "paint-calculator",
+    "how-many-tiles-do-i-need-for-a-room": "tile-calculator",
+    # "My raised garden bed" vs "a garden bed": same intent.
+    "how-much-topsoil-do-i-need-for-my-raised-garden-bed":
+        "how-much-topsoil-do-i-need-for-a-garden-bed",
+    # Reviewed but kept: how-much-nitrogen-fertilizer-per-1000-sq-ft and
+    # how-many-pounds-of-fertilizer-per-1000-sq-ft share the pillar's keyword
+    # intent but their body text is genuinely different (0.14 similarity) and
+    # they answer the "nitrogen" and "pounds" phrasings directly. Revisit with
+    # Search Console query data before merging.
 }
+
+
+def _final(slug: str) -> str:
+    """Follow a chain of merges to the page that is actually live."""
+    seen: set[str] = set()
+    while slug in MERGES and slug not in seen:
+        seen.add(slug)
+        slug = MERGES[slug]
+    return slug
+
+
+# Flatten chains so a stub never points at another stub: an old URL that was
+# merged into a page which is itself merged must land on the live target.
+MERGES = {old: _final(tgt) for old, tgt in MERGES.items()}
 
 
 def targets() -> set[str]:

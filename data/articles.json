@@ -206,6 +206,10 @@
       {
         "q": "How deep should a raised bed be?",
         "a": "Ten to twelve inches for most vegetables; six inches is enough for shallow-rooted herbs and salads."
+      },
+      {
+        "q": "How much potting soil do I need for a raised bed?",
+        "a": "Use the same volume: a 4x8 ft bed 12 in deep holds 32 cubic feet, about 22 bags of 1.5 cu ft potting mix."
       }
     ],
     "status": "approved",
@@ -531,6 +535,10 @@
       {
         "q": "Should I buy extra paint?",
         "a": "Keep about 10% spare for touch-ups, and note the colour code for future matching."
+      },
+      {
+        "q": "How much paint do I need for a room?",
+        "a": "Multiply the paintable wall area (perimeter x height, less doors and windows) by the number of coats, then divide by about 350 sq ft of coverage per gallon."
       }
     ],
     "status": "approved",
@@ -695,6 +703,10 @@
       {
         "q": "Can I return leftover tile?",
         "a": "Often yes if unopened and from the same batch, but dye lots differ, so buy all you need at once."
+      },
+      {
+        "q": "How many tiles do I need for a room?",
+        "a": "Divide the floor area by the area of one tile, then add 10% for cuts and breakage."
       }
     ],
     "status": "approved",
@@ -855,6 +867,10 @@
       {
         "q": "Should I cover grass seed with soil?",
         "a": "A thin layer of compost or topsoil helps, but leave the seed near the surface so it can sprout."
+      },
+      {
+        "q": "How many pounds of grass seed do I need per square foot?",
+        "a": "A new lawn takes about 4.5 lb per 1,000 sq ft (0.0045 lb per sq ft); overseeding takes about 2 lb per 1,000 sq ft."
       }
     ],
     "status": "approved",
@@ -7494,6 +7510,10 @@
       {
         "q": "Should I cover grass seed with soil?",
         "a": "A thin layer of compost or topsoil helps, but leave the seed near the surface so it can sprout."
+      },
+      {
+        "q": "How many pounds of Bermuda grass seed do I need per 1,000 square feet?",
+        "a": "About 4.5 lb per 1,000 sq ft for a new lawn, or 2 lb per 1,000 sq ft when overseeding an existing one."
       }
     ],
     "status": "approved",
@@ -9301,6 +9321,10 @@
       {
         "q": "How many bags of soil fill a cubic yard?",
         "a": "A cubic yard is 27 cubic feet, so about 13.5 of the 2-cubic-foot bags or 18 of the 1.5-cubic-foot bags."
+      },
+      {
+        "q": "How much topsoil do I need for a raised garden bed?",
+        "a": "Use the same volume formula. A 4x8 ft bed filled 12 in deep needs 32 cubic feet, about 1.2 cubic yards or 43 bags of 40 lb."
       }
     ],
     "status": "approved",
