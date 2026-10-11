@@ -114,13 +114,14 @@ QUICK_CALCS = [
      "inputs": ["area", "method"],
      "presets": [{"label": "5,000 sq ft new lawn", "v": {"area": 5000, "method": 1}}]},
     {"key": "fertilizer", "label": "Fertilizer", "icon": "fertilizer", "slug": "fertilizer-calculator",
-     "inputs": ["area", "rate", "bag"],
-     "presets": [{"label": "5,000 sq ft, 1 lb N", "v": {"area": 5000, "rate": 1, "bag": 40}}]},
+     "inputs": ["area", "rate", "nitrogen", "bag"],
+     "presets": [{"label": "5,000 sq ft, 1 lb N, 20-0-0", "v": {"area": 5000, "rate": 1, "nitrogen": 20, "bag": 40}}]},
 ]
 # Short unit suffixes so the compact inputs stay readable on a 360 px screen.
 QUICK_UNITS = {"length": "ft", "width": "ft", "depth": "in", "height": "in",
                "thickness": "in", "tile_w": "in", "tile_h": "in", "waste": "%",
-               "area": "sq ft", "rate": "lb", "bag": "lb", "coats": "", "method": ""}
+               "area": "sq ft", "rate": "lb", "nitrogen": "%", "bag": "lb",
+               "coats": "", "method": ""}
 
 # "Popular quick answers": real numbers computed at build time from scripts/calculators.py
 # (the same engine the pages use), each linking to the calculator that produced it. The
@@ -327,12 +328,20 @@ def _fig(site: dict, art: dict) -> str:
     return _abs(site, f"/static/img/fig/{art['slug']}.webp")
 
 
+_DANGLING_WORDS = {"a", "an", "the", "of", "to", "for", "and", "or", "by", "with",
+                   "in", "on", "at", "as", "is", "are", "was", "were", "be", "been",
+                   "this", "that", "these", "those", "your", "you", "it", "its",
+                   "from", "into", "over", "under", "than", "then", "about"}
+
+
 def _short_desc(text: str, limit: int = 120) -> str:
-    """Trim a meta description to a card length at a word boundary, with an ellipsis."""
+    """Trim a meta description to a card length, never ending on a dangling word."""
     text = (text or "").strip()
     if len(text) <= limit:
         return text
     cut = text[:limit].rsplit(" ", 1)[0].rstrip(" ,;:—-")
+    while cut and cut.rsplit(" ", 1)[-1].lower() in _DANGLING_WORDS:
+        cut = cut.rsplit(" ", 1)[0].rstrip(" ,;:—-")
     return cut + "…"
 
 
@@ -595,7 +604,9 @@ def build() -> dict:
                env.get_template("category.html").render(**ctx))
 
     # --- homepage ---
-    pillars = [a for a in published if a.get("is_pillar")][:8]
+    # Every pillar is linked from the homepage grid; the old [:8] silently dropped
+    # the newest pillar (fertilizer) from the most-used section.
+    pillars = [a for a in published if a.get("is_pillar")]
     by_slug = {a["slug"]: a for a in published}
     calc_defs_all = tcfg.get("calculators", {})
     quick_calcs = []
@@ -633,12 +644,15 @@ def build() -> dict:
                           json.dumps(seolib.organization_schema(site), ensure_ascii=False),
                           json.dumps(seolib.faq_schema({"faq": HOME_FAQS}), ensure_ascii=False)])
     quick_answer_items = []
+    # The pillar slug is not always "<calc>-calculator" (soil lives at
+    # raised-bed-soil-calculator), so resolve it through QUICK_CALCS first.
+    calc_slug = {q["key"]: q["slug"] for q in QUICK_CALCS}
     for qa in QUICK_ANSWERS:
         try:
             out = calculators.compute(qa["calc"], qa["args"])
         except Exception:
             continue
-        art = by_slug.get(f"{qa['calc'].replace('_', '-')}-calculator")
+        art = by_slug.get(calc_slug.get(qa["calc"], f"{qa['calc'].replace('_', '-')}-calculator"))
         quick_answer_items.append({
             "q": qa["q"], "answer": qa["answer"](out),
             "url": _abs(site, f"/{art['slug']}/") if art else "",

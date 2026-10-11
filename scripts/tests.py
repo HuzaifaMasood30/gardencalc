@@ -417,6 +417,56 @@ def test_js_and_python_calculators_agree():
                     (kind, py_key, rows[label], py_val)
 
 
+def test_homepage_quick_answers_link_to_real_calculators():
+    """Every quick-answer row must point at a pillar page that exists.
+
+    The soil row used to build "<calc>-calculator" and fall back to /calculators/
+    because the real slug is raised-bed-soil-calculator.
+    """
+    import json
+    from pathlib import Path
+    root = Path(__file__).resolve().parent.parent
+    home = (root / "site" / "index.html").read_text(encoding="utf-8")
+    qa = re.search(r'<ul class="qa-list">(.*?)</ul>', home, re.S)
+    assert qa, "no quick-answers list on the homepage"
+    links = re.findall(r'<a href="([^"]+)">', qa.group(1))
+    assert len(links) >= 6, links
+    for href in links:
+        path = href.split("/gardencalc", 1)[-1].strip("/")
+        assert path, f"quick answer falls back to the calculators index: {href}"
+        assert (root / "site" / path / "index.html").exists(), f"dead quick-answer link: {href}"
+
+
+def test_homepage_lists_every_pillar():
+    import json
+    from pathlib import Path
+    root = Path(__file__).resolve().parent.parent
+    arts = json.loads((root / "data" / "articles.json").read_text(encoding="utf-8"))
+    pillars = [a["slug"] for a in arts if a.get("is_pillar")
+               and a.get("status") in ("published", "approved")]
+    home = (root / "site" / "index.html").read_text(encoding="utf-8")
+    for slug in pillars:
+        assert f"/{slug}/" in home, f"pillar {slug} is not linked from the homepage"
+
+
+def test_no_meta_description_ends_on_a_dangling_word():
+    import json
+    from pathlib import Path
+    root = Path(__file__).resolve().parent.parent
+    arts = json.loads((root / "data" / "articles.json").read_text(encoding="utf-8"))
+    dangling = {"a", "an", "the", "of", "to", "for", "and", "or", "by", "with",
+                "in", "on", "at", "as", "is", "are", "was", "were", "be", "been",
+                "this", "that", "these", "those", "your", "you", "it", "its",
+                "from", "into", "over", "under", "than", "then", "about"}
+    bad = []
+    for a in arts:
+        md = (a.get("meta_description") or "").strip()
+        words = re.findall(r"[A-Za-z0-9'%]+", md)
+        if md and len(md) <= 158 and words and words[-1].lower() in dangling:
+            bad.append(a["slug"])
+    assert not bad, f"meta descriptions end mid-phrase: {bad}"
+
+
 if __name__ == "__main__":
     fns = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     failed = 0
