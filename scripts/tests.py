@@ -630,6 +630,21 @@ def test_every_indexable_page_has_a_real_og_image():
     assert 'rel="preload" as="image"' in hero, "article hero image is not preloaded"
 
 
+def test_ghost_buttons_are_readable_on_light_cards():
+    """a11y: .btn-ghost must not be light-on-dark on the light embed card.
+
+    The rule was shared with the dark hero, which made the embed-cta buttons
+    ~1.02:1 (WCAG fail). Ghost buttons are now dark-on-light by default and the
+    hero keeps its own light-on-dark override.
+    """
+    css = (root / "static" / "css" / "style.css").read_text(encoding="utf-8")
+    base = re.search(r"\.btn-ghost\{([^}]*)\}", css)
+    assert base, "no .btn-ghost rule"
+    assert "var(--surface)" in base.group(1) and "var(--brand)" in base.group(1), \
+        ".btn-ghost must be dark text on the light surface for the embed card"
+    assert ".hero .btn-ghost{" in css, "hero ghost button needs its own light-on-dark rule"
+
+
 if __name__ == "__main__":
     fns = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     failed = 0
