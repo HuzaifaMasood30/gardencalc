@@ -7,6 +7,7 @@ older articles so new pages receive links from existing ones.
 from __future__ import annotations
 
 import re
+from collections import Counter
 
 from common import DATA, load_json, save_json, seo_config
 
@@ -159,20 +160,23 @@ def link_all(arts: list[dict], persist: bool = True) -> list[dict]:
 
 
 def _repair_orphans(arts: list[dict]) -> None:
-    """Guarantee every published article has at least one inbound internal link.
+    """Guarantee every published article has at least two inbound internal links.
 
     The cluster ring covers clusters with two or more members; a keyword that lands
     in a cluster of its own (or a brand-new cluster) would otherwise be orphaned and
-    fail the build. Add inbound links from the closest available sources until none
-    remain.
+    fail the build. One inbound link is the bare minimum for crawl discovery; two
+    gives a page a second path in and spreads equity past the cluster pillar, which
+    otherwise absorbs most of the internal links. Add inbound links from the closest
+    available sources until none remain.
     """
     published = _published(arts)
     if len(published) < 2:
         return
+    minimum = 2 if len(published) >= 4 else 1
     hi = seo_config()["limits"]["max_internal_links_per_article"]
-    for _ in range(len(published)):
-        inbound = {l["to"] for a in published for l in a.get("internal_links", [])}
-        missing = [a for a in published if a["slug"] not in inbound]
+    for _ in range(len(published) * 2):
+        inbound = Counter(l["to"] for a in published for l in a.get("internal_links", []))
+        missing = [a for a in published if inbound.get(a["slug"], 0) < minimum]
         if not missing:
             return
         for orphan in missing:
@@ -192,6 +196,8 @@ def _repair_orphans(arts: list[dict]) -> None:
                 targets = {l["to"] for l in src.get("internal_links", [])}
                 if orphan["slug"] in targets:
                     break
+                if len(src.get("internal_links", [])) >= hi:
+                    continue
                 src.setdefault("internal_links", []).append({
                     "to": orphan["slug"],
                     "anchor": _anchor_for(orphan),

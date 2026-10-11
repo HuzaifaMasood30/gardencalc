@@ -540,6 +540,52 @@ def test_article_schema_is_well_formed():
     assert arts_by_slug["mulch-calculator"]["updated"] >= arts_by_slug["mulch-calculator"]["created"]
 
 
+def test_every_published_page_has_inbound_links_and_shallow_depth():
+    """Task 7: no page is more than 3 clicks from the homepage, and each published
+    page has at least two inbound links in the rendered site (not just the link graph,
+    which the per-article cap can hold at one)."""
+    import json
+    from collections import Counter, deque
+    from pathlib import Path
+    root = Path(__file__).resolve().parent.parent
+    site = root / "site"
+    arts = json.loads((root / "data" / "articles.json").read_text(encoding="utf-8"))
+    published = {a["slug"] for a in arts
+                 if a.get("status") in ("published", "approved") and a["slug"] not in merges.MERGES}
+
+    def outbound(slug: str) -> set[str]:
+        html = (site / slug / "index.html").read_text(encoding="utf-8")
+        return {m for m in re.findall(r'/gardencalc/([a-z0-9-]+)/', html) if m != slug}
+
+    depth: dict[str, int] = {}
+    queue = deque([""])
+    while queue:
+        cur = queue.popleft()
+        page = site / ("index.html" if cur == "" else f"{cur}/index.html")
+        if not page.exists():
+            continue
+        for nxt in outbound(cur) if cur else {
+                m for m in re.findall(r'/gardencalc/([a-z0-9-]+)/',
+                                      page.read_text(encoding="utf-8"))}:
+            if (site / nxt / "index.html").exists() and nxt not in depth:
+                depth[nxt] = depth.get(cur, 0) + 1
+                queue.append(nxt)
+    unreachable = sorted(s for s in published if s not in depth)
+    assert not unreachable, f"pages unreachable from the homepage: {unreachable}"
+    deep = sorted((s, depth[s]) for s in published if depth[s] > 3)
+    assert not deep, f"pages deeper than 3 clicks: {deep}"
+
+    inbound = Counter()
+    for page in site.rglob("index.html"):
+        source = page.relative_to(site).parent.as_posix()
+        html = page.read_text(encoding="utf-8")
+        for target in set(re.findall(r'/gardencalc/([a-z0-9-]+)/', html)):
+            if target in published and target != source:
+                inbound[target] += 1
+    weak = sorted(s for s in published if inbound[s] < 2)
+    assert not weak, f"pages with fewer than two inbound links: {weak}"
+
+
 if __name__ == "__main__":
     fns = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     failed = 0
