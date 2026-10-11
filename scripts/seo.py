@@ -16,19 +16,25 @@ def _abs(site: dict, path: str) -> str:
 def article_schema(art: dict, site: dict, figure: str | None = None) -> dict:
     url = _abs(site, f"/{art['slug']}/")
     img = figure or _abs(site, f"/static/img/og/{art['slug']}.png")
+    author_url = _abs(site, site.get("author_url", "/about/"))
     return {
         "@context": "https://schema.org",
         "@type": "Article",
+        "@id": url + "#article",
         "headline": art["title"][:110],
         "description": art.get("meta_description", ""),
         "datePublished": art.get("created"),
         "dateModified": art.get("updated"),
         "author": {"@type": "Organization", "name": site.get("author", site["name"]),
-                   "url": _abs(site, site.get("author_url", "/about/"))},
+                   "url": author_url, "sameAs": [author_url]},
         "publisher": {"@type": "Organization", "name": site["name"],
-                      "logo": {"@type": "ImageObject", "url": _abs(site, site.get("org_logo", ""))}},
+                      "url": _abs(site, "/"),
+                      "logo": {"@type": "ImageObject", "url": _abs(site, site.get("org_logo", "")),
+                               "width": 336, "height": 336}},
         "mainEntityOfPage": {"@type": "WebPage", "@id": url},
         "image": {"@type": "ImageObject", "url": img, "width": 1200, "height": 630},
+        "isAccessibleForFree": True,
+        "inLanguage": site.get("language", "en"),
         "articleSection": art.get("cluster", ""),
         "keywords": ", ".join([art.get("primary_keyword", "")] + art.get("secondary_keywords", [])),
     }
@@ -142,12 +148,14 @@ def webapp_schema(title: str, url: str, description: str, site: dict) -> dict:
     return {
         "@context": "https://schema.org",
         "@type": "WebApplication",
+        "@id": url + "#app",
         "name": title,
         "url": url,
         "description": description,
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Any",
         "browserRequirements": "Requires JavaScript",
+        "isAccessibleForFree": True,
         "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
         "isPartOf": {"@type": "WebSite", "name": site["name"], "url": _abs(site, "/")},
     }

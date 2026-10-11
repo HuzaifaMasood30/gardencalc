@@ -509,6 +509,37 @@ def test_calculator_pages_cite_their_sources():
     assert 'id="methodology"' in about, "about page has no #methodology anchor"
 
 
+def test_article_schema_is_well_formed():
+    """Task 6: JSON-LD must carry stable @ids, real dates and matching FAQ text."""
+    import json
+    from pathlib import Path
+    root = Path(__file__).resolve().parent.parent
+    arts = json.loads((root / "data" / "articles.json").read_text(encoding="utf-8"))
+    for slug in ("mulch-calculator", "paint-calculator",
+                 "how-many-tiles-do-i-need-for-a-10x10-room"):
+        html = (root / "site" / slug / "index.html").read_text(encoding="utf-8")
+        blocks = [json.loads(b) for b in
+                  re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, re.S)]
+        by_type = {b.get("@type"): b for b in blocks}
+        art = by_type["Article"]
+        assert art["@id"].endswith("#article"), art["@id"]
+        assert art["author"]["url"].endswith("/about/"), art["author"]
+        assert art["publisher"]["logo"]["width"] and art["publisher"]["url"], art["publisher"]
+        assert art["datePublished"] and art["dateModified"], "article dates missing"
+        assert art["dateModified"] >= art["datePublished"], f"{slug} modified before published"
+        assert art["isAccessibleForFree"] is True
+        faq = by_type.get("FAQPage")
+        if faq:
+            for q in faq["mainEntity"]:
+                assert q["name"][:25] in html, f"FAQ not visible on page: {q['name']}"
+        webapp = by_type.get("WebApplication")
+        if webapp:
+            assert webapp["@id"].endswith("#app")
+            assert webapp["offers"]["price"] == "0"
+    arts_by_slug = {a["slug"]: a for a in arts}
+    assert arts_by_slug["mulch-calculator"]["updated"] >= arts_by_slug["mulch-calculator"]["created"]
+
+
 if __name__ == "__main__":
     fns = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     failed = 0
