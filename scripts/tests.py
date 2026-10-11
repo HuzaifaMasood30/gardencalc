@@ -637,6 +637,8 @@ def test_ghost_buttons_are_readable_on_light_cards():
     ~1.02:1 (WCAG fail). Ghost buttons are now dark-on-light by default and the
     hero keeps its own light-on-dark override.
     """
+    from pathlib import Path
+    root = Path(__file__).resolve().parent.parent
     css = (root / "static" / "css" / "style.css").read_text(encoding="utf-8")
     base = re.search(r"\.btn-ghost\{([^}]*)\}", css)
     assert base, "no .btn-ghost rule"
