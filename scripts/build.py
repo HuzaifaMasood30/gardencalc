@@ -501,6 +501,13 @@ def build() -> dict:
     seasonal_cards = [{"slug": it["slug"], "title": it["title"], "description": it["description"],
                        "cluster_name": cat_map.get(it["cluster"], {}).get("name", it["cluster"].title())}
                       for it in seasonal.SEASONAL]
+    # Guides whose advice is live this month get a prominent homepage slot. The list is
+    # empty outside those months, so the section simply disappears rather than going stale.
+    _month = dt.date.today().month
+    featured_seasonal = [{"slug": it["slug"], "title": it["title"],
+                          "cluster_name": cat_map.get(it["cluster"], {}).get("name", it["cluster"].title()),
+                          "now": it.get("now", "")}
+                         for it in seasonal.SEASONAL if _month in it.get("season_months", [])]
     chart_by_cluster = {ch["cluster"]: {"slug": ch["slug"], "title": ch["title"]} for ch in charts.CHARTS}
     planner_by_cluster = {pl["cluster"]: {"slug": pl["slug"], "title": pl["title"]} for pl in planners.PLANNERS}
     seasonal_by_cluster = {it["cluster"]: {"slug": it["slug"], "title": it["title"]} for it in seasonal.SEASONAL}
@@ -664,6 +671,7 @@ def build() -> dict:
                article_count=len(published), category_count=len(categories),
                chart_count=len(charts.CHARTS), chart_cards=chart_cards,
                planner_cards=planner_cards, seasonal_cards=seasonal_cards,
+               featured_seasonal=featured_seasonal,
                quick_calcs=quick_calcs, quick_answers=quick_answer_items,
                home_faqs=HOME_FAQS,
                latest_cards=[_card_meta(site, a, cat_map.get(a.get("cluster", ""), {}).get("name", ""))

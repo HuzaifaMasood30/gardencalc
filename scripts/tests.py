@@ -586,6 +586,27 @@ def test_every_published_page_has_inbound_links_and_shallow_depth():
     assert not weak, f"pages with fewer than two inbound links: {weak}"
 
 
+def test_autumn_guides_carry_regional_and_current_timing():
+    """Task 8: the two autumn guides must answer the regional and 'this month'
+    questions a searcher asks, and be surfaced on the homepage while in season."""
+    import datetime as dt
+    from pathlib import Path
+    root = Path(__file__).resolve().parent.parent
+    for slug in ("when-to-overseed-a-lawn", "fall-lawn-fertilizer-timing"):
+        html = (root / "site" / slug / "index.html").read_text(encoding="utf-8")
+        assert "by region" in html, f"{slug} has no regional table"
+        assert "season-now" in html, f"{slug} has no current-timing line"
+        assert "<h2" in html and html.count("<h1") == 1
+    item = next(i for i in seasonal.SEASONAL if i["slug"] == "when-to-overseed-a-lawn")
+    assert item["updated"] >= "2026-09-01", "autumn guide not refreshed for the season"
+    assert "October" in " ".join(p for s in item["sections"] for p in s["paras"])
+    assert any("October" in q for q, _ in item["faqs"])
+    # The homepage seasonal feature is month-gated, so it must be present in October.
+    if dt.date.today().month in item["season_months"]:
+        home = (root / "site" / "index.html").read_text(encoding="utf-8")
+        assert "when-to-overseed-a-lawn" in home and "In season right now" in home
+
+
 if __name__ == "__main__":
     fns = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     failed = 0
