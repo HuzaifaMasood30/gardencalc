@@ -18,6 +18,7 @@ import promotion
 import quality
 import seasonal
 import seo as seolib
+import sources as sources_lib
 from common import ROOT, site_config
 
 
@@ -488,6 +489,24 @@ def test_every_calculator_article_has_a_worked_example_and_answer():
         if not article_fix._has_worked_block(a.get("body_markdown", "")):
             missing.append(f"{a['slug']} (worked example)")
     assert not missing, f"pages missing snippet blocks: {missing}"
+
+
+def test_calculator_pages_cite_their_sources():
+    """Task 5: every calculator page links at least one real source, and the about
+    page exposes the methodology the byline points at."""
+    import json
+    from pathlib import Path
+    root = Path(__file__).resolve().parent.parent
+    arts = json.loads((root / "data" / "articles.json").read_text(encoding="utf-8"))
+    keys = {a.get("calculator") for a in arts if a.get("calculator")}
+    for key in keys:
+        assert sources_lib.for_key(key), f"no sources mapped for calculator {key}"
+    for slug in ("mulch-calculator", "paint-calculator", "concrete-calculator"):
+        html = (root / "site" / slug / "index.html").read_text(encoding="utf-8")
+        assert 'Sources &amp; method' in html, f"{slug} has no sources section"
+        assert "rel=\"nofollow noopener\" target=\"_blank\"" in html, f"{slug} sources are not linked"
+    about = (root / "site" / "about" / "index.html").read_text(encoding="utf-8")
+    assert 'id="methodology"' in about, "about page has no #methodology anchor"
 
 
 if __name__ == "__main__":

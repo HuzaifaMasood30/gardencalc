@@ -20,9 +20,26 @@ the number you actually came for.
 
 ## How we keep it accurate
 
-The formulas are fixed in code and reviewed against supplier guidance. If a rate changes,
-the calculator is updated and the page's "last updated" date changes with it. If you spot
-an error, please tell us on the [contact page](/contact/).
+The formulas are fixed in code and reviewed against supplier guidance and university
+extension publications. Every calculator page lists the sources behind its rates in a
+"Sources & method" section, and links them so you can check them yourself. If a rate
+changes, the calculator is updated and the page's "last updated" date changes with it.
+If you spot an error, please tell us on the [contact page](/contact/).
+
+## Methodology
+
+We follow the same method on every page:
+
+1. Start from the standard formula for the material (volume = length × width × depth, and
+   so on).
+2. Take the rate — coverage per gallon, seeding rate per 1,000 sq ft, bag yield — from the
+   manufacturer's own data sheet or a university extension publication, not from a
+   competitor's calculator.
+3. Show the working on the page, so you can reproduce the number by hand.
+4. State clearly when a figure is a rule of thumb that varies by product or region.
+
+Where sources disagree, we use the conservative figure (the one that avoids running
+short) and say so on the page.
 
 ## Our editorial approach
 

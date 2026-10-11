@@ -18,6 +18,7 @@ import merges
 import planners
 import seasonal
 import seo as seolib
+import sources as sources_lib
 import calculators
 from common import (CONFIG, CONTENT, DATA, ROOT, SITE, STATIC, TEMPLATES, human_date,
                     load_json, save_json, seo_config, site_config, topics_config)
@@ -566,8 +567,9 @@ def build() -> dict:
                      keywords=", ".join([art.get("primary_keyword", "")] +
                                         art.get("secondary_keywords", [])))
         body_head, body_rest = _split_first_section(body_html)
+        sources = sources_lib.for_key(art.get("calculator", ""))
         ctx.update(article=art, body_html=body_html, body_head=body_head, body_rest=body_rest,
-                   toc=toc, figure=figure,
+                   toc=toc, figure=figure, sources=sources,
                    calc=calc_ctx, faq=faq_items, answer_first=answer_first,
                    category_name=category_name, reading_time=_reading_time(art.get("word_count", 0)),
                    related=related, project_links=project_links,
@@ -698,7 +700,7 @@ def build() -> dict:
                               json.dumps(seolib.breadcrumb_list(
                                   [("Home", "/"), (title, f"/{slug}/")], site),
                                   ensure_ascii=False)])
-        ctx.update(page={"title": title, "html": mdrender.render(body)})
+        ctx.update(page={"title": title, "html": mdrender.render_with_toc(body)[0]})
         _write(SITE / slug / "index.html", env.get_template("page.html").render(**ctx))
 
     # --- search (client-side; backs the WebSite SearchAction) ---
