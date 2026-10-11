@@ -559,9 +559,156 @@ def fix_table(md: str, art: dict) -> tuple[str, list[str]]:
     return "\n".join(out_lines), corrections
 
 
+def _num(v) -> float:
+    try:
+        return float(str(v).strip())
+    except (TypeError, ValueError):
+        return 0.0
+
+
+def worked_example_section(art: dict) -> str:
+    """A scannable '## Worked Example' built only from the calculator's own output.
+
+    Long-tail pages that walk through the maths in prose still lack the labelled
+    equation block a featured snippet prefers, so this adds one where it is missing.
+    """
+    key = art.get("calculator") or ""
+    ins = headline_inputs(art)
+    out = calculators.compute(key, ins)
+    g = _g
+    L, W = ins.get("length"), ins.get("width")
+    if key == "mulch":
+        body = (f"{g(L)} ft x {g(W)} ft = {g(out['square_feet'])} sq ft. "
+                f"{g(out['square_feet'])} sq ft x {g(ins['depth'])} in (0.25 ft per 3 in) "
+                f"= {g(out['cubic_feet'])} cubic feet, which is {out['cubic_yards']} cubic "
+                f"yards or {out['bags_2cf']} bags of 2 cu ft.")
+    elif key == "topsoil":
+        body = (f"{g(L)} ft x {g(W)} ft = {g(out['square_feet'])} sq ft. At {g(ins['depth'])} in "
+                f"deep that is {g(out['cubic_feet'])} cubic feet, or {out['cubic_yards']} cubic "
+                f"yards, about {out['bags_40lb']} bags of 40 lb.")
+    elif key == "soil":
+        body = (f"{g(L)} ft x {g(W)} ft x {g(ins['height'])} in = {g(out['cubic_feet'])} cubic "
+                f"feet, which is {out['cubic_yards']} cubic yards, about {out['bags_1_5cf']} bags "
+                f"of 1.5 cu ft.")
+    elif key == "gravel":
+        cuft = _num(out["cubic_yards"]) * 27
+        body = (f"{g(L)} ft x {g(W)} ft = {g(out['square_feet'])} sq ft. At {g(ins['depth'])} in "
+                f"deep that is about {g(cuft)} cubic feet = {out['cubic_yards']} cubic yards, "
+                f"roughly {out['tons']} tons.")
+    elif key == "concrete":
+        body = (f"{g(L)} ft x {g(W)} ft x {g(ins['thickness'])} in = {g(out['cubic_feet'])} cubic "
+                f"feet = {out['cubic_yards']} cubic yards. That is about {out['bags_80lb']} bags "
+                f"of 80 lb or {out['bags_60lb']} bags of 60 lb.")
+    elif key == "paint":
+        perim = 2 * (_num(L) + _num(W))
+        body = (f"Perimeter = 2 x ({g(L)} + {g(W)}) = {g(perim)} ft. Wall area = {g(perim)} x "
+                f"{g(ins['height'])} = {out['wall_area']} sq ft. Less one door and two windows "
+                f"= {out['paintable_area']} sq ft. Two coats at about 350 sq ft per gallon "
+                f"= {out['gallons']} gallons.")
+    elif key == "tile":
+        body = (f"{g(L)} ft x {g(W)} ft = {g(out['floor_area'])} sq ft. Each {g(ins['tile_w'])} x "
+                f"{g(ins['tile_h'])} in tile covers {g(out['tile_area'])} sq ft, so "
+                f"{g(out['floor_area'])} ÷ {g(out['tile_area'])} = {out['tiles']} tiles. "
+                f"Add {g(ins['waste'])}% waste = {out['tiles_with_waste']} tiles.")
+    elif key == "grass_seed":
+        bags = out["bags_3lb"]
+        body = (f"{int(ins['area']):,} sq ft at {g(out['rate_per_1000'])} lb per 1,000 sq ft "
+                f"= {g(out['pounds'])} lb of seed, about {bags} "
+                f"{'bag' if bags == 1 else 'bags'} of 3 lb.")
+    elif key == "fertilizer":
+        body = (f"{g(ins['area'])} sq ft at {g(ins['rate'])} lb N per 1,000 sq ft needs "
+                f"{out['pounds_nitrogen']} lb of actual nitrogen. A {g(ins['nitrogen'])}% bag "
+                f"supplies that in {out['pounds']} lb of product, about {out['bags']} bags.")
+    else:
+        return ""
+    return f"## Worked Example\n\n{body}"
+
+
+def _has_worked_block(md: str) -> bool:
+    if re.search(r"(?i)^#{2,4}\s+.*worked example", md, re.M):
+        return True
+    if re.search(r"(?i)^\s*(?:inputs?)\s*:", md, re.M):
+        return True
+    if re.search(r"\d[\d,\.]*\s*[x*×]\s*[\d\.]+\s*=", md):
+        return True
+    lines = md.split("\n")
+    run = 0
+    for line in lines:
+        if re.match(r"^\s*(?:\*|-)?\s*[A-Za-z][A-Za-z0-9 .%]{2,30}\s*[:=]\s*[\d.,]+", line):
+            run += 1
+            if run >= 3:
+                return True
+        else:
+            run = 0
+    return False
+
+
+def ensure_worked_example(md: str, art: dict) -> tuple[str, str | None]:
+    """Insert a computed worked example after the first section when the page has none."""
+    if art["slug"] in SPECIAL_SLUGS:
+        return md, None
+    if not art.get("calculator") or _has_worked_block(md):
+        return md, None
+    section = worked_example_section(art)
+    if not section:
+        return md, None
+    lines = md.split("\n")
+    # Insert before the second H2, so it sits right below the intro's first section.
+    h2 = [i for i, l in enumerate(lines) if re.match(r"^##\s", l)]
+    at = h2[1] if len(h2) >= 2 else len(lines)
+    lines[at:at] = section.split("\n") + [""]
+    return "\n".join(lines), "worked example section"
+
+
+_MISTAKES = {
+    "mulch": "**Piling it against stems and trunks.** Keep mulch a few inches clear of bark, "
+             "or it holds moisture against the plant and invites rot.",
+    "topsoil": "**Filling deeper than the roots need.** Most beds only need 6 to 12 inches; "
+               "more soil just costs money and settles.",
+    "soil": "**Forgetting that fresh mix settles.** Order about 10 per cent extra, because "
+            "loose soil compacts after the first few waterings.",
+    "gravel": "**Skipping the sub-base or fabric.** Gravel disappears into soft ground without "
+              "a geotextile barrier underneath it.",
+    "concrete": "**Mixing too little in one go.** A slab has to be poured as one continuous "
+                "batch, so buy a bag or two spare rather than stopping halfway.",
+    "paint": "**Planning for a single coat.** One coat rarely covers evenly, so always "
+             "calculate for two and buy in the same batch for a colour match.",
+    "tile": "**Ignoring the waste allowance.** Cuts, breakage and pattern matching all use "
+            "tile, so add 10 per cent for a straight layout and 15 for diagonal.",
+    "grass_seed": "**Burying the seed.** Rake it in no more than a quarter inch deep; deeper "
+                  "and the seedling runs out of energy before it reaches the light.",
+    "fertilizer": "**Guessing the spread rate.** Over-application burns the lawn, so weigh the "
+                  "product and set the spreader rather than eyeballing it.",
+}
+
+
+def ensure_common_mistakes(md: str, art: dict) -> tuple[str, str | None]:
+    """Add a short, calculator-specific mistakes section when the page has none."""
+    if art["slug"] in SPECIAL_SLUGS or not art.get("calculator"):
+        return md, None
+    if re.search(r"(?i)^#{2,4}\s+.*(mistake|error|confus|pitfall|avoid|wrong)", md, re.M):
+        return md, None
+    line = _MISTAKES.get(art["calculator"])
+    if not line:
+        return md, None
+    section = f"## Common Mistakes to Avoid\n\n{line}"
+    lines = md.split("\n")
+    h2 = [i for i, l in enumerate(lines) if re.match(r"^##\s", l)]
+    at = h2[-1] if h2 else len(lines)
+    lines[at:at] = section.split("\n") + [""]
+    return "\n".join(lines), "common mistakes section"
+
+
 def fix_article(art: dict) -> list[str]:
-    if art.get("is_pillar") or not art.get("calculator"):
+    if not art.get("calculator"):
         art.setdefault("answer", "")
+        return []
+    if art.get("is_pillar"):
+        # Pillar pages keep their curated prose, but the answer box still prefers the
+        # computed sentence for a featured snippet, so fill it when it is missing.
+        if not (art.get("answer") or "").strip():
+            art["answer"] = answer_text(art)
+            return ["answer box (pillar)"]
         return []
     if art["slug"] in SPECIAL_SLUGS:
         # The box calculator cannot model this query; keep the hand-written prose
@@ -579,6 +726,12 @@ def fix_article(art: dict) -> list[str]:
         if c:
             changes.append(c)
     md, c = fix_worked_region(md, art)
+    if c:
+        changes.append(c)
+    md, c = ensure_worked_example(md, art)
+    if c:
+        changes.append(c)
+    md, c = ensure_common_mistakes(md, art)
     if c:
         changes.append(c)
     md, cs = fix_table(md, art)

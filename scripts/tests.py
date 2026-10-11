@@ -10,6 +10,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import calculators
+import article_fix
 import keywords
 import mdrender
 import merges
@@ -465,6 +466,28 @@ def test_no_meta_description_ends_on_a_dangling_word():
         if md and len(md) <= 158 and words and words[-1].lower() in dangling:
             bad.append(a["slug"])
     assert not bad, f"meta descriptions end mid-phrase: {bad}"
+
+
+def test_every_calculator_article_has_a_worked_example_and_answer():
+    """Task 4: a kept calculator page must show a labelled walk-through and an
+    answer-first sentence, or it cannot win a featured snippet."""
+    import json
+    from pathlib import Path
+    root = Path(__file__).resolve().parent.parent
+    arts = json.loads((root / "data" / "articles.json").read_text(encoding="utf-8"))
+    missing = []
+    for a in arts:
+        if a.get("status") not in ("published", "approved"):
+            continue
+        if a["slug"] in merges.MERGES or a["slug"] in article_fix.SPECIAL_SLUGS:
+            continue
+        if not a.get("calculator"):
+            continue
+        if not (a.get("answer") or "").strip():
+            missing.append(f"{a['slug']} (answer)")
+        if not article_fix._has_worked_block(a.get("body_markdown", "")):
+            missing.append(f"{a['slug']} (worked example)")
+    assert not missing, f"pages missing snippet blocks: {missing}"
 
 
 if __name__ == "__main__":
