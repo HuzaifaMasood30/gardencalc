@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% block head_extra %}{% if figure %}<link rel="preload" as="image" href="{{ figure.src }}" fetchpriority="high">{% endif %}{% endblock %}
 {% block content %}
 <div class="wrap">
 <nav class="breadcrumbs" aria-label="Breadcrumb">

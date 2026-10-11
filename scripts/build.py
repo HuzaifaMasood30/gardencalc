@@ -757,7 +757,7 @@ def build() -> dict:
         calc_slug = ch.get("calc", "")
         cctx = common(title=ch["title"], description=ch["description"],
                       canonical=cp["url"], og_type="article",
-                      og_image=_abs(site, "/static/img/og-default.png"),
+                      og_image=_abs(site, f"/static/img/og/{ch['slug']}.png"),
                       keywords=ch["keyword"],
                       schemas=[json.dumps(seolib.breadcrumb_list(
                                    [("Home", "/"), (cluster_name, f"/category/{ch['cluster']}/"),
@@ -782,7 +782,7 @@ def build() -> dict:
         pp = planners.page(pl, base, site)
         pctx = common(title=pl["title"], description=pl["description"],
                       canonical=pp["url"], og_type="article",
-                      og_image=_abs(site, "/static/img/og-default.png"),
+                      og_image=_abs(site, f"/static/img/og/{pl['slug']}.png"),
                       keywords=pl["question"],
                       schemas=[json.dumps(seolib.breadcrumb_list(
                                    [("Home", "/"), (cluster_name, f"/category/{pl['cluster']}/"),
@@ -806,7 +806,7 @@ def build() -> dict:
         sp = seasonal.page(item, base, site)
         sctx = common(title=item["title"], description=item["description"],
                       canonical=sp["url"], og_type="article",
-                      og_image=_abs(site, "/static/img/og-default.png"),
+                      og_image=_abs(site, f"/static/img/og/{item['slug']}.png"),
                       keywords=item["keyword"],
                       schemas=[json.dumps(seolib.breadcrumb_list(
                                    [("Home", "/"), (cluster_name, f"/category/{item['cluster']}/"),
@@ -925,6 +925,15 @@ def build() -> dict:
                          static_dest, _c["id"])
     for _slug, _title, _desc in HUB_OG_CARDS:
         images.render_og(_slug, _title, _desc, static_dest)
+    # Per-page social cards for charts, planners and seasonal guides too, so a shared
+    # link previews the actual topic rather than one generic fallback image.
+    for _card in ([{"slug": c["slug"], "title": c["title"], "description": c["description"]}
+                   for c in charts.CHARTS] +
+                  [{"slug": p["slug"], "title": p["title"], "description": p["description"]}
+                   for p in planners.PLANNERS] +
+                  [{"slug": s["slug"], "title": s["title"], "description": s["description"]}
+                   for s in seasonal.SEASONAL]):
+        images.render_og(_card["slug"], _card["title"], _card["description"], static_dest)
     pin_cards = [{"slug": ch["slug"], "title": ch["title"], "question": charts.CHART_QUESTIONS.get(ch["slug"], ""),
                   "cluster": ch["cluster"]} for ch in charts.CHARTS]
     pin_cards += [{"slug": pl["slug"], "title": pl["title"], "question": pl["question"],
