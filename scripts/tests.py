@@ -607,6 +607,29 @@ def test_autumn_guides_carry_regional_and_current_timing():
         assert "when-to-overseed-a-lawn" in home and "In season right now" in home
 
 
+def test_every_indexable_page_has_a_real_og_image():
+    """Task 9: social previews must resolve to a page-specific card, not a
+    broken path, and the article hero image must be preloaded for LCP."""
+    import json
+    from pathlib import Path
+    root = Path(__file__).resolve().parent.parent
+    site = root / "site"
+    bad = []
+    for page in site.rglob("index.html"):
+        rel = page.relative_to(site).parent.as_posix()
+        if rel.startswith("embed"):  # noindex iframes, not shared as pages
+            continue
+        html = page.read_text(encoding="utf-8")
+        m = re.search(r'property="og:image" content="([^"]+)"', html)
+        assert m, f"{rel} has no og:image"
+        rel_img = m.group(1).split("/gardencalc/")[-1]
+        if not (site / rel_img).exists():
+            bad.append((rel, rel_img))
+    assert not bad, f"og:image paths do not exist: {bad}"
+    hero = (site / "mulch-calculator" / "index.html").read_text(encoding="utf-8")
+    assert 'rel="preload" as="image"' in hero, "article hero image is not preloaded"
+
+
 if __name__ == "__main__":
     fns = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     failed = 0
