@@ -1,6 +1,9 @@
 """Pipeline tests. Run with: python -m pytest scripts/tests.py -q  (or python scripts/tests.py)"""
 from __future__ import annotations
 
+import datetime as dt
+import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -14,7 +17,7 @@ import promotion
 import quality
 import seasonal
 import seo as seolib
-from common import site_config
+from common import ROOT, site_config
 
 
 def test_render_adds_heading_ids_and_toc():
@@ -90,6 +93,14 @@ def test_calculator_results():
     assert abs(r["tons"] - 2.59) < 0.01, r
     r = calculators.compute("concrete", {"length": 10, "width": 10, "thickness": 4})
     assert r["bags_60lb"] == 75 and r["bags_80lb"] == 56, r
+    # Fertilizer: pounds are the *product* weight, derived from the nitrogen share.
+    r = calculators.compute("fertilizer", {"area": 5000, "rate": 1, "bag": 40, "nitrogen": 20})
+    assert r == {"pounds_nitrogen": 5.0, "pounds": 25.0, "bags": 1}, r
+    r = calculators.compute("fertilizer", {"area": 5000, "rate": 1, "bag": 40, "nitrogen": 10})
+    assert r["pounds"] == 50.0 and r["bags"] == 2, r
+    # A 1,000 sq ft lawn at 1 lb N with a 20-0-0 bag needs 5 lb of product.
+    r = calculators.compute("fertilizer", {"area": 1000, "rate": 1, "bag": 40, "nitrogen": 20})
+    assert r["pounds"] == 5.0 and r["pounds_nitrogen"] == 1.0, r
 
 
 def test_article_fix_is_idempotent():
@@ -331,6 +342,32 @@ def test_seasonal_pages_have_reference_tables():
         assert item["table"]["head"] and len(item["table"]["rows"]) >= 3
 
 
+def test_robots_is_harmless_and_has_no_sitemap_reliance():
+    """A project-site robots.txt is never read at the host root, so it must not
+    advertise a Sitemap: line; it only needs to permit crawling."""
+    txt = seolib.robots_txt({"base_url": "https://example.github.io/repo"})
+    assert "User-agent" in txt and "Disallow" not in txt
+    assert "Sitemap:" not in txt
+
+
+def test_rss_items_have_pubdates():
+    """RSS must be a valid fallback sitemap: real items with RFC-822 pubDates."""
+    arts = [{"title": "T", "slug": "t", "meta_description": "d", "updated": "2026-10-08"}]
+    xml = seolib.rss_xml(arts, {"name": "GardenCalc", "tagline": "x",
+                             "base_url": "https://example.github.io/repo"})
+    assert "<pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>" in xml
+
+
+def test_sitemap_lastmod_is_git_derived():
+    """build._stamp must return the file's real git commit date, not today."""
+    import build
+    stamp = build._stamp(ROOT / "scripts" / "seo.py")
+    assert re.fullmatch(r"\d{4}-\d{2}-\d{2}", stamp)
+    out = subprocess.run(["git", "log", "-1", "--format=%cs", "--", "scripts/seo.py"],
+                         cwd=ROOT, capture_output=True, text=True)
+    assert stamp == out.stdout.strip()
+
+
 def test_js_and_python_calculators_agree():
     """The client-side calculator must produce the same numbers as the Python engine."""
     import json
@@ -352,7 +389,7 @@ def test_js_and_python_calculators_agree():
         ["grass_seed", {"area": 5000, "method": 1}],
         ["concrete", {"length": 10, "width": 10, "thickness": 4}],
         ["topsoil", {"length": 20, "width": 10, "depth": 2}],
-        ["fertilizer", {"area": 5000, "rate": 1, "bag": 40}],
+        ["fertilizer", {"area": 5000, "rate": 1, "bag": 40, "nitrogen": 20}],
     ]
     proc = subprocess.run(
         [node, str(root / "scripts/calc_parity.js"), str(root / "static/js/main.js"),
@@ -368,6 +405,7 @@ def test_js_and_python_calculators_agree():
         "pounds": "Pounds", "bags_3lb": "3 lb bags", "gallons": "Gallons",
         "bags_60lb": "60 lb bags", "bags_80lb": "80 lb bags",
         "bags_40lb": "40 lb bags", "bags": "Bags",
+        "pounds_nitrogen": "Pounds of nitrogen",
     }
     for kind, inputs in cases:
         py = calculators.compute(kind, inputs)

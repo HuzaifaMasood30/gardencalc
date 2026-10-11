@@ -147,9 +147,9 @@ QUICK_ANSWERS = [
     {"calc": "grass_seed", "args": {"area": 5000, "method": 1},
      "q": "5,000 sq ft new lawn",
      "answer": lambda o: f"{o['pounds']} lb of seed — about {o['bags_3lb']} bags of 3 lb"},
-    {"calc": "fertilizer", "args": {"area": 5000, "rate": 1, "bag": 40},
+    {"calc": "fertilizer", "args": {"area": 5000, "rate": 1, "bag": 40, "nitrogen": 20},
      "q": "5,000 sq ft lawn at 1 lb N",
-     "answer": lambda o: f"{o['pounds']} lb — about {o['bags']} bag of 40 lb"},
+     "answer": lambda o: f"{o['pounds']} lb of 20-0-0 product — about {o['bags']} bag of 40 lb"},
 ]
 
 # Homepage FAQ. These exact questions and answers are rendered visibly in accordions AND

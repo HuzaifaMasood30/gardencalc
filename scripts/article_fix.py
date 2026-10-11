@@ -138,12 +138,27 @@ def headline_inputs(art: dict) -> dict:
             return {**base, "area": 1000, "method": method}
         return base
     if key == "fertilizer":
+        out = dict(base)
+        out["nitrogen"] = _nitrogen_from_keyword(kw)
+        if art.get("is_pillar"):
+            return out
         if area:
-            return {**base, "area": float(area.group(1).replace(",", ""))}
-        if "1000" in kw or "per square foot" in kw:
-            return {**base, "area": 1000}
-        return base
+            out["area"] = float(area.group(1).replace(",", ""))
+        elif "1000" in kw or "per square foot" in kw:
+            out["area"] = 1000
+        return out
     return base
+
+
+def _nitrogen_from_keyword(kw: str) -> float:
+    """Nitrogen percentage implied by the page's keyword.
+
+    "10-10-10" -> 10, "20-0-0" -> 20, otherwise the common 20% starter/lawn bag.
+    """
+    m = re.search(r"\b(\d{1,2})[-\s](\d{1,2})[-\s](\d{1,2})\b", kw)
+    if m:
+        return float(m.group(1))
+    return 20.0
 
 
 def describe(art: dict, inputs: dict) -> str:
@@ -164,8 +179,11 @@ def describe(art: dict, inputs: dict) -> str:
         return f"{_g(inputs.get('length'))}x{_g(inputs.get('width'))} ft room, 2 coats"
     if key == "tile":
         return f"{_g(inputs.get('length'))}x{_g(inputs.get('width'))} ft with 12 in tiles"
-    if key in ("grass_seed", "fertilizer"):
+    if key == "grass_seed":
         return f"{int(inputs.get('area', 0)):,} sq ft"
+    if key == "fertilizer":
+        return (f"{int(inputs.get('area', 0)):,} sq ft at "
+                f"{_g(inputs.get('rate', 1))} lb N per 1,000 sq ft")
     return "this job"
 
 
@@ -199,8 +217,10 @@ def answer_text(art: dict) -> str:
         return (f"{where} needs about {_g(out['pounds'])} lb of seed "
                 f"({out['bags_3lb']} x 3-lb bags) at {_g(out['rate_per_1000'])} lb per 1,000 sq ft.")
     if key == "fertilizer":
-        return (f"{where} needs about {_g(out['pounds'])} lb of product "
-                f"({out['bags']} bag) at {_g(out.get('rate_per_1000', 1))} lb per 1,000 sq ft.")
+        share = _g(ins.get("nitrogen", 20))
+        return (f"{where} needs {_g(out['pounds_nitrogen'])} lb of actual nitrogen, "
+                f"about {_g(out['pounds'])} lb of product ({out['bags']} bag) "
+                f"from a {share}% nitrogen bag.")
     return art.get("meta_description", "")
 
 
@@ -253,6 +273,7 @@ _FIELD = {
     "Floor area": "floor_area", "Tile area": "tile_area", "Tiles": "tiles",
     "Tiles with waste": "tiles_with_waste", "Rate per 1000": "rate_per_1000",
     "Pounds": "pounds", "3 lb bags": "bags_3lb", "Bags": "bags",
+    "Pounds of nitrogen": "pounds_nitrogen", "Pounds of product": "pounds",
 }
 _LABELS = {
     "mulch": ["Square feet", "Cubic feet", "Cubic yards", "2 cu ft bags"],
@@ -263,7 +284,14 @@ _LABELS = {
     "paint": ["Wall area", "Paintable area", "Gallons"],
     "tile": ["Floor area", "Tile area", "Tiles", "Tiles with waste"],
     "grass_seed": ["Rate per 1000", "Pounds", "3 lb bags"],
-    "fertilizer": ["Pounds", "Bags"],
+    "fertilizer": ["Pounds of nitrogen", "Pounds of product", "Bags"],
+}
+
+# Friendly input names for the auto-generated worked-example bullets. The raw config
+# ids ("tile_w", "rate") read badly in prose.
+_INPUT_NAMES = {
+    "fertilizer": {"area": "Lawn area (sq ft)", "rate": "Nitrogen rate (lb N per 1,000 sq ft)",
+                   "nitrogen": "Nitrogen in bag (%)", "bag": "Bag size (lb)"},
 }
 
 
@@ -309,7 +337,8 @@ def fix_worked_example(md: str, art: dict) -> tuple[str, str | None]:
         return md, None
     ins = headline_inputs(art)
     out = calculators.compute(key, ins)
-    bullets = ["*   " + " = ".join([k, _g(v)]) for k, v in ins.items()]
+    names = _INPUT_NAMES.get(key, {})
+    bullets = [f"*   {names.get(k, k)} = {_g(v)}" for k, v in ins.items()]
     for label in labels:
         val = out.get(_FIELD.get(label, ""))
         if val is not None:
