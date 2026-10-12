@@ -27,6 +27,13 @@ generate -> internal links -> quality gates -> build -> monitor -> dashboard -> 
 - Calculators are implemented twice and MUST stay in sync:
   `scripts/calculators.py` (Python) and `static/js/main.js` (browser).
   Parity is tested in `scripts/tests.py` via `scripts/calc_parity.js`.
+- Unit toggle: each calculator input carries a `metric` block in `config/topics.json`
+  (label/unit/default/min/max/step) plus a `conv` factor handled per calculator+input,
+  not per input id, because the same id is different units in different tools (paint
+  `height` is ft->m = 0.3048, soil `height` is in->cm = 2.54). `build.py` emits these as
+  `data-conv` / `data-metric-*` and only enables the toggle when every input is covered.
+  `convertValue` in `main.js` carries a typed value across a switch unless the field
+  still holds the other system's default, in which case it snaps to the curated default.
 - `data/articles.json` is the source of truth for published pages; status must be
   `approved` to publish. Internal links are rebuilt every run (do not clear links on
   rejection — that caused a permanent re-reject loop).
