@@ -22,6 +22,25 @@ import sources as sources_lib
 from common import ROOT, site_config
 
 
+_BUILT = False
+
+
+def _ensure_site():
+    """Build ``site/`` once if it is missing.
+
+    CI runs this suite before ``build.py``, so tests that assert on the rendered
+    HTML must not depend on a prior build. Building here keeps the suite
+    order-independent (fresh checkout, pytest, or a hand run after edits).
+    """
+    global _BUILT
+    if _BUILT or (ROOT / "site" / "index.html").exists():
+        _BUILT = True
+        return
+    subprocess.run([sys.executable, str(ROOT / "scripts" / "build.py")],
+                   cwd=ROOT, check=True, capture_output=True)
+    _BUILT = True
+
+
 def test_render_adds_heading_ids_and_toc():
     html, toc = mdrender.render_with_toc("## First section\n\ntext\n\n## Second section\n\nmore")
     assert '<h2 id="first-section">' in html
@@ -425,6 +444,7 @@ def test_homepage_quick_answers_link_to_real_calculators():
     The soil row used to build "<calc>-calculator" and fall back to /calculators/
     because the real slug is raised-bed-soil-calculator.
     """
+    _ensure_site()
     import json
     from pathlib import Path
     root = Path(__file__).resolve().parent.parent
@@ -440,6 +460,7 @@ def test_homepage_quick_answers_link_to_real_calculators():
 
 
 def test_homepage_lists_every_pillar():
+    _ensure_site()
     import json
     from pathlib import Path
     root = Path(__file__).resolve().parent.parent
@@ -494,6 +515,7 @@ def test_every_calculator_article_has_a_worked_example_and_answer():
 def test_calculator_pages_cite_their_sources():
     """Task 5: every calculator page links at least one real source, and the about
     page exposes the methodology the byline points at."""
+    _ensure_site()
     import json
     from pathlib import Path
     root = Path(__file__).resolve().parent.parent
@@ -511,6 +533,7 @@ def test_calculator_pages_cite_their_sources():
 
 def test_article_schema_is_well_formed():
     """Task 6: JSON-LD must carry stable @ids, real dates and matching FAQ text."""
+    _ensure_site()
     import json
     from pathlib import Path
     root = Path(__file__).resolve().parent.parent
@@ -544,6 +567,7 @@ def test_every_published_page_has_inbound_links_and_shallow_depth():
     """Task 7: no page is more than 3 clicks from the homepage, and each published
     page has at least two inbound links in the rendered site (not just the link graph,
     which the per-article cap can hold at one)."""
+    _ensure_site()
     import json
     from collections import Counter, deque
     from pathlib import Path
@@ -589,6 +613,7 @@ def test_every_published_page_has_inbound_links_and_shallow_depth():
 def test_autumn_guides_carry_regional_and_current_timing():
     """Task 8: the two autumn guides must answer the regional and 'this month'
     questions a searcher asks, and be surfaced on the homepage while in season."""
+    _ensure_site()
     import datetime as dt
     from pathlib import Path
     root = Path(__file__).resolve().parent.parent
@@ -610,6 +635,7 @@ def test_autumn_guides_carry_regional_and_current_timing():
 def test_every_indexable_page_has_a_real_og_image():
     """Task 9: social previews must resolve to a page-specific card, not a
     broken path, and the article hero image must be preloaded for LCP."""
+    _ensure_site()
     import json
     from pathlib import Path
     root = Path(__file__).resolve().parent.parent
