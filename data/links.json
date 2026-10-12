@@ -12,13 +12,13 @@
     ],
     "raised-bed-soil-calculator": [
       "how-much-soil-for-a-4x8-raised-bed",
-      "how-much-potting-soil-for-a-raised-bed",
       "how-much-soil-for-a-4x2x1-raised-garden-bed",
-      "how-much-soil-do-i-need-for-a-raised-bed",
-      "how-to-calculate-how-much-soil-for-raised-bed",
-      "how-much-mulch-do-i-need-for-my-yard",
-      "how-much-mulch-do-i-need-per-square-foot",
-      "how-much-gravel-do-i-need-for-my-backyard"
+      "mulch-calculator",
+      "gravel-calculator",
+      "paint-calculator",
+      "tile-calculator",
+      "grass-seed-calculator",
+      "concrete-calculator"
     ],
     "gravel-calculator": [
       "how-much-gravel-do-i-need-for-a-french-drain",
@@ -35,10 +35,10 @@
       "how-much-paint-do-i-need-for-a-10x10-room",
       "how-much-paint-do-i-need-for-a-front-door",
       "how-much-paint-do-i-need-for-a-12x12-room",
-      "how-much-paint-do-i-need-for-a-room",
       "how-much-paint-do-i-need-for-a-12x16-shed",
       "how-much-paint-do-i-need-for-1800-sq-ft-house",
-      "how-much-paint-do-i-need-for-a-small-bathroom"
+      "how-much-paint-do-i-need-for-a-small-bathroom",
+      "how-much-paint-do-i-need-for-a-bathroom"
     ],
     "tile-calculator": [
       "how-many-tiles-do-i-need-for-a-10x10-room",
@@ -47,18 +47,18 @@
       "how-many-tiles-do-i-need-for-20-square-feet",
       "how-many-tiles-do-i-need-for-120-square-feet",
       "how-many-tiles-do-i-need-for-a-4x4-room",
-      "how-many-tiles-do-i-need-for-a-room",
-      "how-many-tiles-do-i-need-for-a-12x12-room"
+      "how-many-tiles-do-i-need-for-a-12x12-room",
+      "how-many-tiles-do-i-need-for-a-14x12-room"
     ],
     "grass-seed-calculator": [
       "how-much-grass-seed-per-square-foot-overseeding",
       "how-much-grass-seed-per-square-foot-for-new-lawn",
       "how-much-buffalo-grass-seed-per-square-foot",
       "how-much-bermuda-grass-seed-per-square-foot",
-      "how-much-grass-seed-do-i-need-per-square-foot",
-      "how-much-bermuda-grass-seed-per-1000-square-feet",
-      "how-many-pounds-of-bermuda-grass-seed-per-square-foot",
-      "how-many-pounds-of-grass-seed-per-square-foot"
+      "how-much-grass-seed-do-i-need-for-1000-square-feet",
+      "how-many-sq-ft-does-a-50-lb-bag-of-grass-seed-cover",
+      "how-much-mulch-do-i-need-for-my-yard",
+      "how-much-mulch-do-i-need-per-square-foot"
     ],
     "concrete-calculator": [
       "how-many-bags-of-concrete-do-i-need-for-a-10x10-slab",
@@ -85,10 +85,10 @@
       "how-much-paint-do-i-need-for-a-10x10-room",
       "how-much-paint-do-i-need-for-a-front-door",
       "how-much-paint-do-i-need-for-a-12x12-room",
-      "how-much-paint-do-i-need-for-a-room",
       "how-much-paint-do-i-need-for-a-12x16-shed",
       "how-much-paint-do-i-need-for-1800-sq-ft-house",
-      "how-much-paint-do-i-need-for-a-small-bathroom"
+      "how-much-paint-do-i-need-for-a-small-bathroom",
+      "how-much-paint-do-i-need-for-a-bathroom"
     ],
     "how-many-tiles-do-i-need-for-a-10x10-room": [
       "tile-calculator",
@@ -97,18 +97,18 @@
       "how-many-tiles-do-i-need-for-20-square-feet",
       "how-many-tiles-do-i-need-for-120-square-feet",
       "how-many-tiles-do-i-need-for-a-4x4-room",
-      "how-many-tiles-do-i-need-for-a-room",
-      "how-many-tiles-do-i-need-for-a-12x12-room"
+      "how-many-tiles-do-i-need-for-a-12x12-room",
+      "how-many-tiles-do-i-need-for-a-14x12-room"
     ],
     "how-much-grass-seed-per-square-foot-overseeding": [
       "grass-seed-calculator",
       "how-much-grass-seed-per-square-foot-for-new-lawn",
       "how-much-buffalo-grass-seed-per-square-foot",
       "how-much-bermuda-grass-seed-per-square-foot",
-      "how-much-grass-seed-do-i-need-per-square-foot",
-      "how-much-bermuda-grass-seed-per-1000-square-feet",
-      "how-many-pounds-of-bermuda-grass-seed-per-square-foot",
-      "how-many-pounds-of-grass-seed-per-square-foot"
+      "how-much-grass-seed-do-i-need-for-1000-square-feet",
+      "how-many-sq-ft-does-a-50-lb-bag-of-grass-seed-cover",
+      "how-much-paint-do-i-need-for-a-small-bedroom",
+      "how-many-tiles-do-i-need-for-a-roof"
     ],
     "how-many-bags-of-concrete-do-i-need-for-a-10x10-slab": [
       "concrete-calculator",
@@ -165,20 +165,20 @@
       "how-much-paint-do-i-need-for-a-bedroom",
       "how-much-paint-do-i-need-for-a-front-door",
       "how-much-paint-do-i-need-for-a-12x12-room",
-      "how-much-paint-do-i-need-for-a-room",
       "how-much-paint-do-i-need-for-a-12x16-shed",
       "how-much-paint-do-i-need-for-1800-sq-ft-house",
-      "how-much-paint-do-i-need-for-a-small-bathroom"
+      "how-much-paint-do-i-need-for-a-small-bathroom",
+      "how-much-paint-do-i-need-for-a-bathroom"
     ],
     "how-much-grass-seed-per-square-foot-for-new-lawn": [
       "grass-seed-calculator",
       "how-much-grass-seed-per-square-foot-overseeding",
       "how-much-buffalo-grass-seed-per-square-foot",
       "how-much-bermuda-grass-seed-per-square-foot",
-      "how-much-grass-seed-do-i-need-per-square-foot",
-      "how-much-bermuda-grass-seed-per-1000-square-feet",
-      "how-many-pounds-of-bermuda-grass-seed-per-square-foot",
-      "how-many-pounds-of-grass-seed-per-square-foot"
+      "how-much-grass-seed-do-i-need-for-1000-square-feet",
+      "how-many-sq-ft-does-a-50-lb-bag-of-grass-seed-cover",
+      "how-much-mulch-do-i-need-for-my-yard",
+      "how-much-mulch-do-i-need-per-square-foot"
     ],
     "how-many-bags-of-concrete-do-i-need-for-a-4x8-slab": [
       "concrete-calculator",
@@ -193,12 +193,12 @@
     "topsoil-calculator": [
       "how-much-topsoil-do-i-need-for-a-new-lawn",
       "how-much-topsoil-do-i-need-for-a-garden-bed",
-      "how-much-topsoil-do-i-need-for-my-raised-garden-bed",
-      "how-much-paint-do-i-need-for-a-bathroom",
-      "how-much-mulch-do-i-need-for-100-square-feet",
-      "how-much-paint-do-i-need-for-a-small-bedroom",
-      "how-many-tiles-do-i-need-for-a-14x12-room",
-      "how-much-grass-seed-do-i-need-for-1000-square-feet"
+      "mulch-calculator",
+      "raised-bed-soil-calculator",
+      "gravel-calculator",
+      "paint-calculator",
+      "tile-calculator",
+      "grass-seed-calculator"
     ],
     "fertilizer-calculator": [
       "how-much-liquid-fertilizer-per-1000-sq-ft",
@@ -206,9 +206,9 @@
       "how-much-starter-fertilizer-per-1000-sq-ft",
       "how-many-pounds-of-fertilizer-per-1000-sq-ft",
       "how-much-10-10-10-fertilizer-per-1000-sq-ft",
-      "how-much-mulch-do-i-need-for-my-yard",
-      "how-much-mulch-do-i-need-per-square-foot",
-      "how-much-gravel-do-i-need-for-my-backyard"
+      "how-many-pounds-of-starter-fertilizer-per-1000-sq-ft",
+      "how-much-gravel-do-i-need-for-my-backyard",
+      "how-much-mulch-do-i-need-for-100-square-feet"
     ],
     "how-much-mulch-do-i-need-for-400-square-feet": [
       "mulch-calculator",
@@ -222,13 +222,13 @@
     ],
     "how-much-soil-for-a-4x8-raised-bed": [
       "raised-bed-soil-calculator",
-      "how-much-potting-soil-for-a-raised-bed",
       "how-much-soil-for-a-4x2x1-raised-garden-bed",
-      "how-much-soil-do-i-need-for-a-raised-bed",
-      "how-to-calculate-how-much-soil-for-raised-bed",
-      "how-much-paint-do-i-need-for-a-bathroom",
-      "how-much-mulch-do-i-need-for-100-square-feet",
-      "how-much-paint-do-i-need-for-a-small-bedroom"
+      "mulch-calculator",
+      "gravel-calculator",
+      "paint-calculator",
+      "tile-calculator",
+      "grass-seed-calculator",
+      "concrete-calculator"
     ],
     "how-much-gravel-do-i-need-per-square-metre": [
       "gravel-calculator",
@@ -245,10 +245,10 @@
       "how-much-paint-do-i-need-for-a-bedroom",
       "how-much-paint-do-i-need-for-a-10x10-room",
       "how-much-paint-do-i-need-for-a-12x12-room",
-      "how-much-paint-do-i-need-for-a-room",
       "how-much-paint-do-i-need-for-a-12x16-shed",
       "how-much-paint-do-i-need-for-1800-sq-ft-house",
-      "how-much-paint-do-i-need-for-a-small-bathroom"
+      "how-much-paint-do-i-need-for-a-small-bathroom",
+      "how-much-paint-do-i-need-for-a-bathroom"
     ],
     "how-many-tiles-do-i-need-for-100-square-feet": [
       "tile-calculator",
@@ -257,18 +257,18 @@
       "how-many-tiles-do-i-need-for-20-square-feet",
       "how-many-tiles-do-i-need-for-120-square-feet",
       "how-many-tiles-do-i-need-for-a-4x4-room",
-      "how-many-tiles-do-i-need-for-a-room",
-      "how-many-tiles-do-i-need-for-a-12x12-room"
+      "how-many-tiles-do-i-need-for-a-12x12-room",
+      "how-many-tiles-do-i-need-for-a-14x12-room"
     ],
     "how-much-paint-do-i-need-for-a-12x12-room": [
       "paint-calculator",
       "how-much-paint-do-i-need-for-a-bedroom",
       "how-much-paint-do-i-need-for-a-10x10-room",
       "how-much-paint-do-i-need-for-a-front-door",
-      "how-much-paint-do-i-need-for-a-room",
       "how-much-paint-do-i-need-for-a-12x16-shed",
       "how-much-paint-do-i-need-for-1800-sq-ft-house",
-      "how-much-paint-do-i-need-for-a-small-bathroom"
+      "how-much-paint-do-i-need-for-a-small-bathroom",
+      "how-much-paint-do-i-need-for-a-bathroom"
     ],
     "how-many-tiles-do-i-need-for-my-bathroom": [
       "tile-calculator",
@@ -277,8 +277,8 @@
       "how-many-tiles-do-i-need-for-20-square-feet",
       "how-many-tiles-do-i-need-for-120-square-feet",
       "how-many-tiles-do-i-need-for-a-4x4-room",
-      "how-many-tiles-do-i-need-for-a-room",
-      "how-many-tiles-do-i-need-for-a-12x12-room"
+      "how-many-tiles-do-i-need-for-a-12x12-room",
+      "how-many-tiles-do-i-need-for-a-14x12-room"
     ],
     "how-many-bags-of-concrete-do-i-need-for-a-4x4-slab": [
       "concrete-calculator",
@@ -300,15 +300,6 @@
       "how-much-mulch-do-i-need-for-32-square-feet",
       "how-much-mulch-do-i-need-for-a-flower-bed"
     ],
-    "how-much-potting-soil-for-a-raised-bed": [
-      "raised-bed-soil-calculator",
-      "how-much-soil-for-a-4x8-raised-bed",
-      "how-much-soil-for-a-4x2x1-raised-garden-bed",
-      "how-much-soil-do-i-need-for-a-raised-bed",
-      "how-to-calculate-how-much-soil-for-raised-bed",
-      "how-many-tiles-do-i-need-for-a-14x12-room",
-      "how-much-grass-seed-do-i-need-for-1000-square-feet"
-    ],
     "how-much-gravel-do-i-need-for-a-10x12-shed": [
       "gravel-calculator",
       "how-much-gravel-do-i-need-for-a-french-drain",
@@ -326,18 +317,18 @@
       "how-many-tiles-do-i-need-for-my-bathroom",
       "how-many-tiles-do-i-need-for-120-square-feet",
       "how-many-tiles-do-i-need-for-a-4x4-room",
-      "how-many-tiles-do-i-need-for-a-room",
-      "how-many-tiles-do-i-need-for-a-12x12-room"
+      "how-many-tiles-do-i-need-for-a-12x12-room",
+      "how-many-tiles-do-i-need-for-a-14x12-room"
     ],
     "how-much-buffalo-grass-seed-per-square-foot": [
       "grass-seed-calculator",
       "how-much-grass-seed-per-square-foot-overseeding",
       "how-much-grass-seed-per-square-foot-for-new-lawn",
       "how-much-bermuda-grass-seed-per-square-foot",
-      "how-much-grass-seed-do-i-need-per-square-foot",
-      "how-much-bermuda-grass-seed-per-1000-square-feet",
-      "how-many-pounds-of-bermuda-grass-seed-per-square-foot",
-      "how-many-pounds-of-grass-seed-per-square-foot"
+      "how-much-grass-seed-do-i-need-for-1000-square-feet",
+      "how-many-sq-ft-does-a-50-lb-bag-of-grass-seed-cover",
+      "how-much-gravel-do-i-need-for-my-backyard",
+      "how-much-mulch-do-i-need-for-100-square-feet"
     ],
     "how-much-liquid-fertilizer-per-1000-sq-ft": [
       "fertilizer-calculator",
@@ -345,7 +336,9 @@
       "how-much-starter-fertilizer-per-1000-sq-ft",
       "how-many-pounds-of-fertilizer-per-1000-sq-ft",
       "how-much-10-10-10-fertilizer-per-1000-sq-ft",
-      "how-many-pounds-of-starter-fertilizer-per-1000-sq-ft"
+      "how-many-pounds-of-starter-fertilizer-per-1000-sq-ft",
+      "how-much-paint-do-i-need-for-a-small-bedroom",
+      "how-many-tiles-do-i-need-for-a-roof"
     ],
     "how-many-bags-of-concrete-do-i-need-for-a-fence-post": [
       "concrete-calculator",
@@ -360,19 +353,12 @@
     "how-much-soil-for-a-4x2x1-raised-garden-bed": [
       "raised-bed-soil-calculator",
       "how-much-soil-for-a-4x8-raised-bed",
-      "how-much-potting-soil-for-a-raised-bed",
-      "how-much-soil-do-i-need-for-a-raised-bed",
-      "how-to-calculate-how-much-soil-for-raised-bed"
-    ],
-    "how-much-paint-do-i-need-for-a-room": [
+      "mulch-calculator",
+      "gravel-calculator",
       "paint-calculator",
-      "how-much-paint-do-i-need-for-a-bedroom",
-      "how-much-paint-do-i-need-for-a-10x10-room",
-      "how-much-paint-do-i-need-for-a-front-door",
-      "how-much-paint-do-i-need-for-a-12x12-room",
-      "how-much-paint-do-i-need-for-a-12x16-shed",
-      "how-much-paint-do-i-need-for-1800-sq-ft-house",
-      "how-much-paint-do-i-need-for-a-small-bathroom"
+      "tile-calculator",
+      "grass-seed-calculator",
+      "concrete-calculator"
     ],
     "how-many-tiles-do-i-need-for-120-square-feet": [
       "tile-calculator",
@@ -381,18 +367,16 @@
       "how-many-tiles-do-i-need-for-my-bathroom",
       "how-many-tiles-do-i-need-for-20-square-feet",
       "how-many-tiles-do-i-need-for-a-4x4-room",
-      "how-many-tiles-do-i-need-for-a-room",
-      "how-many-tiles-do-i-need-for-a-12x12-room"
+      "how-many-tiles-do-i-need-for-a-12x12-room",
+      "how-many-tiles-do-i-need-for-a-14x12-room"
     ],
     "how-much-bermuda-grass-seed-per-square-foot": [
       "grass-seed-calculator",
       "how-much-grass-seed-per-square-foot-overseeding",
       "how-much-grass-seed-per-square-foot-for-new-lawn",
       "how-much-buffalo-grass-seed-per-square-foot",
-      "how-much-grass-seed-do-i-need-per-square-foot",
-      "how-much-bermuda-grass-seed-per-1000-square-feet",
-      "how-many-pounds-of-bermuda-grass-seed-per-square-foot",
-      "how-many-pounds-of-grass-seed-per-square-foot"
+      "how-much-grass-seed-do-i-need-for-1000-square-feet",
+      "how-many-sq-ft-does-a-50-lb-bag-of-grass-seed-cover"
     ],
     "how-much-nitrogen-fertilizer-per-1000-sq-ft": [
       "fertilizer-calculator",
@@ -415,7 +399,12 @@
     "how-much-topsoil-do-i-need-for-a-new-lawn": [
       "topsoil-calculator",
       "how-much-topsoil-do-i-need-for-a-garden-bed",
-      "how-much-topsoil-do-i-need-for-my-raised-garden-bed"
+      "mulch-calculator",
+      "raised-bed-soil-calculator",
+      "gravel-calculator",
+      "paint-calculator",
+      "tile-calculator",
+      "grass-seed-calculator"
     ],
     "how-much-mulch-do-i-need-for-600-square-feet": [
       "mulch-calculator",
@@ -426,13 +415,6 @@
       "how-much-mulch-do-i-need-for-1000-square-feet",
       "how-much-mulch-do-i-need-for-32-square-feet",
       "how-much-mulch-do-i-need-for-a-flower-bed"
-    ],
-    "how-much-soil-do-i-need-for-a-raised-bed": [
-      "raised-bed-soil-calculator",
-      "how-much-soil-for-a-4x8-raised-bed",
-      "how-much-potting-soil-for-a-raised-bed",
-      "how-much-soil-for-a-4x2x1-raised-garden-bed",
-      "how-to-calculate-how-much-soil-for-raised-bed"
     ],
     "how-much-gravel-do-i-need-for-my-walkway": [
       "gravel-calculator",
@@ -450,9 +432,9 @@
       "how-much-paint-do-i-need-for-a-10x10-room",
       "how-much-paint-do-i-need-for-a-front-door",
       "how-much-paint-do-i-need-for-a-12x12-room",
-      "how-much-paint-do-i-need-for-a-room",
       "how-much-paint-do-i-need-for-1800-sq-ft-house",
-      "how-much-paint-do-i-need-for-a-small-bathroom"
+      "how-much-paint-do-i-need-for-a-small-bathroom",
+      "how-much-paint-do-i-need-for-a-bathroom"
     ],
     "how-much-starter-fertilizer-per-1000-sq-ft": [
       "fertilizer-calculator",
@@ -475,7 +457,12 @@
     "how-much-topsoil-do-i-need-for-a-garden-bed": [
       "topsoil-calculator",
       "how-much-topsoil-do-i-need-for-a-new-lawn",
-      "how-much-topsoil-do-i-need-for-my-raised-garden-bed"
+      "mulch-calculator",
+      "raised-bed-soil-calculator",
+      "gravel-calculator",
+      "paint-calculator",
+      "tile-calculator",
+      "grass-seed-calculator"
     ],
     "how-much-mulch-do-i-need-for-32-square-feet": [
       "mulch-calculator",
@@ -503,19 +490,9 @@
       "how-much-paint-do-i-need-for-a-10x10-room",
       "how-much-paint-do-i-need-for-a-front-door",
       "how-much-paint-do-i-need-for-a-12x12-room",
-      "how-much-paint-do-i-need-for-a-room",
       "how-much-paint-do-i-need-for-a-12x16-shed",
-      "how-much-paint-do-i-need-for-a-small-bathroom"
-    ],
-    "how-much-grass-seed-do-i-need-per-square-foot": [
-      "grass-seed-calculator",
-      "how-much-grass-seed-per-square-foot-overseeding",
-      "how-much-grass-seed-per-square-foot-for-new-lawn",
-      "how-much-buffalo-grass-seed-per-square-foot",
-      "how-much-bermuda-grass-seed-per-square-foot",
-      "how-much-bermuda-grass-seed-per-1000-square-feet",
-      "how-many-pounds-of-bermuda-grass-seed-per-square-foot",
-      "how-many-pounds-of-grass-seed-per-square-foot"
+      "how-much-paint-do-i-need-for-a-small-bathroom",
+      "how-much-paint-do-i-need-for-a-bathroom"
     ],
     "how-many-bags-of-concrete-do-i-need-for-a-8x8-slab": [
       "concrete-calculator",
@@ -526,11 +503,6 @@
       "how-many-bags-of-concrete-do-i-need-for-a-10x12-slab",
       "how-many-bags-of-concrete-do-i-need-for-a-20x20-slab",
       "how-many-bags-of-concrete-do-i-need-for-a-12x12-slab"
-    ],
-    "how-much-topsoil-do-i-need-for-my-raised-garden-bed": [
-      "topsoil-calculator",
-      "how-much-topsoil-do-i-need-for-a-new-lawn",
-      "how-much-topsoil-do-i-need-for-a-garden-bed"
     ],
     "how-much-mulch-do-i-need-for-a-flower-bed": [
       "mulch-calculator",
@@ -559,18 +531,8 @@
       "how-many-tiles-do-i-need-for-my-bathroom",
       "how-many-tiles-do-i-need-for-20-square-feet",
       "how-many-tiles-do-i-need-for-120-square-feet",
-      "how-many-tiles-do-i-need-for-a-room",
-      "how-many-tiles-do-i-need-for-a-12x12-room"
-    ],
-    "how-much-bermuda-grass-seed-per-1000-square-feet": [
-      "grass-seed-calculator",
-      "how-much-grass-seed-per-square-foot-overseeding",
-      "how-much-grass-seed-per-square-foot-for-new-lawn",
-      "how-much-buffalo-grass-seed-per-square-foot",
-      "how-much-bermuda-grass-seed-per-square-foot",
-      "how-much-grass-seed-do-i-need-per-square-foot",
-      "how-many-pounds-of-bermuda-grass-seed-per-square-foot",
-      "how-many-pounds-of-grass-seed-per-square-foot"
+      "how-many-tiles-do-i-need-for-a-12x12-room",
+      "how-many-tiles-do-i-need-for-a-14x12-room"
     ],
     "how-many-pounds-of-fertilizer-per-1000-sq-ft": [
       "fertilizer-calculator",
@@ -589,13 +551,6 @@
       "how-many-bags-of-concrete-do-i-need-for-a-10x12-slab",
       "how-many-bags-of-concrete-do-i-need-for-a-20x20-slab",
       "how-many-bags-of-concrete-do-i-need-for-a-8x8-slab"
-    ],
-    "how-to-calculate-how-much-soil-for-raised-bed": [
-      "raised-bed-soil-calculator",
-      "how-much-soil-for-a-4x8-raised-bed",
-      "how-much-potting-soil-for-a-raised-bed",
-      "how-much-soil-for-a-4x2x1-raised-garden-bed",
-      "how-much-soil-do-i-need-for-a-raised-bed"
     ],
     "how-much-mulch-do-i-need-for-my-yard": [
       "mulch-calculator",
@@ -623,29 +578,9 @@
       "how-much-paint-do-i-need-for-a-10x10-room",
       "how-much-paint-do-i-need-for-a-front-door",
       "how-much-paint-do-i-need-for-a-12x12-room",
-      "how-much-paint-do-i-need-for-a-room",
       "how-much-paint-do-i-need-for-a-12x16-shed",
-      "how-much-paint-do-i-need-for-1800-sq-ft-house"
-    ],
-    "how-many-tiles-do-i-need-for-a-room": [
-      "tile-calculator",
-      "how-many-tiles-do-i-need-for-a-10x10-room",
-      "how-many-tiles-do-i-need-for-100-square-feet",
-      "how-many-tiles-do-i-need-for-my-bathroom",
-      "how-many-tiles-do-i-need-for-20-square-feet",
-      "how-many-tiles-do-i-need-for-120-square-feet",
-      "how-many-tiles-do-i-need-for-a-4x4-room",
-      "how-many-tiles-do-i-need-for-a-12x12-room"
-    ],
-    "how-many-pounds-of-bermuda-grass-seed-per-square-foot": [
-      "grass-seed-calculator",
-      "how-much-grass-seed-per-square-foot-overseeding",
-      "how-much-grass-seed-per-square-foot-for-new-lawn",
-      "how-much-buffalo-grass-seed-per-square-foot",
-      "how-much-bermuda-grass-seed-per-square-foot",
-      "how-much-grass-seed-do-i-need-per-square-foot",
-      "how-much-bermuda-grass-seed-per-1000-square-feet",
-      "how-many-pounds-of-grass-seed-per-square-foot"
+      "how-much-paint-do-i-need-for-1800-sq-ft-house",
+      "how-much-paint-do-i-need-for-a-bathroom"
     ],
     "how-much-mulch-do-i-need-per-square-foot": [
       "mulch-calculator",
@@ -673,9 +608,9 @@
       "how-much-paint-do-i-need-for-a-10x10-room",
       "how-much-paint-do-i-need-for-a-front-door",
       "how-much-paint-do-i-need-for-a-12x12-room",
-      "how-much-paint-do-i-need-for-a-room",
       "how-much-paint-do-i-need-for-a-12x16-shed",
-      "how-much-paint-do-i-need-for-1800-sq-ft-house"
+      "how-much-paint-do-i-need-for-1800-sq-ft-house",
+      "how-much-paint-do-i-need-for-a-small-bathroom"
     ],
     "how-many-tiles-do-i-need-for-a-12x12-room": [
       "tile-calculator",
@@ -685,17 +620,7 @@
       "how-many-tiles-do-i-need-for-20-square-feet",
       "how-many-tiles-do-i-need-for-120-square-feet",
       "how-many-tiles-do-i-need-for-a-4x4-room",
-      "how-many-tiles-do-i-need-for-a-room"
-    ],
-    "how-many-pounds-of-grass-seed-per-square-foot": [
-      "grass-seed-calculator",
-      "how-much-grass-seed-per-square-foot-overseeding",
-      "how-much-grass-seed-per-square-foot-for-new-lawn",
-      "how-much-buffalo-grass-seed-per-square-foot",
-      "how-much-bermuda-grass-seed-per-square-foot",
-      "how-much-grass-seed-do-i-need-per-square-foot",
-      "how-much-bermuda-grass-seed-per-1000-square-feet",
-      "how-many-pounds-of-bermuda-grass-seed-per-square-foot"
+      "how-many-tiles-do-i-need-for-a-14x12-room"
     ],
     "how-much-mulch-do-i-need-for-100-square-feet": [
       "mulch-calculator",
@@ -713,9 +638,9 @@
       "how-much-paint-do-i-need-for-a-10x10-room",
       "how-much-paint-do-i-need-for-a-front-door",
       "how-much-paint-do-i-need-for-a-12x12-room",
-      "how-much-paint-do-i-need-for-a-room",
       "how-much-paint-do-i-need-for-a-12x16-shed",
-      "how-much-paint-do-i-need-for-1800-sq-ft-house"
+      "how-much-paint-do-i-need-for-1800-sq-ft-house",
+      "how-much-paint-do-i-need-for-a-small-bathroom"
     ],
     "how-many-tiles-do-i-need-for-a-14x12-room": [
       "tile-calculator",
@@ -725,7 +650,7 @@
       "how-many-tiles-do-i-need-for-20-square-feet",
       "how-many-tiles-do-i-need-for-120-square-feet",
       "how-many-tiles-do-i-need-for-a-4x4-room",
-      "how-many-tiles-do-i-need-for-a-room"
+      "how-many-tiles-do-i-need-for-a-12x12-room"
     ],
     "how-much-grass-seed-do-i-need-for-1000-square-feet": [
       "grass-seed-calculator",
@@ -733,9 +658,7 @@
       "how-much-grass-seed-per-square-foot-for-new-lawn",
       "how-much-buffalo-grass-seed-per-square-foot",
       "how-much-bermuda-grass-seed-per-square-foot",
-      "how-much-grass-seed-do-i-need-per-square-foot",
-      "how-much-bermuda-grass-seed-per-1000-square-feet",
-      "how-many-pounds-of-bermuda-grass-seed-per-square-foot"
+      "how-many-sq-ft-does-a-50-lb-bag-of-grass-seed-cover"
     ],
     "how-much-10-10-10-fertilizer-per-1000-sq-ft": [
       "fertilizer-calculator",
@@ -753,7 +676,7 @@
       "how-many-tiles-do-i-need-for-20-square-feet",
       "how-many-tiles-do-i-need-for-120-square-feet",
       "how-many-tiles-do-i-need-for-a-4x4-room",
-      "how-many-tiles-do-i-need-for-a-room"
+      "how-many-tiles-do-i-need-for-a-12x12-room"
     ],
     "how-many-sq-ft-does-a-50-lb-bag-of-grass-seed-cover": [
       "grass-seed-calculator",
@@ -761,9 +684,7 @@
       "how-much-grass-seed-per-square-foot-for-new-lawn",
       "how-much-buffalo-grass-seed-per-square-foot",
       "how-much-bermuda-grass-seed-per-square-foot",
-      "how-much-grass-seed-do-i-need-per-square-foot",
-      "how-much-bermuda-grass-seed-per-1000-square-feet",
-      "how-many-pounds-of-bermuda-grass-seed-per-square-foot"
+      "how-much-grass-seed-do-i-need-for-1000-square-feet"
     ],
     "how-many-pounds-of-starter-fertilizer-per-1000-sq-ft": [
       "fertilizer-calculator",

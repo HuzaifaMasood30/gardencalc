@@ -746,12 +746,33 @@ def fix_article(art: dict) -> list[str]:
     return changes
 
 
+def clip_meta_description(art: dict) -> bool:
+    """Re-clip an existing meta description so it never ends mid-phrase.
+
+    Older records were truncated by an earlier cut that could end on a function
+    word ("...13 bags of."). The generator's ``_clip_meta`` is the canonical rule,
+    so repair is just re-running it over the stored value.
+    """
+    import generate  # local import: generate imports llm, which is heavy
+
+    current = (art.get("meta_description") or "").strip()
+    if not current:
+        return False
+    fixed = generate._clip_meta(current)
+    if fixed != art.get("meta_description"):
+        art["meta_description"] = fixed
+        return True
+    return False
+
+
 def run(arts: list[dict]) -> dict:
     report = {}
     for art in arts:
         if art.get("status") not in ("published", "approved"):
             continue
         changes = fix_article(art)
+        if clip_meta_description(art):
+            changes.append("meta description re-clipped")
         if changes:
             report[art["slug"]] = changes
     return report
