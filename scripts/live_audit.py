@@ -166,13 +166,11 @@ def audit(base: str) -> dict:
     else:
         record("sitemap reachable", False, f"HTTP {st}")
 
-    # robots
+    # robots: a project-site robots.txt is not authoritative (only the host root
+    # is), so we only require it to exist, be permissive and not block the site.
     st, robots, _ = fetch(base + "robots.txt")
-    rec = re.search(r"Sitemap:\s*(\S+)", robots)
-    record("robots.txt valid and points at sitemap",
-           st == 200 and rec is not None and rec.group(1).endswith("/sitemap.xml")
-           and rec.group(1).startswith(("http://", "https://")),
-           f"HTTP {st}; {rec.group(1) if rec else 'no sitemap line'}")
+    ok = st == 200 and "User-agent" in robots and "Disallow: /" not in robots
+    record("robots.txt present and permissive (not a discovery method)", ok, f"HTTP {st}")
 
     # rss
     st, rss, _ = fetch(base + "rss.xml")

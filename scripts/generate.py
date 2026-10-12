@@ -129,9 +129,44 @@ def _meta_description(title: str, kw: str, calc_title: str, body: str = "") -> s
     if not answer:
         answer = (f"How much {kw} you need, with the formula, a worked example and "
                   f"common mistakes.")
-    if len(answer) > 158:
-        answer = answer[:155].rsplit(" ", 1)[0].rstrip(",;:") + "."
-    return answer
+    return _clip_meta(answer)
+
+
+# Words a search snippet should never end on: a description cut after one of these
+# reads as truncated filler ("...13 bags of.").
+_DANGLING = {"a", "an", "the", "of", "to", "for", "and", "or", "by", "with", "in",
+             "on", "at", "as", "is", "are", "was", "were", "be", "been", "this",
+             "that", "these", "those", "your", "you", "it", "its", "from", "into",
+             "over", "under", "than", "then", "about", "atop"}
+
+
+def _clip_meta(text: str, limit: int = 158) -> str:
+    """Trim a meta description to a length Google will not truncate.
+
+    Cuts at a sentence boundary when one fits, otherwise at a word boundary, and
+    never leaves a dangling function word or a half word at the end.
+    """
+    text = text.strip()
+    if len(text) > limit:
+        sentences = _re.split(r"(?<=[.!?])\s+", text)
+        kept = ""
+        for sent in sentences:
+            candidate = (kept + " " + sent).strip()
+            if len(candidate) > limit:
+                break
+            kept = candidate
+        if kept and len(kept) >= 100:
+            text = kept
+        else:
+            text = text[: limit - 1].rsplit(" ", 1)[0]
+    # Never leave a dangling function word: a snippet cut after "...bags of."
+    # reads as truncated filler and depresses clicks.
+    core = text.rstrip(".!? ").rstrip(" ,;:—-")
+    while core and core.rsplit(" ", 1)[-1].lower() in _DANGLING:
+        core = core.rsplit(" ", 1)[0].rstrip(" ,;:—-")
+    if core != text.rstrip(".!? ").rstrip(" ,;:—-"):
+        return core + "."
+    return text
 
 
 SMALL_WORDS = {"a", "an", "and", "as", "at", "but", "by", "for", "in", "of",

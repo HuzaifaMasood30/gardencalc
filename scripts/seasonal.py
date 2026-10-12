@@ -117,7 +117,11 @@ SEASONAL: list[dict] = [
         "calculator": "grass-seed-calculator",
         "chart": "grass-seed-rate-chart",
         "planner": "new-lawn-planner",
-        "updated": "2026-03-01",
+        "updated": "2026-10-06",
+        "season_months": [8, 9, 10],
+        "now": ("In October the window is closing in the north and still open in the "
+                "transition zone and south. Get seed down now if your soil is still above "
+                "50 F; in colder areas wait and dormant-seed instead."),
         "intro": ("Overseeding thickens a thin lawn without starting over, but it only works "
                   "if the seed has warm soil and enough time to establish before winter. "
                   "Choosing the window is the whole job."),
@@ -132,6 +136,17 @@ SEASONAL: list[dict] = [
             ],
             "note": "Rates are per 1,000 sq ft and depend on the seed label and species. Match the bag rate to your grass type and seed size.",
         },
+        "regional": {
+            "caption": "Overseeding window by region (cool-season grass)",
+            "head": ["Region", "Best window", "Target soil temp"],
+            "rows": [
+                ["Northern states (zones 3-6)", "Mid-August to mid-September", "50-65 F"],
+                ["Transition zone", "Mid-August to mid-October", "50-65 F"],
+                ["Southern cool-season / ryegrass over Bermuda", "October to early December", "50-65 F"],
+                ["Short-season, far north", "Early to mid-August", "50-65 F"],
+            ],
+            "note": "Aim to finish four to six weeks before the first expected frost so seedlings establish before winter. The soil-temperature reading matters more than the calendar date.",
+        },
         "sections": [
             {"h2": "The short answer",
              "paras": [
@@ -141,6 +156,22 @@ SEASONAL: list[dict] = [
                  "September.",
                  "In the transition and warm-season zones, or where summer heat lingers, "
                  "shift that window later so the seedlings miss the worst heat.",
+             ]},
+            {"h2": "Overseeding in October: what to do now",
+             "paras": [
+                 "By October the calendar has narrowed. In the far north and other "
+                 "short-season areas the safe autumn window has usually closed, because "
+                 "seedlings that germinate now will not have the six to eight weeks of "
+                 "growth they need before a hard frost.",
+                 "In the transition zone and the southern cool-season belt, October is still "
+                 "prime time. Tall fescue and ryegrass establish quickly in cooling soil, "
+                 "and a lawn seeded now has the whole mild winter to root before summer "
+                 "heat returns.",
+                 "The test is the soil, not the month. Seed while soil at two inches is "
+                 "still 50 F or warmer; below that, germination stalls and seed sits "
+                 "vulnerable to rot. If you have missed the window, dormant-seed instead: "
+                 "spread the seed after the soil is too cold to germinate and let winter "
+                 "and the spring thaw work it into the surface.",
              ]},
             {"h2": "Why autumn beats spring",
              "paras": [
@@ -183,6 +214,11 @@ SEASONAL: list[dict] = [
              "For cool-season grass, late August to mid September suits most temperate "
              "regions: the soil is warm, the air is cooling and there is time to establish "
              "before frost. Adjust earlier in short-season climates and later in hot ones."),
+            ("Can I overseed in October?",
+             "Yes in the transition zone and the South, where soil stays above 50 F into "
+             "autumn and seedlings have a mild winter to root. In the far north the safe "
+             "window has usually closed by October; if you missed it, dormant-seed instead "
+             "and let the spring thaw germinate the seed."),
             ("Can I overseed in spring?",
              "You can in mild climates, but seedlings then face summer heat and weed "
              "competition. If spring is your only window, seed early and water carefully "
@@ -289,7 +325,11 @@ SEASONAL: list[dict] = [
         "cluster": "fertilizer",
         "calculator": "fertilizer-calculator",
         "chart": "fertilizer-rate-chart",
-        "updated": "2026-03-01",
+        "updated": "2026-10-06",
+        "season_months": [8, 9, 10, 11],
+        "now": ("October is the month for the second fall feed in the north and the main "
+                "feed in the transition zone and south. Apply about 1 lb of nitrogen per "
+                "1,000 sq ft while the grass is still growing."),
         "intro": ("Autumn is the most valuable feeding of the year for a cool-season lawn. "
                   "Roots are growing strongly, top growth is slowing, and the nutrients go "
                   "into storage rather than into leaves you then have to mow."),
@@ -303,6 +343,17 @@ SEASONAL: list[dict] = [
             ],
             "note": "Product = 100 divided by the first number in the N-P-K ratio. Divide again by the bag size to count bags.",
         },
+        "regional": {
+            "caption": "Fall feeding windows by region (cool-season grass)",
+            "head": ["Region", "First feed", "Second / winterizer feed"],
+            "rows": [
+                ["Northern Illinois (zones 4-5)", "August", "Late October to early November"],
+                ["Central Illinois / mid-Atlantic", "Mid-August to mid-September", "Late October to November"],
+                ["Southern Illinois / transition zone", "September", "Late November"],
+                ["Kansas / Missouri", "Early September", "Through early November"],
+            ],
+            "note": "Feed while the grass is still green and growing and the ground is not frozen. In the far north shift both windows earlier; farther south shift them later.",
+        },
         "sections": [
             {"h2": "The short answer",
              "paras": [
@@ -311,6 +362,21 @@ SEASONAL: list[dict] = [
                  "roughly late October to mid November.",
                  "Use about 1 lb of actual nitrogen per 1,000 sq ft per application. Stop "
                  "when the ground is frozen or the grass has stopped growing.",
+             ]},
+            {"h2": "Fertilizing in October: which feed is due",
+             "paras": [
+                 "October is where the two-feed autumn program separates. In the north you "
+                 "are applying the second, late-season feed, sometimes sold as a winterizer, "
+                 "as growth slows but before the ground freezes. The same rate applies: about "
+                 "1 lb of nitrogen per 1,000 sq ft.",
+                 "In the transition zone and the South, October is often the main autumn "
+                 "feed, or the start of the two-feed window that runs into November and "
+                 "early December. Warm-season lawns in the far south may need little or "
+                 "nothing if they were fed well through summer.",
+                 "Timing cues beat dates. Apply while the lawn is still green and growing, "
+                 "and finish before the ground is frozen, because roots cannot take up "
+                 "nutrients from frozen soil and the risk of runoff rises sharply. A useful "
+                 "marker is about one week after the final mowing of the season.",
              ]},
             {"h2": "Why autumn feeding matters most",
              "paras": [
@@ -362,6 +428,11 @@ SEASONAL: list[dict] = [
             ("Should I fertilize in spring too?",
              "A light spring feed can help, but autumn is the priority for cool-season "
              "grass. Heavy spring nitrogen pushes leaf growth and weakens roots."),
+            ("Should I fertilize my lawn in October?",
+             "In the north, October is the late-season winterizer feed. In the transition "
+             "zone and South it is often the main autumn feed. Use about 1 lb of nitrogen "
+             "per 1,000 sq ft and apply while the grass is still green and the ground is not "
+             "frozen."),
         ],
     },
 ]
@@ -378,6 +449,9 @@ def page(item: dict, base: str, site: dict) -> dict:
         "intro": item["intro"],
         "sections": item["sections"],
         "table": item.get("table"),
+        "regional": item.get("regional"),
+        "now": item.get("now"),
+        "season_months": item.get("season_months", []),
         "faqs": [{"q": q, "a": a} for q, a in item["faqs"]],
         "calculator": f"{base}/{calc}/" if calc else "",
         "chart": f"{base}/{item['chart']}/" if item.get("chart") else "",

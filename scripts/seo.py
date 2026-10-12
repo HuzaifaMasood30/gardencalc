@@ -16,19 +16,25 @@ def _abs(site: dict, path: str) -> str:
 def article_schema(art: dict, site: dict, figure: str | None = None) -> dict:
     url = _abs(site, f"/{art['slug']}/")
     img = figure or _abs(site, f"/static/img/og/{art['slug']}.png")
+    author_url = _abs(site, site.get("author_url", "/about/"))
     return {
         "@context": "https://schema.org",
         "@type": "Article",
+        "@id": url + "#article",
         "headline": art["title"][:110],
         "description": art.get("meta_description", ""),
         "datePublished": art.get("created"),
         "dateModified": art.get("updated"),
         "author": {"@type": "Organization", "name": site.get("author", site["name"]),
-                   "url": _abs(site, site.get("author_url", "/about/"))},
+                   "url": author_url, "sameAs": [author_url]},
         "publisher": {"@type": "Organization", "name": site["name"],
-                      "logo": {"@type": "ImageObject", "url": _abs(site, site.get("org_logo", ""))}},
+                      "url": _abs(site, "/"),
+                      "logo": {"@type": "ImageObject", "url": _abs(site, site.get("org_logo", "")),
+                               "width": 336, "height": 336}},
         "mainEntityOfPage": {"@type": "WebPage", "@id": url},
         "image": {"@type": "ImageObject", "url": img, "width": 1200, "height": 630},
+        "isAccessibleForFree": True,
+        "inLanguage": site.get("language", "en"),
         "articleSection": art.get("cluster", ""),
         "keywords": ", ".join([art.get("primary_keyword", "")] + art.get("secondary_keywords", [])),
     }
@@ -142,12 +148,14 @@ def webapp_schema(title: str, url: str, description: str, site: dict) -> dict:
     return {
         "@context": "https://schema.org",
         "@type": "WebApplication",
+        "@id": url + "#app",
         "name": title,
         "url": url,
         "description": description,
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Any",
         "browserRequirements": "Requires JavaScript",
+        "isAccessibleForFree": True,
         "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
         "isPartOf": {"@type": "WebSite", "name": site["name"], "url": _abs(site, "/")},
     }
@@ -186,6 +194,20 @@ def all_schema(art: dict, site: dict, figure: str | None = None) -> list[dict]:
     if faq:
         out.append(faq)
     return out
+
+
+def _rfc822(value) -> str | None:
+    """ISO date/datetime -> RFC-822 date for RSS <pubDate>, or None."""
+    if not value:
+        return None
+    m = re.match(r"(\d{4})-(\d{2})-(\d{2})", str(value))
+    if not m:
+        return None
+    try:
+        d = dt.date(int(m.group(1)), int(m.group(2)), int(m.group(3)))
+    except ValueError:
+        return None
+    return d.strftime("%a, %d %b %Y 00:00:00 +0000")
 
 
 def _valid_lastmod(value) -> str | None:
@@ -251,8 +273,15 @@ def sitemap_xml(urls: list[dict], site: dict) -> str:
     return "\n".join(lines) + "\n"
 
 
-def robots_txt(site: dict, sitemap_url: str) -> str:
-    return (f"User-agent: *\nAllow: /\n\nSitemap: {sitemap_url}\n")
+def robots_txt(site: dict, sitemap_url: str = "") -> str:
+    """A harmless, permissive robots.txt.
+
+    Crawlers only honor robots.txt served from the host root. This project site
+    lives under /gardencalc/, so a Sitemap: line here is never read and cannot be
+    relied on for discovery. The file is kept only to say "crawl everything";
+    sitemap discovery happens through Search Console and the RSS feed instead.
+    """
+    return "User-agent: *\nAllow: /\n"
 
 
 def rss_xml(arts: list[dict], site: dict, extra: list[dict] | None = None) -> str:
@@ -269,11 +298,14 @@ def rss_xml(arts: list[dict], site: dict, extra: list[dict] | None = None) -> st
             f"    <description>{html.escape(x.get('description', ''))}</description>\n"
             f"  </item>")
     for a in arts[:50]:
+        pub = _rfc822(a.get("updated") or a.get("published"))
+        pub_line = f"    <pubDate>{pub}</pubDate>\n" if pub else ""
         items.append(
             f"  <item>\n"
             f"    <title>{html.escape(a['title'])}</title>\n"
             f"    <link>{base}/{a['slug']}/</link>\n"
             f"    <guid>{base}/{a['slug']}/</guid>\n"
+            f"{pub_line}"
             f"    <description>{html.escape(a.get('meta_description',''))}</description>\n"
             f"  </item>")
     return ('<?xml version="1.0" encoding="UTF-8"?>\n'

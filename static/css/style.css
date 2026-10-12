@@ -130,8 +130,11 @@ hr{border:0;border-top:1px solid var(--line);margin:2em 0}
   border-radius:10px;padding:12px 20px;font-size:.96rem;border:1px solid transparent}
 .btn-primary{background:#fff;color:var(--brand)}
 .btn-primary:hover{background:#eafaf0;color:var(--brand)}
-.btn-ghost{background:rgba(255,255,255,.1);color:#eafaf0;border-color:rgba(255,255,255,.4)}
-.btn-ghost:hover{background:rgba(255,255,255,.2);color:#fff}
+.btn-ghost{background:var(--surface);color:var(--brand);border-color:var(--line-strong)}
+.btn-ghost:hover{background:var(--brand-tint);color:var(--brand);border-color:var(--brand-2)}
+/* On the dark hero the ghost button needs light-on-dark instead. */
+.hero .btn-ghost{background:rgba(255,255,255,.12);color:#eafaf0;border-color:rgba(255,255,255,.45)}
+.hero .btn-ghost:hover{background:rgba(255,255,255,.24);color:#fff}
 .hero-stats{display:flex;gap:26px;margin-top:26px;flex-wrap:wrap}
 .hero-stats b{display:block;font-size:1.5rem;color:#fff;line-height:1.1}
 .hero-stats span{font-size:.83rem;color:#dbf3e4}
@@ -315,6 +318,8 @@ hr{border:0;border-top:1px solid var(--line);margin:2em 0}
 .answer-first{background:var(--brand-tint);border-left:4px solid var(--brand,#14532d);
   border-radius:10px;padding:14px 18px;margin:0 0 22px;font-size:1.02rem}
 .answer-first p{margin:0}
+.season-now{background:var(--brand-tint-2,#dcfce7);border-radius:10px;padding:12px 16px;
+  margin:0 0 22px;font-size:.95rem;color:var(--brand-dark,#14532d)}
 .table-scroll{overflow-x:auto;margin:18px 0;-webkit-overflow-scrolling:touch}
 table{border-collapse:collapse;width:100%;font-size:.9rem}
 th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;white-space:nowrap}

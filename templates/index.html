@@ -24,6 +24,22 @@
 </section>
 
 <div class="wrap">
+{% if featured_seasonal %}
+<section class="section" aria-labelledby="now-heading" id="season-now">
+  <div class="section-head"><h2 id="now-heading">In season right now</h2>
+    <a href="{{ base_url }}/guides/">All seasonal guides →</a></div>
+  <div class="card-grid">
+    {% for s in featured_seasonal %}
+    <a class="card" href="{{ base_url }}/{{ s.slug }}/">
+      <span class="card-tag">{{ s.cluster_name }}</span>
+      <h3>{{ s.title }}</h3>
+      <p>{{ s.now }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
 <section class="section" id="calculators" aria-labelledby="tools-heading">
   <div class="section-head">
     <h2 id="tools-heading">Calculators by project</h2>

@@ -59,8 +59,11 @@
     },
     fertilizer: function (v) {
       var bag = v.bag || 40;
-      var lb = v.area / 1000 * v.rate;
-      return [["Pounds", r(lb, 2)], ["Bags", Math.ceil(lb / bag)]];
+      var share = (v.nitrogen || 20) / 100;
+      var n = v.area / 1000 * v.rate;
+      var lb = n / share;
+      return [["Pounds of nitrogen", r(n, 2)], ["Pounds of product", r(lb, 2)],
+              ["Bags", Math.ceil(lb / bag)]];
     }
   };
 
@@ -171,9 +174,12 @@
         " lb. 3 lb bags = " + r(lb, 1) + " / 3 = " + Math.ceil(lb / 3) + ".";
     },
     fertilizer: function (v) {
-      var lb = v.area / 1000 * v.rate;
-      return "Pounds of nitrogen = " + v.area + " / 1,000 x " + v.rate + " = " + r(lb, 1) +
-        " lb N. Pounds of product = lb N / (N share of the bag). Bags = pounds of product / " + v.bag + " lb.";
+      var share = (v.nitrogen || 20) / 100;
+      var n = v.area / 1000 * v.rate, lb = n / share;
+      return "Pounds of nitrogen = " + v.area + " / 1,000 x " + v.rate + " = " + r(n, 2) +
+        " lb N. Product needed = " + r(n, 2) + " / " + share + " (the N share of the bag) = " +
+        r(lb, 2) + " lb of product. Bags = " + r(lb, 2) + " / " + v.bag + " lb = " +
+        Math.ceil(lb / v.bag) + ".";
     },
     topsoil: function (v) {
       var sf = v.length * v.width, df = v.depth / 12, cf = sf * df;

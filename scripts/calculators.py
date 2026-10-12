@@ -118,12 +118,22 @@ def topsoil(length_ft: float, width_ft: float, depth_in: float) -> dict:
     }
 
 
-def fertilizer(area_sqft: float, rate_per_1000: float, bag_lb: float) -> dict:
-    pounds = area_sqft / 1000.0 * rate_per_1000
+def fertilizer(area_sqft: float, rate_per_1000: float, bag_lb: float,
+               nitrogen_pct: float = 20.0) -> dict:
+    """Product needed to deliver a target nitrogen rate.
+
+    ``rate_per_1000`` is pounds of *actual nitrogen* per 1,000 sq ft. The product
+    weight is that nitrogen divided by the bag's nitrogen fraction, so a 20-0-0
+    bag needs twice the weight of a 10-10-10 bag for the same nitrogen.
+    """
+    pounds_nitrogen = area_sqft / 1000.0 * rate_per_1000
+    share = (nitrogen_pct or 20.0) / 100.0
+    pounds_product = pounds_nitrogen / share
     bag_lb = bag_lb or 40.0
     return {
-        "pounds": _round(pounds, 2),
-        "bags": math.ceil(pounds / bag_lb),
+        "pounds_nitrogen": _round(pounds_nitrogen, 2),
+        "pounds": _round(pounds_product, 2),
+        "bags": math.ceil(pounds_product / bag_lb),
     }
 
 
@@ -151,7 +161,8 @@ PARAM_MAP = {
     "grass_seed": {"area": "area_sqft", "method": "method"},
     "concrete": {"length": "length_ft", "width": "width_ft", "thickness": "thickness_in"},
     "topsoil": {"length": "length_ft", "width": "width_ft", "depth": "depth_in"},
-    "fertilizer": {"area": "area_sqft", "rate": "rate_per_1000", "bag": "bag_lb"},
+    "fertilizer": {"area": "area_sqft", "rate": "rate_per_1000", "bag": "bag_lb",
+                   "nitrogen": "nitrogen_pct"},
 }
 
 

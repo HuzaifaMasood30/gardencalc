@@ -1,12 +1,16 @@
 """Pipeline tests. Run with: python -m pytest scripts/tests.py -q  (or python scripts/tests.py)"""
 from __future__ import annotations
 
+import datetime as dt
+import re
+import subprocess
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import calculators
+import article_fix
 import keywords
 import mdrender
 import merges
@@ -14,7 +18,8 @@ import promotion
 import quality
 import seasonal
 import seo as seolib
-from common import site_config
+import sources as sources_lib
+from common import ROOT, site_config
 
 
 def test_render_adds_heading_ids_and_toc():
@@ -90,6 +95,14 @@ def test_calculator_results():
     assert abs(r["tons"] - 2.59) < 0.01, r
     r = calculators.compute("concrete", {"length": 10, "width": 10, "thickness": 4})
     assert r["bags_60lb"] == 75 and r["bags_80lb"] == 56, r
+    # Fertilizer: pounds are the *product* weight, derived from the nitrogen share.
+    r = calculators.compute("fertilizer", {"area": 5000, "rate": 1, "bag": 40, "nitrogen": 20})
+    assert r == {"pounds_nitrogen": 5.0, "pounds": 25.0, "bags": 1}, r
+    r = calculators.compute("fertilizer", {"area": 5000, "rate": 1, "bag": 40, "nitrogen": 10})
+    assert r["pounds"] == 50.0 and r["bags"] == 2, r
+    # A 1,000 sq ft lawn at 1 lb N with a 20-0-0 bag needs 5 lb of product.
+    r = calculators.compute("fertilizer", {"area": 1000, "rate": 1, "bag": 40, "nitrogen": 20})
+    assert r["pounds"] == 5.0 and r["pounds_nitrogen"] == 1.0, r
 
 
 def test_article_fix_is_idempotent():
@@ -331,6 +344,32 @@ def test_seasonal_pages_have_reference_tables():
         assert item["table"]["head"] and len(item["table"]["rows"]) >= 3
 
 
+def test_robots_is_harmless_and_has_no_sitemap_reliance():
+    """A project-site robots.txt is never read at the host root, so it must not
+    advertise a Sitemap: line; it only needs to permit crawling."""
+    txt = seolib.robots_txt({"base_url": "https://example.github.io/repo"})
+    assert "User-agent" in txt and "Disallow" not in txt
+    assert "Sitemap:" not in txt
+
+
+def test_rss_items_have_pubdates():
+    """RSS must be a valid fallback sitemap: real items with RFC-822 pubDates."""
+    arts = [{"title": "T", "slug": "t", "meta_description": "d", "updated": "2026-10-08"}]
+    xml = seolib.rss_xml(arts, {"name": "GardenCalc", "tagline": "x",
+                             "base_url": "https://example.github.io/repo"})
+    assert "<pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>" in xml
+
+
+def test_sitemap_lastmod_is_git_derived():
+    """build._stamp must return the file's real git commit date, not today."""
+    import build
+    stamp = build._stamp(ROOT / "scripts" / "seo.py")
+    assert re.fullmatch(r"\d{4}-\d{2}-\d{2}", stamp)
+    out = subprocess.run(["git", "log", "-1", "--format=%cs", "--", "scripts/seo.py"],
+                         cwd=ROOT, capture_output=True, text=True)
+    assert stamp == out.stdout.strip()
+
+
 def test_js_and_python_calculators_agree():
     """The client-side calculator must produce the same numbers as the Python engine."""
     import json
@@ -352,7 +391,7 @@ def test_js_and_python_calculators_agree():
         ["grass_seed", {"area": 5000, "method": 1}],
         ["concrete", {"length": 10, "width": 10, "thickness": 4}],
         ["topsoil", {"length": 20, "width": 10, "depth": 2}],
-        ["fertilizer", {"area": 5000, "rate": 1, "bag": 40}],
+        ["fertilizer", {"area": 5000, "rate": 1, "bag": 40, "nitrogen": 20}],
     ]
     proc = subprocess.run(
         [node, str(root / "scripts/calc_parity.js"), str(root / "static/js/main.js"),
@@ -368,6 +407,7 @@ def test_js_and_python_calculators_agree():
         "pounds": "Pounds", "bags_3lb": "3 lb bags", "gallons": "Gallons",
         "bags_60lb": "60 lb bags", "bags_80lb": "80 lb bags",
         "bags_40lb": "40 lb bags", "bags": "Bags",
+        "pounds_nitrogen": "Pounds of nitrogen",
     }
     for kind, inputs in cases:
         py = calculators.compute(kind, inputs)
@@ -377,6 +417,234 @@ def test_js_and_python_calculators_agree():
             if label and label in rows:
                 assert abs(float(rows[label]) - float(py_val)) <= 1.0, \
                     (kind, py_key, rows[label], py_val)
+
+
+def test_homepage_quick_answers_link_to_real_calculators():
+    """Every quick-answer row must point at a pillar page that exists.
+
+    The soil row used to build "<calc>-calculator" and fall back to /calculators/
+    because the real slug is raised-bed-soil-calculator.
+    """
+    import json
+    from pathlib import Path
+    root = Path(__file__).resolve().parent.parent
+    home = (root / "site" / "index.html").read_text(encoding="utf-8")
+    qa = re.search(r'<ul class="qa-list">(.*?)</ul>', home, re.S)
+    assert qa, "no quick-answers list on the homepage"
+    links = re.findall(r'<a href="([^"]+)">', qa.group(1))
+    assert len(links) >= 6, links
+    for href in links:
+        path = href.split("/gardencalc", 1)[-1].strip("/")
+        assert path, f"quick answer falls back to the calculators index: {href}"
+        assert (root / "site" / path / "index.html").exists(), f"dead quick-answer link: {href}"
+
+
+def test_homepage_lists_every_pillar():
+    import json
+    from pathlib import Path
+    root = Path(__file__).resolve().parent.parent
+    arts = json.loads((root / "data" / "articles.json").read_text(encoding="utf-8"))
+    pillars = [a["slug"] for a in arts if a.get("is_pillar")
+               and a.get("status") in ("published", "approved")]
+    home = (root / "site" / "index.html").read_text(encoding="utf-8")
+    for slug in pillars:
+        assert f"/{slug}/" in home, f"pillar {slug} is not linked from the homepage"
+
+
+def test_no_meta_description_ends_on_a_dangling_word():
+    import json
+    from pathlib import Path
+    root = Path(__file__).resolve().parent.parent
+    arts = json.loads((root / "data" / "articles.json").read_text(encoding="utf-8"))
+    dangling = {"a", "an", "the", "of", "to", "for", "and", "or", "by", "with",
+                "in", "on", "at", "as", "is", "are", "was", "were", "be", "been",
+                "this", "that", "these", "those", "your", "you", "it", "its",
+                "from", "into", "over", "under", "than", "then", "about"}
+    bad = []
+    for a in arts:
+        md = (a.get("meta_description") or "").strip()
+        words = re.findall(r"[A-Za-z0-9'%]+", md)
+        if md and len(md) <= 158 and words and words[-1].lower() in dangling:
+            bad.append(a["slug"])
+    assert not bad, f"meta descriptions end mid-phrase: {bad}"
+
+
+def test_every_calculator_article_has_a_worked_example_and_answer():
+    """Task 4: a kept calculator page must show a labelled walk-through and an
+    answer-first sentence, or it cannot win a featured snippet."""
+    import json
+    from pathlib import Path
+    root = Path(__file__).resolve().parent.parent
+    arts = json.loads((root / "data" / "articles.json").read_text(encoding="utf-8"))
+    missing = []
+    for a in arts:
+        if a.get("status") not in ("published", "approved"):
+            continue
+        if a["slug"] in merges.MERGES or a["slug"] in article_fix.SPECIAL_SLUGS:
+            continue
+        if not a.get("calculator"):
+            continue
+        if not (a.get("answer") or "").strip():
+            missing.append(f"{a['slug']} (answer)")
+        if not article_fix._has_worked_block(a.get("body_markdown", "")):
+            missing.append(f"{a['slug']} (worked example)")
+    assert not missing, f"pages missing snippet blocks: {missing}"
+
+
+def test_calculator_pages_cite_their_sources():
+    """Task 5: every calculator page links at least one real source, and the about
+    page exposes the methodology the byline points at."""
+    import json
+    from pathlib import Path
+    root = Path(__file__).resolve().parent.parent
+    arts = json.loads((root / "data" / "articles.json").read_text(encoding="utf-8"))
+    keys = {a.get("calculator") for a in arts if a.get("calculator")}
+    for key in keys:
+        assert sources_lib.for_key(key), f"no sources mapped for calculator {key}"
+    for slug in ("mulch-calculator", "paint-calculator", "concrete-calculator"):
+        html = (root / "site" / slug / "index.html").read_text(encoding="utf-8")
+        assert 'Sources &amp; method' in html, f"{slug} has no sources section"
+        assert "rel=\"nofollow noopener\" target=\"_blank\"" in html, f"{slug} sources are not linked"
+    about = (root / "site" / "about" / "index.html").read_text(encoding="utf-8")
+    assert 'id="methodology"' in about, "about page has no #methodology anchor"
+
+
+def test_article_schema_is_well_formed():
+    """Task 6: JSON-LD must carry stable @ids, real dates and matching FAQ text."""
+    import json
+    from pathlib import Path
+    root = Path(__file__).resolve().parent.parent
+    arts = json.loads((root / "data" / "articles.json").read_text(encoding="utf-8"))
+    for slug in ("mulch-calculator", "paint-calculator",
+                 "how-many-tiles-do-i-need-for-a-10x10-room"):
+        html = (root / "site" / slug / "index.html").read_text(encoding="utf-8")
+        blocks = [json.loads(b) for b in
+                  re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, re.S)]
+        by_type = {b.get("@type"): b for b in blocks}
+        art = by_type["Article"]
+        assert art["@id"].endswith("#article"), art["@id"]
+        assert art["author"]["url"].endswith("/about/"), art["author"]
+        assert art["publisher"]["logo"]["width"] and art["publisher"]["url"], art["publisher"]
+        assert art["datePublished"] and art["dateModified"], "article dates missing"
+        assert art["dateModified"] >= art["datePublished"], f"{slug} modified before published"
+        assert art["isAccessibleForFree"] is True
+        faq = by_type.get("FAQPage")
+        if faq:
+            for q in faq["mainEntity"]:
+                assert q["name"][:25] in html, f"FAQ not visible on page: {q['name']}"
+        webapp = by_type.get("WebApplication")
+        if webapp:
+            assert webapp["@id"].endswith("#app")
+            assert webapp["offers"]["price"] == "0"
+    arts_by_slug = {a["slug"]: a for a in arts}
+    assert arts_by_slug["mulch-calculator"]["updated"] >= arts_by_slug["mulch-calculator"]["created"]
+
+
+def test_every_published_page_has_inbound_links_and_shallow_depth():
+    """Task 7: no page is more than 3 clicks from the homepage, and each published
+    page has at least two inbound links in the rendered site (not just the link graph,
+    which the per-article cap can hold at one)."""
+    import json
+    from collections import Counter, deque
+    from pathlib import Path
+    root = Path(__file__).resolve().parent.parent
+    site = root / "site"
+    arts = json.loads((root / "data" / "articles.json").read_text(encoding="utf-8"))
+    published = {a["slug"] for a in arts
+                 if a.get("status") in ("published", "approved") and a["slug"] not in merges.MERGES}
+
+    def outbound(slug: str) -> set[str]:
+        html = (site / slug / "index.html").read_text(encoding="utf-8")
+        return {m for m in re.findall(r'/gardencalc/([a-z0-9-]+)/', html) if m != slug}
+
+    depth: dict[str, int] = {}
+    queue = deque([""])
+    while queue:
+        cur = queue.popleft()
+        page = site / ("index.html" if cur == "" else f"{cur}/index.html")
+        if not page.exists():
+            continue
+        for nxt in outbound(cur) if cur else {
+                m for m in re.findall(r'/gardencalc/([a-z0-9-]+)/',
+                                      page.read_text(encoding="utf-8"))}:
+            if (site / nxt / "index.html").exists() and nxt not in depth:
+                depth[nxt] = depth.get(cur, 0) + 1
+                queue.append(nxt)
+    unreachable = sorted(s for s in published if s not in depth)
+    assert not unreachable, f"pages unreachable from the homepage: {unreachable}"
+    deep = sorted((s, depth[s]) for s in published if depth[s] > 3)
+    assert not deep, f"pages deeper than 3 clicks: {deep}"
+
+    inbound = Counter()
+    for page in site.rglob("index.html"):
+        source = page.relative_to(site).parent.as_posix()
+        html = page.read_text(encoding="utf-8")
+        for target in set(re.findall(r'/gardencalc/([a-z0-9-]+)/', html)):
+            if target in published and target != source:
+                inbound[target] += 1
+    weak = sorted(s for s in published if inbound[s] < 2)
+    assert not weak, f"pages with fewer than two inbound links: {weak}"
+
+
+def test_autumn_guides_carry_regional_and_current_timing():
+    """Task 8: the two autumn guides must answer the regional and 'this month'
+    questions a searcher asks, and be surfaced on the homepage while in season."""
+    import datetime as dt
+    from pathlib import Path
+    root = Path(__file__).resolve().parent.parent
+    for slug in ("when-to-overseed-a-lawn", "fall-lawn-fertilizer-timing"):
+        html = (root / "site" / slug / "index.html").read_text(encoding="utf-8")
+        assert "by region" in html, f"{slug} has no regional table"
+        assert "season-now" in html, f"{slug} has no current-timing line"
+        assert "<h2" in html and html.count("<h1") == 1
+    item = next(i for i in seasonal.SEASONAL if i["slug"] == "when-to-overseed-a-lawn")
+    assert item["updated"] >= "2026-09-01", "autumn guide not refreshed for the season"
+    assert "October" in " ".join(p for s in item["sections"] for p in s["paras"])
+    assert any("October" in q for q, _ in item["faqs"])
+    # The homepage seasonal feature is month-gated, so it must be present in October.
+    if dt.date.today().month in item["season_months"]:
+        home = (root / "site" / "index.html").read_text(encoding="utf-8")
+        assert "when-to-overseed-a-lawn" in home and "In season right now" in home
+
+
+def test_every_indexable_page_has_a_real_og_image():
+    """Task 9: social previews must resolve to a page-specific card, not a
+    broken path, and the article hero image must be preloaded for LCP."""
+    import json
+    from pathlib import Path
+    root = Path(__file__).resolve().parent.parent
+    site = root / "site"
+    bad = []
+    for page in site.rglob("index.html"):
+        rel = page.relative_to(site).parent.as_posix()
+        if rel.startswith("embed"):  # noindex iframes, not shared as pages
+            continue
+        html = page.read_text(encoding="utf-8")
+        m = re.search(r'property="og:image" content="([^"]+)"', html)
+        assert m, f"{rel} has no og:image"
+        rel_img = m.group(1).split("/gardencalc/")[-1]
+        if not (site / rel_img).exists():
+            bad.append((rel, rel_img))
+    assert not bad, f"og:image paths do not exist: {bad}"
+    hero = (site / "mulch-calculator" / "index.html").read_text(encoding="utf-8")
+    assert 'rel="preload" as="image"' in hero, "article hero image is not preloaded"
+
+
+def test_ghost_buttons_are_readable_on_light_cards():
+    """a11y: .btn-ghost must not be light-on-dark on the light embed card.
+
+    The rule was shared with the dark hero, which made the embed-cta buttons
+    ~1.02:1 (WCAG fail). Ghost buttons are now dark-on-light by default and the
+    hero keeps its own light-on-dark override.
+    """
+    from pathlib import Path
+    root = Path(__file__).resolve().parent.parent
+    css = (root / "static" / "css" / "style.css").read_text(encoding="utf-8")
+    base = re.search(r"\.btn-ghost\{([^}]*)\}", css)
+    assert base, "no .btn-ghost rule"
+    assert "var(--surface)" in base.group(1) and "var(--brand)" in base.group(1), \
+        ".btn-ghost must be dark text on the light surface for the embed card"
+    assert ".hero .btn-ghost{" in css, "hero ghost button needs its own light-on-dark rule"
 
 
 if __name__ == "__main__":

@@ -6,6 +6,7 @@ import json
 import os
 import re
 import shutil
+import subprocess
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
@@ -17,8 +18,9 @@ import merges
 import planners
 import seasonal
 import seo as seolib
+import sources as sources_lib
 import calculators
-from common import (CONFIG, CONTENT, DATA, SITE, STATIC, TEMPLATES, human_date,
+from common import (CONFIG, CONTENT, DATA, ROOT, SITE, STATIC, TEMPLATES, human_date,
                     load_json, save_json, seo_config, site_config, topics_config)
 
 YEAR = dt.date.today().year
@@ -113,13 +115,14 @@ QUICK_CALCS = [
      "inputs": ["area", "method"],
      "presets": [{"label": "5,000 sq ft new lawn", "v": {"area": 5000, "method": 1}}]},
     {"key": "fertilizer", "label": "Fertilizer", "icon": "fertilizer", "slug": "fertilizer-calculator",
-     "inputs": ["area", "rate", "bag"],
-     "presets": [{"label": "5,000 sq ft, 1 lb N", "v": {"area": 5000, "rate": 1, "bag": 40}}]},
+     "inputs": ["area", "rate", "nitrogen", "bag"],
+     "presets": [{"label": "5,000 sq ft, 1 lb N, 20-0-0", "v": {"area": 5000, "rate": 1, "nitrogen": 20, "bag": 40}}]},
 ]
 # Short unit suffixes so the compact inputs stay readable on a 360 px screen.
 QUICK_UNITS = {"length": "ft", "width": "ft", "depth": "in", "height": "in",
                "thickness": "in", "tile_w": "in", "tile_h": "in", "waste": "%",
-               "area": "sq ft", "rate": "lb", "bag": "lb", "coats": "", "method": ""}
+               "area": "sq ft", "rate": "lb", "nitrogen": "%", "bag": "lb",
+               "coats": "", "method": ""}
 
 # "Popular quick answers": real numbers computed at build time from scripts/calculators.py
 # (the same engine the pages use), each linking to the calculator that produced it. The
@@ -146,9 +149,9 @@ QUICK_ANSWERS = [
     {"calc": "grass_seed", "args": {"area": 5000, "method": 1},
      "q": "5,000 sq ft new lawn",
      "answer": lambda o: f"{o['pounds']} lb of seed — about {o['bags_3lb']} bags of 3 lb"},
-    {"calc": "fertilizer", "args": {"area": 5000, "rate": 1, "bag": 40},
+    {"calc": "fertilizer", "args": {"area": 5000, "rate": 1, "bag": 40, "nitrogen": 20},
      "q": "5,000 sq ft lawn at 1 lb N",
-     "answer": lambda o: f"{o['pounds']} lb — about {o['bags']} bag of 40 lb"},
+     "answer": lambda o: f"{o['pounds']} lb of 20-0-0 product — about {o['bags']} bag of 40 lb"},
 ]
 
 # Homepage FAQ. These exact questions and answers are rendered visibly in accordions AND
@@ -274,6 +277,31 @@ def _write(path, text: str) -> None:
     path.write_text(text, encoding="utf-8")
 
 
+def _stamp(path) -> str:
+    """Last real content-change date for a page, from git history.
+
+    A page's <lastmod> must reflect when its content actually changed, not when
+    the pipeline last rebuilt it. We read the file's last git commit date and
+    fall back to today only when git has no record (first build of a new file).
+    """
+    try:
+        out = subprocess.run(
+            ["git", "log", "-1", "--format=%cs", "--", str(path)],
+            cwd=ROOT, capture_output=True, text=True, timeout=15)
+        stamp = out.stdout.strip()
+        if stamp and re.fullmatch(r"\d{4}-\d{2}-\d{2}", stamp):
+            return stamp
+    except Exception:
+        pass
+    return dt.date.today().isoformat()
+
+
+def _latest(*paths) -> str:
+    """The most recent real change date across several repo-relative paths."""
+    dates = [_stamp(ROOT / p) for p in paths]
+    return max(dates) if dates else dt.date.today().isoformat()
+
+
 def _contact_block(site: dict) -> str:
     """Honest contact route: a real email if configured, otherwise the repo issues page."""
     email = site.get("contact_email", "").strip()
@@ -301,12 +329,20 @@ def _fig(site: dict, art: dict) -> str:
     return _abs(site, f"/static/img/fig/{art['slug']}.webp")
 
 
+_DANGLING_WORDS = {"a", "an", "the", "of", "to", "for", "and", "or", "by", "with",
+                   "in", "on", "at", "as", "is", "are", "was", "were", "be", "been",
+                   "this", "that", "these", "those", "your", "you", "it", "its",
+                   "from", "into", "over", "under", "than", "then", "about"}
+
+
 def _short_desc(text: str, limit: int = 120) -> str:
-    """Trim a meta description to a card length at a word boundary, with an ellipsis."""
+    """Trim a meta description to a card length, never ending on a dangling word."""
     text = (text or "").strip()
     if len(text) <= limit:
         return text
     cut = text[:limit].rsplit(" ", 1)[0].rstrip(" ,;:—-")
+    while cut and cut.rsplit(" ", 1)[-1].lower() in _DANGLING_WORDS:
+        cut = cut.rsplit(" ", 1)[0].rstrip(" ,;:—-")
     return cut + "…"
 
 
@@ -465,6 +501,13 @@ def build() -> dict:
     seasonal_cards = [{"slug": it["slug"], "title": it["title"], "description": it["description"],
                        "cluster_name": cat_map.get(it["cluster"], {}).get("name", it["cluster"].title())}
                       for it in seasonal.SEASONAL]
+    # Guides whose advice is live this month get a prominent homepage slot. The list is
+    # empty outside those months, so the section simply disappears rather than going stale.
+    _month = dt.date.today().month
+    featured_seasonal = [{"slug": it["slug"], "title": it["title"],
+                          "cluster_name": cat_map.get(it["cluster"], {}).get("name", it["cluster"].title()),
+                          "now": it.get("now", "")}
+                         for it in seasonal.SEASONAL if _month in it.get("season_months", [])]
     chart_by_cluster = {ch["cluster"]: {"slug": ch["slug"], "title": ch["title"]} for ch in charts.CHARTS}
     planner_by_cluster = {pl["cluster"]: {"slug": pl["slug"], "title": pl["title"]} for pl in planners.PLANNERS}
     seasonal_by_cluster = {it["cluster"]: {"slug": it["slug"], "title": it["title"]} for it in seasonal.SEASONAL}
@@ -531,8 +574,9 @@ def build() -> dict:
                      keywords=", ".join([art.get("primary_keyword", "")] +
                                         art.get("secondary_keywords", [])))
         body_head, body_rest = _split_first_section(body_html)
+        sources = sources_lib.for_key(art.get("calculator", ""))
         ctx.update(article=art, body_html=body_html, body_head=body_head, body_rest=body_rest,
-                   toc=toc, figure=figure,
+                   toc=toc, figure=figure, sources=sources,
                    calc=calc_ctx, faq=faq_items, answer_first=answer_first,
                    category_name=category_name, reading_time=_reading_time(art.get("word_count", 0)),
                    related=related, project_links=project_links,
@@ -569,7 +613,9 @@ def build() -> dict:
                env.get_template("category.html").render(**ctx))
 
     # --- homepage ---
-    pillars = [a for a in published if a.get("is_pillar")][:8]
+    # Every pillar is linked from the homepage grid; the old [:8] silently dropped
+    # the newest pillar (fertilizer) from the most-used section.
+    pillars = [a for a in published if a.get("is_pillar")]
     by_slug = {a["slug"]: a for a in published}
     calc_defs_all = tcfg.get("calculators", {})
     quick_calcs = []
@@ -607,12 +653,15 @@ def build() -> dict:
                           json.dumps(seolib.organization_schema(site), ensure_ascii=False),
                           json.dumps(seolib.faq_schema({"faq": HOME_FAQS}), ensure_ascii=False)])
     quick_answer_items = []
+    # The pillar slug is not always "<calc>-calculator" (soil lives at
+    # raised-bed-soil-calculator), so resolve it through QUICK_CALCS first.
+    calc_slug = {q["key"]: q["slug"] for q in QUICK_CALCS}
     for qa in QUICK_ANSWERS:
         try:
             out = calculators.compute(qa["calc"], qa["args"])
         except Exception:
             continue
-        art = by_slug.get(f"{qa['calc'].replace('_', '-')}-calculator")
+        art = by_slug.get(calc_slug.get(qa["calc"], f"{qa['calc'].replace('_', '-')}-calculator"))
         quick_answer_items.append({
             "q": qa["q"], "answer": qa["answer"](out),
             "url": _abs(site, f"/{art['slug']}/") if art else "",
@@ -622,6 +671,7 @@ def build() -> dict:
                article_count=len(published), category_count=len(categories),
                chart_count=len(charts.CHARTS), chart_cards=chart_cards,
                planner_cards=planner_cards, seasonal_cards=seasonal_cards,
+               featured_seasonal=featured_seasonal,
                quick_calcs=quick_calcs, quick_answers=quick_answer_items,
                home_faqs=HOME_FAQS,
                latest_cards=[_card_meta(site, a, cat_map.get(a.get("cluster", ""), {}).get("name", ""))
@@ -658,7 +708,7 @@ def build() -> dict:
                               json.dumps(seolib.breadcrumb_list(
                                   [("Home", "/"), (title, f"/{slug}/")], site),
                                   ensure_ascii=False)])
-        ctx.update(page={"title": title, "html": mdrender.render(body)})
+        ctx.update(page={"title": title, "html": mdrender.render_with_toc(body)[0]})
         _write(SITE / slug / "index.html", env.get_template("page.html").render(**ctx))
 
     # --- search (client-side; backs the WebSite SearchAction) ---
@@ -707,7 +757,7 @@ def build() -> dict:
         calc_slug = ch.get("calc", "")
         cctx = common(title=ch["title"], description=ch["description"],
                       canonical=cp["url"], og_type="article",
-                      og_image=_abs(site, "/static/img/og-default.png"),
+                      og_image=_abs(site, f"/static/img/og/{ch['slug']}.png"),
                       keywords=ch["keyword"],
                       schemas=[json.dumps(seolib.breadcrumb_list(
                                    [("Home", "/"), (cluster_name, f"/category/{ch['cluster']}/"),
@@ -732,7 +782,7 @@ def build() -> dict:
         pp = planners.page(pl, base, site)
         pctx = common(title=pl["title"], description=pl["description"],
                       canonical=pp["url"], og_type="article",
-                      og_image=_abs(site, "/static/img/og-default.png"),
+                      og_image=_abs(site, f"/static/img/og/{pl['slug']}.png"),
                       keywords=pl["question"],
                       schemas=[json.dumps(seolib.breadcrumb_list(
                                    [("Home", "/"), (cluster_name, f"/category/{pl['cluster']}/"),
@@ -756,7 +806,7 @@ def build() -> dict:
         sp = seasonal.page(item, base, site)
         sctx = common(title=item["title"], description=item["description"],
                       canonical=sp["url"], og_type="article",
-                      og_image=_abs(site, "/static/img/og-default.png"),
+                      og_image=_abs(site, f"/static/img/og/{item['slug']}.png"),
                       keywords=item["keyword"],
                       schemas=[json.dumps(seolib.breadcrumb_list(
                                    [("Home", "/"), (cluster_name, f"/category/{item['cluster']}/"),
@@ -875,6 +925,15 @@ def build() -> dict:
                          static_dest, _c["id"])
     for _slug, _title, _desc in HUB_OG_CARDS:
         images.render_og(_slug, _title, _desc, static_dest)
+    # Per-page social cards for charts, planners and seasonal guides too, so a shared
+    # link previews the actual topic rather than one generic fallback image.
+    for _card in ([{"slug": c["slug"], "title": c["title"], "description": c["description"]}
+                   for c in charts.CHARTS] +
+                  [{"slug": p["slug"], "title": p["title"], "description": p["description"]}
+                   for p in planners.PLANNERS] +
+                  [{"slug": s["slug"], "title": s["title"], "description": s["description"]}
+                   for s in seasonal.SEASONAL]):
+        images.render_og(_card["slug"], _card["title"], _card["description"], static_dest)
     pin_cards = [{"slug": ch["slug"], "title": ch["title"], "question": charts.CHART_QUESTIONS.get(ch["slug"], ""),
                   "cluster": ch["cluster"]} for ch in charts.CHARTS]
     pin_cards += [{"slug": pl["slug"], "title": pl["title"], "question": pl["question"],
@@ -887,20 +946,29 @@ def build() -> dict:
     # --- sitemap, robots, rss, CNAME ---
     # Only canonical, indexable pages go in the sitemap. <priority> is omitted: it is
     # ignored by Google/Bing, so emitting it only adds noise.
-    today = dt.date.today().isoformat()
-    urls = [{"loc": "/", "lastmod": today,
+    # lastmod = the page's real content-change date (git), never a build bump.
+    data_dates = _latest("data/articles.json")
+    hub_date = _latest("templates/index.html", "data/articles.json")
+    cat_date = _latest("templates/category.html", "data/articles.json")
+    chart_date = _latest("scripts/charts.py", "templates/chart.html")
+    planner_date = _latest("scripts/planners.py", "templates/planner.html")
+    seasonal_date = _latest("scripts/seasonal.py", "templates/seasonal.html")
+    extra_tpl = {"calculators": "calculators.html", "guides": "guides.html",
+                 "sitemap": "sitemap.html", "for-publishers": "publishers.html"}
+    urls = [{"loc": "/", "lastmod": hub_date,
              "image": _thumb(site, published[0]) if published else None,
              "image_title": site["name"]}]
-    urls += [{"loc": f"/category/{c['id']}/", "lastmod": today} for c in categories]
-    urls += [{"loc": f"/{a['slug']}/", "lastmod": a.get("updated"),
+    urls += [{"loc": f"/category/{c['id']}/", "lastmod": cat_date} for c in categories]
+    urls += [{"loc": f"/{a['slug']}/", "lastmod": a.get("updated") or data_dates,
               "image": _fig(site, a), "image_title": a["title"]} for a in published]
-    urls += [{"loc": f"/{ch['slug']}/", "lastmod": today} for ch in charts.CHARTS]
-    urls += [{"loc": f"/{pl['slug']}/", "lastmod": today} for pl in planners.PLANNERS]
+    urls += [{"loc": f"/{ch['slug']}/", "lastmod": chart_date} for ch in charts.CHARTS]
+    urls += [{"loc": f"/{pl['slug']}/", "lastmod": planner_date} for pl in planners.PLANNERS]
     urls += [{"loc": f"/{item['slug']}/", "lastmod": item["updated"]} for item in seasonal.SEASONAL]
-    urls += [{"loc": f"/{s}/", "lastmod": today} for s, _, _ in pages]
-    urls += [{"loc": p, "lastmod": today} for p in EXTRA_PAGES]
+    urls += [{"loc": f"/{s}/", "lastmod": _latest(f"content/pages/{s}.md")} for s, _, _ in pages]
+    urls += [{"loc": p, "lastmod": _latest(f"templates/{extra_tpl[p.strip('/')]}")}
+             for p in EXTRA_PAGES]
     _write(SITE / "sitemap.xml", seolib.sitemap_xml(urls, site))
-    _write(SITE / "robots.txt", seolib.robots_txt(site, _abs(site, "/sitemap.xml")))
+    _write(SITE / "robots.txt", seolib.robots_txt(site))
     feed_extra = [{"title": ch["title"], "url": _abs(site, f"/{ch['slug']}/"),
                    "description": ch["description"]} for ch in charts.CHARTS]
     feed_extra += [{"title": pl["title"], "url": _abs(site, f"/{pl['slug']}/"),

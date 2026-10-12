@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% block head_extra %}{% if figure %}<link rel="preload" as="image" href="{{ figure.src }}" fetchpriority="high">{% endif %}{% endblock %}
 {% block content %}
 <div class="wrap">
 <nav class="breadcrumbs" aria-label="Breadcrumb">
@@ -14,6 +15,8 @@
   <h1>{{ article.title }}</h1>
   <p class="byline">
     <span>By {{ site.author }}</span><span class="dot">·</span>
+    <span><a href="{{ base_url }}/about/#methodology">How we calculate</a></span>
+    <span class="dot">·</span>
     <span>Updated <time datetime="{{ article.updated }}">{{ article.updated | date_human }}</time></span>
     <span class="dot">·</span><span>{{ article.word_count }} words</span>
     <span class="dot">·</span><span>{{ reading_time }} min read</span>
@@ -111,6 +114,20 @@
       <p>{{ site.name }}. "{{ article.title }}". {{ canonical }}</p>
       <button type="button" class="share-copy" data-share="copy" data-url="{{ canonical }}">Copy citation link</button>
     </div>
+
+    {% if sources %}
+    <section class="sources" aria-labelledby="sources-heading">
+      <h2 id="sources-heading">Sources &amp; method</h2>
+      <p>The rates this page uses come from published guidance:</p>
+      <ul>
+        {% for name, url in sources %}
+        <li><a href="{{ url }}" rel="nofollow noopener" target="_blank">{{ name }}</a></li>
+        {% endfor %}
+      </ul>
+      <p>Where a figure is a rule of thumb rather than an exact value, the page says so.
+        Always check the coverage printed on the product you buy, because it can vary by brand.</p>
+    </section>
+    {% endif %}
 
     {% if pager.prev or pager.next %}
     <nav class="pager" aria-label="More in {{ category_name }}">

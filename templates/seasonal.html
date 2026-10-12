@@ -21,6 +21,10 @@
   <p><strong>{{ seasonal.question }}</strong> {{ answer }}</p>
 </div>
 
+{% if seasonal.now %}
+<p class="season-now"><strong>Right now ({{ seasonal.updated | date_human }}):</strong> {{ seasonal.now }}</p>
+{% endif %}
+
 <section class="prose">
   <p>{{ seasonal.intro }}</p>
 
@@ -28,6 +32,23 @@
   <h2>{{ sec.h2 }}</h2>
   {% for p in sec.paras %}<p>{{ p }}</p>{% endfor %}
   {% endfor %}
+
+  {% if seasonal.regional %}
+  <section aria-labelledby="season-region">
+    <h2 id="season-region">{{ seasonal.regional.caption }}</h2>
+    <div class="table-scroll">
+      <table>
+        <thead><tr>{% for h in seasonal.regional.head %}<th scope="col">{{ h }}</th>{% endfor %}</tr></thead>
+        <tbody>
+          {% for row in seasonal.regional.rows %}
+          <tr>{% for cell in row %}{% if loop.first %}<th scope="row">{{ cell }}</th>{% else %}<td>{{ cell }}</td>{% endif %}{% endfor %}</tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">{{ seasonal.regional.note }}</p>
+  </section>
+  {% endif %}
 
   {% if seasonal.table %}
   <section aria-labelledby="season-table">
