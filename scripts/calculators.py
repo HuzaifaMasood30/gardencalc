@@ -149,6 +149,153 @@ REGISTRY = {
     "fertilizer": fertilizer,
 }
 
+
+# --- Metric engine -------------------------------------------------------------------
+# Inputs arrive in the *config* ids (length, width, depth, height, thickness, tile_w,
+# tile_h, waste, area, rate, nitrogen, bag) but in metric units: linear dims in metres,
+# small dims (depth/height/thickness/tile size) in centimetres, areas in square metres.
+# Kept independent of the imperial functions above so neither system's rounding leaks
+# into the other. Litres, kilograms and tonnes are the units a metric buyer orders in.
+
+LITRES_PER_CUM = 1000.0
+# 1 cu yd = 0.764555 m3, so 1.4 tons/cu yd == 1.8311 t/m3 of 3/4" crushed stone.
+TONS_PER_CUM = GRAVEL_TONS_PER_CUYD["default"] / 0.764554857984
+# A 350 sq ft/gallon US rate is 32.516 m2 per litre of paint.
+SQM_PER_LITRE = 350.0 * 0.09290304 / 3.785411784
+DOOR_SQM = 21 * 0.09290304   # 21 sq ft
+WINDOW_SQM = 15 * 0.09290304  # 15 sq ft
+CONCRETE_KG_PER_CUM = 2400.0  # cured concrete density, for bag yield
+
+
+def _bags(volume_cum: float, bag_litres: float) -> int:
+    return math.ceil(volume_cum * LITRES_PER_CUM / bag_litres)
+
+
+def mulch_m(length: float, width: float, depth: float) -> dict:
+    """length/width in metres, depth in centimetres."""
+    sqm = length * width
+    vol = sqm * (depth / 100.0)
+    return {
+        "square_metres": _round(sqm, 1),
+        "cubic_metres": _round(vol, 2),
+        "litres": _round(vol * LITRES_PER_CUM, 0),
+        "bags_50l": _bags(vol, 50),
+    }
+
+
+def soil_m(length: float, width: float, height: float) -> dict:
+    """length/width in metres, height in centimetres."""
+    vol = length * width * (height / 100.0)
+    return {
+        "cubic_metres": _round(vol, 2),
+        "litres": _round(vol * LITRES_PER_CUM, 0),
+        "bags_50l": _bags(vol, 50),
+    }
+
+
+def gravel_m(length: float, width: float, depth: float) -> dict:
+    """length/width in metres, depth in centimetres."""
+    sqm = length * width
+    vol = sqm * (depth / 100.0)
+    return {
+        "square_metres": _round(sqm, 1),
+        "cubic_metres": _round(vol, 2),
+        "tonnes": _round(vol * TONS_PER_CUM, 2),
+    }
+
+
+def paint_m(length: float, width: float, height: float, coats: int,
+            doors: int = 1, windows: int = 2) -> dict:
+    """All linear dims in metres."""
+    wall = 2 * (length + width) * height
+    ceiling = length * width
+    openings = doors * DOOR_SQM + windows * WINDOW_SQM
+    paintable = max(wall - openings, 0)
+    total = (paintable * coats) + (ceiling * coats)
+    return {
+        "wall_area": _round(wall, 1),
+        "paintable_area": _round(paintable, 1),
+        "litres": _round(total / SQM_PER_LITRE, 1),
+    }
+
+
+def tile_m(length: float, width: float, tile_w: float, tile_h: float,
+           waste: float) -> dict:
+    """Room dims in metres, tile size in centimetres."""
+    floor = length * width
+    tile_area = (tile_w / 100.0) * (tile_h / 100.0)
+    tiles = floor / tile_area
+    return {
+        "floor_area": _round(floor, 2),
+        "tiles": math.ceil(tiles),
+        "tiles_with_waste": math.ceil(tiles * (1 + waste / 100.0)),
+    }
+
+
+def grass_seed_m(area: float, method: int) -> dict:
+    """area in square metres; rate in kilograms per 100 m2."""
+    rate = 2.2 if int(method) == 1 else 1.0
+    kg = area / 100.0 * rate
+    return {
+        "rate_per_100m2": rate,
+        "kilograms": _round(kg, 2),
+        "bags_1kg": math.ceil(kg),
+    }
+
+
+def concrete_m(length: float, width: float, thickness: float) -> dict:
+    """length/width in metres, thickness in centimetres."""
+    vol = length * width * (thickness / 100.0)
+    return {
+        "cubic_metres": _round(vol, 2),
+        "bags_20kg": math.ceil(vol * CONCRETE_KG_PER_CUM / 20.0),
+        "bags_25kg": math.ceil(vol * CONCRETE_KG_PER_CUM / 25.0),
+    }
+
+
+def topsoil_m(length: float, width: float, depth: float) -> dict:
+    """length/width in metres, depth in centimetres."""
+    sqm = length * width
+    vol = sqm * (depth / 100.0)
+    return {
+        "square_metres": _round(sqm, 1),
+        "cubic_metres": _round(vol, 2),
+        "litres": _round(vol * LITRES_PER_CUM, 0),
+        "bags_50l": _bags(vol, 50),
+    }
+
+
+def fertilizer_m(area: float, rate: float, bag: float,
+                 nitrogen: float = 20.0) -> dict:
+    """area in square metres; rate in kg of actual nitrogen per 100 m2."""
+    kg_n = area / 100.0 * rate
+    share = (nitrogen or 20.0) / 100.0
+    kg_product = kg_n / share
+    bag = bag or 20.0
+    return {
+        "kg_nitrogen": _round(kg_n, 2),
+        "kilograms": _round(kg_product, 2),
+        "bags": math.ceil(kg_product / bag),
+    }
+
+
+METRIC_REGISTRY = {
+    "mulch": mulch_m,
+    "soil": soil_m,
+    "gravel": gravel_m,
+    "paint": paint_m,
+    "tile": tile_m,
+    "grass_seed": grass_seed_m,
+    "concrete": concrete_m,
+    "topsoil": topsoil_m,
+    "fertilizer": fertilizer_m,
+}
+
+# Config ids -> metric function keyword names. Metric functions take the config id
+# spelling, so this is only needed where a config id is not a valid Python name or
+# differs from the keyword; presently it is the identity map for every calculator.
+METRIC_PARAM_MAP = {kind: {} for kind in METRIC_REGISTRY}
+
 # Maps config input ids -> function keyword arguments.
 PARAM_MAP = {
     "mulch": {"length": "length_ft", "width": "width_ft", "depth": "depth_in"},
@@ -166,11 +313,24 @@ PARAM_MAP = {
 }
 
 
-def compute(kind: str, inputs: dict) -> dict:
-    fn = REGISTRY.get(kind)
-    if not fn:
-        raise KeyError(f"unknown calculator: {kind}")
-    mapping = PARAM_MAP.get(kind, {})
+def compute(kind: str, inputs: dict, units: str = "imperial") -> dict:
+    """Compute ``kind`` for ``inputs`` in the given unit system.
+
+    ``units="imperial"`` (the default, and what stored articles use) takes feet,
+    inches, square feet and pounds. ``units="metric"`` takes metres, centimetres,
+    square metres and kilograms and returns litres/tonnes. The default is imperial
+    so every existing caller and every stored article keeps its current numbers.
+    """
+    if units == "metric":
+        fn = METRIC_REGISTRY.get(kind)
+        if not fn:
+            raise KeyError(f"unknown calculator: {kind}")
+        mapping = METRIC_PARAM_MAP.get(kind, {})
+    else:
+        fn = REGISTRY.get(kind)
+        if not fn:
+            raise KeyError(f"unknown calculator: {kind}")
+        mapping = PARAM_MAP.get(kind, {})
     clean = {}
     for key, val in inputs.items():
         target = mapping.get(key, key)

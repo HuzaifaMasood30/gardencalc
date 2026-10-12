@@ -3,9 +3,16 @@
   <h2><svg aria-hidden="true"><use href="#i-calc"></use></svg>{{ calc.title }}</h2>
   <p class="calc-sub">{{ calc.sub }}</p>
   <div class="calc-body">
-    <form class="calc-form calc-inputs" data-calc="{{ calc.key }}" aria-label="{{ calc.title }}">
+    <form class="calc-form calc-inputs" data-calc="{{ calc.key }}" data-units="imperial" aria-label="{{ calc.title }}">
+      {% if calc.units_enabled %}
+      <div class="calc-units" role="group" aria-label="Unit system">
+        <button type="button" class="unit-btn is-active" data-unit="imperial" aria-pressed="true">Imperial (US)</button>
+        <button type="button" class="unit-btn" data-unit="metric" aria-pressed="false">Metric</button>
+      </div>
+      {% endif %}
       {% for inp in calc.inputs %}
-      <label for="in-{{ inp.id }}">{{ inp.label }}
+      <label for="in-{{ inp.id }}"><span class="calc-label" data-label-imperial="{{ inp.label }}"
+          {%- if calc.units_enabled and inp.metric and inp.metric.label %} data-label-metric="{{ inp.metric.label }}"{% endif %}>{{ inp.label }}</span>
         {% if inp.options %}
         <select id="in-{{ inp.id }}" name="{{ inp.id }}">
           {% for opt in inp.options %}
@@ -15,7 +22,14 @@
         {% else %}
         <input type="number" inputmode="decimal" id="in-{{ inp.id }}" name="{{ inp.id }}"
                min="{{ inp.min }}" max="{{ inp.max }}" step="{{ inp.step|default('0.1') }}"
-               value="{{ inp.default }}">
+               value="{{ inp.default }}"
+               {%- if calc.units_enabled and inp.metric %}
+               data-conv="{{ inp.metric.conv }}"
+               data-imperial-value="{{ inp.default }}" data-imperial-min="{{ inp.min }}"
+               data-imperial-max="{{ inp.max }}" data-imperial-step="{{ inp.step|default('0.1') }}"
+               data-metric-value="{{ inp.metric.default }}" data-metric-min="{{ inp.metric.min }}"
+               data-metric-max="{{ inp.metric.max }}" data-metric-step="{{ inp.metric.step|default('0.1') }}"
+               {%- endif %}>
         {% endif %}
       </label>
       {% endfor %}

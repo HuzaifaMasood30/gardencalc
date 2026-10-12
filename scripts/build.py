@@ -123,6 +123,11 @@ QUICK_UNITS = {"length": "ft", "width": "ft", "depth": "in", "height": "in",
                "thickness": "in", "tile_w": "in", "tile_h": "in", "waste": "%",
                "area": "sq ft", "rate": "lb", "nitrogen": "%", "bag": "lb",
                "coats": "", "method": ""}
+# Metric short suffixes for the same inputs when the metric toggle is active.
+QUICK_UNITS_METRIC = {"length": "m", "width": "m", "depth": "cm", "height": "cm",
+                      "thickness": "cm", "tile_w": "cm", "tile_h": "cm", "waste": "%",
+                      "area": "m²", "rate": "kg", "nitrogen": "%", "bag": "kg",
+                      "coats": "", "method": ""}
 
 # "Popular quick answers": real numbers computed at build time from scripts/calculators.py
 # (the same engine the pages use), each linking to the calculator that produced it. The
@@ -388,6 +393,17 @@ def _split_first_section(body_html: str) -> tuple[str, str]:
     return body_html[:end], body_html[end:]
 
 
+def _metric_unit(label: str | None, fallback: str) -> str:
+    """Pull the unit out of a metric label, e.g. "Mulch depth (cm)" -> "cm".
+
+    The same input id is cm in one calculator and m in another, so the label is the
+    only reliable source. Falls back to the id-based default when there is no bracket.
+    """
+    if label and "(" in label and label.rstrip().endswith(")"):
+        return label.rstrip()[:-1].rsplit("(", 1)[-1].strip()
+    return fallback
+
+
 def _calc_context(art: dict, cfg: dict, site: dict) -> dict | None:
     calc_key = art.get("calculator")
     defs = cfg.get("calculators", {}).get(calc_key)
@@ -401,6 +417,9 @@ def _calc_context(art: dict, cfg: dict, site: dict) -> dict | None:
         inputs.append(d)
         defaults[d["id"]] = d.get("default")
     presets = next((q.get("presets", []) for q in QUICK_CALCS if q["key"] == calc_key), [])
+    # Enable the toggle only when every input has metric metadata, so no field is
+    # left without a metric label/value to switch to.
+    all_metric = bool(defs.get("inputs")) and all(i.get("metric") for i in defs.get("inputs", []))
     return {
         "key": calc_key,
         "title": art.get("calculator_title") or defs.get("title", "Calculator"),
@@ -410,6 +429,10 @@ def _calc_context(art: dict, cfg: dict, site: dict) -> dict | None:
         "defaults": defaults,
         "presets": presets,
         "slug": art["slug"],
+        # Metric toggle. Rendered only when the calculator has metric metadata for every
+        # input and the site enables it; each input's metric label/default/min/max and its
+        # imperial->metric conversion factor live in the config.
+        "units_enabled": bool(site.get("units_enabled")) and all_metric,
         # Set data/videos.json as {"mulch": {"id": "...", "upload": "YYYY-MM-DD"}} to
         # publish a walkthrough; empty renders nothing (no fake videos, no empty player).
         "video": (load_json(DATA / "videos.json", default={}) or {}).get(calc_key, {}),
@@ -627,6 +650,7 @@ def build() -> dict:
             if iid not in defs:
                 continue
             d = defs[iid]
+            m = dict(d.get("metric") or {})
             inputs.append({
                 "id": iid,
                 "label": d.get("label", iid).split(" (")[0],
@@ -635,6 +659,16 @@ def build() -> dict:
                 "default": d.get("default"),
                 "unit": qc.get("units", {}).get(iid, QUICK_UNITS.get(iid, "")),
                 "options": d.get("options"),
+                "metric": (m or None) and {
+                    "label": m.get("label", iid).split(" (")[0],
+                    "min": m.get("min"), "max": m.get("max"),
+                    "step": m.get("step", d.get("step", "0.1")),
+                    "default": m.get("default"),
+                    "conv": m.get("conv"),
+                    # Prefer the unit named in the metric label, e.g. "Length (m)" -> "m",
+                    # because the same input id can be cm in one calculator and m in another.
+                    "unit": _metric_unit(m.get("label"), QUICK_UNITS_METRIC.get(iid, "")),
+                },
             })
         art = by_slug.get(qc["slug"])
         quick_calcs.append({
@@ -643,6 +677,7 @@ def build() -> dict:
             "slug": qc["slug"],
             "url": _abs(site, f"/{qc['slug']}/") if art else "",
             "inputs": inputs,
+            "units_enabled": bool(site.get("units_enabled")) and all(i["metric"] for i in inputs),
             "presets": qc.get("presets", []),
         })
     ctx = common(title=f"{site['name']} — Free Home & Garden Calculators",

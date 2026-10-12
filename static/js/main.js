@@ -67,6 +67,73 @@
     }
   };
 
+  // Metric engine. Mirrors the metric functions in scripts/calculators.py: linear dims
+  // in metres, small dims (depth/height/thickness/tile size) in centimetres, areas in
+  // square metres. Results are the units a metric buyer orders in: litres, kg, tonnes.
+  var LITRES_PER_CUM = 1000;
+  var TONS_PER_CUM = TONS_PER_CUYD / 0.764554857984;
+  var SQM_PER_LITRE = 350 * 0.09290304 / 3.785411784;
+  var DOOR_SQM = 21 * 0.09290304, WINDOW_SQM = 15 * 0.09290304, CONCRETE_KG_PER_CUM = 2400;
+
+  function bagsOf(vol, litres) { return Math.ceil(vol * LITRES_PER_CUM / litres); }
+
+  var CALCS_M = {
+    mulch: function (v) {
+      var sqm = v.length * v.width, vol = sqm * (v.depth / 100);
+      return [["Square metres", r(sqm, 1)], ["Cubic metres", r(vol, 2)],
+              ["Litres", r(vol * LITRES_PER_CUM, 0)], ["50 L bags", bagsOf(vol, 50)]];
+    },
+    soil: function (v) {
+      var vol = v.length * v.width * (v.height / 100);
+      return [["Cubic metres", r(vol, 2)], ["Litres", r(vol * LITRES_PER_CUM, 0)],
+              ["50 L bags", bagsOf(vol, 50)]];
+    },
+    gravel: function (v) {
+      var sqm = v.length * v.width, vol = sqm * (v.depth / 100);
+      return [["Square metres", r(sqm, 1)], ["Cubic metres", r(vol, 2)],
+              ["Tonnes", r(vol * TONS_PER_CUM, 2)]];
+    },
+    paint: function (v) {
+      var wall = 2 * (v.length + v.width) * v.height;
+      var ceiling = v.length * v.width;
+      var doors = isFinite(v.doors) ? v.doors : 1;
+      var windows = isFinite(v.windows) ? v.windows : 2;
+      var openings = doors * DOOR_SQM + windows * WINDOW_SQM;
+      var paintable = Math.max(wall - openings, 0);
+      var total = paintable * v.coats + ceiling * v.coats;
+      return [["Wall area (m²)", r(wall, 1)], ["Paintable area (m²)", r(paintable, 1)],
+              ["Litres", r(total / SQM_PER_LITRE, 1)]];
+    },
+    tile: function (v) {
+      var floor = v.length * v.width, tarea = (v.tile_w / 100) * (v.tile_h / 100);
+      var tiles = floor / tarea;
+      return [["Floor area (m²)", r(floor, 2)], ["Tiles", Math.ceil(tiles)],
+              ["With " + v.waste + "% waste", Math.ceil(tiles * (1 + v.waste / 100))]];
+    },
+    grass_seed: function (v) {
+      var rate = Number(v.method) === 1 ? 2.2 : 1.0;
+      var kg = v.area / 100 * rate;
+      return [["Rate per 100 m²", rate], ["Kilograms", r(kg, 2)], ["1 kg bags", Math.ceil(kg)]];
+    },
+    concrete: function (v) {
+      var vol = v.length * v.width * (v.thickness / 100);
+      return [["Cubic metres", r(vol, 2)],
+              ["20 kg bags", Math.ceil(vol * CONCRETE_KG_PER_CUM / 20)],
+              ["25 kg bags", Math.ceil(vol * CONCRETE_KG_PER_CUM / 25)]];
+    },
+    topsoil: function (v) {
+      var sqm = v.length * v.width, vol = sqm * (v.depth / 100);
+      return [["Square metres", r(sqm, 1)], ["Cubic metres", r(vol, 2)],
+              ["Litres", r(vol * LITRES_PER_CUM, 0)], ["50 L bags", bagsOf(vol, 50)]];
+    },
+    fertilizer: function (v) {
+      var share = (v.nitrogen || 20) / 100;
+      var n = v.area / 100 * v.rate, kg = n / share, bag = v.bag || 20;
+      return [["Kg of nitrogen", r(n, 2)], ["Kg of product", r(kg, 2)],
+              ["Bags", Math.ceil(kg / bag)]];
+    }
+  };
+
   function r(x, p) { var f = Math.pow(10, p); return Math.round((x + 1e-9) * f) / f; }
 
   function track(name, params) {
@@ -89,12 +156,18 @@
   function calcName(form) { return form.getAttribute("data-calc") || "unknown"; }
 
   // Reflected query params keep the URL shareable while the canonical stays clean.
+  function unitParams(form) {
+    return getUnits(form) === "metric" ? "units=metric" : "";
+  }
+
   function writeQuery(form) {
     if (!window.history || !window.history.replaceState) return;
     var v = readForm(form);
     var qs = Object.keys(v).map(function (k) {
       return encodeURIComponent(k) + "=" + encodeURIComponent(v[k]);
     }).join("&");
+    var u = unitParams(form);
+    qs = [qs, u].filter(Boolean).join("&");
     var url = location.pathname + (qs ? "?" + qs : "");
     try { history.replaceState(null, "", url); } catch (e) { /* ignore */ }
   }
@@ -115,6 +188,7 @@
     var qs = Object.keys(v).map(function (k) {
       return encodeURIComponent(k) + "=" + encodeURIComponent(v[k]);
     }).join("&");
+    qs = [qs, unitParams(form)].filter(Boolean).join("&");
     return location.origin + location.pathname + (qs ? "?" + qs : "");
   }
 
@@ -189,19 +263,89 @@
     },
   };
 
+  // Metric "show working". Same structure as WORKING, in metres / centimetres / litres.
+  var WORKING_M = {
+    mulch: function (v) {
+      var sqm = v.length * v.width, m = v.depth / 100, vol = sqm * m;
+      return "Square metres = " + v.length + " x " + v.width + " = " + r(sqm, 1) +
+        " m². Depth in metres = " + v.depth + " / 100 = " + r(m, 3) +
+        ". Cubic metres = " + r(sqm, 1) + " x " + r(m, 3) + " = " + r(vol, 2) +
+        ". Litres = " + r(vol, 2) + " x 1,000 = " + r(vol * 1000, 0) +
+        ". 50 L bags = " + r(vol * 1000, 0) + " / 50 = " + Math.ceil(vol * 1000 / 50) + ".";
+    },
+    soil: function (v) {
+      var m = v.height / 100, vol = v.length * v.width * m;
+      return "Cubic metres = " + v.length + " x " + v.width + " x (" + v.height + " / 100) = " + r(vol, 2) +
+        " m³. Litres = " + r(vol, 2) + " x 1,000 = " + r(vol * 1000, 0) +
+        ". 50 L bags = " + r(vol * 1000, 0) + " / 50 = " + Math.ceil(vol * 1000 / 50) + ".";
+    },
+    gravel: function (v) {
+      var sqm = v.length * v.width, m = v.depth / 100, vol = sqm * m;
+      return "Square metres = " + v.length + " x " + v.width + " = " + r(sqm, 1) +
+        " m². Cubic metres = " + r(sqm, 1) + " x " + r(m, 3) + " = " + r(vol, 2) +
+        ". Tonnes = " + r(vol, 2) + " x " + r(TONS_PER_CUM, 2) + " = " + r(vol * TONS_PER_CUM, 2) + ".";
+    },
+    concrete: function (v) {
+      var m = v.thickness / 100, vol = v.length * v.width * m;
+      return "Cubic metres = " + v.length + " x " + v.width + " x (" + v.thickness + " / 100) = " + r(vol, 2) +
+        " m³. 20 kg bags = " + r(vol, 2) + " x 2,400 / 20 = " + Math.ceil(vol * CONCRETE_KG_PER_CUM / 20) +
+        "; 25 kg bags = " + r(vol, 2) + " x 2,400 / 25 = " + Math.ceil(vol * CONCRETE_KG_PER_CUM / 25) + ".";
+    },
+    paint: function (v) {
+      var wall = 2 * (v.length + v.width) * v.height;
+      var d = isFinite(v.doors) ? v.doors : 1, w = isFinite(v.windows) ? v.windows : 2;
+      var paintable = wall - DOOR_SQM * d - WINDOW_SQM * w;
+      var ceiling = v.length * v.width, total = paintable * v.coats + ceiling * v.coats;
+      return "Wall area = 2 x (" + v.length + " + " + v.width + ") x " + v.height + " = " + r(wall, 1) +
+        " m². Less ~1.95 m² per door x " + d + " and ~1.39 m² per window x " + w + " = " + r(paintable, 1) +
+        " m² paintable. Litres = " + r(total, 1) + " / " + r(SQM_PER_LITRE, 1) + " = " + r(total / SQM_PER_LITRE, 1) + ".";
+    },
+    tile: function (v) {
+      var floor = v.length * v.width, tarea = (v.tile_w / 100) * (v.tile_h / 100);
+      var tiles = floor / tarea, waste = isFinite(v.waste) ? v.waste : 0;
+      return "Floor area = " + v.length + " x " + v.width + " = " + r(floor, 2) + " m². Tile area = (" +
+        v.tile_w + " / 100) x (" + v.tile_h + " / 100) = " + r(tarea, 4) + " m². Tiles = " + r(floor, 2) +
+        " / " + r(tarea, 4) + " = " + Math.ceil(tiles) + ". With " + waste + "% waste = " +
+        Math.ceil(tiles * (1 + waste / 100)) + ".";
+    },
+    grass_seed: function (v) {
+      var rate = Number(v.method) === 2 ? 1.0 : 2.2, kg = v.area / 100 * rate;
+      return "Rate = " + rate + " kg per 100 m² for " + (Number(v.method) === 2 ? "overseeding" : "a new lawn") +
+        ". Kilograms = " + v.area + " / 100 x " + rate + " = " + r(kg, 2) + " kg. 1 kg bags = " + Math.ceil(kg) + ".";
+    },
+    fertilizer: function (v) {
+      var share = (v.nitrogen || 20) / 100, n = v.area / 100 * v.rate, kg = n / share, bag = v.bag || 20;
+      return "Kg of nitrogen = " + v.area + " / 100 x " + v.rate + " = " + r(n, 2) +
+        " kg N. Product = " + r(n, 2) + " / " + share + " = " + r(kg, 2) +
+        " kg. Bags = " + r(kg, 2) + " / " + bag + " = " + Math.ceil(kg / bag) + ".";
+    },
+    topsoil: function (v) {
+      var sqm = v.length * v.width, m = v.depth / 100, vol = sqm * m;
+      return "Square metres = " + v.length + " x " + v.width + " = " + r(sqm, 1) +
+        " m². Cubic metres = " + r(sqm, 1) + " x " + r(m, 3) + " = " + r(vol, 2) +
+        ". Litres = " + r(vol * 1000, 0) +
+        ". 50 L bags = " + r(vol * 1000, 0) + " / 50 = " + Math.ceil(vol * 1000 / 50) + ".";
+    },
+  };
+
   function showWorking(form) {
     var key = form.getAttribute("data-calc");
     var shell = form.closest(".calc");
     var box = shell && shell.querySelector("[data-working]");
     if (!box) return;
-    var fn = WORKING[key];
+    var map = getUnits(form) === "metric" ? WORKING_M : WORKING;
+    var fn = map[key];
     if (!fn) { box.textContent = ""; return; }
     box.textContent = fn(readForm(form));
   }
 
+  function getUnits(form) {
+    return form.getAttribute("data-units") === "metric" ? "metric" : "imperial";
+  }
+
   function run(form, opts) {
     var key = form.getAttribute("data-calc");
-    var fn = CALCS[key];
+    var fn = (getUnits(form) === "metric" ? CALCS_M : CALCS)[key];
     if (!fn) return;
     var v = readForm(form);
     for (var k in v) { if (!isFinite(v[k])) { v[k] = 0; } }
@@ -219,6 +363,78 @@
       document.dispatchEvent(new CustomEvent("gc:result", { detail: { box: box, form: form } }));
     }
     if (opts && opts.write !== false && !form.closest("[data-quick]")) writeQuery(form);
+  }
+
+  // Switch a calculator between imperial and metric: swap each input's label, unit,
+  // value, min, max and step, then re-run. Values are converted (not just relabelled)
+  // so the physical size is preserved across the switch.
+  function setUnits(form, system, opts) {
+    if (system !== "metric" && system !== "imperial") system = "imperial";
+    if (form.getAttribute("data-units") === system) return;
+    form.setAttribute("data-units", system);
+    form.querySelectorAll("input, select").forEach(function (i) {
+      if (!i.name) return;
+      if (system === "metric" && i.dataset.metricValue === undefined) return;
+      var to = system;
+      var oldV = parseFloat(i.value);
+      var nextVal = i.dataset[to + "Value"];
+      var nextMin = i.dataset[to + "Min"];
+      var nextMax = i.dataset[to + "Max"];
+      var nextStep = i.dataset[to + "Step"];
+      var conv = parseFloat(i.getAttribute("data-conv"));
+      var imperDefault = parseFloat(i.getAttribute("data-imperial-value"));
+      var metricDefault = parseFloat(i.getAttribute("data-metric-value"));
+      // If the field still holds the other system's default, snap to this system's
+      // curated default (e.g. 8 ft -> 2.4 m, not 2.44). Once the user has typed
+      // something, convert instead so the physical size is preserved exactly.
+      var untouched = isFinite(oldV) && (
+        system === "metric" ? (isFinite(imperDefault) && oldV === imperDefault)
+                            : (isFinite(metricDefault) && oldV === metricDefault));
+      var converted = untouched ? undefined : convertValue(oldV, conv, system);
+      if (converted !== undefined) {
+        i.value = converted;
+      } else if (nextVal !== undefined) {
+        i.value = nextVal;
+      }
+      if (nextMin !== undefined) i.min = nextMin;
+      if (nextMax !== undefined) i.max = nextMax;
+      if (nextStep !== undefined) i.step = nextStep;
+      var field = i.closest("label");
+      var lab = field && field.querySelector("[data-label-metric]");
+      if (lab) lab.textContent = lab.dataset["label" + (system === "metric" ? "Metric" : "Imperial")] || lab.textContent;
+      var unit = field && field.querySelector(".unit");
+      if (unit) unit.textContent = unit.dataset["unit" + (system === "metric" ? "Metric" : "Imperial")] || unit.textContent;
+    });
+    form.querySelectorAll(".unit-btn").forEach(function (b) {
+      var on = b.getAttribute("data-unit") === system;
+      b.classList.toggle("is-active", on);
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+    run(form, { write: opts && opts.write === false ? false : true });
+    showWorking(form);
+  }
+
+  // Convert a typed value between unit systems using a build-emitted factor (metric
+  // units per imperial unit: 0.3048 ft->m, 2.54 in->cm, ...). Returns undefined when
+  // there is nothing to convert, so the caller can fall back to the stored default.
+  function convertValue(value, conv, system) {
+    if (!isFinite(value) || !isFinite(conv) || conv <= 0) return undefined;
+    var factor = system === "metric" ? conv : 1 / conv;
+    return Math.round(value * factor * 100) / 100;
+  }
+
+  function initUnitToggle(form) {
+    var box = form.querySelector(".calc-units");
+    if (!box) return;
+    box.querySelectorAll(".unit-btn").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var system = b.getAttribute("data-unit");
+        track("unit_switch", { calculator_name: calcName(form), units: system });
+        setUnits(form, system);
+      });
+    });
+    var want = new URLSearchParams(location.search).get("units");
+    if (want === "metric" || want === "imperial") setUnits(form, want, { write: false });
   }
 
   function initToc() {
@@ -271,6 +487,7 @@
 
   function initCalcActions(form) {
     applyQuery(form);
+    initUnitToggle(form);
     run(form, { write: false });
     var shell = form.parentNode;
     var copy = shell.querySelector(".calc-copy");
@@ -333,6 +550,7 @@
       });
       form.addEventListener("input", function () { run(form, { write: false }); showWorking(form); });
       form.addEventListener("change", function () { run(form, { write: false }); showWorking(form); });
+      initUnitToggle(form);
       var copy = shell && shell.querySelector(".calc-copy");
       if (copy) copy.addEventListener("click", function () {
         track("copy_result", { calculator_name: calcName(form) });
@@ -345,6 +563,7 @@
         var qs = Object.keys(v).map(function (k) {
           return encodeURIComponent(k) + "=" + encodeURIComponent(v[k]);
         }).join("&");
+        qs = [qs, unitParams(form)].filter(Boolean).join("&");
         var u = location.origin + location.pathname + (qs ? "?" + qs : "");
         copyText(u);
         if (navigator.share) { navigator.share({ url: u }).catch(function () {}); }

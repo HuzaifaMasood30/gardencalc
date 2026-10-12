@@ -239,6 +239,15 @@ hr{border:0;border-top:1px solid var(--line);margin:2em 0}
   border-radius:9px;font-size:1rem;font-family:inherit;background:#fff;color:var(--fg)}
 .calc-form input:focus,.calc-form select:focus{outline:2px solid var(--brand-2);outline-offset:1px;
   border-color:var(--brand-2)}
+/* Unit toggle: a small segmented control above the inputs. */
+.calc-units{grid-column:1/-1;display:inline-flex;gap:0;padding:3px;border:1px solid var(--line-strong);
+  border-radius:10px;background:var(--surface-alt);width:max-content;max-width:100%}
+.calc-units .unit-btn{appearance:none;border:0;background:transparent;color:var(--fg-soft);
+  font:inherit;font-size:.84rem;font-weight:700;padding:7px 14px;border-radius:8px;cursor:pointer;
+  white-space:nowrap}
+.calc-units .unit-btn:hover{color:var(--fg)}
+.calc-units .unit-btn.is-active{background:var(--brand-2);color:#fff}
+.calc-units .unit-btn:focus-visible{outline:2px solid var(--brand-2);outline-offset:2px}
 .calc-go{grid-column:1/-1;justify-self:start;background:var(--brand-2);color:#fff;border:0;
   border-radius:9px;padding:12px 26px;font-size:1rem;font-weight:700;cursor:pointer;font-family:inherit}
 .calc-go:hover{background:var(--brand)}

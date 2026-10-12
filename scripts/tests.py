@@ -412,6 +412,26 @@ def test_js_and_python_calculators_agree():
         ["topsoil", {"length": 20, "width": 10, "depth": 2}],
         ["fertilizer", {"area": 5000, "rate": 1, "bag": 40, "nitrogen": 20}],
     ]
+    metric_cases = [
+        ["mulch", {"length": 6, "width": 3, "depth": 5}],
+        ["soil", {"length": 1.2, "width": 2.4, "height": 30}],
+        ["gravel", {"length": 6, "width": 3, "depth": 5}],
+        ["paint", {"length": 4, "width": 3, "height": 2.4, "coats": 2, "doors": 1, "windows": 2}],
+        ["tile", {"length": 3, "width": 4, "tile_w": 60, "tile_h": 60, "waste": 10}],
+        ["grass_seed", {"area": 200, "method": 1}],
+        ["concrete", {"length": 2, "width": 2, "thickness": 10}],
+        ["topsoil", {"length": 6, "width": 3, "depth": 5}],
+        ["fertilizer", {"area": 200, "rate": 0.5, "bag": 20, "nitrogen": 20}],
+    ]
+
+    def js_output(system, cases):
+        proc = subprocess.run(
+            [node, str(root / "scripts/calc_parity.js"), str(root / "static/js/main.js"),
+             json.dumps(cases), system],
+            capture_output=True, text=True)
+        assert proc.returncode == 0, proc.stderr
+        return json.loads(proc.stdout)
+
     proc = subprocess.run(
         [node, str(root / "scripts/calc_parity.js"), str(root / "static/js/main.js"),
          json.dumps(cases)],
@@ -419,7 +439,7 @@ def test_js_and_python_calculators_agree():
     assert proc.returncode == 0, proc.stderr
     js_out = json.loads(proc.stdout)
 
-    labels = {
+    imperial_labels = {
         "square_feet": "Square feet", "cubic_feet": "Cubic feet",
         "cubic_yards": "Cubic yards", "bags_2cf": "2 cu ft bags",
         "bags_1_5cf": "1.5 cu ft bags", "tons": "Tons", "rate_per_1000": "Rate per 1000 sq ft",
@@ -428,14 +448,121 @@ def test_js_and_python_calculators_agree():
         "bags_40lb": "40 lb bags", "bags": "Bags",
         "pounds_nitrogen": "Pounds of nitrogen",
     }
+    metric_labels = {
+        "square_metres": "Square metres", "cubic_metres": "Cubic metres",
+        "litres": "Litres", "bags_50l": "50 L bags", "tonnes": "Tonnes",
+        "rate_per_100m2": "Rate per 100 m²", "kilograms": "Kilograms",
+        "bags_1kg": "1 kg bags", "bags_20kg": "20 kg bags", "bags_25kg": "25 kg bags",
+        "kg_nitrogen": "Kg of nitrogen", "bags": "Bags",
+    }
     for kind, inputs in cases:
         py = calculators.compute(kind, inputs)
         rows = js_out[kind]
         for py_key, py_val in py.items():
-            label = labels.get(py_key)
+            label = imperial_labels.get(py_key)
             if label and label in rows:
                 assert abs(float(rows[label]) - float(py_val)) <= 1.0, \
-                    (kind, py_key, rows[label], py_val)
+                    ("imperial", kind, py_key, rows[label], py_val)
+
+    js_m = js_output("metric", metric_cases)
+    for kind, inputs in metric_cases:
+        py = calculators.compute(kind, inputs, units="metric")
+        rows = js_m[kind]
+        for py_key, py_val in py.items():
+            label = metric_labels.get(py_key)
+            if label and label in rows:
+                assert abs(float(rows[label]) - float(py_val)) <= 1.0, \
+                    ("metric", kind, py_key, rows[label], py_val)
+
+
+def test_unit_toggle_converts_values_both_ways():
+    """Switching units must preserve the physical size: the JS converter is applied
+    going metric and coming back, and a round trip returns the original number."""
+    import json
+    import shutil
+    import subprocess
+    from pathlib import Path as _P
+
+    node = shutil.which("node")
+    if not node:
+        print("  (skipped: node not installed)")
+        return
+    root = _P(__file__).resolve().parent.parent
+    # Each case is [factor, target_system, value]. For target "metric" the value is
+    # imperial and gets converted to metric; for target "imperial" the reverse.
+    checks = [
+        (0.3048, "metric", 10.0),        # 10 ft -> 3.05 m
+        (0.3048, "imperial", 3.0),       # 3 m -> 9.84 ft
+        (2.54, "metric", 6.0),           # 6 in -> 15.24 cm
+        (0.09290304, "metric", 500.0),   # 500 sq ft -> 46.45 sq m
+        (0.45359237, "metric", 20.0),    # 20 lb -> 9.07 kg
+    ]
+    cases = [[c, sys, v] for c, sys, v in checks]
+    proc = subprocess.run(
+        [node, str(root / "scripts/calc_parity.js"), str(root / "static/js/main.js"),
+         json.dumps(cases), "conv"],
+        capture_output=True, text=True)
+    assert proc.returncode == 0, proc.stderr
+    out = json.loads(proc.stdout)
+    assert out[0] == 3.05, out       # 10 ft in metres
+    assert out[1] == 9.84, out       # 3 m in feet
+    assert out[2] == 15.24, out      # 6 in in cm
+    assert out[3] == 46.45, out      # 500 sq ft in sq m
+    assert out[4] == 9.07, out       # 20 lb in kg
+    # Round trip: imperial -> metric -> imperial lands back on the start value.
+    proc = subprocess.run(
+        [node, str(root / "scripts/calc_parity.js"), str(root / "static/js/main.js"),
+         json.dumps([[0.3048, "metric", 12.0]]), "conv"],
+        capture_output=True, text=True)
+    metric_val = json.loads(proc.stdout)[0]
+    proc = subprocess.run(
+        [node, str(root / "scripts/calc_parity.js"), str(root / "static/js/main.js"),
+         json.dumps([[0.3048, "imperial", metric_val]]), "conv"],
+        capture_output=True, text=True)
+    assert abs(json.loads(proc.stdout)[0] - 12.0) <= 0.02, "round trip drifted"
+
+
+def test_calculators_offer_a_metric_toggle():
+    """Every calculator with a real page must ship a working imperial/metric toggle:
+    the toggle markup, and metric defaults/min/max on each numeric input, so the JS
+    can convert values instead of only relabelling units."""
+    _ensure_site()
+    import json
+    from pathlib import Path
+    root = Path(__file__).resolve().parent.parent
+    arts = json.loads((root / "data" / "articles.json").read_text(encoding="utf-8"))
+    pillars = [a for a in arts if a.get("is_pillar") and a.get("calculator")
+               and a.get("status") in ("published", "approved")]
+    assert pillars, "no calculator pillar pages found"
+    for a in pillars:
+        html = (root / "site" / a["slug"] / "index.html").read_text(encoding="utf-8")
+        assert 'data-units="imperial"' in html, f"{a['slug']}: form lacks data-units"
+        assert 'data-unit="metric"' in html and 'data-unit="imperial"' in html, \
+            f"{a['slug']}: unit toggle buttons missing"
+        assert "data-metric-value=" in html, f"{a['slug']}: inputs lack metric defaults"
+        assert "data-label-metric=" in html, f"{a['slug']}: labels lack metric text"
+        # Every switchable numeric input carries a data-conv attribute (possibly empty
+        # for dimensionless fields such as coats or %), so the JS can convert values.
+        assert "data-conv=" in html, f"{a['slug']}: inputs lack data-conv"
+    # The same input id can mean different units in different calculators: paint
+    # "height" is feet->metres (0.3048) but soil "height" is inches->cm (2.54).
+    # A shared id-keyed table would get one of these wrong, so pin both here.
+    def _conv(slug, iid):
+        html = (root / "site" / slug / "index.html").read_text(encoding="utf-8")
+        m = re.search(r'id="in-' + iid + r'"[^>]*?data-conv="([^"]*)"', html)
+        return m.group(1) if m else None
+    assert _conv("paint-calculator", "height") == "0.3048", \
+        "paint height must convert feet to metres"
+    assert _conv("raised-bed-soil-calculator", "height") == "2.54", \
+        "soil height must convert inches to centimetres"
+    assert _conv("fertilizer-calculator", "rate") is not None
+    # Every config calculator must carry metric metadata for every input.
+    cfg = json.loads((root / "config" / "topics.json").read_text(encoding="utf-8"))
+    for name, cdef in cfg["calculators"].items():
+        for inp in cdef.get("inputs", []):
+            assert "metric" in inp, f"{name}.{inp['id']} has no metric metadata"
+            assert inp["metric"].get("default") is not None, \
+                f"{name}.{inp['id']} metric default missing"
 
 
 def test_homepage_quick_answers_link_to_real_calculators():

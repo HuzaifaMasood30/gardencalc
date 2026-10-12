@@ -21,9 +21,16 @@
        id="qp-{{ q.key }}" aria-labelledby="qt-{{ q.key }}" data-qpanel="{{ q.key }}"
        {% if not loop.first %}hidden{% endif %}>
     <div class="calc" data-calc-shell>
-      <form class="calc-form quick-form" data-calc="{{ q.key }}" aria-label="{{ q.title }}">
+      <form class="calc-form quick-form" data-calc="{{ q.key }}" data-units="imperial" aria-label="{{ q.title }}">
+        {% if q.units_enabled %}
+        <div class="calc-units" role="group" aria-label="Unit system">
+          <button type="button" class="unit-btn is-active" data-unit="imperial" aria-pressed="true">Imperial (US)</button>
+          <button type="button" class="unit-btn" data-unit="metric" aria-pressed="false">Metric</button>
+        </div>
+        {% endif %}
         {% for inp in q.inputs %}
-        <label for="q-{{ q.key }}-{{ inp.id }}" class="quick-field">{{ inp.label }}
+        <label for="q-{{ q.key }}-{{ inp.id }}" class="quick-field"><span
+            {%- if q.units_enabled and inp.metric %} data-label-imperial="{{ inp.label }}" data-label-metric="{{ inp.metric.label }}"{% endif %}>{{ inp.label }}</span>
           {% if inp.options %}
           <select id="q-{{ q.key }}-{{ inp.id }}" name="{{ inp.id }}">
             {% for opt in inp.options %}
@@ -34,8 +41,16 @@
           <span class="quick-input">
             <input type="number" inputmode="decimal" id="q-{{ q.key }}-{{ inp.id }}" name="{{ inp.id }}"
                    min="{{ inp.min }}" max="{{ inp.max }}" step="{{ inp.step|default('0.1') }}"
-                   value="{{ inp.default }}">
-            {% if inp.unit %}<span class="unit">{{ inp.unit }}</span>{% endif %}
+                   value="{{ inp.default }}"
+                   {%- if q.units_enabled and inp.metric %}
+                   data-conv="{{ inp.metric.conv }}"
+                   data-imperial-value="{{ inp.default }}" data-imperial-min="{{ inp.min }}"
+                   data-imperial-max="{{ inp.max }}" data-imperial-step="{{ inp.step|default('0.1') }}"
+                   data-metric-value="{{ inp.metric.default }}" data-metric-min="{{ inp.metric.min }}"
+                   data-metric-max="{{ inp.metric.max }}" data-metric-step="{{ inp.metric.step|default('0.1') }}"
+                   {%- endif %}>
+            <span class="unit" data-unit-imperial="{{ inp.unit }}"
+                  {%- if q.units_enabled and inp.metric %} data-unit-metric="{{ inp.metric.unit }}"{% endif %}>{{ inp.unit }}</span>
           </span>
           {% endif %}
         </label>
