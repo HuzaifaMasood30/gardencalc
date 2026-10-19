@@ -5593,9 +5593,9 @@
   },
   {
     "date": "2026-10-19",
-    "articles": 75,
-    "avg_seo_score": 99.7,
-    "total_words": 63175,
+    "articles": 78,
+    "avg_seo_score": 99.6,
+    "total_words": 66529,
     "per_article": [
       {
         "slug": "mulch-calculator",
@@ -6796,6 +6796,54 @@
           "calculator": true
         },
         "word_count": 670
+      },
+      {
+        "slug": "how-many-tiles-do-i-need-for-a-wall",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 850
+      },
+      {
+        "slug": "how-much-grass-seed-per-1000-square-feet-calculator",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 1272
+      },
+      {
+        "slug": "how-many-pounds-of-lawn-fertilizer-per-1000-sq-ft",
+        "score": 88.9,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": false,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 1232
       }
     ]
   }
