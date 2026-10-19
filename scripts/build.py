@@ -97,9 +97,18 @@ FIG_CAPTION = {
     "sod": "Lawn area divided into sod rolls, with a trimming allowance added.",
 }
 
-# Homepage quick calculator: a compact version of the most common tools. Each tab shows
-# only the 2-3 inputs that drive the headline result; the engine (static/js/main.js) is
-# the same code the full calculator pages use, so the numbers can never disagree.
+# Hand-picked guide row for the homepage (replaces the auto-generated "Latest guides"
+# feed). Slugs must be real published guides; build.py silently skips any that are not,
+# so merging a page cannot leave a dead card behind.
+POPULAR_GUIDE_SLUGS = [
+    "how-much-mulch-do-i-need-for-a-flower-bed",
+    "how-much-soil-do-you-need-for-a-raised-bed",
+    "how-much-gravel-do-i-need-for-a-french-drain",
+    "how-many-bags-of-concrete-do-i-need-for-a-8x8-slab",
+    "how-much-topsoil-do-i-need-for-a-garden-bed",
+    "how-much-grass-seed-do-i-need-for-1000-square-feet",
+]
+
 QUICK_CALCS = [
     {"key": "mulch", "label": "Mulch", "icon": "mulch", "slug": "mulch-calculator",
      "inputs": ["length", "width", "depth"],
@@ -707,10 +716,36 @@ def build() -> dict:
                env.get_template("category.html").render(**ctx))
 
     # --- homepage ---
-    # Every pillar is linked from the homepage grid; the old [:8] silently dropped
-    # the newest pillar (fertilizer) from the most-used section.
-    pillars = [a for a in published if a.get("is_pillar")]
     by_slug = {a["slug"]: a for a in published}
+    # Bento grid: one card per category, art = the category's pillar figure. The grid
+    # replaces both the old "Calculators by project" list and the "Most-used calculators"
+    # row, which showed overlapping sets of the same tools.
+    bento_cards = []
+    for c in categories:
+        pillar = pillar_by_cluster.get(c["id"])
+        if not pillar:
+            continue
+        card = _card_meta(site, pillar, c["name"])
+        card.update({"icon": c["icon"], "blurb": c["blurb"], "tag": c["name"],
+                     "feature": c["id"] == "mulch"})
+        bento_cards.append(card)
+    # Hand-picked guide row (replaces the auto-generated "Latest guides" feed). Falls back
+    # to the longest guides if a curated slug is ever merged or unpublished.
+    home_popular_guides = []
+    for slug in POPULAR_GUIDE_SLUGS:
+        a = by_slug.get(slug)
+        if a:
+            home_popular_guides.append(
+                _card_meta(site, a, cat_map.get(a.get("cluster", ""), {}).get("name", "")))
+    if len(home_popular_guides) < 6:
+        chosen = {c["slug"] for c in home_popular_guides}
+        filler = sorted((a for a in published if not a.get("is_pillar") and a["slug"] not in chosen),
+                        key=lambda a: a.get("word_count", 0), reverse=True)
+        for a in filler:
+            if len(home_popular_guides) >= 6:
+                break
+            home_popular_guides.append(
+                _card_meta(site, a, cat_map.get(a.get("cluster", ""), {}).get("name", "")))
     calc_defs_all = tcfg.get("calculators", {})
     quick_calcs = []
     for qc in QUICK_CALCS:
@@ -752,8 +787,9 @@ def build() -> dict:
             "presets": qc.get("presets", []),
         })
     ctx = common(title=f"{site['name']} — Free Home & Garden Calculators",
-                 description=("Free mulch, soil, topsoil, gravel, fertilizer, paint, tile, seed and "
-                              "concrete calculators. Instant answers with the formula shown."),
+                 description=("Free calculators for mulch, soil, raised beds, topsoil, gravel, sand, "
+                              "concrete, compost, bark, sod, grass seed, fertilizer, paint and tile. "
+                              "Instant answers with the formula shown."),
                  canonical=_abs(site, "/"),
                  schemas=[json.dumps(seolib.website_schema(site), ensure_ascii=False),
                           json.dumps(seolib.organization_schema(site), ensure_ascii=False),
@@ -773,23 +809,14 @@ def build() -> dict:
             "url": _abs(site, f"/{art['slug']}/") if art else "",
             "label": calc_defs_all.get(qa["calc"], {}).get("title", qa["calc"].replace("_", " ").title()),
         })
-    ctx.update(categories=categories, articles=published[:12],
-               article_count=len(published), category_count=len(categories),
+    ctx.update(categories=categories,
+               article_count=len(published), calculator_count=len(calculators.REGISTRY),
                chart_count=len(charts.CHARTS), chart_cards=chart_cards,
                planner_cards=planner_cards, seasonal_cards=seasonal_cards,
                featured_seasonal=featured_seasonal,
+               bento_cards=bento_cards, home_popular_guides=home_popular_guides,
                quick_calcs=quick_calcs, quick_answers=quick_answer_items,
-               home_faqs=HOME_FAQS,
-               latest_cards=[_card_meta(site, a, cat_map.get(a.get("cluster", ""), {}).get("name", ""))
-                             for a in published[:6]],
-               latest_all=[{"slug": a["slug"], "title": a["title"],
-                            "desc": _one_sentence(a.get("meta_description", "")),
-                            "updated": a.get("updated", ""),
-                            "updated_human": human_date(a.get("updated", "")),
-                            "category": cat_map.get(a.get("cluster", ""), {}).get("name", "")}
-                           for a in published[6:12]],
-               pillar_cards=[_card_meta(site, a, cat_map.get(a.get("cluster", ""), {}).get("name", ""))
-                             for a in pillars])
+               home_faqs=HOME_FAQS)
     _write(SITE / "index.html", env.get_template("index.html").render(**ctx))
 
     # --- legal / info pages ---
@@ -937,8 +964,9 @@ def build() -> dict:
         if cards:
             groups.append({"id": c["id"], "name": c["name"], "cards": cards})
     ctx = common(title=f"Home & Garden Calculators | {site['name']}",
-                 description=("Every free GardenCalc calculator in one place: mulch, soil, topsoil, "
-                              "gravel, paint, tile, grass seed, concrete and fertilizer."),
+                 description=("Every free GardenCalc calculator in one place: mulch, soil, raised "
+                              "beds, topsoil, gravel, sand, concrete, compost, bark, sod, grass "
+                              "seed, fertilizer, paint and tile."),
                  canonical=_abs(site, "/calculators/"),
                  og_image=_abs(site, "/static/img/og/hub-calculators.png"),
                  schemas=[json.dumps(seolib.breadcrumb_list([("Home", "/"), ("Calculators", "/calculators/")], site),

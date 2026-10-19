@@ -4,17 +4,17 @@
   <div class="wrap hero-inner">
     <div>
       <h1>Garden &amp; home calculators that show their working</h1>
-      <p class="lede">{{ site.tagline }}. Work out exactly how much mulch, soil, topsoil, gravel,
-        fertilizer, paint, tile, seed or concrete you need — with the formula shown, so you can
-        check the maths and understand the method.</p>
+      <p class="lede">{{ site.tagline }}. Work out exactly how much mulch, soil, raised-bed mix,
+        topsoil, gravel, sand, concrete, compost, bark, sod, grass seed, fertilizer, paint or tile
+        you need — with the formula shown, so you can check the maths and understand the method.</p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="#quick-heading">Browse calculators</a>
-        <a class="btn btn-ghost" href="#latest">Latest guides</a>
+        <a class="btn btn-primary" href="#calculators">Try a calculator</a>
+        <a class="btn btn-ghost" href="{{ base_url }}/calculators/">Browse all calculators</a>
       </div>
       <div class="hero-stats">
-        <div><b>Free</b><span>no sign-up</span></div>
-        <div><b>Formula</b><span>shown every time</span></div>
-        <div><b>Bags</b><span>cubic feet &amp; cubic yards</span></div>
+        <span class="trust"><svg aria-hidden="true"><use href="#i-check"></use></svg>No sign-up</span>
+        <span class="trust"><svg aria-hidden="true"><use href="#i-check"></use></svg>Formula shown every time</span>
+        <span class="trust"><svg aria-hidden="true"><use href="#i-check"></use></svg>{{ article_count }} guides &amp; {{ calculator_count }} calculators</span>
       </div>
     </div>
     <div class="hero-card hero-quick">
@@ -42,32 +42,27 @@
 
 <section class="section" id="calculators" aria-labelledby="tools-heading">
   <div class="section-head">
-    <h2 id="tools-heading">Calculators by project</h2>
-    <a href="{{ base_url }}/about/">How they work →</a>
+    <h2 id="tools-heading">Every calculator, by project</h2>
+    <a href="{{ base_url }}/calculators/">All {{ calculator_count }} calculators →</a>
   </div>
-  <div class="grid grid-cats">
+  <p class="section-sub">Each tool shows the answer first and the working right underneath, so you
+    can sanity-check the number before you order materials.</p>
+  <div class="chip-row" aria-label="Browse by project">
     {% for c in categories %}
-    <a class="card" href="{{ base_url }}/category/{{ c.id }}/">
-      <span class="ico"><svg aria-hidden="true"><use href="#i-{{ c.icon }}"></use></svg></span>
-      <span class="card-body">
-        <h3>{{ c.name }}</h3>
-        <p>{{ c.blurb }}</p>
-      </span>
-    </a>
+    <a href="{{ base_url }}/category/{{ c.id }}/">
+      <svg aria-hidden="true"><use href="#i-{{ c.icon }}"></use></svg>{{ c.name }}</a>
     {% endfor %}
   </div>
-</section>
-
-<section class="section" aria-labelledby="popular-heading">
-  <div class="section-head"><h2 id="popular-heading">Most-used calculators</h2></div>
-  <div class="grid a-cards">
-    {% for a in pillar_cards %}
-    <a class="a-card" href="{{ base_url }}/{{ a.slug }}/">
-      <figure><img src="{{ a.thumb }}" width="480" height="270" alt="{{ a.alt }}" loading="lazy" decoding="async"></figure>
-      <div class="a-card-body">
-        {% if a.category %}<span class="tag">{{ a.category }}</span>{% endif %}
+  <div class="bento">
+    {% for a in bento_cards %}
+    <a class="bento-card{% if a.feature %} is-feature{% endif %}" href="{{ base_url }}/{{ a.slug }}/">
+      <figure><img src="{{ a.thumb }}" width="480" height="270" alt="{{ a.alt }}"
+                   loading="lazy" decoding="async"></figure>
+      <div class="bento-body">
+        <span class="card-tag">{{ a.tag }}</span>
         <h3>{{ a.title }}</h3>
-        <p>{{ a.desc }}</p>
+        <p>{{ a.blurb }}</p>
+        <span class="bento-go">Open calculator →</span>
       </div>
     </a>
     {% endfor %}
@@ -125,27 +120,15 @@
   {% include "charts_list.html" %}
 </section>
 
-<section class="section" aria-labelledby="seasonal-heading">
-  <div class="section-head"><h2 id="seasonal-heading">Seasonal guides</h2>
-    <p>Timing guides for the right time of year, updated each season.</p></div>
-  <div class="card-grid">
-    {% for s in seasonal_cards %}
-    <a class="card" href="{{ base_url }}/{{ s.slug }}/">
-      <span class="card-tag">{{ s.cluster_name }}</span>
-      <h3>{{ s.title }}</h3>
-      <p>{{ s.description }}</p>
-    </a>
-    {% endfor %}
-  </div>
-</section>
-
-<section class="section" aria-labelledby="latest-heading" id="latest">
-  <div class="section-head"><h2 id="latest-heading">Latest guides</h2>
+{% if home_popular_guides %}
+<section class="section" aria-labelledby="popular-guides-heading" id="guides">
+  <div class="section-head"><h2 id="popular-guides-heading">Popular guides</h2>
     <a href="{{ base_url }}/guides/">View all guides →</a></div>
   <div class="grid a-cards">
-    {% for a in latest_cards %}
+    {% for a in home_popular_guides %}
     <a class="a-card" href="{{ base_url }}/{{ a.slug }}/">
-      <figure><img src="{{ a.thumb }}" width="480" height="270" alt="{{ a.alt }}" loading="lazy" decoding="async"></figure>
+      <figure><img src="{{ a.thumb }}" width="480" height="270" alt="{{ a.alt }}"
+                   loading="lazy" decoding="async"></figure>
       <div class="a-card-body">
         {% if a.category %}<span class="tag">{{ a.category }}</span>{% endif %}
         <h3>{{ a.title }}</h3>
@@ -155,20 +138,8 @@
     </a>
     {% endfor %}
   </div>
-  {% if latest_all %}
-  <ul class="post-list more-guides">
-    {% for a in latest_all %}
-    <li>
-      <span>
-        <a href="{{ base_url }}/{{ a.slug }}/">{{ a.title }}</a>
-        <span class="excerpt">{{ a.desc }}</span>
-      </span>
-      <span class="when"><time datetime="{{ a.updated }}">{{ a.updated_human }}</time></span>
-    </li>
-    {% endfor %}
-  </ul>
-  {% endif %}
 </section>
+{% endif %}
 
 {% if home_faqs %}
 <section class="section" aria-labelledby="home-faq-heading">

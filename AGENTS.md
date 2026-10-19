@@ -70,6 +70,18 @@ python3 scripts/verify.py                # site health: links, tags, sitemap
 python3 scripts/live_audit.py https://huzaifamasood30.github.io/gardencalc/
 ```
 
+## Local preview (read this before screenshotting)
+- Every template URL is absolute from `config/site.json:base_url`, so `site/` built with
+  the default config links its CSS/JS to the *production* host. A local server then
+  renders the OLD deployed stylesheet and you will debug phantom regressions.
+  Build for preview with `SITE_BASE_URL="http://localhost:8099" python3 scripts/build.py`
+  then serve `site/`. Rebuild with the plain command before committing.
+- `.design-tmp/` is the gitignored scratch dir for the design work: `shot.js`
+  (puppeteer full-page screenshots), `audit.js` (overflow + tap-target + alt sweep
+  across 320/390/768/1024/1440), `cls.js`/`lcp.js` (layout-shift and LCP attribution),
+  `interact.js` (drives the quick calculator), `link_metrics.py` (expects the
+  `/gardencalc` prefix), `contrast.py`. Lighthouse + puppeteer-core live in `/tmp/lh`.
+
 ## Internal linking rules (important)
 - Same-cluster siblings are linked as a stable ring so every article has inbound
   links; do not revert `build_for` to a greedy "top N", which starves the
@@ -116,9 +128,32 @@ python3 scripts/live_audit.py https://huzaifamasood30.github.io/gardencalc/
   `workflow_dispatch`; system token can only read.
 
 ## Design system & figures
-- `static/css/style.css` is a self-contained design system (CSS variables, no web
-  fonts, no frameworks) so Core Web Vitals stay green. Templates must only use
-  classes defined there.
+- `static/css/style.css` is a self-contained design system (CSS variables, no
+  frameworks) so Core Web Vitals stay green. Templates must only use classes defined
+  there.
+- Fonts are self-hosted variable woff2 in `static/fonts/` (`fraunces-var.woff2` for
+  display headings, `inter-var.woff2` for body), fetched by `scripts/fetch_fonts.py`.
+  `base.html` preloads BOTH with `crossorigin`; preloading only Inter saves no
+  measurable LCP but reintroduces a small CLS when Fraunces swaps, so keep both.
+- Honest cost of the fonts (Lighthouse mobile, same machine): without them the
+  homepage is ~2.0 s LCP / 99 perf; with them ~2.7 s LCP / 95-97 perf. ~120 KB of
+  woff2 is on the critical path and the text LCP waits for the body font, so if perf
+  ever needs headroom the fix is to subset the woff2 to the glyphs the site uses, not
+  to drop self-hosting. Never re-add a Google Fonts `<link>` — that reintroduces a
+  third-party request and a render-blocking stylesheet.
+- Contrast is a hard gate, not a nicety: `--brand-2` is `#147438` (not the Tailwind
+  `#15803D`) because that lighter green lands at 4.43:1 on `--brand-tint` `#EAF3EC`,
+  which fails AA for the in-card links. `--accent` is `#B5502C` (5.0:1) because the
+  result-number colour is also used on the warm page background. Re-run
+  `.design-tmp/contrast.py` after touching any ink token.
+- Homepage (`templates/index.html`) order: hero+quick calc, seasonal, "Every
+  calculator, by project" (category chip row + 13-card bento grid, one `.is-feature`
+  card spanning two columns), quick answers, how-it-works, planners, charts, popular
+  guides, FAQ. The bento grid is the single home for calculator links; do not add a
+  second calculator grid below it (that was the old `pillar_cards` section).
+- `POPULAR_GUIDE_SLUGS` in `build.py` pins the six editorial "Popular guides" cards
+  (curated, not recency-ranked) and backfills from the longest non-pillar articles if
+  a slug goes missing. `home_popular_guides` is the template var.
 - `scripts/images.py` generates an original WebP figure + thumbnail per article via
   Pillow (installed from requirements.txt). Figures are written into the *copied*
   `site/static/img/{fig,thumb}` during `build.py`.

@@ -5,3 +5,5 @@ venv/
 .env
 site/
 .agent_tmp/
+
+.design-tmp/
