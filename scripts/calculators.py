@@ -15,6 +15,10 @@ GRAVEL_TONS_PER_CUYD = {
     "decomposed_granite": 1.35,
 }
 
+# Density of damp builder's / masonry sand in tons per cubic yard. Sand is denser
+# than 3/4" crushed stone, so a sand page cannot reuse the gravel constant.
+SAND_TONS_PER_CUYD = 1.35
+
 
 def _round(value: float, places: int = 2) -> float:
     return round(value + 1e-9, places)
@@ -118,6 +122,57 @@ def topsoil(length_ft: float, width_ft: float, depth_in: float) -> dict:
     }
 
 
+def sand(length_ft: float, width_ft: float, depth_in: float) -> dict:
+    """Builder's / paver sand, sold by the ton, cubic yard or 0.5 cu ft bag."""
+    sqft = length_ft * width_ft
+    cuft = sqft * (depth_in / 12.0)
+    cuyd = cuft / 27.0
+    return {
+        "square_feet": _round(sqft, 1),
+        "cubic_yards": _round(cuyd, 2),
+        "tons": _round(cuyd * SAND_TONS_PER_CUYD, 2),
+        "bags_0_5cf": math.ceil(cuft / 0.5),  # 0.5 cu ft bags
+    }
+
+
+def compost(length_ft: float, width_ft: float, depth_in: float) -> dict:
+    """Compost / soil amendment, spread far shallower than mulch, in 1 cu ft bags."""
+    sqft = length_ft * width_ft
+    cuft = sqft * (depth_in / 12.0)
+    cuyd = cuft / 27.0
+    return {
+        "square_feet": _round(sqft, 1),
+        "cubic_feet": _round(cuft, 1),
+        "cubic_yards": _round(cuyd, 2),
+        "bags_1cf": math.ceil(cuft),  # 1 cu ft bags
+    }
+
+
+def bark(length_ft: float, width_ft: float, depth_in: float) -> dict:
+    """Bark and wood chips, spread thicker than mulch and sold in 2 cu ft bags."""
+    sqft = length_ft * width_ft
+    cuft = sqft * (depth_in / 12.0)
+    cuyd = cuft / 27.0
+    return {
+        "square_feet": _round(sqft, 1),
+        "cubic_feet": _round(cuft, 1),
+        "cubic_yards": _round(cuyd, 2),
+        "bags_2cf": math.ceil(cuft / 2),  # 2 cu ft bags
+    }
+
+
+def sod(length_ft: float, width_ft: float, waste_pct: float) -> dict:
+    """Sod is ordered by the roll (a common 10 sq ft) and by the pallet (~500 sq ft)."""
+    sqft = length_ft * width_ft
+    rolls = sqft / 10.0
+    return {
+        "square_feet": _round(sqft, 1),
+        "rolls": math.ceil(rolls),
+        "rolls_with_waste": math.ceil(rolls * (1 + waste_pct / 100.0)),
+        "pallets": math.ceil(sqft / 500.0),
+    }
+
+
 def fertilizer(area_sqft: float, rate_per_1000: float, bag_lb: float,
                nitrogen_pct: float = 20.0) -> dict:
     """Product needed to deliver a target nitrogen rate.
@@ -147,6 +202,10 @@ REGISTRY = {
     "concrete": concrete,
     "topsoil": topsoil,
     "fertilizer": fertilizer,
+    "sand": sand,
+    "compost": compost,
+    "bark": bark,
+    "sod": sod,
 }
 
 
@@ -265,6 +324,53 @@ def topsoil_m(length: float, width: float, depth: float) -> dict:
     }
 
 
+def sand_m(length: float, width: float, depth: float) -> dict:
+    """length/width in metres, depth in centimetres."""
+    sqm = length * width
+    vol = sqm * (depth / 100.0)
+    return {
+        "square_metres": _round(sqm, 1),
+        "cubic_metres": _round(vol, 2),
+        "tonnes": _round(vol * (SAND_TONS_PER_CUYD / 0.764554857984), 2),
+    }
+
+
+def compost_m(length: float, width: float, depth: float) -> dict:
+    """length/width in metres, depth in centimetres."""
+    sqm = length * width
+    vol = sqm * (depth / 100.0)
+    return {
+        "square_metres": _round(sqm, 1),
+        "cubic_metres": _round(vol, 2),
+        "litres": _round(vol * LITRES_PER_CUM, 0),
+        "bags_50l": _bags(vol, 50),
+    }
+
+
+def bark_m(length: float, width: float, depth: float) -> dict:
+    """length/width in metres, depth in centimetres."""
+    sqm = length * width
+    vol = sqm * (depth / 100.0)
+    return {
+        "square_metres": _round(sqm, 1),
+        "cubic_metres": _round(vol, 2),
+        "litres": _round(vol * LITRES_PER_CUM, 0),
+        "bags_50l": _bags(vol, 50),
+    }
+
+
+def sod_m(length: float, width: float, waste: float) -> dict:
+    """length/width in metres; rolls of 1 sq m (a common metric sod roll)."""
+    sqm = length * width
+    rolls = sqm / 1.0
+    return {
+        "square_metres": _round(sqm, 1),
+        "rolls": math.ceil(rolls),
+        "rolls_with_waste": math.ceil(rolls * (1 + waste / 100.0)),
+        "pallets": math.ceil(sqm / 50.0),
+    }
+
+
 def fertilizer_m(area: float, rate: float, bag: float,
                  nitrogen: float = 20.0) -> dict:
     """area in square metres; rate in kg of actual nitrogen per 100 m2."""
@@ -289,6 +395,10 @@ METRIC_REGISTRY = {
     "concrete": concrete_m,
     "topsoil": topsoil_m,
     "fertilizer": fertilizer_m,
+    "sand": sand_m,
+    "compost": compost_m,
+    "bark": bark_m,
+    "sod": sod_m,
 }
 
 # Config ids -> metric function keyword names. Metric functions take the config id
@@ -310,6 +420,10 @@ PARAM_MAP = {
     "topsoil": {"length": "length_ft", "width": "width_ft", "depth": "depth_in"},
     "fertilizer": {"area": "area_sqft", "rate": "rate_per_1000", "bag": "bag_lb",
                    "nitrogen": "nitrogen_pct"},
+    "sand": {"length": "length_ft", "width": "width_ft", "depth": "depth_in"},
+    "compost": {"length": "length_ft", "width": "width_ft", "depth": "depth_in"},
+    "bark": {"length": "length_ft", "width": "width_ft", "depth": "depth_in"},
+    "sod": {"length": "length_ft", "width": "width_ft", "waste": "waste_pct"},
 }
 
 

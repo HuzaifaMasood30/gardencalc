@@ -37,6 +37,10 @@ PROJECT_NEXT_STEPS = {
     "tile": ["paint", "concrete", "gravel"],
     "grass-seed": ["topsoil", "fertilizer", "soil"],
     "fertilizer": ["grass-seed", "topsoil", "soil"],
+    "sand": ["gravel", "concrete", "soil"],
+    "compost": ["soil", "topsoil", "mulch"],
+    "bark": ["mulch", "soil", "topsoil"],
+    "sod": ["topsoil", "grass-seed", "soil"],
 }
 
 # Extra indexable site pages, appended to the sitemap with a real lastmod.
@@ -59,6 +63,7 @@ CATEGORY_ICONS = {
     "mulch": "mulch", "soil": "soil", "gravel": "gravel", "paint": "paint",
     "tile": "tile", "grass-seed": "seed", "concrete": "concrete",
     "topsoil": "topsoil", "fertilizer": "fertilizer",
+    "sand": "gravel", "compost": "soil", "bark": "mulch", "sod": "seed",
 }
 BLURBS = {
     "mulch": "Work out bags or cubic yards of mulch for any bed size and depth.",
@@ -70,6 +75,10 @@ BLURBS = {
     "concrete": "Get cubic yards and bag counts for slabs and footings.",
     "topsoil": "Estimate cubic yards or bags of topsoil to fill or level any area.",
     "fertilizer": "Find pounds and bags of fertilizer for your lawn at the right rate.",
+    "sand": "Work out tons, cubic yards or bags of sand for paver bases and fill.",
+    "compost": "Estimate cubic feet or bags of compost to amend beds and lawns.",
+    "bark": "Calculate bags or cubic yards of bark and wood chips for any bed.",
+    "sod": "Count sod rolls and pallets to cover a lawn of any size.",
 }
 # What the figure shows, per category — used for the caption and image alt text.
 FIG_CAPTION = {
@@ -82,6 +91,10 @@ FIG_CAPTION = {
     "grass-seed": "Sowing rates per 1,000 sq ft for new lawns and overseeding.",
     "fertilizer": "Application rates per 1,000 sq ft at light, standard and heavy doses.",
     "tile": "Tile layout showing the waste allowance added for cuts and breakage.",
+    "sand": "Cross-section of a compacted sand layer at the chosen depth.",
+    "compost": "Cross-section of a bed being amended with a shallow compost layer.",
+    "bark": "Cross-section of a bark layer at the chosen depth.",
+    "sod": "Lawn area divided into sod rolls, with a trimming allowance added.",
 }
 
 # Homepage quick calculator: a compact version of the most common tools. Each tab shows
@@ -117,6 +130,20 @@ QUICK_CALCS = [
     {"key": "fertilizer", "label": "Fertilizer", "icon": "fertilizer", "slug": "fertilizer-calculator",
      "inputs": ["area", "rate", "nitrogen", "bag"],
      "presets": [{"label": "5,000 sq ft, 1 lb N, 20-0-0", "v": {"area": 5000, "rate": 1, "nitrogen": 20, "bag": 40}}]},
+    {"key": "sand", "label": "Sand", "icon": "gravel", "slug": "sand-calculator",
+     "inputs": ["length", "width", "depth"],
+     "presets": [{"label": "Paver base 10x10, 2 in", "v": {"length": 10, "width": 10, "depth": 2}},
+                 {"label": "Sandbox 6x6, 4 in", "v": {"length": 6, "width": 6, "depth": 4}}]},
+    {"key": "compost", "label": "Compost", "icon": "soil", "slug": "compost-calculator",
+     "inputs": ["length", "width", "depth"],
+     "presets": [{"label": "Bed 20x10, 1 in", "v": {"length": 20, "width": 10, "depth": 1}},
+                 {"label": "Bed 20x10, 2 in", "v": {"length": 20, "width": 10, "depth": 2}}]},
+    {"key": "bark", "label": "Bark", "icon": "mulch", "slug": "bark-calculator",
+     "inputs": ["length", "width", "depth"],
+     "presets": [{"label": "Bed 20x10, 3 in", "v": {"length": 20, "width": 10, "depth": 3}}]},
+    {"key": "sod", "label": "Sod", "icon": "seed", "slug": "sod-calculator",
+     "inputs": ["length", "width", "waste"],
+     "presets": [{"label": "Lawn 25x20 ft", "v": {"length": 25, "width": 20, "waste": 5}}]},
 ]
 # Short unit suffixes so the compact inputs stay readable on a 360 px screen.
 QUICK_UNITS = {"length": "ft", "width": "ft", "depth": "in", "height": "in",
@@ -157,6 +184,18 @@ QUICK_ANSWERS = [
     {"calc": "fertilizer", "args": {"area": 5000, "rate": 1, "bag": 40, "nitrogen": 20},
      "q": "5,000 sq ft lawn at 1 lb N",
      "answer": lambda o: f"{o['pounds']} lb of 20-0-0 product — about {o['bags']} bag of 40 lb"},
+    {"calc": "sand", "args": {"length": 10, "width": 10, "depth": 2},
+     "q": "10x10 ft paver base, 2 in deep",
+     "answer": lambda o: f"{o['cubic_yards']} cubic yards, roughly {o['tons']} tons of sand"},
+    {"calc": "compost", "args": {"length": 20, "width": 10, "depth": 1},
+     "q": "200 sq ft bed, 1 in of compost",
+     "answer": lambda o: f"{o['cubic_feet']} cubic feet — about {o['bags_1cf']} bags of 1 cu ft"},
+    {"calc": "bark", "args": {"length": 20, "width": 10, "depth": 3},
+     "q": "200 sq ft bed, 3 in of bark",
+     "answer": lambda o: f"{o['cubic_yards']} cubic yards — about {o['bags_2cf']} bags of 2 cu ft"},
+    {"calc": "sod", "args": {"length": 25, "width": 20, "waste": 5},
+     "q": "500 sq ft lawn in sod",
+     "answer": lambda o: f"{o['rolls_with_waste']} rolls — about {o['pallets']} pallet"},
 ]
 
 # Homepage FAQ. These exact questions and answers are rendered visibly in accordions AND
@@ -257,6 +296,38 @@ CATEGORY_FAQS = {
         {"q": "How do I convert a nitrogen rate to bags?",
          "a": "Divide the pounds of nitrogen by the nitrogen share on the bag label, then divide by "
               "the bag weight. The calculator does this from your area and bag size."},
+    ],
+    "sand": [
+        {"q": "How much sand do I need under pavers?",
+         "a": "A bedding layer is about 1 inch of sharp sand over a compacted base. A 10x10 ft patio "
+              "at 1 inch needs roughly 0.3 cubic yards, about 0.4 tons."},
+        {"q": "How many bags of sand are in a cubic yard?",
+         "a": "Fifty-four 0.5 cubic foot bags, since a cubic yard is 27 cubic feet. The calculator "
+              "shows the bag count alongside tons and cubic yards."},
+    ],
+    "compost": [
+        {"q": "How much compost do I add to a garden bed?",
+         "a": "Spread 1 to 3 inches and work it into the top few inches of soil. A 200 sq ft bed at "
+              "1 inch needs about 17 cubic feet, or 17 bags of 1 cubic foot."},
+        {"q": "Can you use too much compost?",
+         "a": "Yes. A very deep layer can smother roots and tie up nitrogen as it breaks down, so mix "
+              "it into the soil rather than leaving a thick blanket on top."},
+    ],
+    "bark": [
+        {"q": "How much bark do I need for a bed?",
+         "a": "Multiply the area by the depth in feet for cubic feet, then divide by 27 for cubic "
+              "yards. A 200 sq ft bed at 3 inches needs about 1.85 cubic yards, or 25 bags of 2 cu ft."},
+        {"q": "How deep should bark mulch be?",
+         "a": "Two to three inches for most beds, up to four for heavy weed suppression, kept a few "
+              "inches clear of trunks and stems."},
+    ],
+    "sod": [
+        {"q": "How many rolls of sod do I need?",
+         "a": "Divide the lawn area by the roll coverage, usually 10 sq ft, and add about 5% for "
+              "trimming. A 500 sq ft lawn needs about 53 rolls."},
+        {"q": "How much does a pallet of sod cover?",
+         "a": "Commonly about 500 square feet, though it varies by supplier. The calculator shows "
+              "both the roll count and the pallet count."},
     ],
 }
 

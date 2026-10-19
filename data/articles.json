@@ -140,7 +140,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -301,7 +301,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -462,7 +462,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -626,7 +626,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -790,7 +790,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -950,7 +950,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -999,7 +999,7 @@
       "bags_60lb": 75,
       "bags_80lb": 56
     },
-    "meta_description": "This calculator works out how much concrete a slab needs from its length, width and thickness. It returns the volume in cubic yards and the number of 60.",
+    "meta_description": "This calculator works out how much concrete a slab needs from its length, width and thickness. It returns the volume in cubic yards",
     "body_markdown": "This calculator works out how much concrete a slab needs from its length, width and thickness. It returns the volume in cubic yards and the number of 60 lb or 80 lb bags, so you can choose between mixing by hand and ordering ready-mix.\n\n## What the Result Means\n\n**Cubic yards** is the unit ready-mix suppliers use. The **bag count** assumes a fixed yield per bag, about 0.6 cubic feet for an 80 lb bag and 0.45 for a 60 lb bag. Both describe the same volume, so compare the bag cost against ready-mix per yard before deciding.\n\n## Choosing the Thickness\n\n- **4 inches** for paths, patios and light garden slabs.\n- **5 inches** for a drive taking occasional cars.\n- **6 inches** for regular vehicle traffic and heavy loads.\n\nThickness is set by what the slab carries, not by the budget. A slab too thin for its load cracks in the first winter.\n\n## A Worked Example\n\nA slab 10 ft by 10 ft at 4 inches is 100 square feet x 0.333 ft, which is 33.3 cubic feet, or 1.23 cubic yards. In 80 lb bags that is about 56; in 60 lb bags, about 74. At 6 inches the volume rises to 50 cubic feet, or 84 bags of 80 lb.\n\n## Common Slab Sizes\n\n- **6 x 6 ft at 4 in:** 12 cubic feet, 20 bags of 80 lb.\n- **8 x 8 ft at 4 in:** 21.3 cubic feet, 36 bags.\n- **10 x 10 ft at 4 in:** 33.3 cubic feet, 56 bags.\n- **10 x 10 ft at 6 in:** 50 cubic feet, 84 bags.\n\n## Ready-Mix or Bags\n\nPast about one cubic yard, ready-mix is faster and usually cheaper, though most suppliers have a minimum load and the pour cannot wait. Bagged mix suits fence footings, steps, small pads and repairs. A 10 x 10 slab is near the limit of what is practical to mix by hand.\n\n## Mixing and Curing\n\nMix only what you can place within about half an hour, and mix it stiff rather than wet; extra water weakens the set concrete. Use the water stated on the bag. After the pour, cover the slab and let it cure slowly for several days, and cut control joints so any cracking follows a straight line.\n\n## Common Mistakes\n\n- Making the slab too thin for the load it carries.\n- Pouring onto soft or uneven ground without a compacted base.\n- Adding too much water to make the mix easier to move.\n- Letting the slab dry in the sun instead of curing slowly under cover.\n\n## How to Use the Result\n\nAdd 5 to 10 per cent for spillage and uneven ground, and compare the bag total against a ready-mix quote including its minimum charge. Have formwork, reinforcement mesh and helpers ready before either route, because once a pour starts it cannot pause.\n\n## Tools and Safety for a Small Pour\n\nA small pour needs less equipment than people expect, but it needs the right pieces. Have a wheelbarrow or mixing tub, a hoe or paddle mixer, a shovel, a float and a trowel, a straight edge or screed board, and formwork boards with pegs. For anything beyond a small pad, hire a mixer, because mixing bag after bag by hand wears out a small team quickly.\n\nConcrete is alkaline and dries the skin, so wear gloves and eye protection, and avoid kneeling in wet mix. Mix in a well-ventilated spot, and never add more water than the bag states to make it easier to move; the strength comes from a stiff mix, and extra water is the most common reason a slab fails.\n\nSet the formwork square before you mix anything. Check the diagonals are equal, which is the simplest way to confirm a true rectangle, and peg the boards so they cannot bow under the weight of the mix. Lay any reinforcement mesh on small spacers so it sits in the lower third of the slab rather than on the ground.\n\nOnce the pour is finished, clean your tools immediately. Set concrete is far harder to remove than wet, and a barrow left overnight is a job nobody wants the next morning.\n\n",
     "faq": [
       {
@@ -1104,7 +1104,7 @@
         },
         "meta_length": {
           "pass": true,
-          "detail": "meta length 153"
+          "detail": "meta length 131"
         },
         "title_length": {
           "pass": true,
@@ -1112,7 +1112,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -1274,7 +1274,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -1639,7 +1639,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -1803,7 +1803,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -1963,7 +1963,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -2125,7 +2125,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -2287,7 +2287,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -2536,7 +2536,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -2698,7 +2698,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -2947,7 +2947,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3111,7 +3111,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3214,14 +3214,14 @@
         "title": "How Many SQ FT Does a 50 Lb Bag of Grass Seed Cover"
       },
       {
-        "to": "how-much-mulch-do-i-need-for-my-yard",
-        "anchor": "how much mulch do i need for my yard",
-        "title": "How Much Mulch Do I Need for My Yard: Calculator & Guide"
+        "to": "sand-calculator",
+        "anchor": "how much sand do i need",
+        "title": "How Much Sand Do I Need: Calculator & Guide"
       },
       {
-        "to": "how-much-mulch-do-i-need-per-square-foot",
-        "anchor": "how much mulch do i need per square foot",
-        "title": "How Much Mulch Do I Need Per Square Foot: Calculator & Guide"
+        "to": "compost-calculator",
+        "anchor": "how much compost do i need",
+        "title": "How Much Compost Do I Need: Calculator & Guide"
       }
     ],
     "schema_types": [
@@ -3271,7 +3271,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3433,7 +3433,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3610,7 +3610,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3657,7 +3657,7 @@
       "pounds": 5.0,
       "bags": 1
     },
-    "meta_description": "To determine how much fertilizer per 1000 sq ft you need, divide the desired nitrogen rate by the percentage of nitrogen in your bag and multiply by 100.",
+    "meta_description": "To determine how much fertilizer per 1000 sq ft you need, divide the desired nitrogen rate by the percentage of nitrogen in your bag",
     "body_markdown": "To determine how much fertilizer per 1000 sq ft you need, divide the desired nitrogen rate by the percentage of nitrogen in your bag and multiply by 100. Most lawn care experts recommend applying 0.5 to 1.0 pounds of actual nitrogen per 1000 sq ft per application.\n\n## How to Calculate Fertilizer\n\nTo find the exact amount of product required, you must first understand the N-P-K ratio printed on your bag. These three numbers represent the percentage by weight of nitrogen, phosphorus, and potassium. If you are trying to figure out how much nitrogen fertilizer per 1000 sq ft to apply, focus on the first number.\n\nThe formula is: (Desired nitrogen rate ÷ Percentage of nitrogen in the bag) × 100 = Pounds of product per 1000 sq ft.\n\nIf you are using a fertilizer calculator, you will input your total square footage, the nitrogen percentage on the bag, and your target rate. Always measure your lawn accurately before buying supplies to avoid over-application.\n\n### Worked Example\n\nIf you have a lawn measuring 5000 square feet and you want to apply a rate of 1 pound of nitrogen per 1000 square feet using a 20-pound bag of fertilizer that contains 10% nitrogen, follow these steps:\n\n1. Determine the product needed per 1000 sq ft: (1.0 ÷ 0.10) = 10 pounds of product.\n2. Calculate the total for your area: 10 pounds × 5 (units of 1000 sq ft) = 50 pounds of product.\n3. If your bag weighs 40 pounds, you will need to purchase more than one bag.\n4. Based on these inputs: area = 5000, rate = 1, bag = 40.\n5. You need **5.0** pounds of nitrogen total for the application.\n6. You will need to purchase **1** bag if you were covering a smaller area, but for 5000 sq ft at this rate, you require 1.25 bags.\n\n## How Much You Need at Common Sizes\n\nUse this table to quickly estimate how much product you need based on the size of your lawn.\n\n| Lawn Size (sq ft) | Product Needed (lbs) |\n| :--- | :--- |\n| 1,000 | 5 |\n| 2,500 | 12.5 |\n| 5,000 | 25 |\n| 10,000 | 50 |\n\n## Understanding Different Fertilizer Types\n\nNot all fertilizers are applied the same way. When asking how much liquid fertilizer per 1000 sq ft to use, the answer depends on the concentration of the liquid. Liquid fertilizers are often measured in fluid ounces rather than pounds. Always check the label for the specific dilution ratio, as liquid products are designed to be mixed with water to ensure even distribution across the foliage or soil.\n\nWhen planting new grass, you will likely use a different product. Determining how much starter fertilizer per 1000 sq ft to apply is critical for root development. Most manufacturers provide specific instructions for new seedbeds. For example, if you are wondering how much Scotts starter fertilizer per 1000 sq ft to use, look for the application rate on the back of the bag. Typically, these products are applied at a slightly higher rate than standard maintenance fertilizers to provide immediate nutrients to developing seedlings.\n\n## Common Mistakes to Avoid\n\nThe most frequent error is failing to calibrate your spreader. Even if you calculate the math correctly, a spreader that is set too wide or too narrow will result in uneven growth and potential fertilizer burn. Always perform a test run on a driveway or sidewalk to see how much product is being released before heading onto the grass.\n\nOver-applying fertilizer is another significant risk. Applying too much nitrogen can lead to rapid, weak top growth at the expense of root health, and it can also cause chemical runoff into local waterways. Always follow the guidelines provided on the product label and never exceed the recommended rate.\n\nIgnoring the weather is also a mistake. Avoid applying fertilizer immediately before a heavy rainstorm, as the nutrients may wash away before the soil can absorb them. Conversely, applying fertilizer during a drought or extreme heat can stress the grass. Aim for application when the grass is dry but the soil has adequate moisture, and consider watering the lawn lightly after application to help the nutrients reach the root zone.\n\nFinally, do not guess your square footage. Walking the perimeter or using an online satellite mapping tool is far more accurate than estimating by eye. If you overestimate your lawn size, you will end up with leftover product; if you underestimate, you will run out mid-job, leading to inconsistent application rates across the lawn. Take the time to measure properly so you can apply the correct amount of nitrogen fertilizer per 1000 sq ft every time.",
     "faq": [
       {
@@ -3777,7 +3777,7 @@
         },
         "meta_length": {
           "pass": true,
-          "detail": "meta length 153"
+          "detail": "meta length 132"
         },
         "title_length": {
           "pass": true,
@@ -3785,7 +3785,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3947,7 +3947,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -4108,7 +4108,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -4269,7 +4269,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -4433,7 +4433,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -4597,7 +4597,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -5070,7 +5070,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -5234,7 +5234,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -5609,7 +5609,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -5771,7 +5771,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6021,7 +6021,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6301,7 +6301,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6404,14 +6404,14 @@
         "title": "How Many SQ FT Does a 50 Lb Bag of Grass Seed Cover"
       },
       {
-        "to": "how-much-gravel-do-i-need-for-my-backyard",
-        "anchor": "how much gravel do i need for my backyard",
-        "title": "How Much Gravel Do I Need for My Backyard"
+        "to": "bark-calculator",
+        "anchor": "how much bark do i need",
+        "title": "How Much Bark Do I Need: Calculator & Guide"
       },
       {
-        "to": "how-much-mulch-do-i-need-for-100-square-feet",
-        "anchor": "how much mulch do i need for 100 square feet",
-        "title": "How Much Mulch Do I Need for 100 Square Feet"
+        "to": "sod-calculator",
+        "anchor": "how much sod do i need",
+        "title": "How Much Sod Do I Need: Calculator & Guide"
       }
     ],
     "schema_types": [
@@ -6461,7 +6461,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6566,14 +6566,14 @@
         "title": "How Many Pounds of Starter Fertilizer Per 1000 SQ FT"
       },
       {
-        "to": "how-much-paint-do-i-need-for-a-small-bedroom",
-        "anchor": "how much paint do i need for a small bedroom",
-        "title": "How Much Paint Do I Need for a Small Bedroom"
+        "to": "how-much-mulch-do-i-need-for-my-yard",
+        "anchor": "how much mulch do i need for my yard",
+        "title": "How Much Mulch Do I Need for My Yard: Calculator & Guide"
       },
       {
-        "to": "how-many-tiles-do-i-need-for-a-roof",
-        "anchor": "how many tiles do i need for a roof",
-        "title": "How Many Tiles Do I Need for a Roof: Calculator & Guide"
+        "to": "how-much-mulch-do-i-need-per-square-foot",
+        "anchor": "how much mulch do i need per square foot",
+        "title": "How Much Mulch Do I Need Per Square Foot: Calculator & Guide"
       }
     ],
     "schema_types": [
@@ -6622,7 +6622,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6784,7 +6784,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -7033,7 +7033,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -7314,7 +7314,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -7415,6 +7415,16 @@
         "to": "how-many-sq-ft-does-a-50-lb-bag-of-grass-seed-cover",
         "anchor": "how many sq ft does a 50 lb bag of grass",
         "title": "How Many SQ FT Does a 50 Lb Bag of Grass Seed Cover"
+      },
+      {
+        "to": "how-much-gravel-do-i-need-for-my-backyard",
+        "anchor": "how much gravel do i need for my backyard",
+        "title": "How Much Gravel Do I Need for My Backyard"
+      },
+      {
+        "to": "how-much-mulch-do-i-need-for-100-square-feet",
+        "anchor": "how much mulch do i need for 100 square feet",
+        "title": "How Much Mulch Do I Need for 100 Square Feet"
       }
     ],
     "schema_types": [
@@ -7464,7 +7474,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -7567,6 +7577,16 @@
         "to": "how-many-pounds-of-starter-fertilizer-per-1000-sq-ft",
         "anchor": "how many pounds of starter fertilizer per",
         "title": "How Many Pounds of Starter Fertilizer Per 1000 SQ FT"
+      },
+      {
+        "to": "how-much-paint-do-i-need-for-a-small-bedroom",
+        "anchor": "how much paint do i need for a small bedroom",
+        "title": "How Much Paint Do I Need for a Small Bedroom"
+      },
+      {
+        "to": "how-many-tiles-do-i-need-for-a-roof",
+        "anchor": "how many tiles do i need for a roof",
+        "title": "How Many Tiles Do I Need for a Roof: Calculator & Guide"
       }
     ],
     "schema_types": [
@@ -7615,7 +7635,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -7777,7 +7797,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -7954,7 +7974,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 3 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -8116,7 +8136,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -8366,7 +8386,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -8530,7 +8550,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -8872,6 +8892,16 @@
         "to": "how-many-pounds-of-starter-fertilizer-per-1000-sq-ft",
         "anchor": "how many pounds of starter fertilizer per",
         "title": "How Many Pounds of Starter Fertilizer Per 1000 SQ FT"
+      },
+      {
+        "to": "sand-calculator",
+        "anchor": "how much sand do i need",
+        "title": "How Much Sand Do I Need: Calculator & Guide"
+      },
+      {
+        "to": "compost-calculator",
+        "anchor": "how much compost do i need",
+        "title": "How Much Compost Do I Need: Calculator & Guide"
       }
     ],
     "schema_types": [
@@ -8920,7 +8950,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -9082,7 +9112,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -9243,7 +9273,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 3 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -9405,7 +9435,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -9566,7 +9596,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -9730,7 +9760,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -10222,7 +10252,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -10561,7 +10591,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -10722,7 +10752,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -11002,7 +11032,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -11213,6 +11243,16 @@
         "to": "how-many-pounds-of-starter-fertilizer-per-1000-sq-ft",
         "anchor": "how many pounds of starter fertilizer per",
         "title": "How Many Pounds of Starter Fertilizer Per 1000 SQ FT"
+      },
+      {
+        "to": "bark-calculator",
+        "anchor": "how much bark do i need",
+        "title": "How Much Bark Do I Need: Calculator & Guide"
+      },
+      {
+        "to": "sod-calculator",
+        "anchor": "how much sod do i need",
+        "title": "How Much Sod Do I Need: Calculator & Guide"
       }
     ],
     "schema_types": [
@@ -11261,7 +11301,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -11423,7 +11463,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -11762,7 +11802,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -11923,7 +11963,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -12087,7 +12127,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -12474,7 +12514,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -12635,7 +12675,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -12799,7 +12839,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -12963,7 +13003,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -13225,7 +13265,7 @@
         },
         "meta_length": {
           "pass": true,
-          "detail": "meta length 151"
+          "detail": "meta length 148"
         },
         "title_length": {
           "pass": true,
@@ -13233,7 +13273,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -13397,7 +13437,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -13561,7 +13601,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -13703,7 +13743,7 @@
         },
         "meta_length": {
           "pass": true,
-          "detail": "meta length 154"
+          "detail": "meta length 149"
         },
         "title_length": {
           "pass": true,
@@ -13711,7 +13751,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 6 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -13845,7 +13885,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 80 available)"
+          "detail": "internal links 6 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -14007,7 +14047,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 81 available)"
+          "detail": "internal links 8 (want 3-8, 75 available)"
         },
         "schema_present": {
           "pass": true,
@@ -14170,7 +14210,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 81 available)"
+          "detail": "internal links 8 (want 3-8, 75 available)"
         },
         "schema_present": {
           "pass": true,
@@ -14333,7 +14373,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 8 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -14483,7 +14523,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 80 available)"
+          "detail": "internal links 6 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -14617,7 +14657,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 6 (want 3-8, 80 available)"
+          "detail": "internal links 6 (want 3-8, 74 available)"
         },
         "schema_present": {
           "pass": true,
@@ -14637,5 +14677,629 @@
     },
     "word_count": 812,
     "answer": "1,000 sq ft at 1 lb N per 1,000 sq ft needs 1 lb of actual nitrogen, about 5 lb of product (1 bag) from a 20% nitrogen bag."
+  },
+  {
+    "id": "sand-calculator",
+    "slug": "sand-calculator",
+    "title": "How Much Sand Do I Need: Calculator & Guide",
+    "cluster": "sand",
+    "primary_keyword": "how much sand do i need",
+    "secondary_keywords": [],
+    "intent": "calculator",
+    "is_pillar": true,
+    "calculator": "sand",
+    "calculator_title": "Sand Calculator",
+    "calculator_defaults": {
+      "length": 20,
+      "width": 10,
+      "depth": 2
+    },
+    "calculator_output": {
+      "square_feet": 200.0,
+      "cubic_yards": 1.23,
+      "tons": 1.67,
+      "bags_0_5cf": 67
+    },
+    "meta_description": "Sand is bought by the ton, the cubic yard or the bag, and the right depth depends on the job. A paver bedding layer is screeded to about an inch.",
+    "body_markdown": "Sand is bought by the ton, the cubic yard or the bag, and the right depth\ndepends on the job. A paver bedding layer is screeded to about an inch over a compacted\nbase; a sandbox is filled three to four inches deep; structural fill is placed in shallow\nlifts and compacted. Measure the length and width, set the depth for your job, and the\ncalculator converts the volume into cubic yards, tons and bags of 0.5 cubic feet.\n\n## How to Calculate Sand\n\n1. Measure the length and width of the area in feet and multiply them to get square feet.\n2. Decide the depth in inches: about 1 in for a paver bedding layer, 3-4 in for a sandbox.\n3. Convert the depth to feet by dividing by 12.\n4. Multiply the area by the depth in feet to get cubic feet.\n5. Divide by 27 for cubic yards, or use the ton and bag figures the calculator reports.\n\n## Which Sand to Use\n\nNot every bag labelled \"sand\" behaves the same. Sharp or builder's sand has angular grains\nthat interlock under compaction, which is why it is the standard bedding layer under pavers.\nMasonry sand is finer and more uniform, which suits mortar and a thin leveling course. Play\nsand is washed and rounded, so it stays soft underfoot and drains freely but will not lock\ntogether; keep it for sandboxes, not for a patio base. For joints between pavers, polymeric\nsand is swept in and wetted so it sets and resists washing out.\n\n## Worked Example\n\n- Inputs: length = 20, width = 10, depth = 2\n- Square Feet: **200.0**\n- Cubic Yards: **1.23**\n- Tons: **1.67**\n- Bags 0 5Cf: **67**\n\n## How Deep Should Sand Be?\n\nMatch the depth to the job rather than filling to one uniform height. A bedding layer much\ndeeper than an inch is hard to screed evenly and can settle unevenly under the pavers. A\nsandbox needs enough depth for play, but any deeper than four inches and the top dries out\nwhile the base stays damp. Structural fill should always go in shallow, compacted lifts, or\nit will slump after the first wet season.\n\n## Ordering Sand by Weight or Volume\n\nDamp builder's sand weighs about 1.35 tons per cubic yard, so a bulk order is often priced\nand delivered by weight even though the job is measured by volume. Ask the supplier which\nfigure they use, and remember that a cubic yard is 27 cubic feet, or 54 bags of 0.5 cubic\nfeet. For anything small enough to carry, bagged sand is easier to handle, but it costs far\nmore per cubic foot than a bulk delivery.\n\n## Sand for Sandboxes and Play Areas\n\nPlay sand is screened and washed so it is free of sharp debris and fine dust, which is why\nit costs more than builder's sand. Fill a sandbox three to four inches deep for young\nchildren, a little deeper for older ones, and cover it when it is not in use to keep animals\nand leaves out. Because play sand is rounded, it drains well and stays loose underfoot, but\nthat same roundness is why it will not compact or support a paver.\n\n## Sand or Gravel Under a Patio?\n\nBoth go under hard landscaping, but they do different jobs. Gravel forms the structural base,\ncompacted in layers so it carries the load without settling. Sand is the thin bedding layer\nthat lets you screed the surface flat and tap each paver down to the same height. Skipping the\ngravel and using deep sand alone is a common shortcut that ends with pavers sinking and\nshifting within a season, so treat the two as a pair rather than a choice.\n\n## Common Mistakes to Avoid\n\n- Using rounded play sand under pavers, which will not compact or interlock.\n- Raking the bedding sand to a guessed depth instead of screeding it to a straight board.\n- Laying sand over soft soil with no landscape fabric, so it migrates downward.\n- Filling a base in one deep layer instead of compacting shallow lifts.\n",
+    "faq": [
+      {
+        "q": "How much does a cubic yard of sand weigh?",
+        "a": "About 1.35 tons for damp builder's sand, a little more when wet."
+      },
+      {
+        "q": "How deep should sand be under pavers?",
+        "a": "About one inch as a screeded bedding layer over a compacted base."
+      },
+      {
+        "q": "How many bags of sand in a cubic yard?",
+        "a": "Fifty-four 0.5 cubic foot bags, since a cubic yard is 27 cubic feet."
+      },
+      {
+        "q": "Can I use play sand for a paver base?",
+        "a": "No. Use sharp or builder's sand, which compacts and locks together; play sand is too round and smooth."
+      }
+    ],
+    "status": "approved",
+    "created": "2026-10-19",
+    "updated": "2026-10-19",
+    "revision": 1,
+    "internal_links": [
+      {
+        "to": "mulch-calculator",
+        "anchor": "how much mulch do i need",
+        "title": "Mulch Calculator: How Much Mulch Do You Need?"
+      },
+      {
+        "to": "raised-bed-soil-calculator",
+        "anchor": "how much soil for raised bed",
+        "title": "Raised Bed Soil Calculator: How Much Soil You Need"
+      },
+      {
+        "to": "gravel-calculator",
+        "anchor": "how much gravel do i need",
+        "title": "Gravel Calculator: How Much Gravel Do You Need?"
+      },
+      {
+        "to": "paint-calculator",
+        "anchor": "how much paint do i need",
+        "title": "Paint Calculator: How Much Paint Do You Need?"
+      },
+      {
+        "to": "tile-calculator",
+        "anchor": "how many tiles do i need",
+        "title": "Tile Calculator: How Many Tiles Do You Need?"
+      },
+      {
+        "to": "grass-seed-calculator",
+        "anchor": "how much grass seed per square foot",
+        "title": "Grass Seed Calculator: How Much Seed You Need"
+      },
+      {
+        "to": "concrete-calculator",
+        "anchor": "how many bags of concrete do i need",
+        "title": "Concrete Calculator: Bags or Yards You Need"
+      },
+      {
+        "to": "topsoil-calculator",
+        "anchor": "how much topsoil do i need",
+        "title": "How Much Topsoil Do I Need: Free Calculator & Guide"
+      }
+    ],
+    "schema_types": [
+      "Article",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "quality": {
+      "score": 100.0,
+      "passed": true,
+      "gates": {
+        "thin_content": {
+          "pass": true,
+          "detail": "word count 676 (min 600)"
+        },
+        "duplicate_content": {
+          "pass": true,
+          "detail": "max similarity 0.10 vs compost-calculator"
+        },
+        "keyword_stuffing": {
+          "pass": true,
+          "detail": "keyword density 0.00%"
+        },
+        "ai_cliches": {
+          "pass": true,
+          "detail": "cliches: none"
+        },
+        "readability": {
+          "pass": true,
+          "detail": "avg sentence length 15.6 words"
+        },
+        "heading_structure": {
+          "pass": true,
+          "detail": "h2=8 h3=0 (no h1 in body)"
+        },
+        "has_calculator_or_data": {
+          "pass": true,
+          "detail": "has calculator + computed output"
+        },
+        "meta_length": {
+          "pass": true,
+          "detail": "meta length 145"
+        },
+        "title_length": {
+          "pass": true,
+          "detail": "title length 43"
+        },
+        "internal_links": {
+          "pass": true,
+          "detail": "internal links 8 (want 3-8, 74 available)"
+        },
+        "schema_present": {
+          "pass": true,
+          "detail": "schema: ['Article', 'BreadcrumbList', 'FAQPage']"
+        },
+        "alt_text": {
+          "pass": true,
+          "detail": "hero alt derivable from title"
+        }
+      }
+    },
+    "metrics": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": 0
+    },
+    "word_count": 676,
+    "answer": "20x10 ft at 2 in needs 1.23 cu yd of sand, about 1.67 tons, or 67 bags of 0.5 cu ft."
+  },
+  {
+    "id": "compost-calculator",
+    "slug": "compost-calculator",
+    "title": "How Much Compost Do I Need: Calculator & Guide",
+    "cluster": "compost",
+    "primary_keyword": "how much compost do i need",
+    "secondary_keywords": [],
+    "intent": "calculator",
+    "is_pillar": true,
+    "calculator": "compost",
+    "calculator_title": "Compost Calculator",
+    "calculator_defaults": {
+      "length": 20,
+      "width": 10,
+      "depth": 2
+    },
+    "calculator_output": {
+      "square_feet": 200.0,
+      "cubic_feet": 33.3,
+      "cubic_yards": 1.23,
+      "bags_1cf": 34
+    },
+    "meta_description": "Compost is a soil amendment rather than a mulch or a fill: its job is to feed soil life and improve structure, and it works best mixed into the top few",
+    "body_markdown": "Compost is a soil amendment rather than a mulch or a fill: its job is to\nfeed soil life and improve structure, and it works best mixed into the top few inches rather\nthan left in a thick blanket on the surface. For a new bed, spread about two inches and fork\nit into the top six inches; for an established bed, an inch as a top-dressing is plenty. Enter\nthe area and depth, and the calculator returns cubic feet, cubic yards and bags of one cubic\nfoot.\n\n## How to Calculate Compost\n\n1. Measure the length and width of the bed in feet and multiply them for the area.\n2. Choose a depth: a quarter to half an inch to top-dress a lawn, one inch to refresh beds,\n   two to three inches to work into new or poor soil.\n3. Convert the depth to feet by dividing by 12.\n4. Multiply the area by the depth in feet to get cubic feet.\n5. Divide by 27 for cubic yards, or read the bag count the calculator reports.\n\n## How Much Compost to Add\n\nThe right amount depends on what you are doing. A light quarter-inch top-dressing on an\nestablished lawn feeds the grass without smothering it. An inch raked over a border tops up\nthe organic matter that the previous season used. Two inches forked into a new bed gives\nroots something to work with, and three inches is about the most worth tilling into poor\nsoil before it stops behaving like an amendment and starts behaving like a growing medium.\n\n## Worked Example\n\n- Inputs: length = 20, width = 10, depth = 2\n- Square Feet: **200.0**\n- Cubic Feet: **33.3**\n- Cubic Yards: **1.23**\n- Bags 1Cf: **34**\n\n## Compost, Topsoil and Mulch Are Not the Same\n\nThese three are often used together but do different jobs. Compost is decomposed organic\nmatter that feeds soil biology and improves structure. Topsoil is mineral soil that adds bulk\nand a rooting depth where there is none. Mulch sits on the surface to slow evaporation and\nsuppress weeds. A raised bed usually wants a blend, while an established border mostly wants\ncompost worked in and a separate mulch layer on top.\n\n## Buying Compost in Bulk or by the Bag\n\nBagged compost is normally sold in one cubic foot bags, so a cubic yard is 27 of them, and\nthat is the number to compare against a bulk price. Bulk compost is far cheaper per cubic\nfoot but arrives tipped on a hard surface, so plan where the pile goes and how you will move\nit before you order. Fresh manure-based compost should be left to age, or it can burn young\nroots and carry weed seeds through to the bed.\n\n## Compost for Lawns and Vegetable Beds\n\nLawns and vegetable beds want compost in different ways. A lawn is top-dressed thinly and\nthen watered in, so the grass is fed without being buried; a quarter inch is the usual dose,\nworked in with the back of a rake. Vegetable beds are hungry and are replanted every season,\nso two inches forked into the top layer before planting gives the roots something to draw on\nand improves how the soil holds water. Both benefit from a repeat the following year, because\ncompost is consumed as it feeds the soil.\n\n## Does Compost Replace Fertiliser?\n\nNo. Compost feeds the soil, slowly releasing nutrients as it breaks down and improving the\nsoil's structure and water-holding capacity. Fertiliser feeds the plant directly with a\nmeasured dose of nutrients. In practice you want both: compost to build the soil over time,\nand a fertiliser at the right rate when a crop or a lawn needs a quick, specific boost. The\nfertiliser calculator covers that side of the job.\n\n## Common Mistakes to Avoid\n\n- Spreading a deep blanket instead of mixing a modest layer into the top few inches.\n- Using fresh, unaged manure-based compost around young plants.\n- Treating compost as a substitute for topsoil when the job needs bulk and rooting depth.\n- Forgetting that compost keeps breaking down, so beds settle and need topping up.\n",
+    "faq": [
+      {
+        "q": "How much compost should I add?",
+        "a": "One to three inches worked into the top layer of a bed, or a quarter inch as a lawn top-dressing."
+      },
+      {
+        "q": "How many bags of compost in a cubic yard?",
+        "a": "Twenty-seven 1 cubic foot bags, since a cubic yard is 27 cubic feet."
+      },
+      {
+        "q": "Can you put compost too thick?",
+        "a": "Yes. A deep blanket can smother roots and tie up nitrogen, so mix it in rather than piling it on."
+      },
+      {
+        "q": "Is compost the same as topsoil?",
+        "a": "No. Compost is decomposed organic matter that feeds the soil; topsoil is mineral soil that adds bulk and structure."
+      }
+    ],
+    "status": "approved",
+    "created": "2026-10-19",
+    "updated": "2026-10-19",
+    "revision": 1,
+    "internal_links": [
+      {
+        "to": "mulch-calculator",
+        "anchor": "how much mulch do i need",
+        "title": "Mulch Calculator: How Much Mulch Do You Need?"
+      },
+      {
+        "to": "raised-bed-soil-calculator",
+        "anchor": "how much soil for raised bed",
+        "title": "Raised Bed Soil Calculator: How Much Soil You Need"
+      },
+      {
+        "to": "gravel-calculator",
+        "anchor": "how much gravel do i need",
+        "title": "Gravel Calculator: How Much Gravel Do You Need?"
+      },
+      {
+        "to": "paint-calculator",
+        "anchor": "how much paint do i need",
+        "title": "Paint Calculator: How Much Paint Do You Need?"
+      },
+      {
+        "to": "tile-calculator",
+        "anchor": "how many tiles do i need",
+        "title": "Tile Calculator: How Many Tiles Do You Need?"
+      },
+      {
+        "to": "grass-seed-calculator",
+        "anchor": "how much grass seed per square foot",
+        "title": "Grass Seed Calculator: How Much Seed You Need"
+      },
+      {
+        "to": "concrete-calculator",
+        "anchor": "how many bags of concrete do i need",
+        "title": "Concrete Calculator: Bags or Yards You Need"
+      },
+      {
+        "to": "topsoil-calculator",
+        "anchor": "how much topsoil do i need",
+        "title": "How Much Topsoil Do I Need: Free Calculator & Guide"
+      }
+    ],
+    "schema_types": [
+      "Article",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "quality": {
+      "score": 100.0,
+      "passed": true,
+      "gates": {
+        "thin_content": {
+          "pass": true,
+          "detail": "word count 678 (min 600)"
+        },
+        "duplicate_content": {
+          "pass": true,
+          "detail": "max similarity 0.10 vs bark-calculator"
+        },
+        "keyword_stuffing": {
+          "pass": true,
+          "detail": "keyword density 0.00%"
+        },
+        "ai_cliches": {
+          "pass": true,
+          "detail": "cliches: none"
+        },
+        "readability": {
+          "pass": true,
+          "detail": "avg sentence length 16.4 words"
+        },
+        "heading_structure": {
+          "pass": true,
+          "detail": "h2=8 h3=0 (no h1 in body)"
+        },
+        "has_calculator_or_data": {
+          "pass": true,
+          "detail": "has calculator + computed output"
+        },
+        "meta_length": {
+          "pass": true,
+          "detail": "meta length 151"
+        },
+        "title_length": {
+          "pass": true,
+          "detail": "title length 46"
+        },
+        "internal_links": {
+          "pass": true,
+          "detail": "internal links 8 (want 3-8, 74 available)"
+        },
+        "schema_present": {
+          "pass": true,
+          "detail": "schema: ['Article', 'BreadcrumbList', 'FAQPage']"
+        },
+        "alt_text": {
+          "pass": true,
+          "detail": "hero alt derivable from title"
+        }
+      }
+    },
+    "metrics": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": 0
+    },
+    "word_count": 678,
+    "answer": "20x10 ft at 2 in needs 33.3 cu ft of compost: 1.23 cu yd, or 34 bags of 1 cu ft."
+  },
+  {
+    "id": "bark-calculator",
+    "slug": "bark-calculator",
+    "title": "How Much Bark Do I Need: Calculator & Guide",
+    "cluster": "bark",
+    "primary_keyword": "how much bark do i need",
+    "secondary_keywords": [],
+    "intent": "calculator",
+    "is_pillar": true,
+    "calculator": "bark",
+    "calculator_title": "Bark & Wood Chip Calculator",
+    "calculator_defaults": {
+      "length": 20,
+      "width": 10,
+      "depth": 3
+    },
+    "calculator_output": {
+      "square_feet": 200.0,
+      "cubic_feet": 50.0,
+      "cubic_yards": 1.85,
+      "bags_2cf": 25
+    },
+    "meta_description": "Bark and wood chips are decorative mulches, and both the texture and the depth matter. Large bark nuggets last longest but float in heavy rain and shift.",
+    "body_markdown": "Bark and wood chips are decorative mulches, and both the texture and the\ndepth matter. Large bark nuggets last longest but float in heavy rain and shift on slopes,\nwhile shredded bark knits into a mat that stays put. Spread two to three inches for most\nbeds, up to four where weeds are established, and keep every layer a few inches clear of\ntrunks and stems. Enter the area and depth and the calculator returns cubic feet, cubic\nyards and bags of two cubic feet.\n\n## How to Calculate Bark\n\n1. Measure the length and width of the bed in feet and multiply them for the area.\n2. Choose a depth: two inches to refresh beds, three inches for standard cover, up to four\n   inches where you are suppressing established weeds.\n3. Convert the depth to feet by dividing by 12.\n4. Multiply the area by the depth in feet to get cubic feet.\n5. Divide by 27 for cubic yards, or read the bag count the calculator reports.\n\n## Bark, Wood Chips and Compost Compared\n\nBark nuggets are the slowest to break down and hold their colour for years, which suits\nformal beds, but they are the least stable on a slope. Shredded bark interlocks and resists\nwashing, so it is the better choice on banks and around trees. Wood chips are the cheapest\ncover and excellent on paths and in play areas, though they break down faster. Compost is not\na surface mulch at all; it belongs mixed into the soil, not piled on top of it.\n\n## Worked Example\n\n- Inputs: length = 20, width = 10, depth = 3\n- Square Feet: **200.0**\n- Cubic Feet: **50.0**\n- Cubic Yards: **1.85**\n- Bags 2Cf: **25**\n\n## Spreading Bark So It Stays Put\n\nWater the ground before you lay bark, because a thick, dry layer can shed rain rather than\nlet it through. Rake it to an even depth rather than dumping and spreading, and feather the\nedges so the bed does not look like a raised box. Keep the layer clear of trunks, stems and\nthe crowns of perennials: a pile held against bark traps moisture and invites rot and pests.\nOn a slope, use shredded bark and lay it a little thicker at the top of the run.\n\n## Refreshing Bark Each Season\n\nA thin fresh layer each spring keeps the colour and the weed control without the cost of\nreplacing the whole bed. Bark sold in bags is usually two cubic feet, so a cubic yard is\nthirteen and a half bags; bulk is sold by the cubic yard and is much cheaper for a large\narea. Break up any matted or compacted old layer first, so water can still reach the soil\nunderneath.\n\n## Bark Around Trees and Shrubs\n\nTrees and shrubs are where bark earns its keep, but they are also where it is most often\nmisused. A ring of bark out to the drip line keeps mowers and strimmers away from the trunk\nand holds moisture over the roots, which is exactly what a young tree needs. The mistake is\nthe \"mulch volcano\": a cone of bark piled up against the trunk, which keeps the bark tissue\npermanently damp and invites rot, canker and pests. Keep the layer flat and pull it back a\nfew inches from the trunk so the flare is visible.\n\n## How Often to Top Up Bark\n\nBark breaks down slowly and sinks as it does, so a bed loses perhaps an inch of depth over a\nyear. A thin fresh layer each spring restores the look and the weed control without the cost\nand effort of stripping the bed. Rake the old surface first to break up any matted or\ncompacted patches, then top up to the depth you want. If the layer has built up past about\nfour inches over several years, rake some out rather than adding more, because too deep a\nlayer keeps water from reaching the soil.\n\n## Common Mistakes to Avoid\n\n- Piling bark against trunks and stems, which holds moisture and causes rot.\n- Using nuggets on a slope, where they float and slide after heavy rain.\n- Laying it too thin, so weeds push through within weeks.\n- Treating bark as a soil improver and digging it in, instead of using compost for that.\n",
+    "faq": [
+      {
+        "q": "How deep should bark mulch be?",
+        "a": "Two to three inches for most beds; keep it clear of trunks and stems."
+      },
+      {
+        "q": "How many bags of bark in a cubic yard?",
+        "a": "Thirteen and a half 2 cubic foot bags, since a cubic yard is 27 cubic feet."
+      },
+      {
+        "q": "Do bark chips stop weeds?",
+        "a": "They suppress most weeds at three inches deep, especially over a layer of landscape fabric."
+      },
+      {
+        "q": "Which lasts longer, bark nuggets or shredded bark?",
+        "a": "Nuggets last longer but float and shift on slopes; shredded bark knits together and stays put."
+      }
+    ],
+    "status": "approved",
+    "created": "2026-10-19",
+    "updated": "2026-10-19",
+    "revision": 1,
+    "internal_links": [
+      {
+        "to": "mulch-calculator",
+        "anchor": "how much mulch do i need",
+        "title": "Mulch Calculator: How Much Mulch Do You Need?"
+      },
+      {
+        "to": "raised-bed-soil-calculator",
+        "anchor": "how much soil for raised bed",
+        "title": "Raised Bed Soil Calculator: How Much Soil You Need"
+      },
+      {
+        "to": "gravel-calculator",
+        "anchor": "how much gravel do i need",
+        "title": "Gravel Calculator: How Much Gravel Do You Need?"
+      },
+      {
+        "to": "paint-calculator",
+        "anchor": "how much paint do i need",
+        "title": "Paint Calculator: How Much Paint Do You Need?"
+      },
+      {
+        "to": "tile-calculator",
+        "anchor": "how many tiles do i need",
+        "title": "Tile Calculator: How Many Tiles Do You Need?"
+      },
+      {
+        "to": "grass-seed-calculator",
+        "anchor": "how much grass seed per square foot",
+        "title": "Grass Seed Calculator: How Much Seed You Need"
+      },
+      {
+        "to": "concrete-calculator",
+        "anchor": "how many bags of concrete do i need",
+        "title": "Concrete Calculator: Bags or Yards You Need"
+      },
+      {
+        "to": "topsoil-calculator",
+        "anchor": "how much topsoil do i need",
+        "title": "How Much Topsoil Do I Need: Free Calculator & Guide"
+      }
+    ],
+    "schema_types": [
+      "Article",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "quality": {
+      "score": 100.0,
+      "passed": true,
+      "gates": {
+        "thin_content": {
+          "pass": true,
+          "detail": "word count 708 (min 600)"
+        },
+        "duplicate_content": {
+          "pass": true,
+          "detail": "max similarity 0.10 vs compost-calculator"
+        },
+        "keyword_stuffing": {
+          "pass": true,
+          "detail": "keyword density 0.00%"
+        },
+        "ai_cliches": {
+          "pass": true,
+          "detail": "cliches: none"
+        },
+        "readability": {
+          "pass": true,
+          "detail": "avg sentence length 18.0 words"
+        },
+        "heading_structure": {
+          "pass": true,
+          "detail": "h2=8 h3=0 (no h1 in body)"
+        },
+        "has_calculator_or_data": {
+          "pass": true,
+          "detail": "has calculator + computed output"
+        },
+        "meta_length": {
+          "pass": true,
+          "detail": "meta length 153"
+        },
+        "title_length": {
+          "pass": true,
+          "detail": "title length 43"
+        },
+        "internal_links": {
+          "pass": true,
+          "detail": "internal links 8 (want 3-8, 74 available)"
+        },
+        "schema_present": {
+          "pass": true,
+          "detail": "schema: ['Article', 'BreadcrumbList', 'FAQPage']"
+        },
+        "alt_text": {
+          "pass": true,
+          "detail": "hero alt derivable from title"
+        }
+      }
+    },
+    "metrics": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": 0
+    },
+    "word_count": 708,
+    "answer": "20x10 ft at 3 in needs 50 cu ft of bark: 1.85 cu yd, or 25 bags of 2 cu ft."
+  },
+  {
+    "id": "sod-calculator",
+    "slug": "sod-calculator",
+    "title": "How Much Sod Do I Need: Calculator & Guide",
+    "cluster": "sod",
+    "primary_keyword": "how much sod do i need",
+    "secondary_keywords": [],
+    "intent": "calculator",
+    "is_pillar": true,
+    "calculator": "sod",
+    "calculator_title": "Sod Calculator",
+    "calculator_defaults": {
+      "length": 20,
+      "width": 10,
+      "waste": 10
+    },
+    "calculator_output": {
+      "square_feet": 200.0,
+      "rolls": 20,
+      "rolls_with_waste": 22,
+      "pallets": 1
+    },
+    "meta_description": "Sod is living turf lifted with a thin layer of soil, so it has to root into the ground below within days of arriving.",
+    "body_markdown": "Sod is living turf lifted with a thin layer of soil, so it has to root into the\nground below within days of arriving. That makes ground preparation the whole job. Measure\nthe lawn area, allow about five per cent extra for trimming around edges and curves, and the\ncalculator returns the number of rolls (at 10 square feet each) and the pallets, at about 500\nsquare feet each.\n\n## How to Calculate Sod\n\n1. Measure the length and width of the lawn in feet and multiply them for the area.\n2. Divide by the coverage of one roll, commonly 10 square feet.\n3. Add about five per cent for trimming around edges, paths and curves.\n4. Round up to whole rolls, or order by the pallet where the area is large enough.\n5. Prepare and firm the soil before delivery so the sod can be laid the same day.\n\n## Preparing the Ground\n\nSod roots into whatever is underneath it, so the base decides whether it takes. Clear and\nkill the old grass, rotovate or fork the top few inches, firm it, and rake it level. Water\nthe surface just before the rolls go down so there is moisture for the roots to find. On a\nslope, rake the surface to a slight tilt so water does not pool under the turf and rot the\nroots.\n\n## Worked Example\n\n- Inputs: length = 20, width = 10, waste = 10\n- Square Feet: **200.0**\n- Rolls: **20**\n- Rolls With Waste: **22**\n- Pallets: **1**\n\n## Laying the Rolls\n\nLay the first roll along a straight edge, such as a path or a drive, and work outward from\nthere. Butt each roll tight against the last and stagger the joints like brickwork, so the\nseams do not line up into a weak strip. Press each roll firmly onto the soil, then roll the\nfinished area to squeeze out air pockets and ensure good contact. Trim the edges with a\nhalf-moon edger or a sharp knife, and keep the whole area damp for the first fortnight.\n\n## Watering and the First Few Weeks\n\nNew sod needs frequent, light watering until it knits in, then a change of habit: water\ndeeply and less often, which pushes roots downward and makes the lawn tougher in dry spells.\nStay off it for the first week or two, and hold off on fertiliser until it has started to\ngrow, so the plant puts its energy into rooting rather than top growth. Once it has rooted,\ntug a corner gently: if it lifts, it needs more time and more water.\n\n## Sod or Seed?\n\nSod gives you an instant lawn, holds a slope against erosion from day one, and is the usual\nchoice when the area is on show or you cannot wait a season. Seed costs far less per square\nfoot and lets you pick a mix for shade, wear or drought, but it needs watering, weeding and\npatience, and it will not hold bare ground through heavy rain. As a rough guide, sod for a\nfront lawn or a steep bank, and seed for a large back lawn where a few weeks of care are\nacceptable.\n\n## Choosing a Grass for Your Climate\n\nMatch the turf to the climate rather than to the picture on the pallet. Cool-season grasses\nsuch as Kentucky bluegrass and tall fescue look best in northern states and stay green in\nspring and autumn, though they can struggle in a hot, dry summer. Warm-season grasses such as\nBermuda and St. Augustine thrive in the south and shrug off heat, but they go dormant and\nbrown off in winter. Tell the supplier where you live and how much sun the lawn gets, and let\nthem steer the choice.\n\n## Common Mistakes to Avoid\n\n- Ordering the exact area with no allowance for trimming and offcuts.\n- Laying sod onto unprepared or uneven ground, so the roots never make contact.\n- Letting rolls sit stacked in the sun, which cooks the turf before it is laid.\n- Watering lightly and often forever, which keeps roots shallow and the lawn fragile.\n",
+    "faq": [
+      {
+        "q": "How many rolls of sod do I need?",
+        "a": "Divide the lawn area by the roll coverage, usually 10 sq ft, then add about 5% for trimming."
+      },
+      {
+        "q": "How much does a pallet of sod cover?",
+        "a": "Commonly about 500 square feet, though it varies by supplier and roll size."
+      },
+      {
+        "q": "How long does sod take to root?",
+        "a": "About two weeks of keeping it damp; then water deeply and less often to push roots down."
+      },
+      {
+        "q": "Can you lay sod over existing grass?",
+        "a": "No. Remove or kill the old grass and prepare a firm, level base, or the new sod will not knit in."
+      }
+    ],
+    "status": "approved",
+    "created": "2026-10-19",
+    "updated": "2026-10-19",
+    "revision": 1,
+    "internal_links": [
+      {
+        "to": "mulch-calculator",
+        "anchor": "how much mulch do i need",
+        "title": "Mulch Calculator: How Much Mulch Do You Need?"
+      },
+      {
+        "to": "raised-bed-soil-calculator",
+        "anchor": "how much soil for raised bed",
+        "title": "Raised Bed Soil Calculator: How Much Soil You Need"
+      },
+      {
+        "to": "gravel-calculator",
+        "anchor": "how much gravel do i need",
+        "title": "Gravel Calculator: How Much Gravel Do You Need?"
+      },
+      {
+        "to": "paint-calculator",
+        "anchor": "how much paint do i need",
+        "title": "Paint Calculator: How Much Paint Do You Need?"
+      },
+      {
+        "to": "tile-calculator",
+        "anchor": "how many tiles do i need",
+        "title": "Tile Calculator: How Many Tiles Do You Need?"
+      },
+      {
+        "to": "grass-seed-calculator",
+        "anchor": "how much grass seed per square foot",
+        "title": "Grass Seed Calculator: How Much Seed You Need"
+      },
+      {
+        "to": "concrete-calculator",
+        "anchor": "how many bags of concrete do i need",
+        "title": "Concrete Calculator: Bags or Yards You Need"
+      },
+      {
+        "to": "topsoil-calculator",
+        "anchor": "how much topsoil do i need",
+        "title": "How Much Topsoil Do I Need: Free Calculator & Guide"
+      }
+    ],
+    "schema_types": [
+      "Article",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "quality": {
+      "score": 100.0,
+      "passed": true,
+      "gates": {
+        "thin_content": {
+          "pass": true,
+          "detail": "word count 670 (min 600)"
+        },
+        "duplicate_content": {
+          "pass": true,
+          "detail": "max similarity 0.04 vs compost-calculator"
+        },
+        "keyword_stuffing": {
+          "pass": true,
+          "detail": "keyword density 0.00%"
+        },
+        "ai_cliches": {
+          "pass": true,
+          "detail": "cliches: none"
+        },
+        "readability": {
+          "pass": true,
+          "detail": "avg sentence length 17.9 words"
+        },
+        "heading_structure": {
+          "pass": true,
+          "detail": "h2=8 h3=0 (no h1 in body)"
+        },
+        "has_calculator_or_data": {
+          "pass": true,
+          "detail": "has calculator + computed output"
+        },
+        "meta_length": {
+          "pass": true,
+          "detail": "meta length 117"
+        },
+        "title_length": {
+          "pass": true,
+          "detail": "title length 42"
+        },
+        "internal_links": {
+          "pass": true,
+          "detail": "internal links 8 (want 3-8, 74 available)"
+        },
+        "schema_present": {
+          "pass": true,
+          "detail": "schema: ['Article', 'BreadcrumbList', 'FAQPage']"
+        },
+        "alt_text": {
+          "pass": true,
+          "detail": "hero alt derivable from title"
+        }
+      }
+    },
+    "metrics": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": 0
+    },
+    "word_count": 670,
+    "answer": "20x10 ft needs about 22 rolls of sod (20 plus waste), roughly 1 pallet."
   }
 ]

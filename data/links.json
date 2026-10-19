@@ -177,8 +177,8 @@
       "how-much-bermuda-grass-seed-per-square-foot",
       "how-much-grass-seed-do-i-need-for-1000-square-feet",
       "how-many-sq-ft-does-a-50-lb-bag-of-grass-seed-cover",
-      "how-much-mulch-do-i-need-for-my-yard",
-      "how-much-mulch-do-i-need-per-square-foot"
+      "sand-calculator",
+      "compost-calculator"
     ],
     "how-many-bags-of-concrete-do-i-need-for-a-4x8-slab": [
       "concrete-calculator",
@@ -327,8 +327,8 @@
       "how-much-bermuda-grass-seed-per-square-foot",
       "how-much-grass-seed-do-i-need-for-1000-square-feet",
       "how-many-sq-ft-does-a-50-lb-bag-of-grass-seed-cover",
-      "how-much-gravel-do-i-need-for-my-backyard",
-      "how-much-mulch-do-i-need-for-100-square-feet"
+      "bark-calculator",
+      "sod-calculator"
     ],
     "how-much-liquid-fertilizer-per-1000-sq-ft": [
       "fertilizer-calculator",
@@ -337,8 +337,8 @@
       "how-many-pounds-of-fertilizer-per-1000-sq-ft",
       "how-much-10-10-10-fertilizer-per-1000-sq-ft",
       "how-many-pounds-of-starter-fertilizer-per-1000-sq-ft",
-      "how-much-paint-do-i-need-for-a-small-bedroom",
-      "how-many-tiles-do-i-need-for-a-roof"
+      "how-much-mulch-do-i-need-for-my-yard",
+      "how-much-mulch-do-i-need-per-square-foot"
     ],
     "how-many-bags-of-concrete-do-i-need-for-a-fence-post": [
       "concrete-calculator",
@@ -376,7 +376,9 @@
       "how-much-grass-seed-per-square-foot-for-new-lawn",
       "how-much-buffalo-grass-seed-per-square-foot",
       "how-much-grass-seed-do-i-need-for-1000-square-feet",
-      "how-many-sq-ft-does-a-50-lb-bag-of-grass-seed-cover"
+      "how-many-sq-ft-does-a-50-lb-bag-of-grass-seed-cover",
+      "how-much-gravel-do-i-need-for-my-backyard",
+      "how-much-mulch-do-i-need-for-100-square-feet"
     ],
     "how-much-nitrogen-fertilizer-per-1000-sq-ft": [
       "fertilizer-calculator",
@@ -384,7 +386,9 @@
       "how-much-starter-fertilizer-per-1000-sq-ft",
       "how-many-pounds-of-fertilizer-per-1000-sq-ft",
       "how-much-10-10-10-fertilizer-per-1000-sq-ft",
-      "how-many-pounds-of-starter-fertilizer-per-1000-sq-ft"
+      "how-many-pounds-of-starter-fertilizer-per-1000-sq-ft",
+      "how-much-paint-do-i-need-for-a-small-bedroom",
+      "how-many-tiles-do-i-need-for-a-roof"
     ],
     "how-many-bags-of-concrete-do-i-need-for-a-10x12-slab": [
       "concrete-calculator",
@@ -442,7 +446,9 @@
       "how-much-nitrogen-fertilizer-per-1000-sq-ft",
       "how-many-pounds-of-fertilizer-per-1000-sq-ft",
       "how-much-10-10-10-fertilizer-per-1000-sq-ft",
-      "how-many-pounds-of-starter-fertilizer-per-1000-sq-ft"
+      "how-many-pounds-of-starter-fertilizer-per-1000-sq-ft",
+      "sand-calculator",
+      "compost-calculator"
     ],
     "how-many-bags-of-concrete-do-i-need-for-a-20x20-slab": [
       "concrete-calculator",
@@ -540,7 +546,9 @@
       "how-much-nitrogen-fertilizer-per-1000-sq-ft",
       "how-much-starter-fertilizer-per-1000-sq-ft",
       "how-much-10-10-10-fertilizer-per-1000-sq-ft",
-      "how-many-pounds-of-starter-fertilizer-per-1000-sq-ft"
+      "how-many-pounds-of-starter-fertilizer-per-1000-sq-ft",
+      "bark-calculator",
+      "sod-calculator"
     ],
     "how-many-bags-of-concrete-do-i-need-for-a-12x12-slab": [
       "concrete-calculator",
@@ -693,6 +701,46 @@
       "how-much-starter-fertilizer-per-1000-sq-ft",
       "how-many-pounds-of-fertilizer-per-1000-sq-ft",
       "how-much-10-10-10-fertilizer-per-1000-sq-ft"
+    ],
+    "sand-calculator": [
+      "mulch-calculator",
+      "raised-bed-soil-calculator",
+      "gravel-calculator",
+      "paint-calculator",
+      "tile-calculator",
+      "grass-seed-calculator",
+      "concrete-calculator",
+      "topsoil-calculator"
+    ],
+    "compost-calculator": [
+      "mulch-calculator",
+      "raised-bed-soil-calculator",
+      "gravel-calculator",
+      "paint-calculator",
+      "tile-calculator",
+      "grass-seed-calculator",
+      "concrete-calculator",
+      "topsoil-calculator"
+    ],
+    "bark-calculator": [
+      "mulch-calculator",
+      "raised-bed-soil-calculator",
+      "gravel-calculator",
+      "paint-calculator",
+      "tile-calculator",
+      "grass-seed-calculator",
+      "concrete-calculator",
+      "topsoil-calculator"
+    ],
+    "sod-calculator": [
+      "mulch-calculator",
+      "raised-bed-soil-calculator",
+      "gravel-calculator",
+      "paint-calculator",
+      "tile-calculator",
+      "grass-seed-calculator",
+      "concrete-calculator",
+      "topsoil-calculator"
     ]
   }
 }

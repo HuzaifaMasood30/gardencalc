@@ -45,6 +45,22 @@ SOURCES: dict[str, list[tuple[str, str]]] = {
         ("Illinois Extension, Fertilizing Your Lawn",
          "https://extension.illinois.edu/lawns/fertilizing-your-lawn"),
     ],
+    "sand": [
+        ("Oregon State University Extension, 10-Step Guide to Installing Pavers",
+         "https://extension.oregonstate.edu/sites/extd8/files/documents/1/howtoinstallpavers.pdf"),
+    ],
+    "compost": [
+        ("Michigan State University Extension, Compost: the organic fertilizer",
+         "https://www.canr.msu.edu/resources/compost-the-organic-fertilizer"),
+    ],
+    "bark": [
+        ("Michigan State University Extension, Wood chips and other organic mulches",
+         "https://www.canr.msu.edu/news/wood_chips_and_other_organic_mulches"),
+    ],
+    "sod": [
+        ("Penn State Extension, Lawn Establishment",
+         "https://extension.psu.edu/lawn-establishment"),
+    ],
 }
 
 

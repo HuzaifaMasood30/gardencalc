@@ -151,9 +151,94 @@ LIBRARY: dict[str, dict] = {
             "Cure slowly by keeping it damp for the first few days.",
         ],
     },
+    "sand": {
+        "tools": "a tape measure, a rake or screed board, a plate compactor (for a paver base), landscape fabric, and a wheelbarrow",
+        "unit_note": "Sand is sold by the bag (often 0.5 cubic feet), the cubic yard, or the ton. A cubic yard of damp builder's sand weighs about 1.35 tons.",
+        "depths": [
+            ("1 in", "Leveling course over a compacted base before laying pavers"),
+            ("2 in", "Paver bedding layer, compacted after screeding"),
+            ("3-4 in", "Sandboxes and play areas, or filling between a base and surface"),
+            ("4+ in", "Structural fill; compact in 2 in lifts so it does not settle"),
+        ],
+        "materials": [
+            ("Sharp/builder's sand", "Compacts and interlocks well; the usual paver bedding sand"),
+            ("Masonry sand", "Fine and uniform, for mortar and leveling"),
+            ("Play sand", "Washed and screened, for sandboxes and children's play areas"),
+            ("Polymeric sand", "Swept into paver joints, then wetted to lock them"),
+        ],
+        "tips": [
+            "Compact a base in shallow lifts rather than one deep layer.",
+            "Screed the bedding sand to a uniform depth before laying pavers.",
+            "Keep sand a little damp while working so it holds shape without washing away.",
+        ],
+    },
+    "compost": {
+        "tools": "a tape measure, a wheelbarrow, a garden fork or tiller, gloves, and a watering can",
+        "unit_note": "Compost is sold by the bag (often 1 cubic foot) or by the cubic yard in bulk.",
+        "depths": [
+            ("0.25-0.5 in", "Light top-dressing on an established lawn"),
+            ("1 in", "Topping up beds and around established plants"),
+            ("2 in", "Working into the top layer of a new bed"),
+            ("3 in", "Heavy feeders and poor soil; till in rather than leaving on top"),
+        ],
+        "materials": [
+            ("Mushroom compost", "Alkaline and slow-release; good general amendment"),
+            ("Green-waste compost", "Locally made, variable but cheap in bulk"),
+            ("Manure-based compost", "Richer in nutrients; let it age before use"),
+            ("Vermicompost", "Small quantities, concentrated; best for seed starting"),
+        ],
+        "tips": [
+            "Mix compost into the top few inches rather than leaving a thick blanket.",
+            "Let fresh manure-based compost age so it does not burn plants.",
+            "Reapply lightly each season; more is not better.",
+        ],
+    },
+    "bark": {
+        "tools": "a tape measure, a wheelbarrow, a rake, gloves, and a hose to water before laying",
+        "unit_note": "Bark and wood chips are sold by the bag (often 2 cubic feet) or by the cubic yard.",
+        "depths": [
+            ("2 in", "Refreshing beds and suppressing light weeds"),
+            ("3 in", "Standard decorative cover for beds and borders"),
+            ("4 in", "New beds and stronger weed control"),
+            ("4+ in", "Avoid piling against trunks; keep it clear of stems"),
+        ],
+        "materials": [
+            ("Bark nuggets", "Long-lasting and decorative, but they float and shift on slopes"),
+            ("Shredded bark", "Knits together and stays put; good on slopes"),
+            ("Wood chips", "Cheap and good for paths and around trees"),
+            ("Pine bark fines", "Fine texture for acid-loving plants"),
+        ],
+        "tips": [
+            "Keep bark clear of trunks and stems to avoid rot and pests.",
+            "Use shredded rather than nugget bark where the ground slopes.",
+            "Water the soil first so the layer does not shed rain.",
+        ],
+    },
+    "sod": {
+        "tools": "a tape measure, a half-moon edger or knife, a lawn roller, a rake, and a hose or sprinkler",
+        "unit_note": "Sod is sold by the roll (commonly 10 square feet) and by the pallet (about 500 square feet).",
+        "depths": [
+            ("Fresh roll", "Lay within a day of delivery, seams staggered like brickwork"),
+            ("Prepared base", "Firm and level; water the ground just before laying"),
+            ("First two weeks", "Keep damp until the roots knit into the soil"),
+            ("After rooting", "Water deeply and less often to encourage deep roots"),
+        ],
+        "materials": [
+            ("Kentucky bluegrass", "Cool-season, dense and self-repairing; needs sun and water"),
+            ("Tall fescue", "Tougher and more drought-tolerant; good for high traffic"),
+            ("Bermuda", "Warm-season, aggressive spreader; thrives in heat"),
+            ("St. Augustine", "Warm-season, shade-tolerant; common in the south"),
+        ],
+        "tips": [
+            "Order about 5 per cent extra for trimming around edges.",
+            "Stagger the seams and press each roll firmly onto the soil.",
+            "Water immediately after laying and keep it damp for the first two weeks.",
+        ],
+    },
 }
 
-FAQ_ORDER = ["mulch", "soil", "gravel", "paint", "tile", "grass_seed", "concrete"]
+FAQ_ORDER = ["mulch", "soil", "gravel", "paint", "tile", "grass_seed", "concrete",
+             "sand", "compost", "bark", "sod"]
 
 # Standard job sizes used to build a "coverage at a glance" table in each article.
 # Values are input overrides for the calculator; anything omitted uses the default.
@@ -201,6 +286,30 @@ SCENARIOS: dict[str, list[tuple[str, dict]]] = {
         ("10x10 slab, 4 in", {"length": 10, "width": 10, "thickness": 4}),
         ("20x20 slab, 4 in", {"length": 20, "width": 20, "thickness": 4}),
     ],
+    "sand": [
+        ("100 sq ft, 2 in deep", {"length": 10, "width": 10, "depth": 2}),
+        ("200 sq ft, 2 in deep", {"length": 20, "width": 10, "depth": 2}),
+        ("400 sq ft, 2 in deep", {"length": 20, "width": 20, "depth": 2}),
+        ("1,000 sq ft, 2 in deep", {"length": 50, "width": 20, "depth": 2}),
+    ],
+    "compost": [
+        ("100 sq ft, 2 in deep", {"length": 10, "width": 10, "depth": 2}),
+        ("200 sq ft, 2 in deep", {"length": 20, "width": 10, "depth": 2}),
+        ("400 sq ft, 2 in deep", {"length": 20, "width": 20, "depth": 2}),
+        ("1,000 sq ft, 2 in deep", {"length": 50, "width": 20, "depth": 2}),
+    ],
+    "bark": [
+        ("100 sq ft, 3 in deep", {"length": 10, "width": 10, "depth": 3}),
+        ("200 sq ft, 3 in deep", {"length": 20, "width": 10, "depth": 3}),
+        ("400 sq ft, 3 in deep", {"length": 20, "width": 20, "depth": 3}),
+        ("1,000 sq ft, 3 in deep", {"length": 50, "width": 20, "depth": 3}),
+    ],
+    "sod": [
+        ("200 sq ft", {"length": 20, "width": 10}),
+        ("500 sq ft", {"length": 25, "width": 20}),
+        ("1,000 sq ft", {"length": 50, "width": 20}),
+        ("2,500 sq ft", {"length": 50, "width": 50}),
+    ],
 }
 
 # Which computed outputs to show, and their column headings, per calculator.
@@ -215,6 +324,14 @@ TABLE_COLUMNS: dict[str, list[tuple[str, str]]] = {
     "grass_seed": [("pounds", "Pounds"), ("bags_3lb", "3 lb bags")],
     "concrete": [("cubic_yards", "Cubic yards"), ("bags_60lb", "60 lb bags"),
                  ("bags_80lb", "80 lb bags")],
+    "sand": [("cubic_feet", "Cubic feet"), ("cubic_yards", "Cubic yards"),
+             ("tons", "Tons"), ("bags_0_5cf", "0.5 cu ft bags")],
+    "compost": [("cubic_feet", "Cubic feet"), ("cubic_yards", "Cubic yards"),
+                ("bags_1cf", "1 cu ft bags")],
+    "bark": [("cubic_feet", "Cubic feet"), ("cubic_yards", "Cubic yards"),
+             ("bags_2cf", "2 cu ft bags")],
+    "sod": [("rolls", "Rolls"), ("rolls_with_waste", "With waste"),
+            ("pallets", "Pallets")],
 }
 
 
@@ -396,6 +513,79 @@ Whichever route you take, prepare the base properly. Compact the ground, add a g
 sub-base for drainage, and form the edges so the slab is a true rectangle. Laying a sheet
 of reinforcement mesh in the lower third of a slab that carries vehicles makes a real
 difference to how long it lasts.
+""",
+    "sand": """## Sand for Bases, Boxes and Joints
+
+Sand is not one product. Sharp or builder's sand has angular grains that interlock when
+compacted, which is why it is the standard bedding layer under pavers. Play sand is washed
+and rounded, so it drains and stays soft underfoot but will not lock together; use it in
+sandboxes and around play equipment, not under a patio. Masonry sand is finer and uniform,
+which suits mortar and a thin leveling course.
+
+Depth follows the job. A paver bedding layer is screeded to about an inch over a compacted
+base, then the pavers are tapped into it. A sandbox is filled three to four inches deep, and
+any structural fill should go in shallow lifts and be compacted between them so it does not
+settle later. Because damp sand is heavy, a cubic yard runs to about 1.35 tons, so ordering
+by weight rather than volume is often simpler for a bulk delivery.
+
+Prepare the base before the sand goes down. Excavate to the finished level, compact the
+sub-grade, and lay landscape fabric so the sand does not migrate into the soil below. Screed
+the bedding sand with a straight board rather than raking it by eye, and keep it slightly
+damp so it holds its shape while you work across it.
+""",
+    "compost": """## Using Compost Well
+
+Compost is a soil amendment, not a mulch or a fill. Its job is to feed soil life and improve
+structure, and it does that best when it is mixed into the top few inches rather than left
+in a thick blanket on the surface. For a new bed, spread two inches over the area and fork
+or till it into the top six inches. For an established bed, an inch as a top-dressing is
+plenty, and it will work its way down with the worms.
+
+Rates vary with the goal. A light quarter-inch top-dressing on a lawn feeds the grass without
+smothering it, while three inches is about the most you would work into poor soil before it
+stops being an amendment and starts being a growing medium. Fresh manure-based compost should
+be left to age, or it can burn young roots and carry weed seeds through.
+
+Buying in bulk is far cheaper per cubic foot than bags, but it is sold by the cubic yard and
+usually tipped on a hard surface, so plan where the pile will go and how you will move it.
+Bagged compost suits small jobs and is easier to store; the bags are normally one cubic foot,
+so a cubic yard is twenty-seven of them.
+""",
+    "bark": """## Choosing Bark and Wood Chips
+
+Bark and wood chips are decorative mulches, and the texture matters as much as the depth.
+Large bark nuggets are the slowest to break down and look tidy for years, but they float in
+heavy rain and shift on slopes. Shredded bark knits together into a mat that stays put, which
+makes it the better choice on banks and around trees. Wood chips are the cheapest option and
+excellent on paths and in play areas, though they break down a little faster than nuggets.
+
+Spread bark two to three inches deep for most beds, and up to four inches where you are
+suppressing established weeds. Keep every layer a few inches clear of trunks and stems,
+because a pile held against bark traps moisture and invites rot and pests. Water the ground
+before you lay it, since a thick dry layer can shed rain rather than let it through.
+
+Like any mulch, bark is sold by the bag, usually two cubic feet, or by the cubic yard in
+bulk. A cubic yard is thirteen and a half of those bags. Reapply a thin fresh layer each
+spring to keep the colour and the weed control, rather than one deep dump that will need
+replacing all at once.
+""",
+    "sod": """## Laying Sod That Knits In
+
+Sod is living turf lifted with a thin layer of soil, so it needs to root into the ground
+below it within days. That makes ground preparation the whole job. Clear and kill the old
+grass, rotovate or fork the top few inches, firm it, and rake it level; then water the
+surface just before the rolls go down so there is moisture for the roots to find.
+
+Order by the roll and the pallet, and add about five per cent for trimming around edges,
+paths and curves. Lay the first roll along a straight edge, butt the next one tight against
+it, and stagger the joints like brickwork so the seams do not line up into a weak strip.
+Press each roll firmly onto the soil, roll the finished area to remove air pockets, and keep
+it damp for the first fortnight.
+
+Once the sod has rooted, change how you water: deeply and less often, which pushes the roots
+down and makes the lawn tougher in dry spells. Avoid walking on it for the first week or two,
+and hold off on fertiliser until it has started to grow, so the effort goes into rooting
+rather than top growth.
 """,
 }
 

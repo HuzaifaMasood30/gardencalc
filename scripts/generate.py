@@ -105,6 +105,30 @@ FAQ_TEMPLATES = {
         ("How much water do I add to concrete mix?", "Follow the bag instructions; roughly 3 quarts per 80 lb bag, added gradually."),
         ("Can I pour concrete over soil?", "Yes if the ground is compacted and level, with a gravel base for drainage."),
     ],
+    "sand": [
+        ("How much does a cubic yard of sand weigh?", "About 1.35 tons for damp builder's sand, a little more when wet."),
+        ("How deep should sand be under pavers?", "About one inch as a screeded bedding layer over a compacted base."),
+        ("How many bags of sand in a cubic yard?", "Fifty-four 0.5 cubic foot bags, since a cubic yard is 27 cubic feet."),
+        ("Can I use play sand for a paver base?", "No. Use sharp or builder's sand, which compacts and locks together; play sand is too round and smooth."),
+    ],
+    "compost": [
+        ("How much compost should I add?", "One to three inches worked into the top layer of a bed, or a quarter inch as a lawn top-dressing."),
+        ("How many bags of compost in a cubic yard?", "Twenty-seven 1 cubic foot bags, since a cubic yard is 27 cubic feet."),
+        ("Can you put compost too thick?", "Yes. A deep blanket can smother roots and tie up nitrogen, so mix it in rather than piling it on."),
+        ("Is compost the same as topsoil?", "No. Compost is decomposed organic matter that feeds the soil; topsoil is mineral soil that adds bulk and structure."),
+    ],
+    "bark": [
+        ("How deep should bark mulch be?", "Two to three inches for most beds; keep it clear of trunks and stems."),
+        ("How many bags of bark in a cubic yard?", "Thirteen and a half 2 cubic foot bags, since a cubic yard is 27 cubic feet."),
+        ("Do bark chips stop weeds?", "They suppress most weeds at three inches deep, especially over a layer of landscape fabric."),
+        ("Which lasts longer, bark nuggets or shredded bark?", "Nuggets last longer but float and shift on slopes; shredded bark knits together and stays put."),
+    ],
+    "sod": [
+        ("How many rolls of sod do I need?", "Divide the lawn area by the roll coverage, usually 10 sq ft, then add about 5% for trimming."),
+        ("How much does a pallet of sod cover?", "Commonly about 500 square feet, though it varies by supplier and roll size."),
+        ("How long does sod take to root?", "About two weeks of keeping it damp; then water deeply and less often to push roots down."),
+        ("Can you lay sod over existing grass?", "No. Remove or kill the old grass and prepare a firm, level base, or the new sod will not knit in."),
+    ],
 }
 
 
@@ -140,7 +164,7 @@ _DANGLING = {"a", "an", "the", "of", "to", "for", "and", "or", "by", "with", "in
              "over", "under", "than", "then", "about", "atop"}
 
 
-def _clip_meta(text: str, limit: int = 158) -> str:
+def _clip_meta(text: str, limit: int = 158, floor: int = 110) -> str:
     """Trim a meta description to a length Google will not truncate.
 
     Cuts at a sentence boundary when one fits, otherwise at a word boundary, and
@@ -148,7 +172,7 @@ def _clip_meta(text: str, limit: int = 158) -> str:
     """
     text = text.strip()
     if len(text) > limit:
-        sentences = _re.split(r"(?<=[.!?])\s+", text)
+        sentences = re.split(r"(?<=[.!?])\s+", text)
         kept = ""
         for sent in sentences:
             candidate = (kept + " " + sent).strip()
@@ -159,6 +183,24 @@ def _clip_meta(text: str, limit: int = 158) -> str:
             text = kept
         else:
             text = text[: limit - 1].rsplit(" ", 1)[0]
+    # A value cut after a connector and a bare figure ("...cubic yards or 22.",
+    # "...and the number of 60.") reads as truncated. Drop only the dangling clause,
+    # back to the previous clause boundary, so the rest of the sentence is kept.
+    _tail = re.compile(
+        r"\b(?:of|or|about|approximately|around|roughly|per|by|to|and|at|for|with|"
+        r"than|over|under|near)\s+[\d.,]+\s*\.?$", re.I)
+    core0 = text.rstrip(".!? ")
+    m = _tail.search(core0)
+    if m:
+        head = core0[:m.start()]
+        cut = max(head.rfind(", "), head.rfind(" and "), head.rfind(" or "))
+        if cut > 0:
+            head = head[:cut]
+        head = head.rstrip(" ,;:—-")
+        # Only cut when the result still clears the minimum length; a too-short meta
+        # fails the quality gate, which is worse than an awkward but complete one.
+        if len(head) >= floor:
+            text = head
     # Never leave a dangling function word: a snippet cut after "...bags of."
     # reads as truncated filler and depresses clicks.
     core = text.rstrip(".!? ").rstrip(" ,;:—-")
@@ -243,14 +285,306 @@ def _keyword_defaults(calc_key: str, calc_def: dict, kw: str) -> dict:
     return defaults
 
 
+# Curated pillar prose for clusters the generic fallback cannot serve well: their tools
+# are close enough that a templated draft trips the duplicate-content gate. Each body is
+# written per topic, with the live worked example spliced in under "## Worked Example".
+PILLAR_PROSE: dict[str, str] = {
+    "sand": """Sand is bought by the ton, the cubic yard or the bag, and the right depth
+depends on the job. A paver bedding layer is screeded to about an inch over a compacted
+base; a sandbox is filled three to four inches deep; structural fill is placed in shallow
+lifts and compacted. Measure the length and width, set the depth for your job, and the
+calculator converts the volume into cubic yards, tons and bags of 0.5 cubic feet.
+
+## How to Calculate Sand
+
+1. Measure the length and width of the area in feet and multiply them to get square feet.
+2. Decide the depth in inches: about 1 in for a paver bedding layer, 3-4 in for a sandbox.
+3. Convert the depth to feet by dividing by 12.
+4. Multiply the area by the depth in feet to get cubic feet.
+5. Divide by 27 for cubic yards, or use the ton and bag figures the calculator reports.
+
+## Which Sand to Use
+
+Not every bag labelled "sand" behaves the same. Sharp or builder's sand has angular grains
+that interlock under compaction, which is why it is the standard bedding layer under pavers.
+Masonry sand is finer and more uniform, which suits mortar and a thin leveling course. Play
+sand is washed and rounded, so it stays soft underfoot and drains freely but will not lock
+together; keep it for sandboxes, not for a patio base. For joints between pavers, polymeric
+sand is swept in and wetted so it sets and resists washing out.
+
+## Worked Example
+
+{worked}
+
+## How Deep Should Sand Be?
+
+Match the depth to the job rather than filling to one uniform height. A bedding layer much
+deeper than an inch is hard to screed evenly and can settle unevenly under the pavers. A
+sandbox needs enough depth for play, but any deeper than four inches and the top dries out
+while the base stays damp. Structural fill should always go in shallow, compacted lifts, or
+it will slump after the first wet season.
+
+## Ordering Sand by Weight or Volume
+
+Damp builder's sand weighs about 1.35 tons per cubic yard, so a bulk order is often priced
+and delivered by weight even though the job is measured by volume. Ask the supplier which
+figure they use, and remember that a cubic yard is 27 cubic feet, or 54 bags of 0.5 cubic
+feet. For anything small enough to carry, bagged sand is easier to handle, but it costs far
+more per cubic foot than a bulk delivery.
+
+## Sand for Sandboxes and Play Areas
+
+Play sand is screened and washed so it is free of sharp debris and fine dust, which is why
+it costs more than builder's sand. Fill a sandbox three to four inches deep for young
+children, a little deeper for older ones, and cover it when it is not in use to keep animals
+and leaves out. Because play sand is rounded, it drains well and stays loose underfoot, but
+that same roundness is why it will not compact or support a paver.
+
+## Sand or Gravel Under a Patio?
+
+Both go under hard landscaping, but they do different jobs. Gravel forms the structural base,
+compacted in layers so it carries the load without settling. Sand is the thin bedding layer
+that lets you screed the surface flat and tap each paver down to the same height. Skipping the
+gravel and using deep sand alone is a common shortcut that ends with pavers sinking and
+shifting within a season, so treat the two as a pair rather than a choice.
+
+## Common Mistakes to Avoid
+
+- Using rounded play sand under pavers, which will not compact or interlock.
+- Raking the bedding sand to a guessed depth instead of screeding it to a straight board.
+- Laying sand over soft soil with no landscape fabric, so it migrates downward.
+- Filling a base in one deep layer instead of compacting shallow lifts.
+""",
+    "compost": """Compost is a soil amendment rather than a mulch or a fill: its job is to
+feed soil life and improve structure, and it works best mixed into the top few inches rather
+than left in a thick blanket on the surface. For a new bed, spread about two inches and fork
+it into the top six inches; for an established bed, an inch as a top-dressing is plenty. Enter
+the area and depth, and the calculator returns cubic feet, cubic yards and bags of one cubic
+foot.
+
+## How to Calculate Compost
+
+1. Measure the length and width of the bed in feet and multiply them for the area.
+2. Choose a depth: a quarter to half an inch to top-dress a lawn, one inch to refresh beds,
+   two to three inches to work into new or poor soil.
+3. Convert the depth to feet by dividing by 12.
+4. Multiply the area by the depth in feet to get cubic feet.
+5. Divide by 27 for cubic yards, or read the bag count the calculator reports.
+
+## How Much Compost to Add
+
+The right amount depends on what you are doing. A light quarter-inch top-dressing on an
+established lawn feeds the grass without smothering it. An inch raked over a border tops up
+the organic matter that the previous season used. Two inches forked into a new bed gives
+roots something to work with, and three inches is about the most worth tilling into poor
+soil before it stops behaving like an amendment and starts behaving like a growing medium.
+
+## Worked Example
+
+{worked}
+
+## Compost, Topsoil and Mulch Are Not the Same
+
+These three are often used together but do different jobs. Compost is decomposed organic
+matter that feeds soil biology and improves structure. Topsoil is mineral soil that adds bulk
+and a rooting depth where there is none. Mulch sits on the surface to slow evaporation and
+suppress weeds. A raised bed usually wants a blend, while an established border mostly wants
+compost worked in and a separate mulch layer on top.
+
+## Buying Compost in Bulk or by the Bag
+
+Bagged compost is normally sold in one cubic foot bags, so a cubic yard is 27 of them, and
+that is the number to compare against a bulk price. Bulk compost is far cheaper per cubic
+foot but arrives tipped on a hard surface, so plan where the pile goes and how you will move
+it before you order. Fresh manure-based compost should be left to age, or it can burn young
+roots and carry weed seeds through to the bed.
+
+## Compost for Lawns and Vegetable Beds
+
+Lawns and vegetable beds want compost in different ways. A lawn is top-dressed thinly and
+then watered in, so the grass is fed without being buried; a quarter inch is the usual dose,
+worked in with the back of a rake. Vegetable beds are hungry and are replanted every season,
+so two inches forked into the top layer before planting gives the roots something to draw on
+and improves how the soil holds water. Both benefit from a repeat the following year, because
+compost is consumed as it feeds the soil.
+
+## Does Compost Replace Fertiliser?
+
+No. Compost feeds the soil, slowly releasing nutrients as it breaks down and improving the
+soil's structure and water-holding capacity. Fertiliser feeds the plant directly with a
+measured dose of nutrients. In practice you want both: compost to build the soil over time,
+and a fertiliser at the right rate when a crop or a lawn needs a quick, specific boost. The
+fertiliser calculator covers that side of the job.
+
+## Common Mistakes to Avoid
+
+- Spreading a deep blanket instead of mixing a modest layer into the top few inches.
+- Using fresh, unaged manure-based compost around young plants.
+- Treating compost as a substitute for topsoil when the job needs bulk and rooting depth.
+- Forgetting that compost keeps breaking down, so beds settle and need topping up.
+""",
+    "bark": """Bark and wood chips are decorative mulches, and both the texture and the
+depth matter. Large bark nuggets last longest but float in heavy rain and shift on slopes,
+while shredded bark knits into a mat that stays put. Spread two to three inches for most
+beds, up to four where weeds are established, and keep every layer a few inches clear of
+trunks and stems. Enter the area and depth and the calculator returns cubic feet, cubic
+yards and bags of two cubic feet.
+
+## How to Calculate Bark
+
+1. Measure the length and width of the bed in feet and multiply them for the area.
+2. Choose a depth: two inches to refresh beds, three inches for standard cover, up to four
+   inches where you are suppressing established weeds.
+3. Convert the depth to feet by dividing by 12.
+4. Multiply the area by the depth in feet to get cubic feet.
+5. Divide by 27 for cubic yards, or read the bag count the calculator reports.
+
+## Bark, Wood Chips and Compost Compared
+
+Bark nuggets are the slowest to break down and hold their colour for years, which suits
+formal beds, but they are the least stable on a slope. Shredded bark interlocks and resists
+washing, so it is the better choice on banks and around trees. Wood chips are the cheapest
+cover and excellent on paths and in play areas, though they break down faster. Compost is not
+a surface mulch at all; it belongs mixed into the soil, not piled on top of it.
+
+## Worked Example
+
+{worked}
+
+## Spreading Bark So It Stays Put
+
+Water the ground before you lay bark, because a thick, dry layer can shed rain rather than
+let it through. Rake it to an even depth rather than dumping and spreading, and feather the
+edges so the bed does not look like a raised box. Keep the layer clear of trunks, stems and
+the crowns of perennials: a pile held against bark traps moisture and invites rot and pests.
+On a slope, use shredded bark and lay it a little thicker at the top of the run.
+
+## Refreshing Bark Each Season
+
+A thin fresh layer each spring keeps the colour and the weed control without the cost of
+replacing the whole bed. Bark sold in bags is usually two cubic feet, so a cubic yard is
+thirteen and a half bags; bulk is sold by the cubic yard and is much cheaper for a large
+area. Break up any matted or compacted old layer first, so water can still reach the soil
+underneath.
+
+## Bark Around Trees and Shrubs
+
+Trees and shrubs are where bark earns its keep, but they are also where it is most often
+misused. A ring of bark out to the drip line keeps mowers and strimmers away from the trunk
+and holds moisture over the roots, which is exactly what a young tree needs. The mistake is
+the "mulch volcano": a cone of bark piled up against the trunk, which keeps the bark tissue
+permanently damp and invites rot, canker and pests. Keep the layer flat and pull it back a
+few inches from the trunk so the flare is visible.
+
+## How Often to Top Up Bark
+
+Bark breaks down slowly and sinks as it does, so a bed loses perhaps an inch of depth over a
+year. A thin fresh layer each spring restores the look and the weed control without the cost
+and effort of stripping the bed. Rake the old surface first to break up any matted or
+compacted patches, then top up to the depth you want. If the layer has built up past about
+four inches over several years, rake some out rather than adding more, because too deep a
+layer keeps water from reaching the soil.
+
+## Common Mistakes to Avoid
+
+- Piling bark against trunks and stems, which holds moisture and causes rot.
+- Using nuggets on a slope, where they float and slide after heavy rain.
+- Laying it too thin, so weeds push through within weeks.
+- Treating bark as a soil improver and digging it in, instead of using compost for that.
+""",
+    "sod": """Sod is living turf lifted with a thin layer of soil, so it has to root into the
+ground below within days of arriving. That makes ground preparation the whole job. Measure
+the lawn area, allow about five per cent extra for trimming around edges and curves, and the
+calculator returns the number of rolls (at 10 square feet each) and the pallets, at about 500
+square feet each.
+
+## How to Calculate Sod
+
+1. Measure the length and width of the lawn in feet and multiply them for the area.
+2. Divide by the coverage of one roll, commonly 10 square feet.
+3. Add about five per cent for trimming around edges, paths and curves.
+4. Round up to whole rolls, or order by the pallet where the area is large enough.
+5. Prepare and firm the soil before delivery so the sod can be laid the same day.
+
+## Preparing the Ground
+
+Sod roots into whatever is underneath it, so the base decides whether it takes. Clear and
+kill the old grass, rotovate or fork the top few inches, firm it, and rake it level. Water
+the surface just before the rolls go down so there is moisture for the roots to find. On a
+slope, rake the surface to a slight tilt so water does not pool under the turf and rot the
+roots.
+
+## Worked Example
+
+{worked}
+
+## Laying the Rolls
+
+Lay the first roll along a straight edge, such as a path or a drive, and work outward from
+there. Butt each roll tight against the last and stagger the joints like brickwork, so the
+seams do not line up into a weak strip. Press each roll firmly onto the soil, then roll the
+finished area to squeeze out air pockets and ensure good contact. Trim the edges with a
+half-moon edger or a sharp knife, and keep the whole area damp for the first fortnight.
+
+## Watering and the First Few Weeks
+
+New sod needs frequent, light watering until it knits in, then a change of habit: water
+deeply and less often, which pushes roots downward and makes the lawn tougher in dry spells.
+Stay off it for the first week or two, and hold off on fertiliser until it has started to
+grow, so the plant puts its energy into rooting rather than top growth. Once it has rooted,
+tug a corner gently: if it lifts, it needs more time and more water.
+
+## Sod or Seed?
+
+Sod gives you an instant lawn, holds a slope against erosion from day one, and is the usual
+choice when the area is on show or you cannot wait a season. Seed costs far less per square
+foot and lets you pick a mix for shade, wear or drought, but it needs watering, weeding and
+patience, and it will not hold bare ground through heavy rain. As a rough guide, sod for a
+front lawn or a steep bank, and seed for a large back lawn where a few weeks of care are
+acceptable.
+
+## Choosing a Grass for Your Climate
+
+Match the turf to the climate rather than to the picture on the pallet. Cool-season grasses
+such as Kentucky bluegrass and tall fescue look best in northern states and stay green in
+spring and autumn, though they can struggle in a hot, dry summer. Warm-season grasses such as
+Bermuda and St. Augustine thrive in the south and shrug off heat, but they go dormant and
+brown off in winter. Tell the supplier where you live and how much sun the lawn gets, and let
+them steer the choice.
+
+## Common Mistakes to Avoid
+
+- Ordering the exact area with no allowance for trimming and offcuts.
+- Laying sod onto unprepared or uneven ground, so the roots never make contact.
+- Letting rolls sit stacked in the sun, which cooks the turf before it is laid.
+- Watering lightly and often forever, which keeps roots shallow and the lawn fragile.
+""",
+}
+
+
+def _curated_body(calc_key: str, calc_title: str, calc_short: str, worked: str,
+                  secondary: list[str]) -> str:
+    body = PILLAR_PROSE[calc_key].replace("{worked}", worked)
+    if secondary:
+        body += (f"\n## Related Questions\n\nPeople also search for "
+                 f"{', '.join(secondary[:3])}. The method is the same in every case: measure "
+                 f"the area, apply the depth or rate the job needs, then convert into the "
+                 f"units your supplier sells in, using the {calc_title.lower()} for the "
+                 f"arithmetic.\n")
+    return body
+
+
 def _fallback_body(kw: str, calc_title: str, calc_short: str, worked: str,
                    secondary: list[str], calc_key: str = "") -> str:
+    if calc_key in PILLAR_PROSE:
+        return _curated_body(calc_key, calc_title, calc_short, worked, secondary)
     import content_lib
     lib = content_lib.LIBRARY.get(calc_key, {})
     material_word = {
         "mulch": "mulch", "soil": "soil mix", "gravel": "gravel",
         "paint": "paint", "tile": "tile", "grass_seed": "grass seed",
-        "concrete": "concrete mix",
+        "concrete": "concrete mix", "sand": "sand", "compost": "compost",
+        "bark": "bark", "sod": "sod",
     }.get(calc_key, "material")
     m = material_word
     size = _primary_size(kw)
@@ -267,13 +601,20 @@ def _fallback_body(kw: str, calc_title: str, calc_short: str, worked: str,
     analysis = (f"Our free {calc_title.lower()} below does the arithmetic and shows every "
                 f"step, so you can sanity-check the answer and order with confidence.")
 
-    if calc_key in ("mulch", "soil", "gravel", "concrete"):
+    if calc_key in ("mulch", "soil", "gravel", "concrete", "sand", "compost", "bark"):
         steps = ("1. Measure the length and width in feet and multiply them to get the area.\n"
                  "2. Decide the depth (or thickness) the job needs, in inches.\n"
                  "3. Convert the depth to feet by dividing by 12.\n"
                  "4. Multiply the area by the depth in feet to get cubic feet.\n"
                  "5. Divide cubic feet by 27 to get cubic yards, or use the bag and ton "
                  "figures the calculator reports.\n")
+    elif calc_key == "sod":
+        steps = ("1. Measure the lawn area in square feet.\n"
+                 "2. Divide by the coverage of one roll, commonly 10 sq ft.\n"
+                 "3. Add about 5% for trimming around edges and curves.\n"
+                 "4. Round up to whole rolls, or order by the pallet (about 500 sq ft).\n"
+                 "5. Prepare and firm the soil before the sod arrives so it can be laid the "
+                 "same day.\n")
     elif calc_key == "grass_seed":
         steps = ("1. Measure the lawn area in square feet.\n"
                  "2. Check whether you are seeding a new lawn or overseeding an existing one.\n"
@@ -305,7 +646,7 @@ def _fallback_body(kw: str, calc_title: str, calc_short: str, worked: str,
         f"## Worked Example\n\n{worked}\n",
     ]
 
-    if calc_key in ("mulch", "soil", "gravel", "concrete"):
+    if calc_key in ("mulch", "soil", "gravel", "concrete", "sand", "compost", "bark"):
         if size:
             parts.append(f"This example is set to the job size in the question, so the "
                          f"figures line up with what you searched for. Change the inputs in "
@@ -512,7 +853,7 @@ def generate_article(plan_item: dict) -> dict | None:
     title = _title_for(kw, calc_title)
     faqs = FAQ_TEMPLATES.get(calc_key, [])
     today = dt.date.today().isoformat()
-    return {
+    record = {
         "id": slug,
         "slug": slug,
         "title": title,
@@ -538,6 +879,12 @@ def generate_article(plan_item: dict) -> dict | None:
         "metrics": {"clicks": 0, "impressions": 0, "ctr": 0, "position": 0},
         "word_count": word_count(body),
     }
+    # The answer box is filled here, not only in the fixer: article_fix runs before the
+    # quality gate, while a new article is still "draft", so a page that the fixer never
+    # revisits would otherwise ship without the answer-first sentence a snippet needs.
+    import article_fix  # local import: article_fix imports generate for its own repair
+    record["answer"] = article_fix.answer_text(record)
+    return record
 
 
 def run(limit: int = 1) -> list[dict]:

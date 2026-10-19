@@ -107,6 +107,14 @@ def headline_inputs(art: dict) -> dict:
         if dims:
             return {**base, "length": dims[0], "width": dims[1], "depth": depth}
         return base
+    if key in ("sand", "compost", "bark"):
+        if dims:
+            return {**base, "length": dims[0], "width": dims[1], "depth": base.get("depth", 2)}
+        return base
+    if key == "sod":
+        if dims:
+            return {**base, "length": dims[0], "width": dims[1], "waste": base.get("waste", 10)}
+        return base
     if key == "soil":
         if d3:
             l, w, h = (float(d3.group(i)) for i in (1, 2, 3))
@@ -171,6 +179,15 @@ def describe(art: dict, inputs: dict) -> str:
         if area:
             return f"{int(area.group(1).replace(',', ''))} sq ft at {depth} in"
         return f"{_g(inputs.get('length'))}x{_g(inputs.get('width'))} ft at {depth} in"
+    if key in ("sand", "compost", "bark"):
+        depth = _g(inputs.get("depth", 2))
+        if area:
+            return f"{int(area.group(1).replace(',', ''))} sq ft at {depth} in"
+        return f"{_g(inputs.get('length'))}x{_g(inputs.get('width'))} ft at {depth} in"
+    if key == "sod":
+        if area:
+            return f"{int(area.group(1).replace(',', ''))} sq ft"
+        return f"{_g(inputs.get('length'))}x{_g(inputs.get('width'))} ft"
     if key == "soil":
         return f"{_g(inputs.get('length'))}x{_g(inputs.get('width'))} ft bed at {_g(inputs.get('height'))} in"
     if key == "concrete":
@@ -221,6 +238,20 @@ def answer_text(art: dict) -> str:
         return (f"{where} needs {_g(out['pounds_nitrogen'])} lb of actual nitrogen, "
                 f"about {_g(out['pounds'])} lb of product ({out['bags']} bag) "
                 f"from a {share}% nitrogen bag.")
+    if key == "sand":
+        return (f"{where} needs {out['cubic_yards']} cu yd of sand, about {out['tons']} tons, "
+                f"or {out['bags_0_5cf']} bags of 0.5 cu ft.")
+    if key == "compost":
+        return (f"{where} needs {_g(out['cubic_feet'])} cu ft of compost: "
+                f"{out['cubic_yards']} cu yd, or {out['bags_1cf']} bags of 1 cu ft.")
+    if key == "bark":
+        return (f"{where} needs {_g(out['cubic_feet'])} cu ft of bark: "
+                f"{out['cubic_yards']} cu yd, or {out['bags_2cf']} bags of 2 cu ft.")
+    if key == "sod":
+        pallets = out['pallets']
+        return (f"{where} needs about {out['rolls_with_waste']} rolls of sod "
+                f"({out['rolls']} plus waste), roughly {pallets} "
+                f"pallet{'s' if pallets != 1 else ''}.")
     return art.get("meta_description", "")
 
 
@@ -274,6 +305,8 @@ _FIELD = {
     "Tiles with waste": "tiles_with_waste", "Rate per 1000": "rate_per_1000",
     "Pounds": "pounds", "3 lb bags": "bags_3lb", "Bags": "bags",
     "Pounds of nitrogen": "pounds_nitrogen", "Pounds of product": "pounds",
+    "0.5 cu ft bags": "bags_0_5cf", "1 cu ft bags": "bags_1cf",
+    "Rolls": "rolls", "Rolls with waste": "rolls_with_waste", "Pallets": "pallets",
 }
 _LABELS = {
     "mulch": ["Square feet", "Cubic feet", "Cubic yards", "2 cu ft bags"],
@@ -285,6 +318,10 @@ _LABELS = {
     "tile": ["Floor area", "Tile area", "Tiles", "Tiles with waste"],
     "grass_seed": ["Rate per 1000", "Pounds", "3 lb bags"],
     "fertilizer": ["Pounds of nitrogen", "Pounds of product", "Bags"],
+    "sand": ["Square feet", "Cubic yards", "Tons", "0.5 cu ft bags"],
+    "compost": ["Square feet", "Cubic feet", "Cubic yards", "1 cu ft bags"],
+    "bark": ["Square feet", "Cubic feet", "Cubic yards", "2 cu ft bags"],
+    "sod": ["Square feet", "Rolls", "Rolls with waste", "Pallets"],
 }
 
 # Friendly input names for the auto-generated worked-example bullets. The raw config
@@ -619,6 +656,23 @@ def worked_example_section(art: dict) -> str:
         body = (f"{g(ins['area'])} sq ft at {g(ins['rate'])} lb N per 1,000 sq ft needs "
                 f"{out['pounds_nitrogen']} lb of actual nitrogen. A {g(ins['nitrogen'])}% bag "
                 f"supplies that in {out['pounds']} lb of product, about {out['bags']} bags.")
+    elif key == "sand":
+        cuft = _num(out["cubic_yards"]) * 27
+        body = (f"{g(L)} ft x {g(W)} ft = {g(out['square_feet'])} sq ft. At {g(ins['depth'])} in "
+                f"deep that is {g(cuft)} cubic feet = {out['cubic_yards']} cubic yards, about "
+                f"{out['tons']} tons of sand, or {out['bags_0_5cf']} bags of 0.5 cu ft.")
+    elif key == "compost":
+        body = (f"{g(L)} ft x {g(W)} ft = {g(out['square_feet'])} sq ft. At {g(ins['depth'])} in "
+                f"deep that is {g(out['cubic_feet'])} cubic feet, which is {out['cubic_yards']} "
+                f"cubic yards, about {out['bags_1cf']} bags of 1 cu ft.")
+    elif key == "bark":
+        body = (f"{g(L)} ft x {g(W)} ft = {g(out['square_feet'])} sq ft. At {g(ins['depth'])} in "
+                f"deep that is {g(out['cubic_feet'])} cubic feet, which is {out['cubic_yards']} "
+                f"cubic yards, about {out['bags_2cf']} bags of 2 cu ft.")
+    elif key == "sod":
+        body = (f"{g(L)} ft x {g(W)} ft = {g(out['square_feet'])} sq ft. At about 10 sq ft per "
+                f"roll that is {out['rolls']} rolls; adding {g(ins['waste'])}% for trimming gives "
+                f"{out['rolls_with_waste']} rolls, or roughly {out['pallets']} pallets.")
     else:
         return ""
     return f"## Worked Example\n\n{body}"
@@ -679,6 +733,17 @@ _MISTAKES = {
                   "and the seedling runs out of energy before it reaches the light.",
     "fertilizer": "**Guessing the spread rate.** Over-application burns the lawn, so weigh the "
                   "product and set the spreader rather than eyeballing it.",
+    "sand": "**Using one depth for two jobs.** A paver base is compacted in lifts of about "
+            "2 inches, while a sandbox or leveling course is shallower, so set the depth to "
+            "the job rather than the whole area.",
+    "compost": "**Spreading it too deep.** One to three inches tilled into the top layer is "
+               "plenty; a thicker blanket can smother roots and lock up nitrogen as it "
+               "breaks down.",
+    "bark": "**Confusing bark nuggets with shredded mulch.** Large bark nuggets float and "
+            "blow on slopes, so use them on flat beds and shredded chips where you need the "
+            "cover to stay put.",
+    "sod": "**Ordering the exact area with no spare.** Sod edges are trimmed to fit, so add "
+           "about 5 per cent and lay it the day it arrives, before the rolls dry out.",
 }
 
 

@@ -3,6 +3,7 @@
   "use strict";
 
   var TONS_PER_CUYD = 1.4;
+  var SAND_TONS_PER_CUYD = 1.35;
   var BASE = (typeof window !== "undefined" && window.GC_BASE) || "";
 
   var CALCS = {
@@ -64,6 +65,28 @@
       var lb = n / share;
       return [["Pounds of nitrogen", r(n, 2)], ["Pounds of product", r(lb, 2)],
               ["Bags", Math.ceil(lb / bag)]];
+    },
+    sand: function (v) {
+      var sqft = v.length * v.width, cuft = sqft * (v.depth / 12), cuyd = cuft / 27;
+      return [["Square feet", r(sqft, 1)], ["Cubic yards", r(cuyd, 2)],
+              ["Tons", r(cuyd * SAND_TONS_PER_CUYD, 2)],
+              ["0.5 cu ft bags", Math.ceil(cuft / 0.5)]];
+    },
+    compost: function (v) {
+      var sqft = v.length * v.width, cuft = sqft * (v.depth / 12), cuyd = cuft / 27;
+      return [["Square feet", r(sqft, 1)], ["Cubic feet", r(cuft, 1)],
+              ["Cubic yards", r(cuyd, 2)], ["1 cu ft bags", Math.ceil(cuft)]];
+    },
+    bark: function (v) {
+      var sqft = v.length * v.width, cuft = sqft * (v.depth / 12), cuyd = cuft / 27;
+      return [["Square feet", r(sqft, 1)], ["Cubic feet", r(cuft, 1)],
+              ["Cubic yards", r(cuyd, 2)], ["2 cu ft bags", Math.ceil(cuft / 2)]];
+    },
+    sod: function (v) {
+      var sqft = v.length * v.width, rolls = sqft / 10;
+      return [["Square feet", r(sqft, 1)], ["Rolls", Math.ceil(rolls)],
+              ["With " + v.waste + "% waste", Math.ceil(rolls * (1 + v.waste / 100))],
+              ["Pallets (500 sq ft)", Math.ceil(sqft / 500)]];
     }
   };
 
@@ -131,6 +154,27 @@
       var n = v.area / 100 * v.rate, kg = n / share, bag = v.bag || 20;
       return [["Kg of nitrogen", r(n, 2)], ["Kg of product", r(kg, 2)],
               ["Bags", Math.ceil(kg / bag)]];
+    },
+    sand: function (v) {
+      var sqm = v.length * v.width, vol = sqm * (v.depth / 100);
+      return [["Square metres", r(sqm, 1)], ["Cubic metres", r(vol, 2)],
+              ["Tonnes", r(vol * (SAND_TONS_PER_CUYD / 0.764554857984), 2)]];
+    },
+    compost: function (v) {
+      var sqm = v.length * v.width, vol = sqm * (v.depth / 100);
+      return [["Square metres", r(sqm, 1)], ["Cubic metres", r(vol, 2)],
+              ["Litres", r(vol * LITRES_PER_CUM, 0)], ["50 L bags", bagsOf(vol, 50)]];
+    },
+    bark: function (v) {
+      var sqm = v.length * v.width, vol = sqm * (v.depth / 100);
+      return [["Square metres", r(sqm, 1)], ["Cubic metres", r(vol, 2)],
+              ["Litres", r(vol * LITRES_PER_CUM, 0)], ["50 L bags", bagsOf(vol, 50)]];
+    },
+    sod: function (v) {
+      var sqm = v.length * v.width, rolls = sqm;
+      return [["Square metres", r(sqm, 1)], ["Rolls", Math.ceil(rolls)],
+              ["With " + v.waste + "% waste", Math.ceil(rolls * (1 + v.waste / 100))],
+              ["Pallets (50 m²)", Math.ceil(sqm / 50)]];
     }
   };
 
@@ -261,6 +305,34 @@
         " ft². Cubic feet = " + r(sf, 1) + " x " + r(df, 4) + " = " + r(cf, 1) +
         ". Cubic yards = " + r(cf, 1) + " / 27 = " + r(cf / 27, 2) + ".";
     },
+    sand: function (v) {
+      var sf = v.length * v.width, df = v.depth / 12, cy = sf * df / 27;
+      return "Square feet = " + v.length + " x " + v.width + " = " + r(sf, 1) +
+        " ft². Cubic yards = " + r(sf, 1) + " x " + r(df, 4) + " / 27 = " + r(cy, 2) +
+        ". Tons = " + r(cy, 2) + " x " + SAND_TONS_PER_CUYD + " = " + r(cy * SAND_TONS_PER_CUYD, 2) +
+        ". 0.5 cu ft bags = " + r(sf, 1) + " x " + r(df, 4) + " / 0.5 = " + Math.ceil(sf * df / 0.5) + ".";
+    },
+    compost: function (v) {
+      var sf = v.length * v.width, df = v.depth / 12, cf = sf * df;
+      return "Square feet = " + v.length + " x " + v.width + " = " + r(sf, 1) +
+        " ft². Cubic feet = " + r(sf, 1) + " x " + r(df, 4) + " = " + r(cf, 1) +
+        ". Cubic yards = " + r(cf, 1) + " / 27 = " + r(cf / 27, 2) +
+        ". 1 cu ft bags = " + Math.ceil(cf) + ".";
+    },
+    bark: function (v) {
+      var sf = v.length * v.width, df = v.depth / 12, cf = sf * df;
+      return "Square feet = " + v.length + " x " + v.width + " = " + r(sf, 1) +
+        " ft². Cubic feet = " + r(sf, 1) + " x " + r(df, 4) + " = " + r(cf, 1) +
+        ". Cubic yards = " + r(cf, 1) + " / 27 = " + r(cf / 27, 2) +
+        ". 2 cu ft bags = " + Math.ceil(cf / 2) + ".";
+    },
+    sod: function (v) {
+      var sf = v.length * v.width, rolls = sf / 10, waste = isFinite(v.waste) ? v.waste : 0;
+      return "Square feet = " + v.length + " x " + v.width + " = " + r(sf, 1) +
+        " ft². Rolls = " + r(sf, 1) + " / 10 = " + Math.ceil(rolls) +
+        ". With " + waste + "% waste = " + Math.ceil(rolls * (1 + waste / 100)) +
+        ". Pallets = " + r(sf, 1) + " / 500 = " + Math.ceil(sf / 500) + ".";
+    },
   };
 
   // Metric "show working". Same structure as WORKING, in metres / centimetres / litres.
@@ -325,6 +397,34 @@
         " m². Cubic metres = " + r(sqm, 1) + " x " + r(m, 3) + " = " + r(vol, 2) +
         ". Litres = " + r(vol * 1000, 0) +
         ". 50 L bags = " + r(vol * 1000, 0) + " / 50 = " + Math.ceil(vol * 1000 / 50) + ".";
+    },
+    sand: function (v) {
+      var sqm = v.length * v.width, m = v.depth / 100, vol = sqm * m;
+      return "Square metres = " + v.length + " x " + v.width + " = " + r(sqm, 1) +
+        " m². Cubic metres = " + r(sqm, 1) + " x " + r(m, 3) + " = " + r(vol, 2) +
+        ". Tonnes = " + r(vol, 2) + " x " + r(SAND_TONS_PER_CUYD / 0.764554857984, 2) + " = " +
+        r(vol * (SAND_TONS_PER_CUYD / 0.764554857984), 2) + ".";
+    },
+    compost: function (v) {
+      var sqm = v.length * v.width, m = v.depth / 100, vol = sqm * m;
+      return "Square metres = " + v.length + " x " + v.width + " = " + r(sqm, 1) +
+        " m². Cubic metres = " + r(sqm, 1) + " x " + r(m, 3) + " = " + r(vol, 2) +
+        ". Litres = " + r(vol * 1000, 0) +
+        ". 50 L bags = " + r(vol * 1000, 0) + " / 50 = " + Math.ceil(vol * 1000 / 50) + ".";
+    },
+    bark: function (v) {
+      var sqm = v.length * v.width, m = v.depth / 100, vol = sqm * m;
+      return "Square metres = " + v.length + " x " + v.width + " = " + r(sqm, 1) +
+        " m². Cubic metres = " + r(sqm, 1) + " x " + r(m, 3) + " = " + r(vol, 2) +
+        ". Litres = " + r(vol * 1000, 0) +
+        ". 50 L bags = " + r(vol * 1000, 0) + " / 50 = " + Math.ceil(vol * 1000 / 50) + ".";
+    },
+    sod: function (v) {
+      var sqm = v.length * v.width, waste = isFinite(v.waste) ? v.waste : 0;
+      return "Square metres = " + v.length + " x " + v.width + " = " + r(sqm, 1) +
+        " m². Rolls = " + r(sqm, 1) + " / 1 = " + Math.ceil(sqm) +
+        ". With " + waste + "% waste = " + Math.ceil(sqm * (1 + waste / 100)) +
+        ". Pallets = " + r(sqm, 1) + " / 50 = " + Math.ceil(sqm / 50) + ".";
     },
   };
 

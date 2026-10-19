@@ -48,6 +48,10 @@ CLUSTERS = {
     "tile":       ("Tile",              (13, 148, 136),  "grid"),
     "grass-seed": ("Grass Seed",        (77, 124, 15),   "bars"),
     "fertilizer": ("Fertilizer",        (180, 83, 9),    "bars"),
+    "sand":       ("Sand & Paver Base", (193, 154, 76),  "layer"),
+    "compost":    ("Compost",           (101, 67, 33),   "layer"),
+    "bark":       ("Bark & Wood Chips", (124, 88, 55),   "layer"),
+    "sod":        ("Sod & Turf",        (46, 125, 50),   "grid"),
 }
 
 
