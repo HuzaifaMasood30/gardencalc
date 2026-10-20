@@ -322,3 +322,25 @@ python3 scripts/live_audit.py https://huzaifamasood30.github.io/gardencalc/
   owner's account; the playbook supplies the copy so the owner only has to paste.
 - Never create accounts for the owner, mass-post, or buy links. One link per
   contribution, disclosed, only where the tool is the direct answer.
+
+## Adding content offline (no LLM key)
+- `scripts/generate.py` only writes quality long-tail prose when an LLM key is set;
+  without one it deliberately skips long-tail pages rather than ship templated thin
+  content. The offline path for hand-written articles is `scripts/add_articles.py`
+  (runner) plus `scripts/curated_articles.py` and `scripts/curated_a|b|c.py` (the prose,
+  split by cluster). `run_all.py` calls the runner at step 1c, before linking/gating.
+- Numbers are never typed in the source. Each entry carries a `## Worked Example` block
+  of `label: value` bullets and a `calculator_defaults`; `article_fix` recomputes the
+  bullets, the intro claim and the answer box from the engine, so a formula change
+  cannot leave a page quoting a stale figure. The intro must mention a unit
+  (cubic feet, bags, tiles, pounds) or `fix_intro` will not touch it.
+- Idempotency is keyed on `curated_hash` (a hash of the hand-written fields), not the
+  stored body: the body has been through `article_fix`, so comparing it would churn the
+  record on every run. Editing an entry bumps `revision`; a no-op run changes nothing.
+- Article bodies must clear 600 words after `article_fix` normalization (the thin-content
+  gate), and the meta description must land in 110-158 chars. Aim for ~630 words for
+  margin.
+- Site pages live in `content/pages/*.md` and are listed in `build.py`'s `pages` list.
+  They are indexable (in the sitemap) and linked from the footer "Guides" column, so
+  they are never orphans. Use the `BASE/` token for internal links in a page body:
+  `build.py` rewrites it to the site base path at render time.

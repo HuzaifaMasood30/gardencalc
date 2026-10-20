@@ -38,6 +38,13 @@ def run(limit: int | None = None) -> dict:
     steps["figure_fixes"] = len(article_fix.run(arts))
     save_json(DATA / "articles.json", arts)
 
+    # Hand-authored long-tail pages. The offline generator deliberately skips these
+    # (a templated draft would trip the duplicate/thin gates), so they come from the
+    # curated module instead. Idempotent: a no-op run changes nothing.
+    print("== 1c/10 curated articles ==")
+    import add_articles
+    add_articles.main()
+
     print("== 2/10 internal links + quality (to convergence) ==")
     arts = load_json(DATA / "articles.json", default=[])
     # Linking and gating are mutually dependent on a young site: an article needs links

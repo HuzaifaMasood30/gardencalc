@@ -823,6 +823,14 @@ def build() -> dict:
     pages = [
         ("about", "About", "Who we are and how our calculators work."),
         ("contact", "Contact", "Get in touch with the team."),
+        ("how-to-measure", "How to Measure for a Materials Estimate",
+         "Measure a space, break up awkward shapes, and add the right waste allowance."),
+        ("coverage-tables", "Coverage Reference Tables",
+         "Mulch, soil, gravel, concrete, paint and seed coverage figures in one place."),
+        ("bulk-or-bagged", "Bulk or Bagged: Which to Buy",
+         "When to order by the cubic yard and when bags are the better buy."),
+        ("garden-project-planner", "Planning a Garden Project",
+         "A step-by-step sequence for planning and building a garden project."),
         ("privacy-policy", "Privacy Policy", "How we handle data and cookies."),
         ("terms", "Terms of Use", "The terms for using this site."),
         ("disclaimer", "Disclaimer", "Important limitations of our calculators."),
@@ -832,7 +840,8 @@ def build() -> dict:
         body = src.read_text(encoding="utf-8") if src.exists() else f"# {title}\n\nComing soon."
         body = (body.replace("{{SITE_NAME}}", site["name"])
                     .replace("{{CONTACT_EMAIL}}", site.get("contact_email", ""))
-                    .replace("{{CONTACT_BLOCK}}", _contact_block(site)))
+                    .replace("{{CONTACT_BLOCK}}", _contact_block(site))
+                    .replace("BASE/", f"{base}/"))
         body = re.sub(r"\A\s*#\s+.*?\n", "", body)
         ctx = common(title=f"{title} | {site['name']}", description=desc[:155],
                      canonical=_abs(site, f"/{slug}/"),

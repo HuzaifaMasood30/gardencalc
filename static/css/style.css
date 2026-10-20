@@ -488,7 +488,7 @@ tbody tr:nth-child(even){background:rgba(20,83,45,.03)}
 /* ---------- footer ---------- */
 .site-footer{background:var(--surface);color:var(--fg-soft);padding:44px 0 26px;margin-top:74px;
   border-top:1px solid var(--line)}
-.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:28px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1fr;gap:28px}
 .site-footer h2{color:var(--brand);font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;
   margin:0 0 10px;font-family:var(--font);font-weight:700}
 .site-footer p{color:var(--muted);font-size:.87rem;margin:0 0 10px;max-width:34em}
