@@ -50,7 +50,15 @@ generate -> internal links -> quality gates -> build -> monitor -> dashboard -> 
 
 ## Content numbers (article_fix)
 - `scripts/article_fix.py` treats `calculators.py` as the source of truth and repairs
-  `data/articles.json` in place. `run_all.py` runs it as step 1b after generation.
+  `data/articles.json` in place. `run_all.py` runs it twice on purpose: at step 1b
+  (after generation) and again *after* the final `quality.apply()`.
+- Why twice: `article_fix.run()` skips anything not `published`/`approved`, but new
+  articles are still `draft` at step 1b and are only approved by the gate at step 2.
+  Repairing once at 1b therefore leaves a freshly approved article with no worked
+  example, and `test_every_calculator_article_has_a_worked_example_and_answer` fails
+  the deploy gate. The post-gate pass is the one that actually fixes new pages. Keep
+  it after the last `quality.apply()` and before the last `interlink.link_all()` so the
+  gate's `published and quality.passed` fast-path still short-circuits.
 - It recomputes the intro's numeric claim, the worked-example bullets, the
   worked-region "Label: value" lines and every standard size-table row
   (bags = ceil(cu ft / bag size)); cu yd = cu ft / 27. It also fills each article's

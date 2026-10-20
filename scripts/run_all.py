@@ -55,6 +55,12 @@ def run(limit: int | None = None) -> dict:
     # inbound link for another, so repairing links *before* the last gate left an
     # orphan behind and aborted the run.
     quality.apply(arts)
+    # Repair content AFTER the gate approves new articles. article_fix.run() skips
+    # non-approved pages, so running it only at step 1b leaves an article that the gate
+    # approves later without a worked example, and test_every_calculator_article_has_a
+    # _worked_example_and_answer then fails the deploy gate. Runs before the final
+    # interlink below so the gate's "published and quality.passed" fast-path still holds.
+    steps["figure_fixes"] = len(article_fix.run(arts))
     interlink.link_all(arts)
     save_json(DATA / "articles.json", arts)
     orphans = interlink.orphans(arts)
