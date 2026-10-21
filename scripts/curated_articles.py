@@ -20,5 +20,7 @@ def _body(lead: str, worked_lead: str, bullets: str, sections: list[tuple[str, s
 from curated_a import ARTICLES as _A  # noqa: E402
 from curated_b import ARTICLES as _B  # noqa: E402
 from curated_c import ARTICLES as _C  # noqa: E402
+from curated_d import ARTICLES as _D  # noqa: E402
+from curated_e import ARTICLES as _E  # noqa: E402
 
-ARTICLES = _A + _B + _C
+ARTICLES = _A + _B + _C + _D + _E

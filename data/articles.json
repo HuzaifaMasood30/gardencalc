@@ -3559,24 +3559,24 @@
         "title": "How Many Tiles Do I Need for a Roof: Calculator & Guide"
       },
       {
-        "to": "sand-calculator",
-        "anchor": "how much sand do i need",
-        "title": "How Much Sand Do I Need: Calculator & Guide"
+        "to": "how-many-tiles-do-i-need-for-a-wall",
+        "anchor": "how many tiles do i need for a wall",
+        "title": "How Many Tiles Do I Need for a Wall: Calculator & Guide"
       },
       {
-        "to": "compost-calculator",
-        "anchor": "how much compost do i need",
-        "title": "How Much Compost Do I Need: Calculator & Guide"
+        "to": "how-much-mulch-do-i-need-for-a-playground",
+        "anchor": "how much mulch do i need for a playground",
+        "title": "How Much Mulch for a Playground: Depth & Bag Counts"
       },
       {
-        "to": "bark-calculator",
-        "anchor": "how much bark do i need",
-        "title": "How Much Bark Do I Need: Calculator & Guide"
+        "to": "how-much-mulch-do-i-need-around-a-tree",
+        "anchor": "how much mulch do i need around a tree",
+        "title": "How Much Mulch Around a Tree: Depth, Ring Size, Bags"
       },
       {
-        "to": "sod-calculator",
-        "anchor": "how much sod do i need",
-        "title": "How Much Sod Do I Need: Calculator & Guide"
+        "to": "how-many-6-inch-tiles-do-i-need",
+        "anchor": "how many 6 inch tiles do i need",
+        "title": "How Many 6 Inch Tiles Do I Need? Count and Waste"
       }
     ],
     "schema_types": [
@@ -4051,6 +4051,11 @@
         "title": "How Much Soil for an 8x4 Raised Bed? Bags and Yards"
       },
       {
+        "to": "how-many-tiles-do-i-need-for-a-roof",
+        "anchor": "how many tiles do i need for a roof",
+        "title": "How Many Tiles Do I Need for a Roof: Calculator & Guide"
+      },
+      {
         "to": "how-many-tiles-do-i-need-for-a-wall",
         "anchor": "how many tiles do i need for a wall",
         "title": "How Many Tiles Do I Need for a Wall: Calculator & Guide"
@@ -4064,11 +4069,6 @@
         "to": "how-much-mulch-do-i-need-around-a-tree",
         "anchor": "how much mulch do i need around a tree",
         "title": "How Much Mulch Around a Tree: Depth, Ring Size, Bags"
-      },
-      {
-        "to": "how-much-sand-do-i-need-for-a-sandbox",
-        "anchor": "how much sand do i need for a sandbox",
-        "title": "How Much Sand for a Sandbox: Depth and Bag Counts"
       },
       {
         "to": "how-many-6-inch-tiles-do-i-need",
@@ -7016,14 +7016,14 @@
         "title": "How Many Bags of Concrete for a 6x6 Slab? 4 in Deep"
       },
       {
-        "to": "how-much-bark-do-i-need-for-a-10x4-bed",
-        "anchor": "how much bark do i need for a 10x4 bed",
-        "title": "How Much Bark for a 10x4 Bed? Depth and Bags"
+        "to": "how-much-paint-do-i-need-for-a-10x12-room",
+        "anchor": "how much paint do i need for a 10x12 room",
+        "title": "How Much Paint for a 10x12 Room: Litres & Gallons"
       },
       {
-        "to": "how-much-compost-do-i-need-for-a-garden-bed",
-        "anchor": "how much compost do i need for a garden bed",
-        "title": "How Much Compost for a Garden Bed? Depth and Bags"
+        "to": "how-much-gravel-do-i-need-for-a-12x12-patio",
+        "anchor": "how much gravel do i need for a 12x12 patio",
+        "title": "How Much Gravel for a 12x12 Patio: Base and Top"
       },
       {
         "to": "how-much-mulch-do-i-need-for-a-tree",
@@ -14871,39 +14871,39 @@
         "title": "How Much Sand for a Sandbox: Depth and Bag Counts"
       },
       {
-        "to": "mulch-calculator",
-        "anchor": "how much mulch do i need",
-        "title": "Mulch Calculator: How Much Mulch Do You Need?"
+        "to": "how-much-sand-do-i-need-for-a-20x40-area",
+        "anchor": "how much sand do i need for a 20x40 area",
+        "title": "How Much Sand for a 20x40 Area: Yards and Tons"
       },
       {
-        "to": "raised-bed-soil-calculator",
-        "anchor": "how much soil for raised bed",
-        "title": "Raised Bed Soil Calculator: How Much Soil You Need"
+        "to": "how-much-sand-do-i-need-for-a-10x12-patio",
+        "anchor": "how much sand do i need for a 10x12 patio",
+        "title": "How Much Sand for a 10x12 Patio: Bags and Tons"
       },
       {
-        "to": "gravel-calculator",
-        "anchor": "how much gravel do i need",
-        "title": "Gravel Calculator: How Much Gravel Do You Need?"
+        "to": "how-much-grass-seed-for-1-acre",
+        "anchor": "how much grass seed for 1 acre",
+        "title": "How Much Grass Seed for 1 Acre? Pounds and Bags"
       },
       {
-        "to": "paint-calculator",
-        "anchor": "how much paint do i need",
-        "title": "Paint Calculator: How Much Paint Do You Need?"
+        "to": "how-many-bags-of-concrete-do-i-need-for-a-6x6-slab",
+        "anchor": "how many bags of concrete do i need for a",
+        "title": "How Many Bags of Concrete for a 6x6 Slab? 4 in Deep"
       },
       {
-        "to": "tile-calculator",
-        "anchor": "how many tiles do i need",
-        "title": "Tile Calculator: How Many Tiles Do You Need?"
+        "to": "how-much-paint-do-i-need-for-a-10x12-room",
+        "anchor": "how much paint do i need for a 10x12 room",
+        "title": "How Much Paint for a 10x12 Room: Litres & Gallons"
       },
       {
-        "to": "grass-seed-calculator",
-        "anchor": "how much grass seed per square foot",
-        "title": "Grass Seed Calculator: How Much Seed You Need"
+        "to": "how-much-gravel-do-i-need-for-a-12x12-patio",
+        "anchor": "how much gravel do i need for a 12x12 patio",
+        "title": "How Much Gravel for a 12x12 Patio: Base and Top"
       },
       {
-        "to": "concrete-calculator",
-        "anchor": "how many bags of concrete do i need",
-        "title": "Concrete Calculator: Bags or Yards You Need"
+        "to": "how-much-fertilizer-do-i-need-for-5000-square-feet",
+        "anchor": "how much fertilizer do i need for 5000",
+        "title": "How Much Fertilizer for 5,000 Sq Ft: Bags and Rate"
       }
     ],
     "schema_types": [
@@ -15027,39 +15027,39 @@
         "title": "How Much Compost for a Garden Bed? Depth and Bags"
       },
       {
-        "to": "mulch-calculator",
-        "anchor": "how much mulch do i need",
-        "title": "Mulch Calculator: How Much Mulch Do You Need?"
+        "to": "how-much-compost-do-i-need-for-400-square-feet",
+        "anchor": "how much compost do i need for 400 square",
+        "title": "How Much Compost for 400 Sq Ft: Yards and Bags"
       },
       {
-        "to": "raised-bed-soil-calculator",
-        "anchor": "how much soil for raised bed",
-        "title": "Raised Bed Soil Calculator: How Much Soil You Need"
+        "to": "how-much-compost-do-i-need-for-100-square-feet",
+        "anchor": "how much compost do i need for 100 square",
+        "title": "How Much Compost for 100 Sq Ft: Bags and Cost"
       },
       {
-        "to": "gravel-calculator",
-        "anchor": "how much gravel do i need",
-        "title": "Gravel Calculator: How Much Gravel Do You Need?"
+        "to": "how-much-fertilizer-do-i-need-for-1-acre",
+        "anchor": "how much fertilizer do i need for 1 acre",
+        "title": "How Much Fertilizer for 1 Acre: Bags and Nitrogen"
       },
       {
-        "to": "paint-calculator",
-        "anchor": "how much paint do i need",
-        "title": "Paint Calculator: How Much Paint Do You Need?"
+        "to": "how-much-mulch-do-i-need-for-a-10x10-bed",
+        "anchor": "how much mulch do i need for a 10x10 bed",
+        "title": "How Much Mulch for a 10x10 Bed: Bags and Yards"
       },
       {
-        "to": "tile-calculator",
-        "anchor": "how many tiles do i need",
-        "title": "Tile Calculator: How Many Tiles Do You Need?"
+        "to": "how-much-mulch-do-i-need-for-a-vegetable-garden",
+        "anchor": "how much mulch do i need for a vegetable",
+        "title": "How Much Mulch for a Vegetable Garden: Bags & Yards"
       },
       {
-        "to": "grass-seed-calculator",
-        "anchor": "how much grass seed per square foot",
-        "title": "Grass Seed Calculator: How Much Seed You Need"
+        "to": "how-much-paint-for-a-small-bathroom",
+        "anchor": "how much paint for a small bathroom",
+        "title": "How Much Paint for a Bathroom: Gallons & Finish"
       },
       {
-        "to": "concrete-calculator",
-        "anchor": "how many bags of concrete do i need",
-        "title": "Concrete Calculator: Bags or Yards You Need"
+        "to": "how-much-gravel-for-a-new-driveway",
+        "anchor": "how much gravel for a new driveway",
+        "title": "How Much Gravel for a Driveway: Tons and Yards"
       }
     ],
     "schema_types": [
@@ -15183,39 +15183,39 @@
         "title": "How Much Bark for a 10x4 Bed? Depth and Bags"
       },
       {
-        "to": "mulch-calculator",
-        "anchor": "how much mulch do i need",
-        "title": "Mulch Calculator: How Much Mulch Do You Need?"
+        "to": "how-much-bark-do-i-need-for-600-square-feet",
+        "anchor": "how much bark do i need for 600 square feet",
+        "title": "How Much Bark for 600 Sq Ft: Yards and Bags"
       },
       {
-        "to": "raised-bed-soil-calculator",
-        "anchor": "how much soil for raised bed",
-        "title": "Raised Bed Soil Calculator: How Much Soil You Need"
+        "to": "how-much-bark-do-i-need-for-200-square-feet",
+        "anchor": "how much bark do i need for 200 square feet",
+        "title": "How Much Bark for 200 Sq Ft: Bags or Bulk"
       },
       {
-        "to": "gravel-calculator",
-        "anchor": "how much gravel do i need",
-        "title": "Gravel Calculator: How Much Gravel Do You Need?"
+        "to": "how-much-mulch-do-i-need-for-my-yard",
+        "anchor": "how much mulch do i need for my yard",
+        "title": "How Much Mulch Do I Need for My Yard: Calculator & Guide"
       },
       {
-        "to": "paint-calculator",
-        "anchor": "how much paint do i need",
-        "title": "Paint Calculator: How Much Paint Do You Need?"
+        "to": "how-much-mulch-do-i-need-per-square-foot",
+        "anchor": "how much mulch do i need per square foot",
+        "title": "How Much Mulch Do I Need Per Square Foot: Calculator & Guide"
       },
       {
-        "to": "tile-calculator",
-        "anchor": "how many tiles do i need",
-        "title": "Tile Calculator: How Many Tiles Do You Need?"
+        "to": "how-much-gravel-do-i-need-for-my-backyard",
+        "anchor": "how much gravel do i need for my backyard",
+        "title": "How Much Gravel Do I Need for My Backyard"
       },
       {
-        "to": "grass-seed-calculator",
-        "anchor": "how much grass seed per square foot",
-        "title": "Grass Seed Calculator: How Much Seed You Need"
+        "to": "how-much-mulch-do-i-need-for-100-square-feet",
+        "anchor": "how much mulch do i need for 100 square feet",
+        "title": "How Much Mulch Do I Need for 100 Square Feet"
       },
       {
-        "to": "concrete-calculator",
-        "anchor": "how many bags of concrete do i need",
-        "title": "Concrete Calculator: Bags or Yards You Need"
+        "to": "how-much-paint-do-i-need-for-a-small-bedroom",
+        "anchor": "how much paint do i need for a small bedroom",
+        "title": "How Much Paint Do I Need for a Small Bedroom"
       }
     ],
     "schema_types": [
@@ -15334,6 +15334,16 @@
     "revision": 1,
     "internal_links": [
       {
+        "to": "how-much-sod-do-i-need-for-1000-square-feet",
+        "anchor": "how much sod do i need for 1000 square feet",
+        "title": "How Much Sod for 1,000 Sq Ft: Rolls and Pallets"
+      },
+      {
+        "to": "how-much-sod-do-i-need-for-a-20x20-lawn",
+        "anchor": "how much sod do i need for a 20x20 lawn",
+        "title": "How Much Sod for a 20x20 Lawn: Rolls and Cost"
+      },
+      {
         "to": "mulch-calculator",
         "anchor": "how much mulch do i need",
         "title": "Mulch Calculator: How Much Mulch Do You Need?"
@@ -15362,16 +15372,6 @@
         "to": "grass-seed-calculator",
         "anchor": "how much grass seed per square foot",
         "title": "Grass Seed Calculator: How Much Seed You Need"
-      },
-      {
-        "to": "concrete-calculator",
-        "anchor": "how many bags of concrete do i need",
-        "title": "Concrete Calculator: Bags or Yards You Need"
-      },
-      {
-        "to": "topsoil-calculator",
-        "anchor": "how much topsoil do i need",
-        "title": "How Much Topsoil Do I Need: Free Calculator & Guide"
       }
     ],
     "schema_types": [
@@ -16496,7 +16496,7 @@
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.03 vs how-much-mulch-do-i-need-for-400-square-feet"
+          "detail": "max similarity 0.05 vs how-much-bark-do-i-need-for-200-square-feet"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -16604,39 +16604,14 @@
         "title": "How Much Sand Do I Need: Calculator & Guide"
       },
       {
-        "to": "mulch-calculator",
-        "anchor": "how much mulch do i need",
-        "title": "Mulch Calculator: How Much Mulch Do You Need?"
+        "to": "how-much-sand-do-i-need-for-a-20x40-area",
+        "anchor": "how much sand do i need for a 20x40 area",
+        "title": "How Much Sand for a 20x40 Area: Yards and Tons"
       },
       {
-        "to": "raised-bed-soil-calculator",
-        "anchor": "how much soil for raised bed",
-        "title": "Raised Bed Soil Calculator: How Much Soil You Need"
-      },
-      {
-        "to": "gravel-calculator",
-        "anchor": "how much gravel do i need",
-        "title": "Gravel Calculator: How Much Gravel Do You Need?"
-      },
-      {
-        "to": "paint-calculator",
-        "anchor": "how much paint do i need",
-        "title": "Paint Calculator: How Much Paint Do You Need?"
-      },
-      {
-        "to": "tile-calculator",
-        "anchor": "how many tiles do i need",
-        "title": "Tile Calculator: How Many Tiles Do You Need?"
-      },
-      {
-        "to": "grass-seed-calculator",
-        "anchor": "how much grass seed per square foot",
-        "title": "Grass Seed Calculator: How Much Seed You Need"
-      },
-      {
-        "to": "concrete-calculator",
-        "anchor": "how many bags of concrete do i need",
-        "title": "Concrete Calculator: Bags or Yards You Need"
+        "to": "how-much-sand-do-i-need-for-a-10x12-patio",
+        "anchor": "how much sand do i need for a 10x12 patio",
+        "title": "How Much Sand for a 10x12 Patio: Bags and Tons"
       }
     ],
     "schema_types": [
@@ -16654,7 +16629,7 @@
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.03 vs how-much-mulch-do-i-need-for-600-square-feet"
+          "detail": "max similarity 0.04 vs how-much-bark-do-i-need-for-600-square-feet"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -17442,7 +17417,7 @@
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.03 vs how-many-tiles-do-i-need-for-100-square-feet"
+          "detail": "max similarity 0.04 vs how-much-fertilizer-do-i-need-for-1-acre"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -17757,7 +17732,7 @@
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.03 vs how-much-grass-seed-for-1-acre"
+          "detail": "max similarity 0.03 vs how-much-fertilizer-do-i-need-for-1-acre"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -17865,39 +17840,14 @@
         "title": "How Much Bark Do I Need: Calculator & Guide"
       },
       {
-        "to": "mulch-calculator",
-        "anchor": "how much mulch do i need",
-        "title": "Mulch Calculator: How Much Mulch Do You Need?"
+        "to": "how-much-bark-do-i-need-for-600-square-feet",
+        "anchor": "how much bark do i need for 600 square feet",
+        "title": "How Much Bark for 600 Sq Ft: Yards and Bags"
       },
       {
-        "to": "raised-bed-soil-calculator",
-        "anchor": "how much soil for raised bed",
-        "title": "Raised Bed Soil Calculator: How Much Soil You Need"
-      },
-      {
-        "to": "gravel-calculator",
-        "anchor": "how much gravel do i need",
-        "title": "Gravel Calculator: How Much Gravel Do You Need?"
-      },
-      {
-        "to": "paint-calculator",
-        "anchor": "how much paint do i need",
-        "title": "Paint Calculator: How Much Paint Do You Need?"
-      },
-      {
-        "to": "tile-calculator",
-        "anchor": "how many tiles do i need",
-        "title": "Tile Calculator: How Many Tiles Do You Need?"
-      },
-      {
-        "to": "grass-seed-calculator",
-        "anchor": "how much grass seed per square foot",
-        "title": "Grass Seed Calculator: How Much Seed You Need"
-      },
-      {
-        "to": "concrete-calculator",
-        "anchor": "how many bags of concrete do i need",
-        "title": "Concrete Calculator: Bags or Yards You Need"
+        "to": "how-much-bark-do-i-need-for-200-square-feet",
+        "anchor": "how much bark do i need for 200 square feet",
+        "title": "How Much Bark for 200 Sq Ft: Bags or Bulk"
       }
     ],
     "schema_types": [
@@ -17915,7 +17865,7 @@
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.05 vs how-much-mulch-do-i-need-for-100-square-feet"
+          "detail": "max similarity 0.06 vs how-much-mulch-do-i-need-for-a-10x10-bed"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -18023,39 +17973,14 @@
         "title": "How Much Compost Do I Need: Calculator & Guide"
       },
       {
-        "to": "mulch-calculator",
-        "anchor": "how much mulch do i need",
-        "title": "Mulch Calculator: How Much Mulch Do You Need?"
+        "to": "how-much-compost-do-i-need-for-400-square-feet",
+        "anchor": "how much compost do i need for 400 square",
+        "title": "How Much Compost for 400 Sq Ft: Yards and Bags"
       },
       {
-        "to": "raised-bed-soil-calculator",
-        "anchor": "how much soil for raised bed",
-        "title": "Raised Bed Soil Calculator: How Much Soil You Need"
-      },
-      {
-        "to": "gravel-calculator",
-        "anchor": "how much gravel do i need",
-        "title": "Gravel Calculator: How Much Gravel Do You Need?"
-      },
-      {
-        "to": "paint-calculator",
-        "anchor": "how much paint do i need",
-        "title": "Paint Calculator: How Much Paint Do You Need?"
-      },
-      {
-        "to": "tile-calculator",
-        "anchor": "how many tiles do i need",
-        "title": "Tile Calculator: How Many Tiles Do You Need?"
-      },
-      {
-        "to": "grass-seed-calculator",
-        "anchor": "how much grass seed per square foot",
-        "title": "Grass Seed Calculator: How Much Seed You Need"
-      },
-      {
-        "to": "concrete-calculator",
-        "anchor": "how many bags of concrete do i need",
-        "title": "Concrete Calculator: Bags or Yards You Need"
+        "to": "how-much-compost-do-i-need-for-100-square-feet",
+        "anchor": "how much compost do i need for 100 square",
+        "title": "How Much Compost for 100 Sq Ft: Bags and Cost"
       }
     ],
     "schema_types": [
@@ -18102,6 +18027,164 @@
         "title_length": {
           "pass": true,
           "detail": "title length 49"
+        },
+        "internal_links": {
+          "pass": true,
+          "detail": "internal links 3 (want 3-8, 105 available)"
+        },
+        "schema_present": {
+          "pass": true,
+          "detail": "schema: ['Article', 'BreadcrumbList', 'FAQPage']"
+        },
+        "alt_text": {
+          "pass": true,
+          "detail": "hero alt derivable from title"
+        }
+      }
+    },
+    "metrics": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": 0
+    },
+    "word_count": 633,
+    "answer": "8x4 ft at 2 in needs 5.3 cu ft of compost: 0.2 cu yd, or 6 bags of 1 cu ft.",
+    "curated_hash": "78553c4f7d963cf1"
+  },
+  {
+    "id": "how-much-sod-do-i-need-for-1000-square-feet",
+    "slug": "how-much-sod-do-i-need-for-1000-square-feet",
+    "title": "How Much Sod for 1,000 Sq Ft: Rolls and Pallets",
+    "cluster": "sod",
+    "primary_keyword": "how much sod do i need for 1000 square feet",
+    "secondary_keywords": [
+      "how many rolls of sod for 1000 sq ft",
+      "sod calculator",
+      "pallets of sod per 1000 square feet",
+      "sod cost per square foot"
+    ],
+    "intent": "calculator",
+    "is_pillar": false,
+    "calculator": "sod",
+    "calculator_title": "Sod",
+    "calculator_defaults": {
+      "length": 50,
+      "width": 20,
+      "waste": 10
+    },
+    "calculator_output": {
+      "square_feet": 1000.0,
+      "rolls": 100,
+      "rolls_with_waste": 111,
+      "pallets": 2
+    },
+    "meta_description": "1,000 sq ft of lawn needs 100 rolls of sod, or 110 with a 10% waste allowance, roughly two pallets. Remove the beds and paths first.",
+    "body_markdown": "A 1,000 sq ft lawn needs 100 rolls of sod, which is 110 rolls once you add a 10% waste allowance, or about two pallets. Sod is sold by the roll, so the count matters more than the weight, and the count is driven by the area you actually have to cover.\n\nBefore you order, walk the area and subtract the beds, paths and anything you are not turfing. It is common to find that a tidy 1,000 sq ft measurement is closer to 850 once the borders come out, and that difference is several rolls. Getting the number right saves a return trip with a pallet that is already warming up.\n\n## Worked Example\n\nFor a 40 foot by 25 foot lawn covered with sod, allowing 10% for cutting in around the edges:\n\n*   length = 50\n*   width = 20\n*   waste = 10\n*   Square feet: 1000\n*   Rolls: 100\n*   Rolls with waste: 111\n*   Pallets: 2\n\n## How Sod Is Sold\n\nSod comes in rolls, and a standard roll covers about 10 sq ft, though some suppliers cut 8 or 12 sq ft rolls. It is stacked on pallets of 450 to 500 sq ft. Ordering by the pallet is normal for anything above a few hundred square feet, and the supplier will usually round up to the nearest pallet.\n\nAsk what size roll the supplier uses before you convert area to rolls. A 1,000 sq ft lawn is 100 rolls at 10 sq ft, but 125 rolls at 8 sq ft, and that gap is a whole extra pallet.\n\n## Measuring the Lawn and Removing What Is Not Turf\n\nMeasure the lawn in rectangles and add them together, the same way you would for seed. Walk the boundary and note every bed, path, tree circle and shed footprint, then subtract those areas. Slopes and curves are best measured by breaking them into short straight sections.\n\nAdd the waste allowance at the end, not to each rectangle. Ten per cent covers the cuts around edges and any roll that is damaged or short. If the lawn has many corners or a lot of curves, lean towards 15%.\n\n## Preparing the Ground Before It Arrives\n\nSod is unforgiving about poor preparation. Clear weeds, rototill the top few inches, and rake the surface level. Firm it with a roller or by treading it so the ground does not settle under the turf, leaving hollows.\n\nWater the prepared ground the day before so it is damp, not soaked, and have the sprinkler ready. Lay the rolls in a brick pattern, butting the seams tight, and keep them off any freshly watered mud until the last minute.\n\n## Watering and the First Few Weeks\n\nNew sod needs water every day for the first week or two, then every other day, then weekly as it knits into the soil. Lift a corner after a week to check that roots are reaching down; if the sod pulls up easily, it needs more water.\n\nKeep foot traffic off it for at least two weeks, and hold off on fertiliser until the roots have taken. Mow gently once the grass is a third taller than the height you want, and never take more than a third of the blade at once.\n\n## Common Mistakes to Avoid\n\n**Ordering the exact area with no spare.** Sod edges are trimmed to fit, so add about 5 per cent and lay it the day it arrives, before the rolls dry out.\n\n## Cost and Delivery for a 1,000 Sq Ft Lawn\n\nSod is priced per square foot, per roll, or per pallet, and a job this size usually clears the free-delivery threshold that smaller orders miss. Ask whether delivery is included and what roll size the supplier uses before comparing quotes, because an 8 sq ft roll needs a quarter more of them than a 10 sq ft roll for the same lawn.\n",
+    "faq": [
+      {
+        "q": "How many rolls of sod are in a pallet?",
+        "a": "A pallet usually holds 450 to 500 sq ft, which is 45 to 50 rolls at 10 sq ft each. Two pallets cover 1,000 sq ft with room for trimming."
+      },
+      {
+        "q": "How soon should sod be laid after delivery?",
+        "a": "Lay it the same day if you can. Sod is a living plant and starts to heat and yellow within a day or two in warm weather."
+      },
+      {
+        "q": "Do I need to rototill before laying sod?",
+        "a": "Yes. Loosen the top few inches, rake it level, and firm it so the roots make contact. Sod laid on hard ground dries out and dies at the seams."
+      }
+    ],
+    "status": "approved",
+    "created": "2026-10-20",
+    "updated": "2026-10-20",
+    "revision": 2,
+    "internal_links": [
+      {
+        "to": "sod-calculator",
+        "anchor": "how much sod do i need",
+        "title": "How Much Sod Do I Need: Calculator & Guide"
+      },
+      {
+        "to": "how-much-sod-do-i-need-for-a-20x20-lawn",
+        "anchor": "how much sod do i need for a 20x20 lawn",
+        "title": "How Much Sod for a 20x20 Lawn: Rolls and Cost"
+      },
+      {
+        "to": "mulch-calculator",
+        "anchor": "how much mulch do i need",
+        "title": "Mulch Calculator: How Much Mulch Do You Need?"
+      },
+      {
+        "to": "raised-bed-soil-calculator",
+        "anchor": "how much soil for raised bed",
+        "title": "Raised Bed Soil Calculator: How Much Soil You Need"
+      },
+      {
+        "to": "gravel-calculator",
+        "anchor": "how much gravel do i need",
+        "title": "Gravel Calculator: How Much Gravel Do You Need?"
+      },
+      {
+        "to": "paint-calculator",
+        "anchor": "how much paint do i need",
+        "title": "Paint Calculator: How Much Paint Do You Need?"
+      },
+      {
+        "to": "tile-calculator",
+        "anchor": "how many tiles do i need",
+        "title": "Tile Calculator: How Many Tiles Do You Need?"
+      },
+      {
+        "to": "grass-seed-calculator",
+        "anchor": "how much grass seed per square foot",
+        "title": "Grass Seed Calculator: How Much Seed You Need"
+      }
+    ],
+    "schema_types": [
+      "Article",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "quality": {
+      "score": 100.0,
+      "passed": true,
+      "gates": {
+        "thin_content": {
+          "pass": true,
+          "detail": "word count 633 (min 600)"
+        },
+        "duplicate_content": {
+          "pass": true,
+          "detail": "max similarity 0.05 vs how-much-bark-do-i-need-for-a-10x4-bed"
+        },
+        "keyword_stuffing": {
+          "pass": true,
+          "detail": "keyword density 0.00%"
+        },
+        "ai_cliches": {
+          "pass": true,
+          "detail": "cliches: none"
+        },
+        "readability": {
+          "pass": true,
+          "detail": "avg sentence length 16.7 words"
+        },
+        "heading_structure": {
+          "pass": true,
+          "detail": "h2=7 h3=0 (no h1 in body)"
+        },
+        "has_calculator_or_data": {
+          "pass": true,
+          "detail": "has calculator + computed output"
+        },
+        "meta_length": {
+          "pass": true,
+          "detail": "meta length 132"
+        },
+        "title_length": {
+          "pass": true,
+          "detail": "title length 47"
         },
         "internal_links": {
           "pass": true,
