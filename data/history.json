@@ -11668,6 +11668,86 @@
           "calculator": true
         },
         "word_count": 603
+      },
+      {
+        "slug": "how-much-mulch-do-i-need-for-a-tree",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 762
+      },
+      {
+        "slug": "how-many-boxes-of-tiles-do-i-need-for-a-room",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 1127
+      },
+      {
+        "slug": "how-much-straw-to-cover-grass-seed-per-square-foot",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 842
+      },
+      {
+        "slug": "how-much-starter-fertilizer-per-1000-square-feet",
+        "score": 88.9,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": false,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 1092
+      },
+      {
+        "slug": "how-many-bags-of-concrete-do-i-need-for-a-3x3-slab",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 881
       }
     ]
   }

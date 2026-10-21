@@ -224,11 +224,11 @@
       "raised-bed-soil-calculator",
       "how-much-soil-for-a-4x2x1-raised-garden-bed",
       "how-much-soil-for-an-8x4-raised-bed",
-      "how-many-tiles-do-i-need-for-a-roof",
-      "how-many-tiles-do-i-need-for-a-wall",
-      "how-much-mulch-do-i-need-for-a-playground",
-      "how-much-mulch-do-i-need-around-a-tree",
-      "how-many-6-inch-tiles-do-i-need"
+      "how-much-mulch-do-i-need-for-my-yard",
+      "how-much-mulch-do-i-need-per-square-foot",
+      "how-much-gravel-do-i-need-for-my-backyard",
+      "how-much-mulch-do-i-need-for-100-square-feet",
+      "how-much-paint-do-i-need-for-a-small-bedroom"
     ],
     "how-much-gravel-do-i-need-per-square-metre": [
       "gravel-calculator",
@@ -734,11 +734,11 @@
       "how-much-bark-do-i-need-for-a-10x4-bed",
       "how-much-bark-do-i-need-for-600-square-feet",
       "how-much-bark-do-i-need-for-200-square-feet",
-      "how-much-mulch-do-i-need-for-my-yard",
-      "how-much-mulch-do-i-need-per-square-foot",
-      "how-much-gravel-do-i-need-for-my-backyard",
-      "how-much-mulch-do-i-need-for-100-square-feet",
-      "how-much-paint-do-i-need-for-a-small-bedroom"
+      "how-much-mulch-do-i-need-for-a-tree",
+      "how-many-boxes-of-tiles-do-i-need-for-a-room",
+      "how-much-straw-to-cover-grass-seed-per-square-foot",
+      "how-much-starter-fertilizer-per-1000-square-feet",
+      "how-many-bags-of-concrete-do-i-need-for-a-3x3-slab"
     ],
     "sod-calculator": [
       "how-much-sod-do-i-need-for-1000-square-feet",
@@ -803,7 +803,12 @@
     "how-much-sand-do-i-need-for-a-sandbox": [
       "sand-calculator",
       "how-much-sand-do-i-need-for-a-20x40-area",
-      "how-much-sand-do-i-need-for-a-10x12-patio"
+      "how-much-sand-do-i-need-for-a-10x12-patio",
+      "how-much-mulch-do-i-need-for-a-tree",
+      "how-many-boxes-of-tiles-do-i-need-for-a-room",
+      "how-much-straw-to-cover-grass-seed-per-square-foot",
+      "how-much-starter-fertilizer-per-1000-square-feet",
+      "how-many-bags-of-concrete-do-i-need-for-a-3x3-slab"
     ],
     "how-many-6-inch-tiles-do-i-need": [
       "tile-calculator",
