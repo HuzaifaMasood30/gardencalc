@@ -1,6 +1,6 @@
 {
   "ready": false,
-  "passed": 5,
+  "passed": 6,
   "total": 9,
   "checks": {
     "policy_pages": {
@@ -21,11 +21,11 @@
     },
     "article_count": {
       "ok": true,
-      "detail": "99/8 published"
+      "detail": "114/8 published"
     },
     "no_thin_pages": {
-      "ok": false,
-      "detail": "thin: ['how-much-peat-moss-to-cover-grass-seed-per-square-foot']"
+      "ok": true,
+      "detail": "all >= 600 words"
     },
     "sitemap": {
       "ok": true,
@@ -43,7 +43,6 @@
   "blocking": [
     "adsense_configured",
     "analytics_configured",
-    "contact_email",
-    "no_thin_pages"
+    "contact_email"
   ]
 }
