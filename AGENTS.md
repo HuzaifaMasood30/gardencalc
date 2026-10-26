@@ -172,6 +172,24 @@ python3 scripts/live_audit.py https://huzaifamasood30.github.io/gardencalc/
   and returns a table of contents; `article.html` renders the TOC and a scroll-spy
   highlights the active section in `main.js`.
 
+## SEO audit 2026-10-26 (do not revert)
+- Full write-up: `reports/seo-audit-2026-10-26.md`; the GSC sitemap root cause
+  (wrong property / full-URL paste, NOT a broken file) and the owner's exact
+  fix steps: `docs/search-console-sitemap-fix.md`.
+- Figure/card alt text in `build.py` is prefixed with the article title so
+  every image alt is unique; the bare per-cluster `FIG_CAPTION` alone made
+  all pages in a cluster share one alt string. Captions stay unprefixed.
+- Category hubs emit BreadcrumbList alongside CollectionPage/FAQPage.
+- `seo.article_schema` author has no `sameAs` until a real off-site profile
+  exists (it previously pointed at this site's own /about/).
+- `build.py` emits `manifest.webmanifest` (linked in `base.html`) and
+  `llms.txt` (pillar calculators + categories + guides) at the site root.
+  `verify.py` checks non-page asset hrefs (.xml/.txt/.webmanifest/…) against
+  the built files on disk, not the HTML page map — otherwise the manifest
+  <link> flags every page as a broken internal link.
+- The four fertilizer pages that shipped with `faq: []` now carry FAQs and
+  title-case titles; keep new fertilizer articles to the same standard.
+
 ## FAQ blocks
 - Every published article should carry a non-empty `faq` list: 13 topsoil/fertilizer
   pages originally had none, each costing ~11 SEO points and an FAQPage rich-result

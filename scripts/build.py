@@ -451,7 +451,7 @@ def _card_meta(site: dict, art: dict, category: str | None = None) -> dict:
         "desc": _short_desc(art.get("meta_description", "")),
         "excerpt": _one_sentence(art.get("meta_description", "")),
         "thumb": _thumb(site, art),
-        "alt": FIG_CAPTION.get(art.get("cluster", ""), art["title"]),
+        "alt": f"{art['title']}: " + FIG_CAPTION.get(art.get("cluster", ""), art["title"]),
         "category": category or "",
         "updated": art.get("updated", ""),
         "updated_human": human_date(art.get("updated", "")),
@@ -622,7 +622,13 @@ def build() -> dict:
                                                   {x["slug"]: f"{base}/{x['slug']}/" for x in published})
         figure = {
             "src": _fig(site, art),
-            "alt": FIG_CAPTION.get(art.get("cluster", ""), art["title"]),
+            # Alt text must describe *this* page's figure. The bare per-cluster
+            # caption made every page in a cluster share identical alt text
+            # (21 mulch pages, one alt string), which wastes image search and
+            # reads as duplicate content to an image crawler. Prefixing the
+            # article title keeps the caption's description and makes each
+            # alt unique and query-relevant. The visible caption is unchanged.
+            "alt": f"{art['title']}: " + FIG_CAPTION.get(art.get("cluster", ""), art["title"]),
             "caption": FIG_CAPTION.get(art.get("cluster", ""), art["title"]),
         }
         ct = cat_map.get(art.get("cluster", ""), {})
@@ -701,7 +707,10 @@ def build() -> dict:
         others = [a for a in items if not a.get("is_pillar")]
         og = _abs(site, f"/static/img/og/category-{c['id']}.png")  # per-category card
         cat_faqs = CATEGORY_FAQS.get(c["id"], [])
-        schemas = [json.dumps(seolib.collection_schema(c, items, site), ensure_ascii=False)]
+        schemas = [json.dumps(seolib.collection_schema(c, items, site), ensure_ascii=False),
+                   json.dumps(seolib.breadcrumb_list(
+                       [("Home", "/"), (c["name"], f"/category/{c['id']}/")], site),
+                       ensure_ascii=False)]
         if cat_faqs:
             schemas.append(json.dumps(seolib.faq_schema({"faq": cat_faqs}), ensure_ascii=False))
         ctx = common(title=f"{c['name']} Calculators | {site['name']}",
@@ -1112,6 +1121,50 @@ def build() -> dict:
              for p in EXTRA_PAGES]
     _write(SITE / "sitemap.xml", seolib.sitemap_xml(urls, site))
     _write(SITE / "robots.txt", seolib.robots_txt(site))
+
+    # --- web app manifest (installability / browser chrome; icons are the
+    # brand PNGs images.render_brand already writes into the copied static/) ---
+    _write(SITE / "manifest.webmanifest", json.dumps({
+        "name": site["name"],
+        "short_name": site["name"],
+        "description": site.get("tagline", ""),
+        "start_url": base + "/",
+        "scope": base + "/",
+        "display": "minimal-ui",
+        "background_color": "#ffffff",
+        "theme_color": "#14532d",
+        "icons": [
+            {"src": _abs(site, "/static/img/logo.png"), "sizes": "336x336",
+             "type": "image/png", "purpose": "any"},
+            {"src": _abs(site, "/static/img/apple-touch-icon.png"), "sizes": "180x180",
+             "type": "image/png", "purpose": "any"},
+        ],
+    }, ensure_ascii=False, indent=2) + "\n")
+
+    # --- llms.txt: a plain-markdown map of the site for AI search engines ---
+    # (ChatGPT/Copilot/Perplexity-style crawlers read this convention; it costs
+    # one small static file and lists only canonical, indexable pages.)
+    llms = [f"# {site['name']}", "", f"> {site.get('tagline', '')}. "
+            "Every calculator shows its formula and a worked example.", "",
+            "## Calculators", ""]
+    for a in published:
+        if a.get("is_pillar"):
+            llms.append(f"- [{a['title']}]({_abs(site, '/' + a['slug'] + '/')}): "
+                        f"{a.get('meta_description', '')}")
+    llms += ["", "## Categories", ""]
+    for c in categories:
+        llms.append(f"- [{c['name']} calculators]({_abs(site, '/category/' + c['id'] + '/')}): "
+                    f"{c.get('blurb', '')}")
+    llms += ["", "## Guides and reference", ""]
+    for a in published:
+        if not a.get("is_pillar"):
+            llms.append(f"- [{a['title']}]({_abs(site, '/' + a['slug'] + '/')}): "
+                        f"{a.get('meta_description', '')}")
+    llms += ["", "## About", "",
+             f"- [About {site['name']}]({_abs(site, '/about/')})",
+             f"- [All calculators]({_abs(site, '/calculators/')})",
+             f"- [Sitemap]({_abs(site, '/sitemap.xml')})", ""]
+    _write(SITE / "llms.txt", "\n".join(llms))
     feed_extra = [{"title": ch["title"], "url": _abs(site, f"/{ch['slug']}/"),
                    "description": ch["description"]} for ch in charts.CHARTS]
     feed_extra += [{"title": pl["title"], "url": _abs(site, f"/{pl['slug']}/"),

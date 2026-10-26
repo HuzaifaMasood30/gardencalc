@@ -25,8 +25,11 @@ def article_schema(art: dict, site: dict, figure: str | None = None) -> dict:
         "description": art.get("meta_description", ""),
         "datePublished": art.get("created"),
         "dateModified": art.get("updated"),
+        # No sameAs here: it previously pointed back at this site's own /about/
+        # page, which tells a search engine nothing about the author. sameAs is
+        # only worth emitting when it lists real off-site profiles.
         "author": {"@type": "Organization", "name": site.get("author", site["name"]),
-                   "url": author_url, "sameAs": [author_url]},
+                   "url": author_url},
         "publisher": {"@type": "Organization", "name": site["name"],
                       "url": _abs(site, "/"),
                       "logo": {"@type": "ImageObject", "url": _abs(site, site.get("org_logo", "")),

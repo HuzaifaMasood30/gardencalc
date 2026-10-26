@@ -85,7 +85,21 @@ def check() -> dict:
                 path = urlparse(href).path
             else:
                 path = href
-            if "/static/" in path or path.endswith((".xml", ".txt")):
+            if "/static/" in path:
+                continue
+            # Non-page assets linked from <head> (sitemap.xml, rss.xml,
+            # llms.txt, manifest.webmanifest) are files, not pages: the page
+            # map below can never contain them, so check them against the
+            # built files on disk instead. (Linking the manifest otherwise
+            # flags every page in the site as a broken internal link, even
+            # though the file exists and serves 200.)
+            asset_rel = (path[len(base_path):]
+                         if base_path and path.startswith(base_path) else path)
+            if ("." in asset_rel.rsplit("/", 1)[-1]
+                    and not asset_rel.endswith(".html")):
+                if not (SITE / asset_rel.lstrip("/")).exists():
+                    issues.append({"type": "broken_internal_link", "page": rel,
+                                   "href": "/" + asset_rel.lstrip("/")})
                 continue
             path = normalize(path)
             if path not in existing:
