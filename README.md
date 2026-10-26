@@ -7,6 +7,17 @@ discovers keywords, generates and gates articles, builds the site, and deploys i
 GitHub Pages. The only manual steps are account-level actions (search console, ads),
 which the build cannot do for you.
 
+## Popular calculators on the live site
+
+- [Mulch Calculator](https://huzaifamasood30.github.io/gardencalc/mulch-calculator/) — cubic yards and bags for any bed size and depth
+- [Gravel Calculator](https://huzaifamasood30.github.io/gardencalc/gravel-calculator/) — tons and cubic yards for bases, paths and driveways
+- [Concrete Calculator](https://huzaifamasood30.github.io/gardencalc/concrete-calculator/) — bags of mix for slabs and footings
+- [Raised Bed Soil Calculator](https://huzaifamasood30.github.io/gardencalc/raised-bed-soil-calculator/) — soil volume and bags for raised beds
+- [Paint Calculator](https://huzaifamasood30.github.io/gardencalc/paint-calculator/) — gallons by room size and coats
+- [Tile Calculator](https://huzaifamasood30.github.io/gardencalc/tile-calculator/) — tile count with waste allowance
+- [Grass Seed Calculator](https://huzaifamasood30.github.io/gardencalc/grass-seed-calculator/) — seed weight by lawn size and rate
+- [All calculators and guides](https://huzaifamasood30.github.io/gardencalc/calculators/)
+
 ## How it works
 
 ```

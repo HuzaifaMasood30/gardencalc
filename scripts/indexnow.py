@@ -9,8 +9,12 @@ Key verification: api.indexnow.org fetches https://<host>/<key>.txt and expects
 the file body to equal the key. On GitHub *project* pages the host root
 (https://<user>.github.io/<key>.txt) is not ours to serve, so that endpoint
 always answers 403 UserForbiddedToAccessSite. Bing's own endpoint
-(https://www.bing.com/indexnow) verifies the key against the submitted URL's
-directory instead and works for project pages, so that is the primary path.
+(https://www.bing.com/indexnow) is the primary path; the keyLocation is passed
+explicitly because the key file lives under the project path, not the host
+root. Note: as of 2026-10-26 Bing answers 403 for this site on both endpoints
+until the site is verified in Bing Webmaster Tools (a free owner step that can
+import the Search Console verification); after that these submissions succeed
+with no code change.
 Bing feeds DuckDuckGo and Copilot/ChatGPT-style search, so it is the one that
 matters. This script is a no-op unless indexnow_key is configured.
 """
@@ -71,7 +75,10 @@ def _via_bing(base: str, key: str, url_list: list[str]) -> bool:
     """
     ok = 0
     for url in url_list:
-        query = urllib.parse.urlencode({"url": url, "key": key})
+        query = urllib.parse.urlencode({
+            "url": url, "key": key,
+            "keyLocation": f"{base}/{key}.txt",
+        })
         try:
             with urllib.request.urlopen(f"{BING_ENDPOINT}?{query}", timeout=30) as resp:
                 if 200 <= resp.status < 300:
