@@ -6,7 +6,7 @@ why the imports sit below its definition.
 """
 from __future__ import annotations
 
-TODAY = "2026-10-20"
+TODAY = "2026-10-26"
 
 
 def _body(lead: str, worked_lead: str, bullets: str, sections: list[tuple[str, str]]) -> str:
@@ -22,5 +22,6 @@ from curated_b import ARTICLES as _B  # noqa: E402
 from curated_c import ARTICLES as _C  # noqa: E402
 from curated_d import ARTICLES as _D  # noqa: E402
 from curated_e import ARTICLES as _E  # noqa: E402
+from curated_f import ARTICLES as _F  # noqa: E402
 
-ARTICLES = _A + _B + _C + _D + _E
+ARTICLES = _A + _B + _C + _D + _E + _F

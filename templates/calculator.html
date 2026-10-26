@@ -1,6 +1,6 @@
 {% if calc %}
 <div class="calc" data-calc-shell>
-  <h2><svg aria-hidden="true"><use href="#i-calc"></use></svg>{{ calc.title }}</h2>
+  <h2><svg aria-hidden="true"><use href="#i-calc"></use></svg>{{ calc.title }}<span class="badge calc-badge">Free interactive tool</span></h2>
   <p class="calc-sub">{{ calc.sub }}</p>
   <div class="calc-body">
     <form class="calc-form calc-inputs" data-calc="{{ calc.key }}" data-units="imperial" aria-label="{{ calc.title }}">
@@ -44,6 +44,7 @@
         {% endfor %}
       </div>
       {% endif %}
+      <h3 class="calc-result-title">Your result</h3>
       <div class="calc-result" role="status" aria-live="polite"></div>
       <details class="quick-working calc-working">
         <summary>Show working</summary>

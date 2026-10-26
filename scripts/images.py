@@ -32,7 +32,7 @@ MUTED = (104, 121, 109)
 LINE = (219, 230, 221)
 WHITE = (255, 255, 255)
 
-HEADER_H = 128
+HEADER_H = 150
 FOOTER_H = 96
 PANEL_TOP = HEADER_H + 44
 PANEL_BOTTOM = H - FOOTER_H - 8
@@ -114,8 +114,8 @@ def _layer_panel(d, box, cluster, art):
     d.line([x0, ground_y, x1, ground_y], fill=(176, 156, 116), width=3)
 
     lx0, lx1 = x0 + 30, x1 - 190
-    max_layer = ground_y - y0 - 76
-    layer_h = int(min(max_layer, 30 + depth * 30))
+    max_layer = ground_y - y0 - 40
+    layer_h = int(min(max_layer, 46 + depth * 34))
     d.rounded_rectangle([lx0, ground_y - layer_h, lx1, ground_y], radius=8, fill=accent)
     for i in range(1, 4):
         yy = ground_y - layer_h + i * layer_h / 4
@@ -201,16 +201,21 @@ PANELS = {"layer": _layer_panel, "bars": _bars_panel, "grid": _grid_panel}
 def _header(d, cluster, art):
     accent = _cluster_meta(cluster)[1]
     d.rectangle([0, 0, W, HEADER_H], fill=accent)
+    # Texture stripes in a lightened accent, not white: white lines crossed the
+    # white title lettering and made it look clipped.
+    stripe = tuple(min(255, c + 26) for c in accent)
     for i in range(-H, W, 46):
-        d.line([i, HEADER_H, i + 90, 0], fill=(255, 255, 255), width=2)
+        d.line([i, HEADER_H, i + 90, 0], fill=stripe, width=2)
     label = _cluster_meta(cluster)[0].upper()
     chip_f = _font(BOLD, 22)
     tw = d.textlength(label, font=chip_f)
-    d.rounded_rectangle([48, 26, 48 + tw + 32, 66], radius=20, fill=WHITE)
-    d.text((64, 34), label, font=chip_f, fill=accent)
-    title_f = _font(BOLD, 40)
+    d.rounded_rectangle([48, 22, 48 + tw + 32, 62], radius=20, fill=WHITE)
+    d.text((64, 30), label, font=chip_f, fill=accent)
+    # Title sits fully below the chip: with the old geometry a two-line title
+    # started at y=44, inside the chip's band, and overlapped it.
+    title_f = _font(BOLD, 38)
     lines = _wrap(d, art.get("title", ""), title_f, W - 96)[:2]
-    ty = HEADER_H - 46 if len(lines) == 1 else HEADER_H - 84
+    ty = HEADER_H - 52 if len(lines) == 1 else 66
     for ln in lines:
         d.text((48, ty), ln, font=title_f, fill=WHITE)
         ty += 42
