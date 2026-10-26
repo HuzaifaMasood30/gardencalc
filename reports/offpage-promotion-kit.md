@@ -7,8 +7,11 @@ never post the same text in many places, never create fake accounts.
 
 ## Already done for you
 
-- **IndexNow:** all 162 site URLs submitted to Bing (which also feeds DuckDuckGo
-  and Copilot search). The pipeline re-notifies Bing after every future run.
+- **IndexNow:** the key is installed on the site and the submission code is
+  ready, but Bing currently refuses submissions (HTTP 403) until the site is
+  verified in Bing Webmaster Tools — see the owner steps in the chat report.
+  Once verified, the pipeline notifies Bing (which also feeds DuckDuckGo and
+  Copilot search) automatically after every run; no code change needed.
 - **GitHub:** the repository homepage, description and topics point at the live
   site, and the README links the main calculators. GitHub is a high-authority
   domain, so this is a real (if modest) discovery path.
