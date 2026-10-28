@@ -12121,9 +12121,9 @@
   },
   {
     "date": "2026-10-28",
-    "articles": 124,
+    "articles": 127,
     "avg_seo_score": 100.0,
-    "total_words": 98925,
+    "total_words": 102415,
     "per_article": [
       {
         "slug": "mulch-calculator",
@@ -14108,6 +14108,54 @@
           "calculator": true
         },
         "word_count": 714
+      },
+      {
+        "slug": "how-much-mulch-do-i-need-for-a-20x20-area",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 1120
+      },
+      {
+        "slug": "how-many-bags-of-concrete-do-you-need-for-a-10x10",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 1255
+      },
+      {
+        "slug": "how-much-gravel-do-i-need-calculator-uk",
+        "score": 100.0,
+        "checks": {
+          "title": true,
+          "meta": true,
+          "slug": true,
+          "h1_once": true,
+          "has_faq": true,
+          "schema": true,
+          "links": true,
+          "word_count": true,
+          "calculator": true
+        },
+        "word_count": 1115
       }
     ]
   }
