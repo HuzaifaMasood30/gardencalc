@@ -23,5 +23,6 @@ from curated_c import ARTICLES as _C  # noqa: E402
 from curated_d import ARTICLES as _D  # noqa: E402
 from curated_e import ARTICLES as _E  # noqa: E402
 from curated_f import ARTICLES as _F  # noqa: E402
+from curated_g import ARTICLES as _G  # noqa: E402
 
-ARTICLES = _A + _B + _C + _D + _E + _F
+ARTICLES = _A + _B + _C + _D + _E + _F + _G
