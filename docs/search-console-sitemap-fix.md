@@ -1,103 +1,55 @@
-# Fixing the "Couldn't fetch" sitemap error in Google Search Console
+# The "Couldn't fetch" sitemap error in Google Search Console — corrected findings
 
-Verified on 2026-10-26 against the live site. Read this before changing any code:
-**the sitemap file itself is not broken**, so no code change can fix this error.
-The problem is *which property* the sitemap was submitted to and *what was typed*
-in the submission box.
+Updated 2026-10-28. This file previously blamed a wrong property / wrong text in
+the submission box. **That theory was tested live in the owner's account and is
+wrong.** The verified facts are below.
 
-## What was tested (all live, 2026-10-26)
+## What was done and seen in Search Console (2026-10-28)
+
+- The account (masoodhuzaifa30@gmail.com) holds exactly one property: the correct
+  URL-prefix property `https://huzaifamasood30.github.io/gardencalc/`. No Domain
+  property exists, no verification was needed.
+- The old sitemap entry (`/sitemap.xml`, submitted 26 Oct 2026) showed
+  "Couldn't fetch", Type "Unknown", 0 discovered pages.
+- It was removed and `sitemap.xml` was resubmitted exactly as documented
+  everywhere. Google confirmed "Sitemap submitted successfully".
+- The new entry **still** shows "Couldn't fetch / Sitemap could not be read",
+  Type "Unknown", 0 discovered pages.
+
+## What was tested on the file itself (2026-10-28)
 
 | Check | Result |
 |---|---|
-| `GET https://huzaifamasood30.github.io/gardencalc/sitemap.xml` | **200 OK**, `Content-Type: application/xml`, 52,274 bytes |
-| XML well-formed, sitemap namespace correct | Yes |
-| URLs in sitemap | **157, all unique** |
-| Every one of the 157 URLs fetched individually | **All 200 OK** (no redirects, no 404s) |
-| Every image URL referenced in the sitemap | **All 200 OK** |
-| Canonical on each page | Self-referencing, matches the sitemap URL exactly |
-| `noindex` pages in the sitemap | None |
-| `GET https://huzaifamasood30.github.io/sitemap.xml` (host root) | **404** — there is no site at the host root |
-| `GET https://huzaifamasood30.github.io/robots.txt` (host root) | **404** — treated by Google as "allow everything" |
+| `GET …/gardencalc/sitemap.xml` | **200 OK**, `Content-Type: application/xml`, 56,398 bytes |
+| Same fetch with a Googlebot user-agent | **200**, byte-identical body |
+| XML parses strictly; namespaces correct; no BOM | Yes |
+| URLs in sitemap | **167**, all under the correct base, no duplicates |
+| Every one of the 167 URLs fetched individually | **All 200 OK** |
+| `<lastmod>` values | All real dates, none in the future |
 
-## Root cause
+## Google' own diagnostic (URL Inspection, 2026-10-28 20:12 PKT)
 
-GardenCalc is a GitHub Pages **project site**: it lives under the path
-`/gardencalc/` on the shared host `huzaifamasood30.github.io`. It is not the
-host itself.
+- Live test on the sitemap URL: **"URL is available to Google"** — page fetch
+  **Successful**, crawl allowed **Yes**, indexing allowed **Yes**.
+- Homepage: **"URL is on Google"**, page indexed, last crawl 13 Oct 2026,
+  fetch successful, canonical correct. Discovery shows "No referring sitemaps
+  detected", i.e. pages are being found without the sitemap.
 
-That means the sitemap only exists at:
+## Conclusion
 
-```
-https://huzaifamasood30.github.io/gardencalc/sitemap.xml
-```
+Google's fetcher can read the file; the Sitemaps *report* is stuck on Google's
+side. This is a known Search Console behaviour after resubmission and usually
+clears within a few days. A "Request indexing" nudge for the sitemap URL was
+sent on 2026-10-28.
 
-Two submission mistakes both produce exactly the "Couldn't fetch" status:
+## If it is still stuck after ~1 week
 
-1. **Wrong property.** If the Search Console property is the bare host
-   `https://huzaifamasood30.github.io/` (or a Domain property), then entering
-   `sitemap.xml` makes Google fetch `https://huzaifamasood30.github.io/sitemap.xml`,
-   which is a **404** (verified above). Google reports that as "Couldn't fetch".
-2. **Full URL pasted into the box.** In a URL-prefix property for
-   `https://huzaifamasood30.github.io/gardencalc/`, the *Sitemaps* box already
-   contains that prefix. Pasting the full URL produces
-   `https://huzaifamasood30.github.io/gardencalc/https://huzaifamasood30.github.io/gardencalc/sitemap.xml`,
-   which is also a 404.
+Try, in order:
+1. Re-check after the next deploy (each deploy changes the file's ETag).
+2. Submit a simplified test: regenerate the sitemap without the (currently
+   unused) image namespace declaration and resubmit.
+3. Split the sitemap (e.g. articles vs hubs) and submit the parts.
 
-A related dead end: Google only reads `robots.txt` from the host root
-(`https://huzaifamasood30.github.io/robots.txt`). A project site cannot serve
-that file, so a `Sitemap:` line in `/gardencalc/robots.txt` is never read by
-Google. That is why `scripts/seo.py` deliberately does not emit one, and why
-sitemap discovery for this site must happen through Search Console (below),
-the `<link rel="sitemap">` tag every page already carries, and the RSS feed.
-
-## The fix (5 minutes, in the owner's Google account)
-
-1. Open <https://search.google.com/search-console> and open the property
-   dropdown (top left).
-2. The property you need is a **URL-prefix** property named exactly:
-   `https://huzaifamasood30.github.io/gardencalc/`
-   - If it is not in the list: *Add property → URL prefix →* paste that URL →
-     verify with the **HTML tag** method. The tag is already on every page
-     (it comes from `google_site_verification` in `config/site.json`), so
-     verification succeeds immediately.
-   - If you also have a bare-host or Domain property, leave it alone — just
-     do not use it for this site.
-3. In that property, go to **Indexing → Sitemaps**.
-4. If there is an existing entry showing "Couldn't fetch", click it → ⋮ →
-   **Remove sitemap**. (Removing it loses nothing; it never worked.)
-5. In *"Add a new sitemap"*, type **only**:
-
-   ```
-   sitemap.xml
-   ```
-
-   Nothing else — no domain, no leading slash. The full URL Google will fetch
-   is shown above the box; confirm it reads
-   `https://huzaifamasood30.github.io/gardencalc/sitemap.xml`, then **Submit**.
-6. The status should turn **Success** with **157 discovered pages** within a
-   few minutes to a few hours. "Couldn't fetch" can linger in the UI from the
-   old entry — judge the *new* entry, not the cached row.
-
-## Then: ask Google to crawl the important pages
-
-Sitemap submission puts pages in the crawl queue; it does not jump it. For the
-pages that matter, use **URL Inspection → Request Indexing** (about 10/day is
-the practical limit). The priority list is in
-`reports/request-indexing-urls.txt` — homepage first, then the 13 calculator
-pillars, then the planners.
-
-## Then: Bing (one import, fixes IndexNow too)
-
-1. <https://www.bing.com/webmasters> → **Import from Google Search Console**.
-2. Submit the same sitemap URL there.
-3. This also unblocks IndexNow: Bing returns `403 UserForbiddedToAccessSite`
-   for this site until it is verified in Bing Webmaster Tools, because the
-   IndexNow key file cannot be served from the `github.io` host root.
-
-## What "fixed" looks like
-
-- Sitemaps report: **Success**, 157 discovered URLs.
-- Pages report: over the following 1–3 weeks, pages move from
-  "Discovered – currently not indexed" / "Crawled – currently not indexed"
-  to "Indexed". A brand-new site with no backlinks will not index all
-  157 pages at once, and that is normal — see `reports/seo-audit-2026-10-26.md`.
+Do **not** "fix" robots.txt (irrelevant here — Google reads it at the host
+root, which a project site cannot serve; its 404 means "allow all") and do not
+change the sitemap URL structure.
