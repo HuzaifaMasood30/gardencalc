@@ -1,5 +1,7 @@
 {
-  "done": [],
+  "done": [
+    "pinterest:gardencalc-boards"
+  ],
   "events": [
     {
       "uid": "action:indexnow",
@@ -18,6 +20,10 @@
       "at": "2026-10-08T15:55:00+00:00",
       "result": "archived",
       "detail": "web.archive.org/save snapshots created for /, /mulch-calculator/, /raised-bed-soil-calculator/, /gravel-calculator/, /concrete-calculator/."
+    },
+    {
+      "uid": "pinterest:gardencalc-boards",
+      "at": "2026-10-28T17:44:28.415340+00:00"
     }
   ]
 }
