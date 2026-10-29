@@ -1122,6 +1122,14 @@ def build() -> dict:
     _write(SITE / "sitemap.xml", seolib.sitemap_xml(urls, site))
     _write(SITE / "robots.txt", seolib.robots_txt(site))
 
+    # --- ads.txt (only once a real AdSense client exists; the value is the
+    # publisher id without the "ca-" prefix used in the script URL) ---
+    _client = (site.get("adsense_client") or "").strip()
+    if _client:
+        _pub = _client[3:] if _client.startswith("ca-") else _client
+        _write(SITE / "ads.txt",
+               f"google.com, {_pub}, DIRECT, f08c47fec0942fa0\n")
+
     # --- web app manifest (installability / browser chrome; icons are the
     # brand PNGs images.render_brand already writes into the copied static/) ---
     _write(SITE / "manifest.webmanifest", json.dumps({
