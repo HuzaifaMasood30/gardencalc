@@ -2098,7 +2098,7 @@
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.05 vs how-many-bags-of-concrete-do-i-need-for-a-6x6-slab"
+          "detail": "max similarity 0.05 vs how-many-bags-of-concrete-do-you-need-for-a-10x10"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -23894,11 +23894,11 @@
       "gates": {
         "thin_content": {
           "pass": true,
-          "detail": "word count 1124 (min 600)"
+          "detail": "word count 1120 (min 600)"
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.08 vs how-much-mulch-do-i-need-for-a-10x10-area"
+          "detail": "max similarity 0.10 vs how-much-mulch-do-i-need-for-a-10x10-area"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -23910,7 +23910,7 @@
         },
         "readability": {
           "pass": true,
-          "detail": "avg sentence length 15.3 words"
+          "detail": "avg sentence length 16.0 words"
         },
         "heading_structure": {
           "pass": true,
@@ -24220,11 +24220,11 @@
       "gates": {
         "thin_content": {
           "pass": true,
-          "detail": "word count 1245 (min 600)"
+          "detail": "word count 1255 (min 600)"
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.11 vs how-many-bags-of-concrete-do-i-need-for-a-4-x8-slab"
+          "detail": "max similarity 0.10 vs how-many-bags-of-concrete-do-i-need-for-a-10x12-slab"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -24236,7 +24236,7 @@
         },
         "readability": {
           "pass": true,
-          "detail": "avg sentence length 15.7 words"
+          "detail": "avg sentence length 15.9 words"
         },
         "heading_structure": {
           "pass": true,
@@ -24381,11 +24381,11 @@
       "gates": {
         "thin_content": {
           "pass": true,
-          "detail": "word count 1122 (min 600)"
+          "detail": "word count 1115 (min 600)"
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.12 vs how-much-gravel-do-i-need-under-a-concrete-slab"
+          "detail": "max similarity 0.11 vs how-much-gravel-do-i-need-under-a-concrete-slab"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -24397,7 +24397,7 @@
         },
         "readability": {
           "pass": true,
-          "detail": "avg sentence length 14.6 words"
+          "detail": "avg sentence length 14.2 words"
         },
         "heading_structure": {
           "pass": true,

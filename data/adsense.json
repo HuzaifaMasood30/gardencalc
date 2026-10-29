@@ -1,6 +1,6 @@
 {
   "ready": false,
-  "passed": 6,
+  "passed": 7,
   "total": 9,
   "checks": {
     "policy_pages": {
@@ -16,8 +16,8 @@
       "detail": "set site.json analytics_id (G-...)"
     },
     "contact_email": {
-      "ok": false,
-      "detail": ""
+      "ok": true,
+      "detail": "masoodhuzaifa30@gmail.com"
     },
     "article_count": {
       "ok": true,
@@ -42,7 +42,6 @@
   },
   "blocking": [
     "adsense_configured",
-    "analytics_configured",
-    "contact_email"
+    "analytics_configured"
   ]
 }

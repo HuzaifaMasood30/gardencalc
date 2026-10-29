@@ -6,7 +6,7 @@ Every item below can be completed **without any GardenCalc-side technical change
 
 Ethics: one link per contribution, only where the tool is the direct answer, always disclosed. No accounts created for you, no bulk posting, no paid links, no PBNs.
 
-## [ ] Stack Exchange — Home Improvement (diy.stackexchange.com)
+## [x] Stack Exchange — Home Improvement (diy.stackexchange.com)
 - **Target:** How much concrete for a fence post?
 - **URL:** https://diy.stackexchange.com/questions/87204/how-much-concrete-for-a-fence-post
 - **Promote:** https://huzaifamasood30.github.io/gardencalc/how-many-bags-of-concrete-do-i-need-for-a-fence-post/
@@ -164,7 +164,7 @@ Answer the specific thread with the full formula, then add one line: 'I built a 
 Answer with the worked method: 'Multiply the bed length by width to get square feet. Convert your depth to feet (3 in = 0.25 ft) and multiply for cubic feet. Divide cubic feet by 27 for cubic yards, or by 2 for 2-cu-ft bags. Example: 500 sq ft x 0.25 ft = 125 cu ft = 4.63 cu yd = 63 bags. I wrote this up with a calculator that does it for any size: https://huzaifamasood30.github.io/gardencalc/mulch-calculator/ (site I run).'
 ```
 
-## [ ] Pinterest — Pinterest — create boards 'Garden Calculators', 'Lawn Care', 'Home Projects'
+## [x] Pinterest — Pinterest — create boards 'Garden Calculators', 'Lawn Care', 'Home Projects'
 - **Target:** Pin each calculator's social image to the matching board
 - **URL:** https://www.pinterest.com/
 - **Promote:** https://huzaifamasood30.github.io/gardencalc/mulch-coverage-chart/ etc. (16 ready pins in /static/img/pins/)
