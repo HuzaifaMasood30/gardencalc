@@ -1,6 +1,6 @@
 {
-  "ready": false,
-  "passed": 7,
+  "ready": true,
+  "passed": 9,
   "total": 9,
   "checks": {
     "policy_pages": {
@@ -8,12 +8,12 @@
       "detail": "5/5 present"
     },
     "adsense_configured": {
-      "ok": false,
-      "detail": "set site.json adsense_client (ca-pub-...)"
+      "ok": true,
+      "detail": "ca-pub-8483484392205267"
     },
     "analytics_configured": {
-      "ok": false,
-      "detail": "set site.json analytics_id (G-...)"
+      "ok": true,
+      "detail": "G-CB1DXC533L"
     },
     "contact_email": {
       "ok": true,
@@ -40,8 +40,5 @@
       "detail": "rss.xml"
     }
   },
-  "blocking": [
-    "adsense_configured",
-    "analytics_configured"
-  ]
+  "blocking": []
 }
