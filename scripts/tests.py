@@ -325,6 +325,39 @@ def test_sitemap_dedupes_and_enforces_base_path():
     assert "<loc>https://t.example/a/</loc>" not in xml
 
 
+def test_sitemap_split_children_carry_the_flat_urls():
+    """The index + children must carry exactly the flat sitemap's entries."""
+    from xml.etree import ElementTree
+    site = {"name": "T", "base_url": "https://t.example/gardencalc"}
+    urls = [{"loc": f"/p{i}/", "lastmod": "2026-01-15",
+             "image": f"https://t.example/img/{i}.webp", "image_title": f"P{i}"}
+            for i in range(120)]
+    ns = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
+    flat = ElementTree.fromstring(seolib.sitemap_xml(urls, site))
+    flat_urls = list(flat.iter(ns + "url"))
+    docs = seolib.sitemap_documents(urls, site)
+    assert docs[0][0] == "sitemap.xml"
+    index = ElementTree.fromstring(docs[0][1])
+    assert index.tag == ns + "sitemapindex"
+    child_locs = [s.findtext(ns + "loc") for s in index.iter(ns + "sitemap")]
+    assert child_locs == [f"https://t.example/gardencalc/sitemap-{n}.xml"
+                          for n in range(1, len(docs))]
+    split_urls = []
+    for _name, doc in docs[1:]:
+        root = ElementTree.fromstring(doc)
+        assert root.tag == ns + "urlset"
+        chunk = root.findall(ns + "url")
+        assert 0 < len(chunk) <= seolib.SITEMAP_CHUNK
+        split_urls += chunk
+    # Same entries, same order, same lastmod/image payload -- not just same locs.
+    assert [u.findtext(ns + "loc") for u in split_urls] == \
+        [u.findtext(ns + "loc") for u in flat_urls]
+    for got, want in zip(split_urls, flat_urls):
+        assert got.findtext(ns + "lastmod") == want.findtext(ns + "lastmod")
+        assert got.findtext("{http://www.google.com/schemas/sitemap-image/1.1}loc") == \
+            want.findtext("{http://www.google.com/schemas/sitemap-image/1.1}loc")
+
+
 def test_merged_pages_become_stubs_and_leave_the_sitemap():
     """Merged pages must keep their URL (for no-404) but drop out of the live site."""
     arts = [

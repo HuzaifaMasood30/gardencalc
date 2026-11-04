@@ -1119,7 +1119,11 @@ def build() -> dict:
     urls += [{"loc": f"/{s}/", "lastmod": _latest(f"content/pages/{s}.md")} for s, _, _ in pages]
     urls += [{"loc": p, "lastmod": _latest(f"templates/{extra_tpl[p.strip('/')]}")}
              for p in EXTRA_PAGES]
-    _write(SITE / "sitemap.xml", seolib.sitemap_xml(urls, site))
+    # sitemap.xml is an index over child urlsets (seo.sitemap_documents): GSC
+    # has left the flat file at "Couldn't fetch" since 2026-10-28. SITE is
+    # wiped at the top of every build, so no stale child can linger.
+    for _sm_name, _sm_xml in seolib.sitemap_documents(urls, site):
+        _write(SITE / _sm_name, _sm_xml)
     _write(SITE / "robots.txt", seolib.robots_txt(site))
 
     # --- ads.txt (only once a real AdSense client exists; the value is the

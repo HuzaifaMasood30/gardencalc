@@ -38,7 +38,18 @@ def urls() -> list[str]:
         return []
     import re
 
-    return re.findall(r"<loc>([^<]+)</loc>", sitemap.read_text(encoding="utf-8"))
+    text = sitemap.read_text(encoding="utf-8")
+    if "<sitemapindex" in text:
+        # sitemap.xml is an index: the page URLs live in the child urlsets,
+        # and the index's own <loc>s are the children, not pages.
+        found: list[str] = []
+        for child in re.findall(r"<loc>([^<]+)</loc>", text):
+            child_path = SITE / child.rsplit("/", 1)[-1]
+            if child_path.exists():
+                found += re.findall(r"<loc>([^<]+)</loc>",
+                                    child_path.read_text(encoding="utf-8"))
+        return found
+    return re.findall(r"<loc>([^<]+)</loc>", text)
 
 
 def run() -> bool:

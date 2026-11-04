@@ -235,14 +235,12 @@ def _valid_lastmod(value) -> str | None:
     return m.group(1)
 
 
-def sitemap_xml(urls: list[dict], site: dict) -> str:
-    """urls: [{'loc':..., 'lastmod':..., 'image':..., 'image_title':...}]
+def _sitemap_entries(urls: list[dict], site: dict) -> list[dict]:
+    """Normalise the raw url list into sitemap entries.
 
-    Emits a Google-compliant urlset: absolute, escaped <loc>, ISO <lastmod> only when
-    valid, and no <priority> (search engines ignore it, so it is dead weight). Entries
-    are de-duplicated by <loc> in first-seen order and any URL whose generated <loc>
-    escapes the site's own base path is dropped, so this method cannot reintroduce a
-    wrong-host or duplicate URL.
+    Absolute <loc> per entry, de-duplicated by <loc> in first-seen order, and
+    any URL whose generated <loc> escapes the site's own base path is dropped,
+    so a wrong-host or duplicate URL cannot reach production.
     """
     base = (site.get("custom_domain") or site["base_url"]).rstrip("/")
     seen: set[str] = set()
@@ -255,7 +253,10 @@ def sitemap_xml(urls: list[dict], site: dict) -> str:
             continue
         seen.add(loc)
         entries.append({**u, "abs_loc": loc})
+    return entries
 
+
+def _urlset_xml(entries: list[dict]) -> str:
     lines = ['<?xml version="1.0" encoding="UTF-8"?>',
              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
              '        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">']
@@ -274,6 +275,59 @@ def sitemap_xml(urls: list[dict], site: dict) -> str:
         lines.append("  </url>")
     lines.append("</urlset>")
     return "\n".join(lines) + "\n"
+
+
+def sitemap_xml(urls: list[dict], site: dict) -> str:
+    """urls: [{'loc':..., 'lastmod':..., 'image':..., 'image_title':...}]
+
+    Emits a Google-compliant urlset: absolute, escaped <loc>, ISO <lastmod> only when
+    valid, and no <priority> (search engines ignore it, so it is dead weight). Entries
+    are de-duplicated by <loc> in first-seen order and any URL whose generated <loc>
+    escapes the site's own base path is dropped, so this method cannot reintroduce a
+    wrong-host or duplicate URL.
+    """
+    return _urlset_xml(_sitemap_entries(urls, site))
+
+
+# URLs per child sitemap when the sitemap is split (see sitemap_documents).
+# Far under the protocol's 50,000 limit; small children also keep each file
+# light enough that a stuck fetcher is more likely to take it.
+SITEMAP_CHUNK = 50
+
+
+def sitemap_documents(urls: list[dict], site: dict,
+                      per_file: int = SITEMAP_CHUNK) -> list[tuple[str, str]]:
+    """Split the sitemap into an index plus child urlsets.
+
+    Returns [(filename, xml), ...]: "sitemap.xml" first (a <sitemapindex>),
+    then "sitemap-1.xml", "sitemap-2.xml", ... Each child holds at most
+    ``per_file`` <url> entries, and the children together carry exactly the
+    entries sitemap_xml() would emit in one flat file -- same order, same
+    <lastmod> and image extensions, nothing added or dropped.
+
+    Why: GSC has left the single flat sitemap at "Couldn't fetch" since
+    2026-10-28 while Bing reads the same file fine, so the file is not the
+    problem; smaller fresh child files are the standard un-stick attempt.
+    Keeping the index at sitemap.xml means the address already submitted to
+    the consoles does not change.
+    """
+    entries = _sitemap_entries(urls, site)
+    chunks = [entries[i:i + per_file]
+              for i in range(0, len(entries), per_file)] or [[]]
+    docs: list[tuple[str, str]] = []
+    index = ['<?xml version="1.0" encoding="UTF-8"?>',
+             '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    for n, chunk in enumerate(chunks, start=1):
+        name = f"sitemap-{n}.xml"
+        docs.append((name, _urlset_xml(chunk)))
+        index.append("  <sitemap>")
+        index.append(f"    <loc>{html.escape(_abs(site, '/' + name), quote=True)}</loc>")
+        mods = [m for m in (_valid_lastmod(u.get("lastmod")) for u in chunk) if m]
+        if mods:
+            index.append(f"    <lastmod>{max(mods)}</lastmod>")
+        index.append("  </sitemap>")
+    index.append("</sitemapindex>")
+    return [("sitemap.xml", "\n".join(index) + "\n")] + docs
 
 
 def robots_txt(site: dict, sitemap_url: str = "") -> str:

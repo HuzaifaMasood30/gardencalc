@@ -122,26 +122,55 @@ def check() -> dict:
         if a["slug"] not in inbound:
             issues.append({"type": "orphan_article", "page": "/" + a["slug"] + "/"})
 
-    # sitemap present + full Google-compliance checks
+    # sitemap present + full Google-compliance checks. sitemap.xml is an
+    # index over child urlsets (sitemap-1.xml, ...): follow it and run every
+    # check below on the aggregated <url> set, exactly as the old flat file
+    # was checked, so a URL missing from the children is still caught here.
     sm = SITE / "sitemap.xml"
+    sitemap_locs: list[str] = []
     if not sm.exists():
         issues.append({"type": "missing_sitemap", "page": "/sitemap.xml"})
     else:
-        xml = sm.read_text(encoding="utf-8")
-        # must be well-formed XML with the sitemap namespace and no BOM
-        if xml.startswith("\ufeff") or "<urlset" not in xml:
-            issues.append({"type": "invalid_sitemap", "page": "/sitemap.xml"})
-        try:
-            from xml.etree import ElementTree as _ET
-            root = _ET.fromstring(xml)
-            ns = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
+        from xml.etree import ElementTree as _ET
+        ns = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
+
+        def _sitemap_root(path: Path, label: str):
+            """Parse one sitemap file: no BOM, well-formed XML, else an issue."""
+            text = path.read_text(encoding="utf-8")
+            if text.startswith("\ufeff"):
+                issues.append({"type": "invalid_sitemap", "page": label})
+            try:
+                return _ET.fromstring(text)
+            except _ET.ParseError:
+                issues.append({"type": "malformed_sitemap", "page": label})
+                return None
+
+        root = _sitemap_root(sm, "/sitemap.xml")
+        if root is not None and root.tag == ns + "sitemapindex":
+            children = [e.findtext(ns + "loc") or "" for e in root.iter(ns + "sitemap")]
+            if not children:
+                issues.append({"type": "invalid_sitemap", "page": "/sitemap.xml"})
+            for child_loc in children:
+                child_name = urlparse(child_loc).path.rsplit("/", 1)[-1]
+                child_path = SITE / child_name
+                if not child_path.exists():
+                    issues.append({"type": "missing_sitemap_child",
+                                   "page": "/" + child_name})
+                    continue
+                croot = _sitemap_root(child_path, "/" + child_name)
+                if croot is None:
+                    continue
+                if croot.tag != ns + "urlset":
+                    issues.append({"type": "invalid_sitemap_namespace",
+                                   "page": "/" + child_name})
+                    continue
+                sitemap_locs += [e.findtext(ns + "loc") or ""
+                                 for e in croot.iter(ns + "url")]
+        elif root is not None:
             if root.tag != ns + "urlset":
                 issues.append({"type": "invalid_sitemap_namespace",
                                "page": "/sitemap.xml"})
             sitemap_locs = [e.findtext(ns + "loc") or "" for e in root.iter(ns + "url")]
-        except _ET.ParseError:
-            issues.append({"type": "malformed_sitemap", "page": "/sitemap.xml"})
-            sitemap_locs = []
         if len(sitemap_locs) != len(set(sitemap_locs)):
             issues.append({"type": "duplicate_sitemap_url", "page": "/sitemap.xml"})
         # Every sitemap URL must sit under the deployed base path (never the bare host).

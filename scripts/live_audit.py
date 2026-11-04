@@ -152,16 +152,25 @@ def audit(base: str) -> dict:
     st, home, _ = fetch(base)
     record("homepage HTTP 200", st == 200, f"HTTP {st}")
 
-    # sitemap
+    # sitemap: sitemap.xml is an index over child urlsets; follow it and
+    # audit the aggregated page URLs, exactly as the old flat file was.
     st, xml, _ = fetch(base + "sitemap.xml")
     locs: list[str] = []
     if st == 200:
         try:
             root = ElementTree.fromstring(xml)
             ns = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
-            locs = [u.findtext(ns + "loc") for u in root.findall(ns + "url")]
+            if root.tag == ns + "sitemapindex":
+                for sm_el in root.findall(ns + "sitemap"):
+                    cst, cxml, _ = fetch(sm_el.findtext(ns + "loc"))
+                    if cst != 200:
+                        raise ValueError(f"child sitemap HTTP {cst}")
+                    croot = ElementTree.fromstring(cxml)
+                    locs += [u.findtext(ns + "loc") for u in croot.findall(ns + "url")]
+            else:
+                locs = [u.findtext(ns + "loc") for u in root.findall(ns + "url")]
             record("sitemap is valid XML", bool(locs), f"{len(locs)} URLs")
-        except ElementTree.ParseError as e:
+        except (ElementTree.ParseError, ValueError) as e:
             record("sitemap is valid XML", False, str(e))
     else:
         record("sitemap reachable", False, f"HTTP {st}")
