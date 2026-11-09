@@ -140,7 +140,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -301,7 +301,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -462,7 +462,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -626,7 +626,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -790,7 +790,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -950,7 +950,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -1112,7 +1112,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -1274,7 +1274,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -1644,7 +1644,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -1808,7 +1808,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -1968,7 +1968,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -2098,7 +2098,7 @@
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.06 vs how-many-60lb-bags-of-concrete-do-i-need"
+          "detail": "max similarity 0.07 vs how-many-60lb-bags-of-concrete-do-i-need"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -2130,7 +2130,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -2292,7 +2292,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -2546,7 +2546,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -2708,7 +2708,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -2962,7 +2962,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3126,7 +3126,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3286,7 +3286,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3448,7 +3448,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3559,6 +3559,16 @@
         "title": "How Much Topsoil to Level a Lawn: Depths and Yards"
       },
       {
+        "to": "how-much-topsoil-do-i-need-to-topdress-a-lawn",
+        "anchor": "how much topsoil do i need to topdress a lawn",
+        "title": "How Much Topsoil Do I Need to Topdress a Lawn?"
+      },
+      {
+        "to": "how-much-topsoil-do-i-need-for-sod",
+        "anchor": "how much topsoil do i need for sod",
+        "title": "How Much Topsoil Do I Need for Sod?"
+      },
+      {
         "to": "how-many-tiles-do-i-need-for-a-roof",
         "anchor": "how many tiles do i need for a roof",
         "title": "How Many Tiles Do I Need for a Roof: Calculator & Guide"
@@ -3567,16 +3577,6 @@
         "to": "how-many-tiles-do-i-need-for-a-wall",
         "anchor": "how many tiles do i need for a wall",
         "title": "How Many Tiles Do I Need for a Wall: Calculator & Guide"
-      },
-      {
-        "to": "how-much-mulch-do-i-need-for-a-playground",
-        "anchor": "how much mulch do i need for a playground",
-        "title": "How Much Mulch for a Playground: Depth & Bag Counts"
-      },
-      {
-        "to": "how-much-mulch-do-i-need-around-a-tree",
-        "anchor": "how much mulch do i need around a tree",
-        "title": "How Much Mulch Around a Tree: Depth, Ring Size, Bags"
       }
     ],
     "schema_types": [
@@ -3625,7 +3625,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3800,7 +3800,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -3962,7 +3962,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -4051,6 +4051,16 @@
         "title": "How Much Soil for an 8x4 Raised Bed? Bags and Yards"
       },
       {
+        "to": "how-many-bags-of-concrete-do-i-need-for-a-4x6-slab",
+        "anchor": "how many bags of concrete do i need for a",
+        "title": "How Many Bags of Concrete Do I Need for a 4x6 Slab"
+      },
+      {
+        "to": "how-much-paint-do-i-need-for-a-10x12-room",
+        "anchor": "how much paint do i need for a 10x12 room",
+        "title": "How Much Paint for a 10x12 Room: Litres & Gallons"
+      },
+      {
         "to": "how-much-paint-for-a-small-bathroom",
         "anchor": "how much paint for a small bathroom",
         "title": "How Much Paint for a Bathroom: Gallons & Finish"
@@ -4064,16 +4074,6 @@
         "to": "how-much-gravel-do-i-need-for-a-12x12-patio",
         "anchor": "how much gravel do i need for a 12x12 patio",
         "title": "How Much Gravel for a 12x12 Patio: Base and Top"
-      },
-      {
-        "to": "how-much-fertilizer-do-i-need-for-5000-square-feet",
-        "anchor": "how much fertilizer do i need for 5000",
-        "title": "How Much Fertilizer for 5,000 Sq Ft: Bags and Rate"
-      },
-      {
-        "to": "how-much-fertilizer-do-i-need-for-1-acre",
-        "anchor": "how much fertilizer do i need for 1 acre",
-        "title": "How Much Fertilizer for 1 Acre: Bags and Nitrogen"
       }
     ],
     "schema_types": [
@@ -4123,7 +4123,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -4284,7 +4284,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -4448,7 +4448,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -4612,7 +4612,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -5095,7 +5095,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -5259,7 +5259,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -5644,7 +5644,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -5806,7 +5806,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6061,7 +6061,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6341,7 +6341,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6501,7 +6501,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6662,7 +6662,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6824,7 +6824,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -6922,6 +6922,16 @@
         "to": "how-much-topsoil-do-i-need-to-level-my-lawn",
         "anchor": "how much topsoil do i need to level my lawn",
         "title": "How Much Topsoil to Level a Lawn: Depths and Yards"
+      },
+      {
+        "to": "how-much-topsoil-do-i-need-to-topdress-a-lawn",
+        "anchor": "how much topsoil do i need to topdress a lawn",
+        "title": "How Much Topsoil Do I Need to Topdress a Lawn?"
+      },
+      {
+        "to": "how-much-topsoil-do-i-need-for-sod",
+        "anchor": "how much topsoil do i need for sod",
+        "title": "How Much Topsoil Do I Need for Sod?"
       }
     ],
     "schema_types": [
@@ -7011,6 +7021,16 @@
         "title": "How Much Soil for an 8x4 Raised Bed? Bags and Yards"
       },
       {
+        "to": "how-much-fertilizer-do-i-need-for-5000-square-feet",
+        "anchor": "how much fertilizer do i need for 5000",
+        "title": "How Much Fertilizer for 5,000 Sq Ft: Bags and Rate"
+      },
+      {
+        "to": "how-much-fertilizer-do-i-need-for-1-acre",
+        "anchor": "how much fertilizer do i need for 1 acre",
+        "title": "How Much Fertilizer for 1 Acre: Bags and Nitrogen"
+      },
+      {
         "to": "how-much-mulch-do-i-need-for-a-10x10-bed",
         "anchor": "how much mulch do i need for a 10x10 bed",
         "title": "How Much Mulch for a 10x10 Bed: Bags and Yards"
@@ -7024,16 +7044,6 @@
         "to": "how-much-gravel-do-i-need-for-a-shed-base",
         "anchor": "how much gravel do i need for a shed base",
         "title": "How Much Gravel for a Shed Base: Depth and Tons"
-      },
-      {
-        "to": "how-much-gravel-do-i-need-for-a-paver-base",
-        "anchor": "how much gravel do i need for a paver base",
-        "title": "How Much Gravel for a Paver Base: Layers and Tons"
-      },
-      {
-        "to": "how-much-rubber-mulch-do-i-need-for-a-playground",
-        "anchor": "how much rubber mulch do i need for a",
-        "title": "How Much Rubber Mulch for a Playground: Safe Depths"
       }
     ],
     "schema_types": [
@@ -7083,7 +7093,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -7364,7 +7374,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -7524,7 +7534,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -7685,7 +7695,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -7847,7 +7857,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -7958,24 +7968,24 @@
         "title": "How Much Topsoil to Level a Lawn: Depths and Yards"
       },
       {
-        "to": "how-much-mulch-do-i-need-to-prevent-weeds",
-        "anchor": "how much mulch do i need to prevent weeds",
-        "title": "How Much Mulch to Prevent Weeds: The Depth That Works"
+        "to": "how-much-topsoil-do-i-need-to-topdress-a-lawn",
+        "anchor": "how much topsoil do i need to topdress a lawn",
+        "title": "How Much Topsoil Do I Need to Topdress a Lawn?"
       },
       {
-        "to": "how-much-river-rock-do-i-need-for-landscaping",
-        "anchor": "how much river rock do i need for landscaping",
-        "title": "How Much River Rock for Landscaping: Depth and Tons"
+        "to": "how-much-topsoil-do-i-need-for-sod",
+        "anchor": "how much topsoil do i need for sod",
+        "title": "How Much Topsoil Do I Need for Sod?"
       },
       {
-        "to": "how-many-pounds-of-fertilizer-per-acre",
-        "anchor": "how many pounds of fertilizer per acre",
-        "title": "How Many Pounds of Fertilizer per Acre: Rates"
+        "to": "how-much-gravel-do-i-need-for-a-paver-base",
+        "anchor": "how much gravel do i need for a paver base",
+        "title": "How Much Gravel for a Paver Base: Layers and Tons"
       },
       {
-        "to": "how-much-tile-do-i-need-for-kitchen-backsplash",
-        "anchor": "how much tile do i need for kitchen",
-        "title": "How Much Tile for a Kitchen Backsplash: Counts"
+        "to": "how-much-rubber-mulch-do-i-need-for-a-playground",
+        "anchor": "how much rubber mulch do i need for a",
+        "title": "How Much Rubber Mulch for a Playground: Safe Depths"
       }
     ],
     "schema_types": [
@@ -8024,7 +8034,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -8186,7 +8196,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -8441,7 +8451,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -8605,7 +8615,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -9010,7 +9020,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -9172,7 +9182,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -9267,24 +9277,24 @@
         "title": "How Much Topsoil to Level a Lawn: Depths and Yards"
       },
       {
-        "to": "how-much-mulch-do-i-need-for-a-20x20-area",
-        "anchor": "how much mulch do i need for a 20x20 area",
-        "title": "How Much Mulch Do I Need for a 20x20 Area"
+        "to": "how-much-topsoil-do-i-need-to-topdress-a-lawn",
+        "anchor": "how much topsoil do i need to topdress a lawn",
+        "title": "How Much Topsoil Do I Need to Topdress a Lawn?"
       },
       {
-        "to": "how-many-bags-of-concrete-do-you-need-for-a-10x10",
-        "anchor": "how many bags of concrete do you need for",
-        "title": "How Many Bags of Concrete Do You Need for a 10x10"
+        "to": "how-much-topsoil-do-i-need-for-sod",
+        "anchor": "how much topsoil do i need for sod",
+        "title": "How Much Topsoil Do I Need for Sod?"
       },
       {
-        "to": "how-much-gravel-do-i-need-calculator-uk",
-        "anchor": "how much gravel do i need calculator uk",
-        "title": "How Much Gravel Do I Need Calculator Uk: Calculator & Guide"
+        "to": "how-much-mulch-do-i-need-to-prevent-weeds",
+        "anchor": "how much mulch do i need to prevent weeds",
+        "title": "How Much Mulch to Prevent Weeds: The Depth That Works"
       },
       {
-        "to": "how-much-gravel-do-i-need-for-flower-bed",
-        "anchor": "how much gravel do i need for flower bed",
-        "title": "How Much Gravel for a Flower Bed? Depth and Tons"
+        "to": "how-much-river-rock-do-i-need-for-landscaping",
+        "anchor": "how much river rock do i need for landscaping",
+        "title": "How Much River Rock for Landscaping: Depth and Tons"
       }
     ],
     "schema_types": [
@@ -9333,7 +9343,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -9495,7 +9505,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -9656,7 +9666,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -9820,7 +9830,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -10322,7 +10332,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -10420,6 +10430,16 @@
         "to": "how-much-topsoil-do-i-need-to-level-my-lawn",
         "anchor": "how much topsoil do i need to level my lawn",
         "title": "How Much Topsoil to Level a Lawn: Depths and Yards"
+      },
+      {
+        "to": "how-much-topsoil-do-i-need-to-topdress-a-lawn",
+        "anchor": "how much topsoil do i need to topdress a lawn",
+        "title": "How Much Topsoil Do I Need to Topdress a Lawn?"
+      },
+      {
+        "to": "how-much-topsoil-do-i-need-for-sod",
+        "anchor": "how much topsoil do i need for sod",
+        "title": "How Much Topsoil Do I Need for Sod?"
       }
     ],
     "schema_types": [
@@ -10676,7 +10696,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -10837,7 +10857,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -11117,7 +11137,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -11391,7 +11411,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -11553,7 +11573,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -11745,6 +11765,16 @@
         "to": "how-much-topsoil-do-i-need-to-level-my-lawn",
         "anchor": "how much topsoil do i need to level my lawn",
         "title": "How Much Topsoil to Level a Lawn: Depths and Yards"
+      },
+      {
+        "to": "how-much-topsoil-do-i-need-to-topdress-a-lawn",
+        "anchor": "how much topsoil do i need to topdress a lawn",
+        "title": "How Much Topsoil Do I Need to Topdress a Lawn?"
+      },
+      {
+        "to": "how-much-topsoil-do-i-need-for-sod",
+        "anchor": "how much topsoil do i need for sod",
+        "title": "How Much Topsoil Do I Need for Sod?"
       }
     ],
     "schema_types": [
@@ -11907,7 +11937,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -12068,7 +12098,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -12232,7 +12262,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -12624,7 +12654,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -12785,7 +12815,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -12949,7 +12979,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -13113,7 +13143,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -13388,7 +13418,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -13552,7 +13582,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -13716,7 +13746,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -13876,7 +13906,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -14033,7 +14063,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -14195,7 +14225,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 130 available)"
+          "detail": "internal links 8 (want 3-8, 133 available)"
         },
         "schema_present": {
           "pass": true,
@@ -14358,7 +14388,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 130 available)"
+          "detail": "internal links 8 (want 3-8, 133 available)"
         },
         "schema_present": {
           "pass": true,
@@ -14521,7 +14551,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -14681,7 +14711,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -14838,7 +14868,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -14927,6 +14957,16 @@
         "title": "How Much Sand for a Paver Base: The 1-Inch Layer"
       },
       {
+        "to": "how-much-mulch-do-i-need-for-a-playground",
+        "anchor": "how much mulch do i need for a playground",
+        "title": "How Much Mulch for a Playground: Depth & Bag Counts"
+      },
+      {
+        "to": "how-much-mulch-do-i-need-around-a-tree",
+        "anchor": "how much mulch do i need around a tree",
+        "title": "How Much Mulch Around a Tree: Depth, Ring Size, Bags"
+      },
+      {
         "to": "how-many-6-inch-tiles-do-i-need",
         "anchor": "how many 6 inch tiles do i need",
         "title": "How Many 6 Inch Tiles Do I Need? Count and Waste"
@@ -14935,16 +14975,6 @@
         "to": "how-much-grass-seed-for-1-acre",
         "anchor": "how much grass seed for 1 acre",
         "title": "How Much Grass Seed for 1 Acre? Pounds and Bags"
-      },
-      {
-        "to": "how-many-bags-of-concrete-do-i-need-for-a-6x6-slab",
-        "anchor": "how many bags of concrete do i need for a",
-        "title": "How Many Bags of Concrete for a 6x6 Slab? 4 in Deep"
-      },
-      {
-        "to": "how-much-mulch-do-i-need-for-a-tree",
-        "anchor": "how much mulch do i need for a tree",
-        "title": "How Much Mulch Do I Need for a Tree: Calculator & Guide"
       }
     ],
     "schema_types": [
@@ -14994,7 +15024,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -15088,19 +15118,19 @@
         "title": "How Much Compost to Add to a Lawn: Topdressing Rates"
       },
       {
+        "to": "how-many-bags-of-concrete-do-i-need-for-a-6x6-slab",
+        "anchor": "how many bags of concrete do i need for a",
+        "title": "How Many Bags of Concrete for a 6x6 Slab? 4 in Deep"
+      },
+      {
+        "to": "how-much-mulch-do-i-need-for-a-tree",
+        "anchor": "how much mulch do i need for a tree",
+        "title": "How Much Mulch Do I Need for a Tree: Calculator & Guide"
+      },
+      {
         "to": "how-many-boxes-of-tiles-do-i-need-for-a-room",
         "anchor": "how many boxes of tiles do i need for a room",
         "title": "How Many Boxes of Tiles Do I Need for a Room"
-      },
-      {
-        "to": "how-much-straw-to-cover-grass-seed-per-square-foot",
-        "anchor": "how much straw to cover grass seed per",
-        "title": "How Much Straw to Cover Grass Seed Per Square Foot"
-      },
-      {
-        "to": "how-much-starter-fertilizer-per-1000-square-feet",
-        "anchor": "how much starter fertilizer per 1000",
-        "title": "How Much Starter Fertilizer per 1,000 Square Feet?"
       }
     ],
     "schema_types": [
@@ -15150,7 +15180,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -15234,6 +15264,16 @@
         "title": "How Much Bark for 200 Sq Ft: Bags or Bulk"
       },
       {
+        "to": "how-much-straw-to-cover-grass-seed-per-square-foot",
+        "anchor": "how much straw to cover grass seed per",
+        "title": "How Much Straw to Cover Grass Seed Per Square Foot"
+      },
+      {
+        "to": "how-much-starter-fertilizer-per-1000-square-feet",
+        "anchor": "how much starter fertilizer per 1000",
+        "title": "How Much Starter Fertilizer per 1,000 Square Feet?"
+      },
+      {
         "to": "how-many-bags-of-concrete-do-i-need-for-a-3x3-slab",
         "anchor": "how many bags of concrete do i need for a",
         "title": "How Many Bags of Concrete Do I Need for a 3x3 Slab"
@@ -15247,16 +15287,6 @@
         "to": "how-many-boxes-of-tiles-do-i-need-for-a-3-bedroom-house",
         "anchor": "how many boxes of tiles do i need for a 3",
         "title": "How Many Boxes of Tiles Do I Need for a 3 Bedroom House"
-      },
-      {
-        "to": "how-many-bags-of-concrete-do-i-need-for-a-4x6-slab",
-        "anchor": "how many bags of concrete do i need for a",
-        "title": "How Many Bags of Concrete Do I Need for a 4x6 Slab"
-      },
-      {
-        "to": "how-much-paint-do-i-need-for-a-10x12-room",
-        "anchor": "how much paint do i need for a 10x12 room",
-        "title": "How Much Paint for a 10x12 Room: Litres & Gallons"
       }
     ],
     "schema_types": [
@@ -15306,7 +15336,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -15462,7 +15492,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -15624,7 +15654,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 130 available)"
+          "detail": "internal links 8 (want 3-8, 133 available)"
         },
         "schema_present": {
           "pass": true,
@@ -15788,7 +15818,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -15948,7 +15978,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -16105,7 +16135,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -16267,7 +16297,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 130 available)"
+          "detail": "internal links 8 (want 3-8, 133 available)"
         },
         "schema_present": {
           "pass": true,
@@ -16424,7 +16454,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -16582,7 +16612,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -16673,24 +16703,24 @@
         "title": "How Much Sand for a Paver Base: The 1-Inch Layer"
       },
       {
-        "to": "how-many-60lb-bags-of-concrete-do-i-need",
-        "anchor": "how many 60lb bags of concrete do i need",
-        "title": "How Many 60 Lb Bags of Concrete Do I Need?"
+        "to": "how-many-pounds-of-fertilizer-per-acre",
+        "anchor": "how many pounds of fertilizer per acre",
+        "title": "How Many Pounds of Fertilizer per Acre: Rates"
       },
       {
-        "to": "how-much-mulch-do-i-need-for-my-yard",
-        "anchor": "how much mulch do i need for my yard",
-        "title": "How Much Mulch Do I Need for My Yard: Calculator & Guide"
+        "to": "how-much-tile-do-i-need-for-kitchen-backsplash",
+        "anchor": "how much tile do i need for kitchen",
+        "title": "How Much Tile for a Kitchen Backsplash: Counts"
       },
       {
-        "to": "how-much-mulch-do-i-need-per-square-foot",
-        "anchor": "how much mulch do i need per square foot",
-        "title": "How Much Mulch Do I Need Per Square Foot: Calculator & Guide"
+        "to": "how-much-mulch-do-i-need-for-a-20x20-area",
+        "anchor": "how much mulch do i need for a 20x20 area",
+        "title": "How Much Mulch Do I Need for a 20x20 Area"
       },
       {
-        "to": "how-much-gravel-do-i-need-for-my-backyard",
-        "anchor": "how much gravel do i need for my backyard",
-        "title": "How Much Gravel Do I Need for My Backyard"
+        "to": "how-many-bags-of-concrete-do-you-need-for-a-10x10",
+        "anchor": "how many bags of concrete do you need for",
+        "title": "How Many Bags of Concrete Do You Need for a 10x10"
       }
     ],
     "schema_types": [
@@ -16740,7 +16770,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -16900,7 +16930,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -17056,7 +17086,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -17212,7 +17242,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -17370,7 +17400,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -17528,7 +17558,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -17613,29 +17643,29 @@
         "title": "How Much Soil for a 4x2x1 Raised Garden Bed"
       },
       {
-        "to": "how-much-mulch-do-i-need-for-100-square-feet",
-        "anchor": "how much mulch do i need for 100 square feet",
-        "title": "How Much Mulch Do I Need for 100 Square Feet"
+        "to": "how-much-gravel-do-i-need-calculator-uk",
+        "anchor": "how much gravel do i need calculator uk",
+        "title": "How Much Gravel Do I Need Calculator Uk: Calculator & Guide"
       },
       {
-        "to": "how-much-paint-do-i-need-for-a-small-bedroom",
-        "anchor": "how much paint do i need for a small bedroom",
-        "title": "How Much Paint Do I Need for a Small Bedroom"
+        "to": "how-much-gravel-do-i-need-for-flower-bed",
+        "anchor": "how much gravel do i need for flower bed",
+        "title": "How Much Gravel for a Flower Bed? Depth and Tons"
       },
       {
-        "to": "how-many-tiles-do-i-need-for-a-roof",
-        "anchor": "how many tiles do i need for a roof",
-        "title": "How Many Tiles Do I Need for a Roof: Calculator & Guide"
+        "to": "how-many-60lb-bags-of-concrete-do-i-need",
+        "anchor": "how many 60lb bags of concrete do i need",
+        "title": "How Many 60 Lb Bags of Concrete Do I Need?"
       },
       {
-        "to": "how-many-tiles-do-i-need-for-a-wall",
-        "anchor": "how many tiles do i need for a wall",
-        "title": "How Many Tiles Do I Need for a Wall: Calculator & Guide"
+        "to": "how-many-bags-of-concrete-do-i-need",
+        "anchor": "how many bags of concrete do i need",
+        "title": "How Many Bags of Concrete Do I Need?"
       },
       {
-        "to": "how-much-mulch-do-i-need-for-a-playground",
-        "anchor": "how much mulch do i need for a playground",
-        "title": "How Much Mulch for a Playground: Depth & Bag Counts"
+        "to": "how-much-mulch-do-i-need-for-my-yard",
+        "anchor": "how much mulch do i need for my yard",
+        "title": "How Much Mulch Do I Need for My Yard: Calculator & Guide"
       }
     ],
     "schema_types": [
@@ -17685,7 +17715,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -17776,24 +17806,24 @@
         "title": "How Much Topsoil to Level a Lawn: Depths and Yards"
       },
       {
-        "to": "how-much-mulch-do-i-need-around-a-tree",
-        "anchor": "how much mulch do i need around a tree",
-        "title": "How Much Mulch Around a Tree: Depth, Ring Size, Bags"
+        "to": "how-much-topsoil-do-i-need-to-topdress-a-lawn",
+        "anchor": "how much topsoil do i need to topdress a lawn",
+        "title": "How Much Topsoil Do I Need to Topdress a Lawn?"
       },
       {
-        "to": "how-many-6-inch-tiles-do-i-need",
-        "anchor": "how many 6 inch tiles do i need",
-        "title": "How Many 6 Inch Tiles Do I Need? Count and Waste"
+        "to": "how-much-topsoil-do-i-need-for-sod",
+        "anchor": "how much topsoil do i need for sod",
+        "title": "How Much Topsoil Do I Need for Sod?"
       },
       {
-        "to": "how-much-grass-seed-for-1-acre",
-        "anchor": "how much grass seed for 1 acre",
-        "title": "How Much Grass Seed for 1 Acre? Pounds and Bags"
+        "to": "how-much-mulch-do-i-need-per-square-foot",
+        "anchor": "how much mulch do i need per square foot",
+        "title": "How Much Mulch Do I Need Per Square Foot: Calculator & Guide"
       },
       {
-        "to": "how-many-bags-of-concrete-do-i-need-for-a-6x6-slab",
-        "anchor": "how many bags of concrete do i need for a",
-        "title": "How Many Bags of Concrete for a 6x6 Slab? 4 in Deep"
+        "to": "how-much-gravel-do-i-need-for-my-backyard",
+        "anchor": "how much gravel do i need for my backyard",
+        "title": "How Much Gravel Do I Need for My Backyard"
       }
     ],
     "schema_types": [
@@ -17843,7 +17873,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -17929,29 +17959,29 @@
         "title": "How Much Bark for 200 Sq Ft: Bags or Bulk"
       },
       {
-        "to": "how-much-mulch-do-i-need-for-a-tree",
-        "anchor": "how much mulch do i need for a tree",
-        "title": "How Much Mulch Do I Need for a Tree: Calculator & Guide"
+        "to": "how-much-mulch-do-i-need-for-100-square-feet",
+        "anchor": "how much mulch do i need for 100 square feet",
+        "title": "How Much Mulch Do I Need for 100 Square Feet"
       },
       {
-        "to": "how-many-boxes-of-tiles-do-i-need-for-a-room",
-        "anchor": "how many boxes of tiles do i need for a room",
-        "title": "How Many Boxes of Tiles Do I Need for a Room"
+        "to": "how-much-paint-do-i-need-for-a-small-bedroom",
+        "anchor": "how much paint do i need for a small bedroom",
+        "title": "How Much Paint Do I Need for a Small Bedroom"
       },
       {
-        "to": "how-much-straw-to-cover-grass-seed-per-square-foot",
-        "anchor": "how much straw to cover grass seed per",
-        "title": "How Much Straw to Cover Grass Seed Per Square Foot"
+        "to": "how-many-tiles-do-i-need-for-a-roof",
+        "anchor": "how many tiles do i need for a roof",
+        "title": "How Many Tiles Do I Need for a Roof: Calculator & Guide"
       },
       {
-        "to": "how-much-starter-fertilizer-per-1000-square-feet",
-        "anchor": "how much starter fertilizer per 1000",
-        "title": "How Much Starter Fertilizer per 1,000 Square Feet?"
+        "to": "how-many-tiles-do-i-need-for-a-wall",
+        "anchor": "how many tiles do i need for a wall",
+        "title": "How Many Tiles Do I Need for a Wall: Calculator & Guide"
       },
       {
-        "to": "how-many-bags-of-concrete-do-i-need-for-a-3x3-slab",
-        "anchor": "how many bags of concrete do i need for a",
-        "title": "How Many Bags of Concrete Do I Need for a 3x3 Slab"
+        "to": "how-much-mulch-do-i-need-for-a-playground",
+        "anchor": "how much mulch do i need for a playground",
+        "title": "How Much Mulch for a Playground: Depth & Bag Counts"
       }
     ],
     "schema_types": [
@@ -18001,7 +18031,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -18097,19 +18127,19 @@
         "title": "How Much Compost to Add to a Lawn: Topdressing Rates"
       },
       {
-        "to": "how-much-mulch-do-i-need-for-a-10x10-area",
-        "anchor": "how much mulch do i need for a 10x10 area",
-        "title": "How Much Mulch Do I Need for a 10x10 Area"
+        "to": "how-much-mulch-do-i-need-around-a-tree",
+        "anchor": "how much mulch do i need around a tree",
+        "title": "How Much Mulch Around a Tree: Depth, Ring Size, Bags"
       },
       {
-        "to": "how-many-boxes-of-tiles-do-i-need-for-a-3-bedroom-house",
-        "anchor": "how many boxes of tiles do i need for a 3",
-        "title": "How Many Boxes of Tiles Do I Need for a 3 Bedroom House"
+        "to": "how-many-6-inch-tiles-do-i-need",
+        "anchor": "how many 6 inch tiles do i need",
+        "title": "How Many 6 Inch Tiles Do I Need? Count and Waste"
       },
       {
-        "to": "how-many-bags-of-concrete-do-i-need-for-a-4x6-slab",
-        "anchor": "how many bags of concrete do i need for a",
-        "title": "How Many Bags of Concrete Do I Need for a 4x6 Slab"
+        "to": "how-much-grass-seed-for-1-acre",
+        "anchor": "how much grass seed for 1 acre",
+        "title": "How Much Grass Seed for 1 Acre? Pounds and Bags"
       }
     ],
     "schema_types": [
@@ -18159,7 +18189,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -18317,7 +18347,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -18480,7 +18510,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -18644,7 +18674,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -18804,7 +18834,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -18961,7 +18991,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -19123,7 +19153,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -19285,7 +19315,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -19449,7 +19479,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -19609,7 +19639,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 130 available)"
+          "detail": "internal links 8 (want 3-8, 133 available)"
         },
         "schema_present": {
           "pass": true,
@@ -19771,7 +19801,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -19932,7 +19962,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 130 available)"
+          "detail": "internal links 8 (want 3-8, 133 available)"
         },
         "schema_present": {
           "pass": true,
@@ -20089,7 +20119,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -20175,29 +20205,29 @@
         "title": "How Much Bark for 200 Sq Ft: Bags or Bulk"
       },
       {
-        "to": "how-much-paint-do-i-need-for-a-10x12-room",
-        "anchor": "how much paint do i need for a 10x12 room",
-        "title": "How Much Paint for a 10x12 Room: Litres & Gallons"
+        "to": "how-many-bags-of-concrete-do-i-need-for-a-6x6-slab",
+        "anchor": "how many bags of concrete do i need for a",
+        "title": "How Many Bags of Concrete for a 6x6 Slab? 4 in Deep"
       },
       {
-        "to": "how-much-paint-for-a-small-bathroom",
-        "anchor": "how much paint for a small bathroom",
-        "title": "How Much Paint for a Bathroom: Gallons & Finish"
+        "to": "how-much-mulch-do-i-need-for-a-tree",
+        "anchor": "how much mulch do i need for a tree",
+        "title": "How Much Mulch Do I Need for a Tree: Calculator & Guide"
       },
       {
-        "to": "how-much-gravel-for-a-new-driveway",
-        "anchor": "how much gravel for a new driveway",
-        "title": "How Much Gravel for a Driveway: Tons and Yards"
+        "to": "how-many-boxes-of-tiles-do-i-need-for-a-room",
+        "anchor": "how many boxes of tiles do i need for a room",
+        "title": "How Many Boxes of Tiles Do I Need for a Room"
       },
       {
-        "to": "how-much-gravel-do-i-need-for-a-12x12-patio",
-        "anchor": "how much gravel do i need for a 12x12 patio",
-        "title": "How Much Gravel for a 12x12 Patio: Base and Top"
+        "to": "how-much-straw-to-cover-grass-seed-per-square-foot",
+        "anchor": "how much straw to cover grass seed per",
+        "title": "How Much Straw to Cover Grass Seed Per Square Foot"
       },
       {
-        "to": "how-much-fertilizer-do-i-need-for-5000-square-feet",
-        "anchor": "how much fertilizer do i need for 5000",
-        "title": "How Much Fertilizer for 5,000 Sq Ft: Bags and Rate"
+        "to": "how-much-starter-fertilizer-per-1000-square-feet",
+        "anchor": "how much starter fertilizer per 1000",
+        "title": "How Much Starter Fertilizer per 1,000 Square Feet?"
       }
     ],
     "schema_types": [
@@ -20247,7 +20277,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -20333,29 +20363,29 @@
         "title": "How Much Bark for 600 Sq Ft: Yards and Bags"
       },
       {
-        "to": "how-much-fertilizer-do-i-need-for-1-acre",
-        "anchor": "how much fertilizer do i need for 1 acre",
-        "title": "How Much Fertilizer for 1 Acre: Bags and Nitrogen"
+        "to": "how-many-bags-of-concrete-do-i-need-for-a-3x3-slab",
+        "anchor": "how many bags of concrete do i need for a",
+        "title": "How Many Bags of Concrete Do I Need for a 3x3 Slab"
       },
       {
-        "to": "how-much-mulch-do-i-need-for-a-10x10-bed",
-        "anchor": "how much mulch do i need for a 10x10 bed",
-        "title": "How Much Mulch for a 10x10 Bed: Bags and Yards"
+        "to": "how-much-mulch-do-i-need-for-a-10x10-area",
+        "anchor": "how much mulch do i need for a 10x10 area",
+        "title": "How Much Mulch Do I Need for a 10x10 Area"
       },
       {
-        "to": "how-much-mulch-do-i-need-for-a-vegetable-garden",
-        "anchor": "how much mulch do i need for a vegetable",
-        "title": "How Much Mulch for a Vegetable Garden: Bags & Yards"
+        "to": "how-many-boxes-of-tiles-do-i-need-for-a-3-bedroom-house",
+        "anchor": "how many boxes of tiles do i need for a 3",
+        "title": "How Many Boxes of Tiles Do I Need for a 3 Bedroom House"
       },
       {
-        "to": "how-much-gravel-do-i-need-for-a-shed-base",
-        "anchor": "how much gravel do i need for a shed base",
-        "title": "How Much Gravel for a Shed Base: Depth and Tons"
+        "to": "how-many-bags-of-concrete-do-i-need-for-a-4x6-slab",
+        "anchor": "how many bags of concrete do i need for a",
+        "title": "How Many Bags of Concrete Do I Need for a 4x6 Slab"
       },
       {
-        "to": "how-much-gravel-do-i-need-for-a-paver-base",
-        "anchor": "how much gravel do i need for a paver base",
-        "title": "How Much Gravel for a Paver Base: Layers and Tons"
+        "to": "how-much-paint-do-i-need-for-a-10x12-room",
+        "anchor": "how much paint do i need for a 10x12 room",
+        "title": "How Much Paint for a 10x12 Room: Litres & Gallons"
       }
     ],
     "schema_types": [
@@ -20405,7 +20435,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -20496,24 +20526,24 @@
         "title": "How Much Sand for a Paver Base: The 1-Inch Layer"
       },
       {
-        "to": "how-much-rubber-mulch-do-i-need-for-a-playground",
-        "anchor": "how much rubber mulch do i need for a",
-        "title": "How Much Rubber Mulch for a Playground: Safe Depths"
+        "to": "how-much-paint-for-a-small-bathroom",
+        "anchor": "how much paint for a small bathroom",
+        "title": "How Much Paint for a Bathroom: Gallons & Finish"
       },
       {
-        "to": "how-much-mulch-do-i-need-to-prevent-weeds",
-        "anchor": "how much mulch do i need to prevent weeds",
-        "title": "How Much Mulch to Prevent Weeds: The Depth That Works"
+        "to": "how-much-gravel-for-a-new-driveway",
+        "anchor": "how much gravel for a new driveway",
+        "title": "How Much Gravel for a Driveway: Tons and Yards"
       },
       {
-        "to": "how-much-river-rock-do-i-need-for-landscaping",
-        "anchor": "how much river rock do i need for landscaping",
-        "title": "How Much River Rock for Landscaping: Depth and Tons"
+        "to": "how-much-gravel-do-i-need-for-a-12x12-patio",
+        "anchor": "how much gravel do i need for a 12x12 patio",
+        "title": "How Much Gravel for a 12x12 Patio: Base and Top"
       },
       {
-        "to": "how-many-pounds-of-fertilizer-per-acre",
-        "anchor": "how many pounds of fertilizer per acre",
-        "title": "How Many Pounds of Fertilizer per Acre: Rates"
+        "to": "how-much-fertilizer-do-i-need-for-5000-square-feet",
+        "anchor": "how much fertilizer do i need for 5000",
+        "title": "How Much Fertilizer for 5,000 Sq Ft: Bags and Rate"
       }
     ],
     "schema_types": [
@@ -20563,7 +20593,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -20654,24 +20684,24 @@
         "title": "How Much Sand for a Paver Base: The 1-Inch Layer"
       },
       {
-        "to": "how-much-tile-do-i-need-for-kitchen-backsplash",
-        "anchor": "how much tile do i need for kitchen",
-        "title": "How Much Tile for a Kitchen Backsplash: Counts"
+        "to": "how-much-fertilizer-do-i-need-for-1-acre",
+        "anchor": "how much fertilizer do i need for 1 acre",
+        "title": "How Much Fertilizer for 1 Acre: Bags and Nitrogen"
       },
       {
-        "to": "how-much-mulch-do-i-need-for-a-20x20-area",
-        "anchor": "how much mulch do i need for a 20x20 area",
-        "title": "How Much Mulch Do I Need for a 20x20 Area"
+        "to": "how-much-mulch-do-i-need-for-a-10x10-bed",
+        "anchor": "how much mulch do i need for a 10x10 bed",
+        "title": "How Much Mulch for a 10x10 Bed: Bags and Yards"
       },
       {
-        "to": "how-many-bags-of-concrete-do-you-need-for-a-10x10",
-        "anchor": "how many bags of concrete do you need for",
-        "title": "How Many Bags of Concrete Do You Need for a 10x10"
+        "to": "how-much-mulch-do-i-need-for-a-vegetable-garden",
+        "anchor": "how much mulch do i need for a vegetable",
+        "title": "How Much Mulch for a Vegetable Garden: Bags & Yards"
       },
       {
-        "to": "how-much-gravel-do-i-need-calculator-uk",
-        "anchor": "how much gravel do i need calculator uk",
-        "title": "How Much Gravel Do I Need Calculator Uk: Calculator & Guide"
+        "to": "how-much-gravel-do-i-need-for-a-shed-base",
+        "anchor": "how much gravel do i need for a shed base",
+        "title": "How Much Gravel for a Shed Base: Depth and Tons"
       }
     ],
     "schema_types": [
@@ -20721,7 +20751,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -20817,14 +20847,19 @@
         "title": "How Much Compost to Add to a Lawn: Topdressing Rates"
       },
       {
-        "to": "how-much-gravel-do-i-need-for-flower-bed",
-        "anchor": "how much gravel do i need for flower bed",
-        "title": "How Much Gravel for a Flower Bed? Depth and Tons"
+        "to": "how-much-gravel-do-i-need-for-a-paver-base",
+        "anchor": "how much gravel do i need for a paver base",
+        "title": "How Much Gravel for a Paver Base: Layers and Tons"
       },
       {
-        "to": "how-many-60lb-bags-of-concrete-do-i-need",
-        "anchor": "how many 60lb bags of concrete do i need",
-        "title": "How Many 60 Lb Bags of Concrete Do I Need?"
+        "to": "how-much-rubber-mulch-do-i-need-for-a-playground",
+        "anchor": "how much rubber mulch do i need for a",
+        "title": "How Much Rubber Mulch for a Playground: Safe Depths"
+      },
+      {
+        "to": "how-much-mulch-do-i-need-to-prevent-weeds",
+        "anchor": "how much mulch do i need to prevent weeds",
+        "title": "How Much Mulch to Prevent Weeds: The Depth That Works"
       }
     ],
     "schema_types": [
@@ -20874,7 +20909,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 7 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -20968,6 +21003,21 @@
         "to": "how-much-compost-to-add-to-lawn",
         "anchor": "how much compost to add to lawn",
         "title": "How Much Compost to Add to a Lawn: Topdressing Rates"
+      },
+      {
+        "to": "how-much-river-rock-do-i-need-for-landscaping",
+        "anchor": "how much river rock do i need for landscaping",
+        "title": "How Much River Rock for Landscaping: Depth and Tons"
+      },
+      {
+        "to": "how-many-pounds-of-fertilizer-per-acre",
+        "anchor": "how many pounds of fertilizer per acre",
+        "title": "How Many Pounds of Fertilizer per Acre: Rates"
+      },
+      {
+        "to": "how-much-tile-do-i-need-for-kitchen-backsplash",
+        "anchor": "how much tile do i need for kitchen",
+        "title": "How Much Tile for a Kitchen Backsplash: Counts"
       }
     ],
     "schema_types": [
@@ -21017,7 +21067,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 5 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -21177,7 +21227,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -21337,7 +21387,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -21495,7 +21545,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -21653,7 +21703,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -21811,7 +21861,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -21969,7 +22019,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -22127,7 +22177,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -22285,7 +22335,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -22443,7 +22493,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -22601,7 +22651,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -22759,7 +22809,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -22917,7 +22967,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -23011,6 +23061,21 @@
         "to": "how-much-compost-to-add-to-lawn",
         "anchor": "how much compost to add to lawn",
         "title": "How Much Compost to Add to a Lawn: Topdressing Rates"
+      },
+      {
+        "to": "how-much-mulch-do-i-need-for-a-20x20-area",
+        "anchor": "how much mulch do i need for a 20x20 area",
+        "title": "How Much Mulch Do I Need for a 20x20 Area"
+      },
+      {
+        "to": "how-many-bags-of-concrete-do-you-need-for-a-10x10",
+        "anchor": "how many bags of concrete do you need for",
+        "title": "How Many Bags of Concrete Do You Need for a 10x10"
+      },
+      {
+        "to": "how-much-gravel-do-i-need-calculator-uk",
+        "anchor": "how much gravel do i need calculator uk",
+        "title": "How Much Gravel Do I Need Calculator Uk: Calculator & Guide"
       }
     ],
     "schema_types": [
@@ -23060,7 +23125,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 5 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -23149,6 +23214,26 @@
         "to": "how-much-topsoil-to-cover-1-acre",
         "anchor": "how much topsoil to cover 1 acre",
         "title": "How Much Topsoil to Cover 1 Acre? Depth and Yards"
+      },
+      {
+        "to": "how-much-topsoil-do-i-need-to-topdress-a-lawn",
+        "anchor": "how much topsoil do i need to topdress a lawn",
+        "title": "How Much Topsoil Do I Need to Topdress a Lawn?"
+      },
+      {
+        "to": "how-much-topsoil-do-i-need-for-sod",
+        "anchor": "how much topsoil do i need for sod",
+        "title": "How Much Topsoil Do I Need for Sod?"
+      },
+      {
+        "to": "how-much-gravel-do-i-need-for-flower-bed",
+        "anchor": "how much gravel do i need for flower bed",
+        "title": "How Much Gravel for a Flower Bed? Depth and Tons"
+      },
+      {
+        "to": "how-many-60lb-bags-of-concrete-do-i-need",
+        "anchor": "how many 60lb bags of concrete do i need",
+        "title": "How Many 60 Lb Bags of Concrete Do I Need?"
       }
     ],
     "schema_types": [
@@ -23166,7 +23251,7 @@
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.05 vs how-much-sand-do-i-need-for-a-20x40-area"
+          "detail": "max similarity 0.08 vs how-much-compost-to-add-to-lawn"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -23198,7 +23283,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 4 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -23356,7 +23441,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -23445,6 +23530,11 @@
         "to": "how-much-sand-do-i-need-for-a-10x12-patio",
         "anchor": "how much sand do i need for a 10x12 patio",
         "title": "How Much Sand for a 10x12 Patio: Bags and Tons"
+      },
+      {
+        "to": "how-many-bags-of-concrete-do-i-need",
+        "anchor": "how many bags of concrete do i need",
+        "title": "How Many Bags of Concrete Do I Need?"
       }
     ],
     "schema_types": [
@@ -23494,7 +23584,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 4 (want 3-8, 129 available)"
+          "detail": "internal links 5 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -23652,7 +23742,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -23812,7 +23902,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -23975,7 +24065,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -24139,7 +24229,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 130 available)"
+          "detail": "internal links 8 (want 3-8, 133 available)"
         },
         "schema_present": {
           "pass": true,
@@ -24301,7 +24391,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -24462,7 +24552,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -24568,11 +24658,11 @@
       "gates": {
         "thin_content": {
           "pass": true,
-          "detail": "word count 839 (min 600)"
+          "detail": "word count 834 (min 600)"
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.04 vs how-much-sod-do-i-need-for-a-20x20-lawn"
+          "detail": "max similarity 0.08 vs how-much-topsoil-do-i-need-to-topdress-a-lawn"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -24584,11 +24674,11 @@
         },
         "readability": {
           "pass": true,
-          "detail": "avg sentence length 18.0 words"
+          "detail": "avg sentence length 17.5 words"
         },
         "heading_structure": {
           "pass": true,
-          "detail": "h2=6 h3=0 (no h1 in body)"
+          "detail": "h2=7 h3=0 (no h1 in body)"
         },
         "has_calculator_or_data": {
           "pass": true,
@@ -24604,7 +24694,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 5 (want 3-8, 129 available)"
+          "detail": "internal links 5 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -24725,11 +24815,11 @@
       "gates": {
         "thin_content": {
           "pass": true,
-          "detail": "word count 818 (min 600)"
+          "detail": "word count 794 (min 600)"
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.06 vs how-much-compost-to-add-to-garden-soil"
+          "detail": "max similarity 0.07 vs how-much-compost-to-add-to-garden-soil"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -24741,11 +24831,11 @@
         },
         "readability": {
           "pass": true,
-          "detail": "avg sentence length 17.2 words"
+          "detail": "avg sentence length 16.7 words"
         },
         "heading_structure": {
           "pass": true,
-          "detail": "h2=6 h3=0 (no h1 in body)"
+          "detail": "h2=7 h3=0 (no h1 in body)"
         },
         "has_calculator_or_data": {
           "pass": true,
@@ -24761,7 +24851,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -24883,11 +24973,11 @@
       "gates": {
         "thin_content": {
           "pass": true,
-          "detail": "word count 874 (min 600)"
+          "detail": "word count 864 (min 600)"
         },
         "duplicate_content": {
           "pass": true,
-          "detail": "max similarity 0.04 vs how-much-sand-do-i-need-for-paver-base"
+          "detail": "max similarity 0.16 vs how-many-bags-of-concrete-do-i-need"
         },
         "keyword_stuffing": {
           "pass": true,
@@ -24899,11 +24989,11 @@
         },
         "readability": {
           "pass": true,
-          "detail": "avg sentence length 21.6 words"
+          "detail": "avg sentence length 20.7 words"
         },
         "heading_structure": {
           "pass": true,
-          "detail": "h2=6 h3=0 (no h1 in body)"
+          "detail": "h2=7 h3=0 (no h1 in body)"
         },
         "has_calculator_or_data": {
           "pass": true,
@@ -24919,7 +25009,7 @@
         },
         "internal_links": {
           "pass": true,
-          "detail": "internal links 8 (want 3-8, 129 available)"
+          "detail": "internal links 8 (want 3-8, 132 available)"
         },
         "schema_present": {
           "pass": true,
@@ -24940,5 +25030,459 @@
     "word_count": 864,
     "curated_hash": "1df88ea3eba99381",
     "answer": "10x10 ft slab at 4 in needs 33.3 cu ft of concrete: about 56 bags of 80 lb or 75 bags of 60 lb."
+  },
+  {
+    "id": "how-many-bags-of-concrete-do-i-need",
+    "slug": "how-many-bags-of-concrete-do-i-need",
+    "title": "How Many Bags of Concrete Do I Need?",
+    "cluster": "concrete",
+    "primary_keyword": "how many bags of concrete do i need",
+    "secondary_keywords": [
+      "bags of concrete calculator",
+      "how many bags of concrete mix do i need",
+      "concrete bags per cubic yard",
+      "how many bags of ready mix concrete do i need"
+    ],
+    "intent": "calculator",
+    "is_pillar": false,
+    "calculator": "concrete",
+    "calculator_title": "Concrete",
+    "calculator_defaults": {
+      "length": 15,
+      "width": 3,
+      "thickness": 4
+    },
+    "calculator_output": {
+      "cubic_feet": 15.0,
+      "cubic_yards": 0.56,
+      "bags_60lb": 34,
+      "bags_80lb": 25
+    },
+    "meta_description": "A 15 by 3 ft garden path 4 in thick needs 15 cu ft of concrete, or 34 bags of 60 lb. Count by bag yield, round up, and keep a spare bag.",
+    "body_markdown": "15x3 ft slab at 4 in needs 15 cu ft of concrete: about 25 bags of 80 lb or 34 bags of 60 lb.\n\nMost people start at the wrong end and guess the bag count from the size of the job in their head. A path feels small until you multiply length by width by thickness and find it holds 15 cubic feet, and a bag that yields less than half a cubic foot suddenly means dozens of bags. Work the volume first and the shopping list writes itself.\n\n## Worked Example\n\nFor a garden path measuring 15 feet by 3 feet, poured 4 inches thick:\n\n*   length = 15\n*   width = 3\n*   thickness = 4\n*   Cubic feet: 15\n*   Cubic yards: 0.56\n*   60 lb bags: 34\n*   80 lb bags: 25\n\n## How the Count Works\n\nA bag of concrete mix is sold by weight, but a slab is bought by volume, so the yield of one bag is the bridge between the two. A 60 lb bag yields about 0.45 cubic feet of mixed concrete, and an 80 lb bag yields about 0.60 cubic feet. Divide the slab volume by the yield of the bag you are buying, and round the result up to the next whole bag, because a part bag cannot be bought.\n\nThe path in the worked example is 15 cubic feet, so 15 divided by 0.45 gives 34 bags of 60 lb, and 15 divided by 0.60 gives 25 bags of 80 lb. The concrete itself is identical either way; the heavier bag just means fewer bags to open, mix and carry to reach the same volume.\n\n## Bags per Cubic Yard\n\nA cubic yard is 27 cubic feet, which is the unit ready-mix is sold in and the unit worth knowing when you compare bags against a truck. At the standard yields, a cubic yard takes 60 bags of 60 lb or 45 bags of 80 lb. That pair of numbers is the quickest sanity check on any bag count: if your slab is close to a cubic yard, your count should be close to 60 or 45 bags.\n\nUse the per-yard figures to judge whether bags are still sensible. A job under half a cubic yard is firmly bag territory, while a job over a cubic yard means sixty or more bags to mix by hand, which is a long day even with a mixer. The path here is 0.56 cubic yards, just over half a yard, which is why 34 bags feels like a lot for a small path and yet is exactly right.\n\n## Common Sizes at a Glance\n\nThe same arithmetic scales to any rectangle. A small 6 by 6 ft slab at 4 in is 12 cubic feet, or 0.44 cubic yards, and needs 27 bags of 60 lb or 20 bags of 80 lb. A 10 by 10 ft patio slab at the same thickness is 33.3 cubic feet, or 1.23 cubic yards, and needs 75 bags of 60 lb or 56 bags of 80 lb.\n\nA 12 by 12 ft slab at 4 in is 48 cubic feet, or 1.78 cubic yards, and needs 107 bags of 60 lb or 80 bags of 80 lb. At that size the bag count itself is telling you something: over a hundred bags is a ready-mix job, not a weekend with a wheelbarrow. A longer, narrower shape is kinder, because a 20 ft path 3 ft wide at 4 in is only 20 cubic feet, or 0.74 cubic yards, and needs 45 bags of 60 lb or 34 bags of 80 lb.\n\n## Why Thickness Matters More Than Area\n\nThickness multiplies the whole area, so it changes the count faster than length or width do. The same 10 by 10 ft slab poured 6 in thick instead of 4 in is 50 cubic feet, or 1.85 cubic yards, and needs 112 bags of 60 lb or 84 bags of 80 lb, half as much again for two extra inches.\n\nMeasure the thickness at several points across the formwork before ordering, because a base that dips in the middle quietly adds bags. A slab that is 4 in at the edges and 5 in in the middle is not a 4 in slab, and the extra inch across the whole area is real concrete that has to come from somewhere. Level the base, check it with a straight edge, and only then count the bags.\n\n## Buy One Spare, Not Ten\n\nRound every result up to a whole bag, and then add one spare bag on top. A path that calculates to 34 bags of 60 lb should be bought as 35, because a short pour cannot be finished the next day without a visible joint where the old concrete had started to set. The spare bag also covers the inevitable spillage and the formwork that turns out slightly deeper than planned.\n\nOne spare is enough. Ten spare bags is money sitting in the garage, and a bag that goes damp sets in lumps inside the paper and is no longer reliable. Store the spare under cover and off the ground, and it keeps for a later small job such as a fence post or a step repair.\n\n## Common Mistakes to Avoid\n\n**Mixing too little in one go.** A slab has to be poured as one continuous batch, so buy a bag or two spare rather than stopping halfway.\n\n## When to Order Ready-Mix Instead\n\nBags win for small slabs, for sites a truck cannot reach, and for jobs poured in stages over several weekends. Ready-mix wins once the count passes roughly a hundred bags, or when the slab must be poured in one continuous session to avoid joints. A cubic yard of concrete is 27 cubic feet, so the 0.56 cubic yards in the path example is a small ready-mix load, and many suppliers deliver that size with a minimum-load charge.\n\nCompare the two prices honestly: the bags plus the hire of a mixer plus a day of your labour, against the ready-mix quote delivered to the kerb. For the path, bags are cheaper and simpler. For the 12 by 12 ft slab at 107 bags, ready-mix is cheaper in money and far cheaper in effort. Either way, the bag count from the calculator is the figure to compare against the quote.\n",
+    "faq": [
+      {
+        "q": "How many bags of concrete are in a cubic yard?",
+        "a": "One cubic yard is 27 cubic feet, and a 60 lb bag yields about 0.45 cubic feet, so a cubic yard takes 60 bags of 60 lb. An 80 lb bag yields about 0.60 cubic feet, so the same cubic yard takes 45 bags of 80 lb. Work from the volume of your own slab first, then divide by the yield of the bag you are buying."
+      },
+      {
+        "q": "Should I buy 60 lb or 80 lb bags of concrete?",
+        "a": "Buy 60 lb bags when the bags must be carried by hand or mixed by one person, because each bag is a third lighter to lift. Buy 80 lb bags for a bigger pour with help, because the same 15 by 3 ft path needs 25 bags of 80 lb against 34 bags of 60 lb, which means fewer bags to open and mix."
+      },
+      {
+        "q": "How many extra bags of concrete should I buy?",
+        "a": "Buy one spare bag on top of the rounded-up count. A path that calculates to 34 bags of 60 lb should be bought as 35, because a short pour cannot be finished the next day without a visible joint where the old concrete had started to set. Unopened bags keep for a later small job if they are stored dry."
+      }
+    ],
+    "status": "approved",
+    "created": "2026-11-09",
+    "updated": "2026-11-09",
+    "revision": 1,
+    "internal_links": [
+      {
+        "to": "concrete-calculator",
+        "anchor": "how many bags of concrete do i need",
+        "title": "Concrete Calculator: Bags or Yards You Need"
+      },
+      {
+        "to": "how-many-bags-of-concrete-do-i-need-for-a-10x10-slab",
+        "anchor": "how many bags of concrete do i need for a",
+        "title": "How Many Bags of Concrete for a 10x10 Slab?"
+      },
+      {
+        "to": "how-many-bags-of-concrete-do-i-need-for-a-4x8-slab",
+        "anchor": "how many bags of concrete do i need for a",
+        "title": "How Many Bags of Concrete for a 4x8 Slab?"
+      },
+      {
+        "to": "how-many-bags-of-concrete-do-i-need-for-a-4x4-slab",
+        "anchor": "how many bags of concrete do i need for a",
+        "title": "How Many Bags of Concrete Do I Need for a 4x4 Slab"
+      },
+      {
+        "to": "how-many-bags-of-concrete-do-i-need-for-a-fence-post",
+        "anchor": "how many bags of concrete do i need for a",
+        "title": "How Many Bags of Concrete Do I Need for a Fence Post"
+      },
+      {
+        "to": "how-many-bags-of-concrete-do-i-need-for-a-10x12-slab",
+        "anchor": "how many bags of concrete do i need for a",
+        "title": "How Many Bags of Concrete Do I Need for a 10x12 Slab"
+      },
+      {
+        "to": "how-many-bags-of-concrete-do-i-need-for-a-20x20-slab",
+        "anchor": "how many bags of concrete do i need for a",
+        "title": "How Many Bags of Concrete Do I Need for a 20x20 Slab"
+      },
+      {
+        "to": "how-many-bags-of-concrete-do-i-need-for-a-8x8-slab",
+        "anchor": "how many bags of concrete do i need for a",
+        "title": "How Many Bags of Concrete Do I Need for a 8x8 Slab"
+      }
+    ],
+    "schema_types": [
+      "Article",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "quality": {
+      "score": 100.0,
+      "passed": true,
+      "gates": {
+        "thin_content": {
+          "pass": true,
+          "detail": "word count 1078 (min 600)"
+        },
+        "duplicate_content": {
+          "pass": true,
+          "detail": "max similarity 0.12 vs how-many-60lb-bags-of-concrete-do-i-need"
+        },
+        "keyword_stuffing": {
+          "pass": true,
+          "detail": "keyword density 0.00%"
+        },
+        "ai_cliches": {
+          "pass": true,
+          "detail": "cliches: none"
+        },
+        "readability": {
+          "pass": true,
+          "detail": "avg sentence length 19.4 words"
+        },
+        "heading_structure": {
+          "pass": true,
+          "detail": "h2=7 h3=0 (no h1 in body)"
+        },
+        "has_calculator_or_data": {
+          "pass": true,
+          "detail": "has calculator + computed output"
+        },
+        "meta_length": {
+          "pass": true,
+          "detail": "meta length 136"
+        },
+        "title_length": {
+          "pass": true,
+          "detail": "title length 36"
+        },
+        "internal_links": {
+          "pass": true,
+          "detail": "internal links 8 (want 3-8, 132 available)"
+        },
+        "schema_present": {
+          "pass": true,
+          "detail": "schema: ['Article', 'BreadcrumbList', 'FAQPage']"
+        },
+        "alt_text": {
+          "pass": true,
+          "detail": "hero alt derivable from title"
+        }
+      }
+    },
+    "metrics": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": 0
+    },
+    "word_count": 1069,
+    "curated_hash": "721fab29ca22f81a",
+    "answer": "15x3 ft slab at 4 in needs 15 cu ft of concrete: about 25 bags of 80 lb or 34 bags of 60 lb."
+  },
+  {
+    "id": "how-much-topsoil-do-i-need-to-topdress-a-lawn",
+    "slug": "how-much-topsoil-do-i-need-to-topdress-a-lawn",
+    "title": "How Much Topsoil Do I Need to Topdress a Lawn?",
+    "cluster": "topsoil",
+    "primary_keyword": "how much topsoil do i need to topdress a lawn",
+    "secondary_keywords": [
+      "topdressing lawn with topsoil how much",
+      "topsoil top dressing lawn depth",
+      "how much topsoil for lawn top dressing",
+      "top dress lawn with topsoil"
+    ],
+    "intent": "calculator",
+    "is_pillar": false,
+    "calculator": "topsoil",
+    "calculator_title": "Topsoil",
+    "calculator_defaults": {
+      "length": 60,
+      "width": 20,
+      "depth": 0.25
+    },
+    "calculator_output": {
+      "square_feet": 1200.0,
+      "cubic_feet": 25.0,
+      "cubic_yards": 0.93,
+      "bags_40lb": 34
+    },
+    "meta_description": "Topdressing a 1,200 sq ft lawn with a quarter inch of topsoil takes 25 cu ft, 0.93 cubic yards or 34 forty-pound bags. Keep the layer thin.",
+    "body_markdown": "60x20 ft at 0.25 in needs 25 cu ft of topsoil: 0.93 cu yd, or 34 40-lb bags.\n\nThe depth is everything. A quarter inch disappears into the grass within days and the lawn looks better for it; an inch buries the grass and the lawn has to regrow from its crowns. This page gives the amounts for the standard dressing, for a heavier one, and for the lawns where bags beat a bulk delivery.\n\n## Worked Example\n\nFor a lawn measuring 60 feet by 20 feet, with topsoil spread a quarter inch deep:\n\n*   length = 60\n*   width = 20\n*   depth = 0.25\n*   Square feet: 1200\n*   Cubic feet: 25\n*   Cubic yards: 0.93\n*   40 lb bags: 34\n\n## Topdressing Is Not Levelling\n\nTopdressing and levelling use the same material at different depths, and confusing them is how lawns get buried. Topdressing is a quarter inch spread evenly over the whole lawn, repeated once a year, which gradually smooths the surface and builds the soil level. Levelling is a targeted job that fills a specific hollow with a deeper layer, and the grass in that hollow is expected to grow back through it over several weeks.\n\nThe same 1,200 sq ft lawn dressed at half an inch instead of a quarter inch needs 50 cubic feet, which is 1.85 cubic yards or 67 bags of forty pounds. That is twice the material for a layer the grass may not grow through, and it is the most to use in one pass, on a vigorous lawn in strong growth. If a hollow needs more than half an inch, fill it in stages across the season rather than in one deep dressing.\n\n## The Quarter-Inch Depth\n\nGrass grows through a shallow dressing because the leaf tips stay in the light. Spread a quarter inch over the whole lawn, brush it down between the blades, and the grass pushes through within a week or two in the growing season. The soil then sits at the surface, where worms pull it down and rain washes the fine particles into the root zone.\n\nA dressing deeper than half an inch risks yellowing the grass underneath, and a lawn that has to regrow from its crowns loses the season you were trying to improve. The quarter inch in the worked example is deliberately conservative: it is the depth you can apply every year without ever worrying about smothering the lawn, and the improvement compounds over the seasons.\n\n## Smaller and Larger Lawns\n\nThe amount scales directly with the area, because the depth never changes. A small 600 sq ft lawn at a quarter inch needs only 12.5 cubic feet, which is 0.46 cubic yards or 17 bags of forty pounds, and a bulk delivery for that little material is rarely worth the delivery charge.\n\nA large 5,000 sq ft lawn at the same depth needs 104.2 cubic feet, which is 3.86 cubic yards or 139 bags, where bulk is clearly the better buy and bags are no longer realistic. Measure the lawn in rectangles and add the areas together rather than guessing from the fence line, because an overestimate of the area is the commonest reason a dressing comes out too thick.\n\n## Bags or Bulk for a Dressing\n\nAt 34 bags, the 1,200 sq ft dressing is a judgement call. Bags are easy to carry, easy to tip in small heaps, and there is no delivery to arrange, but they cost more per cubic foot and leave a pile of plastic. A bulk delivery of 0.93 cubic yards is cheaper for a lawn this size and up, and one load covers the whole job.\n\nScreened topsoil is worth asking for either way. Unscreened soil carries stones, sticks and clods that sit on the surface of a lawn and show every time the mower passes. A bagged topsoil is usually screened already; a bulk load should be ordered as screened lawn topsoil, not as general fill, which can contain rubble and weed seed.\n\n## How to Spread It Without Burying the Grass\n\nMow first, a little shorter than usual, and rake up the clippings so the soil reaches the surface instead of sitting on a thatch mat. Tip the topsoil in small heaps across the lawn, spread it with a shovel, then work it down with a stiff brush or the back of a landscape rake until the grass tips show through everywhere.\n\nWater lightly after spreading if no rain is coming, because damp soil washes down between the blades instead of blowing about. Never dig topsoil into a lawn. Digging destroys the turf you are trying to improve, and a dug patch takes a season to knit back together. The surface method looks untidy for a few days, but the grass grows through it and the level improves from the top down.\n\n## Common Mistakes to Avoid\n\n**Filling deeper than the roots need.** Most beds only need 6 to 12 inches; more soil just costs money and settles.\n\n## Topsoil or Compost for This Job?\n\nTopsoil is the better choice when the aim is to raise the soil level and smooth out bumps, because it adds mineral soil that stays put for years. Compost is the better choice when the aim is to feed the soil, because it adds organic matter and nutrients that topsoil does not, and a compost dressing breaks down within a season.\n\nA lumpy, thin lawn wants topsoil; a hungry, pale lawn wants compost. Some lawns want both, in which case dress with topsoil first and let it settle, then follow with compost later in the season. Never mix the two jobs into one thick layer, because a deep combined dressing is exactly the layer that smothers the grass you are trying to help.\n",
+    "faq": [
+      {
+        "q": "How deep should topsoil be when topdressing a lawn?",
+        "a": "A quarter inch is the standard depth for a topsoil dressing on an established lawn. The grass blades stay above the soil and keep growing, while the thin layer settles into the surface and slowly raises low spots. A half-inch dressing is the most to use in one pass, and only on a vigorous lawn in strong growth."
+      },
+      {
+        "q": "Is topsoil or compost better for topdressing a lawn?",
+        "a": "Topsoil is the better choice when the aim is to raise the soil level and smooth out bumps, because it adds mineral soil that stays put. Compost is the better choice when the aim is to feed the soil, because it adds organic matter and nutrients that topsoil does not. A lumpy, thin lawn wants topsoil; a hungry, pale lawn wants compost."
+      },
+      {
+        "q": "When is the best time to topdress a lawn with topsoil?",
+        "a": "While the grass is growing strongly, in spring or early autumn. The grass needs to grow through the dressing quickly, and rain after the job washes the fine soil down to the surface instead of leaving it sitting on the blades. Avoid drought, frost and midwinter, when the dressing sits unchanged for months."
+      }
+    ],
+    "status": "approved",
+    "created": "2026-11-09",
+    "updated": "2026-11-09",
+    "revision": 1,
+    "internal_links": [
+      {
+        "to": "topsoil-calculator",
+        "anchor": "how much topsoil do i need",
+        "title": "How Much Topsoil Do I Need: Free Calculator & Guide"
+      },
+      {
+        "to": "how-much-topsoil-do-i-need-for-a-new-lawn",
+        "anchor": "how much topsoil do i need for a new lawn",
+        "title": "How Much Topsoil Do I Need for a New Lawn"
+      },
+      {
+        "to": "how-much-topsoil-do-i-need-for-a-garden-bed",
+        "anchor": "how much topsoil do i need for a garden bed",
+        "title": "How Much Topsoil Do I Need for a Garden Bed"
+      },
+      {
+        "to": "how-much-topsoil-to-cover-1-acre",
+        "anchor": "how much topsoil to cover 1 acre",
+        "title": "How Much Topsoil to Cover 1 Acre? Depth and Yards"
+      },
+      {
+        "to": "how-much-topsoil-do-i-need-to-level-my-lawn",
+        "anchor": "how much topsoil do i need to level my lawn",
+        "title": "How Much Topsoil to Level a Lawn: Depths and Yards"
+      },
+      {
+        "to": "how-much-topsoil-do-i-need-for-sod",
+        "anchor": "how much topsoil do i need for sod",
+        "title": "How Much Topsoil Do I Need for Sod?"
+      }
+    ],
+    "schema_types": [
+      "Article",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "quality": {
+      "score": 100.0,
+      "passed": true,
+      "gates": {
+        "thin_content": {
+          "pass": true,
+          "detail": "word count 989 (min 600)"
+        },
+        "duplicate_content": {
+          "pass": true,
+          "detail": "max similarity 0.06 vs how-much-topsoil-do-i-need-for-sod"
+        },
+        "keyword_stuffing": {
+          "pass": true,
+          "detail": "keyword density 0.00%"
+        },
+        "ai_cliches": {
+          "pass": true,
+          "detail": "cliches: none"
+        },
+        "readability": {
+          "pass": true,
+          "detail": "avg sentence length 20.3 words"
+        },
+        "heading_structure": {
+          "pass": true,
+          "detail": "h2=7 h3=0 (no h1 in body)"
+        },
+        "has_calculator_or_data": {
+          "pass": true,
+          "detail": "has calculator + computed output"
+        },
+        "meta_length": {
+          "pass": true,
+          "detail": "meta length 139"
+        },
+        "title_length": {
+          "pass": true,
+          "detail": "title length 46"
+        },
+        "internal_links": {
+          "pass": true,
+          "detail": "internal links 6 (want 3-8, 132 available)"
+        },
+        "schema_present": {
+          "pass": true,
+          "detail": "schema: ['Article', 'BreadcrumbList', 'FAQPage']"
+        },
+        "alt_text": {
+          "pass": true,
+          "detail": "hero alt derivable from title"
+        }
+      }
+    },
+    "metrics": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": 0
+    },
+    "word_count": 968,
+    "curated_hash": "ad8ecbbf5fcced18",
+    "answer": "60x20 ft at 0.25 in needs 25 cu ft of topsoil: 0.93 cu yd, or 34 40-lb bags."
+  },
+  {
+    "id": "how-much-topsoil-do-i-need-for-sod",
+    "slug": "how-much-topsoil-do-i-need-for-sod",
+    "title": "How Much Topsoil Do I Need for Sod?",
+    "cluster": "topsoil",
+    "primary_keyword": "how much topsoil do i need for sod",
+    "secondary_keywords": [
+      "topsoil depth under sod",
+      "how much topsoil under turf",
+      "soil base for sod lawn",
+      "how deep should topsoil be for sod"
+    ],
+    "intent": "calculator",
+    "is_pillar": false,
+    "calculator": "topsoil",
+    "calculator_title": "Topsoil",
+    "calculator_defaults": {
+      "length": 20,
+      "width": 15,
+      "depth": 4
+    },
+    "calculator_output": {
+      "square_feet": 300.0,
+      "cubic_feet": 100.0,
+      "cubic_yards": 3.7,
+      "bags_40lb": 134
+    },
+    "meta_description": "A 20 by 15 ft lawn needs 100 cu ft of topsoil, 3.7 cubic yards or 134 forty-pound bags, laid 4 in deep before the sod goes down. Order by the yard.",
+    "body_markdown": "20x15 ft at 4 in needs 100 cu ft of topsoil: 3.7 cu yd, or 134 40-lb bags.\n\nFour inches of topsoil is the depth that gives new roots somewhere to go. Less than that and the sod sits on a shallow layer that dries out in the first hot week; more than that is rarely needed unless the ground below is concrete-hard or pure rubble. This page gives the amounts for the standard base, for deeper and thinner layers, and for the lawn sizes around it.\n\n## Worked Example\n\nFor a lawn measuring 20 feet by 15 feet, with topsoil laid 4 inches deep:\n\n*   length = 20\n*   width = 15\n*   depth = 4\n*   Square feet: 300\n*   Cubic feet: 100\n*   Cubic yards: 3.7\n*   40 lb bags: 134\n\n## Why Sod Needs Four Inches\n\nSod arrives as a thin mat of grass and roots, usually less than an inch of soil attached, so everything below that inch is ground you must provide. Four inches of loose topsoil gives the roots depth to anchor into and a reservoir of moisture to draw on while they establish, which is what stops the turf curling up at the edges in the first dry spell.\n\nThe same 20 by 15 ft lawn at only 2 in deep needs 50 cubic feet, which is 1.85 cubic yards or 67 bags, but the saving is false economy: a 2 in layer dries through in a day of sun, and sod on a dry base roots slowly or not at all. At 6 in deep the lawn needs 150 cubic feet, 5.56 cubic yards or 200 bags, which is the depth to use over compacted clay or rubble where the ground below holds no moisture at all.\n\n## Bigger Lawns and Small Patches\n\nThe amount scales directly with the area, because the depth stays at 4 in. A small 10 by 10 ft patch needs 33.3 cubic feet, which is 1.23 cubic yards or 45 bags of forty pounds, and is the largest patch where bags are still worth considering. A 30 by 20 ft lawn needs 200 cubic feet, 7.41 cubic yards or 267 bags, which is firmly a bulk order.\n\nA full 1,000 sq ft lawn, 40 by 25 ft, needs 333.3 cubic feet at 4 in, which is 12.35 cubic yards or 445 bags. Nobody carries 445 bags, so a lawn that size is a loose bulk delivery, tipped as close to the ground as the truck can get and barrowed from there. Measure the lawn in rectangles and add the areas together, and order a little extra for the spots where the ground dips.\n\n## Bags or Bulk for a Sod Base\n\nBuy bulk for any sod base. The worked example lawn needs 134 bags, and even the small 10 by 10 ft patch needs 45 bags, which is already a heavy load to carry and open one bag at a time. A bulk delivery of 3.7 cubic yards is cheaper per cubic foot, arrives in one load, and can be barrowed straight from the pile to the base.\n\nOrder screened topsoil, not general fill. Fill can contain rubble, clay lumps and weed seed, and a sod lawn laid on it shows every stone the first time it is mown. Screened lawn topsoil costs a little more and is the only grade worth putting under turf that has to look good from the first month.\n\n## Preparing the Ground Below\n\nStrip the old turf and weeds first, then loosen the ground below with a fork or a rotavator to at least a few inches. Sod laid on hard, unbroken ground roots into the topsoil alone and never bonds to the earth beneath, so the first drought lifts it in sheets. Breaking the surface below lets the roots grow down through the new topsoil and into the ground itself.\n\nGrade the loosened ground roughly level, pick out stones and roots, and then spread the topsoil in an even 4 in layer, firming it with a roller or by treading it in boards. A base that is soft in one corner and hard in another settles unevenly, and the sod follows the dips. Rake the surface fine, water it lightly so it settles, and re-check the level before the turf arrives.\n\n## Common Mistakes to Avoid\n\n**Filling deeper than the roots need.** Most beds only need 6 to 12 inches; more soil just costs money and settles.\n\n## Laying Sod on the Fresh Topsoil\n\nLay the sod the same day the topsoil is finished, while the base is still moist and loose. Butt the rolls tightly together with no gaps, stagger the joints like brickwork, and roll the finished lawn so every part of the turf touches the soil below. An air gap under a roll is a patch that dries out and dies before it ever roots.\n\nWater deeply on the day of laying and keep the lawn damp, not soaked, for the first two weeks while the roots grow down into the 4 in of topsoil. Lift a corner after a week to check: white roots reaching into the soil mean the base is doing its job. Hold off mowing until the turf resists a gentle tug, which is the sign the roots have taken hold.\n",
+    "faq": [
+      {
+        "q": "How deep should topsoil be under sod?",
+        "a": "Four inches of topsoil is the standard base under sod. The roots need that depth to anchor and to find moisture in a dry spell, and a thinner layer dries out too fast for new sod to establish. The worked example lawn at 4 in needs 100 cubic feet, 3.7 cubic yards or 134 forty-pound bags."
+      },
+      {
+        "q": "Can I lay sod straight on my existing soil?",
+        "a": "Only if the existing soil is already deep, loose topsoil. Most gardens sit on thin, compacted or stony ground, and sod laid on it roots into a shallow layer that dries out in the first hot week. Strip the old turf, loosen the ground below, and lay 4 in of fresh topsoil first."
+      },
+      {
+        "q": "Should I buy topsoil in bags or bulk for a sod base?",
+        "a": "Buy bulk for any sod base. The worked example lawn needs 134 bags, and even a small 10 by 10 ft patch needs 45 bags, which is already a heavy load to carry and open. A bulk delivery of 3.7 cubic yards is cheaper per cubic foot and arrives in one load that can be barrowed straight to the base."
+      }
+    ],
+    "status": "approved",
+    "created": "2026-11-09",
+    "updated": "2026-11-09",
+    "revision": 1,
+    "internal_links": [
+      {
+        "to": "topsoil-calculator",
+        "anchor": "how much topsoil do i need",
+        "title": "How Much Topsoil Do I Need: Free Calculator & Guide"
+      },
+      {
+        "to": "how-much-topsoil-do-i-need-for-a-new-lawn",
+        "anchor": "how much topsoil do i need for a new lawn",
+        "title": "How Much Topsoil Do I Need for a New Lawn"
+      },
+      {
+        "to": "how-much-topsoil-do-i-need-for-a-garden-bed",
+        "anchor": "how much topsoil do i need for a garden bed",
+        "title": "How Much Topsoil Do I Need for a Garden Bed"
+      },
+      {
+        "to": "how-much-topsoil-to-cover-1-acre",
+        "anchor": "how much topsoil to cover 1 acre",
+        "title": "How Much Topsoil to Cover 1 Acre? Depth and Yards"
+      },
+      {
+        "to": "how-much-topsoil-do-i-need-to-level-my-lawn",
+        "anchor": "how much topsoil do i need to level my lawn",
+        "title": "How Much Topsoil to Level a Lawn: Depths and Yards"
+      },
+      {
+        "to": "how-much-topsoil-do-i-need-to-topdress-a-lawn",
+        "anchor": "how much topsoil do i need to topdress a lawn",
+        "title": "How Much Topsoil Do I Need to Topdress a Lawn?"
+      }
+    ],
+    "schema_types": [
+      "Article",
+      "BreadcrumbList",
+      "FAQPage"
+    ],
+    "quality": {
+      "score": 100.0,
+      "passed": true,
+      "gates": {
+        "thin_content": {
+          "pass": true,
+          "detail": "word count 916 (min 600)"
+        },
+        "duplicate_content": {
+          "pass": true,
+          "detail": "max similarity 0.06 vs how-much-topsoil-do-i-need-to-topdress-a-lawn"
+        },
+        "keyword_stuffing": {
+          "pass": true,
+          "detail": "keyword density 0.00%"
+        },
+        "ai_cliches": {
+          "pass": true,
+          "detail": "cliches: none"
+        },
+        "readability": {
+          "pass": true,
+          "detail": "avg sentence length 20.6 words"
+        },
+        "heading_structure": {
+          "pass": true,
+          "detail": "h2=6 h3=0 (no h1 in body)"
+        },
+        "has_calculator_or_data": {
+          "pass": true,
+          "detail": "has calculator + computed output"
+        },
+        "meta_length": {
+          "pass": true,
+          "detail": "meta length 147"
+        },
+        "title_length": {
+          "pass": true,
+          "detail": "title length 35"
+        },
+        "internal_links": {
+          "pass": true,
+          "detail": "internal links 6 (want 3-8, 132 available)"
+        },
+        "schema_present": {
+          "pass": true,
+          "detail": "schema: ['Article', 'BreadcrumbList', 'FAQPage']"
+        },
+        "alt_text": {
+          "pass": true,
+          "detail": "hero alt derivable from title"
+        }
+      }
+    },
+    "metrics": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": 0
+    },
+    "word_count": 889,
+    "curated_hash": "3b5fd8cbfdb501d5",
+    "answer": "20x15 ft at 4 in needs 100 cu ft of topsoil: 3.7 cu yd, or 134 40-lb bags."
   }
 ]
